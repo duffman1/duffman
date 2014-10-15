@@ -2,10 +2,8 @@ package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -14,13 +12,18 @@ import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
+import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Structure.AddViewMode;
+import com.nbcuni.test.publisher.pageobjects.Structure.ViewModes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueueTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
 
 public class CreateConfigureDynamicQueue extends ParentTest{
+	
+	String viewModeLabel = "";
+	Boolean testSuccessful = false;
 	
 	/*************************************************************************************
      * TEST CASE - TC4197
@@ -175,7 +178,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         applib.switchToParentWindow(parentWindow);
         taxonomy.NavigateSite("Structure>>Display suite>>View modes>>Add a view mode");
         overlay.SwitchToActiveFrame();
-        String viewModeLabel = random.GetCharacterString(15);
+        viewModeLabel = random.GetCharacterString(15);
         AddViewMode addViewMode = new AddViewMode(webDriver);
         addViewMode.EnterLabel(viewModeLabel);
         addViewMode.CheckEntityCbx("Node");
@@ -185,25 +188,36 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 22,23,24");
         taxonomy.NavigateSite("Structure>>Content types>>Post>>Manage display");
-        com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay md = new com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay(webDriver);
-	    overlay.SwitchToActiveFrame();
-	    md.ClickViewModecheckbox(viewModeLabel);
-        md.ClickSaveBtn();
-        contentParent.VerifyMessageStatus("Your settings have been saved.");
-        md.ClickViewModeTab(viewModeLabel);
         overlay.SwitchToActiveFrame();
-        md.draganddroprows_to_hiddensection();
+        com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay manageDisplays = new com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay(webDriver);
+        manageDisplays.ClickViewMode(viewModeLabel);
+        manageDisplays.ClickSaveBtn();
+        contentParent.VerifyMessageStatus("Your settings have been saved.");
+        manageDisplays.ClickViewModeTab(viewModeLabel);
+        overlay.SwitchToActiveFrame();
+        for (String fieldLabel : Arrays.asList("Body", "Categories", "Tags", "Contributor", "Media Gallery", 
+        		"Cover Media", "Gigya Share Bar", "Short Description")) {
+        	manageDisplays.SelectFormat(fieldLabel, "<Hidden>");
+        	contentParent.WaitForThrobberNotPresent();
+        }
+        manageDisplays.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
         overlay.ClickCloseOverlayLnk();
         
         taxonomy.NavigateSite("Structure>>Content types>>Character Profile>>Manage display");
 	    overlay.SwitchToActiveFrame();
-	    md.ClickViewModecheckbox(viewModeLabel);
-        md.ClickSaveBtn();
+	    manageDisplays.ClickViewMode(viewModeLabel);
+	    manageDisplays.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        md.ClickViewModeTab(viewModeLabel);
+        manageDisplays.ClickViewModeTab(viewModeLabel);
         overlay.SwitchToActiveFrame();
-        md.draganddroprows_to_hiddensection();
+        for (String fieldLabel : Arrays.asList("Biography", "Character: First Name", "Character: Middle Name",
+        		"Character: Last Name", "Cover Photo", "Alias", "Birth Date", "Character: Prefix", "Character: Suffix",
+        		"Gigya Share Bar", "External Links", "Short Biography")) {
+        	manageDisplays.SelectFormat(fieldLabel, "<Hidden>");
+        	contentParent.WaitForThrobberNotPresent();
+        }
+        manageDisplays.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
         overlay.ClickCloseOverlayLnk();
         
@@ -243,5 +257,37 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle, characterProfileTitle));
         contentParent.VerifyPageContentNotPresent(Arrays.asList(unpublishedPostTitle, unpublishedPostBody));
         
+        //cleanup
+        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+		taxonomy.NavigateSite("Structure>>Display suite>>View modes");
+		overlay.SwitchToActiveFrame();
+		ViewModes viewModes = new ViewModes(webDriver);
+        viewModes.ClickDeleteLnk(viewModeLabel);
+        overlay.SwitchToActiveFrame();
+        Delete delete = new Delete(webDriver);
+        delete.ClickDeleteBtn();
+        overlay.SwitchToActiveFrame();
+        contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been deleted.");
+        
+        testSuccessful = true;
+        
    } 
+    
+   @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"CreateConfigureDynamicQueue_TC4197"}, alwaysRun=true)
+   public void Cleanup() throws Exception {
+		if (testSuccessful == false) {
+			
+			UserLogin userLogin = applib.openApplication();
+	        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+	        taxonomy.NavigateSite("Structure>>Display suite>>View modes");
+			overlay.SwitchToActiveFrame();
+			ViewModes viewModes = new ViewModes(webDriver);
+	        viewModes.ClickDeleteLnk(viewModeLabel);
+	        overlay.SwitchToActiveFrame();
+	        Delete delete = new Delete(webDriver);
+	        delete.ClickDeleteBtn();
+	        overlay.SwitchToActiveFrame();
+	        contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been deleted.");
+		}
+	}
 }

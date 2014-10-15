@@ -2,7 +2,10 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,40 +17,85 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Enter '2c1cfceabb124dd' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+      <![CDATA[Enter '8cbc1ffae4614cb' into the 'Biography' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Home' menu link.]]>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile 2c1cfceabb124dd has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -62,121 +110,856 @@
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '10ef6348f1b843c' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Enter '3a28f7626c52432' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Enter 'e464214f3e7b4f7' into the 'Body' text area.]]>
     </line>
     <line>
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Meta tags' link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 10ef6348f1b843c has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Scroll by '100'.]]>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+      <![CDATA[Verify success message of 'Post 3a28f7626c52432 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'd99283f19d1f4d2' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'b71c70a997114be' into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post d99283f19d1f4d2 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
+      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Enter '25' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MachineNameEdit_Lnk' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '19c942f87090490' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '19c942f87090490' in the 'MachineName' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '19c942f87090490' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6&7]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add 19c942f87090490' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add 19c942f87090490 dynamic queue dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '5608de353cf5440' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Publish' from the 'TV Shows' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8 ]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9 - MOVED TO SETUP]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10 ]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Open a new browser window.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/dynamic-queue/56'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'd99283f19d1f4d2' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[STEP 13]]>
+    </line>
+    <line>
+      <![CDATA[STEP 14]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'edit' link for Dynamic Queue Type '19c942f87090490.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit 19c942f87090490 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 15]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Movie' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Person' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 16]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add 19c942f87090490' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add 19c942f87090490 dynamic queue dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Target bundle content count equals '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify content type 'Movie' is present in list of Target bundles.]]>
+    </line>
+    <line>
+      <![CDATA[Verify content type 'Person' is present in list of Target bundles.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 17]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled '19c942f87090490 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Full content' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Teaser' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Revision comparison' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Tokens' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 18]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Full content' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'd99283f19d1f4d2' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'b71c70a997114be' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'e464214f3e7b4f7' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '8cbc1ffae4614cb' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Cover Media' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 19]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled '19c942f87090490 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Teaser' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'd99283f19d1f4d2' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'b71c70a997114be' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'e464214f3e7b4f7' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '8cbc1ffae4614cb' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Character: First Name' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Cover Media' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 20]]>
+    </line>
+    <line>
+      <![CDATA[STEP 21]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Display suite' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'View modes' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add a view mode' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '2a5d59731967448' in the 'Label' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Node' Entity check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The view mode 2a5d59731967448 has been saved' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 22,23,24]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Post' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Manage display' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '2a5d59731967448' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '2a5d59731967448' Tab.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Body'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Categories'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Tags'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Contributor'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Media Gallery'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Media'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Description'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Manage display' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '2a5d59731967448' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '2a5d59731967448' Tab.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Biography'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: First Name'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Middle Name'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Last Name'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Photo'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Alias'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Birth Date'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Prefix'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Suffix'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'External Links'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Biography'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 25]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled '19c942f87090490 dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '2a5d59731967448' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 26]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'd99283f19d1f4d2' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'b71c70a997114be' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'e464214f3e7b4f7' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '8cbc1ffae4614cb' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 27]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Permissions' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Permissions' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 28]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'd99283f19d1f4d2' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'b71c70a997114be' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Display suite' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'View modes' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' link for label '2a5d59731967448'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 2a5d59731967448? dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The view mode 2a5d59731967448 has been deleted.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="93669" started-at="2014-10-15T13:58:57Z" finished-at="2014-10-15T14:00:31Z">
+  <suite name="Default suite" duration-ms="314676" started-at="2014-10-15T16:33:29Z" finished-at="2014-10-15T16:38:44Z">
     <groups>
-      <group name="sensitive">
-        <method signature="StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="StickyButtons_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
-        <method signature="StickyButtons.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="Cleanup" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
-      </group> <!-- sensitive -->
+      <group name="full">
+        <method signature="CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="CreateConfigureDynamicQueue_TC4197" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+        <method signature="CreateConfigureDynamicQueue.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="Cleanup" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="93669" started-at="2014-10-15T13:58:57Z" finished-at="2014-10-15T14:00:31Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-15T09:58:57Z" finished-at="2014-10-15T09:58:57Z">
+    <test name="Default test" duration-ms="314676" started-at="2014-10-15T16:33:29Z" finished-at="2014-10-15T16:38:44Z">
+      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-15T12:33:29Z" finished-at="2014-10-15T12:33:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="startSelenium" is-config="true" duration-ms="3241" started-at="2014-10-15T09:58:57Z" finished-at="2014-10-15T09:59:00Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="startSelenium" is-config="true" duration-ms="3243" started-at="2014-10-15T12:33:29Z" finished-at="2014-10-15T12:33:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="StickyButtons_Test" duration-ms="86676" started-at="2014-10-15T09:59:00Z" finished-at="2014-10-15T10:00:27Z">
+        <test-method status="PASS" signature="CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="CreateConfigureDynamicQueue_TC4197" duration-ms="307697" started-at="2014-10-15T12:33:32Z" finished-at="2014-10-15T12:38:40Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -188,40 +971,85 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Sticky Edit Actions' check box.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Enter '2c1cfceabb124dd' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+              <![CDATA[Enter '8cbc1ffae4614cb' into the 'Biography' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Home' menu link.]]>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile 2c1cfceabb124dd has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -236,136 +1064,868 @@
               <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '10ef6348f1b843c' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Enter '3a28f7626c52432' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Enter 'e464214f3e7b4f7' into the 'Body' text area.]]>
             </line>
             <line>
               <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Meta tags' link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 10ef6348f1b843c has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Scroll by '100'.]]>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Save' button is present.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the sticky edit 'Preview' button is present.]]>
+              <![CDATA[Verify success message of 'Post 3a28f7626c52432 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'd99283f19d1f4d2' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'b71c70a997114be' into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post d99283f19d1f4d2 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Sticky Edit Actions' in the 'Filter Name' text box.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Sticky Edit Actions' to be visible in module list.]]>
+              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Sticky Edit Actions' module checkbox.]]>
+              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Enter '25' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MachineNameEdit_Lnk' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '19c942f87090490' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '19c942f87090490' in the 'MachineName' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '19c942f87090490' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6&7]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add 19c942f87090490' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add 19c942f87090490 dynamic queue dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '5608de353cf5440' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Publish' from the 'TV Shows' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8 ]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9 - MOVED TO SETUP]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10 ]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Open a new browser window.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/dynamic-queue/56'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'd99283f19d1f4d2' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[STEP 13]]>
+            </line>
+            <line>
+              <![CDATA[STEP 14]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'edit' link for Dynamic Queue Type '19c942f87090490.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit 19c942f87090490 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 15]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Movie' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Person' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 16]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add 19c942f87090490' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add 19c942f87090490 dynamic queue dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Target bundle content count equals '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify content type 'Movie' is present in list of Target bundles.]]>
+            </line>
+            <line>
+              <![CDATA[Verify content type 'Person' is present in list of Target bundles.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 17]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled '19c942f87090490 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Full content' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Teaser' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Revision comparison' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Tokens' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 18]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Full content' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'd99283f19d1f4d2' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'b71c70a997114be' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'e464214f3e7b4f7' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '8cbc1ffae4614cb' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Cover Media' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 19]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled '19c942f87090490 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Teaser' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'd99283f19d1f4d2' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'b71c70a997114be' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'e464214f3e7b4f7' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '8cbc1ffae4614cb' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Character: First Name' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Cover Media' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 20]]>
+            </line>
+            <line>
+              <![CDATA[STEP 21]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Display suite' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'View modes' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add a view mode' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '2a5d59731967448' in the 'Label' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Node' Entity check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The view mode 2a5d59731967448 has been saved' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 22,23,24]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Post' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Manage display' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '2a5d59731967448' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '2a5d59731967448' Tab.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Body'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Categories'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Tags'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Contributor'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Media Gallery'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Media'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Description'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Manage display' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '2a5d59731967448' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '2a5d59731967448' Tab.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Character Profile dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Biography'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: First Name'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Middle Name'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Last Name'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Photo'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Alias'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Birth Date'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Prefix'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Suffix'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'External Links'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Biography'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 25]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue types dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled '19c942f87090490 dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '2a5d59731967448' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 26]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'd99283f19d1f4d2' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'b71c70a997114be' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'e464214f3e7b4f7' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '8cbc1ffae4614cb' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 27]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Permissions' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Permissions' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 28]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '3a28f7626c52432' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '2c1cfceabb124dd' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'd99283f19d1f4d2' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'b71c70a997114be' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Display suite' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'View modes' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' link for label '2a5d59731967448'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Are you sure you want to delete 2a5d59731967448? dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'View modes dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The view mode 2a5d59731967448 has been deleted.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- StickyButtons_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-10-15T10:00:27Z" finished-at="2014-10-15T10:00:28Z">
+        </test-method> <!-- CreateConfigureDynamicQueue_TC4197 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="stopSelenium" is-config="true" duration-ms="585" started-at="2014-10-15T12:38:40Z" finished-at="2014-10-15T12:38:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=StickyButtons_Test status=SUCCESS method=StickyButtons.StickyButtons_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CreateConfigureDynamicQueue_TC4197 status=SUCCESS method=CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="startSelenium" is-config="true" duration-ms="2599" started-at="2014-10-15T10:00:28Z" finished-at="2014-10-15T10:00:30Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="startSelenium" is-config="true" duration-ms="2567" started-at="2014-10-15T12:38:41Z" finished-at="2014-10-15T12:38:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.Cleanup() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.Cleanup() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="Cleanup" duration-ms="1" started-at="2014-10-15T10:00:30Z" depends-on-methods="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons.StickyButtons_Test" finished-at="2014-10-15T10:00:30Z">
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="Cleanup" duration-ms="1" started-at="2014-10-15T12:38:43Z" depends-on-methods="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197" finished-at="2014-10-15T12:38:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="stopSelenium" is-config="true" duration-ms="566" started-at="2014-10-15T10:00:30Z" finished-at="2014-10-15T10:00:31Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-10-15T12:38:43Z" finished-at="2014-10-15T12:38:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=StickyButtons.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170] output={null}]]]>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CreateConfigureDynamicQueue.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons@b596170]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-15T10:00:31Z" finished-at="2014-10-15T10:00:31Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@2c7e4017]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-15T12:38:44Z" finished-at="2014-10-15T12:38:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
