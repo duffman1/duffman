@@ -2,9 +2,6 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
@@ -17,22 +14,10 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
       <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
@@ -41,13 +26,22 @@
       <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+      <![CDATA[Check the 'Pixelman' check box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
@@ -62,37 +56,7 @@
       <![CDATA[Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Clear all 'Name' text box values.]]>
-    </line>
-    <line>
-      <![CDATA[Clear all 'Value' text box values.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+      <![CDATA[Uncheck the 'Doubleclick for Publishers' module checkbox.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -104,397 +68,109 @@
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 2 - N/A]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 3 - N/A]]>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Click the '[[Driver: chrome on MAC (4dffa4fa-df5f-49a8-b75b-1e12ed17b217)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Reports' menu link.]]>
+      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Status report' menu link.]]>
+      <![CDATA[Click the 'Logout' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Pub Ads' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 5]]>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+      <![CDATA[Click the '[[Driver: chrome on MAC (4dffa4fa-df5f-49a8-b75b-1e12ed17b217)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that no MPS calls were made on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com/kfkjdjdkjdjldkjj'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8 - N/A - COVERED IN SETUP]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'bdaf32e21e2d4cf' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie bdaf32e21e2d4cf has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Note the node number for the content item.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10 through STEP 19]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"title":"bdaf32e21e2d4cf"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"path":"\/node\/6831"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"content_id":"node6831"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"is_content":1' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"type":"movie"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"pubdate":' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 20]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 21]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Gallery' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'c5deacddc27848c' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'View Library' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click media thumbnail image number 1]]>
-    </line>
-    <line>
-      <![CDATA[Click on the 'Submit' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Media Gallery c5deacddc27848c has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Note the node number for the content item.]]>
-    </line>
-    <line>
-      <![CDATA[Get the file id of image number 1.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 22]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com/node/6836/8956'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 28]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 29]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ecd81cde1fae495' in the 'Block Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'ecd81cde1fae495 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 30]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'ecd81cde1fae495 (MPS)' from the 'Header' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 31]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'mps.getAd('ecd81cde1fae495')' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 32 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Select the block name 'ecd81cde1fae495 (MPS)' from the '- None -' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Logout' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="129185" started-at="2014-10-14T18:55:40Z" finished-at="2014-10-14T18:57:49Z">
+  <suite name="Default suite" duration-ms="149863" started-at="2014-10-15T12:16:35Z" finished-at="2014-10-15T12:19:05Z">
     <groups>
       <group name="full">
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+        <method signature="Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@116fd92a]" name="Pixelman_TC1155" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
       </group> <!-- full -->
-      <group name="mps">
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
-      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="129185" started-at="2014-10-14T18:55:40Z" finished-at="2014-10-14T18:57:49Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="suiteSetup" is-config="true" duration-ms="24" started-at="2014-10-14T14:55:40Z" finished-at="2014-10-14T14:55:40Z">
+    <test name="Default test" duration-ms="149863" started-at="2014-10-15T12:16:35Z" finished-at="2014-10-15T12:19:05Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@116fd92a]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-15T08:16:35Z" finished-at="2014-10-15T08:16:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="startSelenium" is-config="true" duration-ms="3272" started-at="2014-10-14T14:55:40Z" finished-at="2014-10-14T14:55:43Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@116fd92a]" name="startSelenium" is-config="true" duration-ms="3211" started-at="2014-10-15T08:16:35Z" finished-at="2014-10-15T08:16:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman.Pixelman_TC1155() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="ImplementMPS_TC2901" duration-ms="125326" started-at="2014-10-14T14:55:43Z" finished-at="2014-10-14T14:57:48Z">
+        <test-method status="PASS" signature="Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@116fd92a]" name="Pixelman_TC1155" duration-ms="146072" started-at="2014-10-15T08:16:39Z" finished-at="2014-10-15T08:19:05Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
@@ -508,22 +184,10 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
               <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
@@ -532,13 +196,22 @@
               <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+              <![CDATA[Check the 'Pixelman' check box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
@@ -553,37 +226,7 @@
               <![CDATA[Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Clear all 'Name' text box values.]]>
-            </line>
-            <line>
-              <![CDATA[Clear all 'Value' text box values.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+              <![CDATA[Uncheck the 'Doubleclick for Publishers' module checkbox.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -595,383 +238,101 @@
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 2 - N/A]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 3 - N/A]]>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Click the '[[Driver: chrome on MAC (4dffa4fa-df5f-49a8-b75b-1e12ed17b217)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Reports' menu link.]]>
+              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Status report' menu link.]]>
+              <![CDATA[Click the 'Logout' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Pub Ads' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 5]]>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+              <![CDATA[Click the '[[Driver: chrome on MAC (4dffa4fa-df5f-49a8-b75b-1e12ed17b217)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that no MPS calls were made on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com/kfkjdjdkjdjldkjj'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8 - N/A - COVERED IN SETUP]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'bdaf32e21e2d4cf' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie bdaf32e21e2d4cf has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Note the node number for the content item.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10 through STEP 19]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"title":"bdaf32e21e2d4cf"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"path":"\/node\/6831"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"content_id":"node6831"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"is_content":1' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"type":"movie"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"pubdate":' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 20]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 21]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Gallery' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'c5deacddc27848c' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'View Library' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click media thumbnail image number 1]]>
-            </line>
-            <line>
-              <![CDATA[Click on the 'Submit' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Media Gallery c5deacddc27848c has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Note the node number for the content item.]]>
-            </line>
-            <line>
-              <![CDATA[Get the file id of image number 1.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 22]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com/node/6836/8956'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 28]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 29]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ecd81cde1fae495' in the 'Block Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'ecd81cde1fae495 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 30]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'ecd81cde1fae495 (MPS)' from the 'Header' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 31]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'mps.getAd('ecd81cde1fae495')' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 32 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Select the block name 'ecd81cde1fae495 (MPS)' from the '- None -' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Logout' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementMPS_TC2901 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="stopSelenium" is-config="true" duration-ms="576" started-at="2014-10-14T14:57:48Z" finished-at="2014-10-14T14:57:49Z">
+        </test-method> <!-- Pixelman_TC1155 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@116fd92a]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-10-15T08:19:05Z" finished-at="2014-10-15T08:19:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008] output=STEP 1]]]>
+                <![CDATA[[TestResult name=Pixelman_TC1155 status=SUCCESS method=Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@116fd92a] output=Open url 'http://acc-test.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-14T14:57:49Z" finished-at="2014-10-14T14:57:49Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@116fd92a]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-10-15T08:19:05Z" finished-at="2014-10-15T08:19:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
