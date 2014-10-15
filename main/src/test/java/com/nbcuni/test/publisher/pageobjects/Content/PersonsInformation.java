@@ -93,6 +93,20 @@ public class PersonsInformation {
         return body;
     }
     
+    public void EnterBiography(String biography) throws Exception{
+
+        webDriver.switchTo().frame(Biography_Frm());
+
+        Reporter.log("Enter '" + biography + "' into the 'Biography' text area.");
+        
+        WebElement txa = Biography_Txa();
+        txa.click();
+        txa.clear();
+        txa.sendKeys(biography);
+        webDriver.switchTo().defaultContent();
+        
+    }
+    
     public void ClickCoverPhotoSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Cover Photo' Select button.");

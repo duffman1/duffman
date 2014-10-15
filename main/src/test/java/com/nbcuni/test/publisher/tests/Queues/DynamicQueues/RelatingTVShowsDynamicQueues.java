@@ -15,7 +15,6 @@ import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.Dyna
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
 
 public class RelatingTVShowsDynamicQueues extends ParentTest{
 	
@@ -26,9 +25,7 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void RelatingTVShowsDynamicQueues_TC4389() throws Exception{
     	
-    	webDriver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);
-    	
-        Reporter.log("STEP 1");
+    	Reporter.log("STEP 1");
         UserLogin userLogin = applib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
