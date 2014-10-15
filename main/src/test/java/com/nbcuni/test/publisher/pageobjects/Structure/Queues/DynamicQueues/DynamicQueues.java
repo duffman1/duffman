@@ -2,8 +2,10 @@ package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -15,6 +17,8 @@ import org.testng.Reporter;
  * 
  * @author Brandon Clark
  * @version 1.0 Date: July 31, 2014
+ * @author Vineela Juturu
+ * @version 1.0 Date: October 13, 2014
  *********************************************/
 
 public class DynamicQueues {
@@ -25,8 +29,8 @@ public class DynamicQueues {
     //PAGE OBJECT CONSTRUCTOR
     public DynamicQueues(Driver webDriver) {
         this.webDriver = webDriver;
-        config = new Config();
         PageFactory.initElements(webDriver, this);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -36,6 +40,10 @@ public class DynamicQueues {
     
     private List<WebElement> AllDynamicQueue_Lnks() {
     	return webDriver.findElements(By.xpath("//div[contains(@class, 'dynamic-queue')]//h2/a"));
+    }
+    
+    private WebElement Status_Lnk(String dynamicQueueName) {
+    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//td[contains(@class,'views-field-status')]"));
     }
     
     
@@ -53,6 +61,20 @@ public class DynamicQueues {
 
     }
     
+    public String GetDynamicQueueStatus(String dynamicQueueName) throws Exception {
+        
+    	return Status_Lnk(dynamicQueueName).getText();
+
+    }
+    
+    public void VerifyDynamicQueueStatus(String dynamicQueueName, String status) throws Exception {
+
+    	if (! ((GetDynamicQueueStatus(dynamicQueueName).trim()).equalsIgnoreCase(status.trim())) )
+    	    Assert.fail("Dynamic Queue: "+ dynamicQueueName + "status: "+ GetDynamicQueueStatus(dynamicQueueName) + 
+    	    		" is not equals to Expected status: "+ status);
+    		
+    }
+    
     public void VerifyVisibleLnkCount(Integer expectedVisibleCount) throws Exception {
     	
     	List<WebElement> allVisibleDQLnks = new ArrayList<WebElement>();
@@ -64,7 +86,6 @@ public class DynamicQueues {
     	
     	Reporter.log("Verify the visible count of Dynamic Queue Links equals '" + expectedVisibleCount.toString() + "'.");
     	Assert.assertTrue(allVisibleDQLnks.size() == expectedVisibleCount);
-    	
     }
     
 }

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 15 08:16:35 EDT 2014</td>
+<td>Started on:</td><td>Wed Oct 15 09:15:40 EDT 2014</td>
 </tr>
-<tr><td>Total time:</td><td>149 seconds (149863 ms)</td>
+<tr><td>Total time:</td><td>123 seconds (123972 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,64 +75,148 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman.Pixelman_TC1155()'><b>Pixelman_TC1155</b><br>Test class: com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman<br/>
-<a href="#Output-1227289322" onClick='toggleBox("Output-1227289322", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()'><b>RelatingTVShowsDynamicQueues_TC4389</b><br>Test class: com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues<br/>
+<a href="#Output-27861520" onClick='toggleBox("Output-27861520", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1227289322" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1227289322">
-Open url 'http://acc-test.publisher7.com'.<br/>
+<a href="#Output-27861520" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-27861520">
+STEP 1<br/>
+Open url 'http://qa5.publisher7.com'.<br/>
 Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
 Enter 'pa55word' in the 'Password' text box.<br/>
 Click the 'Login' button.<br/>
+SETUP<br/>
 Click the 'Modules' menu link.<br/>
 Switch to frame titled 'Modules'.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
-Check the 'Pixelman' check box.<br/>
-Click the 'Save configuration' button.<br/>
-Switch to frame titled 'Some required modules must be enabled'.<br/>
-Switch back to the 'Modules' frame.<br/>
-Switch to frame titled 'Modules'.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'DART' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'DART' to be visible in module list.<br/>
-Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.<br/>
-Uncheck the 'Doubleclick for Publishers' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Enter 'Dynamic Queue' in the 'Filter Name' text box.<br/>
+Wait for module filter titled 'Dynamic Queue' to be visible in module list.<br/>
+Verify the 'Dynamic Queue' check box is checked.<br/>
 Click the 'Close Overlay X'.<br/>
 Click the 'Home' menu link.<br/>
-Mouse over the 'Home' menu link.<br/>
-Click the '[[Driver: chrome on MAC (4dffa4fa-df5f-49a8-b75b-1e12ed17b217)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
-Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.<br/>
-Click the 'Logout' button.<br/>
-Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.<br/>
-Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.<br/>
-Enter 'pa55word' in the 'Password' text box.<br/>
-Click the 'Login' button.<br/>
-Click the 'Modules' menu link.<br/>
-Switch to frame titled 'Modules'.<br/>
-Enter 'Pub Ads' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pub Ads' to be visible in module list.<br/>
-Uncheck the 'Pub Ads' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
-Enter 'Pixelman' in the 'Filter Name' text box.<br/>
-Wait for module filter titled 'Pixelman' to be visible in module list.<br/>
-Uncheck the 'Pixelman' module checkbox.<br/>
-Click the 'Save configuration' button.<br/>
-Verify success message of 'The configuration options have been saved.' is present.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'TV Show' menu link.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Scroll to and click the 'Basic Information' tab.<br/>
+Enter 'dd56ec98161a417' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Logo 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Cover Media 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Click the Banner 'Select' button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create TV Show dialog'.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'TV Show dd56ec98161a417 has been created.' is present.<br/>
+STEP 2<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Dynamic Queue types' menu link.<br/>
+Click the 'Add dynamic queue type' menu link.<br/>
+Switch to the active frame titled 'Add dynamic queue type dialog'.<br/>
+Enter 'a53b7d534a8f44a' in the 'Name' text box.<br/>
+Select 'Content' or 'Node' from the 'Entity type' drop down list.<br/>
+Select '1 min' from the 'Cache lifetime' drop down list.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Dynamic Queue types dialog'.<br/>
+Verify the text 'a53b7d534a8f44a' is present on the page.<br/>
 Click the 'Close Overlay X'.<br/>
-Mouse over the 'Home' menu link.<br/>
-Click the '[[Driver: chrome on MAC (4dffa4fa-df5f-49a8-b75b-1e12ed17b217)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.<br/>
-Click the 'Home' menu link.<br/>
-Click the 'Logout' button.<br/>
+STEP 3 - MOVED TO SETUP<br/>
+STEP 4<br/>
+Mouse over the 'Structure' menu link.<br/>
+Mouse over the 'Content types' menu link.<br/>
+Mouse over the 'Movie' menu link.<br/>
+Click the 'Manage fields' menu link.<br/>
+Switch to the active frame titled 'Movie dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Add content' menu link.<br/>
+Click the 'Movie' menu link.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Enter '27790a273b2a4d4' in the 'Title' text box.<br/>
+Switch to the Synopsis frame.<br/>
+Enter a randomized text string into the 'Body' text area.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Click the 'Cover' select button.<br/>
+Switch to the select file frame.<br/>
+Enter the file path for file upload.<br/>
+Click the 'Upload' button.<br/>
+Wait for the file link to be visible after upload.<br/>
+Click the 'Next' button.<br/>
+Click the 'Public Local Files' radio button.<br/>
+Click the 'Next' button.<br/>
+Verify the file image 'HanSolo' is present.<br/>
+Verify the img is loaded and visible.<br/>
+Click the 'Save' button.<br/>
+Switch to the active frame titled 'Create Movie dialog'.<br/>
+Select 'dd56ec98161a417' from the 'Show' drop down list.<br/>
+Scroll the 'Publishing Options' link into view.<br/>
+Click the 'Publishing Options' link.<br/>
+Select 'Published' from the 'Moderation State' drop down list.<br/>
+Click the 'Save' button.<br/>
+Verify success message of 'Movie 27790a273b2a4d4 has been created.' is present.<br/>
+STEP 5<br/>
+STEP 6<br/>
+Mouse over the 'Content' menu link.<br/>
+Mouse over the 'Dynamic Queues' menu link.<br/>
+Click the 'Add a53b7d534a8f44a' menu link.<br/>
+Switch to the active frame titled 'Add a53b7d534a8f44a dynamic queue dialog'.<br/>
+STEP 7<br/>
+Enter 'f77de6512b0b44b' in the 'Title' text box.<br/>
+<br/>
+Select 'dd56ec98161a417' from the 'TV Shows' drop down list.<br/>
+Click the 'Newest' radio button under 'Sort by'.<br/>
+Click the 'Save Dynamic Queue' button.<br/>
+STEP 8<br/>
+Mouse over the 'Content' menu link.<br/>
+Click the 'Dynamic Queues' menu link.<br/>
+Switch to the active frame titled 'Dynamic Queues dialog'.<br/>
+Click the 'Close Overlay X'.<br/>
+Open a new browser window.<br/>
+Switch to new browser tab/window.<br/>
+Open url 'http://qa5.publisher7.com/dynamic-queue/36'.<br/>
+Verify the text '27790a273b2a4d4' is present on the page.<br/>
+Verify the text 'Relationships' is present on the page.<br/>
+Verify the text 'dd56ec98161a417' is present on the page.<br/>
 </div>
 </td>
 <td></td>
-<td>146</td>
-<td>com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@116fd92a</td></tr>
+<td>120</td>
+<td>com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@371d1794</td></tr>
 </table><p>
 </body>
 </html>
