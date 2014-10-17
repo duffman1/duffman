@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,26 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue" hash-for-method="Cleanup">Cleanup</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions" hash-for-method="CreateScheduleMultipleRevisions_TC4969">CreateScheduleMultipleRevisions_TC4969</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue" hash-for-method="CreateConfigureDynamicQueue_TC4197">CreateConfigureDynamicQueue_TC4197</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -121,32 +116,59 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Cleanup">
-                  </a> <!-- Cleanup -->
-                  <span class="method-name">Cleanup</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="CreateConfigureDynamicQueue_TC4197">
-                  </a> <!-- CreateConfigureDynamicQueue_TC4197 -->
-                  <span class="method-name">CreateConfigureDynamicQueue_TC4197</span>
+                  <a name="CreateScheduleMultipleRevisions_TC4969">
+                  </a> <!-- CreateScheduleMultipleRevisions_TC4969 -->
+                  <span class="method-name">CreateScheduleMultipleRevisions_TC4969</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [2] but found [9]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList.VerifyRevisionCount(QueuesRevisionList.java:118)
+	at com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969(CreateandScheduleMultipleRevisions.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1027740222/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1972744014/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -155,7 +177,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -183,11 +205,7 @@
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">Cleanup</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">CreateConfigureDynamicQueue_TC4197</span>
+                <span class="method-in-group-name">CreateScheduleMultipleRevisions_TC4969</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -207,20 +225,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CreateConfigureDynamicQueue_TC4197')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue')
-data.setCell(0, 3, 307697);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Cleanup')
-data.setCell(1, 2, 'com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue')
-data.setCell(1, 3, 1);
+data.setCell(0, 1, 'CreateScheduleMultipleRevisions_TC4969')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions')
+data.setCell(0, 3, 101908);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -232,7 +246,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">CreateConfigureDynamicQueue_TC4197</span>
+              <span class="reporter-method-name">CreateScheduleMultipleRevisions_TC4969</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">STEP 1</span>
                 <span class="reporter-method-output">Open url 'http://acc-test.publisher7.com'.</span>
@@ -244,8 +258,8 @@ return data;
                 <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
                 <span class="reporter-method-output">Click the 'Character Profile' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Character Profile dialog'.</span>
-                <span class="reporter-method-output">Enter '2c1cfceabb124dd' in the 'Character First Name' text box.</span>
-                <span class="reporter-method-output">Enter '8cbc1ffae4614cb' into the 'Biography' text area.</span>
+                <span class="reporter-method-output">Enter 'acd7eef29efb47e' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Enter 'e2fb6e5a4943477' into the 'Biography' text area.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Character Profile dialog'.</span>
                 <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
                 <span class="reporter-method-output">Switch to the select file frame.</span>
@@ -265,14 +279,14 @@ return data;
                 <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
                 <span class="reporter-method-output">Select 'Published' from the 'Moderation State' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Character Profile 2c1cfceabb124dd has been created.' is present.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile acd7eef29efb47e has been created.' is present.</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
                 <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
                 <span class="reporter-method-output">Click the 'Post' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter '3a28f7626c52432' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Enter '8d356004782c4cb' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter 'e464214f3e7b4f7' into the 'Body' text area.</span>
+                <span class="reporter-method-output">Enter '5079c5769b3a451' into the 'Body' text area.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
                 <span class="reporter-method-output">Click the 'Cover' select button.</span>
                 <span class="reporter-method-output">Switch to the select file frame.</span>
@@ -290,259 +304,75 @@ return data;
                 <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
                 <span class="reporter-method-output">Select 'Published' from the 'Moderation State' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 3a28f7626c52432 has been created.' is present.</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Add content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Post' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Enter 'd99283f19d1f4d2' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter 'b71c70a997114be' into the 'Body' text area.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Click the 'Cover' select button.</span>
-                <span class="reporter-method-output">Switch to the select file frame.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
-                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Create Post dialog'.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post d99283f19d1f4d2 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 8d356004782c4cb has been created.' is present.</span>
                 <span class="reporter-method-output">STEP 2</span>
                 <span class="reporter-method-output">Click the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Switch to frame titled 'Modules'.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Modules dialog'.</span>
                 <span class="reporter-method-output">Enter 'Dynamic Queue' in the 'Filter Name' text box.</span>
                 <span class="reporter-method-output">Wait for module filter titled 'Dynamic Queue' to be visible in module list.</span>
                 <span class="reporter-method-output">Verify the 'Dynamic Queue' check box is checked.</span>
+                <span class="reporter-method-output">Enter 'Dynamic Queue Workbench' in the 'Filter Name' text box.</span>
+                <span class="reporter-method-output">Wait for module filter titled 'Dynamic Queue Workbench' to be visible in module list.</span>
+                <span class="reporter-method-output">Verify the 'Dynamic Queue Workbench' check box is checked.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Click the 'Home' menu link.</span>
                 <span class="reporter-method-output">STEP 3</span>
                 <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
                 <span class="reporter-method-output">Mouse over the 'Dynamic Queue types' menu link.</span>
                 <span class="reporter-method-output">Click the 'Add dynamic queue type' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Add dynamic queue type dialog'.</span>
                 <span class="reporter-method-output">STEP 4</span>
-                <span class="reporter-method-output">Enter '25' in the 'Name' text box.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">STEP 5</span>
-                <span class="reporter-method-output">Click the 'MachineNameEdit_Lnk' button.</span>
-                <span class="reporter-method-output">Enter '19c942f87090490' in the 'Name' text box.</span>
-                <span class="reporter-method-output">Enter '19c942f87090490' in the 'MachineName' text box.</span>
+                <span class="reporter-method-output">Enter 'b8f2a99a647449d' in the 'Name' text box.</span>
                 <span class="reporter-method-output">Select '1 min' from the 'Cache lifetime' drop down list.</span>
                 <span class="reporter-method-output">Select 'Content' or 'Node' from the 'Entity type' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Dynamic Queue types dialog'.</span>
-                <span class="reporter-method-output">Verify the text '19c942f87090490' is present on the page.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Add dynamic queue type dialog'.</span>
+                <span class="reporter-method-output">Verify the text 'b8f2a99a647449d' is present on the page.</span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 6&7</span>
+                <span class="reporter-method-output">STEP 5</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
                 <span class="reporter-method-output">Mouse over the 'Dynamic Queues' menu link.</span>
-                <span class="reporter-method-output">Click the 'Add 19c942f87090490' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Add 19c942f87090490 dynamic queue dialog'.</span>
-                <span class="reporter-method-output">Enter '5608de353cf5440' in the 'Title' text box.</span>
-                <span class="reporter-method-output"></span>
+                <span class="reporter-method-output">Click the 'Add b8f2a99a647449d' menu link.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Add b8f2a99a647449d dynamic queue dialog'.</span>
+                <span class="reporter-method-output">STEP 6</span>
+                <span class="reporter-method-output">Enter '12f6f647d3c64d5_REVISION1' in the 'Title' text box.</span>
                 <span class="reporter-method-output"></span>
                 <span class="reporter-method-output">Click the 'Newest' radio button under 'Sort by'.</span>
-                <span class="reporter-method-output">Select 'Publish' from the 'TV Shows' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save Dynamic Queue' button.</span>
-                <span class="reporter-method-output">STEP 8 </span>
+                <span class="reporter-method-output">STEP 7- MOVED TO SETUP</span>
+                <span class="reporter-method-output">STEP 8</span>
                 <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
                 <span class="reporter-method-output">Click the 'Dynamic Queues' menu link.</span>
                 <span class="reporter-method-output">Switch to the active frame titled 'Dynamic Queues dialog'.</span>
-                <span class="reporter-method-output">STEP 9 - MOVED TO SETUP</span>
-                <span class="reporter-method-output">STEP 10 </span>
                 <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
                 <span class="reporter-method-output">Open a new browser window.</span>
                 <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Open url 'http://acc-test.publisher7.com/dynamic-queue/56'.</span>
-                <span class="reporter-method-output">Verify the text 'd99283f19d1f4d2' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '3a28f7626c52432' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '2c1cfceabb124dd' is present on the page.</span>
+                <span class="reporter-method-output">Open url 'http://acc-test.publisher7.com/dynamic-queue/31'.</span>
+                <span class="reporter-method-output">Verify the text 'acd7eef29efb47e' is present on the page.</span>
+                <span class="reporter-method-output">Verify the text 'e2fb6e5a4943477' is present on the page.</span>
+                <span class="reporter-method-output">STEP 9</span>
+                <span class="reporter-method-output">Switch to the parent tab/window.</span>
+                <span class="reporter-method-output">Verify the 'Edit' is present in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Edit' link in the work bench.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Edit 12f6f647d3c64d5_REVISION1 dialog'.</span>
+                <span class="reporter-method-output">Enter 'baaabfcd1c6a4f6_REVISION2' in the 'Title' text box.</span>
+                <span class="reporter-method-output"></span>
+                <span class="reporter-method-output">Click the 'Save Dynamic Queue' button.</span>
+                <span class="reporter-method-output">STEP 10- MOVED TO SETUP</span>
                 <span class="reporter-method-output">STEP 11</span>
+                <span class="reporter-method-output">Switch to new browser tab/window.</span>
+                <span class="reporter-method-output">Refresh the page.</span>
+                <span class="reporter-method-output">Verify the text '8d356004782c4cb' is present on the page.</span>
+                <span class="reporter-method-output">Verify the text '5079c5769b3a451' is present on the page.</span>
                 <span class="reporter-method-output">STEP 12</span>
+                <span class="reporter-method-output">Switch to the parent tab/window.</span>
+                <span class="reporter-method-output">Verify the 'Revisions' is present in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Revisions' link in the work bench.</span>
+                <span class="reporter-method-output">Switch to the active frame titled 'Dynamic Queue revision list dialog'.</span>
                 <span class="reporter-method-output">STEP 13</span>
-                <span class="reporter-method-output">STEP 14</span>
-                <span class="reporter-method-output">Switch to the parent tab/window.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Dynamic Queue types dialog'.</span>
-                <span class="reporter-method-output">Click the 'edit' link for Dynamic Queue Type '19c942f87090490.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Edit 19c942f87090490 dialog'.</span>
-                <span class="reporter-method-output">STEP 15</span>
-                <span class="reporter-method-output">Check the 'Movie' check box.</span>
-                <span class="reporter-method-output">Check the 'Person' check box.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 16</span>
-                <span class="reporter-method-output">Mouse over the 'Content' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Dynamic Queues' menu link.</span>
-                <span class="reporter-method-output">Click the 'Add 19c942f87090490' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Add 19c942f87090490 dynamic queue dialog'.</span>
-                <span class="reporter-method-output">Verify Target bundle content count equals '2'.</span>
-                <span class="reporter-method-output">Verify content type 'Movie' is present in list of Target bundles.</span>
-                <span class="reporter-method-output">Verify content type 'Person' is present in list of Target bundles.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 17</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Dynamic Queue types dialog'.</span>
-                <span class="reporter-method-output">Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '19c942f87090490 dialog'.</span>
-                <span class="reporter-method-output">Verify the text 'Full content' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Teaser' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Revision comparison' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Tokens' is present on the page.</span>
-                <span class="reporter-method-output">STEP 18</span>
-                <span class="reporter-method-output">Select 'Full content' from the 'Entity List' Formate drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Refresh the page.</span>
-                <span class="reporter-method-output">Verify the text 'd99283f19d1f4d2' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '3a28f7626c52432' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '2c1cfceabb124dd' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'b71c70a997114be' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'e464214f3e7b4f7' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '8cbc1ffae4614cb' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Character: First Name' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Cover Media' is present on the page.</span>
-                <span class="reporter-method-output">STEP 19</span>
-                <span class="reporter-method-output">Switch to the parent tab/window.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Dynamic Queue types dialog'.</span>
-                <span class="reporter-method-output">Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '19c942f87090490 dialog'.</span>
-                <span class="reporter-method-output">Select 'Teaser' from the 'Entity List' Formate drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Refresh the page.</span>
-                <span class="reporter-method-output">Verify the text 'd99283f19d1f4d2' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '3a28f7626c52432' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '2c1cfceabb124dd' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'b71c70a997114be' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'e464214f3e7b4f7' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '8cbc1ffae4614cb' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Character: First Name' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Cover Media' is NOT present on the page.</span>
-                <span class="reporter-method-output">STEP 20</span>
-                <span class="reporter-method-output">STEP 21</span>
-                <span class="reporter-method-output">Switch to the parent tab/window.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Display suite' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'View modes' menu link.</span>
-                <span class="reporter-method-output">Click the 'Add a view mode' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'View modes dialog'.</span>
-                <span class="reporter-method-output">Enter '2a5d59731967448' in the 'Label' text box.</span>
-                <span class="reporter-method-output">Click the 'Node' Entity check box.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The view mode 2a5d59731967448 has been saved' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 22,23,24</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Content types' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Post' menu link.</span>
-                <span class="reporter-method-output">Click the 'Manage display' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Post dialog'.</span>
-                <span class="reporter-method-output">Click the '2a5d59731967448' checkbox.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the '2a5d59731967448' Tab.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Post dialog'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Body'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Categories'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Tags'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Contributor'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Media Gallery'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Media'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Description'.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Content types' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Character Profile' menu link.</span>
-                <span class="reporter-method-output">Click the 'Manage display' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Character Profile dialog'.</span>
-                <span class="reporter-method-output">Click the '2a5d59731967448' checkbox.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the '2a5d59731967448' Tab.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Character Profile dialog'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Biography'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: First Name'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Middle Name'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Last Name'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Photo'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Alias'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Birth Date'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Prefix'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Suffix'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'External Links'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Biography'.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 25</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Dynamic Queue types dialog'.</span>
-                <span class="reporter-method-output">Click the 'manage display' link for Dynamic Queue Type '19c942f87090490.</span>
-                <span class="reporter-method-output">Switch to the active frame titled '19c942f87090490 dialog'.</span>
-                <span class="reporter-method-output">Select '2a5d59731967448' from the 'Entity List' Formate drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">STEP 26</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Refresh the page.</span>
-                <span class="reporter-method-output">Verify the text 'd99283f19d1f4d2' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '3a28f7626c52432' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '2c1cfceabb124dd' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'b71c70a997114be' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'e464214f3e7b4f7' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text '8cbc1ffae4614cb' is NOT present on the page.</span>
-                <span class="reporter-method-output">STEP 27</span>
-                <span class="reporter-method-output">Switch to the parent tab/window.</span>
-                <span class="reporter-method-output">Mouse over the 'People' menu link.</span>
-                <span class="reporter-method-output">Click the 'Permissions' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'People dialog'.</span>
-                <span class="reporter-method-output">Click the 'Save Permissions' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The changes have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Close Overlay X'.</span>
-                <span class="reporter-method-output">Click the 'Logout' button.</span>
-                <span class="reporter-method-output">STEP 28</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Refresh the page.</span>
-                <span class="reporter-method-output">Verify the text '3a28f7626c52432' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '2c1cfceabb124dd' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'd99283f19d1f4d2' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'b71c70a997114be' is NOT present on the page.</span>
-                <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
-                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
-                <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Mouse over the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Mouse over the 'Display suite' menu link.</span>
-                <span class="reporter-method-output">Click the 'View modes' menu link.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'View modes dialog'.</span>
-                <span class="reporter-method-output">Click the 'Delete' link for label '2a5d59731967448'.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'Are you sure you want to delete 2a5d59731967448? dialog'.</span>
-                <span class="reporter-method-output">Click the 'Delete' button.</span>
-                <span class="reporter-method-output">Switch to the active frame titled 'View modes dialog'.</span>
-                <span class="reporter-method-output">Verify success message of 'The view mode 2a5d59731967448 has been deleted.' is present.</span>
+                <span class="reporter-method-output">Verify the count of revisions in the Queues revision list is '2'.</span>
+                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png </span>
+                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png'> <img src='./CreateScheduleMultipleRevisions_TC4969_101714080707AM.png' height='700' width='700'/> </a></span>
+                <span class="reporter-method-output">Cache was cleared on test failure</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -560,38 +390,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateC...)</span>
-                <span class="method-start">33 ms</span>
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions....)</span>
+                <span class="method-start">29 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">CreateConfigureDynamicQueue_TC4197</span>
-                <span class="method-start">3276 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreateScheduleMultipleRevisions_TC4969</span>
+                <span class="method-start">3068 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=CreateConfigureDynamicQueue_TC4197 status=SUCCESS method=CreateConfigureDynamicQueu...)</span>
-                <span class="method-start">310975 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.Cleanup...)</span>
-                <span class="method-start">311562 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Cleanup</span>
-                <span class="method-start">314129 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=Cleanup status=SUCCESS method=CreateConfigureDynamicQueue.Cleanup()[pri:0, instance...)</span>
-                <span class="method-start">314131 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=CreateScheduleMultipleRevisions_TC4969 status=FAILURE method=CreateandScheduleMulti...)</span>
+                <span class="method-start">104977 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTeardown</span>
-                <span class="method-start">314719 ms</span>
+                <span class="method-start">118740 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

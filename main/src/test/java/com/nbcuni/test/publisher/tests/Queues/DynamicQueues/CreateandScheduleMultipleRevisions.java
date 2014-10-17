@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -29,7 +31,7 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
      * @version 1.0 Date: October 13, 2014
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/22576323009
      *************************************************************************************/
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
 	    public void CreateScheduleMultipleRevisions_TC4969() throws Exception{
 		 
 		 Reporter.log("STEP 1");
@@ -44,13 +46,13 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          String postTitle = createDefaultContent.Post("Published", postBody);
          
          Reporter.log("STEP 2");
+         Modules modules = new Modules(webDriver);
          taxonomy.NavigateSite("Modules");
          overlay.SwitchToActiveFrame();
-         Modules modules = new Modules(webDriver);
-         modules.EnterFilterName("Dynamic Queue");
-         modules.EnableModule("Dynamic Queue");
-         modules.EnterFilterName("Dynamic Queue Workbench");
-         modules.EnableModule("Dynamic Queue Workbench");
+         for (String module : Arrays.asList("Dynamic Queue", "Dynamic Queue Workbench")) {
+         	modules.EnterFilterName(module);
+         	modules.EnableModule(module);
+         }
          overlay.ClickCloseOverlayLnk();
          
          Reporter.log("STEP 3");

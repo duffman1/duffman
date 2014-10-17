@@ -53,7 +53,13 @@ public class CreateConfigureDynamicQueue extends ParentTest{
       
         Reporter.log("STEP 2");
         Modules modules = new Modules(webDriver);
-        modules.VerifyModuleEnabled("Dynamic Queue");
+        taxonomy.NavigateSite("Modules");
+        overlay.SwitchToActiveFrame();
+        for (String module : Arrays.asList("Dynamic Queue", "Dynamic Queue Workbench")) {
+        	modules.EnterFilterName(module);
+        	modules.EnableModule(module);
+        }
+        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 3");
         taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
@@ -275,7 +281,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
     
    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"CreateConfigureDynamicQueue_TC4197"}, alwaysRun=true)
    public void Cleanup() throws Exception {
-		if (testSuccessful == false) {
+		if (testSuccessful == false && viewModeLabel != "") {
 			
 			UserLogin userLogin = applib.openApplication();
 	        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
