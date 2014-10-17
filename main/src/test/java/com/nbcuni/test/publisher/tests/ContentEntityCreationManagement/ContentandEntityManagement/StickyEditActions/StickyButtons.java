@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 
 public class StickyButtons extends ParentTest{
 	
+	Boolean testSuccessful = false;
+	
     /*************************************************************************************
      * TEST CASE 
      * Step 1 - Login as admin  Note: Code for this User Story was initially deployed to http://qa1stg.publisher.nbcuni.com/ .,
@@ -78,5 +80,22 @@ public class StickyButtons extends ParentTest{
         	modules.EnterFilterName("Sticky Edit Actions");
         	modules.DisableModule("Sticky Edit Actions");
         	
+        	testSuccessful = true;
+        	
     }
+    
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"StickyButtons_Test"}, alwaysRun=true)
+	public void Cleanup() throws Exception {
+		if (testSuccessful == false) {
+			
+			UserLogin userLogin = new UserLogin(webDriver);
+			Modules modules = new Modules(webDriver);
+			
+			applib.openSitePage("/user");
+			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+			taxonomy.NavigateSite("Modules");
+        	modules.EnterFilterName("Sticky Edit Actions");
+        	modules.DisableModule("Sticky Edit Actions");
+		}
+	}
 }

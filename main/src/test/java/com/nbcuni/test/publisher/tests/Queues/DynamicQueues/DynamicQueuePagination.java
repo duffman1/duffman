@@ -31,7 +31,7 @@ public class DynamicQueuePagination extends ParentTest {
 
 		Reporter.log("STEP 1");
 		UserLogin userLogin = applib.openApplication();
-        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
         taxonomy.NavigateSite("Content");

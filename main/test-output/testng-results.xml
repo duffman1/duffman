@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
     <line>
       <![CDATA[STEP 1]]>
@@ -20,172 +20,82 @@
       <![CDATA[SETUP]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+      <![CDATA[Enter 'acd7eef29efb47e' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'e2fb6e5a4943477' into the 'Biography' text area.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+      <![CDATA[Switch to the select file frame.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'DART' to be visible in module list.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Clear all 'Name' text box values.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Clear all 'Value' text box values.]]>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Reports' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Status report' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'MPS' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that no MPS calls were made on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com/kfkjdjdkjdjldkjj'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8 - N/A - COVERED IN SETUP]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
+      <![CDATA[Verify success message of 'Character Profile acd7eef29efb47e has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -194,25 +104,22 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'bdaf32e21e2d4cf' in the 'Title' text box.]]>
+      <![CDATA[Enter '8d356004782c4cb' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Enter '5079c5769b3a451' into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Cover' select button.]]>
@@ -248,249 +155,295 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie bdaf32e21e2d4cf has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Post 8d356004782c4cb has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Note the node number for the content item.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[STEP 10 through STEP 19]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"title":"bdaf32e21e2d4cf"' is present in the page source.]]>
+      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"path":"\/node\/6831"' is present in the page source.]]>
+      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"content_id":"node6831"' is present in the page source.]]>
+      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"is_content":1' is present in the page source.]]>
+      <![CDATA[Enter 'Dynamic Queue Workbench' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"type":"movie"' is present in the page source.]]>
+      <![CDATA[Wait for module filter titled 'Dynamic Queue Workbench' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.]]>
+      <![CDATA[Verify the 'Dynamic Queue Workbench' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"pubdate":' is present in the page source.]]>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 20]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 21]]>
+      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'b8f2a99a647449d' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'b8f2a99a647449d' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Gallery' menu link.]]>
+      <![CDATA[Click the 'Add b8f2a99a647449d' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Add b8f2a99a647449d dynamic queue dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'c5deacddc27848c' in the 'Title' text box.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
+      <![CDATA[Enter '12f6f647d3c64d5_REVISION1' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the select file frame.]]>
+      <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[Click the 'View Library' button.]]>
+      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
+      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[STEP 7- MOVED TO SETUP]]>
     </line>
     <line>
-      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click media thumbnail image number 1]]>
+      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click on the 'Submit' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Media Gallery c5deacddc27848c has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Note the node number for the content item.]]>
-    </line>
-    <line>
-      <![CDATA[Get the file id of image number 1.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 22]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com/node/6836/8956'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 28]]>
-    </line>
-    <line>
-      <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 29]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ecd81cde1fae495' in the 'Block Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'ecd81cde1fae495 has been created.' is present.]]>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 30]]>
+      <![CDATA[Open a new browser window.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Switch to new browser tab/window.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/dynamic-queue/31'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[Verify the text 'acd7eef29efb47e' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'ecd81cde1fae495 (MPS)' from the 'Header' drop down list.]]>
+      <![CDATA[Verify the text 'e2fb6e5a4943477' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[STEP 9]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+      <![CDATA[Switch to the parent tab/window.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the 'Edit' is present in the work bench.]]>
     </line>
     <line>
-      <![CDATA[STEP 31]]>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Verify 'mps.getAd('ecd81cde1fae495')' is present in page source.]]>
+      <![CDATA[Switch to the active frame titled 'Edit 12f6f647d3c64d5_REVISION1 dialog'.]]>
     </line>
     <line>
-      <![CDATA[STEP 32 - N/A]]>
+      <![CDATA[Enter 'baaabfcd1c6a4f6_REVISION2' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[CLEANUP]]>
+      <![CDATA[]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' menu link.]]>
+      <![CDATA[STEP 10- MOVED TO SETUP]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+      <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'ecd81cde1fae495 (MPS)' from the '- None -' drop down list.]]>
+      <![CDATA[Switch to new browser tab/window.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
+      <![CDATA[Refresh the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text '8d356004782c4cb' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '5079c5769b3a451' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Revisions' is present in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Dynamic Queue revision list dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 13]]>
+    </line>
+    <line>
+      <![CDATA[Verify the count of revisions in the Queues revision list is '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png ]]>
+    </line>
+    <line>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png'> <img src='./CreateScheduleMultipleRevisions_TC4969_101714080707AM.png' height='700' width='700'/> </a>]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Cache was cleared on test failure]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="129185" started-at="2014-10-14T18:55:40Z" finished-at="2014-10-14T18:57:49Z">
+  <suite name="Default suite" duration-ms="118693" started-at="2014-10-17T12:05:22Z" finished-at="2014-10-17T12:07:21Z">
     <groups>
       <group name="full">
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+        <method signature="CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="CreateScheduleMultipleRevisions_TC4969" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions"/>
       </group> <!-- full -->
-      <group name="mps">
-        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
-      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="129185" started-at="2014-10-14T18:55:40Z" finished-at="2014-10-14T18:57:49Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="suiteSetup" is-config="true" duration-ms="24" started-at="2014-10-14T14:55:40Z" finished-at="2014-10-14T14:55:40Z">
+    <test name="Default test" duration-ms="118693" started-at="2014-10-17T12:05:22Z" finished-at="2014-10-17T12:07:21Z">
+      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-17T08:05:22Z" finished-at="2014-10-17T08:05:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="startSelenium" is-config="true" duration-ms="3272" started-at="2014-10-14T14:55:40Z" finished-at="2014-10-14T14:55:43Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="startSelenium" is-config="true" duration-ms="3039" started-at="2014-10-17T08:05:22Z" finished-at="2014-10-17T08:05:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="ImplementMPS_TC2901" duration-ms="125326" started-at="2014-10-14T14:55:43Z" finished-at="2014-10-14T14:57:48Z">
+        <test-method status="FAIL" signature="CreateScheduleMultipleRevisions_TC4969()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="CreateScheduleMultipleRevisions_TC4969" duration-ms="101908" started-at="2014-10-17T08:05:25Z" finished-at="2014-10-17T08:07:07Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [2] but found [9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [2] but found [9]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList.VerifyRevisionCount(QueuesRevisionList.java:118)
+	at com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969(CreateandScheduleMultipleRevisions.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -511,172 +464,82 @@
               <![CDATA[SETUP]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
+              <![CDATA[Enter 'acd7eef29efb47e' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'e2fb6e5a4943477' into the 'Biography' text area.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+              <![CDATA[Switch to the select file frame.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'DART' to be visible in module list.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Clear all 'Name' text box values.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Clear all 'Value' text box values.]]>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Reports' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Status report' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'MPS' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that no MPS calls were made on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com/kfkjdjdkjdjldkjj'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8 - N/A - COVERED IN SETUP]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
+              <![CDATA[Verify success message of 'Character Profile acd7eef29efb47e has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -685,25 +548,22 @@
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'bdaf32e21e2d4cf' in the 'Title' text box.]]>
+              <![CDATA[Enter '8d356004782c4cb' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Enter '5079c5769b3a451' into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Cover' select button.]]>
@@ -739,239 +599,245 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie bdaf32e21e2d4cf has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Post 8d356004782c4cb has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Note the node number for the content item.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[STEP 10 through STEP 19]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"title":"bdaf32e21e2d4cf"' is present in the page source.]]>
+              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"path":"\/node\/6831"' is present in the page source.]]>
+              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"content_id":"node6831"' is present in the page source.]]>
+              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"is_content":1' is present in the page source.]]>
+              <![CDATA[Enter 'Dynamic Queue Workbench' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"type":"movie"' is present in the page source.]]>
+              <![CDATA[Wait for module filter titled 'Dynamic Queue Workbench' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.]]>
+              <![CDATA[Verify the 'Dynamic Queue Workbench' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"pubdate":' is present in the page source.]]>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 20]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Verify 'a3VtdWQ9MQ==' is present in page source.]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 21]]>
+              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'b8f2a99a647449d' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'b8f2a99a647449d' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Gallery' menu link.]]>
+              <![CDATA[Click the 'Add b8f2a99a647449d' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Add b8f2a99a647449d dynamic queue dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'c5deacddc27848c' in the 'Title' text box.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
+              <![CDATA[Enter '12f6f647d3c64d5_REVISION1' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the select file frame.]]>
+              <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[Click the 'View Library' button.]]>
+              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
+              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[STEP 7- MOVED TO SETUP]]>
             </line>
             <line>
-              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click media thumbnail image number 1]]>
+              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click on the 'Submit' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Media Gallery c5deacddc27848c has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Note the node number for the content item.]]>
-            </line>
-            <line>
-              <![CDATA[Get the file id of image number 1.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 22]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com/node/6836/8956'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 28]]>
-            </line>
-            <line>
-              <![CDATA[Verify 'typeof(mps.writeFooter)' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 29]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'MPS Blocks' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Add a new MPS block dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ecd81cde1fae495' in the 'Block Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'ecd81cde1fae495 has been created.' is present.]]>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 30]]>
+              <![CDATA[Open a new browser window.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Switch to new browser tab/window.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/dynamic-queue/31'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[Verify the text 'acd7eef29efb47e' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'ecd81cde1fae495 (MPS)' from the 'Header' drop down list.]]>
+              <![CDATA[Verify the text 'e2fb6e5a4943477' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[STEP 9]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+              <![CDATA[Switch to the parent tab/window.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the 'Edit' is present in the work bench.]]>
             </line>
             <line>
-              <![CDATA[STEP 31]]>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Verify 'mps.getAd('ecd81cde1fae495')' is present in page source.]]>
+              <![CDATA[Switch to the active frame titled 'Edit 12f6f647d3c64d5_REVISION1 dialog'.]]>
             </line>
             <line>
-              <![CDATA[STEP 32 - N/A]]>
+              <![CDATA[Enter 'baaabfcd1c6a4f6_REVISION2' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[CLEANUP]]>
+              <![CDATA[]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' menu link.]]>
+              <![CDATA[STEP 10- MOVED TO SETUP]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Blocks dialog'.]]>
+              <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'ecd81cde1fae495 (MPS)' from the '- None -' drop down list.]]>
+              <![CDATA[Switch to new browser tab/window.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
+              <![CDATA[Refresh the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the text '8d356004782c4cb' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '5079c5769b3a451' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Revisions' is present in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Dynamic Queue revision list dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 13]]>
+            </line>
+            <line>
+              <![CDATA[Verify the count of revisions in the Queues revision list is '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png ]]>
+            </line>
+            <line>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png'> <img src='./CreateScheduleMultipleRevisions_TC4969_101714080707AM.png' height='700' width='700'/> </a>]]>
+            </line>
+            <line>
+              <![CDATA[Cache was cleared on test failure]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementMPS_TC2901 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="stopSelenium" is-config="true" duration-ms="576" started-at="2014-10-14T14:57:48Z" finished-at="2014-10-14T14:57:49Z">
+        </test-method> <!-- CreateScheduleMultipleRevisions_TC4969 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="stopSelenium" is-config="true" duration-ms="13733" started-at="2014-10-17T08:07:07Z" finished-at="2014-10-17T08:07:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=SUCCESS method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreateScheduleMultipleRevisions_TC4969 status=FAILURE method=CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@1bffd008]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-14T14:57:49Z" finished-at="2014-10-14T14:57:49Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-17T08:07:21Z" finished-at="2014-10-17T08:07:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

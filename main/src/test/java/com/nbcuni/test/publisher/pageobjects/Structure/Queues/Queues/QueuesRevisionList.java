@@ -40,6 +40,9 @@ public class QueuesRevisionList {
     @FindBy(how = How.XPATH, using = "//a[text()='Revisions']")
     private WebElement Revision_Lnk;
     
+    @FindBy(how = How.XPATH, using = "//a[text()='Schedule']")
+    private WebElement Schedule_Tab;
+    
     @FindBy(how = How.XPATH, using = "(//td[@class='views-field views-field-history-list'])[1]")
     private WebElement StateFlowHistoryEvent_Txt;
     
@@ -113,6 +116,13 @@ public class QueuesRevisionList {
     	
     	Reporter.log("Verify the count of revisions in the Queues revision list is '" + revisionCount + "'.");
     	Assert.assertEquals(StateFlow_Rws().size(), revisionCount);
+    }
+    
+    public void clickScheduleTab() throws Exception{
+    	
+    	Reporter.log("Click Schedule Tab");	
+    	Schedule_Tab.click();
+    	
     }
     
 }

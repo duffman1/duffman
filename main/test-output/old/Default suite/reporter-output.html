@@ -4,71 +4,40 @@
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
 <tr><td>SETUP</td></tr>
-<tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
-<tr><td>Enter 'Pub Ads' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Pub Ads' to be visible in module list.</td></tr>
-<tr><td>Verify the 'Pub Ads' check box is checked.</td></tr>
-<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Pixelman' to be visible in module list.</td></tr>
-<tr><td>Enter 'MPS' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'MPS' to be visible in module list.</td></tr>
-<tr><td>Verify the 'MPS' check box is checked.</td></tr>
-<tr><td>Enter 'DART' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'DART' to be visible in module list.</td></tr>
-<tr><td>Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Web services' menu link.</td></tr>
-<tr><td>Click the 'MPS Configuration' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'MPS Configuration dialog'.</td></tr>
-<tr><td>Enter 'mps.io' in the 'MPS Host' text box.</td></tr>
-<tr><td>Click the 'Document Write' radio button.</td></tr>
-<tr><td>Enter 'pub7-development' in the 'Site Instance Override' text box.</td></tr>
-<tr><td>Clear all 'Name' text box values.</td></tr>
-<tr><td>Clear all 'Value' text box values.</td></tr>
-<tr><td>Uncheck all 'JSON' check boxes.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 2 - N/A</td></tr>
-<tr><td>STEP 3 - N/A</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Mouse over the 'Reports' menu link.</td></tr>
-<tr><td>Click the 'Status report' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Status report dialog'.</td></tr>
-<tr><td>Verify the text 'Ad Tag Style' is present on the page.</td></tr>
-<tr><td>Verify the text 'MPS' is present on the page.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Verify the mps call parameter '"site":"pub7-development"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"title":"Welcome to' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"\/"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"is_content":0' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"type":"other"' is present in the page source.</td></tr>
-<tr><td>STEP 6</td></tr>
-<tr><td>Click the 'People' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'People dialog'.</td></tr>
-<tr><td>Verify that no MPS calls were made on the page.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Open url 'http://acc-test.publisher7.com/kfkjdjdkjdjldkjj'.</td></tr>
-<tr><td>Verify the mps call parameter '"site":"pub7-development"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.</td></tr>
-<tr><td>Open url 'http://acc-test.publisher7.com'.</td></tr>
-<tr><td>STEP 8 - N/A - COVERED IN SETUP</td></tr>
-<tr><td>STEP 9</td></tr>
 <tr><td>Mouse over the 'Content' menu link.</td></tr>
 <tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Movie' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Scroll to and click the 'Basic Information' tab.</td></tr>
-<tr><td>Enter 'bdaf32e21e2d4cf' in the 'Title' text box.</td></tr>
+<tr><td>Click the 'Character Profile' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Character Profile dialog'.</td></tr>
+<tr><td>Enter 'acd7eef29efb47e' in the 'Character First Name' text box.</td></tr>
+<tr><td>Enter 'e2fb6e5a4943477' into the 'Biography' text area.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Character Profile dialog'.</td></tr>
+<tr><td>Click the Cover Photo 'Select' button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Character Profile dialog'.</td></tr>
+<tr><td>Assert that img source of the Cover Photo contains 'HanSolo'.</td></tr>
+<tr><td>Assert the the img is loaded and visible.</td></tr>
+<tr><td>Scroll the 'Publishing Options' link into view.</td></tr>
+<tr><td>Click the 'Publishing Options' link.</td></tr>
+<tr><td>Select 'Published' from the 'Moderation State' drop down list.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Character Profile acd7eef29efb47e has been created.' is present.</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Post' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Enter '8d356004782c4cb' in the 'Title' text box.</td></tr>
 <tr><td>Switch to the Synopsis frame.</td></tr>
-<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
+<tr><td>Enter '5079c5769b3a451' into the 'Body' text area.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
 <tr><td>Click the 'Cover' select button.</td></tr>
 <tr><td>Switch to the select file frame.</td></tr>
 <tr><td>Enter the file path for file upload.</td></tr>
@@ -80,76 +49,79 @@
 <tr><td>Verify the file image 'HanSolo' is present.</td></tr>
 <tr><td>Verify the img is loaded and visible.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Movie dialog'.</td></tr>
-<tr><td>Click the 'Additional Information' link.</td></tr>
-<tr><td>Select the 'Syndicated' from the 'Movie Type' drop down list.</td></tr>
-<tr><td>Select the 'G' from the 'Rating' drop down list.</td></tr>
-<tr><td>Select the 'Action' from the 'Primary Genre' drop down list.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Scroll the 'Publishing Options' link into view.</td></tr>
+<tr><td>Click the 'Publishing Options' link.</td></tr>
+<tr><td>Select 'Published' from the 'Moderation State' drop down list.</td></tr>
 <tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Movie bdaf32e21e2d4cf has been created.' is present.</td></tr>
-<tr><td>Note the node number for the content item.</td></tr>
-<tr><td>STEP 10 through STEP 19</td></tr>
-<tr><td>Verify the mps call parameter '"site":"pub7-development"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"title":"bdaf32e21e2d4cf"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"path":"\/node\/6831"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"content_id":"node6831"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"is_content":1' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"type":"movie"' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.</td></tr>
-<tr><td>Verify the mps call parameter '"pubdate":' is present in the page source.</td></tr>
-<tr><td>STEP 20</td></tr>
-<tr><td>Verify 'a3VtdWQ9MQ==' is present in page source.</td></tr>
-<tr><td>STEP 21</td></tr>
+<tr><td>Verify success message of 'Post 8d356004782c4cb has been created.' is present.</td></tr>
+<tr><td>STEP 2</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'Dynamic Queue' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Dynamic Queue' to be visible in module list.</td></tr>
+<tr><td>Verify the 'Dynamic Queue' check box is checked.</td></tr>
+<tr><td>Enter 'Dynamic Queue Workbench' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Dynamic Queue Workbench' to be visible in module list.</td></tr>
+<tr><td>Verify the 'Dynamic Queue Workbench' check box is checked.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 3</td></tr>
+<tr><td>Mouse over the 'Structure' menu link.</td></tr>
+<tr><td>Mouse over the 'Dynamic Queue types' menu link.</td></tr>
+<tr><td>Click the 'Add dynamic queue type' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Add dynamic queue type dialog'.</td></tr>
+<tr><td>STEP 4</td></tr>
+<tr><td>Enter 'b8f2a99a647449d' in the 'Name' text box.</td></tr>
+<tr><td>Select '1 min' from the 'Cache lifetime' drop down list.</td></tr>
+<tr><td>Select 'Content' or 'Node' from the 'Entity type' drop down list.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Add dynamic queue type dialog'.</td></tr>
+<tr><td>Verify the text 'b8f2a99a647449d' is present on the page.</td></tr>
+<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 5</td></tr>
 <tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Media Gallery' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
-<tr><td>Enter 'c5deacddc27848c' in the 'Title' text box.</td></tr>
-<tr><td>Click the 'Media Items Select' button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Click the 'View Library' button.</td></tr>
-<tr><td>Enter 'HanSolo' in the 'File name' text box.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Verify the media thumbnail image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the the img is loaded and visible.</td></tr>
-<tr><td>Click media thumbnail image number 1</td></tr>
-<tr><td>Click on the 'Submit' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Media Gallery dialog'.</td></tr>
-<tr><td>Verify the img source of the Media Item contains 'HanSolo'.</td></tr>
-<tr><td>Assert the the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Media Gallery c5deacddc27848c has been created.' is present.</td></tr>
-<tr><td>Note the node number for the content item.</td></tr>
-<tr><td>Get the file id of image number 1.</td></tr>
-<tr><td>STEP 22</td></tr>
-<tr><td>Open url 'http://acc-test.publisher7.com/node/6836/8956'.</td></tr>
-<tr><td>STEP 28</td></tr>
-<tr><td>Verify 'typeof(mps.writeFooter)' is present in page source.</td></tr>
-<tr><td>STEP 29</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Mouse over the 'MPS Blocks' menu link.</td></tr>
-<tr><td>Click the 'Add' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Add a new MPS block dialog'.</td></tr>
-<tr><td>Enter 'ecd81cde1fae495' in the 'Block Name' text box.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'ecd81cde1fae495 has been created.' is present.</td></tr>
+<tr><td>Mouse over the 'Dynamic Queues' menu link.</td></tr>
+<tr><td>Click the 'Add b8f2a99a647449d' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Add b8f2a99a647449d dynamic queue dialog'.</td></tr>
+<tr><td>STEP 6</td></tr>
+<tr><td>Enter '12f6f647d3c64d5_REVISION1' in the 'Title' text box.</td></tr>
+<tr><td></td></tr>
+<tr><td>Click the 'Newest' radio button under 'Sort by'.</td></tr>
+<tr><td>Click the 'Save Dynamic Queue' button.</td></tr>
+<tr><td>STEP 7- MOVED TO SETUP</td></tr>
+<tr><td>STEP 8</td></tr>
+<tr><td>Mouse over the 'Content' menu link.</td></tr>
+<tr><td>Click the 'Dynamic Queues' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Dynamic Queues dialog'.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 30</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'ecd81cde1fae495 (MPS)' from the 'Header' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Verify success message of 'The block settings have been updated.' is present.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 31</td></tr>
-<tr><td>Verify 'mps.getAd('ecd81cde1fae495')' is present in page source.</td></tr>
-<tr><td>STEP 32 - N/A</td></tr>
-<tr><td>CLEANUP</td></tr>
-<tr><td>Mouse over the 'Structure' menu link.</td></tr>
-<tr><td>Click the 'Blocks' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Blocks dialog'.</td></tr>
-<tr><td>Select the block name 'ecd81cde1fae495 (MPS)' from the '- None -' drop down list.</td></tr>
-<tr><td>Click the 'Save Blocks' button.</td></tr>
-<tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Open a new browser window.</td></tr>
+<tr><td>Switch to new browser tab/window.</td></tr>
+<tr><td>Open url 'http://acc-test.publisher7.com/dynamic-queue/31'.</td></tr>
+<tr><td>Verify the text 'acd7eef29efb47e' is present on the page.</td></tr>
+<tr><td>Verify the text 'e2fb6e5a4943477' is present on the page.</td></tr>
+<tr><td>STEP 9</td></tr>
+<tr><td>Switch to the parent tab/window.</td></tr>
+<tr><td>Verify the 'Edit' is present in the work bench.</td></tr>
+<tr><td>Click the 'Edit' link in the work bench.</td></tr>
+<tr><td>Switch to the active frame titled 'Edit 12f6f647d3c64d5_REVISION1 dialog'.</td></tr>
+<tr><td>Enter 'baaabfcd1c6a4f6_REVISION2' in the 'Title' text box.</td></tr>
+<tr><td></td></tr>
+<tr><td>Click the 'Save Dynamic Queue' button.</td></tr>
+<tr><td>STEP 10- MOVED TO SETUP</td></tr>
+<tr><td>STEP 11</td></tr>
+<tr><td>Switch to new browser tab/window.</td></tr>
+<tr><td>Refresh the page.</td></tr>
+<tr><td>Verify the text '8d356004782c4cb' is present on the page.</td></tr>
+<tr><td>Verify the text '5079c5769b3a451' is present on the page.</td></tr>
+<tr><td>STEP 12</td></tr>
+<tr><td>Switch to the parent tab/window.</td></tr>
+<tr><td>Verify the 'Revisions' is present in the work bench.</td></tr>
+<tr><td>Click the 'Revisions' link in the work bench.</td></tr>
+<tr><td>Switch to the active frame titled 'Dynamic Queue revision list dialog'.</td></tr>
+<tr><td>STEP 13</td></tr>
+<tr><td>Verify the count of revisions in the Queues revision list is '2'.</td></tr>
+<tr><td>Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png </td></tr>
+<tr><td><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png'> <img src='./CreateScheduleMultipleRevisions_TC4969_101714080707AM.png' height='700' width='700'/> </a></td></tr>
+<tr><td>Open url 'http://acc-test.publisher7.com'.</td></tr>
+<tr><td>Cache was cleared on test failure</td></tr>
 </table>
