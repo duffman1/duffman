@@ -8,10 +8,8 @@ import com.nbcuni.test.publisher.pageobjects.Configuration.EntityTracker;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.Reports.EntityTrackerReports;
-
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;

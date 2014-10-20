@@ -2,7 +2,10 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -14,183 +17,228 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Entity Tracker' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
+      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+      <![CDATA[Click the 'Entity tracker' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
     </line>
     <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[MPX is already configured.]]>
+      <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Media' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the selected import account options and store to a list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Files' menu link.]]>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'mpxPlayers' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify that the search result set column order matches as expected.]]>
+      <![CDATA[Enter '1b0ef85e49034c6' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Enter title Automation.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Post 1b0ef85e49034c6 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Reports' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Entity tracker report' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Entity tracker report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10/20/2014' in the 'From' date picker.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10/20/2014' in the 'To' date picker.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[STEP 6 - N/A]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Click the 'Reset' button.]]>
+      <![CDATA[Click the '...Array, # elements' link.]]>
     </line>
     <line>
-      <![CDATA[Get the text of the first search result set item.]]>
+      <![CDATA[Click the child content node link.]]>
     </line>
     <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Get the child node content id number.]]>
     </line>
     <line>
-      <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
+      <![CDATA[Click the child content node 'info' link.]]>
     </line>
     <line>
-      <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
+      <![CDATA[Get the child node content id title.]]>
     </line>
     <line>
-      <![CDATA[Get the text of each of the ddl options.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/node/15086'.]]>
     </line>
     <line>
-      <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the MPX result set 'Source' items.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Reset' button.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the MPX result set 'Status' items.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that result set size for Published items is greater than 0.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Reset' button.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Unpublished' from the 'MPX Status/Published' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get all the MPX result set 'Status' items.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Reset' button.]]>
-    </line>
-    <line>
-      <![CDATA[Get the text of the first search result set item.]]>
-    </line>
-    <line>
-      <![CDATA[Get the number of results in the result set.]]>
+      <![CDATA[Verify the text '1b0ef85e49034c6' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49005" started-at="2014-10-13T23:14:13Z" finished-at="2014-10-13T23:15:02Z">
+  <suite name="Default suite" duration-ms="85755" started-at="2014-10-20T20:45:04Z" finished-at="2014-10-20T20:46:30Z">
     <groups>
-      <group name="mpx">
-        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@64169b6c]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@64169b6c]" name="EnhanceMPXPlayerContentAdminScreen_Test" class="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
+        <method signature="CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="CollectEditorialActivity_TC5071" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="49005" started-at="2014-10-13T23:14:13Z" finished-at="2014-10-13T23:15:02Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@64169b6c]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-13T19:14:13Z" finished-at="2014-10-13T19:14:13Z">
+    <test name="Default test" duration-ms="85755" started-at="2014-10-20T20:45:04Z" finished-at="2014-10-20T20:46:30Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="suiteSetup" is-config="true" duration-ms="27" started-at="2014-10-20T16:45:04Z" finished-at="2014-10-20T16:45:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@64169b6c]" name="startSelenium" is-config="true" duration-ms="3245" started-at="2014-10-13T19:14:13Z" finished-at="2014-10-13T19:14:16Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="startSelenium" is-config="true" duration-ms="3274" started-at="2014-10-20T16:45:04Z" finished-at="2014-10-20T16:45:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity.CollectEditorialActivity_TC5071() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@64169b6c]" name="EnhanceMPXPlayerContentAdminScreen_Test" duration-ms="45175" started-at="2014-10-13T19:14:16Z" finished-at="2014-10-13T19:15:01Z">
+        <test-method status="PASS" signature="CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="CollectEditorialActivity_TC5071" duration-ms="81892" started-at="2014-10-20T16:45:07Z" finished-at="2014-10-20T16:46:29Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -202,170 +250,215 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Entity Tracker' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
+              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+              <![CDATA[Click the 'Entity tracker' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
             </line>
             <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[MPX is already configured.]]>
+              <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Media' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the selected import account options and store to a list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Files' menu link.]]>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'mpxPlayers' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify that the search result set column order matches as expected.]]>
+              <![CDATA[Enter '1b0ef85e49034c6' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Enter title Automation.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Post 1b0ef85e49034c6 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Reports' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Entity tracker report' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Entity tracker report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10/20/2014' in the 'From' date picker.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10/20/2014' in the 'To' date picker.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[STEP 6 - N/A]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Click the 'Reset' button.]]>
+              <![CDATA[Click the '...Array, # elements' link.]]>
             </line>
             <line>
-              <![CDATA[Get the text of the first search result set item.]]>
+              <![CDATA[Click the child content node link.]]>
             </line>
             <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Get the child node content id number.]]>
             </line>
             <line>
-              <![CDATA[Get all the account options in the 'MPX Player Account' select ddl.]]>
+              <![CDATA[Click the child content node 'info' link.]]>
             </line>
             <line>
-              <![CDATA[Assert that the count of options is expected + 1 for the '-select' option.]]>
+              <![CDATA[Get the child node content id title.]]>
             </line>
             <line>
-              <![CDATA[Get the text of each of the ddl options.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Assert that each expected account option is present in the 'MPX Player Account' select ddl.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/node/15086'.]]>
             </line>
             <line>
-              <![CDATA[Select the DB TV from the 'MPXPlayerAccount' select ddl.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the MPX result set 'Source' items.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that every source item in the result set equals 'DB TV'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Reset' button.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Published' from the 'MPX Status/Published' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the MPX result set 'Status' items.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that result set size for Published items is greater than 0.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that every status item in the result set equals 'Published'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Reset' button.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Unpublished' from the 'MPX Status/Published' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get all the MPX result set 'Status' items.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that every status item in the result set equals 'Unpublished'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Reset' button.]]>
-            </line>
-            <line>
-              <![CDATA[Get the text of the first search result set item.]]>
-            </line>
-            <line>
-              <![CDATA[Get the number of results in the result set.]]>
+              <![CDATA[Verify the text '1b0ef85e49034c6' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- EnhanceMPXPlayerContentAdminScreen_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@64169b6c]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-10-13T19:15:01Z" finished-at="2014-10-13T19:15:02Z">
+        </test-method> <!-- CollectEditorialActivity_TC5071 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="stopSelenium" is-config="true" duration-ms="577" started-at="2014-10-20T16:46:29Z" finished-at="2014-10-20T16:46:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=EnhanceMPXPlayerContentAdminScreen_Test status=SUCCESS method=EnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@64169b6c] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CollectEditorialActivity_TC5071 status=SUCCESS method=CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen@64169b6c]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-13T19:15:02Z" finished-at="2014-10-13T19:15:02Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-20T16:46:30Z" finished-at="2014-10-20T16:46:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

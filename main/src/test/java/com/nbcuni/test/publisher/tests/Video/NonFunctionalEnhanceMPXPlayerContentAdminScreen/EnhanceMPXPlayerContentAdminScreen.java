@@ -60,7 +60,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		searchFor.EnterTitle("Automation");
         		searchFor.ClickApplyBtn();
         		Thread.sleep(2000); //TODO - add dynamic wait for search result validation
-        		Assert.assertTrue(searchFor.GetMPXSearchResultSize() < initialResultSize);
+        		Assert.assertTrue(searchFor.GetMPXSearchResultSize() <= initialResultSize);
         		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().contains("AutomationPlayer"));
         		
         		//Step 5
@@ -83,6 +83,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		
         		//Step 7
         		searchFor.ClickResetBtn();
+        		Thread.sleep(2000); //TODO - dynamic wait
         		
         		//Step 8
         		searchFor.SelectStatus("Published");

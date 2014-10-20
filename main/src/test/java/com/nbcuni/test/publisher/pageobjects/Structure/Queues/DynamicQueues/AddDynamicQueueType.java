@@ -57,11 +57,17 @@ public class AddDynamicQueueType {
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement Save_Btn;
     
+    @FindBy(how = How.XPATH, using = "//input[@id='edit-label']/..//a[text()='Edit']")
+    private WebElement MachineNameEdit_Lnk;
+    
+    @FindBy(how = How.ID, using = "edit-type")
+    private WebElement MachineName_Txb;
     
     //PAGE OBJECT METHODS
     public void EnterName(String queueTypeName) throws Exception {
     	
     	Reporter.log("Enter '" + queueTypeName + "' in the 'Name' text box.");
+    	Name_Txb.clear();
     	Name_Txb.sendKeys(queueTypeName);
     }
     
@@ -114,6 +120,19 @@ public class AddDynamicQueueType {
     	
     	Reporter.log("Click the 'Save' button.");
     	Save_Btn.click();
+    }
+    
+    public void EnterMachineName(String queueTypeName) throws Exception {
+    	
+    	Reporter.log("Enter '" + queueTypeName + "' in the 'MachineName' text box.");
+    	MachineName_Txb.clear();
+    	MachineName_Txb.sendKeys(queueTypeName);
+    }
+    
+    public void ClickMachineNameEditLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'MachineNameEdit_Lnk' button.");
+    	MachineNameEdit_Lnk.click();
     }
     
     

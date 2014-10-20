@@ -1,54 +1,70 @@
-<h2>Reporter output</h2><table><tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
+<h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
+<tr><td>Open url 'http://acc-test.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Media' menu link.</td></tr>
-<tr><td>Click the 'Media: thePlatform mpx settings' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.</td></tr>
-<tr><td>Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</td></tr>
-<tr><td>MPX is already configured.</td></tr>
+<tr><td>STEP 2</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Enter 'Entity Tracker' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Entity Tracker' to be visible in module list.</td></tr>
+<tr><td>Check the 'Entity Tracker' check box.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
+<tr><td>Switch back to the 'Modules' frame.</td></tr>
+<tr><td>Switch to frame titled 'Modules'.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>Click the 'Home' menu link.</td></tr>
+<tr><td>STEP 3</td></tr>
 <tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Media' menu link.</td></tr>
-<tr><td>Click the 'Media: thePlatform mpx settings' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.</td></tr>
-<tr><td>Get all the selected import account options and store to a list.</td></tr>
+<tr><td>Mouse over the 'Content authoring' menu link.</td></tr>
+<tr><td>Click the 'Entity tracker' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Entity tracker dialog'.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify the text 'The configuration options have been saved.' is present on the page.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
+<tr><td>STEP 4</td></tr>
 <tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Files' menu link.</td></tr>
-<tr><td>Click the 'mpxPlayers' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Content dialog'.</td></tr>
-<tr><td>Verify that the search result set column order matches as expected.</td></tr>
-<tr><td>Get the text of the first search result set item.</td></tr>
-<tr><td>Get the number of results in the result set.</td></tr>
-<tr><td>Enter title Automation.</td></tr>
+<tr><td>Mouse over the 'Add content' menu link.</td></tr>
+<tr><td>Click the 'Post' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Enter '1b0ef85e49034c6' in the 'Title' text box.</td></tr>
+<tr><td>Switch to the Synopsis frame.</td></tr>
+<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Click the 'Cover' select button.</td></tr>
+<tr><td>Switch to the select file frame.</td></tr>
+<tr><td>Enter the file path for file upload.</td></tr>
+<tr><td>Click the 'Upload' button.</td></tr>
+<tr><td>Wait for the file link to be visible after upload.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Click the 'Public Local Files' radio button.</td></tr>
+<tr><td>Click the 'Next' button.</td></tr>
+<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
+<tr><td>Verify the img is loaded and visible.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
+<tr><td>Scroll the 'Publishing Options' link into view.</td></tr>
+<tr><td>Click the 'Publishing Options' link.</td></tr>
+<tr><td>Select 'Draft' from the 'Moderation State' drop down list.</td></tr>
+<tr><td>Click the 'Save' button.</td></tr>
+<tr><td>Verify success message of 'Post 1b0ef85e49034c6 has been created.' is present.</td></tr>
+<tr><td>STEP 5</td></tr>
+<tr><td>Mouse over the 'Reports' menu link.</td></tr>
+<tr><td>Click the 'Entity tracker report' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Entity tracker report dialog'.</td></tr>
+<tr><td>Enter '10/20/2014' in the 'From' date picker.</td></tr>
+<tr><td>Enter '10/20/2014' in the 'To' date picker.</td></tr>
 <tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Get the number of results in the result set.</td></tr>
-<tr><td>Get the text of the first search result set item.</td></tr>
-<tr><td>Click the 'Reset' button.</td></tr>
-<tr><td>Get the text of the first search result set item.</td></tr>
-<tr><td>Get the number of results in the result set.</td></tr>
-<tr><td>Get all the account options in the 'MPX Player Account' select ddl.</td></tr>
-<tr><td>Assert that the count of options is expected + 1 for the '-select' option.</td></tr>
-<tr><td>Get the text of each of the ddl options.</td></tr>
-<tr><td>Assert that each expected account option is present in the 'MPX Player Account' select ddl.</td></tr>
-<tr><td>Select the DB TV from the 'MPXPlayerAccount' select ddl.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Get all the MPX result set 'Source' items.</td></tr>
-<tr><td>Assert that every source item in the result set equals 'DB TV'.</td></tr>
-<tr><td>Click the 'Reset' button.</td></tr>
-<tr><td>Select the 'Published' from the 'MPX Status/Published' drop down list.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Get all the MPX result set 'Status' items.</td></tr>
-<tr><td>Assert that result set size for Published items is greater than 0.</td></tr>
-<tr><td>Assert that every status item in the result set equals 'Published'.</td></tr>
-<tr><td>Click the 'Reset' button.</td></tr>
-<tr><td>Select the 'Unpublished' from the 'MPX Status/Published' drop down list.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>Get all the MPX result set 'Status' items.</td></tr>
-<tr><td>Assert that every status item in the result set equals 'Unpublished'.</td></tr>
-<tr><td>Click the 'Reset' button.</td></tr>
-<tr><td>Get the text of the first search result set item.</td></tr>
-<tr><td>Get the number of results in the result set.</td></tr>
+<tr><td>STEP 6 - N/A</td></tr>
+<tr><td>STEP 7</td></tr>
+<tr><td>Click the '...Array, # elements' link.</td></tr>
+<tr><td>Click the child content node link.</td></tr>
+<tr><td>Get the child node content id number.</td></tr>
+<tr><td>Click the child content node 'info' link.</td></tr>
+<tr><td>Get the child node content id title.</td></tr>
+<tr><td>STEP 8</td></tr>
+<tr><td>Open url 'http://acc-test.publisher7.com/node/15086'.</td></tr>
+<tr><td>Verify the text '1b0ef85e49034c6' is present on the page.</td></tr>
 </table>

@@ -63,7 +63,7 @@ public class MediaGalleries {
     public void ClickEditExtendMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the extend edit menu link.");
-    	ExtendEditMenu_Lnk(contentItemTitle).click();
+    	wait.until(ExpectedConditions.visibilityOf(ExtendEditMenu_Lnk(contentItemTitle))).click();
     }
     
     public void ClickDeleteMenuBtn(String contentItemTitle) throws Exception {

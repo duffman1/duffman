@@ -5,6 +5,7 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -497,6 +498,42 @@ public class Settings {
         mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
         mpxMedia.ClickSyncMPXMediaNowLnk();
         overlay.ClickCloseOverlayLnk();
+    }
+    
+    public void DeleteAllOldMPXFileTypes() throws Exception { //TODO - add elements from script to page factory
+    	
+    	//delete any old mpx account file types (DE3921)
+        webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        try {
+        	List<String> eachURL = new ArrayList<String>();
+        	String allURLs = null;
+        	for (WebElement el : webDriver.findElements(By.xpath("//a[contains(text(), 'MPX Video for Account')][contains(text(), 'DB TV')]"))) {
+        		allURLs = allURLs + el.getAttribute("href");
+        		eachURL.add(el.getAttribute("href"));
+        	}
+        	allURLs = allURLs.replaceAll(config.getConfigValueString("AppURL") + "/admin/structure/file-types/manage/", "");
+        	String[] index = allURLs.split("mpx_video_");
+        	
+        	ArrayList<Integer> allIndexInts = new ArrayList<Integer>();
+        	allIndexInts.removeAll(Collections.singleton("empty"));
+        	for (String s : index) {
+        		try {
+        			allIndexInts.add(Integer.parseInt(s));
+        		}
+        		catch (NumberFormatException e) {}
+        	}
+        	Integer maxScore = Collections.max(allIndexInts);
+        	for (String url : eachURL) {
+        		if (!url.contains("mpx_video_" + maxScore.toString())) {
+        			webDriver.navigate().to(url);
+        			webDriver.findElement(By.id("edit-delete")).click();
+        			webDriver.findElement(By.id("edit-submit")).click();
+        		}
+        	}
+        }
+        catch (Exception e) {}
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+        
     }
   
 }

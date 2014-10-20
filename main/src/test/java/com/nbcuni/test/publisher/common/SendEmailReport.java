@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.common;
 
 import java.net.InetAddress;
+import java.util.List;
 import java.util.Properties;
 
 import javax.activation.DataHandler;
@@ -20,7 +21,7 @@ import javax.mail.internet.MimeMultipart;
 
 public class SendEmailReport extends ParentTest{
 
-	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount) throws Exception {
+	public void SendEmail(String pathToReport, String reportName, Integer passedTestsCount, Integer failedTestsCount, List<String> includedGroups, List<String> excludedGroups) throws Exception {
 
 		Config config = new Config();
 		
@@ -65,8 +66,8 @@ public class SendEmailReport extends ParentTest{
             }
             
             String excludedGroupTxt = "";
-            if (!config.getExcludedGroups().isEmpty()) {
-            	excludedGroupTxt = "<br />Excluded test group(s) = " + config.getExcludedGroups();
+            if (!excludedGroups.isEmpty()) {
+            	excludedGroupTxt = "<br />Excluded test group(s) = " + excludedGroups;
             }
             
             String machineName = InetAddress.getLocalHost().getHostName().replace(".local", "");
@@ -79,7 +80,7 @@ public class SendEmailReport extends ParentTest{
             else {
             	messageContent = "<body>Test run complete for latest build against "
                 		+ "<a href='" + appURL + "'>" + appURL 
-                		+ "</a> on <strong>" + machineName + "</strong>.<br /><br />Included test group(s) = " + config.getIncludedGroups() + excludedGroupTxt + "<br />Tests passed = " 
+                		+ "</a> on <strong>" + machineName + "</strong>.<br /><br />Included test group(s) = " + includedGroups + excludedGroupTxt + "<br />Tests passed = " 
                 		+ passedTestsCount.toString() + "<br />Tests failed = " 
                 		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
                 		+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
