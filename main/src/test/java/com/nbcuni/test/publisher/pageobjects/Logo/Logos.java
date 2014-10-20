@@ -70,7 +70,7 @@ public class Logos {
 	public void ClickEditExtendMenuBtn(String logoTitle) throws Exception {
     	
     	Reporter.log("Click the 'Edit' extend menu button for logo titled '" + logoTitle + "'.");
-    	EditExtendMenu_Btn(logoTitle).click();
+    	wait.until(ExpectedConditions.visibilityOf(EditExtendMenu_Btn(logoTitle))).click();
     	
     }
     
