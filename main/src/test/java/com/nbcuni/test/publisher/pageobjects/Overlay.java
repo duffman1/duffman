@@ -56,10 +56,6 @@ public class Overlay {
     	return webDriver.findElement(By.xpath("//ul[@id='overlay-tabs']//a[text()='" + tabTxt + "']"));
     }
     
-    private WebElement Primary_Tab(String tabTxt) {
-    	return webDriver.findElement(By.xpath("//ul[@class='tabs primary']//a[text()='" + tabTxt + "']"));
-    }
-    
     
     //PAGE OBJECT METHODS
     public void switchToDefaultContent(boolean checkForErrors) throws Exception {
@@ -74,79 +70,61 @@ public class Overlay {
     
     public void ClickCloseOverlayLnk() throws Exception {
     	
-    	if (config.getConfigValueString("OverlaysDisabled").equals("false")) {
-    		Reporter.log("Click the 'Close Overlay X'.");
-        	Thread.sleep(1000);
-        	webDriver.executeScript("arguments[0].click();", CloseOverlay_Lnk);
-        	this.switchToDefaultContent(true);
-    	}
+    	Reporter.log("Click the 'Close Overlay X'.");
+    	Thread.sleep(1000);
+    	webDriver.executeScript("arguments[0].click();", CloseOverlay_Lnk);
+    	this.switchToDefaultContent(true);
     }
     
     public void ClickOverlayTab(String tabTxt) throws Exception {
     	
     	Reporter.log("Click the '" + tabTxt + "' overlay tab.");
     	contentParent.Scroll("-500");
-    	if (config.getConfigValueString("OverlaysDisabled").equals("false")) {
-    		try {
-        		Overlay_Tab(tabTxt).click();
-        	}
-        	catch (WebDriverException e) {
-        		webDriver.executeScript("arguments[0].click();", Overlay_Tab(tabTxt));
-        	}
+    	try {
+    		Overlay_Tab(tabTxt).click();
     	}
-    	else {
-    		try {
-        		Primary_Tab(tabTxt).click();
-        	}
-        	catch (WebDriverException e) {
-        		webDriver.executeScript("arguments[0].click();", Primary_Tab(tabTxt));
-        	}
+    	catch (WebDriverException e) {
+    		webDriver.executeScript("arguments[0].click();", Overlay_Tab(tabTxt));
     	}
-    	
     }
     
     public void SwitchToFrame(String frameTitle) throws Exception {
     	
-    	if (config.getConfigValueString("OverlaysDisabled").equals("false")) {
-    		Reporter.log("Switch to frame titled '" + frameTitle + "'.");
-        	Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
-        	webDriver.switchTo().frame(Dialog_Frm(frameTitle));
-    	}
+    	Reporter.log("Switch to frame titled '" + frameTitle + "'.");
+    	Thread.sleep(250); //slight pause to help ensure frame switch occurs to a new frame and not the old.
+    	webDriver.switchTo().frame(Dialog_Frm(frameTitle));
     }
     
     public void SwitchToActiveFrame() throws Exception {
     	
-    	if (config.getConfigValueString("OverlaysDisabled").equals("false")) {
-    		//wait for frame titled 'loading' to not be present
-        	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        	boolean loadingFramePresent = false;
+    	//wait for frame titled 'loading' to not be present
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean loadingFramePresent = false;
 
-        	for (int second = 0; ; second++){
-                if (second >= 120) {
-                    Assert.fail("Frame titled 'Loading' is still present after timeout");}
-                try{
-                	Loading_Ttl.isDisplayed();
-                    loadingFramePresent = true;
-                }
-                catch (Exception e){
-                	loadingFramePresent = false;
-                }
-                if (loadingFramePresent == false){ break;}
-                Thread.sleep(500);
+    	for (int second = 0; ; second++){
+            if (second >= 120) {
+                Assert.fail("Frame titled 'Loading' is still present after timeout");}
+            try{
+            	Loading_Ttl.isDisplayed();
+                loadingFramePresent = true;
             }
-        	
-        	//longer timeout for overlay loads
-        	webDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        	
-        	this.switchToDefaultContent(false);
-        	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
-        	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
-        	webDriver.switchTo().frame(ActiveFrame_Frm);
-        	
-        	//default timeout
-        	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-        	
-    	}
+            catch (Exception e){
+            	loadingFramePresent = false;
+            }
+            if (loadingFramePresent == false){ break;}
+            Thread.sleep(500);
+        }
+    	
+    	//longer timeout for overlay loads
+    	webDriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    	
+    	this.switchToDefaultContent(false);
+    	Thread.sleep(500); //slight pause to help ensure frame switch occurs to a new frame and not the old.
+    	Reporter.log("Switch to the active frame titled '" + ActiveFrame_Frm.getAttribute("title") + "'.");
+    	webDriver.switchTo().frame(ActiveFrame_Frm);
+    	
+    	//default timeout
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	//check for errors in overlay
     	errorChecking.VerifyNoMessageErrorsPresent();
