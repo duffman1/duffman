@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipOutputStream;
@@ -22,12 +23,12 @@ import org.testng.xml.XmlSuite;
 
 public class CustomReport extends EmailableReporter {
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		
 		Config config = new Config();
 		UploadReportRally uploadReport = new UploadReportRally();
-		UpdateTestResultsRally updateTestCase = new UpdateTestResultsRally();
 		
 		//get the results of the suite run, and the included/excluded groups
 		ISuite testSuite = suites.get(0);
@@ -168,45 +169,45 @@ public class CustomReport extends EmailableReporter {
   	  		System.out.println("Report was not uploaded to Rally per configuration setting.");
   	  	}
   	  	
+  	  	//update individual test cases in Rally	
   	  	if (config.getConfigValueString("UpdateIndividualRallyTCs").equals("true")) {
   	  	
-  	  		//update individual passed test cases in Rally
+  	  		HashMap results = new HashMap();
+  	  		HashMap screenshotPaths = new HashMap();
+  	  		
   	  	  	for (ITestResult passed_result : passedTests.getAllResults()) {
   	  	  	
   	  	  		String methodName = passed_result.getMethod().getMethodName();
   	  	  		if (methodName.contains("_TC")) {
   	  	  			String[] tcID = methodName.split("_");
   	  	  		
-  	  	  			try {
-  	  	  				updateTestCase.updateTestResult(tcID[1], true, "");
-  	  	  			} catch (Exception e) {
-  	  	  				System.out.println("Failed to update individual passed test cases in Rally.");
-  	  	  			}
+  	  	  			results.put(tcID[1], "passed");
   	  	  		}
   	  	  		
   	  	  	}
   	  	  	
-  	  	  	//update individual failed test cases in Rally
-  	  	    List<String> tcUpdatedConsec = new ArrayList<String>();
+  	  	  	List<String> tcUpdatedFailed = new ArrayList<String>();
   	  	  	for (ITestResult failed_result : failedTests.getAllResults()) {
   	  	  	
-  	  	  		String methodName = failed_result.getMethod().getMethodName();
-  	  	  		if (methodName.contains("_TC")) {
-  	  	  		String screenshotPath = config.getConfigValueFilePath("PathToScreenshots") + methodName + "_" + attachmentDateTimeFormat.format(new Date(failed_result.getEndMillis())) + ".png";
-  		    	
-  	  	  			String[] tcID = methodName.split("_");
-  	  	  		
-  	  	  			try {
-  	  	  				if (!tcUpdatedConsec.contains(methodName)) {
-  	  	  					updateTestCase.updateTestResult(tcID[1], false, screenshotPath);
-  	  	  					tcUpdatedConsec.add(methodName);
-  	  	  				}
-  	  	  			} catch (Exception e) {
-  	  	  				System.out.println("Failed to update individual failed test cases in Rally.");
-  	  	  			}
-  	  	  		}
-  	  	  		
-  	  	  	}
+	  	  		String methodName = failed_result.getMethod().getMethodName();
+	  	  		if (methodName.contains("_TC")) {
+	  	  			String screenshotPath = config.getConfigValueFilePath("PathToScreenshots") + methodName + "_" + attachmentDateTimeFormat.format(new Date(failed_result.getEndMillis())) + ".png";
+	  	  			String[] tcID = methodName.split("_");
+	  	  		
+	  	  			if (!tcUpdatedFailed.contains(methodName)) {
+	  	  			results.put(tcID[1], "failed");
+	  	  			screenshotPaths.put(tcID[1], screenshotPath);
+	  	  			tcUpdatedFailed.add(methodName);
+	  	  			}
+	  	  		}
+	  	  		
+	  	  	}
+  	  	  	
+  	  	  	UpdateTestResultsRally updateTestResultsRally = new UpdateTestResultsRally();
+  	  	    try {
+				updateTestResultsRally.updateTestResult(results, screenshotPaths);
+			} catch (Exception e) { e.printStackTrace(); }
+			
   	  	}
   	  	else {
   	  		System.out.println("Individual test cases were not updated in Rally per configuration setting.");
