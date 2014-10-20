@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
@@ -14,22 +17,97 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Entity Tracker' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Entity tracker' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '75a64e0ab83148a' in the 'Character First Name' text box.]]>
+      <![CDATA[Enter '1b0ef85e49034c6' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
       <![CDATA[Switch to the select file frame.]]>
@@ -62,122 +140,103 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile 75a64e0ab83148a has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '83e6dd42f62a4f1' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
+      <![CDATA[Verify success message of 'Post 1b0ef85e49034c6 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Person 83e6dd42f62a4f1 has been created.' is present.]]>
+      <![CDATA[Mouse over the 'Reports' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Entity tracker report' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Entity tracker report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10/20/2014' in the 'From' date picker.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10/20/2014' in the 'To' date picker.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the '...Array, # elements' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the child content node link.]]>
+    </line>
+    <line>
+      <![CDATA[Get the child node content id number.]]>
+    </line>
+    <line>
+      <![CDATA[Click the child content node 'info' link.]]>
+    </line>
+    <line>
+      <![CDATA[Get the child node content id title.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/node/15086'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '1b0ef85e49034c6' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Publisher 7 Test Suite" duration-ms="53614" started-at="2014-10-20T17:23:06Z" finished-at="2014-10-20T17:23:59Z">
+  <suite name="Default suite" duration-ms="85755" started-at="2014-10-20T20:45:04Z" finished-at="2014-10-20T20:46:30Z">
     <groups>
       <group name="full">
-        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@463c4bca]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
-        <method signature="CreatePerson.CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@1636d880]" name="CreatePerson_TC1044" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
+        <method signature="CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="CollectEditorialActivity_TC5071" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
       </group> <!-- full -->
     </groups>
-    <test name="All Web Tests" duration-ms="53614" started-at="2014-10-20T17:23:06Z" finished-at="2014-10-20T17:23:59Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@463c4bca]" name="suiteSetup" is-config="true" duration-ms="18" started-at="2014-10-20T13:23:06Z" finished-at="2014-10-20T13:23:06Z">
+    <test name="Default test" duration-ms="85755" started-at="2014-10-20T20:45:04Z" finished-at="2014-10-20T20:46:30Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="suiteSetup" is-config="true" duration-ms="27" started-at="2014-10-20T16:45:04Z" finished-at="2014-10-20T16:45:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@463c4bca]" name="startSelenium" is-config="true" duration-ms="3000" started-at="2014-10-20T13:23:06Z" finished-at="2014-10-20T13:23:09Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="startSelenium" is-config="true" duration-ms="3274" started-at="2014-10-20T16:45:04Z" finished-at="2014-10-20T16:45:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity.CollectEditorialActivity_TC5071() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@463c4bca]" name="CreateCharacterProfile_TC1041" duration-ms="22463" started-at="2014-10-20T13:23:09Z" finished-at="2014-10-20T13:23:31Z">
+        <test-method status="PASS" signature="CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="CollectEditorialActivity_TC5071" duration-ms="81892" started-at="2014-10-20T16:45:07Z" finished-at="2014-10-20T16:46:29Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
@@ -191,22 +250,97 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Entity Tracker' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Entity tracker' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '75a64e0ab83148a' in the 'Character First Name' text box.]]>
+              <![CDATA[Enter '1b0ef85e49034c6' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
               <![CDATA[Switch to the select file frame.]]>
@@ -239,141 +373,92 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Create Character Profile'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile 75a64e0ab83148a has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Post 1b0ef85e49034c6 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Reports' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Entity tracker report' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Entity tracker report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10/20/2014' in the 'From' date picker.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10/20/2014' in the 'To' date picker.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the '...Array, # elements' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the child content node link.]]>
+            </line>
+            <line>
+              <![CDATA[Get the child node content id number.]]>
+            </line>
+            <line>
+              <![CDATA[Click the child content node 'info' link.]]>
+            </line>
+            <line>
+              <![CDATA[Get the child node content id title.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/node/15086'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '1b0ef85e49034c6' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateCharacterProfile_TC1041 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@463c4bca]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-10-20T13:23:31Z" finished-at="2014-10-20T13:23:32Z">
+        </test-method> <!-- CollectEditorialActivity_TC5071 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="stopSelenium" is-config="true" duration-ms="577" started-at="2014-10-20T16:46:29Z" finished-at="2014-10-20T16:46:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@463c4bca] output=Open url 'http://acc-test.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CollectEditorialActivity_TC5071 status=SUCCESS method=CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@463c4bca]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-20T13:23:59Z" finished-at="2014-10-20T13:23:59Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-20T16:46:30Z" finished-at="2014-10-20T16:46:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson">
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@1636d880]" name="startSelenium" is-config="true" duration-ms="28605" started-at="2014-10-20T13:23:06Z" finished-at="2014-10-20T13:23:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson.CreatePerson_TC1044() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@1636d880]" name="CreatePerson_TC1044" duration-ms="24425" started-at="2014-10-20T13:23:34Z" finished-at="2014-10-20T13:23:59Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '83e6dd42f62a4f1' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Person dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person 83e6dd42f62a4f1 has been created.' is present.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreatePerson_TC1044 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@1636d880]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-10-20T13:23:59Z" finished-at="2014-10-20T13:23:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreatePerson_TC1044 status=SUCCESS method=CreatePerson.CreatePerson_TC1044()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson@1636d880] output=Open url 'http://acc-test.publisher7.com'.]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson -->
-    </test> <!-- All Web Tests -->
-  </suite> <!-- Publisher 7 Test Suite -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
