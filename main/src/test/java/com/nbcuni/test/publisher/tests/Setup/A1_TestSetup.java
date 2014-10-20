@@ -62,16 +62,22 @@ public class A1_TestSetup {
                 ContentParent contentParent = new ContentParent(webDriver);
                 contentParent.ClickSaveBtn();
                 
-            	//enable overlay module if necessary
+            	//enable or disable overlay module as configured
             	applib.openSitePage("/admin/modules");
                 Modules modules = new Modules(webDriver);
-                if (modules.IsModuleEnabled("Overlay") == true) {
-                	applib.openSitePage("/#overlay=admin/modules");
+                if (config.getConfigValueString("OverlaysDisabled").equals("false")) {
+                	if (!modules.IsModuleEnabled("Overlay")) {
+                		modules.EnterFilterName("Overlay");
+                		modules.EnableModule("Overlay");
+                	}
                 }
                 else {
-                	modules.EnterFilterName("Overlay");
-                    modules.EnableModule("Overlay");
+                	if (modules.IsModuleEnabled("Overlay")) {
+                		modules.EnterFilterName("Overlay");
+                		modules.DisableModule("Overlay");
+                	}
                 }
+                
                 Overlay overlay = new Overlay(webDriver);
                 overlay.SwitchToActiveFrame();
                 
@@ -226,12 +232,12 @@ public class A1_TestSetup {
             	overlay.ClickCloseOverlayLnk();
             	
             	//schedule a new logo to be used later in the suite
-            	applib.openSitePage("/#overlay=admin/content/logos");
+            	applib.openSitePage("/admin/content/logos");
             	overlay.SwitchToActiveFrame();
             	Logos logos = new Logos(webDriver, applib);
         	    logos.DeleteAllLogos();
             	overlay.ClickCloseOverlayLnk();
-            	applib.openSitePage("/#overlay=logo/add");
+            	applib.openSitePage("/logo/add");
                 overlay.SwitchToActiveFrame();
                 AddLogo addLogo = new AddLogo(webDriver);
                 String logoTitle = random.GetCharacterString(15);

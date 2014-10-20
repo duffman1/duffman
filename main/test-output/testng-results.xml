@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
     <line>
       <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
@@ -17,85 +14,88 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character Profile' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'acd7eef29efb47e' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'e2fb6e5a4943477' into the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/appearance'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/modules'.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+      <![CDATA[Enter 'Overlay' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Wait for module filter titled 'Overlay' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Uncheck the 'Overlay' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll by '-500'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/config/regional/settings'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile acd7eef29efb47e has been created.' is present.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/config/regional/date-time'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/people/permissions'.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/config/media/file-system'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -107,19 +107,31 @@
       <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
     </line>
     <line>
-      <![CDATA[Enter '8d356004782c4cb' in the 'Title' text box.]]>
+      <![CDATA[Verify the 'Body' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'futurePost10/20/20147cb59bb9ab77468' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter '5079c5769b3a451' into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
       <![CDATA[Click the 'Cover' select button.]]>
@@ -155,299 +167,253 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
       <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
       <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 8d356004782c4cb has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Post futurePost10/20/20147cb59bb9ab77468 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Click the 'Schedule' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Click the 'Add Scheduled Revision' link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Select revision titled 'futurePost10/20/20147cb59bb9ab77468'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+      <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+      <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+      <![CDATA[Enter '10/20/2014' in the 'Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Dynamic Queue Workbench' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter '12:30 PM' in the 'Time' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Dynamic Queue Workbench' to be visible in module list.]]>
+      <![CDATA[Click the 'Schedule' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Dynamic Queue Workbench' check box is checked.]]>
+      <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/content/logos'.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/logo/add'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Structure' menu link.]]>
+      <![CDATA[Enter 'ace00e5f4d9d446' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter 'b8f2a99a647449d' in the 'Name' text box.]]>
+      <![CDATA[Verify the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+      <![CDATA[Enter '2014-10-20' in the 'Start Date' text box.]]>
     </line>
     <line>
-      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+      <![CDATA[Enter '12:30:17 PM' in the 'Start Time' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '2014-10-20' in the 'End Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '02:25:17 PM' in the 'End Time' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+      <![CDATA[Verify the text 'ace00e5f4d9d446' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'b8f2a99a647449d' is present on the page.]]>
+      <![CDATA[Verify the text 'Mon, 10/20/2014 - 12:30' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Verify the text 'Mon, 10/20/2014 - 14:25' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[STEP 5]]>
+      <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+    </line>
+    <line>
+      <![CDATA[MPX is already configured.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Media' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Sync mpxMedia on Cron' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configurations' button.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add b8f2a99a647449d' menu link.]]>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Add b8f2a99a647449d dynamic queue dialog'.]]>
+      <![CDATA[Click the 'Sync MPX Media' link.]]>
     </line>
     <line>
-      <![CDATA[STEP 6]]>
+      <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter '12f6f647d3c64d5_REVISION1' in the 'Title' text box.]]>
+      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
     </line>
     <line>
-      <![CDATA[]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/9b4fe7809f/delete'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/abbedaece7/delete'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/mpx34a30404b8/delete'.]]>
     </line>
     <line>
-      <![CDATA[STEP 7- MOVED TO SETUP]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/mpxa47916745a/delete'.]]>
     </line>
     <line>
-      <![CDATA[STEP 8]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/mpxb51de624d0/delete'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/mpxbebf4d0f86/delete'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Dynamic Queues' menu link.]]>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Open a new browser window.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to new browser tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com/dynamic-queue/31'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'acd7eef29efb47e' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'e2fb6e5a4943477' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the parent tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Edit' is present in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Edit 12f6f647d3c64d5_REVISION1 dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'baaabfcd1c6a4f6_REVISION2' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10- MOVED TO SETUP]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Switch to new browser tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Refresh the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '8d356004782c4cb' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '5079c5769b3a451' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the parent tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Revisions' is present in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Dynamic Queue revision list dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Verify the count of revisions in the Queues revision list is '2'.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png'> <img src='./CreateScheduleMultipleRevisions_TC4969_101714080707AM.png' height='700' width='700'/> </a>]]>
+      <![CDATA[Click the '[[Driver: chrome on MAC (96815c2d-7eec-4416-ad7b-41f17c8fe585)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
     <line>
       <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Cache was cleared on test failure]]>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Add content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Character Profile' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'a6352080eaca4ca' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the select file frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+    </line>
+    <line>
+      <![CDATA[Assert the the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Character Profile a6352080eaca4ca has been created.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="118693" started-at="2014-10-17T12:05:22Z" finished-at="2014-10-17T12:07:21Z">
+  <suite name="Default suite" duration-ms="22954" started-at="2014-10-20T12:26:57Z" finished-at="2014-10-20T12:27:20Z">
     <groups>
       <group name="full">
-        <method signature="CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="CreateScheduleMultipleRevisions_TC4969" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@77ea34ed]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="118693" started-at="2014-10-17T12:05:22Z" finished-at="2014-10-17T12:07:21Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-17T08:05:22Z" finished-at="2014-10-17T08:05:22Z">
+    <test name="Default test" duration-ms="22954" started-at="2014-10-20T12:26:57Z" finished-at="2014-10-20T12:27:20Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@77ea34ed]" name="suiteSetup" is-config="true" duration-ms="207935" started-at="2014-10-20T08:23:29Z" finished-at="2014-10-20T08:26:57Z">
           <reporter-output>
-          </reporter-output>
-        </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="startSelenium" is-config="true" duration-ms="3039" started-at="2014-10-17T08:05:22Z" finished-at="2014-10-17T08:05:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreateScheduleMultipleRevisions_TC4969()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="CreateScheduleMultipleRevisions_TC4969" duration-ms="101908" started-at="2014-10-17T08:05:25Z" finished-at="2014-10-17T08:07:07Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [2] but found [9]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [2] but found [9]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:370)
-	at org.testng.Assert.assertEquals(Assert.java:380)
-	at com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList.VerifyRevisionCount(QueuesRevisionList.java:118)
-	at com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969(CreateandScheduleMultipleRevisions.java:132)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
@@ -461,85 +427,88 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character Profile' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'acd7eef29efb47e' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'e2fb6e5a4943477' into the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/appearance'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Character Profile dialog'.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/modules'.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+              <![CDATA[Enter 'Overlay' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Wait for module filter titled 'Overlay' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Uncheck the 'Overlay' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll by '-500'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/config/regional/settings'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile acd7eef29efb47e has been created.' is present.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/config/regional/date-time'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/media-gallery/fields/field_media_items'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/people/permissions'.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/config/media/file-system'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -551,19 +520,31 @@
               <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
             </line>
             <line>
-              <![CDATA[Enter '8d356004782c4cb' in the 'Title' text box.]]>
+              <![CDATA[Verify the 'Body' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'futurePost10/20/20147cb59bb9ab77468' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter '5079c5769b3a451' into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
               <![CDATA[Click the 'Cover' select button.]]>
@@ -599,245 +580,275 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
               <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
               <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 8d356004782c4cb has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Post futurePost10/20/20147cb59bb9ab77468 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Click the 'Schedule' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Click the 'Add Scheduled Revision' link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Select revision titled 'futurePost10/20/20147cb59bb9ab77468'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+              <![CDATA[Verify that the 'Operation' option count equals '5'.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+              <![CDATA[Select 'Moderate to Published' from the 'Select operation' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+              <![CDATA[Enter '10/20/2014' in the 'Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Dynamic Queue Workbench' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter '12:30 PM' in the 'Time' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Dynamic Queue Workbench' to be visible in module list.]]>
+              <![CDATA[Click the 'Schedule' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Dynamic Queue Workbench' check box is checked.]]>
+              <![CDATA[Verify success message of 'The scheduled revision operation has been saved' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/content/logos'.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/logo/add'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Structure' menu link.]]>
+              <![CDATA[Enter 'ace00e5f4d9d446' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Dynamic Queue types' menu link.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add dynamic queue type' menu link.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Verify the file image 'nbclogosmall' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter 'b8f2a99a647449d' in the 'Name' text box.]]>
+              <![CDATA[Verify the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+              <![CDATA[Enter '2014-10-20' in the 'Start Date' text box.]]>
             </line>
             <line>
-              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+              <![CDATA[Enter '12:30:17 PM' in the 'Start Time' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '2014-10-20' in the 'End Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '02:25:17 PM' in the 'End Time' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add dynamic queue type dialog'.]]>
+              <![CDATA[Verify the text 'ace00e5f4d9d446' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'b8f2a99a647449d' is present on the page.]]>
+              <![CDATA[Verify the text 'Mon, 10/20/2014 - 12:30' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Verify the text 'Mon, 10/20/2014 - 14:25' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[STEP 5]]>
+              <![CDATA[Assert the file image 'nbclogosmall' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+            </line>
+            <line>
+              <![CDATA[MPX is already configured.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Media' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Sync mpxMedia on Cron' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configurations' button.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Dynamic Queues' menu link.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add b8f2a99a647449d' menu link.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Add b8f2a99a647449d dynamic queue dialog'.]]>
+              <![CDATA[Click the 'Sync MPX Media' link.]]>
             </line>
             <line>
-              <![CDATA[STEP 6]]>
+              <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Enter '12f6f647d3c64d5_REVISION1' in the 'Title' text box.]]>
+              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
             </line>
             <line>
-              <![CDATA[]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/9b4fe7809f/delete'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/abbedaece7/delete'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/mpx34a30404b8/delete'.]]>
             </line>
             <line>
-              <![CDATA[STEP 7- MOVED TO SETUP]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/mpxa47916745a/delete'.]]>
             </line>
             <line>
-              <![CDATA[STEP 8]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/mpxb51de624d0/delete'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com/admin/structure/types/manage/mpxbebf4d0f86/delete'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Dynamic Queues' menu link.]]>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queues dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Open a new browser window.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to new browser tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com/dynamic-queue/31'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'acd7eef29efb47e' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'e2fb6e5a4943477' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the parent tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Edit' is present in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Edit 12f6f647d3c64d5_REVISION1 dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'baaabfcd1c6a4f6_REVISION2' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10- MOVED TO SETUP]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Switch to new browser tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Refresh the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '8d356004782c4cb' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '5079c5769b3a451' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the parent tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Revisions' is present in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Dynamic Queue revision list dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Verify the count of revisions in the Queues revision list is '2'.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateScheduleMultipleRevisions_TC4969_101714080707AM.png'> <img src='./CreateScheduleMultipleRevisions_TC4969_101714080707AM.png' height='700' width='700'/> </a>]]>
-            </line>
-            <line>
-              <![CDATA[Cache was cleared on test failure]]>
+              <![CDATA[Click the '[[Driver: chrome on MAC (96815c2d-7eec-4416-ad7b-41f17c8fe585)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateScheduleMultipleRevisions_TC4969 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="stopSelenium" is-config="true" duration-ms="13733" started-at="2014-10-17T08:07:07Z" finished-at="2014-10-17T08:07:21Z">
+        </test-method> <!-- suiteSetup -->
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@77ea34ed]" name="startSelenium" is-config="true" duration-ms="2602" started-at="2014-10-20T08:26:57Z" finished-at="2014-10-20T08:27:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateScheduleMultipleRevisions_TC4969 status=FAILURE method=CreateandScheduleMultipleRevisions.CreateScheduleMultipleRevisions_TC4969()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4] output=STEP 1]]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@77ea34ed]" name="CreateCharacterProfile_TC1041" duration-ms="19767" started-at="2014-10-20T08:27:00Z" finished-at="2014-10-20T08:27:19Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Add content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Character Profile' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'a6352080eaca4ca' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the select file frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+            </line>
+            <line>
+              <![CDATA[Assert the the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Character Profile a6352080eaca4ca has been created.' is present.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateCharacterProfile_TC1041 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@77ea34ed]" name="stopSelenium" is-config="true" duration-ms="570" started-at="2014-10-20T08:27:19Z" finished-at="2014-10-20T08:27:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@77ea34ed] output=Open url 'http://acc-test.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions@56e746d4]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-17T08:07:21Z" finished-at="2014-10-17T08:07:21Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@77ea34ed]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-10-20T08:27:20Z" finished-at="2014-10-20T08:27:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
