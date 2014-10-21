@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,37 +17,40 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[STEP 2 -3]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Entity Tracker' check box.]]>
+      <![CDATA[Verify the 'Pixelman' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch back to the 'Modules' frame.]]>
+      <![CDATA[Wait for module filter titled 'DART' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Switch to frame titled 'Modules'.]]>
+      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
@@ -56,189 +59,99 @@
       <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+      <![CDATA[Click the '[[Driver: chrome on MAC (1f17cc9a-6b9c-4768-902f-3b2499d63116)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Click the 'Entity tracker' menu link.]]>
+      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Pub Ads' module checkbox.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Click the '[[Driver: chrome on MAC (1f17cc9a-6b9c-4768-902f-3b2499d63116)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Post' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '1b0ef85e49034c6' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the select file frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 1b0ef85e49034c6 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Reports' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Entity tracker report' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Entity tracker report dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/20/2014' in the 'From' date picker.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '10/20/2014' in the 'To' date picker.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the '...Array, # elements' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the child content node link.]]>
-    </line>
-    <line>
-      <![CDATA[Get the child node content id number.]]>
-    </line>
-    <line>
-      <![CDATA[Click the child content node 'info' link.]]>
-    </line>
-    <line>
-      <![CDATA[Get the child node content id title.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://acc-test.publisher7.com/node/15086'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '1b0ef85e49034c6' is present on the page.]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="85755" started-at="2014-10-20T20:45:04Z" finished-at="2014-10-20T20:46:30Z">
+  <suite name="Default suite" duration-ms="119015" started-at="2014-10-21T14:34:38Z" finished-at="2014-10-21T14:36:37Z">
     <groups>
       <group name="full">
-        <method signature="CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="CollectEditorialActivity_TC5071" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
+        <method signature="Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@461a5d57]" name="Pixelman_TC1155" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="85755" started-at="2014-10-20T20:45:04Z" finished-at="2014-10-20T20:46:30Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="suiteSetup" is-config="true" duration-ms="27" started-at="2014-10-20T16:45:04Z" finished-at="2014-10-20T16:45:04Z">
+    <test name="Default test" duration-ms="119015" started-at="2014-10-21T14:34:38Z" finished-at="2014-10-21T14:36:37Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@461a5d57]" name="suiteSetup" is-config="true" duration-ms="23" started-at="2014-10-21T10:34:38Z" finished-at="2014-10-21T10:34:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="startSelenium" is-config="true" duration-ms="3274" started-at="2014-10-20T16:45:04Z" finished-at="2014-10-20T16:45:07Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@461a5d57]" name="startSelenium" is-config="true" duration-ms="3220" started-at="2014-10-21T10:34:38Z" finished-at="2014-10-21T10:34:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity.CollectEditorialActivity_TC5071() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman.Pixelman_TC1155() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="CollectEditorialActivity_TC5071" duration-ms="81892" started-at="2014-10-20T16:45:07Z" finished-at="2014-10-20T16:46:29Z">
+        <test-method status="PASS" signature="Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@461a5d57]" name="Pixelman_TC1155" duration-ms="115209" started-at="2014-10-21T10:34:41Z" finished-at="2014-10-21T10:36:36Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -250,37 +163,40 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[STEP 2 -3]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Entity Tracker' check box.]]>
+              <![CDATA[Verify the 'Pixelman' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch back to the 'Modules' frame.]]>
+              <![CDATA[Wait for module filter titled 'DART' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Switch to frame titled 'Modules'.]]>
+              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
@@ -289,176 +205,86 @@
               <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+              <![CDATA[Click the '[[Driver: chrome on MAC (1f17cc9a-6b9c-4768-902f-3b2499d63116)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Click the 'Entity tracker' menu link.]]>
+              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Pub Ads' module checkbox.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Content' menu link.]]>
+              <![CDATA[Click the '[[Driver: chrome on MAC (1f17cc9a-6b9c-4768-902f-3b2499d63116)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Post' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '1b0ef85e49034c6' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the select file frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 1b0ef85e49034c6 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Reports' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Entity tracker report' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Entity tracker report dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/20/2014' in the 'From' date picker.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '10/20/2014' in the 'To' date picker.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the '...Array, # elements' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the child content node link.]]>
-            </line>
-            <line>
-              <![CDATA[Get the child node content id number.]]>
-            </line>
-            <line>
-              <![CDATA[Click the child content node 'info' link.]]>
-            </line>
-            <line>
-              <![CDATA[Get the child node content id title.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://acc-test.publisher7.com/node/15086'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '1b0ef85e49034c6' is present on the page.]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CollectEditorialActivity_TC5071 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="stopSelenium" is-config="true" duration-ms="577" started-at="2014-10-20T16:46:29Z" finished-at="2014-10-20T16:46:30Z">
+        </test-method> <!-- Pixelman_TC1155 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@461a5d57]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-10-21T10:36:36Z" finished-at="2014-10-21T10:36:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CollectEditorialActivity_TC5071 status=SUCCESS method=CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813] output=STEP 1]]]>
+                <![CDATA[[TestResult name=Pixelman_TC1155 status=SUCCESS method=Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@461a5d57] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@5c3bb813]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-20T16:46:30Z" finished-at="2014-10-20T16:46:30Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@461a5d57]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-21T10:36:37Z" finished-at="2014-10-21T10:36:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

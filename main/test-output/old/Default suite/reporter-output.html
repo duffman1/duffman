@@ -1,70 +1,41 @@
 <h2>Reporter output</h2><table><tr><td>STEP 1</td></tr>
-<tr><td>Open url 'http://acc-test.publisher7.com'.</td></tr>
+<tr><td>Open url 'http://qa5.publisher7.com'.</td></tr>
 <tr><td>Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</td></tr>
 <tr><td>Enter 'pa55word' in the 'Password' text box.</td></tr>
 <tr><td>Click the 'Login' button.</td></tr>
-<tr><td>STEP 2</td></tr>
+<tr><td>STEP 2 -3</td></tr>
 <tr><td>Click the 'Modules' menu link.</td></tr>
-<tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Enter 'Entity Tracker' in the 'Filter Name' text box.</td></tr>
-<tr><td>Wait for module filter titled 'Entity Tracker' to be visible in module list.</td></tr>
-<tr><td>Check the 'Entity Tracker' check box.</td></tr>
-<tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Switch to frame titled 'Some required modules must be enabled'.</td></tr>
-<tr><td>Switch back to the 'Modules' frame.</td></tr>
-<tr><td>Switch to frame titled 'Modules'.</td></tr>
-<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Pixelman' to be visible in module list.</td></tr>
+<tr><td>Verify the 'Pixelman' check box is checked.</td></tr>
+<tr><td>STEP 4</td></tr>
+<tr><td>Enter 'DART' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'DART' to be visible in module list.</td></tr>
+<tr><td>Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.</td></tr>
+<tr><td>STEP 5</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
 <tr><td>Click the 'Home' menu link.</td></tr>
-<tr><td>STEP 3</td></tr>
-<tr><td>Mouse over the 'Configuration' menu link.</td></tr>
-<tr><td>Mouse over the 'Content authoring' menu link.</td></tr>
-<tr><td>Click the 'Entity tracker' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Entity tracker dialog'.</td></tr>
+<tr><td>Mouse over the 'Home' menu link.</td></tr>
+<tr><td>Click the '[[Driver: chrome on MAC (1f17cc9a-6b9c-4768-902f-3b2499d63116)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.</td></tr>
+<tr><td>STEP 6</td></tr>
+<tr><td>Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.</td></tr>
+<tr><td>CLEANUP</td></tr>
+<tr><td>Click the 'Modules' menu link.</td></tr>
+<tr><td>Switch to the active frame titled 'Modules dialog'.</td></tr>
+<tr><td>Enter 'Pub Ads' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Pub Ads' to be visible in module list.</td></tr>
+<tr><td>Uncheck the 'Pub Ads' module checkbox.</td></tr>
 <tr><td>Click the 'Save configuration' button.</td></tr>
-<tr><td>Verify the text 'The configuration options have been saved.' is present on the page.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
+<tr><td>Enter 'Pixelman' in the 'Filter Name' text box.</td></tr>
+<tr><td>Wait for module filter titled 'Pixelman' to be visible in module list.</td></tr>
+<tr><td>Uncheck the 'Pixelman' module checkbox.</td></tr>
+<tr><td>Click the 'Save configuration' button.</td></tr>
+<tr><td>Verify success message of 'The configuration options have been saved.' is present.</td></tr>
 <tr><td>Click the 'Close Overlay X'.</td></tr>
-<tr><td>STEP 4</td></tr>
-<tr><td>Mouse over the 'Content' menu link.</td></tr>
-<tr><td>Mouse over the 'Add content' menu link.</td></tr>
-<tr><td>Click the 'Post' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
-<tr><td>Enter '1b0ef85e49034c6' in the 'Title' text box.</td></tr>
-<tr><td>Switch to the Synopsis frame.</td></tr>
-<tr><td>Enter a randomized text string into the 'Body' text area.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
-<tr><td>Click the 'Cover' select button.</td></tr>
-<tr><td>Switch to the select file frame.</td></tr>
-<tr><td>Enter the file path for file upload.</td></tr>
-<tr><td>Click the 'Upload' button.</td></tr>
-<tr><td>Wait for the file link to be visible after upload.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Click the 'Public Local Files' radio button.</td></tr>
-<tr><td>Click the 'Next' button.</td></tr>
-<tr><td>Verify the file image 'HanSolo' is present.</td></tr>
-<tr><td>Verify the img is loaded and visible.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Switch to the active frame titled 'Create Post dialog'.</td></tr>
-<tr><td>Scroll the 'Publishing Options' link into view.</td></tr>
-<tr><td>Click the 'Publishing Options' link.</td></tr>
-<tr><td>Select 'Draft' from the 'Moderation State' drop down list.</td></tr>
-<tr><td>Click the 'Save' button.</td></tr>
-<tr><td>Verify success message of 'Post 1b0ef85e49034c6 has been created.' is present.</td></tr>
-<tr><td>STEP 5</td></tr>
-<tr><td>Mouse over the 'Reports' menu link.</td></tr>
-<tr><td>Click the 'Entity tracker report' menu link.</td></tr>
-<tr><td>Switch to the active frame titled 'Entity tracker report dialog'.</td></tr>
-<tr><td>Enter '10/20/2014' in the 'From' date picker.</td></tr>
-<tr><td>Enter '10/20/2014' in the 'To' date picker.</td></tr>
-<tr><td>Click the 'Apply' button.</td></tr>
-<tr><td>STEP 6 - N/A</td></tr>
-<tr><td>STEP 7</td></tr>
-<tr><td>Click the '...Array, # elements' link.</td></tr>
-<tr><td>Click the child content node link.</td></tr>
-<tr><td>Get the child node content id number.</td></tr>
-<tr><td>Click the child content node 'info' link.</td></tr>
-<tr><td>Get the child node content id title.</td></tr>
-<tr><td>STEP 8</td></tr>
-<tr><td>Open url 'http://acc-test.publisher7.com/node/15086'.</td></tr>
-<tr><td>Verify the text '1b0ef85e49034c6' is present on the page.</td></tr>
+<tr><td>Mouse over the 'Home' menu link.</td></tr>
+<tr><td>Click the '[[Driver: chrome on MAC (1f17cc9a-6b9c-4768-902f-3b2499d63116)] -> xpath: //span[@class='admin-menu-home-icon']/../..//a[text()='Flush all caches']]' menu link.</td></tr>
+<tr><td>Click the 'Home' menu link.</td></tr>
 </table>
