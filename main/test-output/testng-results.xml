@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
@@ -14,112 +17,118 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'f0b0819bafaf4d3@079eed87334841f.com' in the 'Username' text box.]]>
+      <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'f0b0819bafaf4d3@079eed87334841f.com' in the 'E-mail address' text box.]]>
+      <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Uncheck the 'Entity Tracker' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Check the 'editor' check box.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Enter '495d668e7f61479' in the 'First Name' text box.]]>
+      <![CDATA[Click the 'Uninstall' overlay tab.]]>
     </line>
     <line>
-      <![CDATA[Enter 'a41a1f4293ab449' in the 'Last Name' text box.]]>
+      <![CDATA[Scroll by '-500'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Create new account' button.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user f0b0819bafaf4d3@079eed87334841f.com.' is present.]]>
+      <![CDATA[Click the 'Entity Tracker' uninstall checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
+      <![CDATA[Click the 'Uninstall' button.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add user' menu link.]]>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Verify the text 'Entity Tracker' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Enter '6a6908b84dfd40d@4b650f3da06f4d7.com' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '6a6908b84dfd40d@4b650f3da06f4d7.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'senior editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'e28cd1008f5d447' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '2b857e7cd6c748f' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 6a6908b84dfd40d@4b650f3da06f4d7.com.' is present.]]>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'People' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Permissions' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+      <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Permissions' button.]]>
+      <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+      <![CDATA[Check the 'Entity Tracker' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+    </line>
+    <line>
+      <![CDATA[Switch back to the 'Modules' frame.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Enter 'f0b0819bafaf4d3@079eed87334841f.com' in the 'Email Address' text box.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Click the 'Entity tracker' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -134,7 +143,7 @@
       <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Enter '91f2511a2bcf424' in the 'Title' text box.]]>
+      <![CDATA[Enter '784ca35348d447f' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -194,163 +203,88 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 91f2511a2bcf424 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Post 784ca35348d447f has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post 91f2511a2bcf424 dialog'.]]>
+      <![CDATA[Mouse over the 'Reports' menu link.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Click the 'Entity tracker report' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Switch to the active frame titled 'Entity tracker report dialog'.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Moderation State' drop down list value is 'Draft'.]]>
+      <![CDATA[Enter '10/22/2014' in the 'From' date picker.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Assign to' text box value is 'f0b0819bafaf4d3@079eed87334841f.com'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Workbench' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Work' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title 91f2511a2bcf424.]]>
+      <![CDATA[Enter '10/22/2014' in the 'To' date picker.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '91f2511a2bcf424' is present on the page.]]>
+      <![CDATA[STEP 6 - N/A]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Draft' is present on the page.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Post' is present on the page.]]>
+      <![CDATA[Click the '...Array, # elements' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'f0b0819bafaf4d3@079eed87334841f.com' is present on the page.]]>
+      <![CDATA[Click the child content node link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'edit' link for the content item titled '91f2511a2bcf424'.]]>
+      <![CDATA[Get the child node content id number.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Post 91f2511a2bcf424 dialog'.]]>
+      <![CDATA[Click the child content node 'info' link.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Get the child node content id title.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Enter '6a6908b84dfd40d@4b650f3da06f4d7.com' in the 'Assign to' text box.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/node/6456'.]]>
     </line>
     <line>
-      <![CDATA[Click the '6a6908b84dfd40d@4b650f3da06f4d7.com' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 91f2511a2bcf424 has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Workbench' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '91f2511a2bcf424' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Work' button.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title 91f2511a2bcf424.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '91f2511a2bcf424' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '6a6908b84dfd40d@4b650f3da06f4d7.com' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '6a6908b84dfd40d@4b650f3da06f4d7.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'My Workbench' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '91f2511a2bcf424' is present on the page.]]>
+      <![CDATA[Verify the text '784ca35348d447f' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="119424" started-at="2014-10-22T18:40:48Z" finished-at="2014-10-22T18:42:48Z">
+  <suite name="Default suite" duration-ms="140562" started-at="2014-10-22T20:36:20Z" finished-at="2014-10-22T20:38:40Z">
     <groups>
       <group name="full">
-        <method signature="MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@2b063d99]" name="MultiEditorPublishingWorkflow_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow"/>
+        <method signature="CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@133a7ec]" name="CollectEditorialActivity_TC5071" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="119424" started-at="2014-10-22T18:40:48Z" finished-at="2014-10-22T18:42:48Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@2b063d99]" name="suiteSetup" is-config="true" duration-ms="23" started-at="2014-10-22T14:40:48Z" finished-at="2014-10-22T14:40:48Z">
+    <test name="Default test" duration-ms="140562" started-at="2014-10-22T20:36:20Z" finished-at="2014-10-22T20:38:40Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@133a7ec]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-10-22T16:36:20Z" finished-at="2014-10-22T16:36:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@2b063d99]" name="startSelenium" is-config="true" duration-ms="3264" started-at="2014-10-22T14:40:48Z" finished-at="2014-10-22T14:40:52Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@133a7ec]" name="startSelenium" is-config="true" duration-ms="3290" started-at="2014-10-22T16:36:20Z" finished-at="2014-10-22T16:36:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity.CollectEditorialActivity_TC5071() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@2b063d99]" name="MultiEditorPublishingWorkflow_Test" duration-ms="115572" started-at="2014-10-22T14:40:52Z" finished-at="2014-10-22T14:42:47Z">
+        <test-method status="PASS" signature="CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@133a7ec]" name="CollectEditorialActivity_TC5071" duration-ms="136683" started-at="2014-10-22T16:36:23Z" finished-at="2014-10-22T16:38:40Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -364,112 +298,118 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'f0b0819bafaf4d3@079eed87334841f.com' in the 'Username' text box.]]>
+              <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'f0b0819bafaf4d3@079eed87334841f.com' in the 'E-mail address' text box.]]>
+              <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Uncheck the 'Entity Tracker' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Check the 'editor' check box.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Enter '495d668e7f61479' in the 'First Name' text box.]]>
+              <![CDATA[Click the 'Uninstall' overlay tab.]]>
             </line>
             <line>
-              <![CDATA[Enter 'a41a1f4293ab449' in the 'Last Name' text box.]]>
+              <![CDATA[Scroll by '-500'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Create new account' button.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user f0b0819bafaf4d3@079eed87334841f.com.' is present.]]>
+              <![CDATA[Click the 'Entity Tracker' uninstall checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
+              <![CDATA[Click the 'Uninstall' button.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Confirm uninstall dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add user' menu link.]]>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Verify the text 'Entity Tracker' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Enter '6a6908b84dfd40d@4b650f3da06f4d7.com' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '6a6908b84dfd40d@4b650f3da06f4d7.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'senior editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'e28cd1008f5d447' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '2b857e7cd6c748f' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 6a6908b84dfd40d@4b650f3da06f4d7.com.' is present.]]>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'People' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Permissions' menu link.]]>
+              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'People dialog'.]]>
+              <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Permissions' button.]]>
+              <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+              <![CDATA[Check the 'Entity Tracker' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Some required modules must be enabled'.]]>
+            </line>
+            <line>
+              <![CDATA[Switch back to the 'Modules' frame.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Enter 'f0b0819bafaf4d3@079eed87334841f.com' in the 'Email Address' text box.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Login' button.]]>
+              <![CDATA[Click the 'Entity tracker' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
@@ -484,7 +424,7 @@
               <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '91f2511a2bcf424' in the 'Title' text box.]]>
+              <![CDATA[Enter '784ca35348d447f' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -544,155 +484,77 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 91f2511a2bcf424 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Post 784ca35348d447f has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post 91f2511a2bcf424 dialog'.]]>
+              <![CDATA[Mouse over the 'Reports' menu link.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Click the 'Entity tracker report' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Switch to the active frame titled 'Entity tracker report dialog'.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Moderation State' drop down list value is 'Draft'.]]>
+              <![CDATA[Enter '10/22/2014' in the 'From' date picker.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Assign to' text box value is 'f0b0819bafaf4d3@079eed87334841f.com'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Workbench' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Work' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title 91f2511a2bcf424.]]>
+              <![CDATA[Enter '10/22/2014' in the 'To' date picker.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '91f2511a2bcf424' is present on the page.]]>
+              <![CDATA[STEP 6 - N/A]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Draft' is present on the page.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Post' is present on the page.]]>
+              <![CDATA[Click the '...Array, # elements' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'f0b0819bafaf4d3@079eed87334841f.com' is present on the page.]]>
+              <![CDATA[Click the child content node link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'edit' link for the content item titled '91f2511a2bcf424'.]]>
+              <![CDATA[Get the child node content id number.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Post 91f2511a2bcf424 dialog'.]]>
+              <![CDATA[Click the child content node 'info' link.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Get the child node content id title.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Enter '6a6908b84dfd40d@4b650f3da06f4d7.com' in the 'Assign to' text box.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/node/6456'.]]>
             </line>
             <line>
-              <![CDATA[Click the '6a6908b84dfd40d@4b650f3da06f4d7.com' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 91f2511a2bcf424 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Workbench' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '91f2511a2bcf424' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Work' button.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Work dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title 91f2511a2bcf424.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '91f2511a2bcf424' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '6a6908b84dfd40d@4b650f3da06f4d7.com' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '6a6908b84dfd40d@4b650f3da06f4d7.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'My Workbench' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'My Workbench dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '91f2511a2bcf424' is present on the page.]]>
+              <![CDATA[Verify the text '784ca35348d447f' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MultiEditorPublishingWorkflow_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@2b063d99]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-10-22T14:42:47Z" finished-at="2014-10-22T14:42:48Z">
+        </test-method> <!-- CollectEditorialActivity_TC5071 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@133a7ec]" name="stopSelenium" is-config="true" duration-ms="576" started-at="2014-10-22T16:38:40Z" finished-at="2014-10-22T16:38:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MultiEditorPublishingWorkflow_Test status=SUCCESS method=MultiEditorPublishingWorkflow.MultiEditorPublishingWorkflow_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@2b063d99] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CollectEditorialActivity_TC5071 status=SUCCESS method=CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@133a7ec] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow@2b063d99]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-22T14:42:48Z" finished-at="2014-10-22T14:42:48Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@133a7ec]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-10-22T16:38:40Z" finished-at="2014-10-22T16:38:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -30,7 +30,26 @@ public class CollectEditorialActivity extends ParentTest{
             
         	Reporter.log("STEP 2");
         	Modules modules = new Modules(webDriver);
-        	modules.VerifyModuleEnabled("Entity Tracker");
+        	taxonomy.NavigateSite("Modules");
+        	overlay.SwitchToActiveFrame();
+        	if (modules.IsModuleEnabled("Entity Tracker")) {
+        		modules.EnterFilterName("Entity Tracker");
+        		modules.DisableModule("Entity Tracker");
+        		overlay.ClickOverlayTab("Uninstall");
+        		overlay.SwitchToActiveFrame();
+        		modules.UninstallModule("Entity Tracker");
+        		overlay.ClickCloseOverlayLnk();
+        		
+        		taxonomy.NavigateSite("Modules");
+        		overlay.SwitchToActiveFrame();
+        		modules.EnterFilterName("Entity Tracker");
+        		modules.EnableModule("Entity Tracker");
+        	}
+        	else {
+        		modules.EnterFilterName("Entity Tracker");
+        		modules.EnableModule("Entity Tracker");
+        	}
+        	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 3");
         	taxonomy.NavigateSite("Configuration>>Content authoring>>Entity tracker");
