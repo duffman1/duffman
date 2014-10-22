@@ -4,14 +4,11 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Config;
@@ -29,14 +26,12 @@ public class BasicInformation {
 
     private Driver webDriver;
     private Config config;
-    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public BasicInformation(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
-        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -55,16 +50,34 @@ public class BasicInformation {
     @FindBy(how = How.ID, using = "edit-body-und-0-value")
     private WebElement Body_Txa;
     
-    private WebElement Synopsis_Frm() {
+    private WebElement Synopsis_Frm() throws Exception {
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
     	final String wysiwygFrm = "//iframe[@class='cke_wysiwyg_frame cke_reset']";
     	final String nowysiwygFrm = "//iframe[@id='edit-body-und-0-value_ifr']";
     	
+    	WebElement frm = null;
+    	for (int I = 0; I<=10; I++) {
+    		if (I == 10) { Assert.fail("Editor frame not present after timeout."); }
+    		try {
+    			frm = webDriver.findElement(By.xpath(wysiwygFrm));
+    			break;
+    		}
+    		catch (Exception e) { }
+    		
+    		try {
+    			frm = webDriver.findElement(By.xpath(nowysiwygFrm));
+    			break;
+    		}
+    		catch (Exception e) { }
+    		Thread.sleep(1000);
+    	}
+    	
+    	/*
     	wait.until(new ExpectedCondition<Boolean>() {
     		public Boolean apply(WebDriver webDriver) {
-    			return webDriver.findElement(By.xpath(wysiwygFrm)).isDisplayed() || 
-    					webDriver.findElement(By.xpath(nowysiwygFrm)).isDisplayed(); 
+    			return (webDriver.findElement(By.xpath(wysiwygFrm)).isDisplayed() || 
+    					webDriver.findElement(By.xpath(nowysiwygFrm)).isDisplayed()) == true; 
    		 	}
     	});
     	
@@ -75,7 +88,7 @@ public class BasicInformation {
     	catch (NoSuchElementException e) {
     		frm = webDriver.findElement(By.xpath(nowysiwygFrm));
     	}
-    	
+    	*/
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	return frm;
