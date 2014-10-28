@@ -1,19 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 /*********************************************
  * publisher.nbcuni.com MPS Configuration Library. Copyright
@@ -25,13 +23,15 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class MPSConfiguration {
 
 	private Driver webDriver;
-	private WebDriverWait wait;
+	private WaitFor waitFor;
+	private ContentParent contentParent;
 	
     //PAGE OBJECT CONSTRUCTOR    
     public MPSConfiguration(Driver webDriver) {
     	this.webDriver = webDriver;
     	PageFactory.initElements(webDriver, this);
-    	wait = new WebDriverWait(webDriver, 10);
+    	waitFor = new WaitFor(webDriver, 10);
+    	contentParent = new ContentParent(webDriver);
     	
     }
     
@@ -212,14 +212,14 @@ public class MPSConfiguration {
     public void ClickMPSExpanderLnk() throws Exception { 
     	
     	Reporter.log("Click the 'MPS' link.");
-    	wait.until(ExpectedConditions.visibilityOf(MPSExpander_Lnk)).click();
+    	waitFor.ElementVisible(MPSExpander_Lnk).click();
     	Thread.sleep(1000);
     }
     
     public void VerifyMPSCatPropertyLnkPresent() throws Exception { 
     	
     	Reporter.log("Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.");
-    	wait.until(ExpectedConditions.visibilityOf(MPSCatProperty_Lnk));
+    	waitFor.ElementVisible(MPSCatProperty_Lnk);
     }
     
     public void EnterPatternForCategoryField(String pattern) throws Exception { 
@@ -233,7 +233,7 @@ public class MPSConfiguration {
     	
     	Reporter.log("Click the 'Sync Ad Blocks' button.");
     	SyncAdBlocks_Btn.click();
-    	Thread.sleep(2000); //TODO - add dynamic wait for the spinny to not be present
+    	contentParent.WaitForThrobberNotPresent();
     }
 
     public void ClickSaveConfigurationBtn() throws Exception { 

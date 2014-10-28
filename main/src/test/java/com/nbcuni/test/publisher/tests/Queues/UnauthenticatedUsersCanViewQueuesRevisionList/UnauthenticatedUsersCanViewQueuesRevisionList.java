@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueues
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.AccessDenied;
 
 public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{

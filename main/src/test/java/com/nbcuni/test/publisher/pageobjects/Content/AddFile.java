@@ -4,8 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.script.Key;
 import org.sikuli.script.KeyModifier;
 import org.sikuli.script.Pattern;
@@ -15,6 +13,7 @@ import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Add File Library. Copyright
@@ -213,7 +212,7 @@ public class AddFile {
     public void WaitForSuccessfulUpload() throws Exception {
     	
     	Reporter.log("Wait for file upload to reach 100%");
-    	new WebDriverWait(webDriver, 60).until(ExpectedConditions.visibilityOf(UploadStatus1of1Files_Txt));
+    	new WaitFor(webDriver, 60).ElementVisible(UploadStatus1of1Files_Txt);
     	Thread.sleep(1000); //slight pause to avoid problematic js alert
     }
     

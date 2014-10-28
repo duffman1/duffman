@@ -2,10 +2,12 @@ package com.nbcuni.test.publisher.tests.Advertising.AdFolders;
 
 import java.util.Arrays;
 import java.util.List;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;

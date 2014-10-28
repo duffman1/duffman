@@ -1,10 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 

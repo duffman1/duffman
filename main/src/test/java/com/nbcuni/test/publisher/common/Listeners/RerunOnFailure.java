@@ -1,7 +1,9 @@
-package com.nbcuni.test.publisher.common;
+package com.nbcuni.test.publisher.common.Listeners;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
+
+import com.nbcuni.test.publisher.common.Config;
 
 public class RerunOnFailure implements IRetryAnalyzer {
 Config config = new Config();

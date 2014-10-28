@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.common;
+package com.nbcuni.test.publisher.common.Reports;
 
 import java.net.InetAddress;
 import java.util.List;
@@ -18,6 +18,9 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.ParentTest;
 
 public class SendEmailReport extends ParentTest{
 

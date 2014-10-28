@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.common;
+package com.nbcuni.test.publisher.common.Reports;
 
 import java.io.File;
 import java.io.FileInputStream;

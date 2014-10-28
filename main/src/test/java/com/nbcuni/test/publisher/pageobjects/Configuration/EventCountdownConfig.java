@@ -1,34 +1,34 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 /*********************************************
 * publisher.nbcuni.com Event Countdown Config Library. Copyright
 *
 * @author Brandon Clark
-* @version 1.0 Date: September 3, 2014
+* @version 1.1 Date: October 23, 2014
 *********************************************/
 public class EventCountdownConfig {
 
 	private Driver webDriver;
 	private Config config;
+	private ContentParent contentParent;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public EventCountdownConfig(Driver webDriver) {
 		this.webDriver = webDriver;
 		PageFactory.initElements(webDriver, this);
 		config = new Config();
+		contentParent = new ContentParent(webDriver);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
@@ -70,22 +70,9 @@ public class EventCountdownConfig {
 	public void WaitForSampleNodeCreation() throws Exception {
 		
 		Reporter.log("Wait for the sample nodes to be created.");
-		new WebDriverWait(webDriver, 10).until(ExpectedConditions.visibilityOf(SampleNodesCreated_Txt));
+		new WaitFor(webDriver, 10).ElementVisible(SampleNodesCreated_Txt);
 		
-		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-		for (int second = 0; ; second++){
-            if (second >= 60) {
-                Assert.fail("Progress throbber is still present after timeout");
-            }
-            try {
-            	Progress_Trb.getLocation();
-            }
-            catch (NoSuchElementException e) {
-            	break;
-            }
-            Thread.sleep(500);
-        }
-		webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+		contentParent.WaitForThrobberNotPresent();
 	}
 
 	

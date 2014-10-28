@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.common;
+package com.nbcuni.test.publisher.common.Reports;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -20,6 +20,8 @@ import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.reporters.EmailableReporter;
 import org.testng.xml.XmlSuite;
+
+import com.nbcuni.test.publisher.common.Config;
 
 public class CustomReport extends EmailableReporter {
 

@@ -1,8 +1,9 @@
-package com.nbcuni.test.publisher.common;
+package com.nbcuni.test.publisher.common.Reports;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.nbcuni.test.publisher.common.Config;
 import com.rallydev.rest.RallyRestApi;
 import com.rallydev.rest.request.CreateRequest;
 import com.rallydev.rest.request.GetRequest;
@@ -13,6 +14,7 @@ import com.rallydev.rest.response.QueryResponse;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
 import com.rallydev.rest.util.Ref;
+
 import java.io.RandomAccessFile;
 import java.io.IOException;
 import java.net.URI;

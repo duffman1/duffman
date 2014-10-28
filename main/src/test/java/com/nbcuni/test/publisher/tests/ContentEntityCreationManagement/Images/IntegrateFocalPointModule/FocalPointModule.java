@@ -1,8 +1,9 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule;
 
 import java.util.Arrays;
+
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.AddFocalPointCropEffect;
@@ -11,6 +12,7 @@ import com.nbcuni.test.publisher.pageobjects.Configuration.ImageStyles;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFileDisplay;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay;
+
 import org.testng.annotations.Test;
 
 public class FocalPointModule extends ParentTest{

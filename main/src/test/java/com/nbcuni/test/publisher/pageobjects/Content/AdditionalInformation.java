@@ -5,12 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Additional Information Library. Copyright
@@ -22,13 +20,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class AdditionalInformation {
 
 	private Driver webDriver;
-	private WebDriverWait wait;
+	private WaitFor waitFor;
 	
     //PAGE OBJECT CONSTRUCTOR
     public AdditionalInformation(Driver webDriver) {
     	this.webDriver = webDriver;
     	PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        waitFor = new WaitFor(webDriver, 10);
         
     }
     
@@ -65,25 +63,25 @@ public class AdditionalInformation {
     public void SelectMovieType(String option) throws Exception {
     	
     	Reporter.log("Select the '" + option + "' from the 'Movie Type' drop down list.");
-    	new Select(wait.until(ExpectedConditions.visibilityOf(MovieType_Ddl))).selectByVisibleText(option);
+    	new Select(waitFor.ElementVisible(MovieType_Ddl)).selectByVisibleText(option);
     }
     
     public void SelectRating(String option) throws Exception {
     	
     	Reporter.log("Select the '" + option + "' from the 'Rating' drop down list.");
-    	new Select(wait.until(ExpectedConditions.visibilityOf(Rating_Ddl))).selectByVisibleText(option);
+    	new Select(waitFor.ElementVisible(Rating_Ddl)).selectByVisibleText(option);
     }
     
     public void SelectPrimaryGenre(String option) throws Exception {
     	
     	Reporter.log("Select the '" + option + "' from the 'Primary Genre' drop down list.");
-    	new Select(wait.until(ExpectedConditions.visibilityOf(PrimaryGenre_Ddl))).selectByVisibleText(option);
+    	new Select(waitFor.ElementVisible(PrimaryGenre_Ddl)).selectByVisibleText(option);
     }
     
     public void EnterTag(String tag) throws Exception {
     	
     	Reporter.log("Enter '" + tag + "' in the 'Tags' text box.");
-    	wait.until(ExpectedConditions.visibilityOf(Tags_Txb));
+    	waitFor.ElementVisible(Tags_Txb);
     	if (Tags_Txb.getAttribute("value").equals("")) {
     		Tags_Txb.sendKeys(tag);
     	}

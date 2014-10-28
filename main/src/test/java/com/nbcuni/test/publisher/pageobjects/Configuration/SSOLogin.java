@@ -1,17 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com SSO Login Library. Copyright
@@ -21,12 +16,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class SSOLogin {
 		
-	private WebDriverWait wait;
+	private WaitFor waitFor;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public SSOLogin(Driver webDriver) {
 		PageFactory.initElements(webDriver, this);
-		wait = new WebDriverWait(webDriver, 10);
+		waitFor = new WaitFor(webDriver, 10);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
@@ -38,6 +33,9 @@ public class SSOLogin {
 	
 	@FindBy(how = How.XPATH, using ="//button[text()='Sign In']")
 	private WebElement SignIn_Btn;
+	
+	@FindBy(how = How.XPATH, using ="//body")
+	private WebElement Body_Txt;
 	
 	
 	//PAGE OBJECT METHODS
@@ -62,11 +60,8 @@ public class SSOLogin {
 	public void VerifySSOPasswordReset() throws Exception {
 		
 		Reporter.log("Verify the user is redirected to the SSO Password Reset page.");
-		wait.until(ExpectedConditions.titleIs("SSO Password Reset application"));
-		wait.until(new ExpectedCondition<Boolean>() {
-    		public Boolean apply(WebDriver webDriver) {
-    			return webDriver.findElement(By.tagName("body")).getText().contains("Change your password");
-   		 	}
-    	});
+		waitFor.TitleContains("SSO Password Reset application");
+		waitFor.ElementContainsText(Body_Txt, "Change your password");
+		
 	}
 }
