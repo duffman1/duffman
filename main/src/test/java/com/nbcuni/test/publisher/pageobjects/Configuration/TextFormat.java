@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
@@ -23,6 +24,7 @@ public class TextFormat {
 	public TextFormat(Driver webDriver) {
 		this.webDriver = webDriver;
 		PageFactory.initElements(webDriver, this);
+		new WebDriverWait(webDriver, 10);
 	}
 
 	//PAGE OBJECT IDENTIFIERS

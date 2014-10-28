@@ -1,13 +1,17 @@
 package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,12 +26,13 @@ import java.util.Date;
 public class AppLib {
 
 	Config config = new Config();
-	private WaitFor waitFor;
+	private WebDriverWait wait;
+	
     private Driver webDriver;
     
     public AppLib(Driver webDriver) {
     	this.webDriver = webDriver;
-    	waitFor = new WaitFor(webDriver, config.getConfigValueInt("ExplicitWaitTime"));
+    	wait = new WebDriverWait(webDriver, 10);
     }
 
     
@@ -65,7 +70,11 @@ public class AppLib {
     public void openNewWindow() throws Exception {
     	Reporter.log("Open a new browser window.");
     	webDriver.executeScript("window.open()");
-    	waitFor.MultipleWindowsPresent();
+    	wait.until(new ExpectedCondition<Boolean>() {
+    		public Boolean apply(WebDriver webDriver) {
+    			return webDriver.getWindowHandles().size() > 1;
+   		 	}
+    	});
     }
     
     public void switchToNewWindow(String parentWindow) throws Exception {

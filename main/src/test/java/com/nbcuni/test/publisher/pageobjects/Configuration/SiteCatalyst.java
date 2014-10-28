@@ -4,10 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com SiteCatalyst Library. Copyright
@@ -18,12 +19,12 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class SiteCatalyst {
 
-    private WaitFor waitFor;
+    WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR    
     public SiteCatalyst(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 10);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS    
@@ -52,14 +53,13 @@ public class SiteCatalyst {
     
     public void ClickOverridesLnk() throws Exception { 
     	
-    	Reporter.log("Click the 'Overrides' link to expand the menu.");
-    	waitFor.ElementVisible(Overrides_Lnk).click();
-    	
+    	Reporter.log("Click the 'Overrides' link to expand the menu."); 
+    	wait.until(ExpectedConditions.visibilityOf(Overrides_Lnk)).click();
     }
     
     public void ClickMediaGalleryCbx() throws Exception { 
     	
-    	waitFor.ElementVisible(MediaGallery_Cbx);
+    	wait.until(ExpectedConditions.visibilityOf(MediaGallery_Cbx));
     	if (MediaGallery_Cbx.isSelected() == false) {
     		Reporter.log("Check the 'Media Gallery' check box.");
     		MediaGallery_Cbx.click();
@@ -68,7 +68,7 @@ public class SiteCatalyst {
     
     public void ClickPostCbx() throws Exception { 
     	
-    	waitFor.ElementVisible(Post_Cbx);
+    	wait.until(ExpectedConditions.visibilityOf(Post_Cbx));
     	if (Post_Cbx.isSelected() == false) {
     		Reporter.log("Check the 'Post' check box.");
     		Post_Cbx.click();

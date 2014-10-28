@@ -12,10 +12,8 @@ import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
-
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 
 public class RelatingTVShowsDynamicQueues extends ParentTest{

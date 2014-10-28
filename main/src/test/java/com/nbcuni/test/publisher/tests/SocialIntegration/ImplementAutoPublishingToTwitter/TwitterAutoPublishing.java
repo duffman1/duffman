@@ -1,11 +1,9 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter;
 
 import java.net.URL;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;

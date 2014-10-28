@@ -1,14 +1,18 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Media Items Library. Copyright
@@ -20,15 +24,13 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 public class MediaItems {
 
     private Driver webDriver;
-    private WaitFor waitFor;
-    private ContentParent contentParent;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public MediaItems(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 30);
-        contentParent = new ContentParent(webDriver);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -72,8 +74,17 @@ public class MediaItems {
     	Assert.assertTrue(MediaItem_Img(imageIndex).getAttribute("src").contains(imageSrc));
     	
     	Reporter.log("Assert the the img is loaded and visible.");
-    	waitFor.ImageVisible(MediaItem_Img(imageIndex));
-    	
+    	boolean imgLoaded;
+        for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
+            }
+            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
+            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
+            			MediaItem_Img(imageIndex));
+            if (imgLoaded == true){ break;}
+            Thread.sleep(500);
+        }
     }
     
     public void VerifyFileVideoPresent(String videoTitle, String videoIndex) throws Exception {
@@ -109,7 +120,8 @@ public class MediaItems {
     public void ClickAddBtn() throws Exception {
     	
     	Reporter.log("Click the 'Add' button.");
-    	waitFor.ElementVisible(Add_Btn).click();
+    	Thread.sleep(250);
+    	Add_Btn.click();
     }
     
     public String GetImageUniqueUrl(String imageIndex) throws Exception {
@@ -127,7 +139,24 @@ public class MediaItems {
     public void WaitForImgLoadComplete() throws Exception {
     	
     	Reporter.log("Wait for the image load 'spinner' image to not be present, indicating image loading is complete.");
-    	contentParent.WaitForThrobberNotPresent();
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean searchComplete;
+        for (int second = 0; ; second++){
+            if (second >= 30) {
+                Assert.fail("image load not complete after timeout");
+            }
+            try {
+            	Spinner_Img.isDisplayed();
+            	searchComplete = false;
+            }
+            catch (Exception e) {
+            	searchComplete = true;
+            }
+                
+            if (searchComplete == true){ break;}
+            Thread.sleep(500);
+        }
+        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     

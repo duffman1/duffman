@@ -1,14 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Edit Image Library. Copyright
@@ -20,13 +23,15 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 public class EditImage {
 
     private Driver webDriver;
-    private WaitFor waitFor;
+    private Config config;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public EditImage(Driver webDriver) {
         this.webDriver = webDriver;
+        config = new Config();
         PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 10);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -81,79 +86,80 @@ public class EditImage {
     public void VerifyTitleTextValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Title Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(TitleText_Txb(index)).getAttribute("value"), value);
+    	Thread.sleep(500); //stale element exception
+    	Assert.assertEquals(wait.until(ExpectedConditions.visibilityOf(TitleText_Txb(index))).getAttribute("value"), value);
     	
     }
     
     public void EnterTitleText(String index, String title) throws Exception {
     	
     	Reporter.log("Enter '" + title + "' in the 'Title Text' text box with index '" + index + "'.");
-    	waitFor.ElementVisible(TitleText_Txb(index)).clear();
+    	wait.until(ExpectedConditions.visibilityOf(TitleText_Txb(index))).clear();
     	TitleText_Txb(index).sendKeys(title);
     }
     
     public void VerifyAltTextValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Alt Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(AltText_Txb(index)).getAttribute("value"), value);
+    	Assert.assertEquals(wait.until(ExpectedConditions.visibilityOf(AltText_Txb(index))).getAttribute("value"), value);
     }
     
     public void EnterAltText(String index, String altTxt) throws Exception {
     	
     	Reporter.log("Enter '" + altTxt + "' in the 'Alt Text' text box with index '" + index + "'.");
-    	waitFor.ElementVisible(AltText_Txb(index)).clear();
+    	wait.until(ExpectedConditions.visibilityOf(AltText_Txb(index))).clear();
     	AltText_Txb(index).sendKeys(altTxt);
     }
     
     public void VerifySourceValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Source box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(Source_Txb(index)).getAttribute("value"), value);
+    	Assert.assertEquals(wait.until(ExpectedConditions.visibilityOf(Source_Txb(index))).getAttribute("value"), value);
     }
     
     public void EnterSource(String index, String source) throws Exception {
     	
     	Reporter.log("Enter '" + source + "' in the 'Source' text box with index '" + index + "'.");
-    	waitFor.ElementVisible(Source_Txb(index)).clear();
+    	wait.until(ExpectedConditions.visibilityOf(Source_Txb(index))).clear();
     	Source_Txb(index).sendKeys(source);
     }
     
     public void VerifyCreditValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Credit Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(Credit_Txb(index)).getAttribute("value"), value);
+    	Assert.assertEquals(wait.until(ExpectedConditions.visibilityOf(Credit_Txb(index))).getAttribute("value"), value);
     }
     
     public void EnterCreditValue(String index, String value) throws Exception {
     	
     	Reporter.log("Enter '" + value + "' in the 'Credit' text box with index '" + index + "'.");
-    	waitFor.ElementVisible(Credit_Txb(index)).clear();
+    	wait.until(ExpectedConditions.visibilityOf(Credit_Txb(index))).clear();
     	Credit_Txb(index).sendKeys(value);
     }
 
     public void VerifyCopyrightValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Copyright Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(Copyright_Txb(index)).getAttribute("value"), value);
+    	Assert.assertEquals(wait.until(ExpectedConditions.visibilityOf(Copyright_Txb(index))).getAttribute("value"), value);
     }
     
     public void EnterCopyright(String index, String value) throws Exception {
     	
     	Reporter.log("Enter '" + value + "' in the 'Copyright' text box with index '" + index + "'.");
-    	waitFor.ElementVisible(Copyright_Txb(index)).clear();
+    	wait.until(ExpectedConditions.visibilityOf(Copyright_Txb(index))).clear();
     	Copyright_Txb(index).sendKeys(value);
     }
 
     public void VerifyKeywordsValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Keywords Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(Keywords_Txb(index)).getAttribute("value"), value);
+    	Assert.assertEquals(wait.until(ExpectedConditions.visibilityOf(Keywords_Txb(index))).getAttribute("value"), value);
     }
     
     public void EnterKeywordsValue(String index, String value) throws Exception {
     	
     	Reporter.log("Enter '" + value + "' in the 'Keywords' text box with index '" + index + "'.");
-    	waitFor.ElementVisible(Keywords_Txb(index)).clear();
+    	wait.until(ExpectedConditions.visibilityOf(Keywords_Txb(index))).clear();
     	Keywords_Txb(index).sendKeys(value);
     }
     
@@ -199,14 +205,26 @@ public class EditImage {
     public void WaitForEditImageFrameOpen() throws Exception {
     	
     	CloseWindow_Img.isDisplayed();
-    	waitFor.ElementVisible(TitleText_Txb("1"));
+    	Thread.sleep(2000); //stale element exception TODO dynamic wait
+    	wait.until(ExpectedConditions.visibilityOf(TitleText_Txb("1")));
     	Thread.sleep(2500); //long pause required here... TODO - figure out dynamic wait
     }
 
     public void WaitForEditImageFrameClose() throws Exception {
     	
-    	waitFor.ElementNotPresent(CloseWindow_Img);
-    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	for (int second = 0; ; second++) {
+            if (second >= config.getConfigValueInt("ImplicitWaitTime")) {
+                Assert.fail("Edit image frame is still present after timeout");}
+            try{
+            	CloseWindow_Img.isDisplayed();
+            }
+            catch (Exception e){
+            	break;
+            }
+            Thread.sleep(500);
+        }
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyMPXPlayerPresent() throws Exception {

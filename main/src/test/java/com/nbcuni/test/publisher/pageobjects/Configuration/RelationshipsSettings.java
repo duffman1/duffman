@@ -1,32 +1,35 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Relationships Settings Library. Copyright
 *
 * @author Brandon Clark
-* @version 1.1 Date: October 21, 2014
+* @version 1.0 Date: March 19, 2014
 *********************************************/
 public class RelationshipsSettings {
 		
 	private Driver webDriver;
-	private WaitFor waitFor;
+	private WebDriverWait wait;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public RelationshipsSettings(Driver webDriver) {
 		this.webDriver = webDriver;
 		PageFactory.initElements(webDriver, this);
-		waitFor = new WaitFor(webDriver, 10);
+		wait = new WebDriverWait(webDriver, 10);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
@@ -88,8 +91,8 @@ public class RelationshipsSettings {
 	public void SelectRelationshipDepth(String contentName, String option) throws Exception {
 		
 		Reporter.log("Select '" + option + "' from the '" + contentName + "' drop down list.");
-		new Select(waitFor.ElementVisible(RelationshipDepth_Ddl(contentName)))
-			.selectByVisibleText(option);
+		new Select(wait.until(ExpectedConditions.visibilityOf(RelationshipDepth_Ddl(contentName)))).
+			selectByVisibleText(option);
 	}
 	
 	public void ClickSaveConfigurationBtn() throws Exception {

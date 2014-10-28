@@ -7,7 +7,6 @@ import com.nbcuni.test.publisher.pageobjects.Configuration.URLAliases;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.URLPathSettings;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 

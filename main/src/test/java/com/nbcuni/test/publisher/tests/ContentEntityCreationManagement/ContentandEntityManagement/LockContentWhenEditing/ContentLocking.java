@@ -9,9 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.People.Roles;
-
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 
 public class ContentLocking extends ParentTest {

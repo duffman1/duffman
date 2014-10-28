@@ -7,9 +7,7 @@ import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
 import java.util.List;
 

@@ -7,7 +7,6 @@ import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.RestWSSchemaMapping;
-
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 

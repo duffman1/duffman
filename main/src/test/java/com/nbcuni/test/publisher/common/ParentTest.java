@@ -6,14 +6,18 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.tests.Setup.A1_TestSetup;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -92,10 +96,11 @@ public class ParentTest {
     			applib.openApplication();
     			webDriver.switchTo().defaultContent();
     			webDriver.navigate().to(webDriver.findElement(By.xpath("//a[text()='Flush all caches']")).getAttribute("href"));
-            	new WaitFor(webDriver, 10).ElementContainsText(webDriver.findElement(
-            			By.xpath("//div[@class='messages status']")), "Every cache cleared");
-    			
-    			
+            	new WebDriverWait(webDriver, 10).until(new ExpectedCondition<Boolean>() {
+            		public Boolean apply(WebDriver webDriver) {
+            			return webDriver.findElement(By.xpath("//div[@class='messages status']")).getText().contains("Every cache cleared");
+           		 	}
+            	});
             	Reporter.setCurrentTestResult(result); 
             	Reporter.log("Cache was cleared on test failure");
             	Reporter.setCurrentTestResult(null);

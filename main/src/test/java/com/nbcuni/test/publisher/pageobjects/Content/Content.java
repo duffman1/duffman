@@ -2,14 +2,14 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
-
 import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import java.util.concurrent.TimeUnit;
@@ -25,13 +25,13 @@ public class Content {
 
     private Driver webDriver;
     private Config config;
-    private WaitFor waitFor;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public Content(Driver webDriver) {
         this.webDriver = webDriver;
         config = new Config();
-        waitFor = new WaitFor(webDriver, 10);
+        wait = new WebDriverWait(webDriver, 10);
         PageFactory.initElements(webDriver, this);
     }
    
@@ -100,28 +100,40 @@ public class Content {
     public void ClickEditMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the 'Edit' link for content item titled '" + contentItemTitle + ".");
-    	waitFor.ElementVisible(Edit_Lnk(contentItemTitle)).click();
-  
+    	Thread.sleep(1000);
+    	Edit_Lnk(contentItemTitle).click();
     }
 
     public void ClickEditExtendMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the extend edit menu link.");
-    	waitFor.ElementVisible(ExtendEditMenu_Lnk(contentItemTitle)).click();
-    	
+    	Thread.sleep(500); //stale element exception
+    	ExtendEditMenu_Lnk(contentItemTitle).click();
     }
     
     public void ClickDeleteMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the 'Delete' menu link.");
-    	waitFor.ElementVisible(EditMenuDelete_Lnk(contentItemTitle)).click();
-    	
+    	wait.until(ExpectedConditions.visibilityOf(EditMenuDelete_Lnk(contentItemTitle))).click();
     }
     
     public void VerifyContentItemNotPresent(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Verify the content item titled '" + contentItemTitle + "' is not present.");
-    	waitFor.ElementNotPresent(ContentItem_Lnk(contentItemTitle));
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	boolean elPresent = true;
+    	try {
+    		ContentItem_Lnk(contentItemTitle).isDisplayed();
+    		elPresent = true;
+    	}
+    	catch (Exception e) {
+    	
+    		elPresent = false;
+    	}
+    	if (elPresent == true) {
+    		Assert.fail("Content item is present when it should not be");
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     

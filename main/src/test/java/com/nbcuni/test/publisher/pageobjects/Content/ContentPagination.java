@@ -1,16 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-
 import java.util.List;
 
 /*********************************************
@@ -23,13 +22,13 @@ import java.util.List;
 public class ContentPagination {
 
 	private Driver webDriver;
-	private WaitFor waitFor;
+	private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentPagination(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 10);
+        wait = new WebDriverWait(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS      
@@ -48,7 +47,7 @@ public class ContentPagination {
     public void VerifyPageCtrPresent() throws Exception {
     	
     	Reporter.log("Verify the pagination links are present.");
-    	waitFor.ElementVisible(Pager_Ctr);
+    	wait.until(ExpectedConditions.visibilityOf(Pager_Ctr));
     	
     }
     

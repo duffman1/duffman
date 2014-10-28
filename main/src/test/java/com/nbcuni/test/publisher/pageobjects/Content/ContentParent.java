@@ -3,13 +3,14 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -28,7 +29,7 @@ public class ContentParent {
     private Driver webDriver;
     private ErrorChecking errorChecking;
     private Config config;
-    private WaitFor waitFor;
+    private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentParent(Driver webDriver) {
@@ -36,7 +37,7 @@ public class ContentParent {
         PageFactory.initElements(webDriver, this);
         errorChecking = new ErrorChecking(webDriver);
         config = new Config();
-        waitFor = new WaitFor(webDriver, 30);
+        wait = new WebDriverWait(webDriver, 30);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -131,36 +132,64 @@ public class ContentParent {
 
     public void VerifyPageContentPresent(List<String> txtItems) throws Exception {
 
-    	for (final String text : txtItems) {
+    	Thread.sleep(500); //stale element exception
+        for (final String text : txtItems) {
         	Reporter.log("Verify the text '" + text + "' is present on the page.");
-        	waitFor.ElementContainsText(Body_Txt, text);
-        	
+        	try {
+        		wait.until(new ExpectedCondition<Boolean>() {
+            		public Boolean apply(WebDriver webDriver) {
+            			return Body_Txt.getText().contains(text);
+           		 	}
+            	});
+        	}
+        	catch (Exception e) {
+        		Assert.fail("Page content with text '" + text + "' is not present.");
+        	}
         }
     }
 
     public void VerifyPageContentNotPresent(List<String> txtItems) throws Exception {
 
-    	for (final String text : txtItems) {
+    	Thread.sleep(500); //stale element exception
+        for (final String text : txtItems) {
         	
         	Reporter.log("Verify the text '" + text + "' is NOT present on the page.");
-        	waitFor.ElementNotContainsText(Body_Txt, text);
-        
-    	}
+        	wait.until(new ExpectedCondition<Boolean>() {
+        		public Boolean apply(WebDriver webDriver) {
+        			return !Body_Txt.getText().contains(text);
+       		 	}
+        	});
+        }
     }
     
     public void VerifySourceInPage(List<String> srcItems) throws Exception {
     	
+    	Thread.sleep(500); //stale element exception
+    	final String pageSrc = webDriver.getPageSource();
+    	
     	for (final String source : srcItems) {
     		Reporter.log("Verify '" + source + "' is present in page source.");
-    		waitFor.PageSourceContainsText(source);
-    		
+    		try {
+    			wait.until(new ExpectedCondition<Boolean>() {
+            		public Boolean apply(WebDriver webDriver) {
+            			return pageSrc.contains(source);
+           		 	}
+            	});
+    		}
+    		catch (Exception e) {
+    			Assert.fail("Page source of '" + source + "' is not present.");
+    		}
     	}
     }
     
     public void VerifySourceNotInPage(final String scriptSrc) throws Exception {
     	
     	Reporter.log("Verify '" + scriptSrc + "' is not present in page source.");
-    	waitFor.PageSourceNotContainsText(scriptSrc);
+    	wait.until(new ExpectedCondition<Boolean>() {
+    		public Boolean apply(WebDriver webDriver) {
+    			return !webDriver.getPageSource().contains(scriptSrc);
+   		 	}
+    	});
     	
     }
     
