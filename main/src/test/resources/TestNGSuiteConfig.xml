@@ -78,9 +78,9 @@
 	
   	<!--LISTENERS-->
   	<listeners>
-    	<listener class-name="com.nbcuni.test.publisher.common.CustomReport" />
-    	<listener class-name="com.nbcuni.test.publisher.common.TestListeners" />
-    	<listener class-name="com.nbcuni.test.publisher.common.SuiteListeners" />
+    	<listener class-name="com.nbcuni.test.publisher.common.Reports.CustomReport" />
+    	<listener class-name="com.nbcuni.test.publisher.common.Listeners.TestListeners" />
+    	<listener class-name="com.nbcuni.test.publisher.common.Listeners.SuiteListeners" />
   	</listeners>
   	
   	<!--TEST EXECUTION QUEUE-->
