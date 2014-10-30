@@ -149,13 +149,13 @@ public class A1_TestSetup {
                 if (PrivateFileSystemPath_Txb.getAttribute("value").equals("")) {
                 	String privateFileSystemPath = null;
                 	if (config.getConfigValueString("AppURL").contains(".pr")) {
-                		privateFileSystemPath = "";
+                		privateFileSystemPath = "sites/default/files-private";
                 	}
                 	else if (config.getConfigValueString("AppURL").contains("acc.")) {
-                		privateFileSystemPath = "/mnt/files/nbcupublisher7acc/sites/default/files-private";
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7.acceptance/sites/default/files-private";
                 	}
                 	else if (config.getConfigValueString("AppURL").contains("acc-test")) {
-                		privateFileSystemPath = "/mnt/files/nbcupublisher7devi0/sites/default/files-private";
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7.acceptance/sites/default/files-private";
                 	}
                 	else {
                 		privateFileSystemPath = "/mnt/files/nbcupublisher7." + config.getConfigValueString("AppURL").replace("http://", "").replace(".publisher7.com", "") + "/sites/default/files-private";
