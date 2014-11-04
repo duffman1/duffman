@@ -17,6 +17,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
     public void AddApplyEmbeddedMetadataButtonAllImageForms_Test() throws Exception{
          
         	//Step 1
+    		Boolean publicFileOptionPresent = true;
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
@@ -47,8 +48,10 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("NUP_155306_0046.JPG");
         	selectFile.ClickNextBtn();
-        	selectFile.ClickPublicLocalFilesRdb();
-        	selectFile.ClickNextBtn();
+        	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+        	if (publicFileOptionPresent == true) {
+        		selectFile.ClickNextBtn();
+        	}
         	selectFile.VerifyFileImagePresent("NUP_155306_0046");
             
             //Step 4

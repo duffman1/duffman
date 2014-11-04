@@ -18,6 +18,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
     public void EXIFKeywordsIngestedPhraseInsteadSetsWords_TC17() throws Exception{
          
         	//Step 1
+    		Boolean publicFileOptionPresent = true;
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
@@ -126,8 +127,10 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("NUP_155306_0046.JPG");
         	selectFile.ClickNextBtn();
-        	selectFile.ClickPublicLocalFilesRdb();
-        	selectFile.ClickNextBtn();
+        	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+        	if (publicFileOptionPresent == true) {
+        		selectFile.ClickNextBtn();
+        	}
         	
         	//Step 8
         	editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
