@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.common.Util;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -25,6 +26,14 @@ public class WaitFor {
         config = new Config();
     }
     
+    private FluentWait<By> byWait(final By locator) throws Exception {
+    	
+    	return new FluentWait<By>(locator)
+    			.withTimeout(timeout, TimeUnit.SECONDS)
+    			.pollingEvery(config.getConfigValueInt("PollingTime"), TimeUnit.MILLISECONDS);
+    			
+    }
+
     private FluentWait<WebElement> elementWait(final WebElement element) throws Exception {
     	
     	return new FluentWait<WebElement>(element)
@@ -56,6 +65,21 @@ public class WaitFor {
     	return element;
     }
     
+    public WebElement ElementPresent(final By locator) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Element not present.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return !webDriver.findElement(loc).getLocation().equals(0);	
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
+    }
+    
     public void ElementNotPresent(WebElement element) throws Exception {
 
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
@@ -82,8 +106,7 @@ public class WaitFor {
     public WebElement ElementVisible(final WebElement element) throws Exception {
     	
     	this.elementWait(element)
-    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, 
-    				ElementNotVisibleException.class))
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
     		.withMessage("Element not visible.")
     		.until(new Function<WebElement, Boolean>() {
     			@Override
@@ -93,6 +116,21 @@ public class WaitFor {
     		});
     	
     	return element;
+    }
+    
+    public WebElement ElementVisible(final By locator) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Element not visible.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return webDriver.findElement(loc).isDisplayed();	
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
     }
     
     public WebElement ElementNotVisible(final WebElement element) throws Exception {
@@ -108,6 +146,21 @@ public class WaitFor {
     		});
     	
     	return element;
+    }
+    
+    public WebElement ElementNotVisible(final By locator) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(StaleElementReferenceException.class, ElementNotVisibleException.class))
+    		.withMessage("Element still visible.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return !webDriver.findElement(loc).isDisplayed();	
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
     }
     
     public void MultipleWindowsPresent() throws Exception {
