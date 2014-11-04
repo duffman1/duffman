@@ -142,29 +142,9 @@ public class SelectFile {
     //PAGE OBJECT IDENTIFIERS
     public void SwitchToSelectFileFrm() throws Exception {
     	
-    	Reporter.log("Switch to the select file frame.");
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-    	for (int I = 0; I<10; I++) {
-    		try {
-    			webDriver.switchTo().frame(SelectFile_Frm);
-    			SelectFile_Txt.getLocation();
-    			break;
-    		}
-    		catch (Exception e) {
-    			Thread.sleep(1000);
-    		}
-    		webDriver.switchTo().defaultContent();
-    		try {
-    			String activeFrame = "//iframe[@class='overlay-element overlay-active']";
-    			webDriver.findElement(By.xpath(activeFrame));
-    			webDriver.switchTo().frame(webDriver.findElement(By.xpath(activeFrame)));
-    			System.out.println("active frame switch happened.");
-    		}
-    		catch (Exception e) {
-    		}
-    	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webDriver.switchTo().frame(SelectFile_Frm);
     	errorChecking.VerifyNoMessageErrorsPresent();
+    	
     }
     
     public void ClickViewLibraryBtn() throws Exception {

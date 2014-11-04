@@ -5,11 +5,10 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.CharactersInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.CoverPhoto;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 
-public class CreateCharacterProfile extends ParentTest{
+public class CreateCharacterProfile extends ParentTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1041
@@ -23,11 +22,10 @@ public class CreateCharacterProfile extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
             //Step 2
-            taxonomy.NavigateSite("Content>>Add content>>Character Profile");
+        	navigation.AddContent("Character Profile");
             
             //Step 3
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-            overlay.SwitchToActiveFrame();
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
             
@@ -36,13 +34,10 @@ public class CreateCharacterProfile extends ParentTest{
             coverPhoto.ClickSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToFrame("Create Character Profile");
             coverPhoto.VerifyFileImagePresent("HanSolo");
             
             //Step 5
-            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
             
     }

@@ -22,8 +22,7 @@ public class Pixelman extends ParentTest {
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("STEP 2 -3");
-        taxonomy.NavigateSite("Modules");
-    	overlay.SwitchToActiveFrame();
+        navigation.Modules();
     	Modules modules = new Modules(webDriver);
     	modules.EnterFilterName("Pixelman");
     	modules.EnableModule("Pixelman");
@@ -35,23 +34,17 @@ public class Pixelman extends ParentTest {
         modules.DisableModule("Doubleclick for Publishers");
             
         Reporter.log("STEP 5");
-        overlay.ClickCloseOverlayLnk();
-        taxonomy.NavigateSite("Home");
-        taxonomy.NavigateSite("Home>>Flush all caches");
+        navigation.Home();
         
         Reporter.log("STEP 6");
         contentParent.VerifySourceInPage(Arrays.asList("//www.nbcudigitaladops.com/hosted/global_header.js"));
             
         Reporter.log("CLEANUP");
-        taxonomy.NavigateSite("Modules");
-        overlay.SwitchToActiveFrame();
+        navigation.Modules();
         for (String module : Arrays.asList("Pub Ads", "Pixelman")) {
         	modules.EnterFilterName(module);
         	modules.DisableModule(module);
         }
-        overlay.ClickCloseOverlayLnk();
-        taxonomy.NavigateSite("Home>>Flush all caches");
-        
         
     }
 }

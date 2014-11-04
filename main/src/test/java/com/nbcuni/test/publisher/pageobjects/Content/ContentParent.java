@@ -3,6 +3,8 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,6 +32,7 @@ public class ContentParent {
     private ErrorChecking errorChecking;
     private Config config;
     private WebDriverWait wait;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentParent(Driver webDriver) {
@@ -38,6 +41,7 @@ public class ContentParent {
         errorChecking = new ErrorChecking(webDriver);
         config = new Config();
         wait = new WebDriverWait(webDriver, 30);
+        waitFor = new WaitFor(webDriver, 30);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -95,17 +99,14 @@ public class ContentParent {
     public void VerifyMessageStatus(String messageStatus) throws Exception {
     	
     	Reporter.log("Verify success message of '" + messageStatus + "' is present.");
-    	if (!Message_Ctr.getText().contains(messageStatus)) {
-    		Assert.fail("The message status '" + messageStatus + "' is not present.");
-    	}
-    	
+    	waitFor.ElementContainsText(Message_Ctr, messageStatus);
     	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
     public void VerifyMessageWarning(String warningTxt) throws Exception {
     	
     	Reporter.log("Verify warning message '" + warningTxt + "' is present.");
-    	Assert.assertTrue(Warning_Ctr.getText().contains(warningTxt));
+    	waitFor.ElementContainsText(Warning_Ctr, warningTxt);
     	
     	errorChecking.VerifyNoMessageErrorsPresent();
     }

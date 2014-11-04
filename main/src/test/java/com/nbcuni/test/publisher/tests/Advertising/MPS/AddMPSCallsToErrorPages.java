@@ -27,8 +27,7 @@ public class AddMPSCallsToErrorPages extends ParentTest {
         	Reporter.log("SETUP");
         	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("MPS");
-            taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
+        	navigation.Configuration("MPS Configuration");
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.EnterMPSHost("mps.io");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
@@ -37,7 +36,6 @@ public class AddMPSCallsToErrorPages extends ParentTest {
             mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
         	Reporter.log("STEP 2");
         	applib.openSitePage("/junkurl");

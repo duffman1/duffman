@@ -51,6 +51,9 @@ public class PublisherAdsSideFiles {
     @FindBy(how = How.LINK_TEXT, using = "Add")
     private WebElement Add_Lnk;
     
+    @FindBy(how = How.LINK_TEXT, using = "Import")
+    private WebElement Import_Lnk;
+    
     private WebElement AdSideFile_Lnk(String linkPath) {
     	return webDriver.findElement(By.xpath("//a[text()='" + linkPath + "']"));
     }
@@ -89,6 +92,12 @@ public class PublisherAdsSideFiles {
     
     	Reporter.log("Click the 'Add' link.");
     	Add_Lnk.click();
+    }
+    
+    public void ClickImportLnk() throws Exception {
+        
+    	Reporter.log("Click the 'Import' link.");
+    	Import_Lnk.click();
     }
     
     public void ClickAdSideFileLnk(String path) throws Exception {
@@ -180,9 +189,7 @@ public class PublisherAdsSideFiles {
     		
     		this.ClickAdSideFileExpandEditLnk(sideFile);
     	    this.ClickAdSideFileDeleteLnk(sideFile);
-    	    overlay.SwitchToActiveFrame();
     	    delete.ClickDeleteBtn();
-    	    overlay.SwitchToActiveFrame();
     	    contentParent.VerifyMessageStatus("The item has been deleted.");
     	    this.VerifyAdSideFileNotPresent(sideFile);
     		

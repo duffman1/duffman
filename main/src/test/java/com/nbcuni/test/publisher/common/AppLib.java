@@ -98,5 +98,10 @@ public class AppLib {
     	webDriver.navigate().refresh();
     }
     
+    public void goBack() throws Exception {
+    	Reporter.log("Navigate back.");
+    	webDriver.navigate().back();
+    }
+    
     
 }

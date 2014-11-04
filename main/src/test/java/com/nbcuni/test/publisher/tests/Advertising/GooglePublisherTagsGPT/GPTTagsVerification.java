@@ -22,25 +22,22 @@ public class GPTTagsVerification extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Setup
-            taxonomy.NavigateSite("Modules");
-            overlay.SwitchToActiveFrame();
+            navigation.Modules();
             Modules modules = new Modules(webDriver);
             modules.EnterFilterName("DART");
             modules.DisableModule("DART");
             modules.EnterFilterName("Doubleclick for Publishers");
             modules.EnableModule("Doubleclick for Publishers");
-            overlay.ClickCloseOverlayLnk();
-            taxonomy.NavigateSite("Structure>>DFP Ad Tags>>Global DFP Settings");
-            overlay.SwitchToActiveFrame();
+            navigation.Structure("DFP Ad Tags");
             DFPAddTags dfpAddTags = new DFPAddTags(webDriver, applib);
+            dfpAddTags.ClickGlobalDFPSettingsLnk();
             dfpAddTags.EnterNetworkId("nbcu");
             dfpAddTags.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
             //Step 2
-            taxonomy.NavigateSite("Structure>>DFP Ad Tags>>Add");
-            overlay.SwitchToActiveFrame();
+            navigation.Structure("DFP Ad Tags");
+            dfpAddTags.ClickAddLnk();
             
             //Step 3
             String adSlotName = random.GetCharacterString(15);
@@ -51,11 +48,9 @@ public class GPTTagsVerification extends ParentTest {
             //Step 4
             dfpAddTags.ClickSaveBtn();
             contentParent.VerifyMessageStatus(adSlotName + " has been created.");
-            overlay.ClickCloseOverlayLnk();
             
             //Step 5
-            taxonomy.NavigateSite("Structure>>Blocks");
-            overlay.SwitchToActiveFrame();
+            navigation.Structure("Blocks");
             
             //Step 6
             Blocks blocks = new Blocks(webDriver);
@@ -65,18 +60,16 @@ public class GPTTagsVerification extends ParentTest {
             
             //Step 7
             blocks.VerifySelectedRegion(adSlotName, "Sidebar first");
-            overlay.ClickCloseOverlayLnk();
-            
+           
             //Step 8
-            taxonomy.NavigateSite("Home");
+            navigation.Home();
             blocks.VerifyScriptSourceInPage("http://www.googletagservices.com/tag/js/gpt.js");
             blocks.VerifyHomePageBlockPresent(adSlotName);
             
             //Step 9 - NA
             
             //Cleanup - remove added block
-            taxonomy.NavigateSite("Structure>>Blocks");
-            overlay.SwitchToActiveFrame();
+            navigation.Structure("Blocks");
             blocks.SelectRegion("DFP tag: " + adSlotName, "- None -");
             blocks.ClickSaveBlocksBtn();
     }

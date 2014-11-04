@@ -32,7 +32,7 @@ public class Modules {
     private Config config;
     private ContentParent contentParent;
     private Overlay overlay;
-    private Taxonomy taxonomy;
+    private EmberNav navigation;
     private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
@@ -41,7 +41,7 @@ public class Modules {
     	config = new Config();
     	contentParent = new ContentParent(webDriver);
     	overlay = new Overlay(webDriver);
-    	taxonomy = new Taxonomy(webDriver);
+    	navigation = new EmberNav(webDriver);
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
     }
@@ -138,11 +138,9 @@ public class Modules {
     		
         	boolean additionalModulesRequired = false;
         	
-        	overlay.switchToDefaultContent(true);
-        	
         	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         	try {
-        		overlay.SwitchToFrame("Some required modules must be enabled");
+        		Continue_Btn.isDisplayed();
         		additionalModulesRequired = true;
         	}
         	catch (Exception e) { }
@@ -151,12 +149,8 @@ public class Modules {
         		
         		Reporter.log("Click the 'Continue' button to enable additional modules.");
         		Continue_Btn.click();
-        		overlay.switchToDefaultContent(true);
         		
         	}
-        	
-        	Reporter.log("Switch back to the 'Modules' frame.");
-        	overlay.SwitchToFrame("Modules");
         	
         	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         	
@@ -228,13 +222,10 @@ public class Modules {
     
     public void VerifyModuleEnabled(String moduleName) throws Exception {
     	
-    	taxonomy.NavigateSite("Modules");
-    	overlay.SwitchToFrame("Modules");
+    	navigation.Modules();
     	this.EnterFilterName(moduleName);
     	this.EnableModule(moduleName);
-    	overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent(true);
-        taxonomy.NavigateSite("Home");
+    	
     }
     
     public void ClickConfigureLnk(String moduleName) throws Exception {

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
         <methods>
           <include name="startSelenium"/>
-          <include name="Relationships_TC1390"/>
           <include name="suiteTeardown"/>
+          <include name="AddMPSCallsToErrorPages_TC4950"/>
           <include name="suiteSetup"/>
           <include name="stopSelenium"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

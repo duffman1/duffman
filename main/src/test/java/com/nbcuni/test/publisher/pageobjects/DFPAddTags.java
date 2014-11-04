@@ -30,6 +30,12 @@ public class DFPAddTags {
     @FindBy(how = How.ID, using = "edit-dfp-network-id")
     private WebElement NetworkId_Txb;
     
+    @FindBy(how = How.LINK_TEXT, using = "Global DFP Settings")
+    private WebElement GlobalDFPSettings_Lnk;
+    
+    @FindBy(how = How.LINK_TEXT, using = "Add")
+    private WebElement Add_Lnk;
+    
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement SaveConfiguration_Btn;
     
@@ -47,6 +53,20 @@ public class DFPAddTags {
     
     
     //PAGE OBJECT METHODS
+    public void ClickGlobalDFPSettingsLnk() throws Exception {
+    
+    	Reporter.log("Click the 'Global DFP Settings' link.");
+    	GlobalDFPSettings_Lnk.click();
+    	
+    }
+    
+    public void ClickAddLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Add' link.");
+    	Add_Lnk.click();
+    	
+    }
+    
     public void EnterNetworkId(String networkIdName) throws Exception {
     	
     	Reporter.log("Enter '" + networkIdName + "' in the 'Network ID' text box.");

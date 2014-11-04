@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.common.Driver.*;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
@@ -29,6 +30,7 @@ public class ParentTest {
     protected AppLib applib;
     protected Random random;
     protected Taxonomy taxonomy;
+    protected EmberNav navigation;
     protected Overlay overlay;
     protected Config config = new Config();
     protected ContentParent contentParent;
@@ -65,6 +67,7 @@ public class ParentTest {
             applib = new AppLib(webDriver);
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
+            navigation = new EmberNav(webDriver);
             overlay = new Overlay(webDriver);
             contentParent = new ContentParent(webDriver);
             
@@ -90,7 +93,9 @@ public class ParentTest {
         	System.out.println("Failed to capture screenshot");
         }
         
+    	/*
     	try {
+    		
     		if (!result.isSuccess()) {
     			webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     			applib.openApplication();
@@ -109,6 +114,7 @@ public class ParentTest {
     	catch (Exception e) {
     		System.out.println("Failed to flush cache");
     	}
+    	*/
     	
         try {
         	webDriver.quit();

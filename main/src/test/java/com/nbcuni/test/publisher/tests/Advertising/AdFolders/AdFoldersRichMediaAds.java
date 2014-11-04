@@ -50,14 +50,12 @@ public class AdFoldersRichMediaAds extends ParentTest {
         }
         
         //Step 2
-        taxonomy.NavigateSite("Structure>>Publisher Ads Side Files");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Publisher Ads Side Files");
         
         //Step 3
         PublisherAdsSideFiles publisherAdsSideFiles = new PublisherAdsSideFiles(webDriver);
         publisherAdsSideFiles.DeleteAllUnwantedSideFiles();
         publisherAdsSideFiles.ClickAddLnk();
-        overlay.SwitchToActiveFrame();
         
         //Step 4
         String sideFileName = random.GetCharacterString(15);
@@ -76,34 +74,28 @@ public class AdFoldersRichMediaAds extends ParentTest {
         
         //Step 8
         addNewSideFile.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus(sideFileName + " has been created.");
         
         //Step 9
         publisherAdsSideFiles.ClickAdSideFileLnk(sideFilePath);
-        Assert.assertEquals(webDriver.getCurrentUrl(), config.getConfigValueString("AppURL") + "/" + sideFilePath + "#overlay-context=");
+        Assert.assertEquals(webDriver.getCurrentUrl(), config.getConfigValueString("AppURL") + "/" + sideFilePath);
         webDriver.navigate().back();
-        overlay.SwitchToActiveFrame();
         
         //Step 10
         publisherAdsSideFiles.ClickAdSideFileEditLnk(defaultAddFile);
-        overlay.SwitchToActiveFrame();
         
         //Step 11
         addNewSideFile.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus(defaultAddFile.toLowerCase() + " has been updated");
         publisherAdsSideFiles.VerifyAdSideFileStorageType(defaultAddFile, "Overridden");
         
         //Step 12
         publisherAdsSideFiles.ClickAdSideFileEditLnk(defaultAddFile);
-        overlay.SwitchToActiveFrame();
         addNewSideFile.ClickRevertBtn();
         
         //Step 13
         Revert revert = new Revert(webDriver);
         revert.ClickRevertBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The item has been reverted.");
         publisherAdsSideFiles.VerifyAdSideFileStorageType(defaultAddFile, "Default");
         
@@ -112,7 +104,6 @@ public class AdFoldersRichMediaAds extends ParentTest {
         //Step 15
         publisherAdsSideFiles.ClickAdSideFileExpandEditLnk(defaultAddFile);
         publisherAdsSideFiles.ClickAdSideFileCloneLnk(defaultAddFile);
-        overlay.SwitchToActiveFrame();
         
         //Step 16
         String clonedSideFileName = random.GetCharacterString(15);
@@ -123,22 +114,18 @@ public class AdFoldersRichMediaAds extends ParentTest {
         
         //Step 17
         publisherAdsSideFiles.ClickAdSideFileEditLnk(defaultAddFile);
-        overlay.SwitchToActiveFrame();
         addNewSideFile.ClickExportTab();
-        overlay.SwitchToActiveFrame();
         String exportTxt = addNewSideFile.CopyExportTxt();
-        overlay.ClickCloseOverlayLnk();
         
         //Step 18
-        taxonomy.NavigateSite("Structure>>Publisher Ads Side Files>>Import");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Publisher Ads Side Files");
+        publisherAdsSideFiles.ClickImportLnk();
         
         //Step 19
         ImportSideFile importSideFile = new ImportSideFile(webDriver);
         importSideFile.EnterSideFileCode(exportTxt);
         importSideFile.UncheckAllowImportOverwriteRecordCbx();
         importSideFile.ClickContinueBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageWarning("You have unsaved changes. These changes will not be made permanent until you click Save.");
         
         //Step 20
@@ -147,18 +134,14 @@ public class AdFoldersRichMediaAds extends ParentTest {
         String importedSideFilePath = random.GetCharacterString(10) + "/" + random.GetCharacterString(10) + ".html";
         addNewSideFile.EnterPath(importedSideFilePath);
         addNewSideFile.ClickUpdateBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageWarning("You have unsaved changes. These changes will not be made permanent until you click Save.");
         
         //Step 21
         addNewSideFile.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
         addNewSideFile.EnterMachineName(importSideFileName.toLowerCase());
         addNewSideFile.ClickUpdateBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageWarning("You have unsaved changes. These changes will not be made permanent until you click Save.");
         addNewSideFile.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus(importSideFileName.toLowerCase() + " has been created.");
         publisherAdsSideFiles.VerifyAdSideFileStorageType(importSideFileName, "Normal");
         
@@ -167,10 +150,8 @@ public class AdFoldersRichMediaAds extends ParentTest {
         for (String sideFile : newlyCreatedSideFiles) {
         	publisherAdsSideFiles.ClickAdSideFileExpandEditLnk(sideFile);
             publisherAdsSideFiles.ClickAdSideFileDeleteLnk(sideFile);
-            overlay.SwitchToActiveFrame();
             Delete delete = new Delete(webDriver);
             delete.ClickDeleteBtn();
-            overlay.SwitchToActiveFrame();
             contentParent.VerifyMessageStatus("The item has been deleted.");
             publisherAdsSideFiles.VerifyAdSideFileNotPresent(sideFile);
         }
