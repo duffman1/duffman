@@ -35,6 +35,9 @@ public class People {
     }
     
     //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.LINK_TEXT, using = "Add user")
+    private WebElement AddUser_Lnk;
+    
     private WebElement Username_Lnk(String userName) {
     	return webDriver.findElement(By.xpath("//a[contains(text(), '" + userName.substring(0, 10) + "')]"));
     }
@@ -48,6 +51,12 @@ public class People {
     
     
     //PAGE OBJECT METHODS
+    public void ClickAddUserLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Add user' link.");
+    	AddUser_Lnk.click();
+    	
+    }
     public void ClickUsernameLnk(String userName) throws Exception {
     	
     	Reporter.log("Click the '" + userName + "' link from the 'USERNAME' list.");

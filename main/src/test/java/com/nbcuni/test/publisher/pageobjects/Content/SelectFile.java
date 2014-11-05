@@ -304,12 +304,28 @@ public class SelectFile {
     	Next_Btn.click();
     }
     
-    public void ClickPublicLocalFilesRdb() throws Exception {
+    public Boolean ClickPublicLocalFilesRdb() throws Exception {
     	
-    	Reporter.log("Click the 'Public Local Files' radio button.");
-    	wait.until(ExpectedConditions.visibilityOf(PublicLocalFiles_Rdb));
-    	Thread.sleep(1000);
-    	PublicLocalFiles_Rdb.click();
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	
+    	Boolean publicFileOptionPresent = true;
+    	
+    	try {
+    		PublicLocalFiles_Rdb.isDisplayed();
+    		publicFileOptionPresent = true;
+    	}
+    	catch (Exception e) {
+    		publicFileOptionPresent = false;
+    	}
+    	
+    	if (publicFileOptionPresent == true) {
+    		Reporter.log("Click the 'Public Local Files' radio button.");
+    		Thread.sleep(1000);
+        	PublicLocalFiles_Rdb.click();
+    	}
+    	
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	return publicFileOptionPresent;
     }
     
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
@@ -419,8 +435,10 @@ public class SelectFile {
     	this.ClickUploadBtn();
     	this.WaitForFileUploaded(defaultImgFile);
     	this.ClickNextBtn();
-    	this.ClickPublicLocalFilesRdb();
-    	this.ClickNextBtn();
+    	Boolean publicFileOptionPresent = this.ClickPublicLocalFilesRdb();
+    	if (publicFileOptionPresent == true) {
+    		this.ClickNextBtn();
+    	}
     	this.VerifyFileImagePresent("HanSolo");
     	this.ClickSaveBtn();
     	Overlay overlay = new Overlay(webDriver);

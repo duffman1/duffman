@@ -28,6 +28,7 @@ public class CountdownClockEvents extends ParentTest {
     public void CountdownClockEvents_TC4887() throws Exception {
          
         	Reporter.log("STEP 1");
+        	Boolean publicFileOptionPresent = true;
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
@@ -80,8 +81,10 @@ public class CountdownClockEvents extends ParentTest {
             	selectFile.ClickUploadBtn();
             	selectFile.WaitForFileUploaded("HanSolo1.jpg");
             	selectFile.ClickNextBtn();
-            	selectFile.ClickPublicLocalFilesRdb();
-            	selectFile.ClickNextBtn();
+            	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+            	if (publicFileOptionPresent == true) {
+            		selectFile.ClickNextBtn();
+            	}
             	selectFile.VerifyFileImagePresent("HanSolo");
             	Thread.sleep(1000);
             	selectFile.ClickSaveBtn();
@@ -94,8 +97,10 @@ public class CountdownClockEvents extends ParentTest {
             	selectFile.ClickUploadBtn();
             	selectFile.WaitForFileUploaded("nbclogosmall.jpg");
             	selectFile.ClickNextBtn();
-            	selectFile.ClickPublicLocalFilesRdb();
-            	selectFile.ClickNextBtn();
+            	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+            	if (publicFileOptionPresent == true) {
+            		selectFile.ClickNextBtn();
+            	}
             	selectFile.VerifyFileImagePresent("nbclogosmall");
             	Thread.sleep(1000);
             	selectFile.ClickSaveBtn();
@@ -151,8 +156,10 @@ public class CountdownClockEvents extends ParentTest {
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("HanSolo1.jpg");
         	selectFile.ClickNextBtn();
-        	selectFile.ClickPublicLocalFilesRdb();
-        	selectFile.ClickNextBtn();
+        	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+        	if (publicFileOptionPresent == true) {
+        		selectFile.ClickNextBtn();
+        	}
         	selectFile.VerifyFileImagePresent("HanSolo");
         	selectFile.ClickSaveBtn();
         	overlay.SwitchToActiveFrame();
@@ -164,8 +171,10 @@ public class CountdownClockEvents extends ParentTest {
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("nbclogosmall.jpg");
         	selectFile.ClickNextBtn();
-        	selectFile.ClickPublicLocalFilesRdb();
-        	selectFile.ClickNextBtn();
+        	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+        	if (publicFileOptionPresent == true) {
+        		selectFile.ClickNextBtn();
+        	}
         	selectFile.VerifyFileImagePresent("nbclogosmall");
         	selectFile.ClickSaveBtn();
         	overlay.SwitchToActiveFrame();

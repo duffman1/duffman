@@ -25,21 +25,17 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
         	Modules modules = new Modules(webDriver);
-        	taxonomy.NavigateSite("Modules");
-            overlay.SwitchToActiveFrame();
+        	navigation.Modules();
             modules.EnterFilterName("MPS");
             modules.EnableModule("MPS");
-            overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Structure>>MPS Blocks>>Add");
-            overlay.SwitchToActiveFrame();
+            navigation.Structure("MPS Blocks");
             MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
+            mpsBlocks.ClickAddLnk();
             String blockName = random.GetCharacterString(15);
             mpsBlocks.EnterBlockName(blockName);
             mpsBlocks.ClickSaveBtn();
             contentParent.VerifyMessageStatus(blockName.toLowerCase() + " has been created.");
-            overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
+            navigation.Configuration("MPS Configuration");
             mpsConfiguration.EnterMPSHost("mps.io");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
@@ -55,11 +51,9 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	Reporter.log("STEP 3");
         	contentParent.VerifyMessageWarning("These blocks don't exist in the list of ad blocks retrieved: ");
         	contentParent.VerifyMessageWarning(blockName);
-        	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 4");
-        	taxonomy.NavigateSite("Structure>>Blocks");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Structure("Blocks");
         	Blocks blocks = new Blocks(webDriver);
         	blocks.SelectRegion("bottommulti (MPS)", "- None -");
         	blocks.SelectRegion("topbanner (MPS)", "- None -");
@@ -71,13 +65,11 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	blocks.SelectRegion(blockName + " (MPS)", "Header");
         	blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 6 - N/A");
             
             Reporter.log("STEP 7");
-            taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
+            navigation.Configuration("MPS Configuration");
             mpsConfiguration.EnterMPSHost("mps.io");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("sandbox");
@@ -92,15 +84,12 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
             
             Reporter.log("STEP 9");
             applib.openApplication();
-            taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
+            navigation.Configuration("MPS Configuration");
             mpsConfiguration.ClickSyncAdBlocksBtn();
             contentParent.VerifyPageContentNotPresent(Arrays.asList("topbox"));
             contentParent.VerifyMessageWarning("These blocks don't exist in the list of ad blocks retrieved: ");
         	contentParent.VerifyMessageWarning(blockName);
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Structure>>Blocks");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Structure("Blocks");
         	blocks.SelectRegion("bottommulti (MPS)", "- None -");
         	blocks.SelectRegion("topbanner (MPS)", "- None -");
         	blocks.SelectRegion("topbox (MPS)", "- None -");

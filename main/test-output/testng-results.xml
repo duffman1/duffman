@@ -2,10 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,105 +14,90 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+      <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+      <![CDATA[Click the 'Character Profile' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
+      <![CDATA[Enter 'c3b5c2f8d8de448' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS Configuration' link.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Clear all 'Name' text box values.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Clear all 'Value' text box values.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/junkurl'.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
+      <![CDATA[Verify success message of 'Character Profile c3b5c2f8d8de448 has been created.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30260" started-at="2014-11-04T16:05:47Z" finished-at="2014-11-04T16:06:17Z">
+  <suite name="Default suite" duration-ms="37903" started-at="2014-11-04T18:41:43Z" finished-at="2014-11-04T18:42:21Z">
     <groups>
       <group name="full">
-        <method signature="AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@584cfed7]" name="AddMPSCallsToErrorPages_TC4950" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3ce9d642]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
-      <group name="mps">
-        <method signature="AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@584cfed7]" name="AddMPSCallsToErrorPages_TC4950" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
-      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="30260" started-at="2014-11-04T16:05:47Z" finished-at="2014-11-04T16:06:17Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@584cfed7]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-11-04T11:05:47Z" finished-at="2014-11-04T11:05:47Z">
+    <test name="Default test" duration-ms="37903" started-at="2014-11-04T18:41:43Z" finished-at="2014-11-04T18:42:21Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3ce9d642]" name="suiteSetup" is-config="true" duration-ms="22" started-at="2014-11-04T13:41:43Z" finished-at="2014-11-04T13:41:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@584cfed7]" name="startSelenium" is-config="true" duration-ms="3197" started-at="2014-11-04T11:05:47Z" finished-at="2014-11-04T11:05:50Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3ce9d642]" name="startSelenium" is-config="true" duration-ms="3489" started-at="2014-11-04T13:41:43Z" finished-at="2014-11-04T13:41:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@584cfed7]" name="AddMPSCallsToErrorPages_TC4950" duration-ms="26484" started-at="2014-11-04T11:05:50Z" finished-at="2014-11-04T11:06:17Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3ce9d642]" name="CreateCharacterProfile_TC1041" duration-ms="33821" started-at="2014-11-04T13:41:47Z" finished-at="2014-11-04T13:42:21Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -127,89 +109,80 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
+              <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
+              <![CDATA[Click the 'Character Profile' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
+              <![CDATA[Enter 'c3b5c2f8d8de448' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS Configuration' link.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Clear all 'Name' text box values.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Clear all 'Value' text box values.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/junkurl'.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
+              <![CDATA[Verify success message of 'Character Profile c3b5c2f8d8de448 has been created.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AddMPSCallsToErrorPages_TC4950 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@584cfed7]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-11-04T11:06:17Z" finished-at="2014-11-04T11:06:17Z">
+        </test-method> <!-- CreateCharacterProfile_TC1041 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3ce9d642]" name="stopSelenium" is-config="true" duration-ms="584" started-at="2014-11-04T13:42:21Z" finished-at="2014-11-04T13:42:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AddMPSCallsToErrorPages_TC4950 status=SUCCESS method=AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@584cfed7] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3ce9d642] output=Open url 'http://acc-test.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@584cfed7]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-04T11:06:17Z" finished-at="2014-11-04T11:06:17Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@3ce9d642]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-04T13:42:21Z" finished-at="2014-11-04T13:42:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

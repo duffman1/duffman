@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
@@ -80,6 +81,8 @@ public class EmberNav {
     public void ClickMainMenuLnk(String menuLnkTxt) throws Exception {
     	
     	Reporter.log("Click the '" + menuLnkTxt + "' menu link.");
+    	waitFor.ElementVisible(MainMenuNav_Lnk(menuLnkTxt));
+    	Thread.sleep(500);
     	waitFor.ElementVisible(MainMenuNav_Lnk(menuLnkTxt)).click();
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
@@ -89,6 +92,7 @@ public class EmberNav {
     	
     	Reporter.log("Click the 'Add content' link.");
     	waitFor.ElementVisible(AddContent_Lnk).click();
+    	
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -142,6 +146,23 @@ public class EmberNav {
     	this.ClickMainMenuLnk("Configuration");
     	this.HideMenu();
     	this.ClickAdminLnkByTxtLnk(lnkTxt);
+    	
+    }
+    
+    public void Reports(String lnkTxt) throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("Reports");
+    	this.HideMenu();
+    	this.ClickAdminLnkByTxtLnk(lnkTxt);
+    	
+    }
+    
+    public void People() throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("People");
+    	this.HideMenu();
     	
     }
   

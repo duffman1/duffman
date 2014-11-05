@@ -13,11 +13,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -30,23 +30,23 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class AddUser {
 
 	private Driver webDriver;
-	private Taxonomy taxonomy;
-	private Overlay overlay;
+	private EmberNav navigation;
 	private ContentParent contentParent;
 	private Random random;
 	private WebDriverWait wait;
 	private Config config;
+	private People people;
 	
     //PAGE OBJECT CONSTRUCTOR
     public AddUser(Driver webDriver) {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        taxonomy = new Taxonomy(webDriver);
-        overlay = new Overlay(webDriver);
+        navigation = new EmberNav(webDriver);
         contentParent = new ContentParent(webDriver);
         random = new Random();
         wait = new WebDriverWait(webDriver, 10);
         config = new Config();
+        people = new People(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -261,8 +261,8 @@ public class AddUser {
     
     public String AddDefaultUser(List<String> roles, Boolean isSSO) throws Exception {
     	
-    	taxonomy.NavigateSite("People>>Add user");
-        overlay.SwitchToActiveFrame();
+    	navigation.People();
+    	people.ClickAddUserLnk();
         String userName = random.GetCharacterString(15) + "@" + random.GetCharacterString(15) + ".com";
         if (isSSO.equals(false)) {
         	this.EnterUsername(userName);
@@ -287,7 +287,6 @@ public class AddUser {
         this.EnterLastName(lastName);
         this.ClickCreateNewAccountBtn();
         contentParent.VerifyMessageStatus("A welcome message with further instructions has been e-mailed to the new user " + userName + ".");
-        overlay.ClickCloseOverlayLnk();
         
         return userName;
     }

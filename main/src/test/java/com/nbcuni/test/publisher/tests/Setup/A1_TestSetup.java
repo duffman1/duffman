@@ -123,9 +123,11 @@ public class A1_TestSetup {
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type");
                 new Select(webDriver.findElement(By.id("edit-widget-type"))).selectByVisibleText("Media multiselect");
                 contentParent.ClickSaveBtn();
+                /*
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
                 new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
                 contentParent.ClickSaveBtn();
+                */
                 Taxonomy taxonomy = new Taxonomy(webDriver);
                 taxonomy.NavigateSite("Home");
                 

@@ -22,6 +22,9 @@ public class MPSBlocks {
     }
     
     //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.LINK_TEXT, using = "Add")
+    private WebElement Add_Lnk;
+    
     @FindBy(how = How.ID, using = "edit-block-name")
     private WebElement BlockName_Txb;
     
@@ -30,6 +33,12 @@ public class MPSBlocks {
     
     
     //PAGE OBJECT METHODS
+    public void ClickAddLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Add' link.");
+    	Add_Lnk.click();
+    }
+    
     public void EnterBlockName(String blockName) throws Exception {
     	
     	Reporter.log("Enter '" + blockName + "' in the 'Block Name' text box.");

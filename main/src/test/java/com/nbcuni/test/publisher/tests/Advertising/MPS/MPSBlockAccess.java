@@ -26,19 +26,15 @@ public class MPSBlockAccess extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
+        	navigation.Modules();
         	Modules modules = new Modules(webDriver);
-        	taxonomy.NavigateSite("Modules");
-        	overlay.SwitchToActiveFrame();
         	modules.EnterFilterName("Pixelman");
         	modules.DisableModule("Pixelman");
         	modules.EnterFilterName("MPS");
         	modules.EnableModule("MPS");
-        	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 2");
-        	taxonomy.NavigateSite("Structure>>MPS Blocks");
-        	overlay.SwitchToFrame("MPS Blocks");
-        	overlay.ClickCloseOverlayLnk();
+        	navigation.Structure("MPS Blocks");
         	
         	Reporter.log("STEP 3");
         	AddUser addUser = new AddUser(webDriver);
@@ -50,7 +46,7 @@ public class MPSBlockAccess extends ParentTest {
             userLogin.Login(userName, "pa55word");
             
             Reporter.log("STEP 5");
-            taxonomy.NavigateSite("Structure>>MPS Blocks");
-        	overlay.SwitchToFrame("MPS Blocks");
+            navigation.Structure("MPS Blocks");
+            
     }
 }

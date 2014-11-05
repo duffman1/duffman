@@ -18,6 +18,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
     public void PopulateEXIFBulkUpload_TC3192() throws Exception{
          
         	Reporter.log("STEP 1");
+        	Boolean publicFileOptionPresent = true;
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
@@ -166,8 +167,10 @@ public class PopulateEXIFBulkUpload extends ParentTest{
         	selectFile.ClickNextBtn();
         	
         	Reporter.log("STEP 10");
-        	selectFile.ClickPublicLocalFilesRdb();
-        	selectFile.ClickNextBtn();
+        	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+        	if (publicFileOptionPresent == true) {
+        		selectFile.ClickNextBtn();
+        	}
         	selectFile.VerifyFileImagePresent("IPTCDefault");
             editImage.VerifyTitleTextValue("1", "drpin075402");
             editImage.VerifyAltTextValue("1", "drpin075402");

@@ -21,19 +21,16 @@ public class MPSEndToEndIntegration extends ParentTest {
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+        	navigation.Modules();
         	Modules modules = new Modules(webDriver);
-        	taxonomy.NavigateSite("Modules");
-        	overlay.SwitchToActiveFrame();
         	modules.EnterFilterName("Pixelman");
         	modules.DisableModule("Pixelman");
         	modules.EnterFilterName("MPS");
         	modules.EnableModule("MPS");
-        	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 2");
-        	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
-            
+        	navigation.Configuration("MPS Configuration");
+        	
             Reporter.log("STEP 3");
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.EnterMPSHost("mps.io");
@@ -45,30 +42,25 @@ public class MPSEndToEndIntegration extends ParentTest {
             mpsConfiguration.ClickSyncAdBlocksBtn();
             contentParent.WaitForThrobberNotPresent();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 4 - N/A");
             
             Reporter.log("STEP 5");
-            taxonomy.NavigateSite("Structure>>Blocks");
-            overlay.SwitchToActiveFrame();
+            navigation.Structure("Blocks");
             
             Reporter.log("STEP 6 and 7");
             Blocks blocks = new Blocks(webDriver);
             blocks.SelectRegion("topmulti (MPS)", "Footer");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 8");
-            taxonomy.NavigateSite("Home");
+            navigation.Home();
             Thread.sleep(5000); //TODO - figure out a good dynamic wait for this...
         	//mpsConfiguration.VerifyTopMultiAdPresent();
-        	overlay.switchToDefaultContent(true);
         	
         	Reporter.log("CLEANUP");
-        	taxonomy.NavigateSite("Structure>>Blocks");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Structure("Blocks");
         	blocks.SelectRegion("topmulti (MPS)", "- None -");
         	blocks.ClickSaveBlocksBtn();
         	

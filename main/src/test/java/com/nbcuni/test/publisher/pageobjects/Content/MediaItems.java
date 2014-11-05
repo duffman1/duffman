@@ -35,7 +35,7 @@ public class MediaItems {
     
     //PAGE OBJECT IDENTIFIERS
     private WebElement MediaItem_Img(String imageIndex) {
-    	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']/img)[" + imageIndex + "]"));
+    	return webDriver.findElement(By.xpath("(//div[contains(@id, 'edit-field-media-items')]//div[@class='media-thumbnail']/img)[" + imageIndex + "]"));
     }
     
     @FindBy(how = How.ID, using = "edit-field-media-items-und-add-more")
