@@ -5,14 +5,14 @@
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="true"></parameter>
+	<parameter name="ReRunOnFailure" value="false"></parameter>
 	<parameter name="ReRunOnFailureCount" value="4"></parameter>
-	<parameter name="RunRemotely" value="true"></parameter>
+	<parameter name="RunRemotely" value="false"></parameter>
 	<parameter name="SendReportAutoEmails" value="true"></parameter>
   	<parameter name="UploadReportToRally" value="true"></parameter>
   	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
   	<parameter name="GithubUpdatePRResults" value="true"></parameter>
-  	<parameter name="RunSetupScripts" value="true"></parameter>
+  	<parameter name="RunSetupScripts" value="false"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
   	
