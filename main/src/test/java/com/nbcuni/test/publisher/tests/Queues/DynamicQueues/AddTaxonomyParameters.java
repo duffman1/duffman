@@ -10,9 +10,12 @@ import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueueTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 public class AddTaxonomyParameters extends ParentTest{
@@ -34,17 +37,14 @@ public class AddTaxonomyParameters extends ParentTest{
         String movieWTax = "movieWTax" + random.GetCharacterString(15);
         String movieWOTax = "movieWOTax" + random.GetCharacterString(15);
         for (String title : Arrays.asList(movieWTax, movieWOTax)) {
-        	taxonomy.NavigateSite("Content>>Add content>>Movie");
-            overlay.SwitchToActiveFrame();
-            BasicInformation basicInformation = new BasicInformation(webDriver);
+        	navigation.AddContent("Movie");
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
             basicInformation.ClickBasicInformationTab();
             basicInformation.EnterTitle(title);
             basicInformation.EnterSynopsis();
-            overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToActiveFrame();
             if (title.contains("WTax")) {
             	AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
                 additionalInformation.ClickAdditionalInformationLnk();
@@ -56,12 +56,12 @@ public class AddTaxonomyParameters extends ParentTest{
             publishingOptions.ClickPublishingOptionsLnk();
             publishingOptions.SelectModerationState("Published");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
         }
         
         Reporter.log("STEP 2");
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Dynamic Queue types");
+        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver);
+        dynamicQueueTypes.ClickAddDynamicQueueTypeLnk();
         
         Reporter.log("STEP 3");
         String dynamicQueueTypeName = random.GetCharacterString(15);
@@ -75,13 +75,12 @@ public class AddTaxonomyParameters extends ParentTest{
         		"field_movie_secondary_genre", "field_additional_genres", "field_primary_genre", 
         		"field_movie_rating", "field_movie_type"));
         addDynamicQueueType.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));
-        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 4");
-        taxonomy.NavigateSite("Content>>Dynamic Queues>>Add " + dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
+        navigation.Content("Dynamic Queues");
+        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+        dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
         
         Reporter.log("STEP 5");
         String dynamicQueueTitle = random.GetCharacterString(15);
@@ -95,7 +94,6 @@ public class AddTaxonomyParameters extends ParentTest{
         Reporter.log("STEP 7");
         addDynamicQueue.SelectFieldMovieTypeTaxonomy("Syndicated");
         addDynamicQueue.SelectFieldMoviePrimaryGenreTaxonomy("Action");
-        //addDynamicQueue.SelectFieldMovieSecondaryGenreTaxonomy("Comedy");
         addDynamicQueue.SelectFieldMovieRatingTaxonomy("G");
         
         Reporter.log("STEP 8 - TODO"); //TODO
@@ -103,7 +101,6 @@ public class AddTaxonomyParameters extends ParentTest{
         Reporter.log("STEP 9");
         addDynamicQueue.ClickSortByNewestRdb();
         addDynamicQueue.ClickSaveDynamicQueueBtn();
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTitle));
         
         Reporter.log("STEPS 10 AND 11 - MOVED TO TEST SETUP");
@@ -111,11 +108,8 @@ public class AddTaxonomyParameters extends ParentTest{
         Reporter.log("STEP 12 TODO"); //TODO
         
         Reporter.log("STEP 13");
-        taxonomy.NavigateSite("Content>>Dynamic Queues");
-        overlay.SwitchToActiveFrame();
-        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+        navigation.Content("Dynamic Queues");
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
-        overlay.ClickCloseOverlayLnk();
         String parentWindow = webDriver.getWindowHandle();
         applib.openNewWindow();
         applib.switchToNewWindow(parentWindow);

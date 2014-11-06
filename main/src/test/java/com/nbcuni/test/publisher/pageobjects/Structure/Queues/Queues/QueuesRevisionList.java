@@ -13,6 +13,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Queues Revision List Library. Copyright
@@ -25,12 +26,14 @@ public class QueuesRevisionList {
 
 	private Driver webDriver;
 	private WebDriverWait wait;
+	private WaitFor waitFor;
 	
     //PAGE OBJECT CONSTRUCTOR
     public QueuesRevisionList(Driver webDriver) {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
+        waitFor = new WaitFor(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -76,9 +79,8 @@ public class QueuesRevisionList {
     public void VerifyStateFlowHistoryEvent(String messageTxt) throws Exception {
     	
     	Reporter.log("Verify the revision event text of '" + messageTxt + "'.");
-    	if (!StateFlowHistoryEvent_Txt.getText().contains(messageTxt)) {
-    		Assert.fail("Revision history text of '" + messageTxt + "' is not present.");
-    	}
+    	waitFor.ElementContainsText(StateFlowHistoryEvent_Txt, messageTxt);
+    	
     }
     
     public void ClickCancelLnk() throws Exception {

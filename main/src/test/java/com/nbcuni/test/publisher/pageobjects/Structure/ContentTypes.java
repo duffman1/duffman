@@ -44,6 +44,10 @@ public class ContentTypes {
     	return By.xpath("//td[contains(text(), '" + lnkTxt + "')]/..//a[text()='manage fields']");
     }
     
+    private By ManageDisplay_Lnk(String lnkTxt) {
+    	return By.xpath("//td[contains(text(), '" + lnkTxt + "')]/..//a[text()='manage display']");
+    }
+    
     private By Edit_Lnk(String lnkTxt) {
     	return By.xpath("//td[contains(text(), '" + lnkTxt + "')]/..//a[text()='edit']");
     }
@@ -96,6 +100,13 @@ public class ContentTypes {
     	
     	Reporter.log("Click the 'manage field' link for content type '" + lnkTxt + "'.");
     	waitFor.ElementPresent(ManageField_Lnk(lnkTxt)).click();
+    	
+    }
+    
+    public void ClickManageDisplayLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the 'manage display' link for content type '" + lnkTxt + "'.");
+    	waitFor.ElementPresent(ManageDisplay_Lnk(lnkTxt)).click();
     	
     }
     

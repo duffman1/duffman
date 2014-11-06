@@ -28,14 +28,12 @@ public class EmailRedirect extends ParentTest{
         modules.VerifyModuleEnabled("Reroute emails");
         
     	//Step 2
-    	taxonomy.NavigateSite("Configuration>>Development>>Reroute Email");
-    	overlay.SwitchToActiveFrame();
+        navigation.Configuration("Reroute Email");
     	RerouteEmail rerouteEmail = new RerouteEmail(webDriver, applib);
     	rerouteEmail.CheckEnableReroutingCbx();
     	rerouteEmail.EnterEmailAddresses(config.getConfigValueString("GmailUsername"));
     	rerouteEmail.ClickSaveConfigurationBtn();
     	contentParent.VerifyMessageStatus("The configuration options have been saved.");
-    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 3
     	AddUser addUser = new AddUser(webDriver);

@@ -36,8 +36,8 @@ public class SSODefinedDomains extends ParentTest {
 		modules.VerifyModuleEnabled("Pub SSO");
 			
 		Reporter.log("STEP 3");
+		navigation.Configuration("SimpleSAMLphp Auth Settings");
 		taxonomy.NavigateSite("Configuration>>People>>SimpleSAMLphp Auth Settings");
-		overlay.SwitchToActiveFrame();
 			
 		Reporter.log("STEP 4");
 		simpleSAML.VerifyDefaultSettings();
@@ -56,8 +56,7 @@ public class SSODefinedDomains extends ParentTest {
 		simpleSAML.CheckActivateAuthCbx();
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
-		overlay.ClickCloseOverlayLnk();
-	        
+		    
 		Reporter.log("STEP 8");
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/saml_login");
@@ -70,7 +69,7 @@ public class SSODefinedDomains extends ParentTest {
 		ssoLogin.ClickSignInBtn();
 	       
 		Reporter.log("STEP 10 AND 11");
-		webDriver.navigate().refresh();
+		applib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
@@ -78,8 +77,7 @@ public class SSODefinedDomains extends ParentTest {
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/user");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-		taxonomy.NavigateSite("People");
-		overlay.SwitchToActiveFrame();
+		navigation.People();
 		People people = new People(webDriver);
 		people.SeachForUsername(config.getConfigValueString("SSOEmail"));
 		people.ClickUsernameLnk(config.getConfigValueString("SSOEmail"));
@@ -94,19 +92,12 @@ public class SSODefinedDomains extends ParentTest {
 		Reporter.log("STEP 14 - 16 TODO");
 	        
 		Reporter.log("STEP 17");
-		taxonomy.NavigateSite("Home");
-		taxonomy.NavigateSite("Modules");
-		overlay.SwitchToActiveFrame();
+		navigation.Modules();
 		modules.EnterFilterName("Pub SSO");
 		modules.DisableModule("Pub SSO");
 		modules.EnterFilterName("simpleSAMLphp authentication");
-		Thread.sleep(1000);
 		modules.DisableModule("simpleSAMLphp authentication");
-		overlay.ClickCloseOverlayLnk();
-	   
-		Reporter.log("STEP 18");
-		taxonomy.NavigateSite("Home>>Flush all caches");
-			
+		
 		testSuccessful = true;
 		
 	}
@@ -126,15 +117,12 @@ public class SSODefinedDomains extends ParentTest {
 			simpleSAML.ClickSaveConfigurationBtn();
 			contentParent.VerifyMessageStatus("The configuration options have been saved.");
 			contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
-			taxonomy.NavigateSite("Home");
-			taxonomy.NavigateSite("Modules");
-			overlay.SwitchToActiveFrame();
+			navigation.Modules();
 			modules.EnterFilterName("Pub SSO");
 			modules.DisableModule("Pub SSO");
 			modules.EnterFilterName("simpleSAMLphp authentication");
-			Thread.sleep(1000);
 			modules.DisableModule("simpleSAMLphp authentication");
-			overlay.ClickCloseOverlayLnk();
+			
 		}
 	}
 }

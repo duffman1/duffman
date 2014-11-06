@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -8,6 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CoverPhoto;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.SoftLength;
+import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFieldInput;
 
 public class SoftCharacterLimit extends ParentTest{
@@ -24,8 +26,10 @@ public class SoftCharacterLimit extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
             //Step 2 through 4
-        	taxonomy.NavigateSite("Structure>>Content types>>Character Profile>>Manage fields>>Character: First Name");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Structure("Content types");
+        	ContentTypes contentTypes = new ContentTypes(webDriver);
+        	contentTypes.ClickManageFieldLnk("Character Profile");
+        	contentTypes.ClickEditLnk("Character: First Name");
         	
         	//Step 5
         	ManageFieldInput manageFieldInput = new ManageFieldInput(webDriver);
@@ -36,13 +40,10 @@ public class SoftCharacterLimit extends ParentTest{
         	
         	//Step 7
         	manageFieldInput.ClickSaveSettingsBtn();
-        	overlay.SwitchToActiveFrame();
         	contentParent.VerifyMessageStatus("Saved Character: First Name configuration.");
         	
         	//Step 8
-        	overlay.ClickCloseOverlayLnk();
-            taxonomy.NavigateSite("Content>>Add content>>Character Profile");
-            overlay.SwitchToActiveFrame();
+        	navigation.AddContent("Character Profile");
             
             //Step 9
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
@@ -62,23 +63,19 @@ public class SoftCharacterLimit extends ParentTest{
             coverPhoto.ClickSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Character Profile " + characterNameExceeds + " has been created.");
             
             //Step 11
-            taxonomy.NavigateSite("Structure>>Content types>>Character Profile>>Manage fields>>Character: First Name");
-        	overlay.SwitchToActiveFrame();
-        	manageFieldInput.EnterSoftLengthLimit("");
+            navigation.Structure("Content types");
+        	contentTypes.ClickManageFieldLnk("Character Profile");
+        	contentTypes.ClickEditLnk("Character: First Name");
+            manageFieldInput.EnterSoftLengthLimit("");
         	manageFieldInput.EnterSoftLengthMinimum("");
         	manageFieldInput.ClickSaveSettingsBtn();
-        	overlay.SwitchToActiveFrame();
         	contentParent.VerifyMessageStatus("Saved Character: First Name configuration.");
-        	overlay.ClickCloseOverlayLnk();
-            taxonomy.NavigateSite("Content>>Add content>>Character Profile");
-            overlay.SwitchToActiveFrame();
-            
+        	navigation.AddContent("Character Profile");
+        	
             //Step 12
             charactersInformation.EnterCharacterFirstName(characterNameUnder);
             softLength.VerifySoftLengthUnderLimitNotPresent("4/150");

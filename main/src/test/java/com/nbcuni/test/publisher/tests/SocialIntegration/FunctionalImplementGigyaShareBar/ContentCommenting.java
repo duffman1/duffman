@@ -38,7 +38,7 @@ public class ContentCommenting extends ParentTest{
         twitterLogin.ClickSignInAndTweetBtn();
         webDriver.switchTo().window(parentWindow);
         webDriver.navigate().to(new URL("https://twitter.com/"));
-        overlay.switchToDefaultContent(true);
+        webDriver.switchTo().defaultContent();
         twitterLogin.VerifyTwitterPostPresent(postTitle);
         
         Reporter.log("STEP 4");

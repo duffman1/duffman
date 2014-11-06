@@ -77,6 +77,9 @@ public class ContentParent {
     
     @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
     private WebElement Throbber_Img;
+    
+    private By ProgressBar_Ctr = By.xpath("//div[@class='bar']");
+    
 
     private WebElement RequiredField_Ast(String field) {
     	return webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
@@ -217,6 +220,12 @@ public class ContentParent {
     		Thread.sleep(1000);
     	}
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    }
+    
+    public void WaitForProgressBarNotPresent() throws Exception {
+    	
+    	new WaitFor(webDriver, 300).ElementNotPresent(ProgressBar_Ctr);
+    	
     }
     
 }

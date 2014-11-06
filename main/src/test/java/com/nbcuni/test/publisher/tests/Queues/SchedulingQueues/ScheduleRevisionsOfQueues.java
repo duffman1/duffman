@@ -43,8 +43,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
-        taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
-        overlay.SwitchToActiveFrame();
+        applib.openSitePage("/admin/content/queues/add/promo_queue");
         
         //Step 3
         Queues queues = new Queues(webDriver);
@@ -53,24 +52,20 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         queues.EnterQueueItem(postTitle, "1");
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
-        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle)); 
         
         //Step 4
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         
         //Step 5, 6, and 7 (truncated)
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
         scheduleQueue.ClickScheduleTab();
-        overlay.SwitchToActiveFrame();
         scheduleQueue.ClickAddScheduledRevisionLnk();
         
         //Step 8
-        overlay.SwitchToActiveFrame();
         scheduleQueue.SelectRevision(queueTitle);
         scheduleQueue.SelectOperation("Moderate to Publish");
         Calendar cal = Calendar.getInstance();
@@ -83,16 +78,11 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         
         //Step 9
         scheduleQueue.ClickScheduleBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved.");
-        overlay.ClickCloseOverlayLnk();
-        taxonomy.NavigateSite("Content>>Queues");
-        overlay.SwitchToActiveFrame();
+        applib.openSitePage("/admin/content/queues");
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         scheduleQueue.ClickScheduleTab();
-        overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(queueTitle, "Moderate to Publish", sDate + " - 05:00 PM"));
         
     }

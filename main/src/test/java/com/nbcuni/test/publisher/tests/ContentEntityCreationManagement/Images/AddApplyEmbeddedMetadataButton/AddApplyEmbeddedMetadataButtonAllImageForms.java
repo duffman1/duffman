@@ -22,8 +22,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
-            taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
-            overlay.SwitchToActiveFrame();
+        	navigation.Configuration("Simple EXIF/IPTC Mappings");
             SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
             simpleEXIFIPTCMappings.SelectAltText("Title");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
@@ -35,11 +34,9 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             simpleEXIFIPTCMappings.SelectMediaTags("Title");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
-            overlay.ClickCloseOverlayLnk();
             
             //Step 3
-            taxonomy.NavigateSite("Content>>Add content>>Post");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Post");
             CoverMedia coverMedia = new CoverMedia(webDriver);
             coverMedia.ClickSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
@@ -77,9 +74,9 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             editImage.EnterTitleText("1", "ModifiedTitle.JPG");
             editImage.EnterSource("1", "ModifiedSource");
             editImage.ClickSaveBtn("1");
-            overlay.SwitchToActiveFrame();
             
             //Step 8
+            webDriver.switchTo().defaultContent();
             coverMedia.ClickEditBtn();
             editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("1", "ModifiedTitle.JPG");

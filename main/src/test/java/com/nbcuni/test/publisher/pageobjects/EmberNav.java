@@ -1,6 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
@@ -31,6 +34,12 @@ public class EmberNav {
     }
     
     //PAGE OBJECT IDENTIFIERS
+    private By ActiveUserMenu_Lnk = By.id("navbar-item--4");
+    
+    private By MenuSubNav_Lnk(String lnkTxt) {
+    	return By.xpath("//a[@class='navbar-menu-item'][text()='" + lnkTxt + "']");
+    }
+    
     private By Home_Lnk = By.xpath("//a[@class='navbar-icon navbar-icon-home']");
     
     private By Menu_Lnk = By.xpath("//a[@id='navbar-item--2'][text()='Menu']");
@@ -125,6 +134,21 @@ public class EmberNav {
     	Reporter.log("Click the secondary nav '" + lnkTxt + "'.");
     	waitFor.ElementVisible(SecondaryTabBar_Lnk(lnkTxt)).click();
     	errorChecking.VerifyNoMessageErrorsPresent();
+    	
+    }
+    
+    public void ClickActiveUserLnk() throws Exception {
+    	
+    	WebElement ele = waitFor.ElementPresent(ActiveUserMenu_Lnk);
+    	Reporter.log("Click the activer user menu link for logged in user '" + ele.getText() + "'.");
+    	ele.click();
+    	
+    }
+    
+    public void ClickMenuSubNavLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the menu sub nav '" + lnkTxt + "' link.");
+    	waitFor.ElementPresent(MenuSubNav_Lnk(lnkTxt)).click();
     	
     }
     
@@ -262,6 +286,12 @@ public class EmberNav {
     	
     }
     
+    public void ActiveUser(String lnkTxt) throws Exception {
+    	
+    	this.ClickActiveUserLnk();
+    	this.ClickMenuSubNavLnk(lnkTxt);
+    	
+    }
     
   
 }

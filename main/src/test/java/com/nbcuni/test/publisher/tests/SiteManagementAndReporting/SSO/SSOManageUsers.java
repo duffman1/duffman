@@ -37,8 +37,7 @@ public class SSOManageUsers extends ParentTest {
 		       
 		Reporter.log("STEP 2");
 		modules.VerifyModuleEnabled("Pub SSO");
-		taxonomy.NavigateSite("Configuration>>People>>SimpleSAMLphp Auth Settings");
-		overlay.SwitchToActiveFrame();
+		navigation.Configuration("SimpleSAMLphp Auth Settings");
 		simpleSAML.VerifyDefaultSettings();
 		simpleSAML.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "stage.crt");
 		simpleSAML.ClickSaveConfigurationBtn();
@@ -49,7 +48,6 @@ public class SSOManageUsers extends ParentTest {
 		simpleSAML.CheckActivateAuthCbx();
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
-		overlay.ClickCloseOverlayLnk();
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/saml_login");
 		Thread.sleep(1000);
@@ -57,14 +55,13 @@ public class SSOManageUsers extends ParentTest {
 		ssoLogin.EnterSSOID(config.getConfigValueString("SSOUsername"));
 		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
-		webDriver.navigate().refresh();
+		applib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
 		Reporter.log("STEP 3");
 		WorkBench workBench = new WorkBench(webDriver);
 		workBench.ClickWorkBenchTab("Edit");
-		overlay.SwitchToActiveFrame();
 		AddUser addUser = new AddUser(webDriver);
 		addUser.VerifyUsernameValueAndIsDisabled(config.getConfigValueString("SSOEmail"));
 		addUser.VerifyEmailAddressValueAndIsDisabled(config.getConfigValueString("SSOEmail"));
@@ -78,8 +75,6 @@ public class SSOManageUsers extends ParentTest {
 		Reporter.log("STEP 5");
 		webDriver.close();
 		webDriver.switchTo().window(parentWindow);
-		overlay.SwitchToActiveFrame();
-		overlay.ClickCloseOverlayLnk();
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/user");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
@@ -88,12 +83,10 @@ public class SSOManageUsers extends ParentTest {
 		String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"), true);
 	        
 	    Reporter.log("STEP 7");
-		taxonomy.NavigateSite("People");
-		overlay.SwitchToActiveFrame();
+		navigation.People();
 		People people = new People(webDriver);
 		people.SeachForUsername(editorUserName);
 		people.ClickEditLnk(editorUserName);
-		overlay.SwitchToActiveFrame();
 		addUser.VerifyUsernameValueAndIsDisabled(editorUserName);
 		    
 		Reporter.log("STEPS 8-11");
@@ -102,17 +95,13 @@ public class SSOManageUsers extends ParentTest {
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
 		contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
-		taxonomy.NavigateSite("Home");
-		taxonomy.NavigateSite("Modules");
-		overlay.SwitchToActiveFrame();
+		navigation.Modules();
 		modules.EnterFilterName("Pub SSO");
 		modules.DisableModule("Pub SSO");
 		modules.EnterFilterName("simpleSAMLphp authentication");
 		Thread.sleep(1000);
 		modules.DisableModule("simpleSAMLphp authentication");
-		overlay.ClickCloseOverlayLnk();
-		taxonomy.NavigateSite("Home>>Flush all caches");
-		    
+		 
 		testSuccessful = true;
 		
 	}
@@ -132,15 +121,13 @@ public class SSOManageUsers extends ParentTest {
 				simpleSAML.ClickSaveConfigurationBtn();
 				contentParent.VerifyMessageStatus("The configuration options have been saved.");
 				contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
-				taxonomy.NavigateSite("Home");
-				taxonomy.NavigateSite("Modules");
-				overlay.SwitchToActiveFrame();
+				navigation.Modules();
 				modules.EnterFilterName("Pub SSO");
 				modules.DisableModule("Pub SSO");
 				modules.EnterFilterName("simpleSAMLphp authentication");
 				Thread.sleep(1000);
 				modules.DisableModule("simpleSAMLphp authentication");
-				overlay.ClickCloseOverlayLnk();
+				
 			}
 		}
 }

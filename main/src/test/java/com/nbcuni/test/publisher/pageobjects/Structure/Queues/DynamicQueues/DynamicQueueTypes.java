@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
@@ -27,7 +26,7 @@ public class DynamicQueueTypes {
     private Delete delete;
     
     //PAGE OBJECT CONSTRUCTOR
-    public DynamicQueueTypes(Driver webDriver, AppLib applib) {
+    public DynamicQueueTypes(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         delete = new Delete(webDriver);

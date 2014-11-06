@@ -2,8 +2,10 @@ package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -14,6 +16,8 @@ import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Structure.AddViewMode;
+import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.Structure.DisplaySuite;
 import com.nbcuni.test.publisher.pageobjects.Structure.ViewModes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
@@ -52,18 +56,17 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         String nameNumber_ErrorMessage = "Name cannot be a number. It is recommended that this name begin with a capital letter and contain only letters, numbers, and spaces.";
       
         Reporter.log("STEP 2");
+        navigation.Modules();
         Modules modules = new Modules(webDriver);
-        taxonomy.NavigateSite("Modules");
-        overlay.SwitchToActiveFrame();
         for (String module : Arrays.asList("Dynamic Queue", "Dynamic Queue Workbench")) {
         	modules.EnterFilterName(module);
         	modules.EnableModule(module);
         }
-        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 3");
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Dynamic Queue types");
+        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver);
+        dynamicQueueTypes.ClickAddDynamicQueueTypeLnk();
         
         Reporter.log("STEP 4");
         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
@@ -81,13 +84,12 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         addDynamicQueueType.SelectCacheLifetime("1 min");		
         addDynamicQueueType.SelectEntityType();
         addDynamicQueueType.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));
-        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 6&7");
-        taxonomy.NavigateSite("Content>>Dynamic Queues>>Add " + dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();       
+        navigation.Content("Dynamic Queues");
+        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+        dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
         String dynamicQueueTitle = random.GetCharacterString(15);
         AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
         addDynamicQueue.EnterTitle(dynamicQueueTitle);       
@@ -96,19 +98,15 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         addDynamicQueue.ClickSortByNewestRdb();
         addDynamicQueue.SelectModerationState("Publish");
         addDynamicQueue.ClickSaveDynamicQueueBtn();
-        overlay.switchToDefaultContent(true);
         
         Reporter.log("STEP 8 ");
-        taxonomy.NavigateSite("Content>>Dynamic Queues");
-        overlay.SwitchToActiveFrame();
-        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+        navigation.Content("Dynamic Queues");
         dynamicQueues.VerifyDynamicQueueStatus(dynamicQueueTitle, "Published");
         
         Reporter.log("STEP 9 - MOVED TO SETUP");
         
         Reporter.log("STEP 10 ");
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
-        overlay.ClickCloseOverlayLnk();
         String parentWindow = webDriver.getWindowHandle();
         applib.openNewWindow();
         applib.switchToNewWindow(parentWindow);
@@ -123,28 +121,21 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 14");
         applib.switchToParentWindow(parentWindow);
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types");
-        overlay.SwitchToActiveFrame();
-        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver, applib);
+        navigation.Structure("Dynamic Queue types");
         dynamicQueueTypes.ClickEditLnk(dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
         
         Reporter.log("STEP 15");
         addDynamicQueueType.EnableContentTypes(Arrays.asList("Movie", "Person"));
         addDynamicQueueType.ClickSaveBtn();
-        overlay.ClickCloseOverlayLnk();
-
+        
         Reporter.log("STEP 16");
-        taxonomy.NavigateSite("Content>>Dynamic Queues>>Add " + dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
+        navigation.Content("Dynamic Queues");
+        dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
         addDynamicQueue.VerifyTargetBundlesPresent(Arrays.asList("Movie", "Person"));
-        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 17");
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Dynamic Queue types");
         dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList("Full content", "Teaser", "Revision comparison", 
         		"Tokens"));
         
@@ -154,7 +145,6 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         contentParent.WaitForThrobberNotPresent();
         manageDisplay.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
         applib.switchToNewWindow(parentWindow);
         applib.refreshPage();
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
@@ -163,15 +153,12 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 19");
         applib.switchToParentWindow(parentWindow);
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Dynamic Queue types");
         dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
         manageDisplay.SelectEntityListFormat("Teaser");
         contentParent.WaitForThrobberNotPresent();
         manageDisplay.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
         applib.switchToNewWindow(parentWindow);
         applib.refreshPage();
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
@@ -182,25 +169,27 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 21");
         applib.switchToParentWindow(parentWindow);
-        taxonomy.NavigateSite("Structure>>Display suite>>View modes>>Add a view mode");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Display suite");
+        DisplaySuite displaySuite = new DisplaySuite(webDriver);
+        displaySuite.ClickViewModesLnk();
+        ViewModes viewModes = new ViewModes(webDriver);
+        viewModes.ClickAddViewModeLnk();
         viewModeLabel = random.GetCharacterString(15);
         AddViewMode addViewMode = new AddViewMode(webDriver);
         addViewMode.EnterLabel(viewModeLabel);
         addViewMode.CheckEntityCbx("Node");
         addViewMode.ClickSaveBtn();
         contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been saved");
-        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 22,23,24");
-        taxonomy.NavigateSite("Structure>>Content types>>Post>>Manage display");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Content types");
+        ContentTypes contentTypes = new ContentTypes(webDriver);
+        contentTypes.ClickManageDisplayLnk("Post");
         com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay manageDisplays = new com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay(webDriver);
         manageDisplays.ClickViewMode(viewModeLabel);
         manageDisplays.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
         manageDisplays.ClickViewModeTab(viewModeLabel);
-        overlay.SwitchToActiveFrame();
         for (String fieldLabel : Arrays.asList("Body", "Categories", "Tags", "Contributor", "Media Gallery", 
         		"Cover Media", "Gigya Share Bar", "Short Description")) {
         	manageDisplays.SelectFormat(fieldLabel, "<Hidden>");
@@ -208,15 +197,13 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         }
         manageDisplays.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
         
-        taxonomy.NavigateSite("Structure>>Content types>>Character Profile>>Manage display");
-	    overlay.SwitchToActiveFrame();
+        navigation.Structure("Content types");
+        contentTypes.ClickManageDisplayLnk("Character Profile");
 	    manageDisplays.ClickViewMode(viewModeLabel);
 	    manageDisplays.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
         manageDisplays.ClickViewModeTab(viewModeLabel);
-        overlay.SwitchToActiveFrame();
         for (String fieldLabel : Arrays.asList("Biography", "Character: First Name", "Character: Middle Name",
         		"Character: Last Name", "Cover Photo", "Alias", "Birth Date", "Character: Prefix", "Character: Suffix",
         		"Gigya Share Bar", "External Links", "Short Biography")) {
@@ -225,18 +212,14 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         }
         manageDisplays.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 25");
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Dynamic Queue types");
         dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();       
         manageDisplay.SelectEntityListFormat(viewModeLabel);
         contentParent.WaitForThrobberNotPresent();
         manageDisplay.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 26");
         applib.switchToNewWindow(parentWindow);
@@ -246,14 +229,12 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 27"); 
         applib.switchToParentWindow(parentWindow);
-        taxonomy.NavigateSite("People>>Permissions");
-        overlay.SwitchToActiveFrame();
+        navigation.People("Permissions");
         Permissions permissions = new Permissions(webDriver, applib);
         permissions.EnablePermissions("anonymous user", Arrays.asList("access dynamic queues"));
         permissions.EnablePermissions("authenticated user", Arrays.asList("access dynamic queues"));
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
-        overlay.ClickCloseOverlayLnk();
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
        
@@ -265,14 +246,11 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         //cleanup
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-		taxonomy.NavigateSite("Structure>>Display suite>>View modes");
-		overlay.SwitchToActiveFrame();
-		ViewModes viewModes = new ViewModes(webDriver);
+        navigation.Structure("Display suite");
+		displaySuite.ClickViewModesLnk();
         viewModes.ClickDeleteLnk(viewModeLabel);
-        overlay.SwitchToActiveFrame();
         Delete delete = new Delete(webDriver);
         delete.ClickDeleteBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been deleted.");
         
         testSuccessful = true;
@@ -285,14 +263,13 @@ public class CreateConfigureDynamicQueue extends ParentTest{
 			
 			UserLogin userLogin = applib.openApplication();
 	        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-	        taxonomy.NavigateSite("Structure>>Display suite>>View modes");
-			overlay.SwitchToActiveFrame();
-			ViewModes viewModes = new ViewModes(webDriver);
+	        navigation.Structure("Display suite");
+	        DisplaySuite displaySuite = new DisplaySuite(webDriver);
+	        displaySuite.ClickViewModesLnk();
+	        ViewModes viewModes = new ViewModes(webDriver);
 	        viewModes.ClickDeleteLnk(viewModeLabel);
-	        overlay.SwitchToActiveFrame();
 	        Delete delete = new Delete(webDriver);
 	        delete.ClickDeleteBtn();
-	        overlay.SwitchToActiveFrame();
 	        contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been deleted.");
 		}
 	}

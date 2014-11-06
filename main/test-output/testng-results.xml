@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
+      <![CDATA[SETUP - create new user and logout]]>
     </line>
     <line>
       <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
@@ -17,7 +17,244 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
+      <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add user' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'E-mail address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'editor' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'dfe6d2c73971468' in the 'First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '91135f8163a24e1' in the 'Last Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create new account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 35c3a56e0de44fc@0c8276d1dcfd45c.com.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
+      <![CDATA[Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
+      <![CDATA[Click the activer user menu link for logged in user '35c3a56e0de44fc@0c8276d1dcfd45c.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the menu sub nav 'View profile' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Enter ' ' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password is all spaces and will not be saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the password strength container is not present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify password match text equals 'no'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'A' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify password match text equals 'yes'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Verify password match text equals 'yes'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 13]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
@@ -26,227 +263,48 @@
       <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' link.]]>
+      <![CDATA[Click the 'Password policies' link.]]>
     </line>
     <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+      <![CDATA[Click the primary nav 'List'.]]>
     </line>
     <line>
-      <![CDATA[MPX is already configured.]]>
+      <![CDATA[Click the 'view' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
+      <![CDATA[Verify the text 'Expiration' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content types' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'manage field' link for content type 'Media Gallery'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'edit' link for field 'Media Items'.]]>
-    </line>
-    <line>
-      <![CDATA[Chech the 'MPX Video for Account "DB TV"' check box under 'Allowed remote media types'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save settings' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Saved Media Items configuration.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Gallery' link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b7b298c586ab47a' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'short description' in the 'Short Description' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_110514053050PM.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_110514053050PM.png'> <img src='./CreateMediaGallery_TC1042_110514053050PM.png' height='700' width='700'/> </a>]]>
+      <![CDATA[Verify the text '365' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52736" started-at="2014-11-05T22:29:58Z" finished-at="2014-11-05T22:30:51Z">
+  <suite name="Default suite" duration-ms="75945" started-at="2014-11-06T19:45:41Z" finished-at="2014-11-06T19:46:57Z">
     <groups>
-      <group name="mpx">
-        <method signature="CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@6d6ae297]" name="CreateMediaGallery_TC1042" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@6d6ae297]" name="CreateMediaGallery_TC1042" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
+        <method signature="PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@69af4318]" name="PasswordRules_TC2185" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="52736" started-at="2014-11-05T22:29:58Z" finished-at="2014-11-05T22:30:51Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@6d6ae297]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-11-05T17:29:58Z" finished-at="2014-11-05T17:29:58Z">
+    <test name="Default test" duration-ms="75945" started-at="2014-11-06T19:45:41Z" finished-at="2014-11-06T19:46:57Z">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@69af4318]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-11-06T14:45:41Z" finished-at="2014-11-06T14:45:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@6d6ae297]" name="startSelenium" is-config="true" duration-ms="3518" started-at="2014-11-05T17:29:58Z" finished-at="2014-11-05T17:30:01Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@69af4318]" name="startSelenium" is-config="true" duration-ms="3000" started-at="2014-11-06T14:45:41Z" finished-at="2014-11-06T14:45:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_TC1042() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.PasswordRules_TC2185() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@6d6ae297]" name="CreateMediaGallery_TC1042" duration-ms="48378" started-at="2014-11-05T17:30:01Z" finished-at="2014-11-05T17:30:50Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=38.0.2125.111)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.55.182', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: ff7bdc79fa410e56e9383e0ec115cfb4
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.94yfQa}, rotatable=false, locationContextEnabled=true, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 15.29 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.55.182', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: 0c0d23bc-e0ee-44f3-8e10-20a027d7f77e
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.94yfQa}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=0c0d23bc-e0ee-44f3-8e10-20a027d7f77e, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.111)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.55.182', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: ff7bdc79fa410e56e9383e0ec115cfb4
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.94yfQa}, rotatable=false, locationContextEnabled=true, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 15.29 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.55.182', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: 0c0d23bc-e0ee-44f3-8e10-20a027d7f77e
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.94yfQa}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=0c0d23bc-e0ee-44f3-8e10-20a027d7f77e, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
-	at com.sun.proxy.$Proxy12.click(Unknown Source)
-	at com.nbcuni.test.publisher.pageobjects.Content.BasicInformation.ClickMediaItemsSelectBtn(BasicInformation.java:218)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_TC1042(CreateMediaGallery.java:57)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.55.182', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:136)
-	... 34 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.111)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.55.182', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: ff7bdc79fa410e56e9383e0ec115cfb4
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.94yfQa}, rotatable=false, locationContextEnabled=true, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.55.182', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy2.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@69af4318]" name="PasswordRules_TC2185" duration-ms="72365" started-at="2014-11-06T14:45:44Z" finished-at="2014-11-06T14:46:56Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
+              <![CDATA[SETUP - create new user and logout]]>
             </line>
             <line>
               <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
@@ -261,7 +319,244 @@ Driver info: driver.version: EventFiringWebDriver
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
+              <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add user' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'E-mail address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'editor' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'dfe6d2c73971468' in the 'First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '91135f8163a24e1' in the 'Last Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create new account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 35c3a56e0de44fc@0c8276d1dcfd45c.com.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
+            <line>
+              <![CDATA[Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
+              <![CDATA[Click the activer user menu link for logged in user '35c3a56e0de44fc@0c8276d1dcfd45c.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the menu sub nav 'View profile' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Enter ' ' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password is all spaces and will not be saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABCDEFG1' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABCDEF11' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABCDE11H' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least one lowercase character.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must be at least 8 characters in length.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must contain at least 2 digits.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must begin and end with a letter.' is not present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the password strength container is not present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'The password does not include enough variation to be secure.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that password strength message 'Password must not contain the username.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ABcDE11H' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'aBcDE11H' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify password match text equals 'no'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'A' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'A' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Current password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa555word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa555word' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify password match text equals 'yes'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa555word' in the 'Current password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Verify password match text equals 'yes'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 13]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
@@ -270,89 +565,38 @@ Driver info: driver.version: EventFiringWebDriver
               <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' link.]]>
+              <![CDATA[Click the 'Password policies' link.]]>
             </line>
             <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+              <![CDATA[Click the primary nav 'List'.]]>
             </line>
             <line>
-              <![CDATA[MPX is already configured.]]>
+              <![CDATA[Click the 'view' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
+              <![CDATA[Verify the text 'Expiration' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content types' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'manage field' link for content type 'Media Gallery'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'edit' link for field 'Media Items'.]]>
-            </line>
-            <line>
-              <![CDATA[Chech the 'MPX Video for Account "DB TV"' check box under 'Allowed remote media types'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save settings' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Saved Media Items configuration.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Gallery' link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b7b298c586ab47a' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'short description' in the 'Short Description' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_110514053050PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_110514053050PM.png'> <img src='./CreateMediaGallery_TC1042_110514053050PM.png' height='700' width='700'/> </a>]]>
+              <![CDATA[Verify the text '365' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateMediaGallery_TC1042 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@6d6ae297]" name="stopSelenium" is-config="true" duration-ms="816" started-at="2014-11-05T17:30:50Z" finished-at="2014-11-05T17:30:51Z">
+        </test-method> <!-- PasswordRules_TC2185 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@69af4318]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-11-06T14:46:56Z" finished-at="2014-11-06T14:46:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateMediaGallery_TC1042 status=FAILURE method=CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@6d6ae297] output=STEP 1]]]>
+                <![CDATA[[TestResult name=PasswordRules_TC2185 status=SUCCESS method=PasswordRules.PasswordRules_TC2185()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@69af4318] output=SETUP - create new user and logout]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@6d6ae297]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-05T17:30:51Z" finished-at="2014-11-05T17:30:51Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules@69af4318]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-06T14:46:57Z" finished-at="2014-11-06T14:46:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery -->
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

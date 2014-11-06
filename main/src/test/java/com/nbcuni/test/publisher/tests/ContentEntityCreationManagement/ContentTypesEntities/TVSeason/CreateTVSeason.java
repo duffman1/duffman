@@ -27,8 +27,7 @@ public class CreateTVSeason extends ParentTest{
         for (String state : allStates) {
         	
         //Step 2
-        taxonomy.NavigateSite("Content>>Add content>>TV Season");
-        overlay.SwitchToActiveFrame();
+        navigation.AddContent("TV Season");
         
         //Step 3
         contentParent.VerifyRequiredFields(Arrays.asList("Title", "Season", "Synopsis"));
@@ -43,13 +42,11 @@ public class CreateTVSeason extends ParentTest{
         basicInformation.EnterTitle(tvSeasonTitle);
         basicInformation.EnterSeasonNumber("1");
         basicInformation.EnterSynopsis();
-        overlay.SwitchToActiveFrame();
         
         //Step 5
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
-    	overlay.SwitchToActiveFrame();
     	
     	//Step 6
     	publishingOptions.ClickPublishingOptionsLnk();

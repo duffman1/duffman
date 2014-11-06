@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>2 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery" hash-for-method="CreateMediaGallery_TC1042">CreateMediaGallery_TC1042</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules" hash-for-method="PasswordRules_TC2185">PasswordRules_TC2185</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,128 +116,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreateMediaGallery_TC1042">
-                  </a> <!-- CreateMediaGallery_TC1042 -->
-                  <span class="method-name">CreateMediaGallery_TC1042</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.111)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a&apos;, time: &apos;2014-03-27 17:17:32&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.55.182&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: ff7bdc79fa410e56e9383e0ec115cfb4
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.94yfQa}, rotatable=false, locationContextEnabled=true, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 15.29 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.55.182&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 0c0d23bc-e0ee-44f3-8e10-20a027d7f77e
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.94yfQa}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=0c0d23bc-e0ee-44f3-8e10-20a027d7f77e, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
-	at com.sun.proxy.$Proxy12.click(Unknown Source)
-	at com.nbcuni.test.publisher.pageobjects.Content.BasicInformation.ClickMediaItemsSelectBtn(BasicInformation.java:218)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_TC1042(CreateMediaGallery.java:57)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.55.182&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:136)
-	... 34 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.111)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a&apos;, time: &apos;2014-03-27 17:17:32&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.55.182&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: ff7bdc79fa410e56e9383e0ec115cfb4
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.94yfQa}, rotatable=false, locationContextEnabled=true, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.55.182&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy2.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-
-</div> <!-- stack-trace -->
+                  <a name="PasswordRules_TC2185">
+                  </a> <!-- PasswordRules_TC2185 -->
+                  <span class="method-name">PasswordRules_TC2185</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-2139341731/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1991123982/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -246,7 +143,7 @@ Driver info: driver.version: EventFiringWebDriver
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -274,15 +171,7 @@ Driver info: driver.version: EventFiringWebDriver
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">CreateMediaGallery_TC1042</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">mpx</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">CreateMediaGallery_TC1042</span>
+                <span class="method-in-group-name">PasswordRules_TC2185</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -304,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CreateMediaGallery_TC1042')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery')
-data.setCell(0, 3, 48378);
+data.setCell(0, 1, 'PasswordRules_TC2185')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules')
+data.setCell(0, 3, 72365);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 48 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -323,38 +212,100 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">CreateMediaGallery_TC1042</span>
+              <span class="reporter-method-name">PasswordRules_TC2185</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STEP 1</span>
+                <span class="reporter-method-output">SETUP - create new user and logout</span>
                 <span class="reporter-method-output">Open url 'http://acc-test.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">SETUP</span>
+                <span class="reporter-method-output">Click the 'Menu' link to show navigation menu items.</span>
+                <span class="reporter-method-output">Click the 'People' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add user' link.</span>
+                <span class="reporter-method-output">Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Username' text box.</span>
+                <span class="reporter-method-output">Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'E-mail address' text box.</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Confirm password' text box.</span>
+                <span class="reporter-method-output">Check the 'editor' check box.</span>
+                <span class="reporter-method-output">Enter 'dfe6d2c73971468' in the 'First Name' text box.</span>
+                <span class="reporter-method-output">Enter '91135f8163a24e1' in the 'Last Name' text box.</span>
+                <span class="reporter-method-output">Click the 'Create new account' button.</span>
+                <span class="reporter-method-output">Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 35c3a56e0de44fc@0c8276d1dcfd45c.com.' is present.</span>
+                <span class="reporter-method-output">Click the 'Logout' button.</span>
+                <span class="reporter-method-output">STEP 1</span>
+                <span class="reporter-method-output">Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Email Address' text box.</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">STEP 2</span>
+                <span class="reporter-method-output">Click the activer user menu link for logged in user '35c3a56e0de44fc@0c8276d1dcfd45c.com'.</span>
+                <span class="reporter-method-output">Click the menu sub nav 'View profile' link.</span>
+                <span class="reporter-method-output">Click the 'Edit' link in the work bench.</span>
+                <span class="reporter-method-output">STEP 3</span>
+                <span class="reporter-method-output">Enter ' ' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Verify that password strength message 'The password is all spaces and will not be saved.' is present.</span>
+                <span class="reporter-method-output">STEP 4</span>
+                <span class="reporter-method-output">Enter 'ABCDEFG1' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Verify that password strength message 'The password does not include enough variation to be secure.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must contain at least 2 digits.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must begin and end with a letter.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must contain at least one lowercase character.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must be at least 8 characters in length.' is not present.</span>
+                <span class="reporter-method-output">STEP 5</span>
+                <span class="reporter-method-output">Enter 'ABCDEF11' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Verify that password strength message 'The password does not include enough variation to be secure.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must begin and end with a letter.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must contain at least one lowercase character.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must be at least 8 characters in length.' is not present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must contain at least 2 digits.' is not present.</span>
+                <span class="reporter-method-output">STEP 6</span>
+                <span class="reporter-method-output">Enter 'ABCDE11H' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Verify that password strength message 'The password does not include enough variation to be secure.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must contain at least one lowercase character.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must be at least 8 characters in length.' is not present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must contain at least 2 digits.' is not present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must begin and end with a letter.' is not present.</span>
+                <span class="reporter-method-output">STEP 7</span>
+                <span class="reporter-method-output">Enter 'ABcDE11H' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Verify the password strength container is not present.</span>
+                <span class="reporter-method-output">STEP 8</span>
+                <span class="reporter-method-output">Enter '35c3a56e0de44fc@0c8276d1dcfd45c.com' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Verify that password strength message 'The password does not include enough variation to be secure.' is present.</span>
+                <span class="reporter-method-output">Verify that password strength message 'Password must not contain the username.' is present.</span>
+                <span class="reporter-method-output">STEP 9</span>
+                <span class="reporter-method-output">Enter 'ABcDE11H' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Enter 'aBcDE11H' in the 'Confirm password' text box.</span>
+                <span class="reporter-method-output">Verify password match text equals 'no'.</span>
+                <span class="reporter-method-output">STEP 10</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Current password' text box.</span>
+                <span class="reporter-method-output">Enter 'A' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Enter 'A' in the 'Confirm password' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">STEP 11</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Current password' text box.</span>
+                <span class="reporter-method-output">Enter 'pa555word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Enter 'pa555word' in the 'Confirm password' text box.</span>
+                <span class="reporter-method-output">Verify password match text equals 'yes'.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The changes have been saved.' is present.</span>
+                <span class="reporter-method-output">STEP 12</span>
+                <span class="reporter-method-output">Enter 'pa555word' in the 'Current password' text box.</span>
+                <span class="reporter-method-output">Enter 'pa555!@#$%^&*word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Enter 'pa555!@#$%^&*word' in the 'Confirm password' text box.</span>
+                <span class="reporter-method-output">Verify password match text equals 'yes'.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The changes have been saved.' is present.</span>
+                <span class="reporter-method-output">STEP 13</span>
+                <span class="reporter-method-output">Click the 'Logout' button.</span>
+                <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
+                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
+                <span class="reporter-method-output">Click the 'Login' button.</span>
                 <span class="reporter-method-output">Click the 'Menu' link to show navigation menu items.</span>
                 <span class="reporter-method-output">Click the 'Configuration' menu link.</span>
-                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' link.</span>
-                <span class="reporter-method-output">Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</span>
-                <span class="reporter-method-output">MPX is already configured.</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Content types' link.</span>
-                <span class="reporter-method-output">Click the 'manage field' link for content type 'Media Gallery'.</span>
-                <span class="reporter-method-output">Click the 'edit' link for field 'Media Items'.</span>
-                <span class="reporter-method-output">Chech the 'MPX Video for Account "DB TV"' check box under 'Allowed remote media types'.</span>
-                <span class="reporter-method-output">Click the 'Save settings' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Saved Media Items configuration.' is present.</span>
-                <span class="reporter-method-output">STEP 2</span>
-                <span class="reporter-method-output">Click the 'Content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Add content' link.</span>
-                <span class="reporter-method-output">Click the 'Media Gallery' link.</span>
-                <span class="reporter-method-output">STEP 3</span>
-                <span class="reporter-method-output">Enter 'b7b298c586ab47a' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Enter 'short description' in the 'Short Description' text area.</span>
-                <span class="reporter-method-output">Click the 'Media Items Select' button.</span>
-                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_110514053050PM.png </span>
-                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_110514053050PM.png'> <img src='./CreateMediaGallery_TC1042_110514053050PM.png' height='700' width='700'/> </a></span>
+                <span class="reporter-method-output">Click the 'Password policies' link.</span>
+                <span class="reporter-method-output">Click the primary nav 'List'.</span>
+                <span class="reporter-method-output">Click the 'view' link.</span>
+                <span class="reporter-method-output">Verify the text 'Expiration' is present on the page.</span>
+                <span class="reporter-method-output">Verify the text '365' is present on the page.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -372,28 +323,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Med...)</span>
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules.Passwo...)</span>
                 <span class="method-start">29 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">CreateMediaGallery_TC1042</span>
-                <span class="method-start">3547 ms</span>
+                <span class="method-name">PasswordRules_TC2185</span>
+                <span class="method-start">3029 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=CreateMediaGallery_TC1042 status=FAILURE method=CreateMediaGallery.CreateMediaGalle...)</span>
-                <span class="method-start">51935 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=PasswordRules_TC2185 status=SUCCESS method=PasswordRules.PasswordRules_TC2185()[pri...)</span>
+                <span class="method-start">75395 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTeardown</span>
-                <span class="method-start">52812 ms</span>
+                <span class="method-start">75985 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

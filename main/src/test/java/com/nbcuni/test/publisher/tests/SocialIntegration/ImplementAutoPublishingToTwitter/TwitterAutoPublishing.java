@@ -41,8 +41,7 @@ public class TwitterAutoPublishing extends ParentTest{
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-        taxonomy.NavigateSite("Modules");
-        overlay.SwitchToActiveFrame();
+        navigation.Modules();
         Modules modules = new Modules(webDriver);
         modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
@@ -52,31 +51,26 @@ public class TwitterAutoPublishing extends ParentTest{
         modules.EnableModule("Twitter");
         modules.EnterFilterName("Twitter Post");
         modules.EnableModule("Twitter Post");
-        overlay.ClickCloseOverlayLnk();
-        overlay.switchToDefaultContent(true);
         
         //Step 3
-        taxonomy.NavigateSite("Configuration>>Web services>>Twitter>>Settings");
-        overlay.SwitchToActiveFrame();
+        navigation.Configuration("Twitter");
+        navigation.ClickPrimaryTabNavLnk("Settings");
         Twitter twitter = new Twitter(webDriver, applib);
         twitter.EnterOAuthConsumerKey("5Ur95TtwzHY2A9hMKg");
         twitter.EnterOAuthConsumerSecret("GEHafCRDdJpRoaJ4Zk4tPYDObR3IkeEtnr5otrpIs");
         twitter.ClickSaveConfigurationBtn();
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
-        overlay.ClickCloseOverlayLnk();
         
         //Step 3a
-        taxonomy.NavigateSite("Configuration>>Web services>>Twitter>>Post");
-        overlay.SwitchToActiveFrame();
+        navigation.Configuration("Twitter");
+        navigation.ClickPrimaryTabNavLnk("Post");
         NodeTypes nodeTypes = new NodeTypes(webDriver, applib);
         nodeTypes.EnablePostNode();
-        overlay.ClickCloseOverlayLnk();
         
         //Step 4 - NA as we log in to twitter at a later step
         
         //Step 5
-        taxonomy.NavigateSite("Configuration>>Web services>>Twitter");
-        overlay.SwitchToActiveFrame();
+        navigation.Configuration("Twitter");
         TwitterAccounts twitterAccounts = new TwitterAccounts(webDriver);
         TwitterLogin twitterLogin = new TwitterLogin(webDriver, applib);
         Boolean accountAlreadyExists = twitterAccounts.TwitterAccountExists();
@@ -88,35 +82,26 @@ public class TwitterAutoPublishing extends ParentTest{
         	new WebDriverWait(webDriver, 10).until(ExpectedConditions.titleContains("Site-Install"));
         }
         else {
-        	overlay.ClickCloseOverlayLnk();
         	webDriver.navigate().to("https://twitter.com/login");
         	twitterLogin.EnterUsernameOrEmail("publisherseven");
         	twitterLogin.EnterPassword("Publ!$her");
         	twitterLogin.ClickSignInBtn();
-        	webDriver.navigate().to(config.getConfigValueString("AppURL"));
+        	applib.openApplication();
         }
         
         //Step 6
-        taxonomy.NavigateSite("Content>>Add content>>Post");
-        if (accountAlreadyExists == true) {
-        	overlay.SwitchToActiveFrame();
-        }
+        navigation.AddContent("Post");
         BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
-        if (accountAlreadyExists == true) {
-        	overlay.SwitchToActiveFrame();
-        }
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.SwitchToFrame("Revisions");
         
         //Step 7
         Revisions revisions = new Revisions(webDriver);
@@ -137,7 +122,7 @@ public class TwitterAutoPublishing extends ParentTest{
         
         //Step 11
         webDriver.navigate().to(new URL("https://twitter.com/"));
-        overlay.switchToDefaultContent(true);
+        webDriver.switchTo().defaultContent();
         twitterLogin.VerifyTwitterPostPresent(tweet);
         
     }

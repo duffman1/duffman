@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
@@ -27,7 +26,7 @@ public class Surf {
     private ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Surf(Driver webDriver, AppLib applib) {
+    public Surf(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 30);

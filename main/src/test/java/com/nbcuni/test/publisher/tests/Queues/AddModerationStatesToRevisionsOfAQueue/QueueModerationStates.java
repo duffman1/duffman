@@ -44,8 +44,7 @@ public class QueueModerationStates extends ParentTest{
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
-        taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
-        overlay.SwitchToActiveFrame();
+        applib.openSitePage("/admin/content/queues/add/promo_queue");
         
         //Step 3
         Queues queues = new Queues(webDriver);
@@ -54,39 +53,31 @@ public class QueueModerationStates extends ParentTest{
         queues.EnterQueueItem(postTitle, "1");
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
-        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle)); 
         
         //Step 4
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         
         //Step 5
         QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.SwitchToActiveFrame();
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
     	String date = sdf.format(new Date());
-        queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Draft on " + date);
+        queuesRevisionList.VerifyStateFlowHistoryEvent("--> Draft on " + date);
         //TODO add verifications for other relevant data on the revision history tab
         
         //Step 6
         queuesRevisionList.ClickCancelLnk();
-        overlay.SwitchToActiveFrame();
         
         //Step 7
-        overlay.ClickCloseOverlayLnk();
         
         //Step 8
-        taxonomy.NavigateSite("Content>>Queues");
-        overlay.SwitchToActiveFrame();
+        applib.openSitePage("/admin/content/queues");
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.SelectModerationState("Publish");
         String messageForStateChange = random.GetCharacterString(15) + " " + random.GetCharacterString(10);
@@ -96,7 +87,6 @@ public class QueueModerationStates extends ParentTest{
         
         //Step 9
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.SwitchToActiveFrame();
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Published on " + date);
         queuesRevisionList.VerifyStateFlowHistoryEvent(messageForStateChange);
         
@@ -105,12 +95,10 @@ public class QueueModerationStates extends ParentTest{
         String messageForStateChangeUnpub = random.GetCharacterString(15) + " " + random.GetCharacterString(10);
         publishingOptions.EnterMessageForStateChange(messageForStateChangeUnpub);
         queuesRevisionList.ClickUpdateStateBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus(queueTitle + " transitioned to the unpublished state.");
         
         //Step 11
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.SwitchToActiveFrame();
         queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Published to Unpublished on " + date);
         queuesRevisionList.VerifyStateFlowHistoryEvent(messageForStateChangeUnpub);
         

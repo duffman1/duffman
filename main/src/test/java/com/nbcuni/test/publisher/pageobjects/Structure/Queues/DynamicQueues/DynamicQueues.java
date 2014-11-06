@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -25,15 +26,21 @@ public class DynamicQueues {
 
     private Driver webDriver;
     private Config config;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public DynamicQueues(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
+        waitFor = new WaitFor(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
+    private By AddDynamicQueue_Lnk(String dynamicQueueName) {
+    	return By.xpath("//a[text()='Add " + dynamicQueueName + "']");
+    }
+    
     private WebElement Edit_Lnk(String dynamicQueueName) {
     	return webDriver.findElement(By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//a[text()='Edit']"));
     }
@@ -48,6 +55,13 @@ public class DynamicQueues {
     
     
     //PAGE OBJECT METHODS
+    public void ClickAddDynamicQueueLnk(String dynamicQueueName) throws Exception {
+    	
+    	Reporter.log("Click the 'Add " + dynamicQueueName + "' link.");
+    	waitFor.ElementVisible(AddDynamicQueue_Lnk(dynamicQueueName)).click();
+    	
+    }
+    
     public void ClickEditLnk(String dynamicQueueName) throws Exception {
     	
     	Reporter.log("Click the 'edit' link for Dynamic Queue Name '" + dynamicQueueName + ".");

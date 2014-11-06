@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule;
 
 import java.util.Arrays;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -9,8 +10,11 @@ import com.nbcuni.test.publisher.pageobjects.Configuration.AddFocalPointCropEffe
 import com.nbcuni.test.publisher.pageobjects.Configuration.FocalPoint;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ImageStyles;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFileDisplay;
+import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay;
+
 import org.testng.annotations.Test;
 
 public class FocalPointModule extends ParentTest{
@@ -32,33 +36,26 @@ public class FocalPointModule extends ParentTest{
         modules.VerifyModuleEnabled("Focal Point");
         	
         //Step 3
-        taxonomy.NavigateSite("Configuration>>Media>>Focal Point");
-        overlay.SwitchToActiveFrame();
+        navigation.Configuration("Focal Point");
         FocalPoint focalPoint = new FocalPoint(webDriver);
         focalPoint.ClickStandardImageFieldsCbx();
         focalPoint.ClickMediaModuleImageFieldsCbx();
         focalPoint.ClickSaveConfigurationBtn();
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
-        overlay.ClickCloseOverlayLnk();
-        	
-        taxonomy.NavigateSite("Configuration>>Media>>Image styles");
-        overlay.SwitchToActiveFrame();
+        navigation.Configuration("Image styles");	
         ImageStyles imageStyles = new ImageStyles(webDriver);
         if (imageStyles.FocalImageStylePresent("AutomationFocalStyle") == true) {
         	
         	imageStyles.ClickDeleteStyleLnk("AutomationFocalStyle");
-        	overlay.SwitchToActiveFrame();
         	Delete delete = new Delete(webDriver);
         	delete.ClickDeleteBtn();
-        	overlay.SwitchToActiveFrame();
         	contentParent.VerifyMessageStatus("Style AutomationFocalStyle was deleted.");
         	
         }
         		
         //Step 4
-        overlay.ClickCloseOverlayLnk();
-        taxonomy.NavigateSite("Configuration>>Media>>Image styles>>Add style");
-        overlay.SwitchToActiveFrame();
+        navigation.Configuration("Image styles");
+        imageStyles.ClickAddStyleLnk();
         imageStyles.EnterStyleName("AutomationFocalStyle");
         imageStyles.ClickCreateNewStyleBtn();
             	
@@ -67,34 +64,31 @@ public class FocalPointModule extends ParentTest{
         imageStyles.ClickAddBtn();
             	
         //Step 6
-        overlay.SwitchToActiveFrame();
         AddFocalPointCropEffect addFocalPointCropEffect = new AddFocalPointCropEffect(webDriver);
         addFocalPointCropEffect.EnterWidth("200");
         addFocalPointCropEffect.EnterHeight("200");
         addFocalPointCropEffect.ClickAddEffectBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The image effect was successfully applied.");
             	
         //Step 7
         imageStyles.ClickUpdateStyleBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("Changes to the style have been saved.");
         contentParent.VerifyPageContentPresent(Arrays.asList("AutomationFocalStyle", "200px"));
-        overlay.ClickCloseOverlayLnk();
             	
         //Step 8
-        taxonomy.NavigateSite("Structure>>Content types>>Movie>>Manage display");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Content types");
+        ContentTypes contentTypes = new ContentTypes(webDriver);
+        contentTypes.ClickManageDisplayLnk("Movie");
         ManageDisplay manageDisplay = new ManageDisplay(webDriver);
         manageDisplay.SelectCoverMediaFormat("Rendered file");
         manageDisplay.VerifyDefaultViewModeSelected();
         manageDisplay.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        overlay.ClickCloseOverlayLnk();
             	
         //Step 9
-        taxonomy.NavigateSite("Structure>>File types>>Image>>Manage file display");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("File types");
+        FileTypes fileTypes = new FileTypes(webDriver);
+        fileTypes.ClickManageFileDisplayLnk("Image");
         ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
         manageFileDisplay.CheckImageCbx();
         manageFileDisplay.SelectImageStyle("AutomationFocalStyle");
@@ -102,14 +96,11 @@ public class FocalPointModule extends ParentTest{
         contentParent.VerifyMessageStatus("Your settings have been saved.");
         	
         //Step 10
-        overlay.ClickCloseOverlayLnk();
-        taxonomy.NavigateSite("Content>>Add content>>Movie");
-        overlay.SwitchToActiveFrame();
+        navigation.AddContent("Movie");
         BasicInformation basicInformation = new BasicInformation(webDriver);
         String movieTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(movieTitle);
         basicInformation.EnterSynopsis();
-        overlay.SwitchToActiveFrame();
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SwitchToSelectFileFrm();
@@ -127,9 +118,8 @@ public class FocalPointModule extends ParentTest{
         selectFile.DoucleClickFocalPointIndicator();
         selectFile.VerifyFocalPointCoordinates("50,50");
         selectFile.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
+        webDriver.switchTo().defaultContent();
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             	
         //Step 12
@@ -139,8 +129,7 @@ public class FocalPointModule extends ParentTest{
         //workBench.VerifyFileImageSize("1", "200", "200");
             
         //Cleanup
-        taxonomy.NavigateSite("Modules");
-        overlay.SwitchToActiveFrame();
+        navigation.Modules();
         modules.EnterFilterName("Focal Point");
         modules.DisableModule("Focal Point");
         	

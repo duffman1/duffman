@@ -43,8 +43,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
-        overlay.SwitchToActiveFrame();
+        applib.openSitePage("/admin/content/queues/add/promo_queue");
         
         //Step 3
         Queues queues = new Queues(webDriver);
@@ -57,23 +56,19 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         queues.EnterTitle(queueTitle);
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
-        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle));
         
         //Step 5
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickDeleteQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         
         //Step 6
         Delete delete = new Delete(webDriver);
         delete.ClickCancelLnk();
-        overlay.SwitchToActiveFrame();
         
         //Step 7
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         
         //Step 8
         String modQueueTitle = random.GetCharacterString(15);
@@ -82,13 +77,11 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
-        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(modQueueTitle));
         
         //Step 9
         queues.ClickEditQueueExtendMenuBtn(modQueueTitle);
         queues.ClickEditQueueMenuBtn(modQueueTitle);
-        overlay.SwitchToActiveFrame();
         
         //Step 10
         String modQueueTitle2 = random.GetCharacterString(15);
@@ -98,19 +91,16 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         queues.ClickSaveQueueBtn();
         
         //Step 11
-        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(modQueueTitle2));
         queues.ClickEditQueueExtendMenuBtn(modQueueTitle2);
         queues.ClickEditQueueMenuBtn(modQueueTitle2);
-        overlay.SwitchToActiveFrame();
         QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.SwitchToActiveFrame();
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
     	String date = sdf.format(new Date());
     	
-        queuesRevisionList.VerifyStateFlowHistoryEvent("Revision was set from Draft to Draft on " + date);
+        queuesRevisionList.VerifyStateFlowHistoryEvent("--> Draft on " + date);
         
         //Step 12-14 N/A
         

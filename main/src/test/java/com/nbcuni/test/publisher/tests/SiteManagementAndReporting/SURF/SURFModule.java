@@ -12,6 +12,8 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
 public class SURFModule extends ParentTest {
 
+	Boolean testSuccessful = false;
+	
 	/*************************************************************************************
 	 * TEST CASE - TC3564
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/19953324533
@@ -26,18 +28,15 @@ public class SURFModule extends ParentTest {
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	       
 		Reporter.log("STEP 3 - 9");
-		taxonomy.NavigateSite("Modules");
-		overlay.SwitchToActiveFrame();
+		navigation.Modules();
 		Modules modules = new Modules(webDriver);
-		modules.EnterFilterName("Surf");
-		modules.EnableModule("Surf");
 		modules.EnterFilterName("Pub SURF Example");
 		modules.EnableModule("Pub SURF Example");
-		overlay.ClickCloseOverlayLnk();
+		modules.EnterFilterName("Surf");
+		modules.EnableModule("Surf");
 		
 		Reporter.log("STEP 10");
-		taxonomy.NavigateSite("Structure>>Blocks");
-		overlay.SwitchToActiveFrame();
+		navigation.Structure("Blocks");
 		
 		Reporter.log("STEP 11");
 		Blocks blocks = new Blocks(webDriver);
@@ -45,14 +44,14 @@ public class SURFModule extends ParentTest {
 		blocks.SelectRegion("Surf Example Content", "Sidebar first");
 		blocks.ClickSaveBlocksBtn();
 		contentParent.VerifyMessageStatus("The block settings have been updated.");
-		overlay.ClickCloseOverlayLnk();
 		
 		Reporter.log("STEP 12 - N/A");
 		
 		Reporter.log("STEP 13 - N/A");
 		
 		Reporter.log("STEP 14");
-		Surf surf = new Surf(webDriver, applib);
+		navigation.Home();
+		Surf surf = new Surf(webDriver);
 		surf.ClickSignInBtn();
 		
 		Reporter.log("STEP 15");
@@ -60,7 +59,7 @@ public class SURFModule extends ParentTest {
 		surf.EnterEmailUsername("brandon.clark@nbcuni.com");
 		surf.EnterPassword("tufNewcyd4#");
 		surf.ClickSurfFrmSignInBtn();
-		overlay.switchToDefaultContent(true);
+		webDriver.switchTo().defaultContent();
 		surf.VerifyUsernamePresent("baclark77");
 		
 		Reporter.log("STEP 16 - N/A");
@@ -70,22 +69,33 @@ public class SURFModule extends ParentTest {
 		
 		Reporter.log("STEP 18 - N/A");
 		
+		Reporter.log("CLEANUP");
+		navigation.Modules();
+    	modules.EnterFilterName("Pub SURF Example");
+    	modules.DisableModule("Pub SURF Example");
+    	navigation.ClickPrimaryTabNavLnk("Uninstall");
+    	if (modules.IsModuleInstalled("Pub SURF Example")) {
+        	modules.UninstallModule("Pub SURF Example");
+        }
+    	
+		testSuccessful = true;
+		
 	}
 	 
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"SURFModule_TC3564"}, alwaysRun=true)
 		public void Cleanup() throws Exception {
-			UserLogin userLogin = applib.openApplication();
-			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-			taxonomy.NavigateSite("Modules");
-	    	overlay.SwitchToActiveFrame();
-	    	Modules modules = new Modules(webDriver);
-	    	modules.EnterFilterName("Pub SURF Example");
-	    	modules.DisableModule("Pub SURF Example");
-	    	overlay.ClickOverlayTab("Uninstall");
-	        overlay.SwitchToActiveFrame();
-	        if (modules.IsModuleInstalled("Pub SURF Example")) {
-	        	modules.UninstallModule("Pub SURF Example");
-	        	overlay.SwitchToActiveFrame();
-	        }
+		 	if (testSuccessful == false) {
+		 		UserLogin userLogin = applib.openApplication();
+				userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+				navigation.Modules();
+		    	Modules modules = new Modules(webDriver);
+		    	modules.EnterFilterName("Pub SURF Example");
+		    	modules.DisableModule("Pub SURF Example");
+		    	navigation.ClickPrimaryTabNavLnk("Uninstall");
+		    	if (modules.IsModuleInstalled("Pub SURF Example")) {
+		        	modules.UninstallModule("Pub SURF Example");
+		        }
+		 	}
+			
 		}
 }

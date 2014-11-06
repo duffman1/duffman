@@ -23,23 +23,19 @@ public class SeeIt extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     	
     	//Step 2
-    	taxonomy.NavigateSite("Modules");
-    	overlay.SwitchToActiveFrame();
+    	navigation.Modules();
     	Modules modules = new Modules(webDriver);
     	modules.EnterFilterName("Metatag: Twitter Cards");
     	modules.EnableModule("Metatag: Twitter Cards (See It)");
-    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 3
-    	taxonomy.NavigateSite("Content>>Add content>>Post");
-        overlay.SwitchToActiveFrame();
-        
+    	navigation.AddContent("Post");
+    	
         //Step 4
         BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
-        overlay.SwitchToActiveFrame();
         
         //Step 5
         MetaTags metaTags = new MetaTags(webDriver);
@@ -50,7 +46,6 @@ public class SeeIt extends ParentTest{
         metaTags.EnterSeeItCampaignID("fall");
         metaTags.EnterSeeItAssetID("mainpage");
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         
         //Step 6

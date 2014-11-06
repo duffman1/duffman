@@ -33,28 +33,23 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         modules.VerifyModuleEnabled("Pub Gigya");
         
         //Step 3
-        taxonomy.NavigateSite("Configuration>>Web services>>Gigya settings");
-        overlay.SwitchToActiveFrame();
+        navigation.Configuration("Gigya settings");
         
         //Step 4
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Share");
-        overlay.SwitchToActiveFrame();
         GigyaSettings gigyaSettings = new GigyaSettings(webDriver, applib);
         gigyaSettings.EnterProviders("Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like");
         gigyaSettings.ClickGigyaAdvancedShareBarSettingsLnk();
         gigyaSettings.EnterAdvancedShowShareBarUISettings("wrap|true");
         gigyaSettings.ClickSaveConfiguration_Btn();
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
-        overlay.ClickCloseOverlayLnk();
         
         //Step 5
-        taxonomy.NavigateSite("Content");
-        overlay.SwitchToActiveFrame();
+        navigation.Content();
         SearchFor searchFor = new SearchFor(webDriver);
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
-        overlay.switchToDefaultContent(true);
         searchFor.ClickSearchTitleLnk(postTitle);
         GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver, applib);
         gigyaShareBar.VerifyTumblrBtnPresent();

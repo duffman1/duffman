@@ -29,19 +29,15 @@ public class CollectEditorialActivity extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
+        	navigation.Modules();
         	Modules modules = new Modules(webDriver);
-        	taxonomy.NavigateSite("Modules");
-        	overlay.SwitchToActiveFrame();
         	if (modules.IsModuleEnabled("Entity Tracker")) {
         		modules.EnterFilterName("Entity Tracker");
         		modules.DisableModule("Entity Tracker");
-        		overlay.ClickOverlayTab("Uninstall");
-        		overlay.SwitchToActiveFrame();
+        		navigation.ClickPrimaryTabNavLnk("Uninstall");
         		modules.UninstallModule("Entity Tracker");
-        		overlay.ClickCloseOverlayLnk();
         		
-        		taxonomy.NavigateSite("Modules");
-        		overlay.SwitchToActiveFrame();
+        		navigation.Modules();
         		modules.EnterFilterName("Entity Tracker");
         		modules.EnableModule("Entity Tracker");
         	}
@@ -49,26 +45,22 @@ public class CollectEditorialActivity extends ParentTest{
         		modules.EnterFilterName("Entity Tracker");
         		modules.EnableModule("Entity Tracker");
         	}
-        	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 3");
-        	taxonomy.NavigateSite("Configuration>>Content authoring>>Entity tracker");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Configuration("Entity tracker");
         	EntityTracker entityTracker = new EntityTracker(webDriver);
         	for (String role : Arrays.asList("administrator", "editor", "senior editor")) {
         		entityTracker.CheckRoleCbx(role);
         	}
         	entityTracker.ClickSaveConfigurationBtn();
         	contentParent.VerifyPageContentPresent(Arrays.asList("The configuration options have been saved."));
-        	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 4");
         	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         	createDefaultContent.Post("Draft");
         	
         	Reporter.log("STEP 5");
-        	taxonomy.NavigateSite("Reports>>Entity tracker report");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Reports("Entity tracker report");
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	Date currentDate = new Date();

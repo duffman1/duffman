@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,8 +14,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Content Parent Library. Copyright
@@ -27,12 +30,14 @@ public class ErrorChecking {
 
     private Driver webDriver;
     private Config config;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public ErrorChecking(Driver webDriver) {
         this.webDriver = webDriver;
         config = new Config();
         PageFactory.initElements(webDriver, this);
+        waitFor = new WaitFor(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -54,15 +59,14 @@ public class ErrorChecking {
     //PAGE OBJECT METHODS
     public void VerifyErrorMessagePresent(String errorMessage) throws Exception {
     	
-    	if (!Error_Ctr.getText().contains(errorMessage)) {
-    		Assert.fail("Error message container does not contain error message '" + errorMessage + "'.");
-    	}
+    	waitFor.ElementContainsText(Error_Ctr, errorMessage);
+    	
     }
     
     public void VerifyAllRequiredFields(List<String> allFieldTitles) throws Exception {
     	
     	for (String field : allFieldTitles) {
-    		Assert.assertTrue(Error_Ctr.getText().contains(field + " field is required."));
+    		waitFor.ElementContainsText(Error_Ctr, field + " field is required.");
     	}
     }
     
@@ -147,7 +151,7 @@ public class ErrorChecking {
     				//check the error text isn't in list of allowed errors
     				boolean ignoreError = false;
     				for (int i=0; i<allowedErrors.size(); i++) {
-    					if(errorText.contains(allowedErrors.get(i))) {
+    					if(errorText.contains(allowedErrors.get(i)) || errorText.equals("") || errorText.isEmpty() || errorText.equals(null)) {
     						//ignore error
     						ignoreError = true;
     					}
@@ -171,7 +175,7 @@ public class ErrorChecking {
     				for (String errorText : Errors) {
     					boolean ignoreError = false;
     					for (int i=0; i<allowedErrors.size(); i++) {
-    						if(errorText.contains(allowedErrors.get(i))) {
+    						if(errorText.contains(allowedErrors.get(i)) || errorText.equals("") || errorText.isEmpty() || errorText.equals(null)) {
     							//ignore error
     							ignoreError = true;
     						}

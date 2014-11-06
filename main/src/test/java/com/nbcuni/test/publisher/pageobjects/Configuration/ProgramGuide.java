@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.pageobjects.Configuration;
 import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Modules Library. Copyright
@@ -23,11 +26,13 @@ public class ProgramGuide {
 
     private Driver webDriver;
     private String DataURL= "http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json";
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR    
     public ProgramGuide(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        waitFor = new WaitFor(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS    
@@ -91,8 +96,8 @@ public class ProgramGuide {
     public void ProgramGuideRunCronStatus() throws Exception { 
     	
     	Reporter.log("Verify Cron Status contains data url '" + DataURL + "'.");
-    	Assert.assertTrue(ProgramGuideRunCronStatus_Sts.getText().contains(DataURL));
-	   	
+    	waitFor.ElementContainsText(ProgramGuideRunCronStatus_Sts, DataURL);
+    	
     }     
     
     public void VerifyProgramGuideContainsShows() throws Exception {

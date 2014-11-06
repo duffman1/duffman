@@ -23,8 +23,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             Reporter.log("SETUP");
-            taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
-            overlay.SwitchToActiveFrame();
+            navigation.Configuration("Simple EXIF/IPTC Mappings");
             SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
             simpleEXIFIPTCMappings.SelectAltText("Title");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
@@ -36,11 +35,9 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             simpleEXIFIPTCMappings.SelectMediaTags("none");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 2");
-            taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Media Gallery");
             BasicInformation basicInformation = new BasicInformation(webDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
@@ -72,8 +69,8 @@ public class PopulateEXIFBulkUpload extends ParentTest{
                 addFile.ClickStartUploadLnk();
                 addFile.WaitForSuccessfulUpload();
                 addFile.ClickNextBtn();
-                overlay.SwitchToActiveFrame();
             }
+            webDriver.switchTo().defaultContent();
             mediaItems.VerifyFileImagePresent("NUP_155306_0046", "1");
             mediaItems.VerifyFileImagePresent("NUP_155306_0046", "2");
             
@@ -88,7 +85,6 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             editImage.VerifyCopyrightValue("1", "2013 NBCUniversal Media, LLC");
             editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
             editImage.ClickCloseWindowImg();
-            overlay.SwitchToActiveFrame();
             
             Reporter.log("STEP 5");
             mediaItems.ClickEditAllBtn();
@@ -127,7 +123,6 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             editImage.EnterKeywordsValue("2", keywordsTxt2);
             editImage.ClickSaveBtn("2");
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             
             Reporter.log("STEP 7");
             mediaItems.ClickEditAllBtn();
@@ -146,14 +141,11 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             editImage.VerifyKeywordsValue("2", keywordsTxt2);
             editImage.ClickCloseWindowImg();
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
             Reporter.log("STEP 8");
-            taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Media Gallery");
             String title2 = random.GetCharacterString(15);
             basicInformation.EnterTitle(title2);
             basicInformation.ClickCoverSelectBtn();
@@ -179,7 +171,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             editImage.VerifyCopyrightValue("1", "©1985 David Riecks, All Rights Reserved");
             editImage.VerifyKeywordsValue("1", "environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside");
             selectFile.ClickSaveBtn();
-            overlay.SwitchToActiveFrame();
+            webDriver.switchTo().defaultContent();
             
             Reporter.log("STEP 11");
             CoverItem coverItem = new CoverItem(webDriver);
@@ -207,7 +199,6 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             editImage.EnterKeywordsValue("1", keywordsTxtIPTC);
             editImage.ClickSaveBtn("2");
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             coverItem.ClickEditBtn();
             editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("1", titleTxtIPTC);

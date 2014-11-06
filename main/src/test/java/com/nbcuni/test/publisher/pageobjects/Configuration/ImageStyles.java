@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,8 +9,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Image Styles Library. Copyright
@@ -21,16 +24,20 @@ public class ImageStyles {
 		
 	private Driver webDriver;
 	private Config config;
+	private WaitFor waitFor;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public ImageStyles(Driver webDriver) {
 		this.webDriver = webDriver;
 		config = new Config();
 		PageFactory.initElements(webDriver, this);
+		waitFor = new WaitFor(webDriver, 10);
 		
 	}
 
 	//PAGE OBJECT IDENTIFIERS
+	private By AddStyle_Lnk = By.linkText("Add style");
+	
 	@FindBy(how = How.ID, using ="edit-label")
 	private WebElement StyleName_Txb;
 	
@@ -56,6 +63,13 @@ public class ImageStyles {
 	
 	
 	//PAGE OBJECT METHODS
+	public void ClickAddStyleLnk() throws Exception {
+		
+		Reporter.log("Click the 'Add style' link.");
+		waitFor.ElementVisible(AddStyle_Lnk).click();
+		
+	}
+	
 	public boolean FocalImageStylePresent(String styleName) throws Exception {
 
 		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
