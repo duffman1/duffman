@@ -118,7 +118,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 applib.openApplication();
                 Cron cron = new Cron(webDriver);
                 if (config.getConfigValueString("DrushIngestion").equals("false")) {
-                	cron.RunCron(true);
+                	cron.RunCron();
                 }
                 
         		//Step 14
@@ -141,7 +141,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                     	   }
             		}
             	    else {
-            	    	cron.RunCron(false);
+            	    	cron.RunCron();
                 		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             	    }
                 	searchFor.EnterTitle(mediaTitle);

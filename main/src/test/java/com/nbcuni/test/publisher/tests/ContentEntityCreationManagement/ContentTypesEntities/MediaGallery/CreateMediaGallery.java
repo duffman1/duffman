@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -11,6 +12,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.EditImage;
 import com.nbcuni.test.publisher.pageobjects.Content.MediaItems;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Edit;
 
 public class CreateMediaGallery extends ParentTest{
@@ -29,24 +31,23 @@ public class CreateMediaGallery extends ParentTest{
         	Reporter.log("SETUP");
         	Settings settings = new Settings(webDriver);
         	settings.ConfigureMPXIfNeeded();
-        	taxonomy.NavigateSite("Structure>>Content types>>Media Gallery>>Manage fields>>Media Items");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Structure("Content types");
+        	ContentTypes contentTypes = new ContentTypes(webDriver);
+        	contentTypes.ClickManageFieldLnk("Media Gallery");
+        	contentTypes.ClickEditLnk("Media Items");
         	Edit edit = new Edit(webDriver, applib);
         	edit.CheckAllowedRemoteMediaTypesCbx("MPX Video for Account \"DB TV\"");
         	edit.ClickSaveSettingsBtn();
         	contentParent.VerifyMessageStatus("Saved Media Items configuration.");
-        	overlay.ClickCloseOverlayLnk();
         	
             Reporter.log("STEP 2");
-            taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Media Gallery");
             
             Reporter.log("STEP 3");
             BasicInformation basicInformation = new BasicInformation(webDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             basicInformation.EnterSynopsis();
-            overlay.SwitchToActiveFrame();
             basicInformation.EnterShortDescription("short description");
             AddFile addFile = new AddFile(webDriver);
             MediaItems mediaItems = new MediaItems(webDriver);
@@ -85,7 +86,6 @@ public class CreateMediaGallery extends ParentTest{
                 addFile.ClickStartUploadLnk();
                 addFile.WaitForSuccessfulUpload();
                 addFile.ClickNextBtn();
-                overlay.SwitchToActiveFrame();
             }
             mediaItems.VerifyFileImagePresent("IPTCDefault", "1");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
@@ -100,7 +100,6 @@ public class CreateMediaGallery extends ParentTest{
             editImage.EnterKeywordsValue("1", keywords);
             editImage.ClickSaveBtn("2");
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             
             Reporter.log("STEP 7");
             mediaItems.ClickEditAllBtn();
@@ -108,7 +107,6 @@ public class CreateMediaGallery extends ParentTest{
             editImage.VerifyKeywordsValue("1", keywords);
             editImage.ClickSaveBtn("2");
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             
             Reporter.log("STEP 8");
             mediaItems.ClickAddBtn();
@@ -119,7 +117,6 @@ public class CreateMediaGallery extends ParentTest{
     		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
     		selectFile.ClickSubmitBtn();
-            overlay.SwitchToActiveFrame();
             mediaItems.WaitForImgLoadComplete();
             
             Reporter.log("STEP 9");
@@ -135,12 +132,10 @@ public class CreateMediaGallery extends ParentTest{
             Reporter.log("STEP 10");
             editImage.ClickCancelLnk();
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             
             Reporter.log("OPTIONAL STEP");
             basicInformation.ClickCoverSelectBtn();
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToActiveFrame();
             basicInformation.VerifyCoverImagePresent("HanSolo");
             
             Reporter.log("STEP 11");

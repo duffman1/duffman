@@ -22,8 +22,7 @@ public class MarkdownTextAreas extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	taxonomy.NavigateSite("Content>>Add content>>Post");
-        	overlay.SwitchToActiveFrame();
+        	navigation.AddContent("Post");
         	
         	Reporter.log("STEP 3 AND 4");
         	BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -38,7 +37,6 @@ public class MarkdownTextAreas extends ParentTest{
         	String bodyTxt = "This is a paragraph example. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n# Header 1\n## Header 2\n### Header 3\n#### Header 4\n##### Header 5\n###### Header 6\n\n> This is a blockquote example. Lorem ipsum dolor sit amet\n\n1. This\n2. Is\n3. An\n4. Ordered\n5. List";
         	basicInformation.EnterBody(bodyTxt);
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	contentParent.VerifySourceInPage(Arrays.asList("<p>This is a paragraph example. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
         			"<h1>Header 1</h1>", "<h6>Header 6</h6>",

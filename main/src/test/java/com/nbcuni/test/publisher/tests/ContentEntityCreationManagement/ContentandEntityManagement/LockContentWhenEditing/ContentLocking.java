@@ -33,30 +33,25 @@ public class ContentLocking extends ParentTest {
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	  
 		//Step 2
-	    taxonomy.NavigateSite("Configuration>>Content authoring>>Content lock");
-	    overlay.SwitchToActiveFrame();
+		navigation.Configuration("Content lock");
 	    ContentLock contentLock = new ContentLock(webDriver, applib);
 	    contentLock.CheckShowLockUnlockMessagesCbx();
 	    contentLock.ClickSaveConfiguration();
 	    contentParent.VerifyMessageStatus("The configuration options have been saved.");
-	    overlay.ClickCloseOverlayLnk();
 	    
 	    //Step 3 N/A
 	      
 	    //Step 4
 	    AddUser addUser = new AddUser(webDriver);
 	    String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
-	    taxonomy.NavigateSite("People>>Permissions>>Roles");  
-	    overlay.SwitchToActiveFrame();
+	    navigation.People("Permissions", "Roles");
 	    Roles roles = new Roles(webDriver);
 	    roles.ClickEditorEditPermissionsLnk();
-	    overlay.SwitchToActiveFrame();
 	    Permissions permissions = new Permissions(webDriver, applib);
 	    permissions.EnablePermissions(null, Arrays.asList("create post content", 
-        		"edit own post content", "create files"));
+        		"edit own post content", "create files", "create character_profile content"));
 	    permissions.ClickSaveConfigurationsBtn();
 	    contentParent.VerifyMessageStatus("The changes have been saved.");
-	    overlay.ClickCloseOverlayLnk();
 	    
 	    //Step 5
 	    Logout logout = new Logout(webDriver);
@@ -68,11 +63,9 @@ public class ContentLocking extends ParentTest {
 	    String postTitle = createDefaultContent.Post("Draft");
 	        
 	    //Step 7
-	    taxonomy.NavigateSite("Content");
-	    overlay.SwitchToActiveFrame();
+	    navigation.Content();
 	    Content content = new Content(webDriver);
 	    content.ClickEditMenuBtn(postTitle);
-	    overlay.SwitchToActiveFrame();
 	    
 	    //Step 8
 	    contentParent.VerifyMessageStatus("This document is now locked against simultaneous editing. It will unlock when you navigate elsewhere.");

@@ -9,11 +9,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com ContentTypes Library. Copyright
@@ -25,18 +25,29 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 public class ContentTypes {
 
     private Driver webDriver;
-    private ContentParent contentParent;
     private Config config;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentTypes(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        contentParent = new ContentParent(webDriver);
         config = new Config();
+        waitFor = new WaitFor(webDriver, 10);
+        
     }
     
     //PAGE OBJECT IDENTIFIERS
+    private By AddContentType_Lnk = By.linkText("Add content type");
+    
+    private By ManageField_Lnk(String lnkTxt) {
+    	return By.xpath("//td[contains(text(), '" + lnkTxt + "')]/..//a[text()='manage fields']");
+    }
+    
+    private By Edit_Lnk(String lnkTxt) {
+    	return By.xpath("//td[contains(text(), '" + lnkTxt + "')]/..//a[text()='edit']");
+    }
+    
     @FindBy(how = How.ID, using = "edit-name")
     private WebElement Name_Txb;
     
@@ -64,8 +75,8 @@ public class ContentTypes {
     @FindBy(how = How.ID, using = "edit-fields-add-new-field-widget-type")
     private WebElement Widget_Ddl;
     
-    private WebElement FieldSave_Btn(String fieldName) {
-    	return webDriver.findElement(By.xpath("//a[@id='edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select']"));
+    private WebElement FieldSelect_Btn(String fieldName) {
+    	return webDriver.findElement(By.id("edit-field-" + fieldName + "-und-0-select"));
     }
     
     private WebElement Field_Txt(String fieldName) {
@@ -74,6 +85,27 @@ public class ContentTypes {
     
     
     //PAGE OBJECT METHODS
+    public void ClickAddContentLnk() throws Exception {
+    	
+    	Reporter.log("Click the 'Add content type'.");
+    	waitFor.ElementPresent(AddContentType_Lnk).click();
+    	
+    }
+    
+    public void ClickManageFieldLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the 'manage field' link for content type '" + lnkTxt + "'.");
+    	waitFor.ElementPresent(ManageField_Lnk(lnkTxt)).click();
+    	
+    }
+    
+    public void ClickEditLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the 'edit' link for field '" + lnkTxt + "'.");
+    	waitFor.ElementPresent(Edit_Lnk(lnkTxt)).click();
+    	
+    }
+    
     public void EnterName(String name) throws Exception {
     	
     	Reporter.log("Enter '" + name + "' in the 'Name' text box.");
@@ -92,15 +124,6 @@ public class ContentTypes {
     	
     	Reporter.log("Click the 'Save and add fields' button.");
     	SaveAddFields_Btn.click();
-    	
-    }
-    
-    public void VerifyContentTypeSaved(String name) throws Exception {
-    	
-    	contentParent.VerifyMessageStatus("The content type " + name + " has been added.");
-    	
-    	Reporter.log("Verify the content type table contains the text '" + name + "'.");
-    	Assert.assertTrue(ContentTypeTbl_Ctr.getText().contains(name));
     	
     }
     
@@ -139,10 +162,10 @@ public class ContentTypes {
     	
     }
     
-    public void VerifyFieldSaveBtnPresent(String fieldName) throws Exception {
+    public void VerifyFieldSelectBtnPresent(String fieldName) throws Exception {
     	
-    	Reporter.log("Verify the Field 'Save' button is present.");
-    	FieldSave_Btn(fieldName).isDisplayed();
+    	Reporter.log("Verify the Field 'Select' button is present.");
+    	FieldSelect_Btn(fieldName).isDisplayed();
     	
     }
     

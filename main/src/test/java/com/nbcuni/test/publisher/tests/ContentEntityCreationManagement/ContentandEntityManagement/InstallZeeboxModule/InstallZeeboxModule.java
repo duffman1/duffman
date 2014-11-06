@@ -36,7 +36,7 @@ public class InstallZeeboxModule extends ParentTest{
             
             //Step 4
             Thread.sleep(2000);
-            webDriver.navigate().to(config.getConfigValueString("AppURL") + "/zeebox-example");
+            applib.openSitePage("/zeebox-example");
             
             //Step 5
             ContentParent contentParent = new ContentParent(webDriver);
@@ -48,26 +48,20 @@ public class InstallZeeboxModule extends ParentTest{
             						""));
             
             //Step 6
-            taxonomy.NavigateSite("Modules");
-            overlay.SwitchToActiveFrame();
+            navigation.Modules();
             modules.EnterFilterName("zeebox Example");
             modules.DisableModule("zeebox Example");
-            overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent(true);
             
             //Step 7
-            taxonomy.NavigateSite("Modules>>Uninstall");
-            overlay.SwitchToActiveFrame();
+            navigation.Modules("Uninstall");
             modules.UninstallModule("zeebox Example");
-            overlay.SwitchToActiveFrame();
             contentParent.VerifyPageContentPresent(Arrays.asList("Zeebox Follow Button example block has been deleted.",
             		"Zeebox Hot TV Rooms example block has been deleted.",
             			"Zeebox Play-along example block has been deleted.",
             				"Zeebox TV Room Teaser example block has been deleted.",
             					"Zeebox TV Room example block has been deleted.",
             						"The selected modules have been uninstalled."));
-            overlay.switchToDefaultContent(true);
-            webDriver.navigate().refresh();
+            applib.openSitePage("/zeebox-example");
             contentParent.VerifyPageContentPresent(Arrays.asList("Page not found"));
             
     }

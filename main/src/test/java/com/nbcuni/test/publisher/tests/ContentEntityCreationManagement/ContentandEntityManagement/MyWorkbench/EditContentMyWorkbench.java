@@ -5,7 +5,6 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
-import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.MyWorkbench.MyWork;
 import org.testng.annotations.Test;
 
@@ -27,10 +26,7 @@ public class EditContentMyWorkbench extends ParentTest{
         	String postTitle = createDefaultContent.Post("Draft");
         	
         	//Step 3
-        	taxonomy.NavigateSite("My Workbench");
-        	overlay.SwitchToActiveFrame();
-        	ErrorChecking errorChecking = new ErrorChecking(webDriver);
-        	errorChecking.VerifyNoMessageErrorsPresent();
+        	navigation.WorkBench();
         	
         	//Step 4
         	MyWork myWork = new MyWork(webDriver);
@@ -38,14 +34,12 @@ public class EditContentMyWorkbench extends ParentTest{
         	
         	//Step 5
         	myWork.ClickEditLnk(postTitle);
-        	overlay.SwitchToActiveFrame();
         	
         	//Step 6
         	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         	publishingOptions.ClickPublishingOptionsLnk();
         	publishingOptions.SelectModerationState("Review");
         	contentParent.ClickSaveBtn();
-        	overlay.SwitchToActiveFrame();
         	
         	//Step 7
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");

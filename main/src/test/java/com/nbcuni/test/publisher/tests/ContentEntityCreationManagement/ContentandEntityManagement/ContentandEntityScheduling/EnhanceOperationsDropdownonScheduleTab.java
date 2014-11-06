@@ -31,17 +31,13 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         //Step 2
-        taxonomy.VerifyContentMenuExist("Content");
-        taxonomy.VerifyContentMenuExist("My Workbench");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
 
         //Step 3
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);           
         scheduleQueue.ClickScheduleTab();
-        overlay.SwitchToActiveFrame();
         scheduleQueue.ClickAddScheduledRevisionLnk();
-        overlay.SwitchToActiveFrame();     
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Published");
         Calendar cal = Calendar.getInstance();
@@ -52,11 +48,9 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         scheduleQueue.EnterDate(sDate);
         scheduleQueue.EnterTime("05:00 PM");
         scheduleQueue.ClickScheduleBtn();
-        overlay.SwitchToActiveFrame();        
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
      
         //Step 4
-        overlay.SwitchToActiveFrame(); 
         scheduleQueue.VerifyRunNowLnkPresent(postTitle, "Moderate to Published");     
         scheduleQueue.VerifyCancelLnkPresent(postTitle, "Moderate to Published");
      
@@ -64,7 +58,7 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         scheduleQueue.ClickRunNowLnk(postTitle, "Moderate to Published");
      
         //Step 6
-        overlay.SwitchToActiveFrame();
         scheduleQueue.VerifyRunStatusComplete();
+        
        }
 }

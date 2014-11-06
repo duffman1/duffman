@@ -4,9 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Execute PHP Code Library. Copyright
@@ -17,9 +18,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class ExecutePHPCode {
 
+	WaitFor waitFor;
+	
     //PAGE OBJECT CONSTRUCTOR
     public ExecutePHPCode(Driver webDriver) {
     	PageFactory.initElements(webDriver, this);
+    	waitFor = new WaitFor(webDriver, 10);
     }
 
     //PAGE OBJECT IDENTIFIERS
@@ -59,8 +63,7 @@ public class ExecutePHPCode {
     public void VerifyResponse(String expectedResponse) throws Exception {
     	
     	Reporter.log("Verify the expected response is '" + expectedResponse + "'.");
-    	//Assert.assertTrue(Message_Ctr.getText().contains(expectedResponse));
-    	Assert.assertEquals(expectedResponse, Message_Ctr.getText());
+    	waitFor.ElementContainsText(Message_Ctr, expectedResponse);
     }
     
 }

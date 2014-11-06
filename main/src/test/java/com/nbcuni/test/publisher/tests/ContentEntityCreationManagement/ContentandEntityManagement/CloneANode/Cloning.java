@@ -28,15 +28,13 @@ public class Cloning extends ParentTest {
 		module.VerifyModuleEnabled("Node clone");
     
 		//Step 3
-		taxonomy.NavigateSite("Configuration>>Content authoring>>Node clone module");
-		overlay.SwitchToActiveFrame();
-    
+		navigation.Configuration("Node clone module");
+		
 		//Step 4
 		NodeCloneModule nodeCloneModule = new NodeCloneModule(webDriver);
 		nodeCloneModule.EnableNodeCloneModuleSetting();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
-		overlay.ClickCloseOverlayLnk();
-    
+		
 		//Step 5
 		CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
 		String postTitle = createDefaultContent.Post("Published");
@@ -46,19 +44,15 @@ public class Cloning extends ParentTest {
 		workBench.ClickCloneContentLnk("post");
     
 		//Step 7
-		overlay.SwitchToActiveFrame();
-		Thread.sleep(1000);
 		contentParent.ClickSaveBtn();
 		contentParent.VerifyMessageStatus("Post Clone of " + postTitle + " has been created.");
     
 		//Step 8
 		workBench.ClickWorkBenchTab("Revisions");
-		overlay.SwitchToActiveFrame();
 		Revisions revision = new Revisions(webDriver);
 		revision.SelectChangeState("Published");
 		revision.EnterLogMessageForStateChange("Change state - Draft to Published");
 		revision.ClickUpdateStateBtn();
-		overlay.switchToDefaultContent(true);
 		contentParent.VerifyMessageStatus("Clone of " + postTitle + " transitioned to the published state.");
     
 	}

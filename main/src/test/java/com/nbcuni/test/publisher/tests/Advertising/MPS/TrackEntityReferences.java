@@ -34,7 +34,6 @@ public class TrackEntityReferences extends ParentTest {
         	String tvEpisodeTitle = createDefaultContent.TVEpisode("Draft", tvShowTitle, tvSeasonTitle);
         	WorkBench workBench = new WorkBench(webDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
-        	overlay.SwitchToActiveFrame();
         	AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
         	additionalInformation.ClickAdditionalInformationLnk();
         	additionalInformation.EnterTag("tag1");
@@ -43,9 +42,8 @@ public class TrackEntityReferences extends ParentTest {
         	overlay.switchToDefaultContent(true);
         	
         	Reporter.log("STEP 2");
-        	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+        	navigation.Configuration("MPS Configuration");
+        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.EnterMPSHost("mps.io");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
@@ -53,7 +51,6 @@ public class TrackEntityReferences extends ParentTest {
             mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 3");
             applib.openSitePage("/content/" + tvEpisodeTitle);

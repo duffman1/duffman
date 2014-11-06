@@ -50,52 +50,42 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         //Step 2
         CharactersInformation charactersInformation = new CharactersInformation(webDriver);
         SelectFile selectFile = new SelectFile(webDriver);
-        for(int CCount=0;CCount<3;CCount++){
-	        taxonomy.NavigateSite("Content>>Add content>>Character Profile");
-	        overlay.SwitchToActiveFrame();
+        for(int CCount=0;CCount<3;CCount++) {
+        	navigation.AddContent("Character Profile");
 	        charactersInformation.EnterCharacterFirstName(Characters.get(CCount));
 	        CoverPhoto coverPhoto = new CoverPhoto(webDriver);
 	        coverPhoto.ClickSelectBtn();
 	        selectFile.SelectDefaultCoverImg();
-	        overlay.SwitchToActiveFrame();
 	        coverPhoto.VerifyFileImagePresent("HanSolo");
 	        contentParent.ClickSaveBtn();
-	        overlay.switchToDefaultContent(true);
 	        contentParent.VerifyMessageStatus("Character Profile " + Characters.get(CCount) + " has been created.");
 	     
         }
         
         //Step 3
         PersonsInformation personsInformation = new PersonsInformation(webDriver);
-        for(int PCount=0;PCount<3;PCount++){
-	        taxonomy.NavigateSite("Content>>Add content>>Person");
-	        overlay.SwitchToActiveFrame();
+        for(int PCount=0;PCount<3;PCount++) {
+        	navigation.AddContent("Person");
 	        personsInformation.EnterFirstName(Persons.get(PCount));
 	        personsInformation.EnterBiography();
-	        overlay.SwitchToActiveFrame();
 	        personsInformation.ClickCoverPhotoSelectBtn();
 	        selectFile.SelectDefaultCoverImg();
-	        overlay.SwitchToActiveFrame();
 	        contentParent.ClickSaveBtn();
-	        overlay.switchToDefaultContent(true);
 	        contentParent.VerifyMessageStatus("Person " + Persons.get(PCount) + " has been created.");
         }
         
        
       	//Step 4
-        taxonomy.NavigateSite("Content>>Add content>>Movie");
-        overlay.SwitchToActiveFrame();
+        navigation.AddContent("Movie");
         
         //Step 5
         String movieTitle = "Movie" + random.GetCharacterString(15);
         BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterTitle(movieTitle);
         basicInformation.EnterSynopsis();
-        overlay.SwitchToActiveFrame();
         basicInformation.ClickCoverSelectBtn();
         selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToActiveFrame();
-      
+        
         //Step 6
         CastCrew castCrew = new CastCrew(webDriver);
         castCrew.ClickCastCrewLnk();
@@ -107,14 +97,11 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         //Step 7
         Thread.sleep(1000); //TODO - figure out why this pause is necessary and add dynamic wait
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.SwitchToActiveFrame();
         Revisions revisions = new Revisions(webDriver);
         revisions.ClickEditMenuBtn(movieTitle);
-        overlay.SwitchToActiveFrame();
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();  
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
@@ -131,14 +118,11 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         String movieTitle2 = "Movie" + random.GetCharacterString(15);        
         basicInformation.EnterTitle(movieTitle2);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Movie " + movieTitle2 + " has been updated.");
       
         //Step 8
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.SwitchToActiveFrame();
         revisions.ClickEditMenuBtn(movieTitle2);
-        overlay.SwitchToActiveFrame();
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         castCrew.ClickCastCrewLnk();
@@ -157,21 +141,16 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         String movieTitle3 = random.GetCharacterString(15);        
         basicInformation.EnterTitle(movieTitle3);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent(true);        
         contentParent.VerifyMessageStatus("Movie " + movieTitle3 + " has been updated.");
       
         //Step 9
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.SwitchToActiveFrame();
         revisions.ClickEditExtendMenuBtn(movieTitle2);
         revisions.ClickEditMenuDeleteBtn(movieTitle2);
-        overlay.SwitchToActiveFrame();
         revisions.ClickDeleteConfirmBtn();
-        overlay.SwitchToActiveFrame();
         
         //Step 10
         revisions.ClickEditMenuBtn(movieTitle3);
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentNotPresent(Arrays.asList("Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa4dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)"));
         castCrew.ClickCastCrewLnk();
         castCrew.VerifyPersonNameValue(Persons.get(0), "1");

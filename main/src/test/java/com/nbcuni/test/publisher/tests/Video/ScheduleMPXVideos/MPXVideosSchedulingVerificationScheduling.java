@@ -137,7 +137,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	applib.openApplication();
             	Cron cron = new Cron(webDriver);
             	if (config.getConfigValueString("DrushIngestion").equals("false")) {
-                	cron.RunCron(true);
+                	cron.RunCron();
                 }
             	
         	    //Step 8
@@ -162,7 +162,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
                     	   }
             		}
             	    else {
-            	    	cron.RunCron(false);
+            	    	cron.RunCron();
                 		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
             	    }
                 	searchFor.EnterTitle(mediaTitle);
@@ -234,7 +234,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    //Step 29
         	    applib.openApplication();
         	    if (config.getConfigValueString("DrushIngestion").equals("false")) {
-        	    	cron.RunCron(true);
+        	    	cron.RunCron();
         	    }
         	    else {
         	    	Thread.sleep(10000); //TODO - dynamic wait

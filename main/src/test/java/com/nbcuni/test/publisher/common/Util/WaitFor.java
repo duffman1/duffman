@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 
@@ -53,7 +54,7 @@ public class WaitFor {
     public WebElement ElementPresent(final WebElement element) throws Exception {
     	
     	this.elementWait(element)
-    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, WebDriverException.class))
     		.withMessage("Element not present.")
     		.until(new Function<WebElement, Boolean>() {
     			@Override

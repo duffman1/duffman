@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
-import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 
 /*********************************************
  * publisher.nbcuni.com Cron Library. Copyright
@@ -19,16 +19,14 @@ import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 
 public class Cron {
 
-	private Taxonomy taxonomy;
-	private Overlay overlay;
 	private ErrorChecking errorChecking;
+	private EmberNav navigation;
 	
     //PAGE OBJECT CONSTRUCTOR
     public Cron(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
-        taxonomy = new Taxonomy(webDriver);
-        overlay = new Overlay(webDriver);
         errorChecking = new ErrorChecking(webDriver);
+        navigation = new EmberNav(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -52,18 +50,11 @@ public class Cron {
     	RunCron_Btn.click();
     }
     
-    public void RunCron(Boolean inOverlay) throws Exception {
+    public void RunCron() throws Exception {
     	
-    	taxonomy.NavigateSite("Home>>Run cron");
-    	if (inOverlay == true) {
-    		overlay.SwitchToActiveFrame();
-    	}
-    	else {
-    		errorChecking.VerifyNoMessageErrorsPresent();
-    	}
-    	if (inOverlay == true) {
-    		overlay.ClickCloseOverlayLnk();
-    	}
+    	navigation.Configuration("Cron");
+    	this.ClickRunCronBtn();
+    	errorChecking.VerifyNoMessageErrorsPresent();
     }
     
 }

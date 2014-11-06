@@ -63,6 +63,7 @@ public class AppLib {
     }
     
     public void openSitePage(String location) throws Exception {
+    	location = location.replace(config.getConfigValueString("AppURL"), "");
         Reporter.log("Open url '" + config.getConfigValueString("AppURL") + location + "'.");
         webDriver.navigate().to(config.getConfigValueString("AppURL") + location);   
     }

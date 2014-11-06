@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,12 +29,14 @@ public class ScheduleQueue {
 
 	private WebDriver webDriver;
 	private WebDriverWait wait;
+	private WaitFor waitFor;
 	
     //PAGE OBJECT CONSTRUCTOR
     public ScheduleQueue(Driver webDriver) {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver,  this);
         wait = new WebDriverWait(webDriver, 10);
+        waitFor = new WaitFor(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -58,7 +61,7 @@ public class ScheduleQueue {
     @FindBy(how = How.CSS, using = "input[value='Schedule']")
     private WebElement Schedule_Btn;
     
-    @FindBy(how = How.XPATH, using = "//div[@class='content']//tbody")
+    @FindBy(how = How.XPATH, using = "//tbody")
     private WebElement ScheduledQueue_Ctr;
     
     @FindBy(how = How.XPATH, using = "//table[@class='sticky-enabled tableheader-processed sticky-table']/..//td[@class='empty message']")
@@ -161,11 +164,8 @@ public class ScheduleQueue {
     public void VerifyScheduleTableisEmpty() throws Exception {
 
     	Reporter.log("Verify the scheduled revision table is empty.");
-    	Thread.sleep(250); 
-    	if (!ScheduledQueue_Ctr.getText().contains("No scheduled revisions available")) {
-    		Assert.fail("Scheduled table is not empty.");
-    	}
-
+    	waitFor.ElementContainsText(ScheduledQueue_Ctr, "No scheduled revisions available");
+    	
     }
     public void VerifyAddScheduleVersionLnkPresent() throws Exception {
         

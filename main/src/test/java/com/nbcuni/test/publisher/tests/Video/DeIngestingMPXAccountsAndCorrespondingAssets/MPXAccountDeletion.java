@@ -98,7 +98,7 @@ public class MPXAccountDeletion extends ParentTest {
             mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
-            cron.RunCron(false);
+            cron.RunCron();
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    searchFor.EnterTitle("Automation");
     	    searchFor.ClickApplyBtn();

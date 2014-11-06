@@ -56,7 +56,7 @@ public class SEOOptimizationModule extends ParentTest {
 		
 		//Step 6
 		Cron cron = new Cron(webDriver);
-		cron.RunCron(true);
+		cron.RunCron();
 		
 		//Step 7
 		taxonomy.NavigateSite("Configuration>>Search and metadata>>XML sitemap>>Rebuild links");

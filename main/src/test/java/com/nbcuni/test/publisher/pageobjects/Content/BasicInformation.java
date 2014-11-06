@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -11,9 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Basic Information Library. Copyright
@@ -26,12 +29,14 @@ public class BasicInformation {
 
     private Driver webDriver;
     private Config config;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public BasicInformation(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
+        waitFor = new WaitFor(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -139,8 +144,9 @@ public class BasicInformation {
     public void ClickBasicInformationTab() throws Exception {
     	
     	Reporter.log("Scroll to and click the 'Basic Information' tab.");
-    	webDriver.executeScript("window.scrollBy(0,-500);"); 
-    	BasicInformation_Tab.click();
+    	webDriver.executeScript("window.scrollBy(0,-1000);"); 
+    	waitFor.ElementPresent(BasicInformation_Tab).click();
+    	
     }
     
     public void EnterTitle(String title) throws Exception {

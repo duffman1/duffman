@@ -32,21 +32,17 @@ public class MPSSupportTokens extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
+        	navigation.Modules();
         	Modules modules = new Modules(webDriver);
-        	taxonomy.NavigateSite("Modules");
-        	overlay.SwitchToActiveFrame();
         	modules.EnterFilterName("Pixelman");
         	modules.DisableModule("Pixelman");
         	modules.EnterFilterName("MPS");
         	modules.EnableModule("MPS");
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+        	navigation.Configuration("MPS Configuration");
+        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.EnterPatternForCategoryField("");
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
         	Reporter.log("STEP 2 - N/A");
         	
@@ -54,39 +50,34 @@ public class MPSSupportTokens extends ParentTest {
         	contentParent.VerifySourceNotInPage("\"cat\":\"content\"");
         	
         	Reporter.log("STEP 4");
-        	taxonomy.NavigateSite("Content>>Add content>>Movie");
-            overlay.SwitchToActiveFrame();
-            BasicInformation basicInformation = new BasicInformation(webDriver);
+        	navigation.AddContent("Movie");
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
             basicInformation.ClickBasicInformationTab();
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
             basicInformation.EnterSynopsis();
-            overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToActiveFrame();
             AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
             additionalInformation.ClickAdditionalInformationLnk();
             additionalInformation.SelectMovieType("Syndicated");
             additionalInformation.SelectRating("G");
             additionalInformation.SelectPrimaryGenre("Action");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
+            String movieURL = webDriver.getCurrentUrl();
             WorkBench workBench = new WorkBench(webDriver);
             contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"content\""));
             
             Reporter.log("STEP 5");
             workBench.ClickWorkBenchTab("Edit Draft");
-            overlay.SwitchToActiveFrame();
             URLPathSettings urlPathSettings = new URLPathSettings(webDriver);
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.UnCheckGenerateAutomaticURLAliasCbx();
             String baseAlias = random.GetCharacterString(10);
             urlPathSettings.EnterURLAlias(baseAlias);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been updated.");
             
             Reporter.log("STEP 6");
@@ -94,19 +85,16 @@ public class MPSSupportTokens extends ParentTest {
             
             Reporter.log("STEP 7");
             workBench.ClickWorkBenchTab("Edit Draft");
-            overlay.SwitchToActiveFrame();
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.EnterURLAlias(baseAlias + "/mps-testing/2arg/3arg/4arg/5arg/6arg");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been updated.");
             
             Reporter.log("STEP 8");
             contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"" + baseAlias + "|mps-testing|2arg\"}"));
             
             Reporter.log("STEP 9");
-            taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
+            navigation.Configuration("MPS Configuration");
             mpsConfiguration.ClickReplacementPatternsLnk();
             mpsConfiguration.ClickMPSExpanderLnk();
             mpsConfiguration.VerifyMPSCatPropertyLnkPresent();
@@ -115,14 +103,13 @@ public class MPSSupportTokens extends ParentTest {
             Reporter.log("STEP 10");
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 11");
+            applib.openSitePage(movieURL);
             contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"" + baseAlias + "|mps-testing|2arg|3arg|4arg\"}"));
             
             Reporter.log("STEP 12");
-            taxonomy.NavigateSite("Home>>Development>>Execute PHP Code");
-            overlay.SwitchToActiveFrame();
+            applib.openSitePage("/devel/php");
             ExecutePHPCode executePHPCode = new ExecutePHPCode(webDriver);
             executePHPCode.EnterPHPCode("variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';");
             executePHPCode.ClickExecuteBtn();
@@ -131,11 +118,9 @@ public class MPSSupportTokens extends ParentTest {
             dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
             String dayOfWeek = dateFormat.format(date);
             executePHPCode.VerifyResponse("Status message\ndevel\nbrand|show|season|episode\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|show|~|episode\nbrand|show|season\nbrand|show|season|~|episode\n~|show\n\n~|brand|season\nseason|episode\nbrand|season|" + dayOfWeek + "\n**");
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("CLEANUP");
-            taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
+            navigation.Configuration("MPS Configuration");
             mpsConfiguration.EnterPatternForCategoryField("");
             mpsConfiguration.ClickSaveConfigurationBtn();
     }

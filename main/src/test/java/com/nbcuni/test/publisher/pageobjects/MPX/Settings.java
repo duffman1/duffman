@@ -2,6 +2,8 @@ package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
@@ -39,6 +41,8 @@ public class Settings {
     private Cron cron;
     private MPXMedia mpxMedia;
     private Config config;
+    private WaitFor waitFor;
+    private EmberNav navigation;
     
     //PAGE OBJECT CONSTRUCTOR
     public Settings(Driver webDriver) {
@@ -50,6 +54,8 @@ public class Settings {
         mpxMedia = new MPXMedia(webDriver);
         cron = new Cron(webDriver);
         config = new Config();
+        waitFor = new WaitFor(webDriver, 10);
+        navigation = new EmberNav(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -447,9 +453,8 @@ public class Settings {
     
     public void ConfigureMPXIfNeeded() throws Exception {
     	
-    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
-        
+    	navigation.Configuration("Media: thePlatform mpx settings");
+    	
     	if (this.IsMPXConfigured() == false) {
     		this.EnterUsername(config.getConfigValueString("MPXUsername"));
         	this.EnterPassword(config.getConfigValueString("MPXPassword"));
@@ -463,18 +468,15 @@ public class Settings {
         		this.CheckSyncMPXMediaOnCronBtn();
         	}
         	this.ClickSaveConfigurationsBtn();
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Content("Files", "mpxMedia");
         	mpxMedia.ExpandMPXMedia();
             mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
-            overlay.ClickCloseOverlayLnk();
-            cron.RunCron(true);
+            cron.RunCron();
     	}
     	else {
     		Reporter.log("MPX is already configured.");
-    		overlay.ClickCloseOverlayLnk();
+    		
     	}
     }
     

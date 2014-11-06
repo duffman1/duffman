@@ -21,8 +21,7 @@ public class CreatePubFeatureSetModules extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	taxonomy.NavigateSite("Modules");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Modules();
         	Modules modules = new Modules(webDriver);
         	modules.ClickCategoryLnk("Publisher Feature Sets");
         	modules.WaitForFilterVisible("Publisher Blog");

@@ -23,7 +23,7 @@ public class Z1_TestCleanup extends ParentTest{
         	//if drush ingestion is enabled, run cron so that any scheduled tasks are ready for the concurrent suite (create logo, schedule publish content, etc)
             Cron cron = new Cron(webDriver);
             if (config.getConfigValueString("DrushIngestion").equals("true")) {
-            	cron.RunCron(true);
+            	cron.RunCron();
             }
     }
 }

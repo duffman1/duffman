@@ -18,7 +18,6 @@ import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
 /*********************************************
@@ -33,7 +32,6 @@ public class Logos {
 	private Driver webDriver;
 	private WebDriverWait wait;
 	private Config config;
-	private Overlay overlay;
 	private Delete delete;
 	
     //PAGE OBJECT CONSTRUCTOR
@@ -42,11 +40,13 @@ public class Logos {
     	PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
         config = new Config();
-        overlay = new Overlay(webDriver);
         delete = new Delete(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
+    @FindBy(how = How.LINK_TEXT, using = "Add Logo")
+    private WebElement AddLogo_Lnk;
+    
     @FindBy(how = How.CSS, using = "img[alt='Home']")
     private WebElement HomeLogo_Img;
     
@@ -67,6 +67,13 @@ public class Logos {
 	}
     
     //PAGE OBJECT METHODS
+	public void ClickAddLogoLnk() throws Exception {
+		
+		Reporter.log("Click the 'Add Logo' link.");
+		AddLogo_Lnk.click();
+		
+	}
+	
 	public void ClickEditExtendMenuBtn(String logoTitle) throws Exception {
     	
     	Reporter.log("Click the 'Edit' extend menu button for logo titled '" + logoTitle + "'.");
@@ -144,7 +151,6 @@ public class Logos {
     		for (String title : allLogoTtls) {
     			this.ClickEditExtendMenuBtn(title);
     			this.ClickEditMenuDeleteBtn(title);
-    			overlay.SwitchToActiveFrame();
     			delete.ClickDeleteBtn();
     		}
     	}

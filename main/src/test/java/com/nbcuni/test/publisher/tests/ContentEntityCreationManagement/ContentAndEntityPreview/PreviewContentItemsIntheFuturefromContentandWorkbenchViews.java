@@ -52,26 +52,22 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	UserLogin userLogin = applib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
-        //Step 2        
-    	taxonomy.NavigateSite("Content>>Add content>>Post");
-    	overlay.SwitchToActiveFrame();
+        //Step 2      
+        navigation.AddContent("Post");
     	BasicInformation basicInformation = new BasicInformation(webDriver);
     	String postTitle = random.GetCharacterString(15);
     	basicInformation.EnterTitle(postTitle);    	
     	basicInformation.EnterSynopsis();
-    	overlay.SwitchToActiveFrame();
     	String shortDescriptionText = random.GetCharacterString(25);
     	basicInformation.EnterShortDescription(shortDescriptionText);
     	basicInformation.ClickCoverSelectBtn();
     	SelectFile selectFile = new SelectFile(webDriver);
     	selectFile.SelectDefaultCoverImg();
-    	overlay.SwitchToActiveFrame();
     	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
     	publishingOptions.ClickPublishingOptionsLnk();
     	publishingOptions.SelectModerationState("Published");
     	ContentParent contentParent = new ContentParent(webDriver);
     	contentParent.ClickSaveBtn();
-    	overlay.switchToDefaultContent(true);
     	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
     	
         //Step 3
@@ -104,36 +100,29 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         //Step 8
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
-        overlay.SwitchToActiveFrame();
         String updatedPostTitle = "Updated" + postTitle;
         String updatedShortDescription = "Updated" + shortDescriptionText;
         basicInformation.EnterTitle(updatedPostTitle);
         basicInformation.EnterShortDescription(updatedShortDescription);
         String updatedBodyTxt = basicInformation.EnterSynopsis(); 
-        overlay.SwitchToActiveFrame();
         contentParent.ClickSaveBtn();
         
         //Step 9
-    	overlay.switchToDefaultContent(true);
     	workBench.ClickWorkBenchTab("Schedule");
-    	overlay.SwitchToActiveFrame();
     	ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
     	scheduleQueue.ClickAddScheduledRevisionLnk();
-    	overlay.SwitchToActiveFrame();
     	scheduleQueue.SelectRevision(updatedPostTitle);
     	scheduleQueue.SelectOperation("Moderate to Published");
     	scheduleQueue.EnterDate(sStandardDate);
     	scheduleQueue.EnterTime("12:40 PM");
     	scheduleQueue.ClickScheduleBtn();
-    	overlay.SwitchToActiveFrame();
     	contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
-    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 10
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
     	sitePreview.VerifyDateValue(sPreviewDate);
     	sitePreview.VerifyTimeValue("16:40");
-    	webDriver.navigate().refresh();  
+    	applib.refreshPage(); 
     	contentParent.VerifyPageContentPresent(Arrays.asList(updatedShortDescription, updatedBodyTxt));
     	
     	//Step 11
@@ -149,9 +138,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	
     	//Step 13
     	workBench.ClickWorkBenchTab("Schedule");
-    	overlay.SwitchToActiveFrame();    	
     	scheduleQueue.ClickAddScheduledRevisionLnk();    	
-    	overlay.SwitchToActiveFrame();
     	scheduleQueue.SelectRevision(updatedPostTitle);
     	scheduleQueue.SelectOperation("Moderate to Published");    	
     	cal.add(Calendar.DATE, 2);
@@ -160,9 +147,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	scheduleQueue.EnterDate(ssDate);
     	scheduleQueue.EnterTime("1:40 AM");
     	scheduleQueue.ClickScheduleBtn();
-    	overlay.SwitchToActiveFrame();
     	contentParent.VerifyMessageStatus("The scheduled revision operation has been saved"); 
-    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 14
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
@@ -175,7 +160,6 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         sitePreview.ClickUpdatePreviewBtn();
         
         //Step 16
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyPageContentPresent(Arrays.asList(updatedShortDescription, updatedBodyTxt));
         
     	//Step 17

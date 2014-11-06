@@ -36,16 +36,14 @@ public class StickyButtons extends ParentTest{
             modules.VerifyModuleEnabled("Sticky Edit Actions");
             
             //Step 2 - NOTE - using post instead of character profile content type
-            taxonomy.NavigateSite("Content>>Add content>>Post");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Post");
             BasicInformation basicInformation = new BasicInformation(webDriver);
             String postTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(postTitle);
         	ContentParent contentParent = new ContentParent(webDriver);
         	contentParent.Scroll("100");
         	basicInformation.EnterSynopsis();
-        	overlay.SwitchToActiveFrame();
-            
+        	
             //Step 3
             StickyEditActions stickyEditActions = new StickyEditActions(webDriver);
             stickyEditActions.VerifySaveBtnPresent();
@@ -64,11 +62,10 @@ public class StickyButtons extends ParentTest{
             
             //Step 5
             stickyEditActions.ClickSaveBtnPresent();
-            overlay.switchToDefaultContent(true);
-        	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+            contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
         	//Step 7
-        	webDriver.navigate().to(config.getConfigValueString("AppURL") + "/node/add/post");
+            applib.openSitePage("/node/add/post");
         	stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             contentParent.Scroll("100");
@@ -76,8 +73,8 @@ public class StickyButtons extends ParentTest{
             stickyEditActions.VerifyPreviewBtnPresent();
             
             //Step 8
-            taxonomy.NavigateSite("Modules");
-        	modules.EnterFilterName("Sticky Edit Actions");
+            navigation.Modules();
+            modules.EnterFilterName("Sticky Edit Actions");
         	modules.DisableModule("Sticky Edit Actions");
         	
         	testSuccessful = true;
@@ -90,10 +87,9 @@ public class StickyButtons extends ParentTest{
 			
 			UserLogin userLogin = new UserLogin(webDriver);
 			Modules modules = new Modules(webDriver);
-			
 			applib.openSitePage("/user");
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-			taxonomy.NavigateSite("Modules");
+			navigation.Modules();
         	modules.EnterFilterName("Sticky Edit Actions");
         	modules.DisableModule("Sticky Edit Actions");
 		}

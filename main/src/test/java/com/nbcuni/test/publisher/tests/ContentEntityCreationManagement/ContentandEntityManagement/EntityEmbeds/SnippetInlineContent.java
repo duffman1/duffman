@@ -29,24 +29,21 @@ public class SnippetInlineContent extends ParentTest{
         	modules.VerifyModuleEnabled("Publisher WYSIWYG");
         	
         	Reporter.log("STEP 3");
-        	taxonomy.NavigateSite("Configuration>>Content authoring>>Text formats>>Publisher");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Configuration("Text formats");
         	TextFormat textFormat = new TextFormat(webDriver);
+        	textFormat.ClickConfigureLnk("Publisher");
         	textFormat.ClickEnabledFilters(Arrays.asList("Limit allowed HTML tags", "Publisher youtube formatter", 
         			"Convert line breaks into HTML", "Correct faulty and chopped off HTML"));
         	textFormat.EnterAllowedHTMLTags("<a> <em> <strong> <youtube> <div> <p>");
         	textFormat.ClickSaveConfigurationBtn();
         	contentParent.VerifyMessageStatus("The text format Publisher has been updated.");
-        	overlay.ClickCloseOverlayLnk();
         	
         	Reporter.log("STEP 4");
-        	taxonomy.NavigateSite("Content>>Add content>>Post");
-        	overlay.SwitchToActiveFrame();
+        	navigation.AddContent("Post");
         	BasicInformation basicInformation = new BasicInformation(webDriver);
         	String postTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(postTitle);
         	basicInformation.EnterSynopsis("<strong>Embedding a youtube video</strong>");
-        	overlay.SwitchToActiveFrame();
         	basicInformation.ClickYoutubeBtn();
         	EmbedYoutubeVideo embedYoutubeVideo = new EmbedYoutubeVideo(webDriver);
         	String videoSrc = "http://www.youtube.com/embed/yp9pTFcD2uk?end=2";
@@ -57,7 +54,6 @@ public class SnippetInlineContent extends ParentTest{
         	embedYoutubeVideo.EnterWidth(width);
         	embedYoutubeVideo.ClickOkBtn();
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
         	Reporter.log("STEP 5");

@@ -29,28 +29,23 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-    	taxonomy.NavigateSite("Content>>Media Galleries");
-    	overlay.SwitchToActiveFrame();
+    	navigation.Content("Media Galleries");
     	MediaGalleries mediaGalleries = new MediaGalleries(webDriver);
     	mediaGalleries.ClickAddMediaGalleryLnk();
-    	overlay.SwitchToActiveFrame();
     	BasicInformation basicInformation = new BasicInformation(webDriver);
         String title = random.GetCharacterString(15);
         basicInformation.EnterTitle(title);
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
     	
     	//Step 3
-        taxonomy.NavigateSite("Content>>Media Galleries");
-    	overlay.SwitchToActiveFrame();
+        navigation.Content("Media Galleries");
         
     	//Steps 4 and 5
     	SearchFor searchFor = new SearchFor(webDriver);
     	searchFor.SelectStatus("Draft");
     	searchFor.EnterTitle(title);
     	searchFor.ClickApplyBtn();
-    	overlay.switchToDefaultContent(true);
     	searchFor.VerifySearchResultsPresent(Arrays.asList(title));
     	searchFor.SelectStatus("Published");
     	searchFor.EnterTitle(title);
@@ -97,11 +92,9 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	basicInformation.EnterSynopsis();
     	contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Media Gallery " + title + " has been updated.");
-        taxonomy.NavigateSite("Content>>Media Galleries");
-        overlay.SwitchToActiveFrame();
+        navigation.Content("Media Galleries");
         searchFor.EnterTitle(title);
     	searchFor.ClickApplyBtn();
-    	overlay.switchToDefaultContent(true);
     	mediaGalleries.ClickEditExtendMenuBtn(title);
     	mediaGalleries.ClickDeleteMenuBtn(title);
     	Delete delete = new Delete(webDriver);

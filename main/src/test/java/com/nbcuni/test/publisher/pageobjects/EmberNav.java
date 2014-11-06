@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
@@ -46,6 +45,14 @@ public class EmberNav {
     
     private By AdminLnkByTxt_Lnk(String contentTxt) {
     	return By.xpath("//ul[@class='admin-list']//a[text()='" + contentTxt + "']");
+    }
+    
+    private By TabBar_Lnk(String lnkTxt) {
+    	return By.xpath("//div[@id='tab-bar']//a[text()='" + lnkTxt + "']");
+    }
+    
+    private By SecondaryTabBar_Lnk(String lnkTxt) {
+    	return By.xpath("//ul[@class='tabs secondary']//a[text()='" + lnkTxt + "']");
     }
     
     
@@ -105,11 +112,54 @@ public class EmberNav {
     	
     }
     
+    public void ClickPrimaryTabNavLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the primary nav '" + lnkTxt + "'.");
+    	waitFor.ElementVisible(TabBar_Lnk(lnkTxt)).click();
+    	errorChecking.VerifyNoMessageErrorsPresent();
+    	
+    }
+    
+    public void ClickSecondaryTabNavLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the secondary nav '" + lnkTxt + "'.");
+    	waitFor.ElementVisible(SecondaryTabBar_Lnk(lnkTxt)).click();
+    	errorChecking.VerifyNoMessageErrorsPresent();
+    	
+    }
+    
     
     //CONVENIENCE METHODS
     public void Home() throws Exception {
     	
     	this.ClickHomeLnk();
+    	
+    }
+    
+    public void Content() throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("Content");
+    	this.HideMenu();
+    	
+    }
+    
+    public void Content(String lnkTxt) throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("Content");
+    	this.HideMenu();
+    	this.ClickPrimaryTabNavLnk(lnkTxt);
+    	
+    }
+    
+    public void Content(String primaryLnkTxt, String secondaryLnkTxt) throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("Content");
+    	this.HideMenu();
+    	this.ClickPrimaryTabNavLnk(primaryLnkTxt);
+    	this.ClickSecondaryTabNavLnk(secondaryLnkTxt);
     	
     }
     
@@ -131,6 +181,15 @@ public class EmberNav {
     	
     }
     
+    public void Modules(String lnkTxt) throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("Modules");
+    	this.HideMenu();
+    	this.ClickPrimaryTabNavLnk(lnkTxt);
+    	
+    }
+    
     public void Structure(String lnkTxt) throws Exception {
     	
     	this.ShowMenu();
@@ -146,6 +205,16 @@ public class EmberNav {
     	this.ClickMainMenuLnk("Configuration");
     	this.HideMenu();
     	this.ClickAdminLnkByTxtLnk(lnkTxt);
+    	
+    }
+    
+    public void Configuration(String lnkTxt, String primaryLnkTxt) throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("Configuration");
+    	this.HideMenu();
+    	this.ClickAdminLnkByTxtLnk(lnkTxt);
+    	this.ClickPrimaryTabNavLnk(primaryLnkTxt);
     	
     }
     
@@ -165,6 +234,35 @@ public class EmberNav {
     	this.HideMenu();
     	
     }
+    
+    public void People(String primaryLnkTxt) throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("People");
+    	this.HideMenu();
+    	this.ClickPrimaryTabNavLnk(primaryLnkTxt);
+    	
+    }
+    
+    public void People(String primaryLnkTxt, String secondaryLnkTxt) throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("People");
+    	this.HideMenu();
+    	this.ClickPrimaryTabNavLnk(primaryLnkTxt);
+    	this.ClickSecondaryTabNavLnk(secondaryLnkTxt);
+    	
+    }
+    
+    public void WorkBench() throws Exception {
+    	
+    	this.ShowMenu();
+    	this.ClickMainMenuLnk("My Workbench");
+    	this.HideMenu();
+    	
+    }
+    
+    
   
 }
 

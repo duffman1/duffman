@@ -65,7 +65,7 @@ public class PersonsInformation {
     	return txa;
     }
     
-    @FindBy(how = How.ID, using = "edit-field-person-cover-photo-und-0-select")
+    @FindBy(how = How.XPATH, using = "//a[@id='edit-field-person-cover-photo-und-0-select']")
     private WebElement CoverPhotoSelect_Btn;
     
     
@@ -89,6 +89,8 @@ public class PersonsInformation {
         WebElement txa = Biography_Txa();
         txa.click();
         txa.sendKeys(body);
+        
+        webDriver.switchTo().defaultContent();
         
         return body;
     }

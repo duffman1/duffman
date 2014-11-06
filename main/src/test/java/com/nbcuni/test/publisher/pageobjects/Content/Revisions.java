@@ -1,8 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.concurrent.TimeUnit;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -27,6 +29,7 @@ public class Revisions {
 	private Driver webDriver;
 	private Config config;
     private WebDriverWait wait;
+    private WaitFor waitFor;
     
 	//PAGE OBJECT CONSTRUCTOR
 	public Revisions(Driver webDriver) {
@@ -34,6 +37,7 @@ public class Revisions {
         config = new Config();
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
+        waitFor = new WaitFor(webDriver, 10);
     }
 	
 	//PAGE OBJECT IDENTIFIERS
@@ -174,7 +178,7 @@ public class Revisions {
     public void SelectChangeState(String stateName) throws Exception {
         
         Reporter.log("Select '" + stateName + "' from the 'Change State' drop down list.");
-        new Select(ChangeState_Ddl).selectByVisibleText(stateName);
+        new Select(waitFor.ElementVisible(ChangeState_Ddl)).selectByVisibleText(stateName);
     }
     
 }
