@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -17,247 +14,310 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
       <![CDATA[Mouse over the 'Configuration' menu link.]]>
     </line>
     <line>
       <![CDATA[Mouse over the 'Media' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Simple EXIF/IPTC Mappings' menu link.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Title' option from the 'Alt Text' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Title' option from the 'Title Text' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Caption' option from the 'Caption' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Copyright' option from the 'Copyright' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Credit' option from the 'Credit' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Keywords' option from the 'Keywords' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'none' option from the 'Media categories' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'none' option from the 'Media Tags' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Source' option from the 'Source' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Mouse over the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Content' menu link.]]>
+      <![CDATA[Mouse over the 'File types' menu link.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Add content' menu link.]]>
+      <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Gallery' menu link.]]>
+      <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+      <![CDATA[Open the mpx platform.]]>
     </line>
     <line>
-      <![CDATA[Enter '2fb4f3f0bc624d4' in the 'Title' text box.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Click the 'Choose Files' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
+      <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_110514075901PM.png ]]>
+      <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_110514075901PM.png'> <img src='./PopulateEXIFBulkUpload_TC3192_110514075901PM.png' height='700' width='700'/> </a>]]>
+      <![CDATA[Click the 'Open' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10/18/2014 12:00 AM' in the 'Available Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Automation3a90c7cf1e' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '10/31/2014 12:00 AM' in the 'Expiration Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish' button from the upload dialog.]]>
     </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Cache was cleared on test failure]]>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run cron' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation3a90c7cf1e.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the title text of every result in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '10/18/2014 - 04:00 AM' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '10/31/2014 - 04:00 AM' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Expired' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Automation3a90c7cf1e' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Saturday, October 18, 2014 - 04:00' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Friday, October 31, 2014 - 04:00' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_1 Automation3a90c7cf1e dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'Available Date' text box equals '10/18/2014'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'Expiration Date' text box equals '10/31/2014'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Automation3a90c7cf1e dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the scheduled revision table is empty.]]>
+    </line>
+    <line>
+      <![CDATA[Open the mpx platform.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Automation3a90c7cf1e' in the 'Search' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Search by Title' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '11/07/2014 12:00 AM' in the 'Available Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '11/07/2015 12:00 AM' in the 'Expiration Date' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Additional Options' arrow.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish Update' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Update' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Home' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run cron' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Files' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'mpxMedia' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation3a90c7cf1e.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the title text of every result in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[For each expected result, assert it is present in the result set.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '11/07/2014 - 05:00 AM' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '11/07/2015 - 05:00 AM' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Published' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Automation3a90c7cf1e' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Friday, November 7, 2014 - 05:00' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Saturday, November 7, 2015 - 05:00' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Edit mpx_video_1 Automation3a90c7cf1e dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'Available Date' text box equals '11/07/2014'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the value of the 'Expiration Date' text box equals '11/07/2015'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Schedule' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Automation3a90c7cf1e dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Run now' link is present for content item 'Automation3a90c7cf1e' with action 'Unpublish'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Automation3a90c7cf1e' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Unpublish' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '11/07/2015 - 05:00' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58605" started-at="2014-11-06T00:58:19Z" finished-at="2014-11-06T00:59:17Z">
+  <suite name="Default suite" duration-ms="264575" started-at="2014-11-07T12:58:17Z" finished-at="2014-11-07T13:02:42Z">
     <groups>
-      <group name="certify">
-        <method signature="PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@3337cdec]" name="PopulateEXIFBulkUpload_TC3192" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload"/>
-      </group> <!-- certify -->
+      <group name="mpx">
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56e746d4]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
+      </group> <!-- mpx -->
       <group name="full">
-        <method signature="PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@3337cdec]" name="PopulateEXIFBulkUpload_TC3192" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload"/>
+        <method signature="MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56e746d4]" name="MPXVideosSchedulingVerificationScheduling_Test" class="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="58605" started-at="2014-11-06T00:58:19Z" finished-at="2014-11-06T00:59:17Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@3337cdec]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-11-05T19:58:19Z" finished-at="2014-11-05T19:58:19Z">
+    <test name="Default test" duration-ms="264575" started-at="2014-11-07T12:58:17Z" finished-at="2014-11-07T13:02:42Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56e746d4]" name="suiteSetup" is-config="true" duration-ms="29" started-at="2014-11-07T07:58:17Z" finished-at="2014-11-07T07:58:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@3337cdec]" name="startSelenium" is-config="true" duration-ms="2844" started-at="2014-11-05T19:58:19Z" finished-at="2014-11-05T19:58:21Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56e746d4]" name="startSelenium" is-config="true" duration-ms="4800" started-at="2014-11-07T07:58:17Z" finished-at="2014-11-07T07:58:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@3337cdec]" name="PopulateEXIFBulkUpload_TC3192" duration-ms="39165" started-at="2014-11-05T19:58:21Z" finished-at="2014-11-05T19:59:01Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=38.0.2125.111)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
-System info: host: 'BACLARK77-MAC1.local', ip: '10.1.103.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: 4777d309569d0ce2a9d3318941609cc6
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.Dg3G72}, rotatable=false, locationContextEnabled=true, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 20.30 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '10.1.103.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: 9e423bad-d22c-4975-9920-ce57b470edc5
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.Dg3G72}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=9e423bad-d22c-4975-9920-ce57b470edc5, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.111)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
-System info: host: 'BACLARK77-MAC1.local', ip: '10.1.103.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: 4777d309569d0ce2a9d3318941609cc6
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.Dg3G72}, rotatable=false, locationContextEnabled=true, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 20.30 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '10.1.103.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: 9e423bad-d22c-4975-9920-ce57b470edc5
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.Dg3G72}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=9e423bad-d22c-4975-9920-ce57b470edc5, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
-	at com.sun.proxy.$Proxy12.click(Unknown Source)
-	at com.nbcuni.test.publisher.pageobjects.Content.BasicInformation.ClickMediaItemsSelectBtn(BasicInformation.java:212)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192(PopulateEXIFBulkUpload.java:53)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '10.1.103.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:136)
-	... 34 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.111)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
-System info: host: 'BACLARK77-MAC1.local', ip: '10.1.103.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: 4777d309569d0ce2a9d3318941609cc6
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.Dg3G72}, rotatable=false, locationContextEnabled=true, version=38.0.2125.111, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '10.1.103.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy2.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56e746d4]" name="MPXVideosSchedulingVerificationScheduling_Test" duration-ms="259192" started-at="2014-11-07T07:58:22Z" finished-at="2014-11-07T08:02:41Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -271,104 +331,299 @@ Driver info: driver.version: EventFiringWebDriver
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
               <![CDATA[Mouse over the 'Configuration' menu link.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Media' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Simple EXIF/IPTC Mappings' menu link.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Simple EXIF/IPTC Mappings dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Media: thePlatform mpx settings dialog'.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Title' option from the 'Alt Text' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Title' option from the 'Title Text' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Caption' option from the 'Caption' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Copyright' option from the 'Copyright' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Credit' option from the 'Credit' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Keywords' option from the 'Keywords' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'none' option from the 'Media categories' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'none' option from the 'Media Tags' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Source' option from the 'Source' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Mouse over the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'File types' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPX Video for Account "DB TV" (2312945284)' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'MPX Video for Account &quot;DB TV&quot; (2312945284) dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Choose Files' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movies' button in the OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Test Movie in th OS Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Open' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button in the Upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10/18/2014 12:00 AM' in the 'Available Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Automation3a90c7cf1e' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '10/31/2014 12:00 AM' in the 'Expiration Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish' button from the upload dialog.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run cron' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[Mouse over the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Add content' menu link.]]>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Gallery' menu link.]]>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Media Gallery dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
             </line>
             <line>
-              <![CDATA[Enter '2fb4f3f0bc624d4' in the 'Title' text box.]]>
+              <![CDATA[Enter title Automation3a90c7cf1e.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
+              <![CDATA[Get the text of the first search result set item.]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_110514075901PM.png ]]>
+              <![CDATA[Get the title text of every result in the search result set.]]>
             </line>
             <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/PopulateEXIFBulkUpload_TC3192_110514075901PM.png'> <img src='./PopulateEXIFBulkUpload_TC3192_110514075901PM.png' height='700' width='700'/> </a>]]>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
             </line>
             <line>
-              <![CDATA[Cache was cleared on test failure]]>
+              <![CDATA[Verify the text '10/18/2014 - 04:00 AM' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '10/31/2014 - 04:00 AM' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Expired' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Automation3a90c7cf1e' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Saturday, October 18, 2014 - 04:00' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Friday, October 31, 2014 - 04:00' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_1 Automation3a90c7cf1e dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'Available Date' text box equals '10/18/2014'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'Expiration Date' text box equals '10/31/2014'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Automation3a90c7cf1e dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the scheduled revision table is empty.]]>
+            </line>
+            <line>
+              <![CDATA[Open the mpx platform.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Automation3a90c7cf1e' in the 'Search' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Search by Title' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '11/07/2014 12:00 AM' in the 'Available Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '11/07/2015 12:00 AM' in the 'Expiration Date' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Additional Options' arrow.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish Update' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publish to Pub 7 Primary' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Update' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Home' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run cron' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Status report dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Files' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'mpxMedia' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Content dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation3a90c7cf1e.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the title text of every result in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[For each expected result, assert it is present in the result set.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '11/07/2014 - 05:00 AM' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '11/07/2015 - 05:00 AM' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Published' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Automation3a90c7cf1e' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Friday, November 7, 2014 - 05:00' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Saturday, November 7, 2015 - 05:00' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Edit mpx_video_1 Automation3a90c7cf1e dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'Available Date' text box equals '11/07/2014'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the value of the 'Expiration Date' text box equals '11/07/2015'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Schedule' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Automation3a90c7cf1e dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Run now' link is present for content item 'Automation3a90c7cf1e' with action 'Unpublish'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Automation3a90c7cf1e' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Unpublish' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '11/07/2015 - 05:00' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PopulateEXIFBulkUpload_TC3192 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@3337cdec]" name="stopSelenium" is-config="true" duration-ms="16577" started-at="2014-11-05T19:59:01Z" finished-at="2014-11-05T19:59:17Z">
+        </test-method> <!-- MPXVideosSchedulingVerificationScheduling_Test -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56e746d4]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-11-07T08:02:41Z" finished-at="2014-11-07T08:02:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PopulateEXIFBulkUpload_TC3192 status=FAILURE method=PopulateEXIFBulkUpload.PopulateEXIFBulkUpload_TC3192()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@3337cdec] output=STEP 1]]]>
+                <![CDATA[[TestResult name=MPXVideosSchedulingVerificationScheduling_Test status=SUCCESS method=MPXVideosSchedulingVerificationScheduling.MPXVideosSchedulingVerificationScheduling_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56e746d4] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload@3337cdec]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-05T19:59:17Z" finished-at="2014-11-05T19:59:17Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling@56e746d4]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-07T08:02:42Z" finished-at="2014-11-07T08:02:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF.PopulateEXIFBulkUpload -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos.MPXVideosSchedulingVerificationScheduling -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
