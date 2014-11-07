@@ -75,7 +75,7 @@ public class AddNewPermissionSet {
     				Permission_Cbx(value).click();
     			}
     			catch (WebDriverException e) {
-    				contentParent.Scroll("-500");
+    				contentParent.Scroll("-1000");
     				Permission_Cbx(value).click();
     			}
     		}
@@ -87,7 +87,14 @@ public class AddNewPermissionSet {
     	for (String value : permissionValues) {
     		if (Permission_Cbx(value).isSelected() == true) {
     			Reporter.log("Uncheck the '" + value + "' checkbox.");
-    			Permission_Cbx(value).click();
+    			contentParent.Scroll("-1000");
+    			try {
+    				Permission_Cbx(value).click();
+            	}
+            	catch (WebDriverException e) {
+            		webDriver.executeScript("arguments[0].click();", Permission_Cbx(value));
+            		
+            	}
     		}
     	}
     }

@@ -2,6 +2,8 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -26,6 +28,7 @@ public class Content {
     private Driver webDriver;
     private Config config;
     private WebDriverWait wait;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public Content(Driver webDriver) {
@@ -33,6 +36,7 @@ public class Content {
         config = new Config();
         wait = new WebDriverWait(webDriver, 10);
         PageFactory.initElements(webDriver, this);
+        waitFor = new WaitFor(webDriver, 10);
     }
    
     //PAGE OBJECT IDENTIFIERS
@@ -107,8 +111,8 @@ public class Content {
     public void ClickEditExtendMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the extend edit menu link.");
-    	Thread.sleep(500); //stale element exception
-    	ExtendEditMenu_Lnk(contentItemTitle).click();
+    	waitFor.ElementVisible(ExtendEditMenu_Lnk(contentItemTitle)).click();
+    	
     }
     
     public void ClickDeleteMenuBtn(String contentItemTitle) throws Exception {

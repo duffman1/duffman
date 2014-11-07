@@ -33,24 +33,21 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         
         //Step 4
-        taxonomy.NavigateSite("People>>Permissions>>Roles");
-        overlay.SwitchToActiveFrame();
+        navigation.People("Permissions", "Roles");
         
         //Step 5
         Roles roles = new Roles(webDriver);
         roles.ClickEditorEditPermissionsLnk(); 
-        overlay.SwitchToActiveFrame();
         
         //Step 6
         Permissions permissions = new Permissions(webDriver, applib);
         permissions.EnablePermissions(null, Arrays.asList("create post content", 
-        		"edit own post content", "delete own post content", "create files"));
+        		"edit own post content", "delete own post content", "create files", "create character_profile content"));
         permissions.DisablePermissions(null, Arrays.asList("edit any post content", "delete any post content"));
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
         
         //Step 7
-        overlay.ClickCloseOverlayLnk();
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         
@@ -62,15 +59,13 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 11
-        taxonomy.NavigateSite("Content");
-        overlay.SwitchToActiveFrame();
+        navigation.Content();
         
         //Step 12 and 13 (truncated)
         Content content = new Content(webDriver);
         content.VerifyContentItemEditDelete(postTitle);
         
         //Step 14
-        overlay.ClickCloseOverlayLnk();
         logout.ClickLogoutBtn();
         
         //Step 15
@@ -86,16 +81,13 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         userLogin.Login(userName, "pa55word");
         
         //Step 20
-        taxonomy.NavigateSite("Content");
-        overlay.SwitchToActiveFrame();
+        navigation.Content();
         
         //Step 21
         content.VerifyContentItemEditDeleteNotPresent(postTitle2);
         
         //Step 22
-        overlay.ClickCloseOverlayLnk();
-        taxonomy.NavigateSite("Content>>Content Revisions");
-        overlay.SwitchToActiveFrame();
+        navigation.Content("Content Revisions");
         
         //Step 23
         Revisions revisions = new Revisions(webDriver);
@@ -106,32 +98,26 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         
         //Step 25 and 26 (truncated)
         revisions.ClickEditMenuBtn(postTitle);
-        overlay.SwitchToActiveFrame();
         
         //Step 27
         BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterSynopsis();
-        overlay.SwitchToActiveFrame();
         contentParent.ClickSaveBtn();
         overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
         
         //Step 28
-        taxonomy.NavigateSite("Content");
-        overlay.SwitchToActiveFrame();
+        navigation.Content();
         
         //Step 29
         content.ClickEditExtendMenuBtn(postTitle);
         content.ClickDeleteMenuBtn(postTitle);
-        overlay.SwitchToActiveFrame();
         Delete delete = new Delete(webDriver);
         delete.ClickDeleteBtn();
-        overlay.switchToDefaultContent(true);
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been deleted.");
         
         //Step 30
-        taxonomy.NavigateSite("Content");
-        overlay.SwitchToActiveFrame();
+        navigation.Content();
         
         //Step 31
         content.VerifyContentItemNotPresent(postTitle);
