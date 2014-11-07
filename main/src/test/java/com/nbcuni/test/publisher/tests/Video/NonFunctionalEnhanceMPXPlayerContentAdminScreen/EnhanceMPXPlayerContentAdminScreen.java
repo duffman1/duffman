@@ -38,15 +38,11 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         //Step 1a
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
-    	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         
         //Step 2
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Content("Files", "mpxPlayers");
         	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
@@ -65,7 +61,6 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		
         		//Step 5
         		searchFor.ClickResetBtn();
-        		overlay.switchToDefaultContent(true);
         		Thread.sleep(2000); //TODO - add dynamic wait for search result validation
         		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));

@@ -22,8 +22,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        taxonomy.NavigateSite("People>>Permissions");
-        overlay.SwitchToActiveFrame();
+    	navigation.People("Permissions");
         
         //Step 3
         Permissions permissions = new Permissions(webDriver, applib);
@@ -32,8 +31,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
         //Step 4
         Roles roles = new Roles(webDriver);
         roles.ClickRolesBtn();
-        overlay.SwitchToActiveFrame();
-       
+        
         //Step 5
         roles.VerifyRoleRows();
        

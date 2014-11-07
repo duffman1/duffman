@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
@@ -34,25 +33,19 @@ public class CanonicalURL extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
+        navigation.Configuration("Media: thePlatform mpx settings");
     	Settings settings = new Settings(webDriver);
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
         Reporter.log("STEP 2");
         if (configuredAccounts.contains("DB TV")) {
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Structure>>File types");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Structure("File types");
         	
         	Reporter.log("STEP 3");
         	FileTypes fileTypes = new FileTypes(webDriver);
         	fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
-        	overlay.SwitchToActiveFrame();
         		
         	Reporter.log("STEP 4");
-        	overlay.SwitchToActiveFrame();
-        	ContentParent contentParent = new ContentParent(webDriver);
         	ManageFields manageFields = new ManageFields(webDriver);
         	if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {
         			
@@ -66,13 +59,10 @@ public class CanonicalURL extends ParentTest{
         	}
         		
         	Reporter.log("STEP 6");
-    		overlay.ClickCloseOverlayLnk();
-    		taxonomy.NavigateSite("Structure>>File types");
-        	overlay.SwitchToActiveFrame();
-        		
+    		navigation.Structure("File types");
+    			
         	Reporter.log("STEP 7");
         	fileTypes.ClickEditFileTypeLnk(configuredAccounts.get(0));
-        	overlay.SwitchToActiveFrame();
         	MPXFileType mpxFileType = new MPXFileType(webDriver);
             mpxFileType.SelectURLAliasField("MPX Media Related Link");
         	mpxFileType.ClickSaveBtn();
@@ -103,18 +93,16 @@ public class CanonicalURL extends ParentTest{
             }
             
         	Reporter.log("STEP 10");
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Content("Files", "mpxMedia");
         	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle(mediaTitle);
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent(true);
         	if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
         	    if (config.getConfigValueString("DrushIngestion").equals("true")) {
         	    	int refreshCount = 0;
         	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                        	
-                		   webDriver.navigate().refresh();
+                		   applib.refreshPage();
                 		   refreshCount++;
                 		   if (refreshCount == 15) {
                 		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
@@ -123,7 +111,7 @@ public class CanonicalURL extends ParentTest{
         		}
         	    else {
         	    	cron.RunCron();
-            		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        	    	navigation.Content("Files", "mpxMedia");
         	    }
             	searchFor.EnterTitle(mediaTitle);
             	searchFor.ClickApplyBtn();

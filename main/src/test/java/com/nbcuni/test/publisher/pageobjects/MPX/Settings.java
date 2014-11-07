@@ -482,9 +482,8 @@ public class Settings {
     
     public void ConfigureMPXIngestionType() throws Exception {
     	
-    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
-        
+    	navigation.Configuration("Media: thePlatform mpx settings");
+    	
     	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		this.UnCheckSyncMPXMediaOnCronBtn();
         }
@@ -492,14 +491,12 @@ public class Settings {
         	this.CheckSyncMPXMediaOnCronBtn();
         }
         this.ClickSaveConfigurationsBtn();
-        overlay.ClickCloseOverlayLnk();
         
-        taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-    	overlay.SwitchToActiveFrame();
-    	mpxMedia.ExpandMPXMedia();
+        navigation.Content("Files", "mpxMedia");
+        mpxMedia.ExpandMPXMedia();
         mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
         mpxMedia.ClickSyncMPXMediaNowLnk();
-        overlay.ClickCloseOverlayLnk();
+        
     }
     
     public void DeleteAllOldMPXFileTypes() throws Exception { //TODO - add elements from script to page factory

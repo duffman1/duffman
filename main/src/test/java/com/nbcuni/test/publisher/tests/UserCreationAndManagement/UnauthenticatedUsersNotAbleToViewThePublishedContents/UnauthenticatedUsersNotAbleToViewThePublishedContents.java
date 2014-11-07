@@ -62,8 +62,8 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         logout.ClickLogoutBtn();
         
         //Step4	
-        webDriver.navigate().to(contentURL);
-      
+        applib.openSitePage(contentURL);
+        
         //Step5
         ContentParent contentParent = new ContentParent(webDriver);
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
@@ -72,12 +72,11 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step7	
-        webDriver.navigate().to(contentURL);
-      
+        applib.openSitePage(contentURL);
+        
         //Step8
         Revisions revisions = new Revisions(webDriver);
         revisions.ClickRevisionTab();
-        overlay.SwitchToFrame("Revisions dialog");        
         revisions.EnterLogMessageForStateChange("This Revision Comment");
         revisions.ClickUpdateStateBtn();
       
@@ -86,8 +85,8 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         logout.ClickLogoutBtn();
       
         //Step10
-        webDriver.navigate().to(contentURL);
-      
+        applib.openSitePage(contentURL);
+        
         //Step11
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
@@ -95,8 +94,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
       
         //Step14
-        taxonomy.NavigateSite("Content");
-        overlay.SwitchToActiveFrame();
+        navigation.Content();
         SearchFor searchFor = new SearchFor(webDriver);
         searchFor.ClickSearchTitleLnk(postTitle);
         
@@ -105,8 +103,8 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         logout.ClickLogoutBtn();
       
         //Step16
-        webDriver.navigate().to(contentURL);
-      
+        applib.openSitePage(contentURL);
+        
         //Step17
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
@@ -114,8 +112,8 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
       
         //Step19
-        webDriver.navigate().to(contentURL);
-      
+        applib.openSitePage(contentURL);
+        
         //Step20
         workBench.ClickWorkBenchTab("View");
         
@@ -124,7 +122,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         logout.ClickLogoutBtn();
       
         //Step22
-        webDriver.navigate().to(contentURL);
+        applib.openSitePage(contentURL);
       
         //Step23
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));

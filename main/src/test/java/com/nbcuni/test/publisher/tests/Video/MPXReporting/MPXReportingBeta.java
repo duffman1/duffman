@@ -36,8 +36,8 @@ public class MPXReportingBeta extends ParentTest{
         	modules.VerifyModuleEnabled("Media: ThePlatform mpx Reports");
         	
         	Reporter.log("STEP 3");
-        	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings>>Media: thePlatform MPX Status (BETA)");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Configuration("Media: thePlatform mpx settings");
+        	navigation.ClickPrimaryTabNavLnk("Media: thePlatform MPX Status (BETA)");
         	
         	Reporter.log("STEP 4");
         	contentParent.VerifyPageContentPresent(Arrays.asList("Total Videos Ingested:", "View all videos here.", 
