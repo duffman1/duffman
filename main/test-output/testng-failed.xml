@@ -3,14 +3,26 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+=======
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
+>>>>>>> refs/heads/Brandon
         <methods>
           <include name="suiteTeardown"/>
+<<<<<<< HEAD
           <include name="CreateCharacterProfile_TC1041"/>
+=======
+          <include name="ImplementMPS_TC2901"/>
+>>>>>>> refs/heads/Brandon
           <include name="suiteSetup"/>
           <include name="stopSelenium"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
+=======
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
+>>>>>>> refs/heads/Brandon
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -169,8 +169,8 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	    String pub7Date20DaysInPast = pub7DateFormat.format(date20DaysInPast);
         	    String pub7Date7DaysInPast = pub7DateFormat.format(date7DaysInPast);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7Date20DaysInPast + " - 04:00 AM"
-        	    		, pub7Date7DaysInPast + " - 04:00 AM", "Expired"));
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7Date20DaysInPast
+        	    		, pub7Date7DaysInPast, "Expired"));
         	    
         	    //Step 10
         	    searchFor.ClickSearchTitleLnk(mediaTitle);
@@ -179,8 +179,8 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    SimpleDateFormat pub7WorkflowDateFormat = new SimpleDateFormat("EEEE, MMMM d, yyyy");
         	    String pub7WorkflowDate20DaysInPast = pub7WorkflowDateFormat.format(date20DaysInPast);
         	    String pub7WorkflowDate7DaysInPast = pub7WorkflowDateFormat.format(date7DaysInPast);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDate20DaysInPast + " - 04:00",
-        	    		pub7WorkflowDate7DaysInPast + " - 04:00"));
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDate20DaysInPast,
+        	    		pub7WorkflowDate7DaysInPast));
         	    
         	    //Step 12
         	    WorkBench workBench = new WorkBench(webDriver);
@@ -244,8 +244,8 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
         	    String pub7DateToday = pub7DateFormat.format(dateToday);
         	    String pub7Date1YearInFuture = pub7DateFormat.format(date1YearInFuture);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7DateToday + " - 04:00 AM"
-        	    		, pub7Date1YearInFuture + " - 04:00 AM", "Published"));
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7DateToday
+        	    		, pub7Date1YearInFuture, "Published"));
         	    
         	    //Step 32
         	    searchFor.ClickSearchTitleLnk(mediaTitle);
@@ -253,8 +253,8 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    //Step 33
         	    String pub7WorkflowDateToday = pub7WorkflowDateFormat.format(dateToday);
         	    String pub7WorkflowDate1YearInFuture = pub7WorkflowDateFormat.format(date1YearInFuture);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDateToday + " - 04:00",
-        	    		pub7WorkflowDate1YearInFuture + " - 04:00"));
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDateToday,
+        	    		pub7WorkflowDate1YearInFuture));
         	    
         	    //Step 34
         	    workBench.ClickWorkBenchTab("Edit");
@@ -267,7 +267,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    scheduleQueue.ClickScheduleTab();
         	    scheduleQueue.VerifyRunNowLnkPresent(mediaTitle, "Unpublish");
         	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, 
-        	    		"Unpublish", pub7Date1YearInFuture + " - 04:00"));
+        	    		"Unpublish", pub7Date1YearInFuture));
         	    
         	    //Step 37 - NA
         	    

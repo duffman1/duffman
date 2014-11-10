@@ -150,8 +150,10 @@ public class WorkBench {
     public String GetContentNodeNumber() throws Exception {
         
     	Reporter.log("Note the node number for the content item.");
-    	return WorkBench_Tab("Edit Draft").getAttribute("href").replace(config.getConfigValueString("AppURL") + 
-    			"/node/", "").replace("/edit", "");
+    	String[] splitOn = WorkBench_Tab("Edit Draft").getAttribute("href").split("/edit");
+    	String nodeID = splitOn[0].replace(config.getConfigValueString("AppURL") + 
+    			"/node/", "");
+    	return nodeID;
 
     }
 

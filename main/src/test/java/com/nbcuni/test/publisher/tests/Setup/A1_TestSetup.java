@@ -117,7 +117,7 @@ public class A1_TestSetup {
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
                 new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
                 contentParent.ClickSaveBtn();
-                
+
                 //set file system paths if not already set
                 applib.openSitePage("/admin/config/media/file-system");
                 WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
