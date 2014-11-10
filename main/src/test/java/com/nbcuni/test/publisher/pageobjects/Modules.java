@@ -16,7 +16,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -31,7 +30,6 @@ public class Modules {
     private Driver webDriver;
     private Config config;
     private ContentParent contentParent;
-    private Overlay overlay;
     private EmberNav navigation;
     private WebDriverWait wait;
     
@@ -40,7 +38,6 @@ public class Modules {
     	this.webDriver = webDriver;
     	config = new Config();
     	contentParent = new ContentParent(webDriver);
-    	overlay = new Overlay(webDriver);
     	navigation = new EmberNav(webDriver);
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);

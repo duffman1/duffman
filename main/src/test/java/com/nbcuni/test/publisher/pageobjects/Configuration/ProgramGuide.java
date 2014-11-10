@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
@@ -27,12 +28,13 @@ public class ProgramGuide {
     private Driver webDriver;
     private String DataURL= "http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json";
     private WaitFor waitFor;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR    
     public ProgramGuide(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 10);
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
     
     //PAGE OBJECT IDENTIFIERS    

@@ -4,6 +4,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -72,22 +73,20 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         
         	//Setup
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	if (configuredAccounts.contains("DB TV")) {
         		
-        		overlay.ClickCloseOverlayLnk();
-        		taxonomy.NavigateSite("Structure>>File types>>MPX Video for Account \"DB TV\" (2312945284)");
-        		overlay.SwitchToActiveFrame();
+        		navigation.Structure("File types");
+        		FileTypes fileTypes = new FileTypes(webDriver);
+        		fileTypes.ClickEditFileTypeLnk("MPX Video for Account \"DB TV\" (2312945284)");
         		MPXFileType mpxFileType = new MPXFileType(webDriver);
         		boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
         		if (isMPXValueOverrideEnabled == false) {
             	
         			mpxFileType.ClickSaveBtn();
-        			overlay.SwitchToActiveFrame();
         			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
         			contentParent.VerifyMessageStatus("has been updated.");
         		}
@@ -97,9 +96,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
         	}
 
         	//Step 2 onward will use an existing mpx published video
-            overlay.switchToDefaultContent(true);
-            taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            overlay.SwitchToActiveFrame();
+            navigation.Content("Files", "mpxMedia");
             SearchFor searchFor = new SearchFor(webDriver);
             searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
@@ -109,7 +106,6 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             //Setup - resets overrides in the event of a previous failure
             WorkBench workBench = new WorkBench(webDriver);
             workBench.ClickWorkBenchTab("Edit");
-            overlay.SwitchToActiveFrame();
             EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
             editMPXVideo.UnCheckOverrideMPXAvailableDateCbx();
             editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
@@ -131,8 +127,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
             //Step 21
             workBench.ClickWorkBenchTab("Edit");
-            overlay.SwitchToActiveFrame();
-
+            
             //Step 22
             editMPXVideo.VerifyMPXMediaAvailableDateNullAndDisabled();
             editMPXVideo.VerifyMPXMediaExpirationDateNullAndDisabled();
@@ -156,7 +151,6 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             editMPXVideo.EnterMPXExpirationDate(expirationDate);
             editMPXVideo.EnterMPXExpirationTime("05:00pm");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) AutomationDefault has been updated.");
 
             //Step 25
@@ -181,8 +175,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             //Step 36
             searchFor.ClickSearchTitleLnk("AutomationDefault"); */
             workBench.ClickWorkBenchTab("Edit");
-            overlay.SwitchToActiveFrame();
-
+            
             //Step 37
             editMPXVideo.UnCheckOverrideMPXAvailableDateCbx();
             editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
@@ -191,7 +184,6 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
             //Step 38
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("MPX Video for Account \"DB TV\" (2312945284) AutomationDefault has been updated.");
             contentParent.VerifyPageContentPresent(defaultVideoValues);
             contentParent.VerifyPageContentNotPresent(overridenVideoValues);

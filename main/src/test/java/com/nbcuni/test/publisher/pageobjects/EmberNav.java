@@ -2,20 +2,18 @@ package com.nbcuni.test.publisher.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
 /*********************************************
- * publisher.nbcuni.com Modules Library. Copyright
+ * publisher.nbcuni.com Ember Navigation Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: December 15, 2013
+ * @version 1.0 Date: November 15, 2014
  *********************************************/
 
 public class EmberNav {
@@ -23,12 +21,13 @@ public class EmberNav {
     private Driver webDriver;
     private WaitFor waitFor;
     private ErrorChecking errorChecking;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public EmberNav(Driver webDriver) {
     	this.webDriver = webDriver;
-    	PageFactory.initElements(webDriver, this);
-    	waitFor = new WaitFor(webDriver, 10);
+    	config = new Config();
+    	waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     	errorChecking = new ErrorChecking(webDriver);
     	
     }

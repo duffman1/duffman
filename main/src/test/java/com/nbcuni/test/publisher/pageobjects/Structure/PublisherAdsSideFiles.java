@@ -16,7 +16,6 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
@@ -32,7 +31,6 @@ public class PublisherAdsSideFiles {
 	private Driver webDriver;
 	private Config config;
 	private WebDriverWait wait;
-	private Overlay overlay;
 	private Delete delete;
 	private ContentParent contentParent;
 	
@@ -42,7 +40,6 @@ public class PublisherAdsSideFiles {
     	config = new Config();
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
-    	overlay = new Overlay(webDriver);
     	delete = new Delete(webDriver);
     	contentParent = new ContentParent(webDriver);
     }

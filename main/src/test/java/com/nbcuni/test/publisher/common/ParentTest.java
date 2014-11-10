@@ -3,15 +3,12 @@ package com.nbcuni.test.publisher.common;
 import com.nbcuni.test.publisher.common.Driver.*;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.tests.Setup.A1_TestSetup;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -93,28 +90,23 @@ public class ParentTest {
         	System.out.println("Failed to capture screenshot");
         }
         
-    	/*
+    	//Clear cache in the event of the very annoying state flow node error
     	try {
-    		
     		if (!result.isSuccess()) {
-    			webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-    			applib.openApplication();
-    			webDriver.switchTo().defaultContent();
-    			webDriver.navigate().to(webDriver.findElement(By.xpath("//a[text()='Flush all caches']")).getAttribute("href"));
-            	new WebDriverWait(webDriver, 10).until(new ExpectedCondition<Boolean>() {
-            		public Boolean apply(WebDriver webDriver) {
-            			return webDriver.findElement(By.xpath("//div[@class='messages status']")).getText().contains("Every cache cleared");
-           		 	}
-            	});
-            	Reporter.setCurrentTestResult(result); 
-            	Reporter.log("Cache was cleared on test failure");
-            	Reporter.setCurrentTestResult(null);
+    			if (result.getThrowable().getMessage().toString().contains("StateFlowNode")) {
+    				applib.openApplication();
+        			webDriver.switchTo().defaultContent();
+        			FlushCache flushCache = new FlushCache(webDriver);
+        			flushCache.FlushAllCache();
+        			Reporter.setCurrentTestResult(result); 
+                	Reporter.log("Cache was cleared on test failure");
+                	Reporter.setCurrentTestResult(null);
+        		}
     		}
     	}
     	catch (Exception e) {
     		System.out.println("Failed to flush cache");
     	}
-    	*/
     	
         try {
         	webDriver.quit();

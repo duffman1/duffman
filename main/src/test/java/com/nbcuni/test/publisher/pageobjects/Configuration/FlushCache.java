@@ -1,8 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.PageFactory;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
@@ -20,12 +20,13 @@ public class FlushCache {
 	private EmberNav navigation;
 	private WaitFor waitFor;
 	private ContentParent contentParent;
+	private Config config;
 	
     //PAGE OBJECT CONSTRUCTOR
     public FlushCache(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
         navigation = new EmberNav(webDriver);
-        waitFor = new WaitFor(webDriver, 10);
+        config = new Config();
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
         contentParent = new ContentParent(webDriver);
     }
     

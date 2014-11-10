@@ -31,7 +31,7 @@ public class ImageStyles {
 		this.webDriver = webDriver;
 		config = new Config();
 		PageFactory.initElements(webDriver, this);
-		waitFor = new WaitFor(webDriver, 10);
+		waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
 		
 	}
 

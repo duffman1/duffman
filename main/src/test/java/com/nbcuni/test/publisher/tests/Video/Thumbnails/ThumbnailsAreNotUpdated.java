@@ -55,21 +55,17 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
+    	navigation.Configuration("Media: thePlatform mpx settings");
     	Settings settings = new Settings(webDriver);
-    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
-        
+    	
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
         	if (configuredAccounts.contains("DB TV")) {
         		
-        		overlay.ClickCloseOverlayLnk();
-        		taxonomy.NavigateSite("Structure>>File types");
-        		overlay.SwitchToActiveFrame();
-        	
+        		navigation.Structure("File types");
+        		
         		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
-        		overlay.SwitchToActiveFrame();
         		
         		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
         		manageFileDisplay.CheckPubMPXImageCbx();
@@ -78,7 +74,6 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		ContentParent contentParent = new ContentParent(webDriver);
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
-        		overlay.ClickCloseOverlayLnk();
         		
         		//Step 3
         		MPXLogin mpxLogin = new MPXLogin(webDriver);
@@ -122,27 +117,25 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 }
                 
         		//Step 14
-        	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	    overlay.SwitchToActiveFrame();
+                navigation.Content("Files", "mpxMedia");
         	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
-        	    overlay.switchToDefaultContent(true);
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
             	    if (config.getConfigValueString("DrushIngestion").equals("true")) {
             	    	int refreshCount = 0;
             	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                            	
-                    		   webDriver.navigate().refresh();
+                    		   applib.refreshPage();
                     		   refreshCount++;
                     		   if (refreshCount == 10) {
-                    		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
+                    			   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
                     		   }
                     	   }
             		}
             	    else {
             	    	cron.RunCron();
-                		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            	    	navigation.Content("Files", "mpxMedia");
             	    }
                 	searchFor.EnterTitle(mediaTitle);
                 	searchFor.ClickApplyBtn();
@@ -152,8 +145,8 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		//Step 15 through 21 - TODO as time allows. This initial test is more about initial mpx thumbnail ingestion than thumbnail update.
         		
         	    //Cleanup
-        	    taxonomy.NavigateSite("Structure>>File types");
-        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        	    navigation.Structure("File types");
+        	    fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		manageFileDisplay.UnCheckPubMPXImageCbx();
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		contentParent.VerifyMessageStatus("Your settings have been saved.");

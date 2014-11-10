@@ -50,8 +50,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
@@ -59,14 +58,11 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         	if (configuredAccounts.contains("DB TV")) {
         		
         		//Step 13
-        		overlay.ClickCloseOverlayLnk();
-        		taxonomy.NavigateSite("Structure>>File types");
-        		overlay.SwitchToActiveFrame();
-        	
+        		navigation.Structure("File types");
+        		
         		//Step 14
         		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
-        		overlay.SwitchToActiveFrame();
         		
         		//Step 15
         		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
@@ -75,11 +71,9 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		manageFileDisplay.SelectMPXVideoPlayer("AutomationPlayer2");
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
-        		overlay.ClickCloseOverlayLnk();
         		
         		//Step 16
-        		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        		overlay.SwitchToActiveFrame();
+        		navigation.Content("Files", "mpxMedia");
         		
         		//Step 17 - N/A
         		

@@ -10,11 +10,10 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ProgramGuide;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
 public class ProgramGuideVerification extends ParentTest {
 	
-	private Boolean testSuccessful;
+	private Boolean testSuccessful = false;
 	
 	/*************************************************************************************
      * TEST CASE - TC1579
@@ -22,8 +21,6 @@ public class ProgramGuideVerification extends ParentTest {
      *************************************************************************************/
 	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full" })
     public void ProgramGuideVerification_TC1579() throws Exception{
-		
-		testSuccessful = false;
 		
 		//Step 1
 		UserLogin userLogin = applib.openApplication();
