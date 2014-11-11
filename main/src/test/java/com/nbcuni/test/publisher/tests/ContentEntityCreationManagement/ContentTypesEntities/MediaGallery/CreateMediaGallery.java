@@ -53,11 +53,12 @@ public class CreateMediaGallery extends ParentTest{
             MediaItems mediaItems = new MediaItems(webDriver);
             SelectFile selectFile = new SelectFile(webDriver);
             for(int Count=0;Count<2;Count++) {
+            	webDriver.switchTo().defaultContent();
             	if (Count == 0) {
             		basicInformation.ClickMediaItemsSelectBtn();
             	}
             	else {
-            		mediaItems.WaitForImgLoadComplete();
+            		contentParent.WaitForThrobberNotPresent();
             		mediaItems.ClickAddBtn();
             	}
                 selectFile.SwitchToSelectFileFrm();
@@ -117,17 +118,13 @@ public class CreateMediaGallery extends ParentTest{
     		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
     		selectFile.ClickSubmitBtn();
-            mediaItems.WaitForImgLoadComplete();
+    		webDriver.switchTo().defaultContent();
+            contentParent.WaitForThrobberNotPresent();
             
             Reporter.log("STEP 9");
             mediaItems.ClickEditAllBtn();
             editImage.WaitForEditImageFrameOpen();
-            try {
-            	editImage.VerifyMPXPlayerPresent();
-            }
-            catch (Exception | AssertionError e) {
-            	editImage.VerifyMPXVideoLnkPresent("AutomationWThumb");
-            }
+            editImage.VerifyMPXObjectPresent();
             
             Reporter.log("STEP 10");
             editImage.ClickCancelLnk();

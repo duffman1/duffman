@@ -5,12 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Field Settings Library. Copyright
@@ -21,14 +22,14 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class FieldSettings {
 
-    private Driver webDriver;
-    private WebDriverWait wait;
+    private WaitFor waitFor;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public FieldSettings(Driver webDriver, AppLib applib) {
-        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        config = new Config();
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -38,8 +39,8 @@ public class FieldSettings {
     @FindBy(how = How.XPATH, using = "//label[contains(text(), 'Mode')]/../select")
     private WebElement Mode_Ddl;
     
-    private WebElement TargetBundle_Cbx(String bundle) {
-    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + bundle + "')]/../input"));
+    private By TargetBundle_Cbx(String bundle) {
+    	return By.xpath("//label[contains(text(), '" + bundle + "')]/../input");
     }
     
     @FindBy(how = How.XPATH, using = "//label[contains(text(), 'Sort by')]/../select")
@@ -64,15 +65,17 @@ public class FieldSettings {
     	
     	Reporter.log("Select the '" + mode + "' option from the 'Mode' drop down list.");
     	Thread.sleep(1000);
-    	new Select(wait.until(ExpectedConditions.visibilityOf(Mode_Ddl))).selectByVisibleText(mode);
+    	new Select(waitFor.ElementVisible(Mode_Ddl)).selectByVisibleText(mode);
     	
     }
     
     public void CheckTargetBundleCbx(String label) throws Exception {
     	
-    	if (TargetBundle_Cbx(label).isSelected() == false) {
+    	WebElement cbx = waitFor.ElementVisible(TargetBundle_Cbx(label));
+    	
+    	if (cbx.isSelected() == false) {
     		Reporter.log("Chech the '" + label + "' 'Target bundles' check box.");
-    		TargetBundle_Cbx(label).click();
+    		cbx.click();
     	}
     }
     

@@ -2,25 +2,25 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.LocalFileDetector;
-//import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Select File Library. Copyright
@@ -32,28 +32,28 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class SelectFile {
 
     private Driver webDriver;
-    private WebDriverWait wait;
+    private WaitFor waitFor;
     private Random random;
     private ErrorChecking errorChecking;
-    private Overlay overlay;
     private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public SelectFile(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
         random = new Random();
         errorChecking = new ErrorChecking(webDriver);
-        overlay = new Overlay(webDriver);
         config = new Config();
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//iframe[@id='mediaBrowser']")
     private WebElement SelectFile_Frm;
     
-    @FindBy(how = How.XPATH, using = "//h1[text()='Select a file']")
+    private By Upload_Lnk = By.xpath("//a[contains(text(), 'Upload')]");
+    
+    @FindBy(how = How.XPATH, using = "//div[contains(text(), 'Select a file')]")
     private WebElement SelectFile_Txt;
     
     @FindBy(how = How.XPATH, using = "//a[@title='View Library']")
@@ -142,7 +142,22 @@ public class SelectFile {
     //PAGE OBJECT IDENTIFIERS
     public void SwitchToSelectFileFrm() throws Exception {
     	
-    	webDriver.switchTo().frame(SelectFile_Frm);
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	for (int I = 0; I <= config.getConfigValueInt("WaitForWaitTime"); I++) {
+    		try {
+    			
+    			webDriver.switchTo().frame(SelectFile_Frm);
+    			webDriver.findElement(Upload_Lnk).getLocation();
+    			break;
+    		}
+    		catch (Exception e) {
+    			Thread.sleep(1000);
+    		}
+    		webDriver.switchTo().defaultContent();
+    		
+    	}
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -164,14 +179,14 @@ public class SelectFile {
     public void EnterFileName(String fileName) throws Exception {
     	
     	Reporter.log("Enter '" + fileName + "' in the 'File name' text box.");
-    	wait.until(ExpectedConditions.visibilityOf(FileName_Txb)).sendKeys(fileName);
+    	waitFor.ElementVisible(FileName_Txb).sendKeys(fileName);
     	
     }
     
     public void EnterTitle(String title) throws Exception {
     	
     	Reporter.log("Enter '" + title + "' in the 'Title' text box.");
-    	wait.until(ExpectedConditions.visibilityOf(Title_Txb)).sendKeys(title);
+    	waitFor.ElementVisible(Title_Txb).sendKeys(title);
     	
     }
     
@@ -258,7 +273,7 @@ public class SelectFile {
     		Thread.sleep(500);
     		Alert alert1 = webDriver.switchTo().alert();
     		alert1.accept();
-    		overlay.SwitchToActiveFrame();
+    		webDriver.switchTo().defaultContent();
     		this.SwitchToSelectFileFrm();
     		Upload_Btn.click();
     	}
@@ -269,7 +284,6 @@ public class SelectFile {
     public void ClickCustomFieldUploadBtn(String label) throws Exception {
     	
     	Reporter.log("Click the 'Upload' button for custom field '" + label + "'.");
-    	//webDriver.setFileDetector(new LocalFileDetector());
     	CustomUpload_Btn(label).click();
     	
     }
@@ -286,7 +300,7 @@ public class SelectFile {
     public void VerifyFocalPointCoordinates(String coordinatesTxt) throws Exception {
     	
     	Reporter.log("Verify value of 'Focal Point' text box is '" + coordinatesTxt + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(FocalPoint_Txb));
+    	waitFor.ElementVisible(FocalPoint_Txb);
     	Assert.assertEquals(FocalPoint_Txb.getAttribute("value"), coordinatesTxt);
     	
     }

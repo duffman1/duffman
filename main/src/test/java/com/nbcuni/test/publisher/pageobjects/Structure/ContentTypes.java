@@ -80,7 +80,7 @@ public class ContentTypes {
     private WebElement Widget_Ddl;
     
     private WebElement FieldSelect_Btn(String fieldName) {
-    	return webDriver.findElement(By.id("edit-field-" + fieldName + "-und-0-select"));
+    	return webDriver.findElement(By.id("edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select"));
     }
     
     private WebElement Field_Txt(String fieldName) {

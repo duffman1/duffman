@@ -36,7 +36,7 @@ public class EmberNav {
     private By ActiveUserMenu_Lnk = By.id("navbar-item--4");
     
     private By MenuSubNav_Lnk(String lnkTxt) {
-    	return By.xpath("//a[@class='navbar-menu-item'][text()='" + lnkTxt + "']");
+    	return By.xpath("//a[contains(@class,'navbar-menu-item')][text()='" + lnkTxt + "']");
     }
     
     private By Home_Lnk = By.xpath("//a[@class='navbar-icon navbar-icon-home']");

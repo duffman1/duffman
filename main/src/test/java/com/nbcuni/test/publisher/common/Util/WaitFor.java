@@ -10,6 +10,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.testng.Assert;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
@@ -284,6 +285,35 @@ public class WaitFor {
     			}
     		});
     	
+    }
+    
+    public WebElement OneElementOrAnotherPresent(By locator1, By locator2) throws Exception {
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	WebElement element = null;
+    	
+    	for (int I = 0; I <= timeout; I++) {
+    		if (I == timeout) {
+    			Assert.fail("Timed out after " + timeout.toString() + " seconds. One Element or Another Not Present"); //TODO better logging
+    		}
+    		
+    		try {
+    			element = webDriver.findElement(locator1);
+    			break;
+    		}
+    		catch (NoSuchElementException | StaleElementReferenceException e) { }
+    		
+    		try {
+    			element = webDriver.findElement(locator2);
+    			break;
+    		}
+    		catch (NoSuchElementException | StaleElementReferenceException e) { }
+    	}
+    	
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	
+    	return element;
     }
 
 }

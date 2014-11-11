@@ -36,7 +36,7 @@ public class PasswordRules extends ParentTest {
         userLogin.ClickLoginBtn();
         
         Reporter.log("STEP 2");
-        navigation.ActiveUser("View profile");
+        applib.openSitePage("/user");
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit");
         

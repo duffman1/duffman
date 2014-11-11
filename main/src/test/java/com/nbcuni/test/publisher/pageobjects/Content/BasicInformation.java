@@ -1,10 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -36,15 +33,15 @@ public class BasicInformation {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
-        waitFor = new WaitFor(webDriver, 10);
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
+    
     
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.XPATH, using = "//a/strong[text()='Basic Information']")
     private WebElement BasicInformation_Tab;
     
-    @FindBy(how = How.XPATH, using = "//input[contains(@id, 'edit-title')]")
-    private WebElement Title_Txb;
+    private By Title_Txb = By.xpath("//input[contains(@id, 'edit-title')]");
     
     @FindBy(how = How.ID, using = "edit-field-summary-und-0-value")
     private WebElement ShortDescription_Txa;
@@ -56,61 +53,13 @@ public class BasicInformation {
     private WebElement Body_Txa;
     
     private WebElement Synopsis_Frm() throws Exception {
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	
-    	final String wysiwygFrm = "//iframe[@class='cke_wysiwyg_frame cke_reset']";
-    	final String nowysiwygFrm = "//iframe[@id='edit-body-und-0-value_ifr']";
-    	
-    	WebElement frm = null;
-    	for (int I = 0; I<=10; I++) {
-    		if (I == 10) { Assert.fail("Editor frame not present after timeout."); }
-    		try {
-    			frm = webDriver.findElement(By.xpath(wysiwygFrm));
-    			break;
-    		}
-    		catch (Exception e) { }
-    		
-    		try {
-    			frm = webDriver.findElement(By.xpath(nowysiwygFrm));
-    			break;
-    		}
-    		catch (Exception e) { }
-    		Thread.sleep(1000);
-    	}
-    	
-    	/*
-    	wait.until(new ExpectedCondition<Boolean>() {
-    		public Boolean apply(WebDriver webDriver) {
-    			return (webDriver.findElement(By.xpath(wysiwygFrm)).isDisplayed() || 
-    					webDriver.findElement(By.xpath(nowysiwygFrm)).isDisplayed()) == true; 
-   		 	}
-    	});
-    	
-    	WebElement frm = null;
-    	try {
-    		frm = webDriver.findElement(By.xpath(wysiwygFrm));
-    	}
-    	catch (NoSuchElementException e) {
-    		frm = webDriver.findElement(By.xpath(nowysiwygFrm));
-    	}
-    	*/
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-    	
-    	return frm;
+    	return waitFor.OneElementOrAnotherPresent(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"), 
+    			By.xpath("//iframe[@id='edit-body-und-0-value_ifr']"));
     }
     
-    private WebElement Synopsis_Txa() {
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	
-    	WebElement txa = null;
-    	try {
-    		txa = webDriver.findElement(By.xpath("//body[contains(@class, 'editable')]"));
-    	}
-    	catch (NoSuchElementException e) {
-    		txa = webDriver.findElement(By.xpath("//body[@id='tinymce']"));
-    	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-    	return txa;
+    private WebElement Synopsis_Txa() throws Exception {
+    	return waitFor.OneElementOrAnotherPresent(By.xpath("//body[contains(@class, 'editable')]"), 
+    			By.xpath("//body[@id='tinymce']"));
     }
     
     @FindBy(how = How.XPATH, using = "//a[contains(@id, 'cover')][text()='Select']")
@@ -152,8 +101,9 @@ public class BasicInformation {
     public void EnterTitle(String title) throws Exception {
     	
     	Reporter.log("Enter '" + title + "' in the 'Title' text box.");
-    	Title_Txb.clear();
-    	Title_Txb.sendKeys(title);
+    	WebElement txb = waitFor.ElementVisible(Title_Txb);
+    	txb.clear();
+    	txb.sendKeys(title);
     }
     
     public void EnterShortDescription(String shortDescription) throws Exception {
