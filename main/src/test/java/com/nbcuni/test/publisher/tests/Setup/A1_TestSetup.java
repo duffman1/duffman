@@ -87,7 +87,7 @@ public class A1_TestSetup {
                 		"ImageField Focus", "Database logging", "MPS", 
                 		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", 
                 		"Mobile Friendly Navigation Toolbar", "TVE Auth Example", "Pub SURF Example",
-                		"simpleSAMLphp authentication")) {
+                		"simpleSAMLphp authentication", "Program Guide Example", "Doubleclick for Publishers")) {
                 	if (modules.IsModuleEnabled(module)) {
                 		modules.EnterFilterName(module);
                     	modules.DisableModule(module);

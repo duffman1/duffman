@@ -52,7 +52,7 @@ public class TwitterLogin {
     @FindBy(how = How.ID, using = "allow")
     private WebElement AuthorizeApp_Btn;
     
-    @FindBy(how = How.XPATH, using = "//input[@value='Sign in and Tweet']")
+    @FindBy(how = How.XPATH, using = "//input[@value='Log in and Tweet']")
     private WebElement SignInAndTweet_Btn;
     
     @FindBy(how = How.XPATH, using = "//input[@value='Tweet']")
