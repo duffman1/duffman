@@ -7,12 +7,12 @@
 	<parameter name="Admin1Password" value="pa55word"></parameter>
 	<parameter name="ReRunOnFailure" value="false"></parameter>
 	<parameter name="ReRunOnFailureCount" value="4"></parameter>
-	<parameter name="RunRemotely" value="false"></parameter>
+	<parameter name="RunRemotely" value="true"></parameter>
 	<parameter name="SendReportAutoEmails" value="true"></parameter>
   	<parameter name="UploadReportToRally" value="true"></parameter>
   	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
   	<parameter name="GithubUpdatePRResults" value="true"></parameter>
-  	<parameter name="RunSetupScripts" value="false"></parameter>
+  	<parameter name="RunSetupScripts" value="true"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
   	
@@ -190,7 +190,6 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage.RepresentativeImage"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF.SURFModule"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
-			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
 			<class name="com.nbcuni.test.publisher.tests.Commerce.CreatePubFeatureSetModules"/>
 			<class name="com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar.ContentCommenting"/>
 			<class name="com.nbcuni.test.publisher.tests.Core.Profiles.FileFieldsTokenBasedPath"/>
@@ -200,7 +199,7 @@
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>	
-			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper"/>
@@ -209,6 +208,7 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.MarkdownTextAreas"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
 			<class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateandScheduleMultipleRevisions"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
 		</classes>
 	</test>
   	
