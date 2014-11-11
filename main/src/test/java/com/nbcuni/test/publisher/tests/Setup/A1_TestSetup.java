@@ -80,7 +80,8 @@ public class A1_TestSetup {
                 		"ImageField Focus", "Database logging", "MPS", 
                 		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", 
                 		"TVE Auth Example", "Pub SURF Example",
-                		"simpleSAMLphp authentication")) {
+                		"simpleSAMLphp authentication", "Program Guide Example", 
+                		"Doubleclick for Publishers")) {
                 	if (modules.IsModuleEnabled(module)) {
                 		modules.EnterFilterName(module);
                     	modules.DisableModule(module);
@@ -89,7 +90,8 @@ public class A1_TestSetup {
             	
                 //uninstall some high data usage modules that overflow lists
                 //TODO - this should only be done when needed and not every execution
-                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
+                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue", 
+                		"Event Countdown")) {
                 	navigation.ClickPrimaryTabNavLnk("Uninstall");
                 	if (modules.IsModuleInstalled(module)) {
                     	modules.UninstallModule(module);

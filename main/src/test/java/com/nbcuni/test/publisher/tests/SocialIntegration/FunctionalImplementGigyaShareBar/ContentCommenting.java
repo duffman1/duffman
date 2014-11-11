@@ -1,13 +1,18 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar;
 
 import java.net.URL;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Configuration.GigyaSettings;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.GigyaShareBar;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Twitter.TwitterLogin;
 
 public class ContentCommenting extends ParentTest{
@@ -22,6 +27,19 @@ public class ContentCommenting extends ParentTest{
     	Reporter.log("STEP 1");
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+        
+    	Reporter.log("SETUP");
+        Modules modules = new Modules(webDriver);
+        modules.VerifyModuleEnabled("Pub Gigya");
+        navigation.Configuration("Gigya settings");
+        WorkBench workBench = new WorkBench(webDriver);
+        workBench.ClickWorkBenchTab("Share");
+        GigyaSettings gigyaSettings = new GigyaSettings(webDriver, applib);
+        gigyaSettings.EnterProviders("Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like");
+        gigyaSettings.ClickGigyaAdvancedShareBarSettingsLnk();
+        gigyaSettings.EnterAdvancedShowShareBarUISettings("wrap|true");
+        gigyaSettings.ClickSaveConfiguration_Btn();
+        contentParent.VerifyMessageStatus("The configuration options have been saved.");
         
     	Reporter.log("STEP 2 - N/A");
         
