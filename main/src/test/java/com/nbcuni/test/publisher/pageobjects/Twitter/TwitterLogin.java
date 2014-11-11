@@ -59,7 +59,7 @@ public class TwitterLogin {
     private WebElement Tweet_Btn;
     
     private List<WebElement> SignIn_Btns() {
-    	return webDriver.findElements(By.xpath("//button[text()='Sign in']"));
+    	return webDriver.findElements(By.xpath("//button[text()='Log in']"));
     }
     
     
