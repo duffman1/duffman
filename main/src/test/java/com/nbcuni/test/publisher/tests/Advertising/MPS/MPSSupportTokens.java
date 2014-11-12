@@ -108,6 +108,7 @@ public class MPSSupportTokens extends ParentTest {
             taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
             overlay.SwitchToActiveFrame();
             mpsConfiguration.ClickReplacementPatternsLnk();
+            mpsConfiguration.ClickBrowseAvailableTokensLnk();
             mpsConfiguration.ClickMPSExpanderLnk();
             mpsConfiguration.VerifyMPSCatPropertyLnkPresent();
             mpsConfiguration.EnterPatternForCategoryField("[mps:cat-pattern:?]");
