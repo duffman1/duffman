@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
@@ -14,136 +17,184 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[STEP 2]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Entity Tracker' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Performance' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Entity tracker' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the primary nav 'Queues'.]]>
+      <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add Promo Queue' link.]]>
+      <![CDATA[Click the 'Post' link.]]>
     </line>
     <line>
-      <![CDATA[Enter '2ca9cd93db47494' in the 'Title' text box.]]>
+      <![CDATA[Enter '24e9961cc946430' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '941997054d' in the 'Log message for this state change' text area.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Queue' button.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Verify the queue titled '2ca9cd93db47494' is present in the Queues list.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' button for queue titled + '2ca9cd93db47494'.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Enter 'a' in the queue item text box indexed '1'.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'a' from the auto complete option list.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Enter '514278287f' in the 'Log message for this state change' text area.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Queue' button.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' button for queue titled + '2ca9cd93db47494'.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'b' in the queue item text box indexed '2'.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'b' from the auto complete option list.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Enter 'c6dc2676ad' in the 'Log message for this state change' text area.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Queue' button.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' button for queue titled + '2ca9cd93db47494'.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' tab.]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue revision index '1'.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button for the queue revision index '1'.]]>
+      <![CDATA[Verify success message of 'Post 24e9961cc946430 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify error message of 'This revision cannot be deleted because it is currently the primary revision for this queue' is present.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue revision index '2'.]]>
+      <![CDATA[Click the 'Reports' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button for the queue revision index '2'.]]>
+      <![CDATA[Click the 'Entity Tracker' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete revision' button.]]>
+      <![CDATA[Enter '11/12/2014' in the 'From' date picker.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The revision has been successfully deleted.' is present.]]>
+      <![CDATA[Enter '11/12/2014' in the 'To' date picker.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue revision index '2'.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button for the queue revision index '2'.]]>
+      <![CDATA[STEP 6 - N/A]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete revision' button.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The revision has been successfully deleted.' is present.]]>
+      <![CDATA[Verify the text '24e9961cc946430' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue revision index '1'.]]>
+      <![CDATA[Verify the text 'Created' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button for the queue revision index '1'.]]>
+      <![CDATA[Verify the text 'Post' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify error message of 'This revision cannot be deleted because it is currently the primary revision for this queue' is present.]]>
+      <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Verify the count of revisions in the Queues revision list is '1'.]]>
+      <![CDATA[Click the entity tracker link for content title '24e9961cc946430'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '24e9961cc946430' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44569" started-at="2014-11-12T21:01:40Z" finished-at="2014-11-12T21:02:25Z">
+  <suite name="Default suite" duration-ms="80765" started-at="2014-11-12T21:53:08Z" finished-at="2014-11-12T21:54:29Z">
     <groups>
       <group name="full">
-        <method signature="DeleteRevisionsQueues.DeleteRevisionsQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues@545e07b6]" name="DeleteRevisionsQueues_Test" class="com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues"/>
+        <method signature="CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@1201fd18]" name="CollectEditorialActivity_TC5071" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="44569" started-at="2014-11-12T21:01:40Z" finished-at="2014-11-12T21:02:25Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues@545e07b6]" name="suiteSetup" is-config="true" duration-ms="31" started-at="2014-11-12T16:01:40Z" finished-at="2014-11-12T16:01:40Z">
+    <test name="Default test" duration-ms="80765" started-at="2014-11-12T21:53:08Z" finished-at="2014-11-12T21:54:29Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@1201fd18]" name="suiteSetup" is-config="true" duration-ms="25" started-at="2014-11-12T16:53:08Z" finished-at="2014-11-12T16:53:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues@545e07b6]" name="startSelenium" is-config="true" duration-ms="3398" started-at="2014-11-12T16:01:40Z" finished-at="2014-11-12T16:01:44Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@1201fd18]" name="startSelenium" is-config="true" duration-ms="3410" started-at="2014-11-12T16:53:08Z" finished-at="2014-11-12T16:53:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues.DeleteRevisionsQueues_Test() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity.CollectEditorialActivity_TC5071() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="DeleteRevisionsQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues@545e07b6]" name="DeleteRevisionsQueues_Test" duration-ms="40588" started-at="2014-11-12T16:01:44Z" finished-at="2014-11-12T16:02:24Z">
+        <test-method status="PASS" signature="CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@1201fd18]" name="CollectEditorialActivity_TC5071" duration-ms="76775" started-at="2014-11-12T16:53:11Z" finished-at="2014-11-12T16:54:28Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -157,128 +208,173 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[STEP 2]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Entity Tracker' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Performance' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Entity tracker' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the primary nav 'Queues'.]]>
+              <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add Promo Queue' link.]]>
+              <![CDATA[Click the 'Post' link.]]>
             </line>
             <line>
-              <![CDATA[Enter '2ca9cd93db47494' in the 'Title' text box.]]>
+              <![CDATA[Enter '24e9961cc946430' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '941997054d' in the 'Log message for this state change' text area.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Queue' button.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Verify the queue titled '2ca9cd93db47494' is present in the Queues list.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' button for queue titled + '2ca9cd93db47494'.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Enter 'a' in the queue item text box indexed '1'.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'a' from the auto complete option list.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Enter '514278287f' in the 'Log message for this state change' text area.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Queue' button.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' button for queue titled + '2ca9cd93db47494'.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'b' in the queue item text box indexed '2'.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'b' from the auto complete option list.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Enter 'c6dc2676ad' in the 'Log message for this state change' text area.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Queue' button.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' button for queue titled + '2ca9cd93db47494'.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' tab.]]>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue revision index '1'.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button for the queue revision index '1'.]]>
+              <![CDATA[Verify success message of 'Post 24e9961cc946430 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify error message of 'This revision cannot be deleted because it is currently the primary revision for this queue' is present.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue revision index '2'.]]>
+              <![CDATA[Click the 'Reports' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button for the queue revision index '2'.]]>
+              <![CDATA[Click the 'Entity Tracker' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete revision' button.]]>
+              <![CDATA[Enter '11/12/2014' in the 'From' date picker.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The revision has been successfully deleted.' is present.]]>
+              <![CDATA[Enter '11/12/2014' in the 'To' date picker.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue revision index '2'.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button for the queue revision index '2'.]]>
+              <![CDATA[STEP 6 - N/A]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete revision' button.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The revision has been successfully deleted.' is present.]]>
+              <![CDATA[Verify the text '24e9961cc946430' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Expand' arrow to extend the edit menu for queue revision index '1'.]]>
+              <![CDATA[Verify the text 'Created' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button for the queue revision index '1'.]]>
+              <![CDATA[Verify the text 'Post' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify error message of 'This revision cannot be deleted because it is currently the primary revision for this queue' is present.]]>
+              <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Verify the count of revisions in the Queues revision list is '1'.]]>
+              <![CDATA[Click the entity tracker link for content title '24e9961cc946430'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '24e9961cc946430' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- DeleteRevisionsQueues_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues@545e07b6]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-11-12T16:02:24Z" finished-at="2014-11-12T16:02:25Z">
+        </test-method> <!-- CollectEditorialActivity_TC5071 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@1201fd18]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2014-11-12T16:54:28Z" finished-at="2014-11-12T16:54:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=DeleteRevisionsQueues_Test status=SUCCESS method=DeleteRevisionsQueues.DeleteRevisionsQueues_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues@545e07b6] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CollectEditorialActivity_TC5071 status=SUCCESS method=CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@1201fd18] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues@545e07b6]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-12T16:02:25Z" finished-at="2014-11-12T16:02:25Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@1201fd18]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-11-12T16:54:29Z" finished-at="2014-11-12T16:54:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions.DeleteRevisionsQueues -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

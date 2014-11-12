@@ -5,11 +5,14 @@ import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.EntityTracker;
+import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.Reports.EntityTrackerReports;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -29,22 +32,10 @@ public class CollectEditorialActivity extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	navigation.Modules();
         	Modules modules = new Modules(webDriver);
-        	if (modules.IsModuleEnabled("Entity Tracker")) {
-        		modules.EnterFilterName("Entity Tracker");
-        		modules.DisableModule("Entity Tracker");
-        		navigation.ClickPrimaryTabNavLnk("Uninstall");
-        		modules.UninstallModule("Entity Tracker");
-        		
-        		navigation.Modules();
-        		modules.EnterFilterName("Entity Tracker");
-        		modules.EnableModule("Entity Tracker");
-        	}
-        	else {
-        		modules.EnterFilterName("Entity Tracker");
-        		modules.EnableModule("Entity Tracker");
-        	}
+        	modules.VerifyModuleEnabled("Entity Tracker");
+        	FlushCache flushCache = new FlushCache(webDriver);
+        	flushCache.FlushAllCache();
         	
         	Reporter.log("STEP 3");
         	navigation.Configuration("Entity tracker");
@@ -57,10 +48,10 @@ public class CollectEditorialActivity extends ParentTest{
         	
         	Reporter.log("STEP 4");
         	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
-        	createDefaultContent.Post("Draft");
+        	String postTitle = createDefaultContent.Post("Draft");
         	
         	Reporter.log("STEP 5");
-        	navigation.Reports("Entity tracker report");
+        	navigation.Reports("Entity Tracker");
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	Date currentDate = new Date();
@@ -68,21 +59,18 @@ public class CollectEditorialActivity extends ParentTest{
         	entityTrackerReports.EnterFromDate(pub7DateFormat.format(currentDate));
         	entityTrackerReports.EnterToDate(pub7DateFormat.format(currentDate));
         	entityTrackerReports.ClickApplyBtn();
+        	overlay.switchToDefaultContent(true);
         	
         	Reporter.log("STEP 6 - N/A");
         	
         	Reporter.log("STEP 7");
         	ErrorChecking errorChecking = new ErrorChecking(webDriver);
         	errorChecking.VerifyNoMessageErrorsPresent();
-        	entityTrackerReports.ClickParentArrayElementLnk();
-        	entityTrackerReports.ClickChildArrayElementLnk();
-        	Integer childNodeID = entityTrackerReports.GetChildNodeId();
-        	entityTrackerReports.ClickChildArrayInfoElementLnk();
-        	String childTitle = entityTrackerReports.GetChildTitle();
+        	contentParent.VerifyPageContentPresent(Arrays.asList(postTitle, "Created", "Post"));
         	
         	Reporter.log("STEP 8");
-        	applib.openSitePage("/node/" + childNodeID.toString());
-        	contentParent.VerifyPageContentPresent(Arrays.asList(childTitle));
+        	entityTrackerReports.ClickContentLnk(postTitle);
+        	contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         	
         	//TODO - some additional steps as time allows
             

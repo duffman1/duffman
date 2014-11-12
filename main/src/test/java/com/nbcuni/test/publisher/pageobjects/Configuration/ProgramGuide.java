@@ -44,9 +44,9 @@ public class ProgramGuide {
     private By ProgramGuideRunCronStatus_Sts = By.xpath("//table[@class='system-status-report']/..//td[contains(text(),'Program Guide Data URL')]/..//td[@class='status-value']");
     
     private By ProgramGuideTbl_Cls = By.xpath("//table[@class='sticky-enabled tableheader-processed sticky-table']/thead//th");
-    
+
     private By ProgramGuideTbl_Rws = By.xpath("//table[@class='sticky-enabled tableheader-processed sticky-table']/tbody//tr");
-    
+
     
     //PAGE OBJECT METHODS
     public void EnterDataURL() throws Exception { 
@@ -69,7 +69,7 @@ public class ProgramGuide {
     	
     	Reporter.log("Verify home page program guide contains text 'Program Guide'.");
     	waitFor.ElementVisible(ProgramGuideTextOnHomePage_Lbl);
-    	
+
     }
     
     public void VerifyDateShowInfoColumn() throws Exception {  	

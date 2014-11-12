@@ -47,7 +47,7 @@ public class ProgramGuideVerification extends ParentTest {
 		//Step 6
 		blocks.VerifySelectedRegion("Program Guide", "Footer fourth column");
 		navigation.Configuration("Program Guide");
-		      
+  
 		//Step 7
 		ProgramGuide programGuide = new ProgramGuide(webDriver);
 		programGuide.EnterDataURL();
