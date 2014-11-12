@@ -5,7 +5,7 @@
       <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[Open url 'http://qa4.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,64 +17,52 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+      <![CDATA[Switch to frame titled 'Modules'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
+      <![CDATA[Verify the 'Entity Tracker' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2 - N/A]]>
+      <![CDATA[Click the 'Home' menu link.]]>
     </line>
     <line>
       <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+      <![CDATA[Mouse over the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Entity tracker' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Close Overlay X'.]]>
     </line>
     <line>
       <![CDATA[STEP 4]]>
@@ -86,16 +74,13 @@
       <![CDATA[Mouse over the 'Add content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Movie' menu link.]]>
+      <![CDATA[Click the 'Post' menu link.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'a2a00f6898cf411' in the 'Title' text box.]]>
+      <![CDATA[Enter 'b92b5dae956f40d' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -104,7 +89,7 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Cover' select button.]]>
@@ -140,217 +125,96 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie a2a00f6898cf411 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"content"' is present in page source.]]>
+      <![CDATA[Verify success message of 'Post b92b5dae956f40d has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+      <![CDATA[Open url 'http://qa4.publisher7.com/#overlay=admin/reports/entity_tracker'.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Movie a2a00f6898cf411 dialog'.]]>
+      <![CDATA[Switch to the active frame titled 'Entity Tracker dialog'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'URL path settings' link.]]>
+      <![CDATA[Enter '11/12/2014' in the 'From' date picker.]]>
     </line>
     <line>
-      <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
+      <![CDATA[Enter '11/12/2014' in the 'To' date picker.]]>
     </line>
     <line>
-      <![CDATA[Enter '45aacc1c95' in the 'URL alias' text box.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie a2a00f6898cf411 has been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"45aacc1c95"' is present in page source.]]>
+      <![CDATA[STEP 6 - N/A]]>
     </line>
     <line>
       <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+      <![CDATA[Verify the text 'b92b5dae956f40d' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Switch to the active frame titled 'Edit Movie a2a00f6898cf411 dialog'.]]>
+      <![CDATA[Verify the text 'Created' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'URL path settings' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '45aacc1c95/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie a2a00f6898cf411 has been updated.' is present.]]>
+      <![CDATA[Verify the text 'Post' is present on the page.]]>
     </line>
     <line>
       <![CDATA[STEP 8]]>
     </line>
     <line>
-      <![CDATA[Verify '"cat":"45aacc1c95|mps-testing|2arg"}' is present in page source.]]>
+      <![CDATA[Click the entity tracker link for content title 'b92b5dae956f40d'.]]>
     </line>
     <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"45aacc1c95|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Execute' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|11
-**'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Overlay X'.]]>
-    </line>
-    <line>
-      <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Mouse over the 'Web services' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'MPS Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the text 'b92b5dae956f40d' is present on the page.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="111366" started-at="2014-11-11T23:13:27Z" finished-at="2014-11-11T23:15:18Z">
+  <suite name="Default suite" duration-ms="62341" started-at="2014-11-12T21:35:48Z" finished-at="2014-11-12T21:36:50Z">
     <groups>
       <group name="full">
-        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@371d1794]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+        <method signature="CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@2d7349d7]" name="CollectEditorialActivity_TC5071" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
       </group> <!-- full -->
-      <group name="mps">
-        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@371d1794]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
-      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="111366" started-at="2014-11-11T23:13:27Z" finished-at="2014-11-11T23:15:18Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@371d1794]" name="suiteSetup" is-config="true" duration-ms="27" started-at="2014-11-11T18:13:27Z" finished-at="2014-11-11T18:13:27Z">
+    <test name="Default test" duration-ms="62341" started-at="2014-11-12T21:35:48Z" finished-at="2014-11-12T21:36:50Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@2d7349d7]" name="suiteSetup" is-config="true" duration-ms="29" started-at="2014-11-12T16:35:48Z" finished-at="2014-11-12T16:35:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@371d1794]" name="startSelenium" is-config="true" duration-ms="3194" started-at="2014-11-11T18:13:27Z" finished-at="2014-11-11T18:13:30Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@2d7349d7]" name="startSelenium" is-config="true" duration-ms="3206" started-at="2014-11-12T16:35:48Z" finished-at="2014-11-12T16:35:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens.MPSSupportTokens_TC3641() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity.CollectEditorialActivity_TC5071() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@371d1794]" name="MPSSupportTokens_TC3641" duration-ms="107587" started-at="2014-11-11T18:13:30Z" finished-at="2014-11-11T18:15:17Z">
+        <test-method status="PASS" signature="CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@2d7349d7]" name="CollectEditorialActivity_TC5071" duration-ms="58551" started-at="2014-11-12T16:35:51Z" finished-at="2014-11-12T16:36:49Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[Open url 'http://qa4.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -362,64 +226,52 @@ brand|season|11
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Modules dialog'.]]>
+              <![CDATA[Switch to frame titled 'Modules'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
+              <![CDATA[Verify the 'Entity Tracker' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2 - N/A]]>
+              <![CDATA[Click the 'Home' menu link.]]>
             </line>
             <line>
               <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+              <![CDATA[Mouse over the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Mouse over the 'Content authoring' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Entity tracker' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the active frame titled 'Entity tracker dialog'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Close Overlay X'.]]>
             </line>
             <line>
               <![CDATA[STEP 4]]>
@@ -431,16 +283,13 @@ brand|season|11
               <![CDATA[Mouse over the 'Add content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Movie' menu link.]]>
+              <![CDATA[Click the 'Post' menu link.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'a2a00f6898cf411' in the 'Title' text box.]]>
+              <![CDATA[Enter 'b92b5dae956f40d' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -449,7 +298,7 @@ brand|season|11
               <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Cover' select button.]]>
@@ -485,201 +334,83 @@ brand|season|11
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Create Movie dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Create Post dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie a2a00f6898cf411 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"content"' is present in page source.]]>
+              <![CDATA[Verify success message of 'Post b92b5dae956f40d has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+              <![CDATA[Open url 'http://qa4.publisher7.com/#overlay=admin/reports/entity_tracker'.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Movie a2a00f6898cf411 dialog'.]]>
+              <![CDATA[Switch to the active frame titled 'Entity Tracker dialog'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'URL path settings' link.]]>
+              <![CDATA[Enter '11/12/2014' in the 'From' date picker.]]>
             </line>
             <line>
-              <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
+              <![CDATA[Enter '11/12/2014' in the 'To' date picker.]]>
             </line>
             <line>
-              <![CDATA[Enter '45aacc1c95' in the 'URL alias' text box.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie a2a00f6898cf411 has been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"45aacc1c95"' is present in page source.]]>
+              <![CDATA[STEP 6 - N/A]]>
             </line>
             <line>
               <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+              <![CDATA[Verify the text 'b92b5dae956f40d' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Switch to the active frame titled 'Edit Movie a2a00f6898cf411 dialog'.]]>
+              <![CDATA[Verify the text 'Created' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'URL path settings' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '45aacc1c95/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie a2a00f6898cf411 has been updated.' is present.]]>
+              <![CDATA[Verify the text 'Post' is present on the page.]]>
             </line>
             <line>
               <![CDATA[STEP 8]]>
             </line>
             <line>
-              <![CDATA[Verify '"cat":"45aacc1c95|mps-testing|2arg"}' is present in page source.]]>
+              <![CDATA[Click the entity tracker link for content title 'b92b5dae956f40d'.]]>
             </line>
             <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'REPLACEMENT PATTERNS' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"45aacc1c95|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'Execute PHP Code dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Execute' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the expected response is 'Status message
-devel
-brand|show|season|episode
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
-brand|show|~|episode
-brand|show|season
-brand|show|season|~|episode
-~|show
-
-~|brand|season
-season|episode
-brand|season|11
-**'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Overlay X'.]]>
-            </line>
-            <line>
-              <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Mouse over the 'Web services' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'MPS Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the active frame titled 'MPS Configuration dialog'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the text 'b92b5dae956f40d' is present on the page.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPSSupportTokens_TC3641 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@371d1794]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-11-11T18:15:17Z" finished-at="2014-11-11T18:15:18Z">
+        </test-method> <!-- CollectEditorialActivity_TC5071 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@2d7349d7]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-11-12T16:36:49Z" finished-at="2014-11-12T16:36:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@371d1794] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CollectEditorialActivity_TC5071 status=SUCCESS method=CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@2d7349d7] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@371d1794]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-11T18:15:18Z" finished-at="2014-11-11T18:15:18Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@2d7349d7]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-12T16:36:50Z" finished-at="2014-11-12T16:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

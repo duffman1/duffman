@@ -1,11 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Reports;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -16,33 +18,28 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class EntityTrackerReports {
 		
+	private Driver webDriver;
+	
 	//PAGE OBJECT CONSTRUCTOR
 	public EntityTrackerReports(Driver webDriver) {
+		this.webDriver = webDriver;
 		PageFactory.initElements(webDriver, this);
 		
 	}
 
 	//PAGE OBJECT IDENTIFIERS
-	@FindBy(how = How.ID, using ="edit-from-datepicker-popup-0")
+	@FindBy(how = How.ID, using ="edit-timestamp-datepicker-popup-0")
 	private WebElement From_Txb;
 	
-	@FindBy(how = How.ID, using ="edit-to-datepicker-popup-0")
+	@FindBy(how = How.ID, using ="edit-timestamp-1-datepicker-popup-0")
 	private WebElement To_Txb;
 	
-	@FindBy(how = How.ID, using ="edit-submit")
+	@FindBy(how = How.ID, using ="edit-submit-entity-tracker")
 	private WebElement Apply_Btn;
 	
-	@FindBy(how = How.XPATH, using ="(//div[contains(@class, 'krumo-element krumo-expand')]//em)[1][contains(text(), 'Array')]")
-	private WebElement ParentArrayElement_Lnk;
-	
-	@FindBy(how = How.XPATH, using ="(//a[@class='krumo-name'])[2]")
-	private WebElement ChildArrayElement_Lnk;
-
-	@FindBy(how = How.XPATH, using ="(//a[@class='krumo-name'])[2]/../..//a[text()='info']")
-	private WebElement ChildArrayElementInfo_Lnk;
-	
-	@FindBy(how = How.XPATH, using ="((//a[@class='krumo-name'])[2]/../..//a[text()='info']/../..//a[contains(text(), 'title')]/..//strong)[2]")
-	private WebElement ChildArrayElementInfoTitle_Lnk;
+	private WebElement Title_Lnk(String title) {
+		return webDriver.findElement(By.xpath("//a[text()='" + title + "']"));
+	}
 	
 	
 	//PAGE OBJECT METHODS
@@ -64,34 +61,11 @@ public class EntityTrackerReports {
 		Apply_Btn.click();
 	}
 	
-	public void ClickParentArrayElementLnk() throws Exception {
-
-		Reporter.log("Click the '...Array, # elements' link.");
-		ParentArrayElement_Lnk.click();
-	}
-	
-	public void ClickChildArrayElementLnk() throws Exception {
-
-		Reporter.log("Click the child content node link.");
-		ChildArrayElement_Lnk.click();
-	}
-	
-	public Integer GetChildNodeId() throws Exception {
+	public void ClickContentLnk(String title) throws Exception {
 		
-		Reporter.log("Get the child node content id number.");
-		return Integer.parseInt(ChildArrayElement_Lnk.getText());
-	}
-	
-	public void ClickChildArrayInfoElementLnk() throws Exception {
-
-		Reporter.log("Click the child content node 'info' link.");
-		ChildArrayElementInfo_Lnk.click();
-	}
-	
-	public String GetChildTitle() throws Exception {
+		Reporter.log("Click the entity tracker link for content title '" + title + "'.");
+		Title_Lnk(title).click();
 		
-		Reporter.log("Get the child node content id title.");
-		return ChildArrayElementInfoTitle_Lnk.getText();
 	}
 	
 }

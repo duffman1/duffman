@@ -30,26 +30,7 @@ public class CollectEditorialActivity extends ParentTest{
             
         	Reporter.log("STEP 2");
         	Modules modules = new Modules(webDriver);
-        	taxonomy.NavigateSite("Modules");
-        	overlay.SwitchToActiveFrame();
-        	if (modules.IsModuleEnabled("Entity Tracker")) {
-        		modules.EnterFilterName("Entity Tracker");
-        		modules.DisableModule("Entity Tracker");
-        		overlay.ClickOverlayTab("Uninstall");
-        		overlay.SwitchToActiveFrame();
-        		modules.UninstallModule("Entity Tracker");
-        		overlay.ClickCloseOverlayLnk();
-        		
-        		taxonomy.NavigateSite("Modules");
-        		overlay.SwitchToActiveFrame();
-        		modules.EnterFilterName("Entity Tracker");
-        		modules.EnableModule("Entity Tracker");
-        	}
-        	else {
-        		modules.EnterFilterName("Entity Tracker");
-        		modules.EnableModule("Entity Tracker");
-        	}
-        	overlay.ClickCloseOverlayLnk();
+        	modules.VerifyModuleEnabled("Entity Tracker");
         	
         	Reporter.log("STEP 3");
         	taxonomy.NavigateSite("Configuration>>Content authoring>>Entity tracker");
@@ -64,10 +45,10 @@ public class CollectEditorialActivity extends ParentTest{
         	
         	Reporter.log("STEP 4");
         	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
-        	createDefaultContent.Post("Draft");
+        	String postTitle = createDefaultContent.Post("Draft");
         	
         	Reporter.log("STEP 5");
-        	taxonomy.NavigateSite("Reports>>Entity tracker report");
+        	applib.openSitePage("/#overlay=admin/reports/entity_tracker");
         	overlay.SwitchToActiveFrame();
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -76,21 +57,18 @@ public class CollectEditorialActivity extends ParentTest{
         	entityTrackerReports.EnterFromDate(pub7DateFormat.format(currentDate));
         	entityTrackerReports.EnterToDate(pub7DateFormat.format(currentDate));
         	entityTrackerReports.ClickApplyBtn();
+        	overlay.switchToDefaultContent(true);
         	
         	Reporter.log("STEP 6 - N/A");
         	
         	Reporter.log("STEP 7");
         	ErrorChecking errorChecking = new ErrorChecking(webDriver);
         	errorChecking.VerifyNoMessageErrorsPresent();
-        	entityTrackerReports.ClickParentArrayElementLnk();
-        	entityTrackerReports.ClickChildArrayElementLnk();
-        	Integer childNodeID = entityTrackerReports.GetChildNodeId();
-        	entityTrackerReports.ClickChildArrayInfoElementLnk();
-        	String childTitle = entityTrackerReports.GetChildTitle();
+        	contentParent.VerifyPageContentPresent(Arrays.asList(postTitle, "Created", "Post"));
         	
         	Reporter.log("STEP 8");
-        	applib.openSitePage("/node/" + childNodeID.toString());
-        	contentParent.VerifyPageContentPresent(Arrays.asList(childTitle));
+        	entityTrackerReports.ClickContentLnk(postTitle);
+        	contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         	
         	//TODO - some additional steps as time allows
             

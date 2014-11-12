@@ -40,18 +40,15 @@ public class ProgramGuide {
     @FindBy(how = How.XPATH, using ="//div[@id='block-program-guide-example-program-guide']/h2[contains(text(),'Program Guide')]")
      private WebElement ProgramGuideTextOnHomePage_Lbl;
     
-    @FindBy(how = How.XPATH, using ="//table[@class='sticky-enabled tableheader-processed sticky-table']/..//td[contains(text(),'There is no data')]")
-    private WebElement NoDataTextInTheFirstRow_Txt;
-    
     @FindBy(how = How.XPATH, using ="//table[@class='system-status-report']/..//td[contains(text(),'Program Guide Data URL')]/..//td[@class='status-value']")
     private WebElement ProgramGuideRunCronStatus_Sts;
     
     private List<WebElement> ProgramGuideTbl_Cls() {
-    	return webDriver.findElements(By.xpath("//table[@class='sticky-enabled tableheader-processed sticky-table']/..//th"));
+    	return webDriver.findElements(By.xpath("//table[@class='sticky-enabled tableheader-processed sticky-table']/thead//th"));
     }
     
     private List<WebElement> ProgramGuideTbl_Rws() {
-    	return webDriver.findElements(By.xpath("//h2[text()='Program Guide']/..//table/tbody/tr"));
+    	return webDriver.findElements(By.xpath("//table[@class='sticky-enabled tableheader-processed sticky-table']/tbody//tr"));
     }
     
     
@@ -74,7 +71,7 @@ public class ProgramGuide {
     public void VerifyProgramGuideText() throws Exception { 
     	
     	Reporter.log("Verify home page program guide contains text 'Program Guide'.");
-    	Assert.assertTrue(ProgramGuideTextOnHomePage_Lbl.getText().contains("Program Guide"));
+    	Assert.assertTrue(ProgramGuideTextOnHomePage_Lbl.isDisplayed());
     	
     }
     
@@ -83,9 +80,9 @@ public class ProgramGuide {
     	Reporter.log("Verify column headers present of 'Date', 'Show', and 'Information'.");
     	Thread.sleep(500); //stale element exception
     	List<WebElement> allColumns = ProgramGuideTbl_Cls();
- 		Assert.assertTrue(allColumns.get(3).getText().contains("Date"));
-    	Assert.assertTrue(allColumns.get(4).getText().contains("Show"));
-    	Assert.assertTrue(allColumns.get(5).getText().contains("Information"));
+ 		Assert.assertTrue(allColumns.get(0).getText().contains("Date"));
+    	Assert.assertTrue(allColumns.get(1).getText().contains("Show"));
+    	Assert.assertTrue(allColumns.get(2).getText().contains("Information"));
     }
 	 	
     public void ProgramGuideRunCronStatus() throws Exception { 
