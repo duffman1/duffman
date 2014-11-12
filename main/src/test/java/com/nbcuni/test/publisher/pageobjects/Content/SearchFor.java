@@ -218,7 +218,7 @@ public class SearchFor {
     	
     	Reporter.log("Get the text of the first player search result set item.");
     	return waitFor.ElementVisible(FirstMPXPlayerSearchResult_Lnk).getText();
-    	
+
     }
     
     public String GetFirstPublishedSearchResult() throws Exception {
