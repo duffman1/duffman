@@ -218,6 +218,22 @@ public class WaitFor {
     	return element;
     }
     
+    public WebElement ElementContainsText(final By locator, final String text) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, 
+    				ElementNotVisibleException.class))
+    		.withMessage("Text '" + text + "' not present in element.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return webDriver.findElement(loc).getText().contains(text);
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
+    }
+    
     public WebElement ElementNotContainsText(final WebElement element, final String text) throws Exception {
     	
     	this.elementWait(element)

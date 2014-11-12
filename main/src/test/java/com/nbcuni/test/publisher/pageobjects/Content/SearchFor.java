@@ -2,6 +2,8 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -27,14 +29,17 @@ public class SearchFor {
 
     private Driver webDriver;
     private Config config;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public SearchFor(Driver webDriver) {
         this.webDriver = webDriver;
         config = new Config();
         PageFactory.initElements(webDriver, this);
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
    
+    
     //PAGE OBJECT IDENTIFIERS
     @FindBy(how = How.ID, using = "edit-pid")
     private WebElement PublicID_Txb;
@@ -100,8 +105,7 @@ public class SearchFor {
     @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
     private WebElement FirstMPXMediaSearchResult_Lnk;
     
-    @FindBy(how = How.XPATH, using = "(//tbody//td[3]//a)[1]")
-    private WebElement FirstMPXPlayerSearchResult_Lnk;
+    private By FirstMPXPlayerSearchResult_Lnk = By.xpath("(//tbody//td[3]//a)[1]");
     
     @FindBy(how = How.XPATH, using = "(//div[text()='Published']/../..//td[@class='views-field views-field-title']/a)[1]")
     private WebElement FirstPublishedSearchResult_Lnk;
@@ -269,15 +273,14 @@ public class SearchFor {
     
     public String GetFirstMPXPlayerSearchResult() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-    	Reporter.log("Get the text of the first search result set item.");
     	String linkTxt = "";
     	try {
-    		linkTxt = FirstMPXPlayerSearchResult_Lnk.getText();	
+    		waitFor.ElementVisible(FirstMPXPlayerSearchResult_Lnk).getText();
     	}
     	catch (Exception e) {}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-        return linkTxt;
+    		
+    	return linkTxt;
+    	
     }
     
     public String GetFirstPublishedSearchResult() throws Exception {
