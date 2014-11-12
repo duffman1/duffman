@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
+    <line>
+      <![CDATA[STEP 1]]>
+    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -12,6 +15,9 @@
     </line>
     <line>
       <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[SETUP]]>
     </line>
     <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
@@ -26,7 +32,10 @@
       <![CDATA[Click the 'Character Profile' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'CharacterName409e1e8d83' in the 'Character First Name' text box.]]>
+      <![CDATA[Enter '676497895c55493' in the 'Character First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'c2532ae2abfb4f1' into the 'Biography' text area.]]>
     </line>
     <line>
       <![CDATA[Click the Cover Photo 'Select' button.]]>
@@ -65,10 +74,19 @@
       <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile CharacterName409e1e8d83 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Character Profile 676497895c55493 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
@@ -77,313 +95,46 @@
       <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' link.]]>
+      <![CDATA[Click the 'Post' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'CharacterNamef1e119670b' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile CharacterNamef1e119670b has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character Profile' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'CharacterName6c933c2a58' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile CharacterName6c933c2a58 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName9b3f59af81' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person PersonName9b3f59af81 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName76ca47ce64' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person PersonName76ca47ce64 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName1f29f19174' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person PersonName1f29f19174 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'TV Episode' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '74205ce2c115476' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+      <![CDATA[Enter 'f5266feba17e453' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Enter 'c6b094ab80824a1' into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
+      <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'PersonName9b3f59af81' in the Person text box.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'PersonName9b3f59af81' from the auto complete option list.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Verify that the 'Character' text box is displayed.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'CharacterName409e1e8d83' in the 'Character' text box.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'CharacterName409e1e8d83' from the auto complete option list.]]>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Episode 74205ce2c115476 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
     </line>
     <line>
       <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -392,58 +143,61 @@
       <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'PersonName9b3f59af81'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'CharacterName409e1e8d83'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Another Item' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName76ca47ce64' in the Person text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'PersonName76ca47ce64' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Character' text box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'CharacterNamef1e119670b' in the 'Character' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'CharacterNamef1e119670b' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '67cf2d7853164f4' in the 'Title' text box.]]>
+      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'TV Episode 67cf2d7853164f4 has been updated.' is present.]]>
+      <![CDATA[Verify success message of 'Post f5266feba17e453 has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
+      <![CDATA[Click the 'Add content' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Post' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '88283f233a8c4cc' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '99e61edced7642d' into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
       <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -452,136 +206,626 @@
       <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'PersonName9b3f59af81'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'CharacterName409e1e8d83'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'PersonName76ca47ce64'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'CharacterNamef1e119670b'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Another Item' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'PersonName1f29f19174' in the Person text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'PersonName1f29f19174' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Character' text box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'CharacterName6c933c2a58' in the 'Character' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'CharacterName6c933c2a58' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'cfb6c8bd603941a' in the 'Title' text box.]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'TV Episode cfb6c8bd603941a has been updated.' is present.]]>
+      <![CDATA[Verify success message of 'Post 88283f233a8c4cc has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' extend menu button.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Dynamic Queue Workbench' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Dynamic Queue Workbench' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Dynamic Queue Workbench' check box is checked.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add dynamic queue type' link.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Enter '25' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MachineNameEdit_Lnk' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '9899e82c35df419' in the 'Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '9899e82c35df419' in the 'MachineName' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '9899e82c35df419' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6&7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Dynamic Queues'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add 9899e82c35df419' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'fcc197bc4f7f48b' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Publish' from the 'TV Shows' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8 ]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Dynamic Queues'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9 - MOVED TO SETUP]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10 ]]>
+    </line>
+    <line>
+      <![CDATA[Open a new browser window.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/31'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '88283f233a8c4cc' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[STEP 12]]>
+    </line>
+    <line>
+      <![CDATA[STEP 13]]>
+    </line>
+    <line>
+      <![CDATA[STEP 14]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'edit' link for Dynamic Queue Type '9899e82c35df419.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 15]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Movie' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Person' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 16]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Dynamic Queues'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add 9899e82c35df419' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify Target bundle content count equals '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify content type 'Movie' is present in list of Target bundles.]]>
+    </line>
+    <line>
+      <![CDATA[Verify content type 'Person' is present in list of Target bundles.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 17]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type '9899e82c35df419.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Full content' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Teaser' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Revision comparison' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Tokens' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 18]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Full content' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '88283f233a8c4cc' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '99e61edced7642d' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'c6b094ab80824a1' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'c2532ae2abfb4f1' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Cover Media' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 19]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type '9899e82c35df419.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Teaser' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '88283f233a8c4cc' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '99e61edced7642d' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'c6b094ab80824a1' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'c2532ae2abfb4f1' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Character: First Name' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Cover Media' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 20]]>
+    </line>
+    <line>
+      <![CDATA[STEP 21]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Display suite' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'View modes' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add a view mode' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '38ae9117b59445c' in the 'Label' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Node' Entity check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The view mode 38ae9117b59445c has been saved' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 22,23,24]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content types' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for content type 'Post'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '38ae9117b59445c' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '38ae9117b59445c' Tab.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Body'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Categories'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Tags'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Contributor'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Media Gallery'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Media'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Description'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content types' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for content type 'Character Profile'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '38ae9117b59445c' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the '38ae9117b59445c' Tab.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Biography'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: First Name'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Middle Name'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Last Name'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Photo'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Alias'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Birth Date'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Prefix'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Suffix'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'External Links'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Biography'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 25]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Dynamic Queue types' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'manage display' link for Dynamic Queue Type '9899e82c35df419.]]>
+    </line>
+    <line>
+      <![CDATA[Select '38ae9117b59445c' from the 'Entity List' Formate drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 26]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '88283f233a8c4cc' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '99e61edced7642d' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'c6b094ab80824a1' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'c2532ae2abfb4f1' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 27]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Permissions'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'access dynamic queues' checkbox for the 'anonymous user' role.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'access dynamic queues' checkbox for the 'authenticated user' role.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Permissions' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 28]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '88283f233a8c4cc' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '99e61edced7642d' is NOT present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Display suite' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'View modes' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Delete' link for label '38ae9117b59445c'.]]>
     </line>
     <line>
       <![CDATA[Click the 'Delete' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Confirm Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'PersonName9b3f59af81'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'CharacterName409e1e8d83'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'PersonName76ca47ce64'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'CharacterNamef1e119670b'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'PersonName1f29f19174'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'CharacterName6c933c2a58'.]]>
+      <![CDATA[Verify success message of 'The view mode 38ae9117b59445c has been deleted.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="186935" started-at="2014-11-12T02:58:11Z" finished-at="2014-11-12T03:01:18Z">
+  <suite name="Default suite" duration-ms="316414" started-at="2014-11-12T14:44:16Z" finished-at="2014-11-12T14:49:33Z">
     <groups>
       <group name="full">
-        <method signature="CastCrewFieldCollectionsVerificationTVEpisode.CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@333d4d6b]" name="CastCrewFieldCollectionsVerificationTVEpisode_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode"/>
+        <method signature="CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="CreateConfigureDynamicQueue_TC4197" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+        <method signature="CreateConfigureDynamicQueue.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="Cleanup" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="186935" started-at="2014-11-12T02:58:11Z" finished-at="2014-11-12T03:01:18Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@333d4d6b]" name="suiteSetup" is-config="true" duration-ms="25" started-at="2014-11-11T21:58:11Z" finished-at="2014-11-11T21:58:11Z">
+    <test name="Default test" duration-ms="316414" started-at="2014-11-12T14:44:16Z" finished-at="2014-11-12T14:49:33Z">
+      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="suiteSetup" is-config="true" duration-ms="29" started-at="2014-11-12T09:44:16Z" finished-at="2014-11-12T09:44:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@333d4d6b]" name="startSelenium" is-config="true" duration-ms="3291" started-at="2014-11-11T21:58:11Z" finished-at="2014-11-11T21:58:14Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="startSelenium" is-config="true" duration-ms="3343" started-at="2014-11-12T09:44:16Z" finished-at="2014-11-12T09:44:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode.CastCrewFieldCollectionsVerificationTVEpisode_Test() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@333d4d6b]" name="CastCrewFieldCollectionsVerificationTVEpisode_Test" duration-ms="183059" started-at="2014-11-11T21:58:14Z" finished-at="2014-11-11T22:01:17Z">
+        <test-method status="PASS" signature="CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="CreateConfigureDynamicQueue_TC4197" duration-ms="309323" started-at="2014-11-12T09:44:19Z" finished-at="2014-11-12T09:49:29Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -593,6 +837,9 @@
             </line>
             <line>
               <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[SETUP]]>
             </line>
             <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
@@ -607,7 +854,10 @@
               <![CDATA[Click the 'Character Profile' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'CharacterName409e1e8d83' in the 'Character First Name' text box.]]>
+              <![CDATA[Enter '676497895c55493' in the 'Character First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'c2532ae2abfb4f1' into the 'Biography' text area.]]>
             </line>
             <line>
               <![CDATA[Click the Cover Photo 'Select' button.]]>
@@ -646,10 +896,19 @@
               <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile CharacterName409e1e8d83 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Character Profile 676497895c55493 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
@@ -658,313 +917,46 @@
               <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' link.]]>
+              <![CDATA[Click the 'Post' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'CharacterNamef1e119670b' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile CharacterNamef1e119670b has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character Profile' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'CharacterName6c933c2a58' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile CharacterName6c933c2a58 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName9b3f59af81' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person PersonName9b3f59af81 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName76ca47ce64' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person PersonName76ca47ce64 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName1f29f19174' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person PersonName1f29f19174 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'TV Episode' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '74205ce2c115476' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+              <![CDATA[Enter 'f5266feba17e453' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Enter 'c6b094ab80824a1' into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
+              <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'PersonName9b3f59af81' in the Person text box.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'PersonName9b3f59af81' from the auto complete option list.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Verify that the 'Character' text box is displayed.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'CharacterName409e1e8d83' in the 'Character' text box.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'CharacterName409e1e8d83' from the auto complete option list.]]>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Episode 74205ce2c115476 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
             </line>
             <line>
               <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -973,58 +965,61 @@
               <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'PersonName9b3f59af81'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'CharacterName409e1e8d83'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Another Item' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName76ca47ce64' in the Person text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'PersonName76ca47ce64' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Character' text box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'CharacterNamef1e119670b' in the 'Character' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'CharacterNamef1e119670b' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '67cf2d7853164f4' in the 'Title' text box.]]>
+              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'TV Episode 67cf2d7853164f4 has been updated.' is present.]]>
+              <![CDATA[Verify success message of 'Post f5266feba17e453 has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
+              <![CDATA[Click the 'Add content' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Post' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '88283f233a8c4cc' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '99e61edced7642d' into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
               <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -1033,128 +1028,640 @@
               <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'PersonName9b3f59af81'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'CharacterName409e1e8d83'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'PersonName76ca47ce64'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'CharacterNamef1e119670b'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Another Item' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'PersonName1f29f19174' in the Person text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'PersonName1f29f19174' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Character' text box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'CharacterName6c933c2a58' in the 'Character' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'CharacterName6c933c2a58' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'cfb6c8bd603941a' in the 'Title' text box.]]>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'TV Episode cfb6c8bd603941a has been updated.' is present.]]>
+              <![CDATA[Verify success message of 'Post 88283f233a8c4cc has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' extend menu button.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Dynamic Queue' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Dynamic Queue' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Dynamic Queue Workbench' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Dynamic Queue Workbench' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Dynamic Queue Workbench' check box is checked.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add dynamic queue type' link.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Enter '25' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MachineNameEdit_Lnk' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '9899e82c35df419' in the 'Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '9899e82c35df419' in the 'MachineName' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '9899e82c35df419' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6&7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Dynamic Queues'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add 9899e82c35df419' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'fcc197bc4f7f48b' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Publish' from the 'TV Shows' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8 ]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Dynamic Queues'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9 - MOVED TO SETUP]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10 ]]>
+            </line>
+            <line>
+              <![CDATA[Open a new browser window.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/31'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '88283f233a8c4cc' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[STEP 12]]>
+            </line>
+            <line>
+              <![CDATA[STEP 13]]>
+            </line>
+            <line>
+              <![CDATA[STEP 14]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'edit' link for Dynamic Queue Type '9899e82c35df419.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 15]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Movie' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Person' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 16]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Dynamic Queues'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add 9899e82c35df419' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify Target bundle content count equals '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify content type 'Movie' is present in list of Target bundles.]]>
+            </line>
+            <line>
+              <![CDATA[Verify content type 'Person' is present in list of Target bundles.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 17]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type '9899e82c35df419.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Full content' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Teaser' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Revision comparison' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Tokens' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 18]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Full content' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '88283f233a8c4cc' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '99e61edced7642d' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'c6b094ab80824a1' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'c2532ae2abfb4f1' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Character: First Name' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Cover Media' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 19]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type '9899e82c35df419.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Teaser' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '88283f233a8c4cc' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '99e61edced7642d' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'c6b094ab80824a1' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'c2532ae2abfb4f1' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Character: First Name' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Cover Media' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 20]]>
+            </line>
+            <line>
+              <![CDATA[STEP 21]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Display suite' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'View modes' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add a view mode' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '38ae9117b59445c' in the 'Label' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Node' Entity check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The view mode 38ae9117b59445c has been saved' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 22,23,24]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content types' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for content type 'Post'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '38ae9117b59445c' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '38ae9117b59445c' Tab.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Body'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Categories'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Tags'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Contributor'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Media Gallery'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Media'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Description'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content types' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for content type 'Character Profile'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '38ae9117b59445c' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the '38ae9117b59445c' Tab.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Biography'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: First Name'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Middle Name'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Last Name'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Photo'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Alias'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Birth Date'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Prefix'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Suffix'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'External Links'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Biography'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 25]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Dynamic Queue types' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'manage display' link for Dynamic Queue Type '9899e82c35df419.]]>
+            </line>
+            <line>
+              <![CDATA[Select '38ae9117b59445c' from the 'Entity List' Formate drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 26]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '88283f233a8c4cc' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '99e61edced7642d' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'c6b094ab80824a1' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'c2532ae2abfb4f1' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 27]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Permissions'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'access dynamic queues' checkbox for the 'anonymous user' role.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'access dynamic queues' checkbox for the 'authenticated user' role.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Permissions' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The changes have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 28]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'f5266feba17e453' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '676497895c55493' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '88283f233a8c4cc' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '99e61edced7642d' is NOT present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Display suite' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'View modes' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Delete' link for label '38ae9117b59445c'.]]>
             </line>
             <line>
               <![CDATA[Click the 'Delete' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Confirm Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa5dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'PersonName9b3f59af81'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'CharacterName409e1e8d83'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'PersonName76ca47ce64'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'CharacterNamef1e119670b'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'PersonName1f29f19174'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'CharacterName6c933c2a58'.]]>
+              <![CDATA[Verify success message of 'The view mode 38ae9117b59445c has been deleted.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CastCrewFieldCollectionsVerificationTVEpisode_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@333d4d6b]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-11-11T22:01:17Z" finished-at="2014-11-11T22:01:18Z">
+        </test-method> <!-- CreateConfigureDynamicQueue_TC4197 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="stopSelenium" is-config="true" duration-ms="579" started-at="2014-11-12T09:49:29Z" finished-at="2014-11-12T09:49:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CastCrewFieldCollectionsVerificationTVEpisode_Test status=SUCCESS method=CastCrewFieldCollectionsVerificationTVEpisode.CastCrewFieldCollectionsVerificationTVEpisode_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@333d4d6b] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CreateConfigureDynamicQueue_TC4197 status=SUCCESS method=CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode@333d4d6b]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-11T22:01:18Z" finished-at="2014-11-11T22:01:18Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="startSelenium" is-config="true" duration-ms="2586" started-at="2014-11-12T09:49:29Z" finished-at="2014-11-12T09:49:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="Cleanup" duration-ms="1" started-at="2014-11-12T09:49:32Z" depends-on-methods="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateConfigureDynamicQueue_TC4197" finished-at="2014-11-12T09:49:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-11-12T09:49:32Z" finished-at="2014-11-12T09:49:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=CreateConfigureDynamicQueue.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue@44c75ba4]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-12T09:49:33Z" finished-at="2014-11-12T09:49:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationTVEpisode -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

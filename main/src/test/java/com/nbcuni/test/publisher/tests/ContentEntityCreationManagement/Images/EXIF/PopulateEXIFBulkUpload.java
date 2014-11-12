@@ -46,10 +46,12 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             AddFile addFile = new AddFile(webDriver);
             MediaItems mediaItems = new MediaItems(webDriver);
             for(int Count=0;Count<2;Count++) {
+            	webDriver.switchTo().defaultContent();
             	if (Count == 0) {
             		basicInformation.ClickMediaItemsSelectBtn();
             	}
             	else {
+            		contentParent.WaitForThrobberNotPresent();
             		mediaItems.ClickAddBtn();
             	}
                 SelectFile selectFile = new SelectFile(webDriver);

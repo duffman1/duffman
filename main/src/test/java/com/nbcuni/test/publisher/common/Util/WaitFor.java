@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.common.Util;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -156,6 +157,21 @@ public class WaitFor {
     		});
     	
     	return webDriver.findElement(locator);
+    }
+    
+    public List<WebElement> ElementsVisible(final By locator) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Element not visible.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return webDriver.findElements(loc).size() > 1 && webDriver.findElements(loc).get(0).isDisplayed();	
+    			}
+    		});
+    	
+    	return webDriver.findElements(locator);
     }
     
     public WebElement ElementNotVisible(final WebElement element) throws Exception {

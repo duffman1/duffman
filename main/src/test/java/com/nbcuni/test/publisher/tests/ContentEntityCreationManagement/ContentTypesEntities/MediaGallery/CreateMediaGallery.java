@@ -88,6 +88,7 @@ public class CreateMediaGallery extends ParentTest{
                 addFile.WaitForSuccessfulUpload();
                 addFile.ClickNextBtn();
             }
+            webDriver.switchTo().defaultContent();
             mediaItems.VerifyFileImagePresent("IPTCDefault", "1");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
             

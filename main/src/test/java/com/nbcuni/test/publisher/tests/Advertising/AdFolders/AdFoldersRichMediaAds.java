@@ -32,23 +32,8 @@ public class AdFoldersRichMediaAds extends ParentTest {
         modules.VerifyModuleEnabled("Pub Ads");
         
         //Setup
-        Integer randomAddFileInt = random.GetInteger(0, 3);
-        String defaultAddFile = "empty";
-        switch (randomAddFileInt) {
-        case 0:
-        	defaultAddFile = "AdCentric";
-        	break;
-        case 1:
-        	defaultAddFile = "Adconion";
-        	break;
-        case 2:
-        	defaultAddFile = "Atlas";
-        	break;
-        case 3:
-        	defaultAddFile = "Eyewonder";
-        	break;
-        }
-        
+        String defaultAddFile = "AdCentric";
+        	
         //Step 2
         navigation.Structure("Publisher Ads Side Files");
         
