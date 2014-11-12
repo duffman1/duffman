@@ -107,7 +107,7 @@ public class ImplementMPS extends ParentTest {
             
             Reporter.log("STEP 20");
             webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");
-            //contentParent.VerifySourceInPage(Arrays.asList("a3VtdWQ9MQ=="));
+            //contentParent.VerifySourceInPage(Arrays.asList("a3VtdWQ9MQ==")); TODO debug
             
             Reporter.log("STEP 21");
             navigation.AddContent("Media Gallery");
@@ -123,6 +123,7 @@ public class ImplementMPS extends ParentTest {
             selectFile.VerifyMediaThumbnailImagePresent("HanSolo", "1");
             selectFile.ClickMediaThumbnailImage("1");
             selectFile.ClickSubmitBtn();
+            webDriver.switchTo().defaultContent();
             MediaItems mediaItems = new MediaItems(webDriver);
             mediaItems.VerifyFileImagePresent("HanSolo", "1");
             ContentParent contentParent = new ContentParent(webDriver);
@@ -140,7 +141,7 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifySourceInPage(Arrays.asList("typeof(mps.writeFooter)"));
             
             Reporter.log("STEP 29");
-            navigation.Structure("Blocks");
+            navigation.Structure("MPS Blocks");
             MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
             mpsBlocks.ClickAddLnk();
             String blockName = random.GetCharacterString(15);
@@ -156,6 +157,7 @@ public class ImplementMPS extends ParentTest {
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             
             Reporter.log("STEP 31");
+            navigation.Home();
             contentParent.VerifySourceInPage(Arrays.asList("mps.getAd('" + blockName.toLowerCase() + "')"));
             
             Reporter.log("STEP 32 - N/A");

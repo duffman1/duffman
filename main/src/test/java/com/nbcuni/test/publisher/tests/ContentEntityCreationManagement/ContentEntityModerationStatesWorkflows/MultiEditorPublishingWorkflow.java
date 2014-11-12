@@ -61,7 +61,7 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
             		"edit any post content", "delete any post content", "create files", "access workbench",
             			"access advanced_link autocomplete", "access collection list", "create collections",
             				"edit collections", "view collections", "delete collections", "view the administration theme",
-            					"access user profiles"));
+            					"access user profiles", "access navbar"));
         }
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");

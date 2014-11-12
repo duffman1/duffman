@@ -39,13 +39,13 @@ public class ProgramGuideVerification extends ParentTest {
 		       
 		//Step 5
 		Blocks blocks = new Blocks(webDriver);
-		blocks.SelectRegion("Program Guide", "Content");
+		blocks.SelectRegion("Program Guide", "Footer fourth column");
 		blocks.ClickSaveBlocksBtn();
 		ContentParent contentParent = new ContentParent(webDriver);
 		contentParent.VerifyMessageStatus("The block settings have been updated.");
 		        
 		//Step 6
-		blocks.VerifySelectedRegion("Program Guide", "Content");
+		blocks.VerifySelectedRegion("Program Guide", "Footer fourth column");
 		navigation.Configuration("Program Guide");
 		      
 		//Step 7

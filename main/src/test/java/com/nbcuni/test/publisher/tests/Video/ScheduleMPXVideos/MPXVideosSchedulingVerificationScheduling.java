@@ -165,11 +165,10 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
                 	searchFor.EnterTitle(mediaTitle);
                 	searchFor.ClickApplyBtn();
             	}
-        	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
         	    SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	    String pub7Date20DaysInPast = pub7DateFormat.format(date20DaysInPast);
         	    String pub7Date7DaysInPast = pub7DateFormat.format(date7DaysInPast);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7Date20DaysInPast
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7Date20DaysInPast
         	    		, pub7Date7DaysInPast, "Expired"));
         	    
         	    //Step 10
@@ -241,10 +240,9 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    //Step 31
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
-        	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
         	    String pub7DateToday = pub7DateFormat.format(dateToday);
         	    String pub7Date1YearInFuture = pub7DateFormat.format(date1YearInFuture);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7DateToday
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7DateToday
         	    		, pub7Date1YearInFuture, "Published"));
         	    
         	    //Step 32

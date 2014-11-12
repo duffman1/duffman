@@ -119,6 +119,7 @@ public class FocalPointModule extends ParentTest{
         selectFile.VerifyFocalPointCoordinates("50,50");
         selectFile.ClickSaveBtn();
         webDriver.switchTo().defaultContent();
+        selectFile.WaitForSelectFileFrameClose();
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             	

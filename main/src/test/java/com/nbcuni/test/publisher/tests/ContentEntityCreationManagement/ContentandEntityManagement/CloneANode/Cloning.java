@@ -1,11 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode;
 
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.NodeCloneModule;
+import com.nbcuni.test.publisher.pageobjects.Content.CoverMedia;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -42,6 +44,8 @@ public class Cloning extends ParentTest {
 		//Step 6
 		WorkBench workBench = new WorkBench(webDriver);
 		workBench.ClickCloneContentLnk("post");
+		CoverMedia coverMedia = new CoverMedia(webDriver);
+		coverMedia.VerifyFileImagePresent("HanSolo");
     
 		//Step 7
 		contentParent.ClickSaveBtn();

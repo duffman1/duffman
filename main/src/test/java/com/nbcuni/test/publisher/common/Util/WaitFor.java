@@ -167,7 +167,7 @@ public class WaitFor {
     		.until(new Function<By, Boolean>() {
     			@Override
     			public Boolean apply(By loc) {
-    				return webDriver.findElements(loc).size() > 1 && webDriver.findElements(loc).get(0).isDisplayed();	
+    				return webDriver.findElements(loc).get(0).isDisplayed();	
     			}
     		});
     	

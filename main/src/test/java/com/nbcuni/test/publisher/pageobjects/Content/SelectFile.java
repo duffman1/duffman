@@ -17,7 +17,6 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
@@ -48,8 +47,7 @@ public class SelectFile {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//iframe[@id='mediaBrowser']")
-    private WebElement SelectFile_Frm;
+    private By SelectFile_Frm = By.xpath("//iframe[@id='mediaBrowser']");
     
     private By Upload_Lnk = By.xpath("//a[contains(text(), 'Upload')]");
     
@@ -146,7 +144,7 @@ public class SelectFile {
     	for (int I = 0; I <= config.getConfigValueInt("WaitForWaitTime"); I++) {
     		try {
     			
-    			webDriver.switchTo().frame(SelectFile_Frm);
+    			webDriver.switchTo().frame(waitFor.ElementPresent(SelectFile_Frm));
     			webDriver.findElement(Upload_Lnk).getLocation();
     			break;
     		}
@@ -421,6 +419,12 @@ public class SelectFile {
                 
     }
     
+    public void WaitForSelectFileFrameClose() throws Exception {
+    	
+    	waitFor.ElementNotVisible(SelectFile_Frm);
+    	
+    }
+    
     public void ClickSaveBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
@@ -455,8 +459,8 @@ public class SelectFile {
     	}
     	this.VerifyFileImagePresent("HanSolo");
     	this.ClickSaveBtn();
-    	Overlay overlay = new Overlay(webDriver);
-    	overlay.switchToDefaultContent(true);
+    	webDriver.switchTo().defaultContent();
+    	this.WaitForSelectFileFrameClose();
     }
     
 }

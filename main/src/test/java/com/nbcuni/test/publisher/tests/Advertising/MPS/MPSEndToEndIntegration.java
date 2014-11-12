@@ -39,6 +39,7 @@ public class MPSEndToEndIntegration extends ParentTest {
             mpsConfiguration.CheckSendQueryStringsCbx();
             mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.ClickSaveConfigurationBtn();
+            contentParent.VerifyMessageStatus("The configuration options have been saved.");
             mpsConfiguration.ClickSyncAdBlocksBtn();
             contentParent.WaitForThrobberNotPresent();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");

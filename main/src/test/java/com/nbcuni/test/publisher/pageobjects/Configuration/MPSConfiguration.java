@@ -13,7 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com MPS Configuration Library. Copyright
@@ -26,13 +28,16 @@ public class MPSConfiguration {
 
 	private Driver webDriver;
 	private WebDriverWait wait;
+	private WaitFor waitFor;
+	private Config config;
 	
     //PAGE OBJECT CONSTRUCTOR    
     public MPSConfiguration(Driver webDriver) {
     	this.webDriver = webDriver;
+    	config = new Config();
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
-    	
+    	waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
     
     //PAGE OBJECT IDENTIFIERS    
@@ -88,8 +93,7 @@ public class MPSConfiguration {
     @FindBy(how = How.XPATH, using ="//a[text()='[mps:cat-pattern:?]']")
     private WebElement MPSCatProperty_Lnk;
     
-    @FindBy(how = How.XPATH, using ="//input[@value='Sync Ad Blocks']")
-    private WebElement SyncAdBlocks_Btn;
+    private By SyncAdBlocks_Btn = By.xpath("//input[@value='Sync Ad Blocks']");
     
     @FindBy(how = How.XPATH, using ="//div[@class='throbber']")
     private WebElement Spinner_Img;
@@ -232,8 +236,8 @@ public class MPSConfiguration {
     public void ClickSyncAdBlocksBtn() throws Exception { 
     	
     	Reporter.log("Click the 'Sync Ad Blocks' button.");
-    	SyncAdBlocks_Btn.click();
-    	Thread.sleep(2000); //TODO - add dynamic wait for the spinny to not be present
+    	waitFor.ElementVisible(SyncAdBlocks_Btn).click();
+    	Thread.sleep(1000);
     }
 
     public void ClickSaveConfigurationBtn() throws Exception { 
