@@ -36,9 +36,6 @@ public class MPXMedia {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//a[text()='mpxMedia']")
-    private WebElement MPXMedia_Lnk;
-    
     @FindBy(how = How.XPATH, using = "//fieldset[@id='edit-video-sync']//a")
     private WebElement SyncMPXMedia_Lnk;
     
@@ -87,12 +84,6 @@ public class MPXMedia {
     		SyncMPXMedia_Lnk.click();
     	}
     	
-    }
-
-    public void ClickMPXMediaLnk() throws Exception {
-    	
-    	Reporter.log("Click the 'MPX Media' link.");
-    	MPXMedia_Lnk.click();
     }
 
     public void ClickSyncMPXMediaNowLnk() throws Exception {

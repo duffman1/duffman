@@ -13,6 +13,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.SitePreview.SitePreview;
@@ -96,7 +97,8 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          Reporter.log("STEP 9");
          applib.switchToParentWindow(parentWindow);
          WorkBench workbench = new WorkBench(webDriver);
-         workbench.VerifyWorkBenchTabPresent("Edit");
+         SearchFor searchFor = new SearchFor(webDriver);
+         searchFor.ClickSearchTitleLnk(dynamicQueueTitle1);
          workbench.ClickWorkBenchTab("Edit");
          String dynamicQueueTitle2 = random.GetCharacterString(15) +"_REVISION2"; 
          addDynamicQueue.EnterTitle(dynamicQueueTitle2); 

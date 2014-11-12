@@ -13,7 +13,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
@@ -37,7 +36,7 @@ public class ErrorChecking {
         this.webDriver = webDriver;
         config = new Config();
         PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 10);
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -47,8 +46,8 @@ public class ErrorChecking {
     @FindBy(how = How.XPATH, using = "//div[@class='messages error']/ul")
     private WebElement MoreThanOneError_Ctr;
     
-    private WebElement DisabledPlayerError_Ctr(String playerTitle) {
-    	return webDriver.findElement(By.xpath("//div[@class='messages error']/ul/li//em[contains(text(), '" + playerTitle + "')]/../.."));
+    private By DisabledPlayerError_Ctr(String playerTitle) {
+    	return By.xpath("//div[@class='messages error']/ul/li//em[contains(text(), '" + playerTitle + "')]/../..");
     }
     
     private List<WebElement> Error_Itms() {
@@ -72,31 +71,19 @@ public class ErrorChecking {
     
     public void VerifyMPXPlayerDisabled(String playerTitle) throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), 
+    			"An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.");
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), 
+    			"To change its status in MPX, log into mpx.theplatform");
     	
-    	Reporter.log("Verify that the disabled player text is present for player titled '" + playerTitle + "'.");
-    	String disabledPlayerTxt = DisabledPlayerError_Ctr(playerTitle).getText();
-    	if (!disabledPlayerTxt.contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.")) {
-    		Assert.fail("Disabled player text not present for player titled '" + playerTitle + "'.");
-    	}
-    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in MPX, log into mpx.theplatform"));
-    	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyMPXPlayerDisabledAndUnpublished(String playerTitle) throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), "An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished.");
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), "To change its status in Publisher, click here");
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), "To change its status in MPX, log into mpx.theplatform");
     	
-    	Reporter.log("Verify that the disabled and unpublished player text is present for player titled '" + playerTitle + "'.");
-    	String disabledPlayerTxt = DisabledPlayerError_Ctr(playerTitle).getText();
-    	if (!disabledPlayerTxt.contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished.")) {
-    		Assert.fail("Disabled and unpublished player text not present for player titled '" + playerTitle + "'.");
-    	}
-    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in Publisher, click here"));
-    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in MPX, log into mpx.theplatform"));
-    	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyNoMessageErrorsPresent() throws Exception{

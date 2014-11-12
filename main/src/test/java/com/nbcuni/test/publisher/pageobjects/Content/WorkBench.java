@@ -77,7 +77,7 @@ public class WorkBench {
     
     public void VerifyWorkBenchTabPresent(String tabName) throws Exception {  	
     	 	
-    	Reporter.log("Verify the '" + tabName + "' is present in the work bench.");
+    	Reporter.log("Verify the '" + tabName + "' tab is present in the work bench.");
     	WorkBench_Tab(tabName).isDisplayed(); 	
     }
 

@@ -1,7 +1,5 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import java.util.concurrent.TimeUnit;
-
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
@@ -11,10 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 /*********************************************
@@ -28,7 +23,6 @@ public class Revisions {
 
 	private Driver webDriver;
 	private Config config;
-    private WebDriverWait wait;
     private WaitFor waitFor;
     
 	//PAGE OBJECT CONSTRUCTOR
@@ -36,8 +30,7 @@ public class Revisions {
         this.webDriver = webDriver;
         config = new Config();
         PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
-        waitFor = new WaitFor(webDriver, 10);
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
 	
 	//PAGE OBJECT IDENTIFIERS
@@ -60,24 +53,24 @@ public class Revisions {
 		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]"));
 	}
 	
-	private WebElement EditExtendMenu_Btn(String contentItemTtl) {
-		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='operations']"));
+	private By EditExtendMenu_Btn(String contentItemTtl) {
+		return By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='operations']");
 	}
 	
-	private WebElement EditMenuDelete_Btn(String contentItemTtl) {
-		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Delete']"));
+	private By EditMenuDelete_Btn(String contentItemTtl) {
+		return By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Delete']");
 	}
 	
-	private WebElement EditMenu_Btn(String contentItemTtl) {
-		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Edit']"));
+	private By EditMenu_Btn(String contentItemTtl) {
+		return By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Edit']");
 	}
 	
-	private WebElement ShareMenu_Btn(String contentItemTtl) {
-		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Share']"));
+	private By ShareMenu_Btn(String contentItemTtl) {
+		return By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Share']");
 	}
 	
-	private WebElement ScheduleMenu_Btn(String contentItemTtl) {
-		return webDriver.findElement(By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Schedule']"));
+	private By ScheduleMenu_Btn(String contentItemTtl) {
+		return By.xpath("//table[contains(@class, 'views-table')]//a[contains(text(), '" + contentItemTtl + "')]/../..//a[text()='Schedule']");
 	}
 	
 	
@@ -86,43 +79,43 @@ public class Revisions {
     	
     	Reporter.log("Click the 'Edit' extend menu button.");
     	Thread.sleep(500);
-    	EditExtendMenu_Btn(contentItemTtl).click();
+    	waitFor.ElementVisible(EditExtendMenu_Btn(contentItemTtl)).click();
     	Thread.sleep(500); //pauses before and after required - do not edit these sleep times.
     }
     
     public void ClickEditMenuDeleteBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Delete' button.");
-    	wait.until(ExpectedConditions.visibilityOf(EditMenuDelete_Btn(contentItemTtl))).click();
+    	waitFor.ElementVisible(EditMenuDelete_Btn(contentItemTtl)).click();
     }
     
     public void ClickEditMenuBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Edit' menu button.");
-    	EditMenu_Btn(contentItemTtl).click();
+    	waitFor.ElementVisible(EditMenu_Btn(contentItemTtl)).click();
     	Thread.sleep(250); //slight pause required here for successful frame switch
     }
 
     public void ClickShareMenuBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Share' menu button.");
-    	wait.until(ExpectedConditions.visibilityOf(ShareMenu_Btn(contentItemTtl))).click();
+    	waitFor.ElementVisible(ShareMenu_Btn(contentItemTtl)).click();
     }
     
     public void ClickScheduleMenuBtn(String contentItemTtl) throws Exception {
     	
     	Reporter.log("Click the 'Schedule' menu button.");
-    	wait.until(ExpectedConditions.visibilityOf(ScheduleMenu_Btn(contentItemTtl))).click();
+    	waitFor.ElementVisible(ScheduleMenu_Btn(contentItemTtl)).click();
     }
     
     public void VerifyContentItemEditDelete(String contentItemTtl) throws Exception {
     	
     	this.ClickEditExtendMenuBtn(contentItemTtl);
     	Reporter.log("Verify Edit menu 'Edit' button is present.");
-    	wait.until(ExpectedConditions.visibilityOf(EditMenu_Btn(contentItemTtl)));
+    	waitFor.ElementVisible(EditMenu_Btn(contentItemTtl));
     	
     	Reporter.log("Verify Edit menu 'Delete' buttton is present.");
-    	Assert.assertTrue(EditMenuDelete_Btn(contentItemTtl).isDisplayed());
+    	waitFor.ElementVisible(EditMenuDelete_Btn(contentItemTtl));
     	
     }
 
@@ -131,21 +124,9 @@ public class Revisions {
     	Reporter.log("Wait for the content item titled '" + contentItemTtl + "' to be present in revision list.");
     	ContentItem_Ttl(contentItemTtl).isDisplayed();
     	
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-    	boolean elPresent = true;
-    	try {
-    		
-    		EditExtendMenu_Btn(contentItemTtl).isDisplayed();
-    		elPresent = true;
-    	}
-    	catch (Exception e) {
+    	Reporter.log("Verify the 'Edit/Delete' buttons are not present.");
+    	waitFor.ElementNotPresent(EditExtendMenu_Btn(contentItemTtl));
     	
-    		elPresent = false;
-    	}
-    	if (elPresent == true) {
-    		Assert.fail("Content item Edit/Delete button present when it should not be");
-    	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void ClickUpdateStateBtn() throws Exception {    	
@@ -157,7 +138,7 @@ public class Revisions {
     public void ClickRevisionTab() throws Exception{
     	
     	Reporter.log("Click the 'Revision' link.");
-    	wait.until(ExpectedConditions.visibilityOf(Revision_Lnk));
+    	waitFor.ElementVisible(Revision_Lnk);
     	Thread.sleep(500);
     	Revision_Lnk.click();
     }

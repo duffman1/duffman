@@ -20,7 +20,6 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
 public class NotificationPlayerUnavailability extends ParentTest{
@@ -96,23 +95,10 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 MPXPlayers.ClickSyncMPXPlayersLnk();
                 MPXPlayers.ClickSyncMPXPlayersNowLnk();
                 contentParent.VerifyMessageStatus("Processed players manually for all accounts");
-        	    SearchFor searchFor = new SearchFor(webDriver);
-        	    searchFor.EnterTitle(playerTitle);
-                searchFor.ClickApplyBtn();
-                Cron cron = new Cron(webDriver);
-                if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
-        	    	//re-run cron as sometimes media assets aren't in the first ingested queue
-        	    	cron.RunCron();
-        	    	navigation.Content("Files", "mpxPlayers");
-            	    searchFor.EnterTitle(playerTitle);
-                    searchFor.ClickApplyBtn();
-                    if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
-            	    	Assert.fail("MPX Player has not been successfully ingested into pub 7."); 
-            	    }
-        	    }
-                
+        	    
         	    //Step 2a
                 navigation.Content("Files", "mpxMedia");
+                SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle("Automation");
         	    searchFor.SelectStatus("Published");
         	    searchFor.SelectMPXMediaSource("DB TV");
@@ -143,24 +129,15 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	applib.openApplication();
             	
             	//Step 5
+            	Cron cron = new Cron(webDriver);
             	cron.RunCron();
             	
         	    //Step 6
             	navigation.Content("Files", "mpxPlayers");
         	    
-        	    //Step 7 - note that multiple cron runs are sometimes necessary for disabled player to be present
-        	    ErrorChecking errorChecking = new ErrorChecking(webDriver);
-        	    try {
-        	    	errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);	
-        	    }
-        	    catch (AssertionError | NoSuchElementException ex) {
-        	    	
-        	    	//re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    	cron.RunCron();
-        	    	navigation.Content("Files", "mpxPlayers");
-        	    	errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
-        	   
-        	    }
+        	    //Step 7
+            	ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        	    errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);	
         	    
                 //Step 8
                 searchFor.EnterTitle(playerTitle);
@@ -178,8 +155,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 
                 //Step 10
-                MPXMedia mpxMedia = new MPXMedia(webDriver);
-                mpxMedia.ClickMPXMediaLnk();
+                navigation.ClickSecondaryTabNavLnk("mpxMedia");
                 errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 
                 //Step 11
@@ -187,6 +163,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 
                 //Step 12
+                MPXMedia mpxMedia = new MPXMedia(webDriver);
                 mpxMedia.ClickMPXPlayerUnpublishedHereLnk(playerTitle);
                 publishingOptions.ClickPublishingOptionsLnk();
                 publishingOptions.CheckPublishedCbx();
@@ -219,15 +196,8 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    
         	    //Step 17
             	navigation.Content("Files", "mpxPlayers");
-        	    try {
-        	    	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished."));
-        	    }
-        	    catch (AssertionError e) {
-        	    	//re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    	cron.RunCron();
-        	    	navigation.Content("Files", "mpxPlayers");
-        	    	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished."));
-        	    }
+        	    contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished."));
+        	    
         	}
         	else {
         		Assert.fail("DB TV account must be configured.");
