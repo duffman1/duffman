@@ -43,10 +43,11 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
-        applib.openSitePage("/admin/content/queues/add/promo_queue");
+        navigation.Content("Queues");
+        Queues queues = new Queues(webDriver);
+        queues.ClickAddPromoQueueLnk();
         
         //Step 3
-        Queues queues = new Queues(webDriver);
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.EnterQueueItem(postTitle, "1");
@@ -79,7 +80,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         //Step 9
         scheduleQueue.ClickScheduleBtn();
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved.");
-        applib.openSitePage("/admin/content/queues");
+        navigation.Content("Queues");
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
         scheduleQueue.ClickScheduleTab();

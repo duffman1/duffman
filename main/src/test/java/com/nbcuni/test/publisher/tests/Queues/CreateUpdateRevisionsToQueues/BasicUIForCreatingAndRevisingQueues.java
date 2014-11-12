@@ -43,10 +43,11 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        applib.openSitePage("/admin/content/queues/add/promo_queue");
+        navigation.Content("Queues");
+        Queues queues = new Queues(webDriver);
+        queues.ClickAddPromoQueueLnk();
         
         //Step 3
-        Queues queues = new Queues(webDriver);
         queues.ClickSaveQueueBtn();
         ErrorChecking errorChecking = new ErrorChecking(webDriver);
         errorChecking.VerifyAllRequiredFields(Arrays.asList("Title"));

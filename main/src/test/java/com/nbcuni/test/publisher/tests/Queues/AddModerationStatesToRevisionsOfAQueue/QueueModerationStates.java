@@ -44,10 +44,11 @@ public class QueueModerationStates extends ParentTest{
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
-        applib.openSitePage("/admin/content/queues/add/promo_queue");
+        navigation.Content("Queues");
         
         //Step 3
         Queues queues = new Queues(webDriver);
+        queues.ClickAddPromoQueueLnk();
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.EnterQueueItem(postTitle, "1");
@@ -74,7 +75,7 @@ public class QueueModerationStates extends ParentTest{
         //Step 7
         
         //Step 8
-        applib.openSitePage("/admin/content/queues");
+        navigation.Content("Queues");
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
         queuesRevisionList.ClickRevisionsLnk();

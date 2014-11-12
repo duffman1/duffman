@@ -36,7 +36,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        applib.openSitePage("/admin/content/queues");
+        navigation.Content("Queues");
         
         //Step 3
         Queues queues = new Queues(webDriver);
