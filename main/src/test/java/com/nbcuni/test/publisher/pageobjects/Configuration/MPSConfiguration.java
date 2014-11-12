@@ -87,6 +87,9 @@ public class MPSConfiguration {
     @FindBy(how = How.XPATH, using ="//fieldset[@id='edit-token-help']/legend//a")
     private WebElement ReplacementPatterns_Lnk;
     
+    @FindBy(how = How.LINK_TEXT, using ="Browse available tokens.")
+    private WebElement BrowseAvailableTokens_Lnk;
+    
     @FindBy(how = How.XPATH, using ="//td[contains(text(), 'MPS')][1]/span[@class='expander']")
     private WebElement MPSExpander_Lnk;
     
@@ -210,6 +213,13 @@ public class MPSConfiguration {
     	
     	Reporter.log("Click the 'REPLACEMENT PATTERNS' link.");
     	ReplacementPatterns_Lnk.click();
+    	Thread.sleep(1000);
+    }
+    
+    public void ClickBrowseAvailableTokensLnk() throws Exception { 
+    	
+    	Reporter.log("Click the 'Browse available tokens' link.");
+    	wait.until(ExpectedConditions.visibilityOf(BrowseAvailableTokens_Lnk)).click();
     	Thread.sleep(1000);
     }
     
