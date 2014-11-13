@@ -17,8 +17,9 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
-public class CollectEditorialActivity extends ParentTest{
+public class CollectEditorialActivity extends ParentTest {
 	
     /*************************************************************************************
      * TEST CASE - TC5071
@@ -27,6 +28,8 @@ public class CollectEditorialActivity extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void CollectEditorialActivity_TC5071() throws Exception {
          
+    		webDriver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+        
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
@@ -48,10 +51,10 @@ public class CollectEditorialActivity extends ParentTest{
         	
         	Reporter.log("STEP 4");
         	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
-        	String postTitle = createDefaultContent.Post("Draft");
+        	createDefaultContent.Post("Draft");
         	
         	Reporter.log("STEP 5");
-        	navigation.Reports("Entity Tracker");
+        	navigation.Reports("Entity tracker report");
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	Date currentDate = new Date();
@@ -59,19 +62,21 @@ public class CollectEditorialActivity extends ParentTest{
         	entityTrackerReports.EnterFromDate(pub7DateFormat.format(currentDate));
         	entityTrackerReports.EnterToDate(pub7DateFormat.format(currentDate));
         	entityTrackerReports.ClickApplyBtn();
-        	overlay.switchToDefaultContent(true);
         	
         	Reporter.log("STEP 6 - N/A");
         	
         	Reporter.log("STEP 7");
         	ErrorChecking errorChecking = new ErrorChecking(webDriver);
         	errorChecking.VerifyNoMessageErrorsPresent();
-        	contentParent.VerifyPageContentPresent(Arrays.asList(postTitle, "Created", "Post"));
+        	entityTrackerReports.ClickParentArrayElementLnk();
+        	entityTrackerReports.ClickChildArrayElementLnk();
+        	Integer childNodeID = entityTrackerReports.GetChildNodeId();
+        	entityTrackerReports.ClickChildArrayInfoElementLnk();
+        	String childTitle = entityTrackerReports.GetChildTitle();
         	
         	Reporter.log("STEP 8");
-        	entityTrackerReports.ClickContentLnk(postTitle);
-        	contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
-        	
+        	applib.openSitePage("/node/" + childNodeID.toString());
+        	contentParent.VerifyPageContentPresent(Arrays.asList(childTitle));
         	//TODO - some additional steps as time allows
             
     }

@@ -2,13 +2,12 @@ package com.nbcuni.test.publisher.pageobjects.Reports;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Entity Tracker ReportsLibrary. Copyright
@@ -18,54 +17,90 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class EntityTrackerReports {
 		
-	private Driver webDriver;
+	private Config config;
+	private WaitFor waitFor;
+	private Interact interact;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public EntityTrackerReports(Driver webDriver) {
-		this.webDriver = webDriver;
-		PageFactory.initElements(webDriver, this);
-		
+		config = new Config();
+		Integer timeout = config.getConfigValueInt("WaitForWaitTime");
+		waitFor = new WaitFor(webDriver, timeout);
+		interact = new Interact(webDriver, timeout);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
-	@FindBy(how = How.ID, using ="edit-timestamp-datepicker-popup-0")
-	private WebElement From_Txb;
+	private By From_Txb = By.id("edit-from-datepicker-popup-0");
 	
-	@FindBy(how = How.ID, using ="edit-timestamp-1-datepicker-popup-0")
-	private WebElement To_Txb;
+	private By To_Txb = By.id("edit-to-datepicker-popup-0");
 	
-	@FindBy(how = How.ID, using ="edit-submit-entity-tracker")
-	private WebElement Apply_Btn;
+	private By Apply_Btn = By.id("edit-submit");
 	
-	private WebElement Title_Lnk(String title) {
-		return webDriver.findElement(By.xpath("//a[text()='" + title + "']"));
-	}
+	private By ParentArrayElement_Lnk = By.xpath("(//div[contains(@class, 'krumo-element krumo-expand')]//em)[1][contains(text(), 'Array')]");
+	
+	private By ChildArrayElement_Lnk = By.xpath("(//a[@class='krumo-name'])[2]");
+	
+	private By ChildArrayElementInfo_Lnk = By.xpath("(//a[@class='krumo-name'])[2]/../..//a[text()='info']");
+	
+	private By ChildArrayElementInfoTitle_Lnk = By.xpath("((//a[@class='krumo-name'])[2]/../..//a[text()='info']/../..//a[contains(text(), 'title')]/..//strong)[2]");
 	
 	
 	//PAGE OBJECT METHODS
 	public void EnterFromDate(String fromDate) throws Exception {
-
+		
 		Reporter.log("Enter '" + fromDate + "' in the 'From' date picker.");
-		From_Txb.sendKeys(fromDate + Keys.TAB);
+		interact.Type(waitFor.ElementVisible(From_Txb), fromDate + Keys.TAB);
+		//From_Txb.sendKeys(fromDate + Keys.TAB);
+		
 	}
-
+	
 	public void EnterToDate(String toDate) throws Exception {
-
+		
 		Reporter.log("Enter '" + toDate + "' in the 'To' date picker.");
-		To_Txb.sendKeys(toDate + Keys.TAB);
+		interact.Type(waitFor.ElementVisible(To_Txb), toDate + Keys.TAB);
+		//To_Txb.sendKeys(toDate + Keys.TAB);
+		
 	}
 	
 	public void ClickApplyBtn() throws Exception {
-
+	
 		Reporter.log("Click the 'Apply' button.");
-		Apply_Btn.click();
-	}
-	
-	public void ClickContentLnk(String title) throws Exception {
-		
-		Reporter.log("Click the entity tracker link for content title '" + title + "'.");
-		Title_Lnk(title).click();
+		interact.Click(waitFor.ElementVisible(Apply_Btn));
 		
 	}
 	
+	public void ClickParentArrayElementLnk() throws Exception {
+	
+		Reporter.log("Click the '...Array, # elements' link.");
+		interact.Click(waitFor.ElementVisible(ParentArrayElement_Lnk));
+		
+	}
+	
+	public void ClickChildArrayElementLnk() throws Exception {
+	
+		Reporter.log("Click the child content node link.");
+		interact.Click(waitFor.ElementVisible(ChildArrayElement_Lnk));
+		
+	}
+	
+	public Integer GetChildNodeId() throws Exception {
+		
+		Reporter.log("Get the child node content id number.");
+		return Integer.parseInt(waitFor.ElementVisible(ChildArrayElement_Lnk).getText());
+		
+	}
+	
+	public void ClickChildArrayInfoElementLnk() throws Exception {
+	
+		Reporter.log("Click the child content node 'info' link.");
+		interact.Click(waitFor.ElementVisible(ChildArrayElementInfo_Lnk));
+		
+	}
+	
+	public String GetChildTitle() throws Exception {
+		
+		Reporter.log("Get the child node content id title.");
+		return waitFor.ElementVisible(ChildArrayElementInfoTitle_Lnk).getText();
+		
+	}
 }
