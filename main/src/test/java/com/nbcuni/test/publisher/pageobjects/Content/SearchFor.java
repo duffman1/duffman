@@ -2,11 +2,11 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -18,19 +18,21 @@ import java.util.List;
  * publisher.nbcuni.com Search Library. Copyright
  * 
  * @author Brandon Clark
- * @version 1.0 Date: January 2, 2014
+ * @version 1.1 Date: November 13, 2014
  *********************************************/
 
 public class SearchFor {
 
     private Config config;
     private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public SearchFor(Driver webDriver) {
         config = new Config();
-        PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+        Integer timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
    
     
@@ -96,38 +98,35 @@ public class SearchFor {
     public void EnterTitle(String title) throws Exception {
     	
     	Reporter.log("Enter title " + title + ".");
-    	WebElement el = waitFor.ElementVisible(Title_Txb);
-    	el.clear();
-    	el.sendKeys(title);
+    	interact.Type(waitFor.ElementVisible(Title_Txb), title);
+    	
     }
     
     public void EnterPublicID(String id) throws Exception {
     	
     	Reporter.log("Enter '" + id + "' in the 'Public ID' text box.");
-    	waitFor.ElementVisible(PublicID_Txb).sendKeys(id);
+    	interact.Type(waitFor.ElementVisible(PublicID_Txb), id);
     	
     }
     
     public void EnterUpdatedOnAfterDate(String date) throws Exception {
     	
     	Reporter.log("Enter '" + date + "' in the 'Updated On or After' text box.");
-    	WebElement el = waitFor.ElementVisible(UpdatedOnAfter_Txb);
-    	el.clear();
-    	el.sendKeys(date);
+    	interact.Type(waitFor.ElementVisible(UpdatedOnAfter_Txb), date);
     	
     }
     
     public void ClickApplyBtn() throws Exception {
     	
     	Reporter.log("Click the 'Apply' button.");
-    	waitFor.ElementVisible(Apply_Btn).click();
+    	interact.Click(waitFor.ElementVisible(Apply_Btn));
     	
     }
     
     public void ClickResetBtn() throws Exception {
     	
     	Reporter.log("Click the 'Reset' button.");
-    	waitFor.ElementVisible(Reset_Btn).click();
+    	interact.Click(waitFor.ElementVisible(Reset_Btn));
     	
     }
     
@@ -140,7 +139,8 @@ public class SearchFor {
     	
     	for (String result : resultSet) {
     		Reporter.log("Verify result '" + result + "' is present in the result set.");
-    		Assert.assertTrue(allResultTitles.contains(result), "Result '" + result + "' is not present in the search result set");
+    		Assert.assertTrue(allResultTitles.contains(result), "Result '" + result + "' is not present "
+    				+ "in the search result set");
     		
     	}
     }
@@ -148,7 +148,7 @@ public class SearchFor {
     public void ClickSearchTitleLnk(String title) throws Exception {
 
     	Reporter.log("Click the first search title link in the search result set.");
-    	waitFor.ElementVisible(SearchTitle_Lnk(title)).click();
+    	interact.Click(waitFor.ElementVisible(SearchTitle_Lnk(title)));
     	
     }
     
@@ -158,7 +158,7 @@ public class SearchFor {
     	WebElement img = waitFor.ElementVisible(SearchThumbnail_Img(title));
     	Assert.assertTrue(waitFor.ElementVisible(img).getAttribute("src").contains(imgName));
     	
-    	Reporter.log("Assert the the img is loaded and visible.");
+    	Reporter.log("Verify the the img is loaded and visible.");
     	waitFor.ImageVisible(img);
     	
     }
@@ -245,7 +245,7 @@ public class SearchFor {
     public void ClickSearchHeaderColumnLnk(String columnTxt) throws Exception {
     	
     	Reporter.log("Click the " + columnTxt + " column header link for column sorting.");
-    	waitFor.ElementVisible(ColumnHeader_Lnk(columnTxt)).click();
+    	interact.Click(waitFor.ElementVisible(ColumnHeader_Lnk(columnTxt)));
     	
     }
     
@@ -276,13 +276,15 @@ public class SearchFor {
     public void SelectMPXPlayerAccount(String accountOption) throws Exception {
     	
     	Reporter.log("Select the " + accountOption + " from the 'MPXPlayerAccount' select ddl.");
-    	new Select(waitFor.ElementVisible(MPXPlayerAccount_Ddl)).selectByVisibleText(accountOption);
+    	interact.Select(waitFor.ElementVisible(MPXPlayerAccount_Ddl), accountOption);
+    	
     }
     
     public void SelectMPXMediaSource(String accountOption) throws Exception {
     	
     	Reporter.log("Select the " + accountOption + " from the 'Source' select ddl.");
-    	new Select(waitFor.ElementVisible(MPXMediaSource_Ddl)).selectByVisibleText(accountOption);
+    	interact.Select(waitFor.ElementVisible(MPXMediaSource_Ddl), accountOption);
+    	
     }
     
     public void VerifyMPXResultSetSource(String account) throws Exception {
@@ -300,7 +302,7 @@ public class SearchFor {
     public void SelectStatus(String status) throws Exception {
     	
     	Reporter.log("Select the '" + status + "' from the 'MPX Status/Published' drop down list.");
-    	new Select(waitFor.ElementVisible(Status_Ddl)).selectByVisibleText(status);
+    	interact.Select(waitFor.ElementVisible(Status_Ddl), status);
     	
     }
     

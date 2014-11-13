@@ -83,6 +83,7 @@ public class MPSConfiguration {
     
     //PAGE OBJECT METHODS
     public void VerifyMPSCallParameters(List<String> parameters) throws Exception {
+    	
     	String mpsCallParams = waitFor.ElementPresent(MPSCall_Scr).getAttribute("innerHTML");
     	
     	for (String parameter : parameters) {

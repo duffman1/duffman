@@ -38,8 +38,7 @@ public class BasicInformation {
     
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//a/strong[text()='Basic Information']")
-    private WebElement BasicInformation_Tab;
+    private By BasicInformation_Tab = By.xpath("//a/strong[text()='Basic Information']");
     
     private By Title_Txb = By.xpath("//input[contains(@id, 'edit-title')]");
     

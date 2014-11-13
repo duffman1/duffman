@@ -17,7 +17,7 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
@@ -26,177 +26,90 @@
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Entity Tracker' check box is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Performance' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Entity tracker' link.]]>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Document Write' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Name' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Value' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/junkurl'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add content' link.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' link.]]>
+      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
     </line>
     <line>
-      <![CDATA[Enter '4826c8ac33b04a3' in the 'Title' text box.]]>
+      <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post 4826c8ac33b04a3 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Reports' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Entity tracker report' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '11/13/2014' in the 'From' date picker.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '11/13/2014' in the 'To' date picker.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6 - N/A]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the '...Array, # elements' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the child content node link.]]>
-    </line>
-    <line>
-      <![CDATA[Get the child node content id number.]]>
-    </line>
-    <line>
-      <![CDATA[Click the child content node 'info' link.]]>
-    </line>
-    <line>
-      <![CDATA[Get the child node content id title.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/node/11396'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '4826c8ac33b04a3' is present on the page.]]>
+      <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="131483" started-at="2014-11-13T21:00:07Z" finished-at="2014-11-13T21:02:19Z">
+  <suite name="Default suite" duration-ms="29731" started-at="2014-11-13T22:39:10Z" finished-at="2014-11-13T22:39:40Z">
     <groups>
       <group name="full">
-        <method signature="CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@559590fc]" name="CollectEditorialActivity_TC5071" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity"/>
+        <method signature="AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@1781735b]" name="AddMPSCallsToErrorPages_TC4950" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
       </group> <!-- full -->
+      <group name="mps">
+        <method signature="AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@1781735b]" name="AddMPSCallsToErrorPages_TC4950" class="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages"/>
+      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="131483" started-at="2014-11-13T21:00:07Z" finished-at="2014-11-13T21:02:19Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@559590fc]" name="suiteSetup" is-config="true" duration-ms="23" started-at="2014-11-13T16:00:07Z" finished-at="2014-11-13T16:00:07Z">
+    <test name="Default test" duration-ms="29731" started-at="2014-11-13T22:39:10Z" finished-at="2014-11-13T22:39:40Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@1781735b]" name="suiteSetup" is-config="true" duration-ms="28" started-at="2014-11-13T17:39:10Z" finished-at="2014-11-13T17:39:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@559590fc]" name="startSelenium" is-config="true" duration-ms="3483" started-at="2014-11-13T16:00:07Z" finished-at="2014-11-13T16:00:11Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@1781735b]" name="startSelenium" is-config="true" duration-ms="3521" started-at="2014-11-13T17:39:10Z" finished-at="2014-11-13T17:39:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity.CollectEditorialActivity_TC5071() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@559590fc]" name="CollectEditorialActivity_TC5071" duration-ms="127411" started-at="2014-11-13T16:00:11Z" finished-at="2014-11-13T16:02:18Z">
+        <test-method status="PASS" signature="AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@1781735b]" name="AddMPSCallsToErrorPages_TC4950" duration-ms="25632" started-at="2014-11-13T17:39:14Z" finished-at="2014-11-13T17:39:39Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -214,7 +127,7 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
@@ -223,170 +136,80 @@
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Entity Tracker' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Entity Tracker' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Entity Tracker' check box is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Performance' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Entity tracker' link.]]>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Document Write' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Name' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Value' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'The configuration options have been saved.' is present on the page.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/junkurl'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add content' link.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' link.]]>
+              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
             </line>
             <line>
-              <![CDATA[Enter '4826c8ac33b04a3' in the 'Title' text box.]]>
+              <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post 4826c8ac33b04a3 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Reports' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Entity tracker report' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '11/13/2014' in the 'From' date picker.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '11/13/2014' in the 'To' date picker.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6 - N/A]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the '...Array, # elements' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the child content node link.]]>
-            </line>
-            <line>
-              <![CDATA[Get the child node content id number.]]>
-            </line>
-            <line>
-              <![CDATA[Click the child content node 'info' link.]]>
-            </line>
-            <line>
-              <![CDATA[Get the child node content id title.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/node/11396'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '4826c8ac33b04a3' is present on the page.]]>
+              <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CollectEditorialActivity_TC5071 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@559590fc]" name="stopSelenium" is-config="true" duration-ms="578" started-at="2014-11-13T16:02:18Z" finished-at="2014-11-13T16:02:19Z">
+        </test-method> <!-- AddMPSCallsToErrorPages_TC4950 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@1781735b]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-11-13T17:39:39Z" finished-at="2014-11-13T17:39:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CollectEditorialActivity_TC5071 status=SUCCESS method=CollectEditorialActivity.CollectEditorialActivity_TC5071()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@559590fc] output=STEP 1]]]>
+                <![CDATA[[TestResult name=AddMPSCallsToErrorPages_TC4950 status=SUCCESS method=AddMPSCallsToErrorPages.AddMPSCallsToErrorPages_TC4950()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@1781735b] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity@559590fc]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-13T16:02:19Z" finished-at="2014-11-13T16:02:19Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages@1781735b]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-13T17:39:40Z" finished-at="2014-11-13T17:39:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity.CollectEditorialActivity -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

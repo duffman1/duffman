@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
@@ -90,6 +91,24 @@ public class Interact {
     				}
     				catch (WebDriverException e) { }
     				return elementTyped;	
+    			}
+    		});
+    }
+    
+    public void Select(final WebElement element, final String option) throws Exception {
+    	
+    	this.elementWait(element)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, WebDriverException.class))
+    		.withMessage("Element cannot be selected with option '" + option + "'.")
+    		.until(new Function<WebElement, Boolean>() {
+    			@Override
+    			public Boolean apply(WebElement ele) {
+    				Boolean elementSelected = false;
+    				try {
+    					new Select(ele).selectByVisibleText(option);
+    				}
+    				catch (WebDriverException e) { }
+    				return elementSelected;	
     			}
     		});
     }

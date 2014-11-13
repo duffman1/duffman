@@ -76,7 +76,7 @@ public class WaitFor {
     		.until(new Function<By, Boolean>() {
     			@Override
     			public Boolean apply(By loc) {
-    				return !webDriver.findElement(loc).getLocation().equals(0);	
+    				return webDriver.findElements(loc).size() > 0;
     			}
     		});
     	

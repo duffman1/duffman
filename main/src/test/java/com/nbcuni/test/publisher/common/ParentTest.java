@@ -93,7 +93,8 @@ public class ParentTest {
     	//Clear cache in the event of the very annoying state flow node error
     	try {
     		if (!result.isSuccess()) {
-    			if (result.getThrowable().getMessage().toString().contains("StateFlowNode")) {
+    			String errorMessage = result.getThrowable().getMessage().toString();
+    			if (errorMessage.contains("StateFlowNode") || errorMessage.contains("Draft")) {
     				applib.openApplication();
         			webDriver.switchTo().defaultContent();
         			FlushCache flushCache = new FlushCache(webDriver);
