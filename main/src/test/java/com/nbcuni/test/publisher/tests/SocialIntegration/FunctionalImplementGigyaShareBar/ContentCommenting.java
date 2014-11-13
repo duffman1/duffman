@@ -34,7 +34,7 @@ public class ContentCommenting extends ParentTest{
         navigation.Configuration("Gigya settings");
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Share");
-        GigyaSettings gigyaSettings = new GigyaSettings(webDriver, applib);
+        GigyaSettings gigyaSettings = new GigyaSettings(webDriver);
         gigyaSettings.EnterProviders("Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like");
         gigyaSettings.ClickGigyaAdvancedShareBarSettingsLnk();
         gigyaSettings.EnterAdvancedShowShareBarUISettings("wrap|true");

@@ -461,6 +461,7 @@ public class SelectFile {
     	this.ClickSaveBtn();
     	webDriver.switchTo().defaultContent();
     	this.WaitForSelectFileFrameClose();
+    	
     }
     
 }

@@ -167,7 +167,7 @@ public class WaitFor {
     		.until(new Function<By, Boolean>() {
     			@Override
     			public Boolean apply(By loc) {
-    				return webDriver.findElements(loc).get(0).isDisplayed();	
+    				return webDriver.findElement(loc).isDisplayed();	
     			}
     		});
     	
@@ -264,6 +264,22 @@ public class WaitFor {
     		});
     	
     	return element;
+    }
+    
+    public WebElement ElementNotContainsText(final By locator, final String text) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, 
+    				ElementNotVisibleException.class))
+    		.withMessage("Text '" + text + "' is still present in element.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return !webDriver.findElement(loc).getText().contains(text);
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
     }
     
     public void TitleContains(final String text) throws Exception {

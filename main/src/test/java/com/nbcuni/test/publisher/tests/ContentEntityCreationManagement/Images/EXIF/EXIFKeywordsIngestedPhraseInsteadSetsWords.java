@@ -131,6 +131,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
         	selectFile.VerifyFileImagePresent("NUP_155306_0046");
         	selectFile.ClickSaveBtn();
+        	selectFile.WaitForSelectFileFrameClose();
         	webDriver.switchTo().defaultContent();
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");

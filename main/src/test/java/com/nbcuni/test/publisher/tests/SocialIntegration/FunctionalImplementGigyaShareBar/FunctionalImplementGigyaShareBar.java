@@ -38,7 +38,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         //Step 4
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Share");
-        GigyaSettings gigyaSettings = new GigyaSettings(webDriver, applib);
+        GigyaSettings gigyaSettings = new GigyaSettings(webDriver);
         gigyaSettings.EnterProviders("Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like");
         gigyaSettings.ClickGigyaAdvancedShareBarSettingsLnk();
         gigyaSettings.EnterAdvancedShowShareBarUISettings("wrap|true");

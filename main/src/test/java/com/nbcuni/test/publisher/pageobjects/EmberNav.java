@@ -6,6 +6,7 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
@@ -18,16 +19,17 @@ import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
 public class EmberNav {
 
-    private Driver webDriver;
     private WaitFor waitFor;
     private ErrorChecking errorChecking;
     private Config config;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public EmberNav(Driver webDriver) {
-    	this.webDriver = webDriver;
     	config = new Config();
-    	waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+    	Integer timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     	errorChecking = new ErrorChecking(webDriver);
     	
     }
@@ -68,6 +70,7 @@ public class EmberNav {
     public void ClickHomeLnk() throws Exception {
     	
     	Reporter.log("Click the 'Home' link.");
+    	Thread.sleep(500);
     	waitFor.ElementVisible(Home_Lnk).click();
     	
     }
@@ -76,7 +79,8 @@ public class EmberNav {
     	
     	if (!waitFor.ElementPresent(Content_Lnk).isDisplayed()) {
     		Reporter.log("Click the 'Menu' link to show navigation menu items.");
-    		webDriver.findElement(Menu_Lnk).click();
+    		Thread.sleep(500);
+    		interact.Click(waitFor.ElementVisible(Menu_Lnk));
     	}
     	
     	waitFor.ElementVisible(Content_Lnk);
@@ -96,9 +100,9 @@ public class EmberNav {
     public void ClickMainMenuLnk(String menuLnkTxt) throws Exception {
     	
     	Reporter.log("Click the '" + menuLnkTxt + "' menu link.");
-    	waitFor.ElementVisible(MainMenuNav_Lnk(menuLnkTxt));
+    	WebElement ele = waitFor.ElementVisible(MainMenuNav_Lnk(menuLnkTxt));
     	Thread.sleep(500);
-    	waitFor.ElementVisible(MainMenuNav_Lnk(menuLnkTxt)).click();
+    	interact.Click(ele);
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -106,7 +110,9 @@ public class EmberNav {
     public void ClickAddContentLnk() throws Exception {
     	
     	Reporter.log("Click the 'Add content' link.");
-    	waitFor.ElementVisible(AddContent_Lnk).click();
+    	WebElement ele = waitFor.ElementVisible(AddContent_Lnk);
+    	Thread.sleep(500);
+    	interact.Click(ele);
     	
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
@@ -115,7 +121,9 @@ public class EmberNav {
     public void ClickAdminLnkByTxtLnk(String lnkTxt) throws Exception {
     	
     	Reporter.log("Click the '" + lnkTxt + "' link.");
-    	waitFor.ElementVisible(AdminLnkByTxt_Lnk(lnkTxt)).click();
+    	WebElement ele = waitFor.ElementVisible(AdminLnkByTxt_Lnk(lnkTxt));
+    	Thread.sleep(500);
+    	interact.Click(ele);
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -123,7 +131,9 @@ public class EmberNav {
     public void ClickPrimaryTabNavLnk(String lnkTxt) throws Exception {
     	
     	Reporter.log("Click the primary nav '" + lnkTxt + "'.");
-    	waitFor.ElementVisible(TabBar_Lnk(lnkTxt)).click();
+    	WebElement ele = waitFor.ElementVisible(TabBar_Lnk(lnkTxt));
+    	Thread.sleep(500);
+    	interact.Click(ele);
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -131,7 +141,9 @@ public class EmberNav {
     public void ClickSecondaryTabNavLnk(String lnkTxt) throws Exception {
     	
     	Reporter.log("Click the secondary nav '" + lnkTxt + "'.");
-    	waitFor.ElementVisible(SecondaryTabBar_Lnk(lnkTxt)).click();
+    	WebElement ele = waitFor.ElementVisible(SecondaryTabBar_Lnk(lnkTxt));
+    	Thread.sleep(500);
+    	interact.Click(ele);
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -140,14 +152,16 @@ public class EmberNav {
     	
     	WebElement ele = waitFor.ElementPresent(ActiveUserMenu_Lnk);
     	Reporter.log("Click the activer user menu link for logged in user '" + ele.getText() + "'.");
-    	ele.click();
+    	interact.Click(ele);
     	
     }
     
     public void ClickMenuSubNavLnk(String lnkTxt) throws Exception {
     	
     	Reporter.log("Click the menu sub nav '" + lnkTxt + "' link.");
-    	waitFor.ElementPresent(MenuSubNav_Lnk(lnkTxt)).click();
+    	WebElement ele = waitFor.ElementVisible(MenuSubNav_Lnk(lnkTxt));
+    	Thread.sleep(500);
+    	interact.Click(ele);
     	
     }
     

@@ -3,21 +3,17 @@ package com.nbcuni.test.publisher.pageobjects.Logo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
 /*********************************************
@@ -30,124 +26,95 @@ import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 public class Logos {
 
 	private Driver webDriver;
-	private WebDriverWait wait;
 	private Config config;
+	private Interact interact;
+	private WaitFor waitFor;
 	private Delete delete;
 	
     //PAGE OBJECT CONSTRUCTOR
     public Logos(Driver webDriver, AppLib applib) {
     	this.webDriver = webDriver;
-    	PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
         config = new Config();
+        Integer timeout = config.getConfigValueInt("WaitForWaitTime");
+        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webDriver, timeout);
         delete = new Delete(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.LINK_TEXT, using = "Add Logo")
-    private WebElement AddLogo_Lnk;
+    private By AddLogo_Lnk = By.linkText("Add Logo");
     
-    @FindBy(how = How.CSS, using = "img[alt='Home']")
-    private WebElement HomeLogo_Img;
+    private By HomeLogo_Img = By.cssSelector("img[alt='Home']");
     
-    private List<WebElement> AllLogo_Ttls() {
-    	return webDriver.findElements(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(@class, 'title')]"));
+    private By AllLogo_Ttls = By.xpath("//div[@class='view-content']//tbody/tr/td[contains(@class, 'title')]");
+    
+    private By Logo_Img(String logoTitle) {
+    	return By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//img");
     }
     
-    private WebElement Logo_Img(String logoTitle) {
-    	return webDriver.findElement(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//img"));
-    }
-    
-    private WebElement EditExtendMenu_Btn(String logoTitle) {
-		return webDriver.findElement(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//a[text()='operations']"));
+    private By EditExtendMenu_Btn(String logoTitle) {
+		return By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//a[text()='operations']");
 	}
 	
-	private WebElement EditMenuDelete_Btn(String logoTitle) {
-		return webDriver.findElement(By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//a[text()='Delete']"));
+	private By EditMenuDelete_Btn(String logoTitle) {
+		return By.xpath("//div[@class='view-content']//tbody/tr/td[contains(text(), '" + logoTitle + "')]/..//a[text()='Delete']");
 	}
     
     //PAGE OBJECT METHODS
 	public void ClickAddLogoLnk() throws Exception {
 		
 		Reporter.log("Click the 'Add Logo' link.");
-		AddLogo_Lnk.click();
+		interact.Click(waitFor.ElementVisible(AddLogo_Lnk));
 		
 	}
 	
 	public void ClickEditExtendMenuBtn(String logoTitle) throws Exception {
     	
     	Reporter.log("Click the 'Edit' extend menu button for logo titled '" + logoTitle + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(EditExtendMenu_Btn(logoTitle))).click();
+    	interact.Click(waitFor.ElementVisible(EditExtendMenu_Btn(logoTitle)));
     	
     }
     
     public void ClickEditMenuDeleteBtn(String logoTitle) throws Exception {
     	
     	Reporter.log("Click the 'Delete' button for logo titled '" + logoTitle + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(
-    			EditMenuDelete_Btn(logoTitle))).click();
+    	interact.Click(waitFor.ElementVisible(EditMenuDelete_Btn(logoTitle)));
+    	
     }
     
     public void VerifyHomePageLogoImgPresent(final String imageSrc) throws Exception {
     	
     	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
-    	Thread.sleep(500);
-    	wait.until(new ExpectedCondition<Boolean>(){
-   		 	@Override
-   		 	public Boolean apply(WebDriver webDriver) {
-   		 		return HomeLogo_Img.getAttribute("src").contains(imageSrc);
-   		 	}
-    	}); 
+    	WebElement ele = waitFor.ElementVisible(HomeLogo_Img);
+    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
     	
     	Reporter.log("Assert the the img is loaded and visible.");
-    	boolean imgLoaded;
-        for (int second = 0; ; second++) {
-            if (second >= 30) {
-                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
-            }
-            
-            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
-            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
-            				HomeLogo_Img);
-                
-            if (imgLoaded == true){ break;}
-            Thread.sleep(500);
-        }
+    	waitFor.ImageVisible(ele);
+    	
     }
 
     public void VerifyLogoImgPresent(String logoTitle, String imageSrc) throws Exception {
     	
     	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
-    	Assert.assertTrue(Logo_Img(logoTitle).getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementVisible(Logo_Img(logoTitle));
+    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
     	
     	Reporter.log("Assert the the img is loaded and visible.");
-    	boolean imgLoaded;
-        for (int second = 0; ; second++) {
-            if (second >= 30) {
-                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
-            }
-            
-            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
-            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
-            				Logo_Img(logoTitle));
-                
-            if (imgLoaded == true){ break;}
-            Thread.sleep(500);
-        }
+    	waitFor.ImageVisible(ele);
+    	
     }
     
     public void DeleteAllLogos() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     	
-    	if (AllLogo_Ttls().size() > 0) {
+    	if (webDriver.findElements(AllLogo_Ttls).size() > 0) {
     		
     		List<String> allLogoTtls = new ArrayList<String>();
-    		for (WebElement logo : AllLogo_Ttls()) {
+    		for (WebElement logo : waitFor.ElementsVisible(AllLogo_Ttls)) {
     			 allLogoTtls.add(logo.getText().trim());
     		}
     		
-    		//delete each logo
     		for (String title : allLogoTtls) {
     			this.ClickEditExtendMenuBtn(title);
     			this.ClickEditMenuDeleteBtn(title);

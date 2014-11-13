@@ -1,21 +1,19 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Publishing Options Library. Copyright
@@ -27,20 +25,22 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class PublishingOptions {
 
     private Driver webDriver;
-    private WebDriverWait wait;
     private Config config;
+    private Interact interact;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public PublishingOptions(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
         config = new Config();
+        Integer timeout = config.getConfigValueInt("WaitForWaitTime");
+        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//a/strong[text()='Publishing options']")
-    private WebElement PublishingOptions_Lnk;
+    private By PublishingOptions_Lnk = By.xpath("//a/strong[text()='Publishing options']");
     
     @FindBy(how = How.ID, using = "edit-revision")
     private WebElement CreateNewRevision_Cbx;
@@ -57,8 +57,8 @@ public class PublishingOptions {
     @FindBy(how = How.ID, using = "edit-field-workbench-assigned-und-0-target-id")
     private WebElement AssignTo_Txb;
     
-    private WebElement AutoComplete_Opt(String optionTxt) {
-    	return webDriver.findElement(By.xpath("//div[@class='reference-autocomplete'][text()='" + optionTxt + "']"));
+    private By AutoComplete_Opt(String optionTxt) {
+    	return By.xpath("//div[@class='reference-autocomplete'][text()='" + optionTxt + "']");
     }
     
     @FindBy(how = How.ID, using = "edit-revision-scheduler-operation")
@@ -80,11 +80,12 @@ public class PublishingOptions {
     public void ClickPublishingOptionsLnk() throws Exception {
     	
     	Reporter.log("Scroll the 'Publishing Options' link into view.");
-    	PublishingOptions_Lnk.isDisplayed();
+    	WebElement ele = waitFor.ElementVisible(PublishingOptions_Lnk);
     	webDriver.executeScript(ScrollUp_Js());
     	
     	Reporter.log("Click the 'Publishing Options' link.");
-    	PublishingOptions_Lnk.click();
+    	interact.Click(ele);
+    	
     }
     
     public void ClickCreateNewRevisionCbx() throws Exception {
@@ -152,22 +153,11 @@ public class PublishingOptions {
     	AssignTo_Txb.sendKeys(userName);
     	
     	Reporter.log("Click the '" + userName + "' from the auto complete option list.");
-    	wait.until(ExpectedConditions.visibilityOf(AutoComplete_Opt(userName)));
+    	waitFor.ElementVisible(AutoComplete_Opt(userName));
     	AssignTo_Txb.sendKeys(Keys.DOWN);
     	AssignTo_Txb.sendKeys(Keys.ENTER);
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	for (int second = 0; ; second++){
-            if (second >= 60) {
-                Assert.fail("AutoComplete option titled '" + userName + "' is still present after timeout");}
-            try{
-            	AutoComplete_Opt(userName).isDisplayed();
-            }
-            catch (Exception e){
-            	break;
-            }
-            Thread.sleep(500);
-        }
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	waitFor.ElementNotPresent(AutoComplete_Opt(userName));
+    	
     }
     
     public void VerifyPublishedCbxNotCheckedAndNotEditable() throws Exception {
