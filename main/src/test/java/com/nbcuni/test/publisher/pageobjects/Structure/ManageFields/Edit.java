@@ -1,6 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.ManageFields;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -9,6 +12,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
@@ -21,11 +25,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class Edit {
 
     private Driver webDriver;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public Edit(Driver webDriver, AppLib applib) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        config = new Config();
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -67,10 +73,15 @@ public class Edit {
     
     public void CheckAllowedURISchemesCbx(String uriScheme) throws Exception {
     	
-    	if (AllowedURISchemes_Cbx(uriScheme).isSelected() == false) {
-    		Reporter.log("Chech the '" + uriScheme + "' check box under 'Allowed URI schemes'.");
-    		AllowedURISchemes_Cbx(uriScheme).click();
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	try {
+    		if (AllowedURISchemes_Cbx(uriScheme).isSelected() == false) {
+        		Reporter.log("Chech the '" + uriScheme + "' check box under 'Allowed URI schemes'.");
+        		AllowedURISchemes_Cbx(uriScheme).click();
+        	}
     	}
+    	catch (NoSuchElementException e) {}
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void EnterFileDirectory(String path) throws Exception {
