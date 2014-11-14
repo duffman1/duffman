@@ -106,6 +106,7 @@ public class Interact {
     				Boolean elementSelected = false;
     				try {
     					new Select(ele).selectByVisibleText(option);
+    					elementSelected = true;
     				}
     				catch (WebDriverException e) { }
     				return elementSelected;	

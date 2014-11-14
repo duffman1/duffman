@@ -193,6 +193,7 @@ public class ContentParent {
     
     public void WaitForProgressBarNotPresent() throws Exception {
     	
+    	waitFor.ElementVisible(ProgressBar_Ctr);
     	new WaitFor(webDriver, 300).ElementNotPresent(ProgressBar_Ctr);
     	
     }

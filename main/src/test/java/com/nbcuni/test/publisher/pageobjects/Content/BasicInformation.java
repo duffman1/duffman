@@ -13,6 +13,7 @@ import org.testng.Reporter;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
@@ -27,13 +28,17 @@ public class BasicInformation {
     private Driver webDriver;
     private Config config;
     private WaitFor waitFor;
+    private Interact interact;
+    private Integer timeout;
     
     //PAGE OBJECT CONSTRUCTOR
     public BasicInformation(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
-        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     
@@ -83,8 +88,8 @@ public class BasicInformation {
     	return webDriver.findElement(By.xpath("//label[contains(text(), '" + label + "')]/../select"));
     }
     
-    private WebElement CustomButton_Btn(String label) {
-    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + label + "')]/../..//a[text()='Select']"));
+    private By CustomButton_Btn(String label) {
+    	return By.id("edit-field-" + label.toLowerCase() + "-und-0-select");
     }
     
     
@@ -214,7 +219,8 @@ public class BasicInformation {
     public void ClickCustomBtn(String label) throws Exception {
     	
     	Reporter.log("Click the 'Select' button for '" + label + "'.");
-    	CustomButton_Btn(label).click();
+    	interact.Click(waitFor.ElementVisible(CustomButton_Btn(label)));
+    	
     }
     
     public void ClickYoutubeBtn() throws Exception {

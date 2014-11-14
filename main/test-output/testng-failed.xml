@@ -3,27 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages">
-=======
-      <class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification">
->>>>>>> refs/heads/Brandon
+      <class name="com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues">
         <methods>
           <include name="startSelenium"/>
           <include name="suiteTeardown"/>
-<<<<<<< HEAD
-          <include name="AddMPSCallsToErrorPages_TC4950"/>
-=======
-          <include name="EntityReferenceVerification_TC1886"/>
->>>>>>> refs/heads/Brandon
+          <include name="ScheduleRevisionsOfQueues_Test"/>
           <include name="suiteSetup"/>
           <include name="stopSelenium"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.AddMPSCallsToErrorPages -->
-=======
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification -->
->>>>>>> refs/heads/Brandon
+      </class> <!-- com.nbcuni.test.publisher.tests.Queues.SchedulingQueues.ScheduleRevisionsOfQueues -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

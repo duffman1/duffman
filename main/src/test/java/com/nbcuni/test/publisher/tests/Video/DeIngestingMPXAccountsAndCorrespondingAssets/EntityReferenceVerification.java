@@ -337,6 +337,7 @@ public class EntityReferenceVerification extends ParentTest{
         		contentParent.WaitForThrobberNotPresent();
         		selectFile.ClickSearchResultTtl("AutomationDefault");
         		selectFile.ClickSubmitBtn();
+        		selectFile.WaitForSelectFileFrameClose();
         		basicInformation.ClickCustomBtn(mpxVideoImageFieldTitle);
         		selectFile.SwitchToSelectFileFrm();
         		selectFile.EnterTitle("AutomationDefault");
@@ -344,6 +345,7 @@ public class EntityReferenceVerification extends ParentTest{
         		contentParent.WaitForThrobberNotPresent();
         		selectFile.ClickSearchResultTtl("AutomationDefault");
         		selectFile.ClickSubmitBtn();
+        		selectFile.WaitForSelectFileFrameClose();
         		contentParent.ClickSaveBtn();
         		contentParent.VerifyMessageStatus(contentTypeName + " " + title + " has been created.");
         		
