@@ -39,7 +39,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	
     	//Step 4
     	navigation.People("Permissions", "Apply Permission Set");
-    	ApplyPermissionSet applyPermissionSet = new ApplyPermissionSet(webDriver, applib);
+    	ApplyPermissionSet applyPermissionSet = new ApplyPermissionSet(webDriver);
     	applyPermissionSet.SelectRolePermissionSet("Role: Senior Editor", setName);
     	applyPermissionSet.ClickApplyPermissionSetsBtn();
     	contentParent.VerifyMessageWarning("Applying a permission set may cause you to no longer have access to change user permissions.");
@@ -49,7 +49,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	contentParent.VerifyMessageStatus("senior editor");
     	
     	//Step 5
-    	applyPermissionSet.ClickPermissionsBtn();
+    	navigation.ClickSecondaryTabNavLnk("Permissions");
     	Permissions permissions = new Permissions(webDriver, applib);
     	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("access resource wysiwyg_profile", "edit any document files"));
     	
@@ -74,7 +74,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	contentParent.VerifyMessageStatus("senior editor");
     	
     	//Step 9
-    	applyPermissionSet.ClickPermissionsBtn();
+    	navigation.ClickSecondaryTabNavLnk("Permissions");
     	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("create post content", "edit own post content"));
     	permissions.VerifyPermissionsNotSelected("senior editor", Arrays.asList("access resource wysiwyg_profile", "edit any document files"));
     	

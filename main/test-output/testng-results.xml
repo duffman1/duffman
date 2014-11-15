@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
+    <line>
+      <![CDATA[STEP 1]]>
+    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -14,40 +17,154 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Pub SEO' in the 'Filter Name' text box.]]>
+      <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Wait for module filter titled 'Pub SEO' to be visible in module list.]]>
+      <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Pub SEO' check box is checked.]]>
+      <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
+      <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content types' link.]]>
+      <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'edit' link for field 'Post'.]]>
+      <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'XML sitemap' link.]]>
+      <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
     </line>
     <line>
-      <![CDATA[Select 'Included' from the 'Inclusion' drop down list.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save content type' link.]]>
+      <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The content type Post has been updated.' is present.]]>
+      <![CDATA[Wait for module filter titled 'DART' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Document Write' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Name' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Value' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Reports' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Status report' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'MPS' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'People' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify that no MPS calls were made on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/kfkjdjdkjdjldkjj'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8 - N/A - COVERED IN SETUP]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
@@ -56,10 +173,13 @@
       <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' link.]]>
+      <![CDATA[Click the 'Movie' link.]]>
     </line>
     <line>
-      <![CDATA[Enter '7fa67cbb995d429' in the 'Title' text box.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'b3f1a308645142d' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -98,19 +218,58 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[Click the 'Additional Information' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Post 7fa67cbb995d429 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'Movie b3f1a308645142d has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Note the node number for the content item.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10 through STEP 19]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"title":"b3f1a308645142d"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"path":"\/node\/13551"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"content_id":"node13551"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"is_content":1' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"type":"movie"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"pubdate":' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 20]]>
+    </line>
+    <line>
+      <![CDATA[STEP 21]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
@@ -119,127 +278,105 @@
       <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' link.]]>
+      <![CDATA[Click the 'Media Gallery' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'c147c2bbd3ad4ce' in the 'Title' text box.]]>
+      <![CDATA[Enter '447aa9b447b4424' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Click the 'Media Items Select' button.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Click the 'View Library' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_111514083319AM.png ]]>
     </line>
     <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post c147c2bbd3ad4ce has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cron' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Run Cron' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'XML sitemap' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the primary nav 'Rebuild links'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Rebuild Sitemap' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The sitemap links were rebuilt.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'XML sitemap' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'XMLSitemap Link' with text 'http://qa5.publisher7.com/sitemap.xml'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'c147c2bbd3ad4ce' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '7fa67cbb995d429' is NOT present on the page.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_111514083319AM.png'> <img src='./ImplementMPS_TC2901_111514083319AM.png' height='700' width='700'/> </a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="209445" started-at="2014-11-14T16:35:13Z" finished-at="2014-11-14T16:38:43Z">
+  <suite name="Default suite" duration-ms="118512" started-at="2014-11-15T13:31:22Z" finished-at="2014-11-15T13:33:20Z">
     <groups>
       <group name="full">
-        <method signature="SEOOptimizationModule.SEOOptimizationModule_TC1219()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@408f3be4]" name="SEOOptimizationModule_TC1219" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule"/>
+        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@141bbe9f]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
       </group> <!-- full -->
+      <group name="mps">
+        <method signature="ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@141bbe9f]" name="ImplementMPS_TC2901" class="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+      </group> <!-- mps -->
     </groups>
-    <test name="Default test" duration-ms="209445" started-at="2014-11-14T16:35:13Z" finished-at="2014-11-14T16:38:43Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@408f3be4]" name="suiteSetup" is-config="true" duration-ms="22" started-at="2014-11-14T11:35:13Z" finished-at="2014-11-14T11:35:13Z">
+    <test name="Default test" duration-ms="118512" started-at="2014-11-15T13:31:22Z" finished-at="2014-11-15T13:33:20Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@141bbe9f]" name="suiteSetup" is-config="true" duration-ms="22" started-at="2014-11-15T08:31:21Z" finished-at="2014-11-15T08:31:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@408f3be4]" name="startSelenium" is-config="true" duration-ms="3337" started-at="2014-11-14T11:35:13Z" finished-at="2014-11-14T11:35:17Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@141bbe9f]" name="startSelenium" is-config="true" duration-ms="3394" started-at="2014-11-15T08:31:22Z" finished-at="2014-11-15T08:31:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule.SEOOptimizationModule_TC1219() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SEOOptimizationModule_TC1219()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@408f3be4]" name="SEOOptimizationModule_TC1219" duration-ms="205525" started-at="2014-11-14T11:35:17Z" finished-at="2014-11-14T11:38:42Z">
+        <test-method status="FAIL" signature="ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@141bbe9f]" name="ImplementMPS_TC2901" duration-ms="114320" started-at="2014-11-15T08:31:25Z" finished-at="2014-11-15T08:33:19Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Timed out after 20 seconds: Element not visible.
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.3', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 20 seconds: Element not visible.
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.3', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.nbcuni.test.publisher.common.Util.WaitFor.ElementsVisible(WaitFor.java:167)
+	at com.nbcuni.test.publisher.pageobjects.Content.SelectFile.ClickApplyBtn(SelectFile.java:168)
+	at com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS.ImplementMPS_TC2901(ImplementMPS.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -253,40 +390,154 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Pub SEO' in the 'Filter Name' text box.]]>
+              <![CDATA[Enter 'Pub Ads' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Wait for module filter titled 'Pub SEO' to be visible in module list.]]>
+              <![CDATA[Wait for module filter titled 'Pub Ads' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Pub SEO' check box is checked.]]>
+              <![CDATA[Verify the 'Pub Ads' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
+              <![CDATA[Enter 'Pixelman' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content types' link.]]>
+              <![CDATA[Wait for module filter titled 'Pixelman' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'edit' link for field 'Post'.]]>
+              <![CDATA[Enter 'MPS' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'XML sitemap' link.]]>
+              <![CDATA[Wait for module filter titled 'MPS' to be visible in module list.]]>
             </line>
             <line>
-              <![CDATA[Select 'Included' from the 'Inclusion' drop down list.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save content type' link.]]>
+              <![CDATA[Enter 'DART' in the 'Filter Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The content type Post has been updated.' is present.]]>
+              <![CDATA[Wait for module filter titled 'DART' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Doubleclick for Publishers' in the 'Filter Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for module filter titled 'Doubleclick for Publishers' to be visible in module list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'mps.io' in the 'MPS Host' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Document Write' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Name' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Value' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Reports' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Status report' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'Ad Tag Style' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'MPS' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'People' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify that no MPS calls were made on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/kfkjdjdkjdjldkjj'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"path":"ERROR/404"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"content_id":"ERROR"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8 - N/A - COVERED IN SETUP]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
@@ -295,10 +546,13 @@
               <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' link.]]>
+              <![CDATA[Click the 'Movie' link.]]>
             </line>
             <line>
-              <![CDATA[Enter '7fa67cbb995d429' in the 'Title' text box.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'b3f1a308645142d' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -337,19 +591,58 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[Click the 'Additional Information' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Post 7fa67cbb995d429 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'Movie b3f1a308645142d has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Note the node number for the content item.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10 through STEP 19]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"title":"b3f1a308645142d"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"path":"\/node\/13551"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"content_id":"node13551"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"is_content":1' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"type":"movie"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"cag":{"genre":"Action","movie-rating":"G","movie-types":"Syndicated"}' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"pubdate":' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 20]]>
+            </line>
+            <line>
+              <![CDATA[STEP 21]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
@@ -358,119 +651,47 @@
               <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' link.]]>
+              <![CDATA[Click the 'Media Gallery' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'c147c2bbd3ad4ce' in the 'Title' text box.]]>
+              <![CDATA[Enter '447aa9b447b4424' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Click the 'Media Items Select' button.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Click the 'View Library' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_111514083319AM.png ]]>
             </line>
             <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post c147c2bbd3ad4ce has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cron' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Run Cron' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'XML sitemap' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the primary nav 'Rebuild links'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Rebuild Sitemap' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The sitemap links were rebuilt.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'XML sitemap' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'XMLSitemap Link' with text 'http://qa5.publisher7.com/sitemap.xml'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'c147c2bbd3ad4ce' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '7fa67cbb995d429' is NOT present on the page.]]>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ImplementMPS_TC2901_111514083319AM.png'> <img src='./ImplementMPS_TC2901_111514083319AM.png' height='700' width='700'/> </a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SEOOptimizationModule_TC1219 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@408f3be4]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-11-14T11:38:42Z" finished-at="2014-11-14T11:38:43Z">
+        </test-method> <!-- ImplementMPS_TC2901 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@141bbe9f]" name="stopSelenium" is-config="true" duration-ms="783" started-at="2014-11-15T08:33:19Z" finished-at="2014-11-15T08:33:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SEOOptimizationModule_TC1219 status=SUCCESS method=SEOOptimizationModule.SEOOptimizationModule_TC1219()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@408f3be4] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=ImplementMPS_TC2901 status=FAILURE method=ImplementMPS.ImplementMPS_TC2901()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@141bbe9f] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule@408f3be4]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-14T11:38:43Z" finished-at="2014-11-14T11:38:43Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS@141bbe9f]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-15T08:33:20Z" finished-at="2014-11-15T08:33:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules.SEOOptimizationModule -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

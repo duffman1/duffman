@@ -1,18 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Permission Sets Library. Copyright
@@ -23,36 +17,36 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class PermissionSets {
 
-	private Driver webDriver;
 	private Config config;
-	private WebDriverWait wait;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public PermissionSets(Driver webDriver) {
-    	this.webDriver = webDriver;
     	config = new Config();
-    	PageFactory.initElements(webDriver, this);
-    	wait = new WebDriverWait(webDriver, 10);
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.LINK_TEXT, using = "Add")
-    private WebElement Add_Lnk;
+    private By Add_Lnk = By.linkText("Add");
     
-    private WebElement PermissionSetEdit_Lnk(String setName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + setName + "']/..//a[text()='Edit']"));
+    private By PermissionSetEdit_Lnk(String setName) {
+    	return By.xpath("//td[text()='" + setName + "']/..//a[text()='Edit']");
     }
     
-    private WebElement PermissionSetName_Txt(String setName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + setName + "']"));
+    private By PermissionSetName_Txt(String setName) {
+    	return By.xpath("//td[text()='" + setName + "']");
     }
     
-    private WebElement PermissionSetExpandEdit_Lnk(String setName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + setName + "']/..//a[text()='open']"));
+    private By PermissionSetExpandEdit_Lnk(String setName) {
+    	return By.xpath("//td[text()='" + setName + "']/..//a[text()='open']");
     }
     
-    private WebElement PermissionSetDelete_Lnk(String setName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + setName + "']/..//a[text()='Delete']"));
+    private By PermissionSetDelete_Lnk(String setName) {
+    	return By.xpath("//td[text()='" + setName + "']/..//a[text()='Delete']");
     }
     
     
@@ -60,47 +54,36 @@ public class PermissionSets {
     public void ClickAddLnk() throws Exception {
     
     	Reporter.log("Click the 'Add' link.");
-    	Add_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(Add_Lnk));
+    	
     }
     
     public void ClickPermissionSetEditLnk(String setName) throws Exception {
         
     	Reporter.log("Click the Permission Set 'Edit' link for set name + '" + setName + "'.");
-    	PermissionSetEdit_Lnk(setName).click();
+    	interact.Click(waitFor.ElementVisible(PermissionSetEdit_Lnk(setName)));
+    	
     }
     
     public void ClickPermissionSetExpandEditLnk(String setName) throws Exception {
         
     	Reporter.log("Click the Permission Set expand link for Set Name + '" + setName + "'.");
-    	PermissionSetExpandEdit_Lnk(setName).click();
+    	interact.Click(waitFor.ElementVisible(PermissionSetExpandEdit_Lnk(setName)));
+    	
     }
     
     public void ClickPermissionSetDeleteLnk(String setName) throws Exception {
         
     	Reporter.log("Click the Permission Set 'Delete' link for Set Name + '" + setName + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(PermissionSetDelete_Lnk(setName)));
-    	Thread.sleep(500); //pause required here
-    	PermissionSetDelete_Lnk(setName).click();
+    	interact.Click(waitFor.ElementVisible(PermissionSetDelete_Lnk(setName)));
+    	
     }
     
     public void VerifyPermissionSetNotPresent(String setName) throws Exception {
         
     	Reporter.log("Verify Permission Set '" + setName + "' is NOT present.");
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	boolean elPresent = true;
-    	try {
-    		
-    		PermissionSetName_Txt(setName).isDisplayed();
-    		elPresent = true;
-    	}
-    	catch (Exception e) {
+    	waitFor.ElementNotPresent(PermissionSetName_Txt(setName));
     	
-    		elPresent = false;
-    	}
-    	if (elPresent == true) {
-    		Assert.fail("Permission Set '" + setName + "' is present when it should not be");
-    	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
 }

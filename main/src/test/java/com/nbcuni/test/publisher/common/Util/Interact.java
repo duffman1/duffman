@@ -32,6 +32,32 @@ public class Interact {
         config = new Config();
     }
     
+    private By GetByLocator(WebElement ele) {
+    	
+    	By locator = null;
+    	
+    	System.out.println(ele.toString());
+    	String elementObject[] = ele.toString().split("->");
+    	System.out.println("Element object zero = " + elementObject[0]);
+    	System.out.println("Element object one = " + elementObject[1]);
+    	String element[] = elementObject[1].replace("]]", "]").split(": ");
+    	
+    	System.out.println("Element zero = " + element[0]);
+    	System.out.println("Elmenet one = " + element[1]);
+    	String locatorType = element[0].trim();
+    	String elementID = element[1];
+    	
+    	switch (locatorType) {
+    		case "xpath": locator = By.xpath(elementID); break;
+    		case "cssSelector": locator = By.cssSelector(elementID); break;
+    		case "linkText": locator = By.linkText(elementID); break;
+    	}
+    	
+    	System.out.println(locator.toString());
+    	return locator;
+    	
+    }
+    
     private FluentWait<By> byWait(final By locator) throws Exception {
     	
     	return new FluentWait<By>(locator)
@@ -69,7 +95,14 @@ public class Interact {
     					ele.click();
     					elementClicked = true;
     				}
-    				catch (WebDriverException e) { }
+    				catch (WebDriverException e) {
+    					if (e.getMessage().toString().contains("stale element"))
+    					{
+    						System.out.println("element is stale.");
+    						webDriver.findElement(GetByLocator(ele)).click();
+    						elementClicked = true;
+    					}
+    				}
     				return elementClicked;	
     			}
     		});

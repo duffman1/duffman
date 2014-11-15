@@ -2,12 +2,11 @@ package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
@@ -25,61 +24,62 @@ public class AddDynamicQueueType {
 
     private Driver webDriver;
     private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public AddDynamicQueueType(Driver webDriver) {
         this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
         config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-label")
-    private WebElement Name_Txb;
+    private By Name_Txb = By.id("edit-label");
     
-    @FindBy(how = How.ID, using = "edit-entity-type")
-    private WebElement EntityType_Ddl;
+    private By EntityType_Ddl = By.id("edit-entity-type");
     
-    private WebElement ContentType_Cbx(String contentType) {
-    	return webDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
+    private By ContentType_Cbx(String contentType) {
+    	return By.xpath("//label[text()='" + contentType + " ']/../input");
     }
     
-    @FindBy(how = How.ID, using = "edit-cache-lifetime")
-    private WebElement CacheLifetime_Ddl;
+    private By CacheLifetime_Ddl = By.id("edit-cache-lifetime");
     
-    @FindBy(how = How.XPATH, using = "//a/strong[text()='Taxonomy filters']")
-    private WebElement TaxonomyFilters_Lnk;
+    private By TaxonomyFilters_Lnk = By.xpath("//a/strong[text()='Taxonomy filters']");
     
-    private WebElement TaxonomyFilter_Lnk(String filterName) {
-    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + filterName + "')]/../input"));
+    private By TaxonomyFilter_Lnk(String filterName) {
+    	return By.xpath("//label[contains(text(), '" + filterName + "')]/../input");
     }
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement Save_Btn;
+    private By Save_Btn = By.id("edit-submit");
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-label']/..//a[text()='Edit']")
-    private WebElement MachineNameEdit_Lnk;
+    private By MachineNameEdit_Lnk = By.xpath("//input[@id='edit-label']/..//a[text()='Edit']");
     
-    @FindBy(how = How.ID, using = "edit-type")
-    private WebElement MachineName_Txb;
+    private By MachineName_Txb = By.id("edit-type");
+    
     
     //PAGE OBJECT METHODS
     public void EnterName(String queueTypeName) throws Exception {
     	
     	Reporter.log("Enter '" + queueTypeName + "' in the 'Name' text box.");
-    	Name_Txb.clear();
-    	Name_Txb.sendKeys(queueTypeName);
+    	interact.Type(waitFor.ElementVisible(Name_Txb), queueTypeName);
+    	
     }
     
     public void SelectEntityType() throws Exception {
     	
+    	WebElement ele = waitFor.ElementVisible(EntityType_Ddl);
+    	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	Reporter.log("Select 'Content' or 'Node' from the 'Entity type' drop down list.");
     	try {
-    		new Select(EntityType_Ddl).selectByVisibleText("Content");
+    		new Select(ele).selectByVisibleText("Content");
     	}
     	catch (Exception e) {
-    		new Select(EntityType_Ddl).selectByVisibleText("Node");
+    		new Select(ele).selectByVisibleText("Node");
     	}
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
@@ -87,52 +87,62 @@ public class AddDynamicQueueType {
     public void SelectCacheLifetime(String lifetime) throws Exception {
     	
     	Reporter.log("Select '" + lifetime + "' from the 'Cache lifetime' drop down list.");
-    	new Select(CacheLifetime_Ddl).selectByVisibleText(lifetime);
+    	interact.Select(waitFor.ElementVisible(CacheLifetime_Ddl), lifetime);
+    	
     }
     
     public void ClickTaxonomyFilterLnk() throws Exception {
     	
     	Reporter.log("Click the 'Taxonomy filters' link.");
-    	TaxonomyFilters_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(TaxonomyFilters_Lnk));
+    	
     }
     
     public void EnableTaxonomyFilters(List<String> filterTypes) throws Exception {
     	
     	for (String filterType : filterTypes) {
-    		if (!TaxonomyFilter_Lnk(filterType).isSelected()) {
+    		WebElement ele = waitFor.ElementVisible(TaxonomyFilter_Lnk(filterType));
+    		if (!ele.isSelected()) {
     			Reporter.log("Check the '" + filterType + "' check box.");
-    			TaxonomyFilter_Lnk(filterType).click();
+    			interact.Click(ele);
     		}
     	}
+    	
     }
     
     public void EnableContentTypes(List<String> contentTypes) throws Exception {
     	
     	for (String contentType : contentTypes) {
-    		if (ContentType_Cbx(contentType).isSelected() == false) {
+    		WebElement ele = waitFor.ElementVisible(ContentType_Cbx(contentType));
+    		if (ele.isSelected() == false) {
     			Reporter.log("Check the '" + contentType + "' check box.");
-    			ContentType_Cbx(contentType).click();
+    			interact.Click(ele);
     		}
     	}
+    	
     }
     
     public void ClickSaveBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
-    	Save_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Save_Btn));
+    	
+    	Thread.sleep(2000); //no verification message generated on save click
+    	
     }
     
     public void EnterMachineName(String queueTypeName) throws Exception {
     	
     	Reporter.log("Enter '" + queueTypeName + "' in the 'MachineName' text box.");
-    	MachineName_Txb.clear();
-    	MachineName_Txb.sendKeys(queueTypeName);
+    	interact.Type(waitFor.ElementVisible(MachineName_Txb), queueTypeName);
+    	
     }
     
     public void ClickMachineNameEditLnk() throws Exception {
     	
     	Reporter.log("Click the 'MachineNameEdit_Lnk' button.");
-    	MachineNameEdit_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(MachineNameEdit_Lnk));
+    	
     }
     
     

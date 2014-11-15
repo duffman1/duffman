@@ -95,7 +95,7 @@ public class SelectFile {
     	return By.xpath("//td[contains(text(), '" + title + "')]");
     }
     
-    private By AllApply_Btns = By.cssSelector("input[value='Apply']");
+    private By AllApply_Btns = By.xpath("//input[@value='Apply']");
     
     private By CustomBrowse_Btn(String label) {
     	return By.xpath("//label[contains(text(), '" + label + "')]/..//input[contains(@id, 'upload')][1]");

@@ -1,13 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
 /*********************************************
@@ -19,52 +17,49 @@ import org.testng.Reporter;
 
 public class ApplyPermissionSet {
 
-    private Driver webDriver;
+    private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ApplyPermissionSet(Driver webDriver, AppLib applib) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    public ApplyPermissionSet(Driver webDriver) {
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private WebElement Role_Ddl(String role) {
-    	return webDriver.findElement(By.xpath("//label[text()='" + role + " ']/../select"));
+    private By Role_Ddl(String role) {
+    	return By.xpath("//label[text()='" + role + " ']/../select");
     }
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Permissions']")
-    private WebElement Permissions_Btn;
+    private By ApplyPermissionSets_Btn = By.id("edit-apply");
     
-    @FindBy(how = How.ID, using = "edit-apply")
-    private WebElement ApplyPermissionSets_Btn;
-    
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement DoIt_Btn;
+    private By DoIt_Btn = By.id("edit-submit");
     
     
     //PAGE OBJECT METHODS
     public void SelectRolePermissionSet(String role, String option) throws Exception {
     	
     	Reporter.log("Select '" + option + "' from the '" + role + "' drop down list.");
-    	new Select(Role_Ddl(role)).selectByVisibleText(option);
+    	interact.Select(waitFor.ElementVisible(Role_Ddl(role)), option);
+    	
     }
     
-    public void ClickPermissionsBtn() throws Exception {
-    	
-    	Reporter.log("Click the 'Permissions' button.");
-    	Permissions_Btn.click();
-    }
-
     public void ClickApplyPermissionSetsBtn() throws Exception {
     	
     	Reporter.log("Click the 'Apply Permission Set(s)' button.");
-    	ApplyPermissionSets_Btn.click();
+    	interact.Click(waitFor.ElementVisible(ApplyPermissionSets_Btn));
+    	
     }
     
     public void ClickDoItBtn() throws Exception {
     	
     	Reporter.log("Click the 'Do it!' button.");
-    	DoIt_Btn.click();
+    	interact.Click(waitFor.ElementVisible(DoIt_Btn));
+    	
     }
     
 }
