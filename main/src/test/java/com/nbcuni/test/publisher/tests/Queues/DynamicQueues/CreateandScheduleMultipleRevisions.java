@@ -33,7 +33,7 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
      * @version 1.0 Date: October 13, 2014
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/22576323009
      *************************************************************************************/
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
 	    public void CreateScheduleMultipleRevisions_TC4969() throws Exception{
 		 
 		 Reporter.log("STEP 1");

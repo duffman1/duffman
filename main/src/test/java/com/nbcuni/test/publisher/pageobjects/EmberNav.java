@@ -1,7 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
@@ -19,15 +22,18 @@ import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
 public class EmberNav {
 
+	private Driver webDriver;
     private WaitFor waitFor;
     private ErrorChecking errorChecking;
     private Config config;
     private Interact interact;
+    private Integer timeout;
     
     //PAGE OBJECT CONSTRUCTOR
     public EmberNav(Driver webDriver) {
+    	this.webDriver = webDriver;
     	config = new Config();
-    	Integer timeout = config.getConfigValueInt("WaitForWaitTime");
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
     	waitFor = new WaitFor(webDriver, timeout);
     	interact = new Interact(webDriver, timeout);
     	errorChecking = new ErrorChecking(webDriver);
@@ -77,13 +83,27 @@ public class EmberNav {
     
     private void ShowMenu() throws Exception {
     	
-    	if (!waitFor.ElementPresent(Content_Lnk).isDisplayed()) {
-    		Reporter.log("Click the 'Menu' link to show navigation menu items.");
-    		Thread.sleep(500);
-    		interact.Click(waitFor.ElementVisible(Menu_Lnk));
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	for (int I = 0; I <= timeout; I++) {
+    		
+    		if (I == timeout) {
+    			Assert.fail("Main menu not visible after " + timeout + " seconds.");
+    		}
+    		
+    		if (!waitFor.ElementPresent(Content_Lnk).isDisplayed()) {
+    			Reporter.log("Click the 'Menu' link to show navigation menu items.");
+    			interact.Click(waitFor.ElementVisible(Menu_Lnk));
+    		}
+    		else {
+    			break;
+    		}
+    		
+    		Thread.sleep(1000);
     	}
     	
-    	waitFor.ElementVisible(Content_Lnk);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	
     }
     
     private void HideMenu() throws Exception {

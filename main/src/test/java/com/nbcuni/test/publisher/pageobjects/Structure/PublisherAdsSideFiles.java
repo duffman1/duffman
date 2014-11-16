@@ -6,12 +6,11 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
@@ -26,6 +25,8 @@ import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 public class PublisherAdsSideFiles {
 
 	private Config config;
+	private Integer timeout;
+	private Interact interact;
 	private WaitFor waitFor;
 	private Delete delete;
 	private ContentParent contentParent;
@@ -33,8 +34,9 @@ public class PublisherAdsSideFiles {
     //PAGE OBJECT CONSTRUCTOR
     public PublisherAdsSideFiles(Driver webDriver) {
     	config = new Config();
-    	PageFactory.initElements(webDriver, this);
-    	waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     	delete = new Delete(webDriver);
     	contentParent = new ContentParent(webDriver);
     }
@@ -79,28 +81,28 @@ public class PublisherAdsSideFiles {
     public void ClickAddLnk() throws Exception {
     
     	Reporter.log("Click the 'Add' link.");
-    	waitFor.ElementVisible(Add_Lnk).click();
+    	interact.Click(waitFor.ElementVisible(Add_Lnk));
     	
     }
     
     public void ClickImportLnk() throws Exception {
         
     	Reporter.log("Click the 'Import' link.");
-    	waitFor.ElementVisible(Import_Lnk).click();
+    	interact.Click(waitFor.ElementVisible(Import_Lnk));
     	
     }
     
     public void ClickAdSideFileLnk(String path) throws Exception {
         
     	Reporter.log("Click the Ad Side File link with path '" + path + "'.");
-    	waitFor.ElementVisible(AdSideFile_Lnk(path)).click();
+    	interact.Click(waitFor.ElementVisible(AdSideFile_Lnk(path)));
     	
     }
     
     public void ClickAdSideFileEditLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File 'Edit' link for adName + '" + adName + "'.");
-    	waitFor.ElementVisible(AdSideFileEdit_Lnk(adName)).click();
+    	interact.Click(waitFor.ElementVisible(AdSideFileEdit_Lnk(adName)));
     	
     }
     
@@ -114,21 +116,21 @@ public class PublisherAdsSideFiles {
     public void ClickAdSideFileExpandEditLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File expand link for adName + '" + adName + "'.");
-    	waitFor.ElementVisible(AdSideFileExpandEdit_Lnk(adName)).click();
+    	interact.Click(waitFor.ElementVisible(AdSideFileExpandEdit_Lnk(adName)));
     	
     }
     
     public void ClickAdSideFileCloneLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File 'Clone' link for adName + '" + adName + "'.");
-    	waitFor.ElementVisible(AdSideFileClone_Lnk(adName)).click();
+    	interact.Click(waitFor.ElementVisible(AdSideFileClone_Lnk(adName)));
     	
     }
     
     public void ClickAdSideFileDeleteLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File 'Delete' link for adName + '" + adName + "'.");
-    	waitFor.ElementVisible(AdSideFileDelete_Lnk(adName)).click();
+    	interact.Click(waitFor.ElementVisible(AdSideFileDelete_Lnk(adName)));
     	
     }
     
@@ -147,7 +149,7 @@ public class PublisherAdsSideFiles {
     			"Safecount", "Smartadserver", "Unicast", "Videoegg", "Viewpoint");
     	
     	List<String> notAllowedSideFiles = new ArrayList<String>();
-    	for (WebElement el :  waitFor.ElementsVisible(AdSideFileNames_Txt)) {
+    	for (WebElement el :  waitFor.ElementsPresent(AdSideFileNames_Txt)) {
     		String sideFile = el.getText();
     		if (!allowedSideFiles.contains(sideFile)) {
     			notAllowedSideFiles.add(sideFile);
