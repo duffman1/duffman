@@ -1,11 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Delete Queue Library. Copyright
@@ -16,53 +17,57 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class Delete {
 
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
+	
     //PAGE OBJECT CONSTRUCTOR
     public Delete(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//input[@value='Delete']")
-    private WebElement Delete_Btn;
+    private By Delete_Btn = By.xpath("//input[@value='Delete']");
     
-    @FindBy(how = How.XPATH, using = "//input[@value='Confirm']")
-    private WebElement Confirm_Btn;
+    private By Confirm_Btn = By.xpath("//input[@value='Confirm']");
     
-    @FindBy(how = How.XPATH, using = "//input[@value='Delete revision']")
-    private WebElement DeleteRevision_Btn;
+    private By DeleteRevision_Btn = By.xpath("//input[@value='Delete revision']");
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Cancel']")
-    private WebElement Cancel_Lnk;
+    private By Cancel_Lnk = By.xpath("//a[text()='Cancel']");
     
     
     //PAGE OBJECT METHODS
     public void ClickDeleteBtn() throws Exception {
     	
     	Reporter.log("Click the 'Delete' button.");
-    	Delete_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Delete_Btn));
+    	
     }
     
     public void ClickConfirmBtn() throws Exception {
     	
     	Reporter.log("Click the 'Confirm' button.");
-    	Confirm_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Confirm_Btn));
+    	
     }
     
     public void ClickDeleteRevisionBtn() throws Exception {
     	
     	Reporter.log("Click the 'Delete revision' button.");
-    	DeleteRevision_Btn.click();
+    	interact.Click(waitFor.ElementVisible(DeleteRevision_Btn));
+    	
     }
     
     public void ClickCancelLnk() throws Exception {
     	
     	Reporter.log("Click the 'Cancel' link.");
-    	Cancel_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(Cancel_Lnk));
+    	
     }
     
-    
-    
-    
-  
 }
 

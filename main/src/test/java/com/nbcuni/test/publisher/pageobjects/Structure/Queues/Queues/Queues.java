@@ -5,11 +5,11 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
@@ -22,13 +22,16 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 public class Queues {
 
     private Config config;
+    private Integer timeout;
     private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public Queues(Driver webDriver) {
         config = new Config();
-        PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -69,32 +72,28 @@ public class Queues {
     public void EnterTitle(String queueTitle) throws Exception {
     	
     	Reporter.log("Enter '" + queueTitle + "' in the 'Title' text box.");
-    	WebElement ele = waitFor.ElementVisible(Title_Txb);
-    	ele.clear();
-    	ele.sendKeys(queueTitle);
+    	interact.Type(waitFor.ElementVisible(Title_Txb), queueTitle);
     	
     }
     
     public void EnterLogMessageStateChange(String text) throws Exception {
     	
     	Reporter.log("Enter '" + text + "' in the 'Log message for this state change' text area.");
-    	WebElement ele = waitFor.ElementVisible(LogMessage_Txa);
-    	ele.clear();
-    	ele.sendKeys(text);
+    	interact.Type(waitFor.ElementVisible(LogMessage_Txa), text);
     	
     }
     
     public void ClickSaveQueueBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save Queue' button.");
-    	waitFor.ElementVisible(SaveQueue_Btn).click();
+    	interact.Click(waitFor.ElementVisible(SaveQueue_Btn));
     	
     }
     
     public void ClickAddPromoQueueLnk() throws Exception {
     	
     	Reporter.log("Click the 'Add Promo Queue' link.");
-    	waitFor.ElementVisible(AddPromoQueue_Lnk).click();
+    	interact.Click(waitFor.ElementVisible(AddPromoQueue_Lnk));
     	
     }
     
@@ -110,21 +109,21 @@ public class Queues {
     public void ClickEditQueueExtendMenuBtn(String queueTitle) throws Exception {
     	
     	Reporter.log("Click the 'Expand' arrow to extend the edit menu for queue titled '" + queueTitle + "'.");
-    	waitFor.ElementVisible(EditExtendMenu_Btn(queueTitle)).click();
+    	interact.Click(waitFor.ElementVisible(EditExtendMenu_Btn(queueTitle)));
     	
     }
     
     public void ClickDeleteQueueMenuBtn(String queueTitle) throws Exception {
     	
     	Reporter.log("Click the 'Delete' button for the queue titled '" + queueTitle + "'.");
-    	waitFor.ElementVisible(EditMenuDelete_Btn(queueTitle)).click();
+    	interact.Click(waitFor.ElementVisible(EditMenuDelete_Btn(queueTitle)));
     	
     }
     
     public void ClickEditQueueMenuBtn(String queueTitle) throws Exception {
     	
     	Reporter.log("Click the 'Edit' button for queue titled + '" + queueTitle + "'.");
-    	waitFor.ElementVisible(EditMenu_Btn(queueTitle)).click();
+    	interact.Click(waitFor.ElementVisible(EditMenu_Btn(queueTitle)));
     	
     }
     

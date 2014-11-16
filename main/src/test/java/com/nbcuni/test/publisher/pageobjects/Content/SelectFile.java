@@ -165,9 +165,10 @@ public class SelectFile {
     public void ClickApplyBtn() throws Exception {
     	
     	Reporter.log("Click the 'Apply' button.");
-    	for (WebElement btn : waitFor.ElementsVisible(AllApply_Btns)) {
+    	for (WebElement btn : waitFor.ElementsPresent(AllApply_Btns)) {
     		if (btn.isDisplayed()) {
-    			btn.click();
+    			interact.Click(btn);
+    			break;
     		}
     	}
     	
@@ -183,7 +184,7 @@ public class SelectFile {
     public void ClickSubmitBtn() throws Exception {
     	
     	Reporter.log("Click on the 'Submit' button.");
-    	for (WebElement btn : waitFor.ElementsVisible(AllSubmit_Btns)) {
+    	for (WebElement btn : waitFor.ElementsPresent(AllSubmit_Btns)) {
     		if (btn.isDisplayed()) {
     			interact.Click(btn);
     			break;

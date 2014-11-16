@@ -39,6 +39,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         applib.openSitePage("/admin/config/development/jquery_update");
         jqueryUpdate.SelectDefaultjQueryVersion("1.5");
         jqueryUpdate.ClickSaveConfigurationBtn();
+        contentParent.VerifyMessageStatus("The configuration options have been saved");
         FlushCache flushCache = new FlushCache(webDriver);
         flushCache.FlushAllCache();
         
@@ -126,6 +127,7 @@ public class ImplementTVEModulesCore extends ParentTest {
 		Thread.sleep(1000);
 		jqueryUpdate.SelectDefaultjQueryVersion("1.5");
 		jqueryUpdate.ClickSaveConfigurationBtn(); 
+		contentParent.VerifyMessageStatus("The configuration options have been saved");
 		flushCache.FlushAllCache();
 		navigation.Modules();
 		for (String module : Arrays.asList("TVE Auth Example")) {
@@ -152,6 +154,7 @@ public class ImplementTVEModulesCore extends ParentTest {
 			jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
 			jqueryUpdate.SelectDefaultjQueryVersion("1.5");
 			jqueryUpdate.ClickSaveConfigurationBtn(); 
+			contentParent.VerifyMessageStatus("The configuration options have been saved");
 			FlushCache flushCache = new FlushCache(webDriver);
 			flushCache.FlushAllCache();
 			Modules modules = new Modules(webDriver);

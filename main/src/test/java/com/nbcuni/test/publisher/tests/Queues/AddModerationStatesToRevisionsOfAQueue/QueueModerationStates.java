@@ -59,6 +59,7 @@ public class QueueModerationStates extends ParentTest{
         //Step 4
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
+        contentParent.VerifyPageContentPresent(Arrays.asList("QUEUE ITEMS"));
         
         //Step 5
         QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);

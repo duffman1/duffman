@@ -1,15 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.TVEModule;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com jQuery Update Library. Copyright
@@ -20,34 +17,40 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class jQueryUpdate {
 
-	private WebDriverWait wait;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
+	
 	
     //PAGE OBJECT CONSTRUCTOR
     public jQueryUpdate(Driver webDriver) {
-    	PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+    	config = new Config();
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     }
     
-    //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-jquery-update-jquery-version")
-    private WebElement DefaultjQueryVersion_Ddl;
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement SaveConfiguration_Btn;
+    //PAGE OBJECT IDENTIFIERS
+    private By DefaultjQueryVersion_Ddl = By.id("edit-jquery-update-jquery-version");
+    
+    private By SaveConfiguration_Btn = By.id("edit-submit");
     
     
     //PAGE OBJECT METHODS
     public void SelectDefaultjQueryVersion(String version) throws Exception {
     	
     	Reporter.log("Select '" + version + "' from the 'Default jQuery Version' drop down list.");
-    	new Select(wait.until(ExpectedConditions.visibilityOf(DefaultjQueryVersion_Ddl))).selectByVisibleText(version);
+    	interact.Select(waitFor.ElementVisible(DefaultjQueryVersion_Ddl), version);
+    	
     }
     
     public void ClickSaveConfigurationBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save configuration' button.");
-    	Thread.sleep(1000);
-    	SaveConfiguration_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
+    	
     }
     
 }

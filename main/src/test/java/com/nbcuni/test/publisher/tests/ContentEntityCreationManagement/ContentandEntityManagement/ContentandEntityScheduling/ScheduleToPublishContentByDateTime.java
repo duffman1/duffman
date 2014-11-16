@@ -7,7 +7,6 @@ import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.RevisionState;
-import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
 
@@ -103,8 +102,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(postTitle, "Moderate to Publish", sdfDate10DaysFuture + " - 05:00 PM"));
         scheduleQueue.ClickRunNowLnk(postTitle, "Moderate to Published");
         scheduleQueue.VerifyScheduledQueue(Arrays.asList("Moderate to Published", "Completed"));
-        Revisions revisions = new Revisions(webDriver);
-        revisions.ClickRevisionTab();
+        navigation.ClickPrimaryTabNavLnk("Revisions");
         Calendar calToday = Calendar.getInstance();
         Date dateToday = calToday.getTime();
         String sdfDateToday = sdfDate.format(dateToday);

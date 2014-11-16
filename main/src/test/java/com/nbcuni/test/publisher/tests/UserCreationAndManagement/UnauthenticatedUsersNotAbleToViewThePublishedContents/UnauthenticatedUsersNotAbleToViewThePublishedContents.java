@@ -75,8 +75,8 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         applib.openSitePage(contentURL);
         
         //Step8
+        workBench.ClickWorkBenchTab("Revisions");
         Revisions revisions = new Revisions(webDriver);
-        revisions.ClickRevisionTab();
         revisions.EnterLogMessageForStateChange("This Revision Comment");
         revisions.ClickUpdateStateBtn();
       

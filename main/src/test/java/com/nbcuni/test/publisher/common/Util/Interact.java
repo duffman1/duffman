@@ -51,6 +51,7 @@ public class Interact {
     		case "xpath": locator = By.xpath(elementID); break;
     		case "cssSelector": locator = By.cssSelector(elementID); break;
     		case "linkText": locator = By.linkText(elementID); break;
+    		case "id": locator = By.id(elementID); break;
     	}
     	
     	System.out.println(locator.toString());
@@ -98,7 +99,7 @@ public class Interact {
     				catch (WebDriverException e) {
     					if (e.getMessage().toString().contains("stale element"))
     					{
-    						System.out.println("element is stale.");
+    						System.out.println("click element is stale.");
     						webDriver.findElement(GetByLocator(ele)).click();
     						elementClicked = true;
     					}
@@ -122,7 +123,15 @@ public class Interact {
     					ele.sendKeys(text);
     					elementTyped = true;
     				}
-    				catch (WebDriverException e) { }
+    				catch (WebDriverException e) { 
+    					if (e.getMessage().toString().contains("stale element"))
+    					{
+    						System.out.println("typed element is stale.");
+    						webDriver.findElement(GetByLocator(ele)).clear();
+    						webDriver.findElement(GetByLocator(ele)).sendKeys(text);
+    						elementTyped = true;
+    					}
+    				}
     				return elementTyped;	
     			}
     		});
@@ -141,7 +150,14 @@ public class Interact {
     					new Select(ele).selectByVisibleText(option);
     					elementSelected = true;
     				}
-    				catch (WebDriverException e) { }
+    				catch (WebDriverException e) { 
+    					if (e.getMessage().toString().contains("stale element"))
+    					{
+    						System.out.println("select element is stale.");
+    						new Select(webDriver.findElement(GetByLocator(ele))).selectByVisibleText(option);
+    						elementSelected = true;
+    					}
+    				}
     				return elementSelected;	
     			}
     		});

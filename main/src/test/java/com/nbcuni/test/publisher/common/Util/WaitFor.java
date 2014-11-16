@@ -83,6 +83,21 @@ public class WaitFor {
     	return webDriver.findElement(locator);
     }
     
+    public List<WebElement> ElementsPresent(final By locator) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Elements not present.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return webDriver.findElements(loc).size() > 0;
+    			}
+    		});
+    	
+    	return webDriver.findElements(locator);
+    }
+    
     public void ElementNotPresent(WebElement element) throws Exception {
 
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
