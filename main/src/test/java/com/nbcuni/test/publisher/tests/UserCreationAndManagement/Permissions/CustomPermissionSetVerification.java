@@ -57,7 +57,7 @@ public class CustomPermissionSetVerification extends ParentTest {
     	//Step 9
     	addNewPermissionSet.ClickEditTab();
     	addNewPermissionSet.EnablePermissions(Arrays.asList("stick to Acquia web node", 
-    			"access resource show", "access resource wysiwyg_profile"));
+    			"access resource show", "view own files"));
     	addNewPermissionSet.ClickSaveBtn();
     	contentParent.VerifyMessageStatus(setName.toLowerCase() + " has been updated.");
     	
@@ -73,7 +73,7 @@ public class CustomPermissionSetVerification extends ParentTest {
     			"\n" + "$permission_set->name = '" + setName + "';" +
     			"\n" + "$permission_set->permissions = array(" +
     			"\n" + "  'stick to Acquia web node' => 'stick to Acquia web node'," +
-    			"\n" + "  'access resource wysiwyg_profile' => 'access resource wysiwyg_profile'," +
+    			"\n" + "  'view own files' => 'view own files'," +
     			"\n" + "  'access resource show' => 'access resource show'," +
     			"\n" + ");" + "\n";
     	addNewPermissionSet.VerifyExportCodeValue(exportCodeEditedValue);

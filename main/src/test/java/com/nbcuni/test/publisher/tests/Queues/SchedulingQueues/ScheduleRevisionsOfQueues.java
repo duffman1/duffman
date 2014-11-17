@@ -63,7 +63,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
-        scheduleQueue.ClickScheduleTab();
+        navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.ClickAddScheduledRevisionLnk();
         
         //Step 8
@@ -83,7 +83,7 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         navigation.Content("Queues");
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        scheduleQueue.ClickScheduleTab();
+        navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(queueTitle, "Moderate to Publish", sDate + " - 05:00 PM"));
         
     }

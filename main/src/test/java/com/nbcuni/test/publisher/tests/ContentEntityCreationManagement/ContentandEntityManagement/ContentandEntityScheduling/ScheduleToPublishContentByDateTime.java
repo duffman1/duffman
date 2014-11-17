@@ -60,7 +60,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 
         //Step 5
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
-        scheduleQueue.ClickScheduleTab();
+        navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.VerifyAddScheduleVersionLnkPresent();
         scheduleQueue.VerifyScheduleTableisEmpty();
         
@@ -81,7 +81,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         revisionstate.VerifyRevisionCount(2);
 
         //Step 9
-        scheduleQueue.ClickScheduleTab();
+        navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.ClickAddScheduledRevisionLnk();
         
         //Step 10
@@ -106,7 +106,7 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         Calendar calToday = Calendar.getInstance();
         Date dateToday = calToday.getTime();
         String sdfDateToday = sdfDate.format(dateToday);
-        contentParent.VerifyPageContentPresent(Arrays.asList("Draft --> Published on " + sdfDateToday));
+        contentParent.VerifyPageContentPresent(Arrays.asList("Draft to Published on " + sdfDateToday));
         
     }
 }

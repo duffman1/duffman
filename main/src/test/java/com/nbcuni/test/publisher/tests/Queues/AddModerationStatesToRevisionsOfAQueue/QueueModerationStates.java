@@ -67,7 +67,7 @@ public class QueueModerationStates extends ParentTest{
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
     	String date = sdf.format(new Date());
-        queuesRevisionList.VerifyStateFlowHistoryEvent("--> Draft on " + date);
+        queuesRevisionList.VerifyStateFlowHistoryEvent("Draft to Draft on " + date);
         //TODO add verifications for other relevant data on the revision history tab
         
         //Step 6

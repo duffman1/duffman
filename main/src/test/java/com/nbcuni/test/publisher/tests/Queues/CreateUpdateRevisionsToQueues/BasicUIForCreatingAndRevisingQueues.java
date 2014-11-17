@@ -101,7 +101,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
     	String date = sdf.format(new Date());
     	
-        queuesRevisionList.VerifyStateFlowHistoryEvent("--> Draft on " + date);
+        queuesRevisionList.VerifyStateFlowHistoryEvent("Draft to Draft on " + date);
         
         //Step 12-14 N/A
         

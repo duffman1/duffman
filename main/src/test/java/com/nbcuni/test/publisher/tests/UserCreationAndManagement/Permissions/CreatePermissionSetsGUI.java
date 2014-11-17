@@ -33,7 +33,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	AddNewPermissionSet addNewPermissionSet = new AddNewPermissionSet(webDriver, applib);
     	String setName = random.GetCharacterString(15);
     	addNewPermissionSet.EnterPermissionSetName(setName);
-    	addNewPermissionSet.EnablePermissions(Arrays.asList("access resource wysiwyg_profile", "edit any document files"));
+    	addNewPermissionSet.EnablePermissions(Arrays.asList("view own files", "edit any document files"));
     	addNewPermissionSet.ClickSaveBtn();
     	contentParent.VerifyMessageStatus(setName + " has been created.");
     	
@@ -51,14 +51,14 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	//Step 5
     	navigation.ClickSecondaryTabNavLnk("Permissions");
     	Permissions permissions = new Permissions(webDriver, applib);
-    	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("access resource wysiwyg_profile", "edit any document files"));
+    	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("view own files", "edit any document files"));
     	
     	//Step 6
     	navigation.Structure("Permission Sets");
     	permissionSets.ClickPermissionSetEditLnk(setName);
     	
     	//Step 7
-    	addNewPermissionSet.DisablePermissions(Arrays.asList("access resource wysiwyg_profile", "edit any document files"));
+    	addNewPermissionSet.DisablePermissions(Arrays.asList("view own files", "edit any document files"));
     	addNewPermissionSet.EnablePermissions(Arrays.asList("create post content", "edit own post content"));
     	addNewPermissionSet.ClickSaveBtn();
     	contentParent.VerifyMessageStatus(setName + " has been updated.");
@@ -76,7 +76,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	//Step 9
     	navigation.ClickSecondaryTabNavLnk("Permissions");
     	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("create post content", "edit own post content"));
-    	permissions.VerifyPermissionsNotSelected("senior editor", Arrays.asList("access resource wysiwyg_profile", "edit any document files"));
+    	permissions.VerifyPermissionsNotSelected("senior editor", Arrays.asList("view own files", "edit any document files"));
     	
     	//Step 10
     	navigation.Structure("Permission Sets");

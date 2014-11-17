@@ -192,7 +192,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    
         	    //Step 14
         	    ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
-        	    scheduleQueue.ClickScheduleTab();
+        	    navigation.ClickPrimaryTabNavLnk("Schedule");
         	    scheduleQueue.VerifyScheduleTableisEmpty();
         	    
         	    //Step 15 through 25 - TODO automate as time allows but not an automation priority
@@ -262,7 +262,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    editMPXVideo.VerifyMPXExpirationDate(pub7Date1YearInFuture);
         	    
         	    //Step 36
-        	    scheduleQueue.ClickScheduleTab();
+        	    navigation.ClickPrimaryTabNavLnk("Schedule");
         	    scheduleQueue.VerifyRunNowLnkPresent(mediaTitle, "Unpublish");
         	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, 
         	    		"Unpublish", pub7Date1YearInFuture));

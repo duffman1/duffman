@@ -4,6 +4,7 @@ import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
 
 import org.testng.annotations.Test;
@@ -35,8 +36,9 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         String postTitle = createDefaultContent.Post("Draft");
 
         //Step 3
+        WorkBench workBench = new WorkBench(webDriver);
+        workBench.ClickWorkBenchTab("Schedule");
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);           
-        scheduleQueue.ClickScheduleTab();
         scheduleQueue.ClickAddScheduledRevisionLnk();
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Published");

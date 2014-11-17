@@ -2,14 +2,13 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
@@ -21,16 +20,18 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class MediaItems {
 
-    private Driver webDriver;
     private Config config;
+    private Integer timeout;
     private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public MediaItems(Driver webDriver) {
-        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
-        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -38,32 +39,27 @@ public class MediaItems {
     	return By.xpath("(//div[contains(@id, 'edit-field-media-items')]//div[@class='media-thumbnail']/img)[" + imageIndex + "]");
     }
     
-    @FindBy(how = How.ID, using = "edit-field-media-items-und-add-more")
-    private WebElement Select_Btn;
+    private By Select_Btn = By.id("edit-field-media-items-und-add-more");
     
-    private WebElement Edit_Btn(String buttonIndex) {
-    	return webDriver.findElement(By.xpath("(//a[contains(@id, 'edit-field-media-items')][contains(@id, 'edit')][text()='Edit'])[" + buttonIndex + "]"));
+    private By Edit_Btn(String buttonIndex) {
+    	return By.xpath("(//a[contains(@id, 'edit-field-media-items')][contains(@id, 'edit')][text()='Edit'])[" + buttonIndex + "]");
     }
     
-    private WebElement Unique_Url(String imageIndex) {
-    	return webDriver.findElement(By.xpath("(//div[@class='media-thumbnail']/../../..//div[3]/a)[" + imageIndex + "]"));
+    private By Unique_Url(String imageIndex) {
+    	return By.xpath("(//div[@class='media-thumbnail']/../../..//div[3]/a)[" + imageIndex + "]");
     }
     
-    private WebElement MediaVideo_Frm(String itemTtl, String videoIndex) {
-    	return webDriver.findElement(By.xpath("(//div[@class='media-item'][contains(@title, '" + itemTtl + "')]//iframe[@id='pdk-player'])[" + videoIndex + "]"));
+    private By MediaVideo_Frm(String itemTtl, String videoIndex) {
+    	return By.xpath("(//div[@class='media-item'][contains(@title, '" + itemTtl + "')]//iframe[@id='pdk-player'])[" + videoIndex + "]");
     }
     
-    private WebElement MediaVideo_Lnk(String videoIndex) {
-    	return webDriver.findElement(By.xpath("(//div[@class='media-item']//a[contains(@type, 'video/mpx')])[" + videoIndex + "]"));
+    private By MediaVideo_Lnk(String videoIndex) {
+    	return By.xpath("(//div[@class='media-item']//a[contains(@type, 'video/mpx')])[" + videoIndex + "]");
     }
     
-    @FindBy(how = How.ID, using = "media-edit-all-button")
-    private WebElement EditAll_Btn;
+    private By EditAll_Btn = By.id("media-edit-all-button");
     
     private By Add_Btn = By.xpath("//input[contains(@id, 'edit-field-media-items-und-add-more')]");
-    
-    @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
-    private WebElement Spinner_Img;
     
     
     //PAGE OBJECT METHODS
@@ -81,51 +77,57 @@ public class MediaItems {
     public void VerifyFileVideoPresent(String videoTitle, String videoIndex) throws Exception {
     	
     	Reporter.log("Verify the video title with index '" + videoIndex + "' contains '" + videoTitle + "' and is present.");
-    	MediaVideo_Frm(videoTitle, videoIndex).isDisplayed();
+    	waitFor.ElementVisible(MediaVideo_Frm(videoTitle, videoIndex));
+    	
     }
     
     public void VerifyFileVideoLnkPresent(String videoTitle, String videoIndex) throws Exception {
     	
     	Reporter.log("Verify the video title link with index '" + videoIndex + "' contains '" + videoTitle + "' and is present.");
-    	Assert.assertTrue(MediaVideo_Lnk(videoIndex).getText().contains(videoTitle));
+    	waitFor.ElementContainsText(MediaVideo_Lnk(videoIndex), videoTitle);
+    	
     }
     
     public void ClickSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Select' button.");
-    	Select_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Select_Btn));
+    	
     }
 
     public void ClickEditBtn(String buttonIndex) throws Exception {
     	
     	Reporter.log("Click the 'Edit' button with index '" + buttonIndex + "'.");
-    	Edit_Btn(buttonIndex).click();
+    	interact.Click(waitFor.ElementVisible(Edit_Btn(buttonIndex)));
+    	
     }
     
     public void ClickEditAllBtn() throws Exception {
     	
     	Reporter.log("Click the 'Edit All' button.");
-    	EditAll_Btn.click();
+    	interact.Click(waitFor.ElementVisible(EditAll_Btn));
+    	
     }
     
     public void ClickAddBtn() throws Exception {
     	
     	Reporter.log("Click the 'Add' button.");
-    	Thread.sleep(250); 
-    	waitFor.ElementVisible(Add_Btn).click();
-
+    	interact.Click(waitFor.ElementVisible(Add_Btn));
+    	
     }
     
     public String GetImageUniqueUrl(String imageIndex) throws Exception {
     	
     	Reporter.log("Get the unique url for image number " + imageIndex + ".");
-    	return Unique_Url(imageIndex).getAttribute("href");
+    	return waitFor.ElementVisible(Unique_Url(imageIndex)).getAttribute("href");
+    	
     }
     
     public void ClickImageUniqueUrl(String imageIndex) throws Exception {
     	
     	Reporter.log("Click the unique url link for image number " + imageIndex + ".");
-    	Unique_Url(imageIndex).click();
+    	interact.Click(waitFor.ElementVisible(Unique_Url(imageIndex)));
+    	
     }
     
     

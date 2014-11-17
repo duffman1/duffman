@@ -37,8 +37,6 @@ public class ScheduleQueue {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private By Schedule_Tab = By.xpath("//a[text()='Schedule']");
-    
     private By AddScheduledRevision_Lnk = By.xpath("//a[text()='Add scheduled revision']");
     
     private By Revision_Ddl = By.id("edit-revision-id");
@@ -69,14 +67,7 @@ public class ScheduleQueue {
     
     
     //PAGE OBJECT METHODS
-    public void ClickScheduleTab() throws Exception {
-    	
-    	Reporter.log("Click the 'Schedule' tab.");
-    	interact.Click(waitFor.ElementVisible(Schedule_Tab));
-    	
-    }
-    
-    public void ClickAddScheduledRevisionLnk() throws Exception {
+     public void ClickAddScheduledRevisionLnk() throws Exception {
     	
     	Reporter.log("Click the 'Add Scheduled Revision' link.");
     	interact.Click(waitFor.ElementVisible(AddScheduledRevision_Lnk));
