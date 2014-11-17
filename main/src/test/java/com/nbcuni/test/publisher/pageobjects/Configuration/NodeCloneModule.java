@@ -1,13 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Node Clone Module Library. Copyright
@@ -18,97 +20,101 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class NodeCloneModule {
 
-    private Driver webDriver;
-    
+    private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
+    	
     //PAGE OBJECT CONSTRUCTOR
     public NodeCloneModule(Driver webDriver) {
-    	this.webDriver = webDriver;
-    	PageFactory.initElements(webDriver, this);
+    	config = new Config();
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-clone-method-prepopulate")
-    private WebElement PrePopulateNodeFormFields_Rdb;
+    private By PrePopulateNodeFormFields_Rdb = By.id("edit-clone-method-prepopulate");
     
-    @FindBy(how = How.ID, using = "edit-clone-nodes-without-confirm-1")
-    private WebElement BypassConfirmation_Rdb;
+    private By BypassConfirmation_Rdb = By.id("edit-clone-nodes-without-confirm-1");
     
-    @FindBy(how = How.ID, using = "edit-clone-menu-links-0")
-    private WebElement No_Rdb;
+    private By No_Rdb = By.id("edit-clone-menu-links-0");
     
-    @FindBy(how = How.ID, using = "edit-clone-use-node-type-name")
-    private WebElement UseNodeTypeNameInCloneLink_Cbx;
+    private By UseNodeTypeNameInCloneLink_Cbx = By.id("edit-clone-use-node-type-name");
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement SaveConfiguration_Btn;
+    private By SaveConfiguration_Btn = By.id("edit-submit");
     
-    private List<WebElement> PublishingOptionsResetDefault_Cbxs() {
-    	return webDriver.findElements(By.cssSelector("input[id*='edit-clone-reset']"));
-    }
+    private By AllPublishingOptionsResetDefault_Cbxs = By.cssSelector("input[id*='edit-clone-reset']");
     
-    private List<WebElement> OmittedContentTypes_Cbxs() {
-    	return webDriver.findElements(By.cssSelector("input[id*='edit-clone-omitted']"));
-    }
+    private By AllOmittedContentTypes_Cbxs = By.cssSelector("input[id*='edit-clone-omitted']");
     
     
     //PAGE OBJECT METHODS
     public void ClickPrePopulateNodeFormFieldsRdb() throws Exception {
     	
-    	if (PrePopulateNodeFormFields_Rdb.isSelected() == false) {
+    	WebElement ele = waitFor.ElementVisible(PrePopulateNodeFormFields_Rdb);
+    	if (ele.isSelected() == false) {
     		
     		Reporter.log("Click the 'Pre-populate the node form fields' radio button.");
-    		PrePopulateNodeFormFields_Rdb.click();
+    		interact.Click(ele);
+    		
     	}
     	
     }
     
     public void ClickBypassConfirmationRdb() throws Exception {
      
-    	if (BypassConfirmation_Rdb.isSelected() == false) {
+    	WebElement ele = waitFor.ElementVisible(BypassConfirmation_Rdb);
+    	if (ele.isSelected() == false) {
     		
     		Reporter.log("Click the 'Bypass confirmation' radio button.");
-    		BypassConfirmation_Rdb.click();
+    		interact.Click(ele);
+    		
     	}
     }
     
     public void ClickCloneMenuLnksNoRdb() throws Exception {
         
-    	if (No_Rdb.isSelected() == false) {
+    	WebElement ele = waitFor.ElementVisible(No_Rdb);
+    	if (ele.isSelected() == false) {
     		
     		Reporter.log("Click the 'No' radio button in under the 'Clone menu links' label.");
-    		No_Rdb.click();
+    		interact.Click(ele);
     	}
     }
     
     public void ClickUseNodeTypeNameInCloneLnkCbx() throws Exception {
         
-    	if (UseNodeTypeNameInCloneLink_Cbx.isSelected() == false) {
+    	WebElement ele = waitFor.ElementVisible(UseNodeTypeNameInCloneLink_Cbx);
+    	if (ele.isSelected() == false) {
     		
     		Reporter.log("Check the 'Use node type name in clone link' check box.");
-    		UseNodeTypeNameInCloneLink_Cbx.click();
+    		interact.Click(ele);
     	}
+    	
     }
     
     public void UncheckAllPublishingOptionResetDefaultCbxs() throws Exception {
         
-    	List<WebElement> allCbxs = PublishingOptionsResetDefault_Cbxs();
+    	List<WebElement> allCbxs = waitFor.ElementsPresent(AllPublishingOptionsResetDefault_Cbxs);
     	
-    	for (WebElement el : allCbxs) {
-    		if (el.isSelected() == true) {
-    			Reporter.log("Uncheck the check box with id '" + el.getAttribute("id") + "' under the 'Should the publishing options be reset...' label.");
-    			el.click();
+    	for (WebElement ele : allCbxs) {
+    		if (ele.isSelected() == true) {
+    			Reporter.log("Uncheck the check box with id '" + ele.getAttribute("id") + "' under the 'Should the publishing options be reset...' label.");
+    			interact.Click(ele);
     		}
     	}
+    	
     }
     
     public void UncheckAllOmittedContentTypesCbxs() throws Exception {
         
-    	List<WebElement> allCbxs = OmittedContentTypes_Cbxs();
+    	List<WebElement> allCbxs = waitFor.ElementsPresent(AllOmittedContentTypes_Cbxs);
     	
-    	for (WebElement el : allCbxs) {
-    		if (el.isSelected() == true) {
-    			Reporter.log("Uncheck the check box with id '" + el.getAttribute("id") + "' under the 'Omitted content types' label.");
-    			el.click();
+    	for (WebElement ele : allCbxs) {
+    		if (ele.isSelected() == true) {
+    			Reporter.log("Uncheck the check box with id '" + ele.getAttribute("id") + "' under the 'Omitted content types' label.");
+    			interact.Click(ele);
     		}
     	}
     }
@@ -116,7 +122,8 @@ public class NodeCloneModule {
     public void ClickSaveConfigurationBtn() throws Exception {
         
     	Reporter.log("Click the 'Save configuration' button.");
-    	SaveConfiguration_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
+    	
     }
 
     public void EnableNodeCloneModuleSetting() throws Exception{
