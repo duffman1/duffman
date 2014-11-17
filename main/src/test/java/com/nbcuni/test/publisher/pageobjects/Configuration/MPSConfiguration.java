@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
@@ -24,13 +24,16 @@ public class MPSConfiguration {
 	private Driver webDriver;
 	private WaitFor waitFor;
 	private Config config;
+	private Integer timeout;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR    
     public MPSConfiguration(Driver webDriver) {
     	this.webDriver = webDriver;
     	config = new Config();
-    	PageFactory.initElements(webDriver, this);
-    	waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS    
@@ -113,25 +116,21 @@ public class MPSConfiguration {
     public void EnterMPSHost(String host) throws Exception { 
     	
     	Reporter.log("Enter '" + host + "' in the 'MPS Host' text box."); 
-    	WebElement ele = waitFor.ElementVisible(MPSHost_Txb);
-    	ele.clear();
-    	ele.sendKeys(host);
+    	interact.Type(waitFor.ElementVisible(MPSHost_Txb), host);
     	
     }
     
     public void ClickIntegrationMethod(String label) throws Exception { 
     	
     	Reporter.log("Click the '" + label + "' radio button."); 
-    	waitFor.ElementVisible(IntegrationMethod_Rdb(label)).click();
+    	interact.Click(waitFor.ElementVisible(IntegrationMethod_Rdb(label)));
     	
     }
     
     public void EnterSiteInstanceOverride(String override) throws Exception { 
     	
     	Reporter.log("Enter '" + override + "' in the 'Site Instance Override' text box.");
-    	WebElement ele = waitFor.ElementVisible(SiteInstanceOverride_Txb);
-    	ele.clear();
-    	ele.sendKeys(override);
+    	interact.Type(waitFor.ElementVisible(SiteInstanceOverride_Txb), override);
     	
     }
     
@@ -141,7 +140,7 @@ public class MPSConfiguration {
     	
     	if (ele.isSelected() == false) {
     		Reporter.log("Check the 'Send Query Strings' check box.");
-    		ele.click();
+    		interact.Click(ele);
     	}
     	
     }
@@ -152,7 +151,7 @@ public class MPSConfiguration {
     	
     	if (ele.isSelected() == true) {
     		Reporter.log("Un-check the 'Send Query Strings' check box.");
-    		ele.click();
+    		interact.Click(ele);
     	}
     	
     }
@@ -160,55 +159,49 @@ public class MPSConfiguration {
     public void EnterName(String nameTxt, String index) throws Exception { 
     	
     	Reporter.log("Enter '" + nameTxt + "' in the 'Name' text box with index '" + index + "'.");
-    	WebElement ele = waitFor.ElementVisible(Name_Txb(index));
-    	ele.clear();
-    	ele.click();
-    	ele.sendKeys(nameTxt);
+    	interact.Type(waitFor.ElementVisible(Name_Txb(index)), nameTxt);
     	
     }
     
     public void EnterValue(String valueTxt, String index) throws Exception { 
     	
     	Reporter.log("Enter '" + valueTxt + "' in the 'Value' text box with index '" + index + "'.");
-    	WebElement ele = waitFor.ElementVisible(Value_Txb(index));
-    	ele.clear();
-    	ele.click();
-    	ele.sendKeys(valueTxt);
+    	interact.Type(waitFor.ElementVisible(Value_Txb(index)), valueTxt);
     	
     }
     
     public void CheckJSONCbx(String index) throws Exception { 
     	
     	Reporter.log("Check the 'JSON' check box with index '" + index + "'.");
-    	waitFor.ElementVisible(JSON_Cbx(index)).click();
+    	interact.Click(waitFor.ElementVisible(JSON_Cbx(index)));
     	
     }
     
     public void ClickAddAnotherOptBtn() throws Exception { 
     	
     	Reporter.log("Click the 'Add another opt' button.");
-    	waitFor.ElementVisible(AddAnotherOpt_Btn).click();
+    	interact.Click(waitFor.ElementVisible(AddAnotherOpt_Btn));
     	
     }
     
     public void ClickReplacementPatternsLnk() throws Exception { 
     	
     	Reporter.log("Click the 'REPLACEMENT PATTERNS' link.");
-    	waitFor.ElementVisible(ReplacementPatterns_Lnk).click();
+    	interact.Click(waitFor.ElementVisible(ReplacementPatterns_Lnk));
     	
     }
     
     public void ClickBrowseAvailableTokensLnk() throws Exception { 
     	
     	Reporter.log("Click the 'Browse available tokens' link.");
-    	waitFor.ElementVisible(BrowseAvailableTokens_Lnk).click();
+    	interact.Click(waitFor.ElementVisible(BrowseAvailableTokens_Lnk));
     	
     }
     
     public void ClickMPSExpanderLnk() throws Exception { 
     	
     	Reporter.log("Click the 'MPS' link.");
-    	waitFor.ElementVisible(MPSExpander_Lnk).click();
+    	interact.Click(waitFor.ElementVisible(MPSExpander_Lnk));
     	
     }
     
@@ -222,23 +215,21 @@ public class MPSConfiguration {
     public void EnterPatternForCategoryField(String pattern) throws Exception { 
     	
     	Reporter.log("Enter '" + pattern + "' in the 'Pattern for Category Field' text box.");
-    	WebElement ele = waitFor.ElementVisible(PatternForCategoryField_Txb);
-    	ele.clear();
-    	ele.sendKeys(pattern);
+    	interact.Type(waitFor.ElementVisible(PatternForCategoryField_Txb), pattern);
     	
     }
 
     public void ClickSyncAdBlocksBtn() throws Exception { 
     	
     	Reporter.log("Click the 'Sync Ad Blocks' button.");
-    	waitFor.ElementVisible(SyncAdBlocks_Btn).click();
+    	interact.Click(waitFor.ElementVisible(SyncAdBlocks_Btn));
     	
     }
 
     public void ClickSaveConfigurationBtn() throws Exception { 
     	
     	Reporter.log("Click the 'Save configuration' button.");
-    	waitFor.ElementVisible(SaveConfiguration_Btn).click();
+    	interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
     	
     }
     
@@ -257,7 +248,7 @@ public class MPSConfiguration {
     	Reporter.log("Uncheck all 'JSON' check boxes.");
     	for (WebElement JSON_Cbx : waitFor.ElementsVisible(AllJSON_Cbxs)) {
     		if (JSON_Cbx.isSelected() == true) {
-    			JSON_Cbx.click();
+    			interact.Click(JSON_Cbx);
     		}
     	}
     }

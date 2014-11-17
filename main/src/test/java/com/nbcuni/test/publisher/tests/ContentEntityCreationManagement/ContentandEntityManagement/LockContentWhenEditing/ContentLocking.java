@@ -34,7 +34,7 @@ public class ContentLocking extends ParentTest {
 	  
 		//Step 2
 		navigation.Configuration("Content lock");
-	    ContentLock contentLock = new ContentLock(webDriver, applib);
+	    ContentLock contentLock = new ContentLock(webDriver);
 	    contentLock.CheckShowLockUnlockMessagesCbx();
 	    contentLock.ClickSaveConfiguration();
 	    contentParent.VerifyMessageStatus("The configuration options have been saved.");

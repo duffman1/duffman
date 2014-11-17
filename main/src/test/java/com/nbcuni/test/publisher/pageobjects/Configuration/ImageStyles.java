@@ -3,15 +3,11 @@ package com.nbcuni.test.publisher.pageobjects.Configuration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
@@ -24,41 +20,39 @@ public class ImageStyles {
 		
 	private Driver webDriver;
 	private Config config;
+	private Integer timeout;
 	private WaitFor waitFor;
+	private Interact interact;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public ImageStyles(Driver webDriver) {
 		this.webDriver = webDriver;
 		config = new Config();
-		PageFactory.initElements(webDriver, this);
-		waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+		timeout = config.getConfigValueInt("WaitForWaitTime");
+		waitFor = new WaitFor(webDriver, timeout);
+		interact = new Interact(webDriver, timeout);
 		
 	}
 
 	//PAGE OBJECT IDENTIFIERS
 	private By AddStyle_Lnk = By.linkText("Add style");
 	
-	@FindBy(how = How.ID, using ="edit-label")
-	private WebElement StyleName_Txb;
+	private By StyleName_Txb = By.id("edit-label");
 	
-	@FindBy(how = How.ID, using ="edit-submit")
-	private WebElement CreateNewStyle_Btn;
+	private By CreateNewStyle_Btn = By.id("edit-submit");
 	
-	@FindBy(how = How.CSS, using ="select[name='new']")
-	private WebElement Effect_Ddl;
+	private By Effect_Ddl = By.cssSelector("select[name='new']");
 	
-	@FindBy(how = How.ID, using ="edit-add")
-	private WebElement Add_Btn;
+	private By Add_Btn = By.id("edit-add");
 	
-	@FindBy(how = How.ID, using ="edit-actions-submit")
-	private WebElement UpdateStyle_Btn;
+	private By UpdateStyle_Btn = By.id("edit-actions-submit");
 	
-	private WebElement Style_Lnk(String styleName) {
-		return webDriver.findElement(By.xpath("//a[text()='" + styleName + "']"));
+	private By Style_Lnk(String styleName) {
+		return By.xpath("//a[text()='" + styleName + "']");
 	}
 	
-	private WebElement StyleDelete_Lnk(String styleName) {
-		return webDriver.findElement(By.xpath("//a[text()='" + styleName + "']/../..//a[text()='delete']"));
+	private By StyleDelete_Lnk(String styleName) {
+		return By.xpath("//a[text()='" + styleName + "']/../..//a[text()='delete']");
 	}
 	
 	
@@ -66,17 +60,17 @@ public class ImageStyles {
 	public void ClickAddStyleLnk() throws Exception {
 		
 		Reporter.log("Click the 'Add style' link.");
-		waitFor.ElementVisible(AddStyle_Lnk).click();
+		interact.Click(waitFor.ElementVisible(AddStyle_Lnk));
 		
 	}
 	
 	public boolean FocalImageStylePresent(String styleName) throws Exception {
 
-		webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+		webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         boolean elPresent = false;
 
         try {
-            Style_Lnk(styleName).isDisplayed();
+            webDriver.findElement(Style_Lnk(styleName));
             elPresent = true;
         }
         catch (Exception e) {
@@ -91,37 +85,43 @@ public class ImageStyles {
 	public void ClickDeleteStyleLnk(String styleName) throws Exception {
 
 		Reporter.log("Click the 'delete' link for style name '" + styleName + "'.");
-		StyleDelete_Lnk(styleName).click();
+		interact.Click(waitFor.ElementVisible(StyleDelete_Lnk(styleName)));
+		
 	}
 	
 	public void EnterStyleName(String name) throws Exception {
 
 		Reporter.log("Enter '" + name + "' in the 'Style name' text box.");
-		StyleName_Txb.sendKeys(name);
+		interact.Type(waitFor.ElementVisible(StyleName_Txb), name);
+		
 	}
 	
 	public void ClickCreateNewStyleBtn() throws Exception {
 
 		Reporter.log("Click the 'Create new style' button.");
-		CreateNewStyle_Btn.click();
+		interact.Click(waitFor.ElementVisible(CreateNewStyle_Btn));
+		
 	}
 	
 	public void ClickAddBtn() throws Exception {
 
 		Reporter.log("Click the 'Add' button.");
-		Add_Btn.click();
+		interact.Click(waitFor.ElementVisible(Add_Btn));
+		
 	}
 	
 	public void SelectEffect(String option) throws Exception {
 
 		Reporter.log("Select '" + option + "' from the 'EFFECT' drop down list.");
-		new Select(Effect_Ddl).selectByVisibleText(option);
+		interact.Select(waitFor.ElementVisible(Effect_Ddl), option);
+		
 	}
 	
 	public void ClickUpdateStyleBtn() throws Exception {
 
 		Reporter.log("Click the 'Update style' button.");
-		UpdateStyle_Btn.click();
+		interact.Click(waitFor.ElementVisible(UpdateStyle_Btn));
+		
 	}
 	
 }

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -21,12 +22,16 @@ public class FlushCache {
 	private WaitFor waitFor;
 	private ContentParent contentParent;
 	private Config config;
+	private Integer timeout;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public FlushCache(Driver webDriver) {
         navigation = new EmberNav(webDriver);
         config = new Config();
-        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
         contentParent = new ContentParent(webDriver);
     }
     
@@ -38,8 +43,9 @@ public class FlushCache {
     public void FlushAllCache() throws Exception {
     	
     	navigation.Configuration("Performance");
-    	waitFor.ElementPresent(ClearAllCaches_Btn).click();
+    	interact.Click(waitFor.ElementPresent(ClearAllCaches_Btn));
     	contentParent.VerifyMessageStatus("Caches cleared.");
+    	
     }
     
 }
