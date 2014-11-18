@@ -138,11 +138,40 @@ public class CreateMediaGallery extends ParentTest{
             
             Reporter.log("STEP 11");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
-            Reporter.log("STEP 12 - 14 N/A");
+            Reporter.log("STEP 12");
+            navigation.AddContent("Media Gallery");
+            String title2 = random.GetCharacterString(15);
+            basicInformation.EnterTitle(title2);
+            basicInformation.EnterSynopsis();
+            basicInformation.EnterShortDescription("short description");
+            mediaItems.ClickSelectBtn();
+            selectFile.SwitchToSelectFileFrm();
+            selectFile.ClickViewLibraryBtn();
+    		selectFile.EnterFileName("HanSolo");
+    		contentParent.WaitForThrobberNotPresent();
+    		selectFile.ClickMediaThumbnailImage("1");
+    		selectFile.ClickMediaThumbnailImage("2");
+    		selectFile.ClickMediaThumbnailImage("3");
+    		selectFile.ClickSubmitBtn();
+    		webDriver.switchTo().defaultContent();
+    		selectFile.WaitForSelectFileFrameClose();
+            contentParent.WaitForThrobberNotPresent();
+            mediaItems.VerifyFileImagePresent("HanSolo", "1");
+            mediaItems.VerifyFileImagePresent("HanSolo", "2");
+            mediaItems.VerifyFileImagePresent("HanSolo", "3");
+            mediaItems.ClickEditAllBtn();
+            editImage.WaitForEditImageFrameOpen();
+            editImage.EnterKeywordsValue("1", keywords);
+            editImage.ClickSaveBtn("2");
+            editImage.WaitForEditImageFrameClose();
+            basicInformation.ClickCoverSelectBtn();
+            selectFile.SelectDefaultCoverImg();
+            basicInformation.VerifyCoverImagePresent("HanSolo");
             
-
+            Reporter.log("STEP 13");
+            contentParent.ClickSaveBtn();
+            contentParent.VerifyMessageStatus("Media Gallery " + title2 + " has been created.");
     }
 }

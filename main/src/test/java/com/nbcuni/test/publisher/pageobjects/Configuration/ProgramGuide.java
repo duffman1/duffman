@@ -6,12 +6,12 @@ import java.util.TimeZone;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
@@ -26,12 +26,15 @@ public class ProgramGuide {
     private String DataURL= "http://feed.entertainment.tv.theplatform.com/f/dCK2IC/stage_usa_listing?range=1-*&form=json";
     private WaitFor waitFor;
     private Config config;
+    private Integer timeout;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR    
     public ProgramGuide(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
         config = new Config();
-        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS    
@@ -52,16 +55,14 @@ public class ProgramGuide {
     public void EnterDataURL() throws Exception { 
     	
     	Reporter.log("Enter '" + DataURL + "' in the 'Data URL' text box.");
-    	WebElement ele = waitFor.ElementVisible(DataURL_Txb);
-    	ele.clear();
-    	ele.sendKeys(DataURL); 
+    	interact.Type(waitFor.ElementVisible(DataURL_Txb), DataURL); 
     	
     }
     
     public void ClickSaveConfigBtn() throws Exception { 
     	
     	Reporter.log("Click the 'Save Configuration' button.");
-    	waitFor.ElementVisible(SaveConfiguration_Btn).click();
+    	interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
     	
     }
     

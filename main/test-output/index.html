@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>1 group</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime" hash-for-method="ScheduleToPublishContentByDateTime_Test">ScheduleToPublishContentByDateTime_Test</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery" hash-for-method="CreateMediaGallery_TC1042">CreateMediaGallery_TC1042</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,136 +116,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ScheduleToPublishContentByDateTime_Test">
-                  </a> <!-- ScheduleToPublishContentByDateTime_Test -->
-                  <span class="method-name">ScheduleToPublishContentByDateTime_Test</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 20 seconds: Element not visible.
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.3&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.nbcuni.test.publisher.common.Util.WaitFor.ElementVisible(WaitFor.java:167)
-	at com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue.SelectRevision(ScheduleQueue.java:89)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime.ScheduleToPublishContentByDateTime_Test(ScheduleToPublishContentByDateTime.java:88)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.122)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a&apos;, time: &apos;2014-03-27 17:17:32&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.3&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: f3aad42231ed63c24ed451e9faafa597
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.um6qCj}, rotatable=false, locationContextEnabled=true, version=38.0.2125.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 10.47 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.3&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 556970d0-2be1-43ea-ab0c-0b8e3669c72f
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.um6qCj}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=556970d0-2be1-43ea-ab0c-0b8e3669c72f, version=38.0.2125.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.nbcuni.test.publisher.common.Util.WaitFor$7.apply(WaitFor.java:170)
-	at com.nbcuni.test.publisher.common.Util.WaitFor$7.apply(WaitFor.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 27 more
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.3&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:136)
-	... 35 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.122)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a&apos;, time: &apos;2014-03-27 17:17:32&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.3&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: f3aad42231ed63c24ed451e9faafa597
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.um6qCj}, rotatable=false, locationContextEnabled=true, version=38.0.2125.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.3&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.4&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.GeneratedConstructorAccessor51.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:389)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy2.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-
-</div> <!-- stack-trace -->
+                  <a name="CreateMediaGallery_TC1042">
+                  </a> <!-- CreateMediaGallery_TC1042 -->
+                  <span class="method-name">CreateMediaGallery_TC1042</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--219985028/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1442691970/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -254,7 +143,7 @@ Driver info: driver.version: EventFiringWebDriver
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -282,7 +171,15 @@ Driver info: driver.version: EventFiringWebDriver
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ScheduleToPublishContentByDateTime_Test</span>
+                <span class="method-in-group-name">CreateMediaGallery_TC1042</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">mpx</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">CreateMediaGallery_TC1042</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -304,14 +201,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ScheduleToPublishContentByDateTime_Test')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime')
-data.setCell(0, 3, 66710);
+data.setCell(0, 1, 'CreateMediaGallery_TC1042')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery')
+data.setCell(0, 3, 131169);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -323,19 +220,78 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">ScheduleToPublishContentByDateTime_Test</span>
+              <span class="reporter-method-name">CreateMediaGallery_TC1042</span>
               <div class="reporter-method-output-div">
+                <span class="reporter-method-output">STEP 1</span>
                 <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
+                <span class="reporter-method-output">SETUP</span>
                 <span class="reporter-method-output">Click the 'Menu' link to show navigation menu items.</span>
+                <span class="reporter-method-output">Click the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' link.</span>
+                <span class="reporter-method-output">Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</span>
+                <span class="reporter-method-output">MPX is already configured.</span>
+                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
+                <span class="reporter-method-output">Click the 'Content types' link.</span>
+                <span class="reporter-method-output">Click the 'manage field' link for content type 'Media Gallery'.</span>
+                <span class="reporter-method-output">Click the 'edit' link for field 'Media Items'.</span>
+                <span class="reporter-method-output">Click the 'Save settings' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Saved Media Items configuration.' is present.</span>
+                <span class="reporter-method-output">STEP 2</span>
                 <span class="reporter-method-output">Click the 'Content' menu link.</span>
                 <span class="reporter-method-output">Click the 'Add content' link.</span>
-                <span class="reporter-method-output">Click the 'Post' link.</span>
-                <span class="reporter-method-output">Enter '8d7fb59ae6e1449' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Click the 'Media Gallery' link.</span>
+                <span class="reporter-method-output">STEP 3</span>
+                <span class="reporter-method-output">Enter 'c486d9578bff44e' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Switch to the Synopsis frame.</span>
                 <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Enter 'short description' in the 'Short Description' text area.</span>
+                <span class="reporter-method-output">Click the 'Media Items Select' button.</span>
+                <span class="reporter-method-output">Click the 'Add files' link.</span>
+                <span class="reporter-method-output">Click the 'All Files' icon.</span>
+                <span class="reporter-method-output">Click the local 'Pictures' icon.</span>
+                <span class="reporter-method-output">Click the test picture link.</span>
+                <span class="reporter-method-output">Click the 'Open' button.</span>
+                <span class="reporter-method-output">Click the 'Start upload' link.</span>
+                <span class="reporter-method-output">Wait for file upload to reach 100%</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Add' button.</span>
+                <span class="reporter-method-output">Click the 'Add files' link.</span>
+                <span class="reporter-method-output">Click the 'All Files' icon.</span>
+                <span class="reporter-method-output">Click the local 'Pictures' icon.</span>
+                <span class="reporter-method-output">Click the test picture link.</span>
+                <span class="reporter-method-output">Click the 'Open' button.</span>
+                <span class="reporter-method-output">Click the 'Start upload' link.</span>
+                <span class="reporter-method-output">Wait for file upload to reach 100%</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the img source of the Media Item contains 'IPTCDefault'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Verify the img source of the Media Item contains 'nbclogosmall'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">STEP 4 and 5</span>
+                <span class="reporter-method-output">Click the 'Edit All' button.</span>
+                <span class="reporter-method-output">STEP 6</span>
+                <span class="reporter-method-output">Enter '8ceb9b95ab954bc' in the 'Keywords' text box with index '1'.</span>
+                <span class="reporter-method-output">Click the 'Save' button with index '2'.</span>
+                <span class="reporter-method-output">STEP 7</span>
+                <span class="reporter-method-output">Click the 'Edit All' button.</span>
+                <span class="reporter-method-output">Assert that the Keywords Text box with index '1' value matches '8ceb9b95ab954bc'.</span>
+                <span class="reporter-method-output">Click the 'Save' button with index '2'.</span>
+                <span class="reporter-method-output">STEP 8</span>
+                <span class="reporter-method-output">Click the 'Add' button.</span>
+                <span class="reporter-method-output">Click the 'PUBLISHER 7 MPX VIDEO' button.</span>
+                <span class="reporter-method-output">Enter 'AutomationWThumb' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Click the 'Apply' button.</span>
+                <span class="reporter-method-output">Click mpx media thumbnail image number 1</span>
+                <span class="reporter-method-output">Click on the 'Submit' button.</span>
+                <span class="reporter-method-output">STEP 9</span>
+                <span class="reporter-method-output">Click the 'Edit All' button.</span>
+                <span class="reporter-method-output">Verify the MPX Player frame is present.</span>
+                <span class="reporter-method-output">STEP 10</span>
+                <span class="reporter-method-output">Click the 'Cancel' link.</span>
+                <span class="reporter-method-output">OPTIONAL STEP</span>
                 <span class="reporter-method-output">Click the 'Cover' select button.</span>
                 <span class="reporter-method-output">Enter the file path for file upload.</span>
                 <span class="reporter-method-output">Click the 'Upload' button.</span>
@@ -346,37 +302,50 @@ return data;
                 <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
                 <span class="reporter-method-output">Verify the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Verify the Cover image src contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Wait for the image to fully load.</span>
+                <span class="reporter-method-output">STEP 11</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 8d7fb59ae6e1449 has been created.' is present.</span>
-                <span class="reporter-method-output">Verify the 'View' tab is present in the work bench.</span>
-                <span class="reporter-method-output">Verify the 'Edit Draft' tab is present in the work bench.</span>
-                <span class="reporter-method-output">Verify the 'Revisions' tab is present in the work bench.</span>
-                <span class="reporter-method-output">Verify the 'Schedule' tab is present in the work bench.</span>
-                <span class="reporter-method-output">Click the 'Revisions' link in the work bench.</span>
-                <span class="reporter-method-output">Verify the number of present revisions entries equals '1'.</span>
-                <span class="reporter-method-output">Click the 'Schedule' tab.</span>
-                <span class="reporter-method-output">Verify the 'Add Scheduled Revision' link is present.</span>
-                <span class="reporter-method-output">Verify the scheduled revision table is empty.</span>
-                <span class="reporter-method-output">Click the 'Edit Draft' link in the work bench.</span>
+                <span class="reporter-method-output">Verify success message of 'Media Gallery c486d9578bff44e has been created.' is present.</span>
+                <span class="reporter-method-output">STEP 12</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Media Gallery' link.</span>
+                <span class="reporter-method-output">Enter 'ec2942b36dad431' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Switch to the Synopsis frame.</span>
                 <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Enter 'Test Revision 2' in the 'Message for State Change' text area.</span>
+                <span class="reporter-method-output">Enter 'short description' in the 'Short Description' text area.</span>
+                <span class="reporter-method-output">Click the 'Select' button.</span>
+                <span class="reporter-method-output">Click the 'View Library' button.</span>
+                <span class="reporter-method-output">Enter 'HanSolo' in the 'File name' text box.</span>
+                <span class="reporter-method-output">Click media thumbnail image number 1</span>
+                <span class="reporter-method-output">Click media thumbnail image number 2</span>
+                <span class="reporter-method-output">Click media thumbnail image number 3</span>
+                <span class="reporter-method-output">Click on the 'Submit' button.</span>
+                <span class="reporter-method-output">Verify the img source of the Media Item contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Verify the img source of the Media Item contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Verify the img source of the Media Item contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Edit All' button.</span>
+                <span class="reporter-method-output">Enter '8ceb9b95ab954bc' in the 'Keywords' text box with index '1'.</span>
+                <span class="reporter-method-output">Click the 'Save' button with index '2'.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify the text 'Revision state' is present in the work bench info block.</span>
-                <span class="reporter-method-output">Verify the text 'Public' is present in the work bench info block.</span>
-                <span class="reporter-method-output">Verify the text 'Moderate' is present in the work bench info block.</span>
-                <span class="reporter-method-output">Click the 'Revisions' link in the work bench.</span>
-                <span class="reporter-method-output">Verify the number of present revisions entries equals '2'.</span>
-                <span class="reporter-method-output">Click the 'Schedule' tab.</span>
-                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
-                <span class="reporter-method-output">Select revision titled '8d7fb59ae6e1449'.</span>
-                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ScheduleToPublishContentByDateTime_Test_111714103146AM.png </span>
-                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/ScheduleToPublishContentByDateTime_Test_111714103146AM.png'> <img src='./ScheduleToPublishContentByDateTime_Test_111714103146AM.png' height='700' width='700'/> </a></span>
+                <span class="reporter-method-output">Verify the Cover image src contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Wait for the image to fully load.</span>
+                <span class="reporter-method-output">STEP 13</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Media Gallery ec2942b36dad431 has been created.' is present.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -394,28 +363,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManageme...)</span>
-                <span class="method-start">35 ms</span>
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Med...)</span>
+                <span class="method-start">30 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">ScheduleToPublishContentByDateTime_Test</span>
-                <span class="method-start">3395 ms</span>
+                <span class="method-name">CreateMediaGallery_TC1042</span>
+                <span class="method-start">3116 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=ScheduleToPublishContentByDateTime_Test status=FAILURE method=ScheduleToPublishCont...)</span>
-                <span class="method-start">70109 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=CreateMediaGallery_TC1042 status=SUCCESS method=CreateMediaGallery.CreateMediaGalle...)</span>
+                <span class="method-start">134285 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTeardown</span>
-                <span class="method-start">70915 ms</span>
+                <span class="method-start">134871 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
