@@ -163,6 +163,12 @@ public class Interact {
     		});
     }
     
+    public void Scroll(String scrollCount) throws Exception {
+    	
+    	webDriver.executeScript("window.scrollBy(0," + scrollCount + ");"); 
+    	
+    }
+    
     
 
 }

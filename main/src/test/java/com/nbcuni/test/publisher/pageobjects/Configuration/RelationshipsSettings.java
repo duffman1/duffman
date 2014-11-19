@@ -1,18 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Relationships Settings Library. Copyright
@@ -22,83 +17,86 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class RelationshipsSettings {
 		
-	private Driver webDriver;
-	private WebDriverWait wait;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public RelationshipsSettings(Driver webDriver) {
-		this.webDriver = webDriver;
-		PageFactory.initElements(webDriver, this);
-		wait = new WebDriverWait(webDriver, 10);
+		config = new Config();
+		timeout = config.getConfigValueInt("WaitForWaitTime");
+		waitFor = new WaitFor(webDriver, timeout);
+		interact = new Interact(webDriver, timeout);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
-	@FindBy(how = How.XPATH, using ="//a/strong[text()='TV']")
-	private WebElement TV_Tab;
+	private By TV_Tab = By.xpath("//a/strong[text()='TV']");
 	
-	@FindBy(how = How.XPATH, using ="//a/strong[text()='Movies']")
-	private WebElement Movies_Tab;
+	private By Movies_Tab = By.xpath("//a/strong[text()='Movies']");
 	
-	private List<WebElement> AllContentType_Cbxs() {
-		return webDriver.findElements(By.xpath("//div[@class='fieldset-wrapper']//input"));
-	}
-
-	private List<WebElement> ContentType_Cbx(String contentName) {
-		return webDriver.findElements(By.xpath("//label[text()='" + contentName + " ']/../input"));
+	private By AllContentType_Cbxs = By.xpath("//div[@class='fieldset-wrapper']//input");
+	
+	private By AllContentType_Cbxs(String contentName) {
+		return By.xpath("//label[text()='" + contentName + " ']/../input");
 	}
 	
-	private WebElement RelationshipDepth_Ddl(String contentName) {
-		return webDriver.findElement(By.xpath("//label[text()='" + contentName + " ']/../select"));
+	private By RelationshipDepth_Ddl(String contentName) {
+		return By.xpath("//label[text()='" + contentName + " ']/../select");
 	}
 	
-	@FindBy(how = How.ID, using ="edit-submit")
-	private WebElement SaveConfiguration_Btn;
+	private By SaveConfiguration_Btn = By.id("edit-submit");
 	
 	
 	//PAGE OBJECT METHODS
 	public void ClickTVTab() throws Exception {
 
 		Reporter.log("Click the 'TV' tab.");
-		TV_Tab.click();
+		interact.Click(waitFor.ElementVisible(TV_Tab));
+		
 	}
 	
 	public void ClickMoviesTab() throws Exception {
 
 		Reporter.log("Click the 'Movies' tab.");
-		Movies_Tab.click();
+		interact.Click(waitFor.ElementVisible(Movies_Tab));
+		
 	}
 	
 	public void UncheckAllCheckboxes() throws Exception {
 		
 		Reporter.log("Uncheck all checked check boxes.");
-		for (WebElement cbx : AllContentType_Cbxs()) {
+		for (WebElement cbx : waitFor.ElementsPresent(AllContentType_Cbxs)) {
 			if (cbx.isDisplayed() && cbx.isSelected()) {
-				cbx.click();
+				interact.Click(cbx);
 			}
 		}
+		
 	}
 	
 	public void CheckContentItemCbx(String contentName) throws Exception {
 
-		for (WebElement cbx : ContentType_Cbx(contentName)) {
+		for (WebElement cbx : waitFor.ElementsPresent(AllContentType_Cbxs(contentName))) {
 			if (cbx.isDisplayed() && cbx.isSelected() == false) {
 				Reporter.log("Check the '" + contentName + "' checkbox.");
-				cbx.click();
+				interact.Click(cbx);
 			}
 		}
+		
 	}
 	
 	public void SelectRelationshipDepth(String contentName, String option) throws Exception {
 		
 		Reporter.log("Select '" + option + "' from the '" + contentName + "' drop down list.");
-		new Select(wait.until(ExpectedConditions.visibilityOf(RelationshipDepth_Ddl(contentName)))).
-			selectByVisibleText(option);
+		interact.Select(waitFor.ElementVisible(RelationshipDepth_Ddl(contentName)), option);
+		
 	}
 	
 	public void ClickSaveConfigurationBtn() throws Exception {
 
 		Reporter.log("Click the 'Save configuration' button.");
-		SaveConfiguration_Btn.click();
+		interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
+		
 	}
 
 }

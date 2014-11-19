@@ -29,7 +29,7 @@ public class EmailRedirect extends ParentTest{
         
     	//Step 2
         navigation.Configuration("Reroute Email");
-    	RerouteEmail rerouteEmail = new RerouteEmail(webDriver, applib);
+    	RerouteEmail rerouteEmail = new RerouteEmail(webDriver);
     	rerouteEmail.CheckEnableReroutingCbx();
     	rerouteEmail.EnterEmailAddresses(config.getConfigValueString("GmailUsername"));
     	rerouteEmail.ClickSaveConfigurationBtn();

@@ -1,13 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com RestWS Schema Mapping Library. Copyright
@@ -17,67 +16,74 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class RestWSSchemaMapping {
 		
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
+	
 	//PAGE OBJECT CONSTRUCTOR
 	public RestWSSchemaMapping(Driver webDriver) {
-		PageFactory.initElements(webDriver, this);
-		
+		config = new Config();
+		timeout = config.getConfigValueInt("WaitForWaitTime");
+		waitFor = new WaitFor(webDriver, timeout);
+		interact = new Interact(webDriver, timeout);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
-	@FindBy(how = How.ID, using ="edit-showseasons")
-	private WebElement TheShowsSeasons_Ddl;
+	private By TheShowsSeasons_Ddl = By.id("edit-showseasons");
 
-	@FindBy(how = How.ID, using ="edit-seasonepisodes")
-	private WebElement TheSeasonsEpisodes_Ddl;
+	private By TheSeasonsEpisodes_Ddl = By.id("edit-seasonepisodes");
 
-	@FindBy(how = How.ID, using ="edit-episodeseason")
-	private WebElement TheEpisodesSeason_Ddl;
+	private By TheEpisodesSeason_Ddl = By.id("edit-episodeseason");
 	
-	@FindBy(how = How.ID, using ="edit-blogshow")
-	private WebElement TheBlogsShow_Ddl;
+	private By TheBlogsShow_Ddl = By.id("edit-blogshow");
 	
-	@FindBy(how = How.ID, using ="edit-galleryshow")
-	private WebElement TheGallerysShow_Ddl;
+	private By TheGallerysShow_Ddl = By.id("edit-galleryshow");
 
-	@FindBy(how = How.ID, using ="edit-submit")
-	private WebElement SaveConfiguration_Btn;
+	private By SaveConfiguration_Btn = By.id("edit-submit");
 	
 	
 	//PAGE OBJECT METHODS
 	public void SelectShowSeason(String option) throws Exception {
 		
 		Reporter.log("Select '" + option + "' from 'The show's seasons' drop down list.");
-		new Select(TheShowsSeasons_Ddl).selectByVisibleText(option);
+		interact.Select(waitFor.ElementVisible(TheShowsSeasons_Ddl), option);
+		
 	}
 	
 	public void SelectSeasonsEpisodes(String option) throws Exception {
 		
 		Reporter.log("Select '" + option + "' from 'The season's episodes' drop down list.");
-		new Select(TheSeasonsEpisodes_Ddl).selectByVisibleText(option);
+		interact.Select(waitFor.ElementVisible(TheSeasonsEpisodes_Ddl), option);
+		
 	}
 	
 	public void SelectEpisodesSeason(String option) throws Exception {
 		
 		Reporter.log("Select '" + option + "' from 'The episode's season' drop down list.");
-		new Select(TheEpisodesSeason_Ddl).selectByVisibleText(option);
+		interact.Select(waitFor.ElementVisible(TheEpisodesSeason_Ddl), option);
+		
 	}
 	
 	public void SelectBlogsShow(String option) throws Exception {
 		
 		Reporter.log("Select '" + option + "' from 'The blog's show' drop down list.");
-		new Select(TheBlogsShow_Ddl).selectByVisibleText(option);
+		interact.Select(waitFor.ElementVisible(TheBlogsShow_Ddl), option);
+		
 	}
 	
 	public void SelectGallerysShow(String option) throws Exception {
 		
 		Reporter.log("Select '" + option + "' from 'The gallery's show' drop down list.");
-		new Select(TheGallerysShow_Ddl).selectByVisibleText(option);
+		interact.Select(waitFor.ElementVisible(TheGallerysShow_Ddl), option);
+		
 	}
 	
 	public void ClickSaveConfigurationBtn() throws Exception {
 		
 		Reporter.log("Click the 'Save configuration' button.");
-		SaveConfiguration_Btn.click();
+		interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
+		
 	}
 	
 }
