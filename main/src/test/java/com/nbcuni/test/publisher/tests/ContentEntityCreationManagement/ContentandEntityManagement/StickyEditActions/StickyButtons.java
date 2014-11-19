@@ -7,7 +7,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import org.testng.annotations.Test;
 
-public class StickyButtons extends ParentTest{
+public class StickyButtons extends ParentTest {
 	
 	Boolean testSuccessful = false;
 	
@@ -41,14 +41,14 @@ public class StickyButtons extends ParentTest{
             String postTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(postTitle);
         	ContentParent contentParent = new ContentParent(webDriver);
-        	contentParent.Scroll("100");
+        	interact.Scroll("100");
         	basicInformation.EnterSynopsis();
         	
             //Step 3
             StickyEditActions stickyEditActions = new StickyEditActions(webDriver);
             stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
-            contentParent.Scroll("100");
+            interact.Scroll("100");
             stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             
@@ -56,7 +56,7 @@ public class StickyButtons extends ParentTest{
             MetaTags metaTags = new MetaTags(webDriver);
             metaTags.ClickMetaTagsLnk();stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
-            contentParent.Scroll("100");
+            interact.Scroll("100");
             stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             
@@ -68,7 +68,7 @@ public class StickyButtons extends ParentTest{
             applib.openSitePage("/node/add/post");
         	stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
-            contentParent.Scroll("100");
+            interact.Scroll("100");
             stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             

@@ -111,7 +111,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
             contentParent.ClickSaveBtn();
             
-            overlay.switchToDefaultContent(true);
+            webDriver.switchTo().defaultContent();
             List<String> defaultVideoValues = Arrays.asList("AutomationDefault", "MPX Released File Public IDs:",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",

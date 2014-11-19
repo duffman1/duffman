@@ -39,7 +39,7 @@ public class TrackEntityReferences extends ParentTest {
         	additionalInformation.EnterTag("tag1");
         	additionalInformation.EnterTag("tag2");
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent(true);
+        	webDriver.switchTo().defaultContent();
         	
         	Reporter.log("STEP 2");
         	navigation.Configuration("MPS Configuration");

@@ -7,9 +7,6 @@ import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -46,40 +43,22 @@ public class ContentParent {
     //PAGE OBJECT IDENTIFIERS
     private By Save_Btn = By.xpath("//input[@id='edit-submit']");
     
-    @FindBy(how = How.ID, using = "edit-cancel")
-    private WebElement Cancel_Btn;
+    private By Cancel_Btn = By.id("edit-cancel");
     
-    @FindBy(how = How.XPATH, using = "//div[@class='messages status']")
-    private WebElement Message_Ctr;
+    private By Message_Ctr = By.xpath("//div[@class='messages status']");
     
-    @FindBy(how = How.XPATH, using = "//div[@class='messages warning']")
-    private WebElement Warning_Ctr;
+    private By Warning_Ctr = By.xpath("//div[@class='messages warning']");
     
-    @FindBy(how = How.XPATH, using = "//div[@class='messages error']")
-    private WebElement Error_Ctr;
-    
-    @FindBy(how = How.XPATH, using = "//a[text()='Edit Draft']")
-    private WebElement EditDraft_Tab;
-    
-    @FindBy(how = How.XPATH, using = "//a[text()='Revisions']")
-    private WebElement Revisions_Tab;
-    
-    @FindBy(how = How.ID, using = "page-title")
-    private WebElement PageTitle;
-    
-    @FindBy(how = How.XPATH, using = "//a[text()='View']")
-    private WebElement View_Tab;
+    private By PageTitle = By.id("page-title");
     
     private By Body_Txt = By.xpath("//body");
     
-    @FindBy(how = How.XPATH, using = "//div[@class='throbber']")
-    private WebElement Throbber_Img;
+    private By Throbber_Img = By.xpath("//div[@class='throbber']");
     
     private By ProgressBar_Ctr = By.xpath("//div[@class='bar']");
     
-
-    private WebElement RequiredField_Ast(String field) {
-    	return webDriver.findElement(By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']"));
+    private By RequiredField_Ast(String field) {
+    	return By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']");
     }
     
     
@@ -94,7 +73,8 @@ public class ContentParent {
     public void ClickCancelBtn() throws Exception {
     	
     	Reporter.log("Click the 'Cancel' button.");
-    	Cancel_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Cancel_Btn));
+    	
     }
     
     public void VerifyMessageStatus(String messageStatus) throws Exception {
@@ -102,6 +82,7 @@ public class ContentParent {
     	Reporter.log("Verify success message of '" + messageStatus + "' is present.");
     	waitFor.ElementContainsText(Message_Ctr, messageStatus);
     	errorChecking.VerifyNoMessageErrorsPresent();
+    	
     }
     
     public void VerifyMessageWarning(String warningTxt) throws Exception {
@@ -110,25 +91,28 @@ public class ContentParent {
     	waitFor.ElementContainsText(Warning_Ctr, warningTxt);
     	
     	errorChecking.VerifyNoMessageErrorsPresent();
+    	
     }
     
     public void VerifyMessageError(String errorMessage) throws Exception {
     	
     	Reporter.log("Verify error message of '" + errorMessage + "' is present.");
     	errorChecking.VerifyErrorMessagePresent(errorMessage);
+    	
     }
     
     public void VerifyRequiredFields(List<String> allFields) throws Exception {
     	
     	for (String field : allFields) {
     		Reporter.log("Verify the '" + field + "' is present as a required field.");
-    		RequiredField_Ast(field).isDisplayed();
+    		waitFor.ElementVisible(RequiredField_Ast(field));
     	}
+    	
     }
     public void VerifyPostTitle(String postName) throws Exception {
     	
     	Reporter.log("Verify the post titled '" + postName + "' is present.");
-    	Assert.assertTrue(PageTitle.getText().contains(postName));
+    	waitFor.ElementContainsText(PageTitle, postName);
     	
     }
 
@@ -166,20 +150,15 @@ public class ContentParent {
     	
     }
     
-    public void Scroll(String scrollCount) throws Exception {
-    	
-    	Reporter.log("Scroll by '" + scrollCount + "'.");
-    	webDriver.executeScript("window.scrollBy(0," + scrollCount + ");"); 
-    }
-    
     public void WaitForThrobberNotPresent() throws Exception {
     	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
     	Thread.sleep(1500);
     	for (int I = 0; I <= 30; I++) {
     		if (I == 30) { Assert.fail("Throbber is still present after timeout."); }
     		try {
-    			if(!Throbber_Img.isDisplayed()) {
+    			if(!webDriver.findElement(Throbber_Img).isDisplayed()) {
     				break;
     			}
     		}
@@ -189,6 +168,7 @@ public class ContentParent {
     		Thread.sleep(1000);
     	}
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	
     }
     
     public void WaitForProgressBarNotPresent() throws Exception {

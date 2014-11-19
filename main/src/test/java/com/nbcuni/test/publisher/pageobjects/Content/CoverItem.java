@@ -1,16 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Cover Item Library. Copyright
@@ -21,59 +19,52 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class CoverItem {
 
-    private Driver webDriver;
-    private WebDriverWait wait;
+    private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public CoverItem(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//div[@class='media-item']/img")
-    private WebElement CoverItem_Img;
+    private By CoverItem_Img = By.xpath("//div[@class='media-item']/img");
     
-    @FindBy(how = How.ID, using = "edit-field-cover-item-und-0-select")
-    private WebElement Select_Btn;
+    private By Select_Btn = By.id("edit-field-cover-item-und-0-select");
     
-    @FindBy(how = How.ID, using = "edit-field-cover-item-und-0-edit")
-    private WebElement Edit_Btn;
+    private By Edit_Btn = By.id("edit-field-cover-item-und-0-edit");
     
     
     //PAGE OBJECT METHODS
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
     	Reporter.log("Verify that img source of the Cover Item contains '" + imageSrc + "'.");
-    	Assert.assertTrue(CoverItem_Img.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementVisible(CoverItem_Img);
+    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
     	
     	Reporter.log("Verify the the img is loaded and visible.");
-    	boolean imgLoaded;
-        for (int second = 0; ; second++){
-            if (second >= 30) {
-                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
-            }
-            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
-            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
-            			CoverItem_Img);
-            if (imgLoaded == true){ break;}
-            Thread.sleep(500);
-        }
+    	waitFor.ImageVisible(ele);
+    	
     }
     
     public void ClickSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Select' button.");
-    	Select_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Select_Btn));
+    	
     }
 
     public void ClickEditBtn() throws Exception {
     	
     	Reporter.log("Click the 'Edit' button.");
-    	wait.until(ExpectedConditions.visibilityOf(Edit_Btn)).click();
+    	interact.Click(waitFor.ElementVisible(Edit_Btn));
+    	
     }
-    
     
 }
 

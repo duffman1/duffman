@@ -60,7 +60,7 @@ public class CreateCustomContentType extends ParentTest{
             basicInformation.EnterTitle(contentTitle);
             basicInformation.EnterSynopsis();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
+            webDriver.switchTo().defaultContent();
             contentParent.VerifyMessageStatus(contentTypeName + " " + contentTitle + " has been created.");
             
     }

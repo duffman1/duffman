@@ -81,7 +81,7 @@ public class DynamicQueuePagination extends ParentTest {
         addDynamicQueue.EnterItemsPerPage(5);
         addDynamicQueue.EnterTotalItemsLimit(10);
         addDynamicQueue.ClickSaveDynamicQueueBtn();
-        overlay.switchToDefaultContent(true);  
+        webDriver.switchTo().defaultContent();  
         
         Reporter.log("STEP 3");
         navigation.Content("Dynamic Queues");

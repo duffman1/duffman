@@ -103,7 +103,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterSynopsis();
         contentParent.ClickSaveBtn();
-        overlay.switchToDefaultContent(true);
+        webDriver.switchTo().defaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
         
         //Step 28

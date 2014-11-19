@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Cron;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
@@ -21,33 +21,40 @@ public class Cron {
 
 	private ErrorChecking errorChecking;
 	private EmberNav navigation;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public Cron(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
+    	config = new Config();
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
         errorChecking = new ErrorChecking(webDriver);
         navigation = new EmberNav(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//li[contains(text(), 'to complete the import')]/a[text()='Run cron']")
-    private WebElement RunCronToCompleteImport_Lnk;
+    private By RunCronToCompleteImport_Lnk = By.xpath("//li[contains(text(), 'to complete the import')]/a[text()='Run cron']");
     
-    @FindBy(how = How.ID, using = "edit-run")
-    private WebElement RunCron_Btn;
+    private By RunCron_Btn = By.id("edit-run");
     
     
     //PAGE OBJECT METHODS
     public void ClickRunCronToCompleteImportLnk() throws Exception {
     	
     	Reporter.log("Click the 'Run Cron to complete import' link.");
-    	RunCronToCompleteImport_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(RunCronToCompleteImport_Lnk));
+    	
     }
     
     public void ClickRunCronBtn() throws Exception {
     	
     	Reporter.log("Click the 'Run Cron' button.");
-    	RunCron_Btn.click();
+    	interact.Click(waitFor.ElementVisible(RunCron_Btn));
+    	
     }
     
     public void RunCron() throws Exception {
@@ -55,6 +62,7 @@ public class Cron {
     	navigation.Configuration("Cron");
     	this.ClickRunCronBtn();
     	errorChecking.VerifyNoMessageErrorsPresent();
+    	
     }
     
 }

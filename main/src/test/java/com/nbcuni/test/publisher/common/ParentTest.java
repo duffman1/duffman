@@ -2,12 +2,12 @@ package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.common.Driver.*;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.tests.Setup.A1_TestSetup;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -28,10 +28,10 @@ public class ParentTest {
     protected Random random;
     protected Taxonomy taxonomy;
     protected EmberNav navigation;
-    protected Overlay overlay;
     protected Config config = new Config();
     protected ContentParent contentParent;
     protected StartGridHubNode startGridHubNode;
+    protected Interact interact;
     
     public static Boolean abortTestSuite = false;
     
@@ -65,8 +65,8 @@ public class ParentTest {
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
             navigation = new EmberNav(webDriver);
-            overlay = new Overlay(webDriver);
             contentParent = new ContentParent(webDriver);
+            interact = new Interact(webDriver, config.getConfigValueInt("WaitForWaitTime"));
             
             webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
             webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);

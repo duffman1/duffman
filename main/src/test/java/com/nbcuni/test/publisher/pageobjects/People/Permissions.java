@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects.People;
 
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
@@ -23,7 +22,6 @@ import java.util.List;
 
 public class Permissions {
 
-    private ContentParent contentParent;
     private Config config;
     private Integer timeout;
     private WaitFor waitFor;
@@ -32,7 +30,6 @@ public class Permissions {
     
     //PAGE OBJECT CONSTRUCTOR
     public Permissions(Driver webDriver, AppLib applib) {
-        contentParent = new ContentParent(webDriver);
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
@@ -75,7 +72,7 @@ public class Permissions {
     			WebElement ele = waitFor.ElementVisible(SingleRolePermission_Cbx(value));
     			if (ele.isSelected() == false) {
         			Reporter.log("Check the '" + value + "' checkbox.");
-        			contentParent.Scroll("-1000");
+        			interact.Scroll("-1000");
         			interact.Click(ele);
         			
         		}
@@ -84,7 +81,7 @@ public class Permissions {
     			WebElement ele = waitFor.ElementVisible(MultiRolePermission_Cbx(roleName, value));
     			if (ele.isSelected() == false) {
         			Reporter.log("Check the '" + value + "' checkbox for the '" + roleName + "' role.");
-        			contentParent.Scroll("-1000");
+        			interact.Scroll("-1000");
         			interact.Click(ele);
         			
         		}

@@ -73,7 +73,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		//Step 6c
         		searchFor.SelectMPXPlayerAccount(configuredAccounts.get(0));
         		searchFor.ClickApplyBtn();
-        		overlay.switchToDefaultContent(true);
+        		webDriver.switchTo().defaultContent();
         		searchFor.VerifyMPXResultSetSource(configuredAccounts.get(0));
         		
         		//Step 7

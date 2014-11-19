@@ -4,14 +4,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com People Library. Copyright
@@ -23,67 +21,67 @@ import com.nbcuni.test.publisher.pageobjects.Overlay;
 public class People {
 
 	private Driver webDriver;
-	private Overlay overlay;
 	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public People(Driver webDriver) {
     	this.webDriver = webDriver;
     	config = new Config();
-    	PageFactory.initElements(webDriver, this);
-        overlay = new Overlay (webDriver);
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.LINK_TEXT, using = "Add user")
-    private WebElement AddUser_Lnk;
+    private By AddUser_Lnk = By.xpath("//a[text()='Add user']");
     
-    private WebElement Username_Lnk(String userName) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + userName.substring(0, 10) + "')]"));
+    private By Username_Lnk(String userName) {
+    	return By.xpath("//a[contains(text(), '" + userName.substring(0, 10) + "')]");
     }
     
-    private WebElement Edit_Lnk(String userName) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + userName.substring(0, 10) + "')]/../..//a[text()='edit']"));
+    private By Edit_Lnk(String userName) {
+    	return By.xpath("//a[contains(text(), '" + userName.substring(0, 10) + "')]/../..//a[text()='edit']");
     }
     
-    @FindBy(how = How.CSS, using = "a[title='Go to next page']")
-    private WebElement Next_Lnk;
+    private By Next_Lnk = By.cssSelector("a[title='Go to next page']");
     
     
     //PAGE OBJECT METHODS
     public void ClickAddUserLnk() throws Exception {
     	
     	Reporter.log("Click the 'Add user' link.");
-    	AddUser_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(AddUser_Lnk));
     	
     }
     public void ClickUsernameLnk(String userName) throws Exception {
     	
     	Reporter.log("Click the '" + userName + "' link from the 'USERNAME' list.");
-    	Username_Lnk(userName).click();
+    	interact.Click(waitFor.ElementVisible(Username_Lnk(userName)));
     	
     }
     
     public void ClickEditLnk(String userName) throws Exception {
     	
     	Reporter.log("Click the 'edit' link for '" + userName + "' from the 'USERNAME' list.");
-    	Edit_Lnk(userName).click();
+    	interact.Click(waitFor.ElementVisible(Edit_Lnk(userName)));
     	
     }
     
     public void SeachForUsername(String userName) throws Exception {
     	
     	Reporter.log("Click the 'next >' link until user '" + userName + "' is present.");
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     	
     	for (int count = 0; count < 100; count++) {
     		try {
-    			Username_Lnk(userName);
+    			webDriver.findElement(Username_Lnk(userName));
     			break;
     		}
     		catch (NoSuchElementException e) {
-    			Next_Lnk.click();
-    			overlay.SwitchToActiveFrame();
+    			interact.Click(waitFor.ElementVisible(Next_Lnk));
     		}
     	}
     	
