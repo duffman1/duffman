@@ -70,6 +70,7 @@ public class ScheduleQueue {
      public void ClickAddScheduledRevisionLnk() throws Exception {
     	
     	Reporter.log("Click the 'Add Scheduled Revision' link.");
+    	Thread.sleep(1000);
     	interact.Click(waitFor.ElementVisible(AddScheduledRevision_Lnk));
     	
     }
@@ -171,7 +172,7 @@ public class ScheduleQueue {
     public void VerifyRunNowLnkPresent(String contentItemTitle, String action) throws Exception {
     	
     	Reporter.log("Verify the 'Run now' link is present for content item '" + contentItemTitle + "' with action '" + action + "'.");
-    	interact.Click(waitFor.ElementVisible(RunNow_Lnk(contentItemTitle, action)));
+    	waitFor.ElementVisible(RunNow_Lnk(contentItemTitle, action));
     	
     }
     
@@ -185,7 +186,7 @@ public class ScheduleQueue {
     public void VerifyCancelLnkPresent(String contentItemTitle, String action) throws Exception {
     	
     	Reporter.log("Verify the 'Cancel' link is present for content item '" + contentItemTitle + "' with action '" + action + "'.");
-    	waitFor.ElementVisible(Cancel_Lnk(contentItemTitle, action));
+    	waitFor.ElementPresent(Cancel_Lnk(contentItemTitle, action));
     	
     }
     

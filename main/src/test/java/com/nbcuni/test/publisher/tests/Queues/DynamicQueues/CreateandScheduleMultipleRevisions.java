@@ -33,7 +33,7 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
      * @version 1.0 Date: October 13, 2014
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/22576323009
      *************************************************************************************/
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
 	    public void CreateScheduleMultipleRevisions_TC4969() throws Exception{
 		 
 		 Reporter.log("STEP 1");
@@ -44,8 +44,10 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
          String charProfBiography = random.GetCharacterString(15);
          String characterProfileTitle = createDefaultContent.CharacterProfile("Published", null, null, charProfBiography);
+         String characterProfileURL = webDriver.getCurrentUrl();
          String postBody = random.GetCharacterString(15);
          String postTitle = createDefaultContent.Post("Published", postBody);
+         String postURL = webDriver.getCurrentUrl();
          
          Reporter.log("STEP 2");
          navigation.Modules();
@@ -160,10 +162,11 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          contentParent.VerifyMessageStatus("The scheduled revision operation has been saved.");
          
          Reporter.log("STEP 17");
+         applib.openSitePage(characterProfileURL);
          SitePreview sitepreview = new SitePreview(webDriver);
-         sitepreview.ClickPreviewSiteLnk();
+         sitepreview.ClickInteractivePreviewBtn();
          sitepreview.SelectACondition();
-         sitepreview.VerifyDateTxbTobeVisible();
+         Thread.sleep(5000);
          SimpleDateFormat sdf_prevdate = new SimpleDateFormat("yyyy-MM-dd");
          sdf_prevdate.setTimeZone(TimeZone.getTimeZone("UTC"));
      	 String prevdate = sdf_prevdate.format(new Date());
@@ -172,15 +175,16 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          sdf_prevtime.setTimeZone(TimeZone.getTimeZone("UTC"));
      	 String prevtime = sdf_prevtime.format(cal.getTime());
          sitepreview.EnterTime(prevtime);
-         sitepreview.ClickEnablePreviewBtn();
-         sitepreview.VerifyDisablePreviewBtnVisible();
+         sitepreview.ClickEnablePreviewLnk();
          contentParent.VerifyPageContentPresent(Arrays.asList(characterProfileTitle,charProfBiography));
          
          Reporter.log("STEP 18");
+         applib.openSitePage(postURL);
+         sitepreview.ClickInteractivePreviewBtn();
          prevdate = sdf_prevdate.format(cal.getTime());
          sitepreview.EnterDate(prevdate);
          sitepreview.EnterTime(prevtime);
-		 sitepreview.ClickUpdatePreviewBtn();
+		 sitepreview.ClickUpdatePreviewLnk();
 		 contentParent.VerifyPageContentPresent(Arrays.asList(postTitle,postBody));
 		 
 		 Reporter.log("STEP 19"); // Defect - DE10096 exists for Disable Module dynamic queue should clear all reference data.
