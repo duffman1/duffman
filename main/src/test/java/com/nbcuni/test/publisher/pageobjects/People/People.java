@@ -36,7 +36,7 @@ public class People {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private By AddUser_Lnk = By.xpath("//a[text()='Add user']");
+    private By AddUser_Lnk = By.xpath("//div[@id='content']//a[text()='Add user']");
     
     private By Username_Lnk(String userName) {
     	return By.xpath("//a[contains(text(), '" + userName.substring(0, 10) + "')]");

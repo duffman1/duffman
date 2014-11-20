@@ -67,7 +67,7 @@ public class AddNewPermissionSet {
     		WebElement ele = waitFor.ElementVisible(Permission_Cbx(value));
     		if (!ele.isSelected()) {
     			Reporter.log("Check the '" + value + "' checkbox.");
-    			interact.Scroll("-1000");
+    			interact.Scroll("-10000");
     			interact.Click(ele);
     		}
     	}
@@ -80,7 +80,7 @@ public class AddNewPermissionSet {
     		WebElement ele = waitFor.ElementVisible(Permission_Cbx(value));
     		if (ele.isSelected()) {
     			Reporter.log("Uncheck the '" + value + "' checkbox.");
-    			interact.Scroll("-1000");
+    			interact.Scroll("-10000");
     			interact.Click(ele);
     		}
     	}
