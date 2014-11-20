@@ -29,9 +29,7 @@ public class ProgramGuideVerification extends ParentTest {
 		//Step 2 and 3	
 		navigation.Modules();
 		Modules modules = new Modules(webDriver);
-		modules.EnterFilterName("Program Guide");
 		modules.EnableModule("Program Guide");
-		modules.EnterFilterName("Program Guide Example");
 		modules.EnableModule("Program Guide Example");
 			    
 		//Step 4
@@ -87,7 +85,6 @@ public class ProgramGuideVerification extends ParentTest {
         
         //Step 19
         navigation.Modules();
-        modules.EnterFilterName("Program Guide Example");
         modules.DisableModule("Program Guide Example");
         
         testSuccessful = true;
@@ -100,7 +97,6 @@ public class ProgramGuideVerification extends ParentTest {
     		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     		navigation.Modules();
     		Modules modules = new Modules(webDriver);
-    		modules.EnterFilterName("Program Guide Example");
     		modules.DisableModule("Program Guide Example");
     		
     	}

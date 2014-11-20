@@ -186,7 +186,6 @@ public class CountdownClockEvents extends ParentTest {
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		navigation.Modules();
     	Modules modules = new Modules(webDriver);
-    	modules.EnterFilterName("Event Countdown");
     	modules.DisableModule("Event Countdown");
     	navigation.ClickPrimaryTabNavLnk("Uninstall");
     	if (modules.IsModuleInstalled("Event Countdown")) {

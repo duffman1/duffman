@@ -53,7 +53,6 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          navigation.Modules();
          Modules modules = new Modules(webDriver);
          for (String module : Arrays.asList("Dynamic Queue", "Dynamic Queue Workbench")) {
-         	modules.EnterFilterName(module);
          	modules.EnableModule(module);
          }
          

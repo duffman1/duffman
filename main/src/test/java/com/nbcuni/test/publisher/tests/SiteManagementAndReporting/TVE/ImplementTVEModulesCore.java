@@ -45,7 +45,6 @@ public class ImplementTVEModulesCore extends ParentTest {
         
 		navigation.Modules();
         for (String module : Arrays.asList("TVE Auth Example", "TVE Adobe Pass", "TVE MVPD")) {
-        	modules.EnterFilterName(module);
         	modules.EnableModule(module);
         }
         
@@ -131,7 +130,6 @@ public class ImplementTVEModulesCore extends ParentTest {
 		flushCache.FlushAllCache();
 		navigation.Modules();
 		for (String module : Arrays.asList("TVE Auth Example")) {
-			modules.EnterFilterName(module);
 			modules.DisableModule(module);
         	navigation.ClickPrimaryTabNavLnk("Uninstall");
             if (modules.IsModuleInstalled(module)) {
@@ -160,7 +158,6 @@ public class ImplementTVEModulesCore extends ParentTest {
 			Modules modules = new Modules(webDriver);
 			navigation.Modules();
 			for (String module : Arrays.asList("TVE Auth Example")) {
-				modules.EnterFilterName(module);
 				modules.DisableModule(module);
 	        	navigation.ClickPrimaryTabNavLnk("Uninstall");
 	            if (modules.IsModuleInstalled(module)) {

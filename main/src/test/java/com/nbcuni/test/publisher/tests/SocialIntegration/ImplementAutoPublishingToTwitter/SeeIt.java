@@ -25,7 +25,6 @@ public class SeeIt extends ParentTest{
     	//Step 2
     	navigation.Modules();
     	Modules modules = new Modules(webDriver);
-    	modules.EnterFilterName("Metatag: Twitter Cards");
     	modules.EnableModule("Metatag: Twitter Cards (See It)");
     	
     	//Step 3

@@ -96,9 +96,7 @@ public class SSOManageUsers extends ParentTest {
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
 		contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
 		navigation.Modules();
-		modules.EnterFilterName("Pub SSO");
 		modules.DisableModule("Pub SSO");
-		modules.EnterFilterName("simpleSAMLphp authentication");
 		Thread.sleep(1000);
 		modules.DisableModule("simpleSAMLphp authentication");
 		 
@@ -122,9 +120,7 @@ public class SSOManageUsers extends ParentTest {
 				contentParent.VerifyMessageStatus("The configuration options have been saved.");
 				contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
 				navigation.Modules();
-				modules.EnterFilterName("Pub SSO");
 				modules.DisableModule("Pub SSO");
-				modules.EnterFilterName("simpleSAMLphp authentication");
 				Thread.sleep(1000);
 				modules.DisableModule("simpleSAMLphp authentication");
 				

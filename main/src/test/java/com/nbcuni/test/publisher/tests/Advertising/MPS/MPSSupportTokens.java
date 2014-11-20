@@ -34,9 +34,7 @@ public class MPSSupportTokens extends ParentTest {
         	Reporter.log("SETUP");
         	navigation.Modules();
         	Modules modules = new Modules(webDriver);
-        	modules.EnterFilterName("Pixelman");
         	modules.DisableModule("Pixelman");
-        	modules.EnterFilterName("MPS");
         	modules.EnableModule("MPS");
         	navigation.Configuration("MPS Configuration");
         	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);

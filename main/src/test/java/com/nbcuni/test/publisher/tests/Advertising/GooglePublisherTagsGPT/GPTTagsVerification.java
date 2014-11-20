@@ -24,9 +24,7 @@ public class GPTTagsVerification extends ParentTest {
         	//Setup
             navigation.Modules();
             Modules modules = new Modules(webDriver);
-            modules.EnterFilterName("DART");
             modules.DisableModule("DART");
-            modules.EnterFilterName("Doubleclick for Publishers");
             modules.EnableModule("Doubleclick for Publishers");
             navigation.Structure("DFP Ad Tags");
             DFPAddTags dfpAddTags = new DFPAddTags(webDriver, applib);

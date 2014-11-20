@@ -62,16 +62,14 @@ public class A1_TestSetup {
                 Modules modules = new Modules(webDriver);
                 String overlayModule = "Overlay";
                 if (modules.IsModuleEnabled(overlayModule) == true) {
-                	modules.EnterFilterName(overlayModule);
-                    modules.DisableModule(overlayModule);
+                	modules.DisableModule(overlayModule);
                 }
                 webDriver.switchTo().defaultContent();
                 
                 //enable necessary modules
                 for (String module : Arrays.asList("Field UI", "Pub Post", "Logo Manager", "Devel")) {
                 	if (!modules.IsModuleEnabled(module)) {
-                		modules.EnterFilterName(module);
-                        modules.EnableModule(module);
+                		modules.EnableModule(module);
                 	}
                 }
                 
@@ -83,8 +81,7 @@ public class A1_TestSetup {
                 		"simpleSAMLphp authentication", "Program Guide Example", 
                 		"Doubleclick for Publishers")) {
                 	if (modules.IsModuleEnabled(module)) {
-                		modules.EnterFilterName(module);
-                    	modules.DisableModule(module);
+                		modules.DisableModule(module);
                 	}
                 }
             	

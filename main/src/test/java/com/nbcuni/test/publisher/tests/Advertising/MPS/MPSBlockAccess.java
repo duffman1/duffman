@@ -28,9 +28,7 @@ public class MPSBlockAccess extends ParentTest {
         	Reporter.log("SETUP");
         	navigation.Modules();
         	Modules modules = new Modules(webDriver);
-        	modules.EnterFilterName("Pixelman");
         	modules.DisableModule("Pixelman");
-        	modules.EnterFilterName("MPS");
         	modules.EnableModule("MPS");
         	
         	Reporter.log("STEP 2");

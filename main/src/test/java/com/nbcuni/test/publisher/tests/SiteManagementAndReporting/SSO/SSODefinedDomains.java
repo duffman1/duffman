@@ -93,9 +93,7 @@ public class SSODefinedDomains extends ParentTest {
 	        
 		Reporter.log("STEP 17");
 		navigation.Modules();
-		modules.EnterFilterName("Pub SSO");
 		modules.DisableModule("Pub SSO");
-		modules.EnterFilterName("simpleSAMLphp authentication");
 		modules.DisableModule("simpleSAMLphp authentication");
 		
 		testSuccessful = true;
@@ -118,9 +116,7 @@ public class SSODefinedDomains extends ParentTest {
 			contentParent.VerifyMessageStatus("The configuration options have been saved.");
 			contentParent.VerifyMessageStatus("SimpleSAMLphp authentication is NOT yet activated.");
 			navigation.Modules();
-			modules.EnterFilterName("Pub SSO");
 			modules.DisableModule("Pub SSO");
-			modules.EnterFilterName("simpleSAMLphp authentication");
 			modules.DisableModule("simpleSAMLphp authentication");
 			
 		}

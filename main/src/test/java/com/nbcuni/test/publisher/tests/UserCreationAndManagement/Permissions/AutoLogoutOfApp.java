@@ -72,7 +72,6 @@ public class AutoLogoutOfApp extends ParentTest {
     	Reporter.log("CLEANUP");
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         navigation.Modules();
-        modules.EnterFilterName("Automated Logout");
         modules.DisableModule("Automated Logout");
         
         testSuccessful = true;
@@ -87,7 +86,6 @@ public class AutoLogoutOfApp extends ParentTest {
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			navigation.Modules();
 			Modules modules = new Modules(webDriver);
-	        modules.EnterFilterName("Automated Logout");
 	        modules.DisableModule("Automated Logout");
 		}
 		

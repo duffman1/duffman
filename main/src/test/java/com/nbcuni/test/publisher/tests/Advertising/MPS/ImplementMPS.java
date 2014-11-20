@@ -36,15 +36,10 @@ public class ImplementMPS extends ParentTest {
         	Reporter.log("SETUP");
         	Modules modules = new Modules(webDriver);
         	navigation.Modules();
-            modules.EnterFilterName("Pub Ads");
             modules.EnableModule("Pub Ads");
-            modules.EnterFilterName("Pixelman");
-        	modules.DisableModule("Pixelman");
-            modules.EnterFilterName("MPS");
+            modules.DisableModule("Pixelman");
             modules.EnableModule("MPS");
-            modules.EnterFilterName("DART");
             modules.DisableModule("DART");
-            modules.EnterFilterName("Doubleclick for Publishers");
             modules.DisableModule("Doubleclick for Publishers");
             navigation.Configuration("MPS Configuration");
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);

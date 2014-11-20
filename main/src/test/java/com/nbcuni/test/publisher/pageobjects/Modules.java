@@ -48,7 +48,7 @@ public class Modules {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private By FilterList_Txb = By.xpath("//input[@id='edit-module-filter-name']");
+    //private By FilterList_Txb = By.xpath("//input[@id='edit-module-filter-name']");
     
     private By SaveConfiguration_Btn = By.xpath("//input[@value='Save configuration']");
     
@@ -223,7 +223,6 @@ public class Modules {
     public void VerifyModuleEnabled(String moduleName) throws Exception {
     	
     	navigation.Modules();
-    	this.EnterFilterName(moduleName);
     	this.EnableModule(moduleName);
     	
     }

@@ -43,13 +43,10 @@ public class TwitterAutoPublishing extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         navigation.Modules();
         Modules modules = new Modules(webDriver);
-        modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
         
         //Step 2
-        modules.EnterFilterName("Twitter");
         modules.EnableModule("Twitter");
-        modules.EnterFilterName("Twitter Post");
         modules.EnableModule("Twitter Post");
         
         //Step 3

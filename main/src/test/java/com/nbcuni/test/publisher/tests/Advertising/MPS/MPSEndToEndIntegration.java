@@ -23,9 +23,7 @@ public class MPSEndToEndIntegration extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	navigation.Modules();
         	Modules modules = new Modules(webDriver);
-        	modules.EnterFilterName("Pixelman");
         	modules.DisableModule("Pixelman");
-        	modules.EnterFilterName("MPS");
         	modules.EnableModule("MPS");
         	
         	Reporter.log("STEP 2");

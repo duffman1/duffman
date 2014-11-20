@@ -26,7 +26,6 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
         	Modules modules = new Modules(webDriver);
         	navigation.Modules();
-            modules.EnterFilterName("MPS");
             modules.EnableModule("MPS");
             navigation.Structure("MPS Blocks");
             MPSBlocks mpsBlocks = new MPSBlocks(webDriver);

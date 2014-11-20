@@ -24,13 +24,10 @@ public class Pixelman extends ParentTest {
         Reporter.log("STEP 2 -3");
         navigation.Modules();
     	Modules modules = new Modules(webDriver);
-    	modules.EnterFilterName("Pixelman");
     	modules.EnableModule("Pixelman");
     	
         Reporter.log("STEP 4");
-        modules.EnterFilterName("DART");
         modules.DisableModule("DART");
-        modules.EnterFilterName("Doubleclick for Publishers");
         modules.DisableModule("Doubleclick for Publishers");
             
         Reporter.log("STEP 5");
@@ -42,7 +39,6 @@ public class Pixelman extends ParentTest {
         Reporter.log("CLEANUP");
         navigation.Modules();
         for (String module : Arrays.asList("Pub Ads", "Pixelman")) {
-        	modules.EnterFilterName(module);
         	modules.DisableModule(module);
         }
         

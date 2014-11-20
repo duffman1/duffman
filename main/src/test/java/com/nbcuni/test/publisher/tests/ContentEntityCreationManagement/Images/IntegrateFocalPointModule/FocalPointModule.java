@@ -131,7 +131,6 @@ public class FocalPointModule extends ParentTest{
             
         //Cleanup
         navigation.Modules();
-        modules.EnterFilterName("Focal Point");
         modules.DisableModule("Focal Point");
         	
     }

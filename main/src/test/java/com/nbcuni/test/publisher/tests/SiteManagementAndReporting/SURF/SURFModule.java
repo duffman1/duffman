@@ -30,9 +30,7 @@ public class SURFModule extends ParentTest {
 		Reporter.log("STEP 3 - 9");
 		navigation.Modules();
 		Modules modules = new Modules(webDriver);
-		modules.EnterFilterName("Pub SURF Example");
 		modules.EnableModule("Pub SURF Example");
-		modules.EnterFilterName("Surf");
 		modules.EnableModule("Surf");
 		
 		Reporter.log("STEP 10");
@@ -71,7 +69,6 @@ public class SURFModule extends ParentTest {
 		
 		Reporter.log("CLEANUP");
 		navigation.Modules();
-    	modules.EnterFilterName("Pub SURF Example");
     	modules.DisableModule("Pub SURF Example");
     	navigation.ClickPrimaryTabNavLnk("Uninstall");
     	if (modules.IsModuleInstalled("Pub SURF Example")) {
@@ -89,7 +86,6 @@ public class SURFModule extends ParentTest {
 				userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 				navigation.Modules();
 		    	Modules modules = new Modules(webDriver);
-		    	modules.EnterFilterName("Pub SURF Example");
 		    	modules.DisableModule("Pub SURF Example");
 		    	navigation.ClickPrimaryTabNavLnk("Uninstall");
 		    	if (modules.IsModuleInstalled("Pub SURF Example")) {

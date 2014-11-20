@@ -49,7 +49,6 @@ public class InstallZeeboxModule extends ParentTest{
             
             //Step 6
             navigation.Modules();
-            modules.EnterFilterName("zeebox Example");
             modules.DisableModule("zeebox Example");
             
             //Step 7

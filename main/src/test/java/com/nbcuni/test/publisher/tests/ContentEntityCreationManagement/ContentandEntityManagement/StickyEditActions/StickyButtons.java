@@ -74,8 +74,7 @@ public class StickyButtons extends ParentTest {
             
             //Step 8
             navigation.Modules();
-            modules.EnterFilterName("Sticky Edit Actions");
-        	modules.DisableModule("Sticky Edit Actions");
+            modules.DisableModule("Sticky Edit Actions");
         	
         	testSuccessful = true;
         	
@@ -90,7 +89,6 @@ public class StickyButtons extends ParentTest {
 			applib.openSitePage("/user");
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			navigation.Modules();
-        	modules.EnterFilterName("Sticky Edit Actions");
         	modules.DisableModule("Sticky Edit Actions");
 		}
 	}

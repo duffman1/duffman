@@ -31,7 +31,6 @@ public class SEOOptimizationModule extends ParentTest {
 		//Step 2
 		navigation.Modules();
 		Modules module = new Modules(webDriver);
-		module.EnterFilterName("Pub SEO");
 		module.EnableModule("Pub SEO");
 		
 		//Step 3

@@ -55,12 +55,10 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-        /*
         navigation.Modules();
         Modules modules = new Modules(webDriver);
-        modules.EnterFilterName("Pub SPS (Site Preview System)");
         modules.DisableModule("Pub SPS (Site Preview System)");
-        */
+        
         Reporter.log("STEP 2");    
         navigation.AddContent("Post");
     	BasicInformation basicInformation = new BasicInformation(webDriver);
