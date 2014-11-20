@@ -109,6 +109,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
             editMPXVideo.UnCheckOverrideMPXAvailableDateCbx();
             editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
+            contentParent.WaitForThrobberNotPresent();
             contentParent.ClickSaveBtn();
             
             webDriver.switchTo().defaultContent();
@@ -135,6 +136,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             //Step 23
             editMPXVideo.CheckOverrideMPXAvailableDateCbx();
             editMPXVideo.CheckOverrideMPXExpirationDateCbx();
+            contentParent.WaitForThrobberNotPresent();
             
             //Step 24
             Calendar cal = Calendar.getInstance();
@@ -155,8 +157,8 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
             //Step 25
             SimpleDateFormat sdfDate2 = new SimpleDateFormat("EEEE, MMMM d, yyyy");
-            String formattedAvailableDate = sdfDate2.format(date1); System.out.println(formattedAvailableDate);
-            String formattedExpirationDate = sdfDate2.format(date2); System.out.println(formattedExpirationDate);
+            String formattedAvailableDate = sdfDate2.format(date1);
+            String formattedExpirationDate = sdfDate2.format(date2);
             contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Available Date:",
                     formattedAvailableDate, "MPX Media Expiration Date: ", formattedExpirationDate));
 
@@ -179,6 +181,7 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
             //Step 37
             editMPXVideo.UnCheckOverrideMPXAvailableDateCbx();
             editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
+            contentParent.WaitForThrobberNotPresent();
             editMPXVideo.VerifyMPXMediaAvailableDateNullAndDisabled();
             editMPXVideo.VerifyMPXMediaExpirationDateNullAndDisabled();
 

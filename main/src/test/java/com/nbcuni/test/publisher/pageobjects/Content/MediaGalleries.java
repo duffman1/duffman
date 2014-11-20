@@ -1,15 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Media Galleries Library. Copyright
@@ -20,30 +17,32 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class MediaGalleries {
 
-	private Driver webDriver;
-	private WebDriverWait wait;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public MediaGalleries(Driver webDriver) {
-    	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+    	config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//a[text()='Add Media Gallery']")
-    private WebElement AddMediaGallery_Lnk;
+    private By AddMediaGallery_Lnk = By.xpath("//a[text()='Add Media Gallery']");
     
-    private WebElement Edit_Lnk(String contentItemTitle) {
-    	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Edit']"));
+    private By Edit_Lnk(String contentItemTitle) {
+    	return By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Edit']");
     }
     
-    private WebElement ExtendEditMenu_Lnk(String contentItemTitle) {
-    	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='operations']"));
+    private By ExtendEditMenu_Lnk(String contentItemTitle) {
+    	return By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='operations']");
     }
     
-    private WebElement EditMenuDelete_Lnk(String contentItemTitle) {
-    	return webDriver.findElement(By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Delete']"));
+    private By EditMenuDelete_Lnk(String contentItemTitle) {
+    	return By.xpath("//a[text()='" + contentItemTitle + "']/../..//a[text()='Delete']");
     }
     
     
@@ -51,25 +50,29 @@ public class MediaGalleries {
     public void ClickAddMediaGalleryLnk() throws Exception {
     	
     	Reporter.log("Click the 'Add Media Gallery' link.");
-    	AddMediaGallery_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(AddMediaGallery_Lnk));
+    	
     }
     
     public void ClickEditMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the 'Edit' link for content item titled '" + contentItemTitle + ".");
-    	Edit_Lnk(contentItemTitle).click();
+    	interact.Click(waitFor.ElementVisible(Edit_Lnk(contentItemTitle)));
+    	
     }
 
     public void ClickEditExtendMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the extend edit menu link.");
-    	wait.until(ExpectedConditions.visibilityOf(ExtendEditMenu_Lnk(contentItemTitle))).click();
+    	interact.Click(waitFor.ElementVisible(ExtendEditMenu_Lnk(contentItemTitle)));
+    	
     }
     
     public void ClickDeleteMenuBtn(String contentItemTitle) throws Exception {
     	
     	Reporter.log("Click the 'Delete' menu link.");
-    	wait.until(ExpectedConditions.visibilityOf(EditMenuDelete_Lnk(contentItemTitle))).click();
+    	interact.Click(waitFor.ElementVisible(EditMenuDelete_Lnk(contentItemTitle)));
+    	
     }
 }
 

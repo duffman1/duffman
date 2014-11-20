@@ -205,7 +205,7 @@ public class EmberNav {
     
     public void ClickPrimaryTabNavLnk(String lnkTxt) throws Exception {
     	
-    	Reporter.log("Click the primary nav '" + lnkTxt + "'.");
+    	Reporter.log("Click the primary nav '" + lnkTxt + "' link.");
     	WebElement ele = waitFor.ElementVisible(TabBar_Lnk(lnkTxt));
     	Thread.sleep(500);
     	interact.Click(ele);

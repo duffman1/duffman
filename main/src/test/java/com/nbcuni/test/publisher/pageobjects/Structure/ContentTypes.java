@@ -4,15 +4,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
@@ -26,14 +22,17 @@ public class ContentTypes {
 
     private Driver webDriver;
     private Config config;
+    private Integer timeout;
     private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentTypes(Driver webDriver) {
         this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
         config = new Config();
-        waitFor = new WaitFor(webDriver, 10);
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
         
     }
     
@@ -52,39 +51,28 @@ public class ContentTypes {
     	return By.xpath("//td[contains(text(), '" + lnkTxt + "')]/..//a[text()='edit']");
     }
     
-    @FindBy(how = How.ID, using = "edit-name")
-    private WebElement Name_Txb;
+    private By Name_Txb = By.id("edit-name");
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement Save_Btn;
+    private By Save_Btn = By.id("edit-submit");
     
-    @FindBy(how = How.ID, using = "edit-save-continue")
-    private WebElement SaveAddFields_Btn;
+    private By SaveAddFields_Btn = By.id("edit-save-continue");
     
-    @FindBy(how = How.XPATH, using = "//div[@class='content']//tbody")
-    private WebElement ContentTypeTbl_Ctr;
+    private By AddNewField_Txb = By.xpath("//input[@id='edit-fields-add-new-field-label']");
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-fields-add-new-field-label']")
-    private WebElement AddNewField_Txb;
+    private By AddExistingField_Txb = By.id("edit-fields-add-existing-field-label");
     
-    @FindBy(how = How.ID, using = "edit-fields-add-existing-field-label")
-    private WebElement AddExistingField_Txb;
+    private By FieldType_Ddl = By.id("edit-fields-add-new-field-type");
     
-    @FindBy(how = How.ID, using = "edit-fields-add-new-field-type")
-    private WebElement FieldType_Ddl;
+    private By SelectExistingField_Ddl = By.id("edit-fields-add-existing-field-field-name");
     
-    @FindBy(how = How.ID, using = "edit-fields-add-existing-field-field-name")
-    private WebElement SelectExistingField_Ddl;
+    private By Widget_Ddl = By.id("edit-fields-add-new-field-widget-type");
     
-    @FindBy(how = How.ID, using = "edit-fields-add-new-field-widget-type")
-    private WebElement Widget_Ddl;
-    
-    private WebElement FieldSelect_Btn(String fieldName) {
-    	return webDriver.findElement(By.id("edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select"));
+    private By FieldSelect_Btn(String fieldName) {
+    	return By.id("edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select");
     }
     
-    private WebElement Field_Txt(String fieldName) {
-    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + fieldName + "')]"));
+    private By Field_Txt(String fieldName) {
+    	return By.xpath("//td[contains(text(), '" + fieldName + "')]");
     }
     
     
@@ -92,102 +80,103 @@ public class ContentTypes {
     public void ClickAddContentLnk() throws Exception {
     	
     	Reporter.log("Click the 'Add content type'.");
-    	waitFor.ElementPresent(AddContentType_Lnk).click();
+    	interact.Click(waitFor.ElementPresent(AddContentType_Lnk));
     	
     }
     
     public void ClickManageFieldLnk(String lnkTxt) throws Exception {
     	
     	Reporter.log("Click the 'manage field' link for content type '" + lnkTxt + "'.");
-    	waitFor.ElementPresent(ManageField_Lnk(lnkTxt)).click();
+    	interact.Click(waitFor.ElementPresent(ManageField_Lnk(lnkTxt)));
     	
     }
     
     public void ClickManageDisplayLnk(String lnkTxt) throws Exception {
     	
     	Reporter.log("Click the 'manage display' link for content type '" + lnkTxt + "'.");
-    	waitFor.ElementPresent(ManageDisplay_Lnk(lnkTxt)).click();
+    	interact.Click(waitFor.ElementPresent(ManageDisplay_Lnk(lnkTxt)));
     	
     }
     
     public void ClickEditLnk(String lnkTxt) throws Exception {
     	
     	Reporter.log("Click the 'edit' link for field '" + lnkTxt + "'.");
-    	waitFor.ElementPresent(Edit_Lnk(lnkTxt)).click();
+    	interact.Click(waitFor.ElementPresent(Edit_Lnk(lnkTxt)));
     	
     }
     
     public void EnterName(String name) throws Exception {
     	
     	Reporter.log("Enter '" + name + "' in the 'Name' text box.");
-    	Name_Txb.sendKeys(name);
+    	interact.Type(waitFor.ElementVisible(Name_Txb), name);
     	
     }
     
     public void ClickSaveBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
-    	Save_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Save_Btn));
+    	Thread.sleep(1000);
     	
     }
     
     public void ClickSaveAddFieldsBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save and add fields' button.");
-    	SaveAddFields_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SaveAddFields_Btn));
     	
     }
     
     public void EnterAddNewField(String fieldName) throws Exception {
     	
     	Reporter.log("Enter '" + fieldName + "' in the 'Add new field' text box.");
-    	AddNewField_Txb.sendKeys(fieldName);
+    	interact.Type(waitFor.ElementVisible(AddNewField_Txb), fieldName);
     	
     }
     
     public void EnterAddExistingField(String fieldName) throws Exception {
     	
     	Reporter.log("Enter '" + fieldName + "' in the 'Add existing field' text box.");
-    	AddExistingField_Txb.sendKeys(fieldName);
+    	interact.Type(waitFor.ElementVisible(AddExistingField_Txb), fieldName);
     	
     }
     
     public void SelectFieldType(String fieldType) throws Exception {
     	
     	Reporter.log("Select '" + fieldType + "' from the 'Field Type' drop down list.");
-        new Select(FieldType_Ddl).selectByVisibleText(fieldType);
-    	
+    	interact.Select(waitFor.ElementVisible(FieldType_Ddl), fieldType);
+        
     }
     
     public void SelectExistingField(String fieldType) throws Exception {
     	
     	Reporter.log("Select '" + fieldType + "' from the 'select existing field' drop down list.");
-        new Select(SelectExistingField_Ddl).selectByVisibleText(fieldType);
-    	
+    	interact.Select(waitFor.ElementVisible(SelectExistingField_Ddl), fieldType);
+        
     }
     
     public void SelectWidget(String widget) throws Exception {
     	
     	Reporter.log("Select '" + widget + "' from the 'Widget' drop down list.");
-        new Select(Widget_Ddl).selectByVisibleText(widget);
-    	
+    	interact.Select(waitFor.ElementVisible(Widget_Ddl), widget);
+        
     }
     
     public void VerifyFieldSelectBtnPresent(String fieldName) throws Exception {
     	
     	Reporter.log("Verify the Field 'Select' button is present.");
-    	FieldSelect_Btn(fieldName).isDisplayed();
+    	waitFor.ElementVisible(FieldSelect_Btn(fieldName));
     	
     }
     
     public Boolean IsFieldPresent(String fieldName) throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	
     	Boolean fieldPresent;
     	
     	try {
-    		Field_Txt(fieldName).isDisplayed();
+    		webDriver.findElement(Field_Txt(fieldName));
     		fieldPresent = true;
     	}
     	catch (NoSuchElementException e) {
@@ -195,7 +184,9 @@ public class ContentTypes {
     	}
     	
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	
     	return fieldPresent;
+    	
     }
     
 }

@@ -76,6 +76,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	ContentParent contentParent = new ContentParent(webDriver);
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+    	Thread.sleep(2000);
     	String postURL = webDriver.getCurrentUrl();
     	
         Reporter.log("STEP 3");
@@ -135,6 +136,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	sitePreview.VerifyTimeValue("16:40");
     	applib.refreshPage(); 
     	contentParent.VerifyPageContentPresent(Arrays.asList(updatedShortDescription, updatedBodyTxt));
+    	Thread.sleep(2000);
     	
     	//Step 11
     	sitePreview.ClickInteractivePreviewBtn();

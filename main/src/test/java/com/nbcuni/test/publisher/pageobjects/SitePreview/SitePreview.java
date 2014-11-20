@@ -52,7 +52,8 @@ public class SitePreview {
 		 
 		 Reporter.log("Click the 'Interactive Preview' button.");
 		 interact.Click(waitFor.ElementVisible(InteractivePreview_Btn));
-		 	
+		 Thread.sleep(1000);
+		 
 	 }
 	    
 	 public void VerifyEnablePreviewLnkVisible() throws Exception {
@@ -73,6 +74,7 @@ public class SitePreview {
 	    	
 		 Reporter.log("Click on the 'Enable Preview' link.");
 		 interact.Click(waitFor.ElementVisible(EnablePreview_Lnk));
+		 Thread.sleep(1000);
 		 
 	 }
 	    
@@ -80,6 +82,7 @@ public class SitePreview {
 	    	
 		 Reporter.log("Select 'Site as of ...' from the 'SELECT A CONDITION' drop down list.");	
 		 interact.Select(waitFor.ElementVisible(SelectCondition_Ddl), "Site as of ...");
+		 Thread.sleep(1000);
 		 
 	 }
 	       
@@ -95,6 +98,7 @@ public class SitePreview {
 	    	
 		 Reporter.log("Enter '" + date + "' in the 'DATE' text box.");
 		 interact.Type(waitFor.ElementVisible(Date_Txb), date);
+		 Thread.sleep(1000);
 		 
 	 }
 	 
@@ -116,6 +120,7 @@ public class SitePreview {
 	    		
 		 Reporter.log("Enter '" + time + "' in the 'TIME' text box.");
 		 interact.Type(waitFor.ElementVisible(Time_Txb), time);
+		 Thread.sleep(1000);
 		 
 	 }
 	       
@@ -144,6 +149,7 @@ public class SitePreview {
 	    	
 		 Reporter.log("Click the 'Disable Preview' link.");	    
 		 interact.Click(waitFor.ElementVisible(DisablePreview_Lnk));
+		 Thread.sleep(1000);
 		 
 	 }
 	    
@@ -158,6 +164,7 @@ public class SitePreview {
 	    	
 		 Reporter.log("Click the 'Update Preview' link.");	
 		 interact.Click(waitFor.ElementVisible(UpdatePreview_Lnk));
+		 Thread.sleep(1000);
 		 
 	 }
 }

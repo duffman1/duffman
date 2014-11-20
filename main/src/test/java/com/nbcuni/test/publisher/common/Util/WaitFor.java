@@ -219,6 +219,66 @@ public class WaitFor {
     	return webDriver.findElement(locator);
     }
     
+    public WebElement ElementEnabled(final WebElement element) throws Exception {
+    	
+    	this.elementWait(element)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Element not enabled.")
+    		.until(new Function<WebElement, Boolean>() {
+    			@Override
+    			public Boolean apply(WebElement ele) {
+    				return ele.isEnabled();	
+    			}
+    		});
+    	
+    	return element;
+    }
+    
+    public WebElement ElementEnabled(final By locator) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Element not visible.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return webDriver.findElement(loc).isEnabled();	
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
+    }
+    
+    public WebElement ElementDisabled(final WebElement element) throws Exception {
+    	
+    	this.elementWait(element)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Element not enabled.")
+    		.until(new Function<WebElement, Boolean>() {
+    			@Override
+    			public Boolean apply(WebElement ele) {
+    				return !ele.isEnabled();	
+    			}
+    		});
+    	
+    	return element;
+    }
+    
+    public WebElement ElementDisabled(final By locator) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Element not visible.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return !webDriver.findElement(loc).isEnabled();	
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
+    }
+    
     public void MultipleWindowsPresent() throws Exception {
     	
     	this.driverWait()
@@ -372,6 +432,8 @@ public class WaitFor {
     			break;
     		}
     		catch (NoSuchElementException | StaleElementReferenceException e) { }
+    		
+    		Thread.sleep(1000);
     	}
     	
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
