@@ -47,7 +47,7 @@ public class AdditionalInformation {
     public void ClickAdditionalInformationLnk() throws Exception {
     	
     	Reporter.log("Click the 'Additional Information' link.");
-    	interact.Scroll("-1000");
+    	interact.ScrollToTop();
     	interact.Click(waitFor.ElementVisible(AdditionalInformation_Lnk));
     	
     }

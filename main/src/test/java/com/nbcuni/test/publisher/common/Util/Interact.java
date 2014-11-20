@@ -169,6 +169,12 @@ public class Interact {
     	
     }
     
+    public void ScrollToTop() throws Exception {
+    	
+    	webDriver.executeScript("window.scrollTo(0, 0);");
+    	
+    }
+    
     
 
 }

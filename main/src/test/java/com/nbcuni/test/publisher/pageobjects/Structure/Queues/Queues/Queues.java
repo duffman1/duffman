@@ -87,6 +87,7 @@ public class Queues {
     	
     	Reporter.log("Click the 'Save Queue' button.");
     	interact.Click(waitFor.ElementVisible(SaveQueue_Btn));
+    	Thread.sleep(1000);
     	
     }
     
@@ -131,6 +132,7 @@ public class Queues {
     	
     	Reporter.log("Enter '" + queueItemTitle + "' in the queue item text box indexed '" + itemTxbIndex + "'.");
     	WebElement ele = waitFor.ElementVisible(QueueItem_Txb(itemTxbIndex));
+    	Thread.sleep(1000);
     	ele.sendKeys(queueItemTitle);
     	
     	Reporter.log("Click the '" + queueItemTitle + "' from the auto complete option list.");

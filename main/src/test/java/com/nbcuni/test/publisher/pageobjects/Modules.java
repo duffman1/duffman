@@ -98,10 +98,11 @@ public class Modules {
     
     public void EnterFilterName(String filterName) throws Exception {
     	
+    	/*
     	Reporter.log("Enter '" + filterName + "' in the 'Filter Name' text box.");
     	interact.Type(waitFor.ElementVisible(FilterList_Txb), filterName);
     	this.WaitForFilterVisible(filterName);
-    	
+    	*/
     }
     
     public void VerifyConfigurationSaved() throws Exception{
@@ -128,9 +129,11 @@ public class Modules {
     	if (waitFor.ElementPresent(ModuleName_Cbx(moduleName)).isSelected() == false) {
     		
     		Reporter.log("Check the '" + moduleName + "' check box.");
+    		interact.ScrollToTop();
     		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
     		
     		Reporter.log("Click the 'Save configuration' button.");
+    		interact.ScrollToTop();
     		interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
     		
         	boolean additionalModulesRequired = false;
@@ -166,9 +169,11 @@ public class Modules {
     	
     	if (waitFor.ElementPresent(ModuleName_Cbx(moduleName)).isSelected() == true) {
     		Reporter.log("Uncheck the '" + moduleName + "' module checkbox.");
+    		interact.ScrollToTop();
     		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
     		
     		Reporter.log("Click the 'Save configuration' button.");
+    		interact.ScrollToTop();
     		interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
     		
     		this.VerifyConfigurationSaved();

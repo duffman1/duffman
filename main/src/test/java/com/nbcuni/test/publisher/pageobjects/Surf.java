@@ -97,7 +97,7 @@ public class Surf {
     public void ClickSignOutBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign Out' button.");
-    	interact.Scroll("-1000");
+    	interact.ScrollToTop();
     	interact.Click(waitFor.ElementVisible(SignOut_Btn));
     	
     	Reporter.log("Verify the 'Sign In' button is present.");

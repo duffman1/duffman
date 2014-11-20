@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
@@ -14,128 +17,103 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[STEP 2 -3]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Permission Sets' link.]]>
+      <![CDATA[Check the 'Pixelman' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' link.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Enter '4c1b65142e04493' in the 'Permission Set Name' text box.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Verify success message of '4c1b65142e04493 has been created.' is present.]]>
+      <![CDATA[Uncheck the 'Doubleclick for Publishers' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the Permission Set 'Edit' link for set name + '4c1b65142e04493'.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify all permission checkboxes are not checked.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Export' tab.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Verify 'Export' text area value is '$permission_set = new stdClass();
-$permission_set->disabled = FALSE; /* Edit this to true to make a default permission_set disabled initially */
-$permission_set->api_version = 1;
-$permission_set->machinename = '4c1b65142e04493';
-$permission_set->name = '4c1b65142e04493';
-$permission_set->permissions = array();
-'.]]>
+      <![CDATA[Click the 'Home' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' tab.]]>
+      <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Check the 'stick to Acquia web node' checkbox.]]>
+      <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Check the 'access resource show' checkbox.]]>
+      <![CDATA[CLEANUP]]>
     </line>
     <line>
-      <![CDATA[Check the 'view own files' checkbox.]]>
+      <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of '4c1b65142e04493 has been updated.' is present.]]>
+      <![CDATA[Uncheck the 'Pub Ads' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the Permission Set 'Edit' link for set name + '4c1b65142e04493'.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Export' tab.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify 'Export' text area value is '$permission_set = new stdClass();
-$permission_set->disabled = FALSE; /* Edit this to true to make a default permission_set disabled initially */
-$permission_set->api_version = 1;
-$permission_set->machinename = '4c1b65142e04493';
-$permission_set->name = '4c1b65142e04493';
-$permission_set->permissions = array(
-  'stick to Acquia web node' => 'stick to Acquia web node',
-  'view own files' => 'view own files',
-  'access resource show' => 'access resource show',
-);
-'.]]>
+      <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Permission Sets' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Permission Set expand link for Set Name + '4c1b65142e04493'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Permission Set 'Delete' link for Set Name + '4c1b65142e04493'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify Permission Set '4c1b65142e04493' is NOT present.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="73887" started-at="2014-11-20T02:06:03Z" finished-at="2014-11-20T02:07:17Z">
+  <suite name="Default suite" duration-ms="132330" started-at="2014-11-20T14:08:33Z" finished-at="2014-11-20T14:10:45Z">
     <groups>
       <group name="full">
-        <method signature="CustomPermissionSetVerification.CustomPermissionSetVerification_TC1371()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@408f3be4]" name="CustomPermissionSetVerification_TC1371" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification"/>
+        <method signature="Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@1d89c040]" name="Pixelman_TC1155" class="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="73887" started-at="2014-11-20T02:06:03Z" finished-at="2014-11-20T02:07:17Z">
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@408f3be4]" name="suiteSetup" is-config="true" duration-ms="24" started-at="2014-11-19T21:06:03Z" finished-at="2014-11-19T21:06:03Z">
+    <test name="Default test" duration-ms="132330" started-at="2014-11-20T14:08:33Z" finished-at="2014-11-20T14:10:45Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@1d89c040]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-11-20T09:08:33Z" finished-at="2014-11-20T09:08:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@408f3be4]" name="startSelenium" is-config="true" duration-ms="3298" started-at="2014-11-19T21:06:03Z" finished-at="2014-11-19T21:06:07Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@1d89c040]" name="startSelenium" is-config="true" duration-ms="3265" started-at="2014-11-20T09:08:33Z" finished-at="2014-11-20T09:08:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification.CustomPermissionSetVerification_TC1371() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman.Pixelman_TC1155() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CustomPermissionSetVerification_TC1371()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@408f3be4]" name="CustomPermissionSetVerification_TC1371" duration-ms="70009" started-at="2014-11-19T21:06:07Z" finished-at="2014-11-19T21:07:17Z">
+        <test-method status="PASS" signature="Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@1d89c040]" name="Pixelman_TC1155" duration-ms="128486" started-at="2014-11-20T09:08:36Z" finished-at="2014-11-20T09:10:44Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -149,120 +127,92 @@ $permission_set->permissions = array(
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[STEP 2 -3]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Permission Sets' link.]]>
+              <![CDATA[Check the 'Pixelman' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' link.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Enter '4c1b65142e04493' in the 'Permission Set Name' text box.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Verify success message of '4c1b65142e04493 has been created.' is present.]]>
+              <![CDATA[Uncheck the 'Doubleclick for Publishers' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the Permission Set 'Edit' link for set name + '4c1b65142e04493'.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify all permission checkboxes are not checked.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Export' tab.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Verify 'Export' text area value is '$permission_set = new stdClass();
-$permission_set->disabled = FALSE; /* Edit this to true to make a default permission_set disabled initially */
-$permission_set->api_version = 1;
-$permission_set->machinename = '4c1b65142e04493';
-$permission_set->name = '4c1b65142e04493';
-$permission_set->permissions = array();
-'.]]>
+              <![CDATA[Click the 'Home' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' tab.]]>
+              <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Check the 'stick to Acquia web node' checkbox.]]>
+              <![CDATA[Verify '//www.nbcudigitaladops.com/hosted/global_header.js' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Check the 'access resource show' checkbox.]]>
+              <![CDATA[CLEANUP]]>
             </line>
             <line>
-              <![CDATA[Check the 'view own files' checkbox.]]>
+              <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of '4c1b65142e04493 has been updated.' is present.]]>
+              <![CDATA[Uncheck the 'Pub Ads' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the Permission Set 'Edit' link for set name + '4c1b65142e04493'.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Export' tab.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify 'Export' text area value is '$permission_set = new stdClass();
-$permission_set->disabled = FALSE; /* Edit this to true to make a default permission_set disabled initially */
-$permission_set->api_version = 1;
-$permission_set->machinename = '4c1b65142e04493';
-$permission_set->name = '4c1b65142e04493';
-$permission_set->permissions = array(
-  'stick to Acquia web node' => 'stick to Acquia web node',
-  'view own files' => 'view own files',
-  'access resource show' => 'access resource show',
-);
-'.]]>
+              <![CDATA[Uncheck the 'Pixelman' module checkbox.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Permission Sets' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Permission Set expand link for Set Name + '4c1b65142e04493'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Permission Set 'Delete' link for Set Name + '4c1b65142e04493'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The item has been deleted.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify Permission Set '4c1b65142e04493' is NOT present.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CustomPermissionSetVerification_TC1371 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@408f3be4]" name="stopSelenium" is-config="true" duration-ms="568" started-at="2014-11-19T21:07:17Z" finished-at="2014-11-19T21:07:17Z">
+        </test-method> <!-- Pixelman_TC1155 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@1d89c040]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-11-20T09:10:44Z" finished-at="2014-11-20T09:10:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CustomPermissionSetVerification_TC1371 status=SUCCESS method=CustomPermissionSetVerification.CustomPermissionSetVerification_TC1371()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@408f3be4] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=Pixelman_TC1155 status=SUCCESS method=Pixelman.Pixelman_TC1155()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@1d89c040] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification@408f3be4]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-11-19T21:07:17Z" finished-at="2014-11-19T21:07:17Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman@1d89c040]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-11-20T09:10:45Z" finished-at="2014-11-20T09:10:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.CustomPermissionSetVerification -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -61,7 +61,7 @@ public class CastCrew {
     public void ClickCastCrewLnk() throws Exception {
     	
     	Reporter.log("Click the 'Cast/Crew' link.");
-    	interact.Scroll("-500");
+    	interact.ScrollToTop();
     	interact.Click(waitFor.ElementVisible(CastCrew_Lnk));
     	
     }

@@ -82,7 +82,7 @@ public class BasicInformation {
     public void ClickBasicInformationTab() throws Exception {
     	
     	Reporter.log("Scroll to and click the 'Basic Information' tab.");
-    	interact.Scroll("-1000");
+    	interact.ScrollToTop();
     	interact.Click(waitFor.ElementVisible(BasicInformation_Tab));
     	
     }
@@ -145,7 +145,7 @@ public class BasicInformation {
     public void ClickCoverSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Cover' select button.");
-    	interact.Scroll("-500");
+    	interact.ScrollToTop();
     	interact.Click(waitFor.ElementVisible(CoverSelect_Btn));
     	
     }
