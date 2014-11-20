@@ -41,6 +41,20 @@ public class EmberNav {
     }
     
     //PAGE OBJECT IDENTIFIERS
+    private By AllMenuVertical_Lnks = By.xpath("//button[@class='navbar-icon navbar-toggle navbar-icon-toggle-vertical']");
+    
+    private By PrimaryVerticalExpand_Lnk(String lnkTxt) {
+    	return By.xpath("//a[contains(@id,'navbar-link-admin-')][text()='" + lnkTxt + "']/../button");
+    }
+    
+    private By SecondaryVerticalExpand_Lnk(String lnkTxt) {
+    	return By.xpath("//a[contains(@id, 'navbar-link')][text()='" + lnkTxt + "']/../button");
+    }
+    
+    private By VerticalNavBarLevel3_Lnk(String lnkTxt) {
+    	return By.xpath("//li[contains(@class, 'open')]//li[contains(@class, 'navbar-level-3')]//a[text()='" + lnkTxt + "']");
+    }
+    
     private By ActiveUserMenu_Lnk = By.id("navbar-item--4");
     
     private By MenuSubNav_Lnk(String lnkTxt) {
@@ -73,6 +87,47 @@ public class EmberNav {
     
     
     //PAGE OBJECT METHODS
+    public void ClickMenuVerticalBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'vertical' menu button to set the menu nav to vertical orientation.");
+    	for (WebElement ele : waitFor.ElementsPresent(AllMenuVertical_Lnks)) {
+    		if (ele.isDisplayed()) {
+    			interact.Click(ele);
+    			Thread.sleep(1000);
+    			break;
+    		}
+    	}
+    	
+    }
+    
+    public void ClickPrimaryVerticalExpandLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the 'Expand' arrow for link '" + lnkTxt + "'.");
+    	interact.Click(waitFor.ElementVisible(PrimaryVerticalExpand_Lnk(lnkTxt)));
+    	
+    }
+    
+    public void ClickSecondaryVerticalExpandLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the 'Expand' arrow for link '" + lnkTxt + "'.");
+    	interact.Click(waitFor.ElementVisible(SecondaryVerticalExpand_Lnk(lnkTxt)));
+    	
+    }
+    
+    public void VerifyLevel3VerticalLnkVisible(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Verify that the level 3 menu link '" + lnkTxt + "' is visible.");
+    	waitFor.ElementVisible(VerticalNavBarLevel3_Lnk(lnkTxt));
+    	
+    }
+    
+    public void ClickLevel3VerticalLnk(String lnkTxt) throws Exception {
+    	
+    	Reporter.log("Click the level 3 menu link '" + lnkTxt + "'.");
+    	interact.Click(waitFor.ElementVisible(VerticalNavBarLevel3_Lnk(lnkTxt)));
+    	
+    }
+    
     public void ClickHomeLnk() throws Exception {
     	
     	Reporter.log("Click the 'Home' link.");
@@ -81,7 +136,7 @@ public class EmberNav {
     	
     }
     
-    private void ShowMenu() throws Exception {
+    public void ShowMenu() throws Exception {
     	
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
@@ -106,7 +161,7 @@ public class EmberNav {
     	
     }
     
-    private void HideMenu() throws Exception {
+    public void HideMenu() throws Exception {
     	/*
     	if (waitFor.ElementPresent(Content_Lnk).isDisplayed()) {
     		Reporter.log("Click the 'Menu' link to hide navigation menu items.");
