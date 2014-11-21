@@ -15,7 +15,7 @@ public class MPSEndToEndIntegration extends ParentTest {
      * TEST CASE - TC3996
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20554120099
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify", "mps"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify", "broken"})
     public void MPSEndToEndIntegration_TC3996() throws Exception {
         	
         	Reporter.log("STEP 1");

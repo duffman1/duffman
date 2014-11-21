@@ -92,7 +92,6 @@
 		 "full" - every test in the suite except the sensitive test group.
 		 "mpx" - every mpx video test.
 		 "certify" - a subset of the full test group that is required to certify a build.
-		 "mps" - every mps advertisement test.
 		 "sensitive" - only those tests that CANNOT run in parallel to anything else.
 		 "sikuli" - those tests that leverage sikuli image recognition in some capacity.
 		 "broken" - those tests that are broken and safe to ignore until they can be resolved.

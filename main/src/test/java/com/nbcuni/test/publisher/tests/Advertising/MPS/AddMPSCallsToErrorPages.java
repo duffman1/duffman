@@ -17,7 +17,7 @@ public class AddMPSCallsToErrorPages extends ParentTest {
      * TEST CASE - TC4950
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/22520431481
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mps"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void AddMPSCallsToErrorPages_TC4950() throws Exception {
         
         	Reporter.log("STEP 1");
