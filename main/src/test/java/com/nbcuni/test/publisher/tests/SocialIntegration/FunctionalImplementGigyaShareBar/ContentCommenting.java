@@ -46,7 +46,7 @@ public class ContentCommenting extends ParentTest{
     	Reporter.log("STEP 3");
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
-        GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver, applib);
+        GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver);
         String parentWindow = webDriver.getWindowHandle();
 	    gigyaShareBar.ClickTweetButton();
 	    applib.switchToNewWindow(parentWindow);

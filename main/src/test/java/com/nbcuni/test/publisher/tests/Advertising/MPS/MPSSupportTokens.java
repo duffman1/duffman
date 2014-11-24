@@ -24,7 +24,7 @@ public class MPSSupportTokens extends ParentTest {
      * TEST CASE - TC3641
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20183282020
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
+    //@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void MPSSupportTokens_TC3641() throws Exception {
         
         	Reporter.log("STEP 1");

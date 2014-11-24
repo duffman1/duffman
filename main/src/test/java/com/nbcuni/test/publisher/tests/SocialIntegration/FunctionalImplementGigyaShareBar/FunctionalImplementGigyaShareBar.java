@@ -51,7 +51,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
         searchFor.ClickSearchTitleLnk(postTitle);
-        GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver, applib);
+        GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver);
         gigyaShareBar.VerifyTumblrBtnPresent();
         gigyaShareBar.VerifyEmailBtnPresent();
         gigyaShareBar.VerifyGooglePlusBtnPresent();

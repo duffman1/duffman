@@ -79,7 +79,7 @@ public class A1_TestSetup {
                 		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", 
                 		"TVE Auth Example", "Pub SURF Example",
                 		"simpleSAMLphp authentication", "Program Guide Example", 
-                		"Doubleclick for Publishers")) {
+                		"Doubleclick for Publishers", "Automated Logout")) {
                 	if (modules.IsModuleEnabled(module)) {
                 		modules.DisableModule(module);
                 	}

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -17,16 +14,7 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
@@ -35,13 +23,28 @@
       <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'TV Show' link.]]>
+      <![CDATA[Click the 'Post' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Title' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Body' is present as a required field.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
     </line>
     <line>
       <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Enter '47df9aef32dc457' in the 'Title' text box.]]>
+      <![CDATA[Enter '6468fd64268b41f' in the 'Title' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -50,310 +53,80 @@
       <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the Logo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Media 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Banner 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Show 47df9aef32dc457 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Dynamic Queue types' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add dynamic queue type' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b6722711ceb5489' in the 'Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'b6722711ceb5489' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3 - MOVED TO SETUP]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content types' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'manage field' link for content type 'Movie'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Movie' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '83ceced6ed4248d' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Select the 'WYSIWYG Mini' from the 'Text format' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Cover' select button.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
+      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_112414082718AM.png ]]>
     </line>
     <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Select '47df9aef32dc457' from the 'Show' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Movie 83ceced6ed4248d has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the primary nav 'Dynamic Queues' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add b6722711ceb5489' link.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b474ef6075bc472' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[Select '47df9aef32dc457' from the 'TV Shows' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the primary nav 'Dynamic Queues' link.]]>
-    </line>
-    <line>
-      <![CDATA[Open a new browser window.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to new browser tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/26'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '83ceced6ed4248d' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'Relationships' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '47df9aef32dc457' is present on the page.]]>
+      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_112414082718AM.png'> <img src='./CreatePost_TC1048_112414082718AM.png' height='700' width='700'/> </a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="119636" started-at="2014-11-20T20:53:26Z" finished-at="2014-11-20T20:55:26Z">
+  <suite name="Default suite" duration-ms="46386" started-at="2014-11-24T13:26:33Z" finished-at="2014-11-24T13:27:19Z">
     <groups>
-      <group name="certify">
-        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@5c3bb813]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
-      </group> <!-- certify -->
       <group name="full">
-        <method signature="RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@5c3bb813]" name="RelatingTVShowsDynamicQueues_TC4389" class="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
+        <method signature="CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="CreatePost_TC1048" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="119636" started-at="2014-11-20T20:53:26Z" finished-at="2014-11-20T20:55:26Z">
-      <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@5c3bb813]" name="suiteSetup" is-config="true" duration-ms="22" started-at="2014-11-20T15:53:26Z" finished-at="2014-11-20T15:53:26Z">
+    <test name="Default test" duration-ms="46386" started-at="2014-11-24T13:26:33Z" finished-at="2014-11-24T13:27:19Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-11-24T08:26:33Z" finished-at="2014-11-24T08:26:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@5c3bb813]" name="startSelenium" is-config="true" duration-ms="3253" started-at="2014-11-20T15:53:26Z" finished-at="2014-11-20T15:53:30Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="startSelenium" is-config="true" duration-ms="3279" started-at="2014-11-24T08:26:33Z" finished-at="2014-11-24T08:26:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost.CreatePost_TC1048() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@5c3bb813]" name="RelatingTVShowsDynamicQueues_TC4389" duration-ms="115805" started-at="2014-11-20T15:53:30Z" finished-at="2014-11-20T15:55:25Z">
+        <test-method status="FAIL" signature="CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="CreatePost_TC1048" duration-ms="42333" started-at="2014-11-24T08:26:36Z" finished-at="2014-11-24T08:27:18Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Select file frame not present after 20 seconds.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Select file frame not present after 20 seconds.
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.nbcuni.test.publisher.pageobjects.Content.SelectFile.SwitchToSelectFileFrm(SelectFile.java:118)
+	at com.nbcuni.test.publisher.pageobjects.Content.SelectFile.SelectDefaultCoverImg(SelectFile.java:356)
+	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost.CreatePost_TC1048(CreatePost.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -367,16 +140,7 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Dynamic Queue' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
@@ -385,13 +149,28 @@
               <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'TV Show' link.]]>
+              <![CDATA[Click the 'Post' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Title' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Body' is present as a required field.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
             </line>
             <line>
               <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Enter '47df9aef32dc457' in the 'Title' text box.]]>
+              <![CDATA[Enter '6468fd64268b41f' in the 'Title' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -400,296 +179,35 @@
               <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the Logo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Media 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Banner 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Show 47df9aef32dc457 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Dynamic Queue types' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add dynamic queue type' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b6722711ceb5489' in the 'Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Content' or 'Node' from the 'Entity type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1 min' from the 'Cache lifetime' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'b6722711ceb5489' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3 - MOVED TO SETUP]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content types' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'manage field' link for content type 'Movie'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Movie' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '83ceced6ed4248d' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Select the 'WYSIWYG Mini' from the 'Text format' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Cover' select button.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
+              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_112414082718AM.png ]]>
             </line>
             <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Select '47df9aef32dc457' from the 'Show' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Published' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Movie 83ceced6ed4248d has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the primary nav 'Dynamic Queues' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add b6722711ceb5489' link.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b474ef6075bc472' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[Select '47df9aef32dc457' from the 'TV Shows' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Newest' radio button under 'Sort by'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save Dynamic Queue' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the primary nav 'Dynamic Queues' link.]]>
-            </line>
-            <line>
-              <![CDATA[Open a new browser window.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to new browser tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/dynamic-queue/26'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '83ceced6ed4248d' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'Relationships' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '47df9aef32dc457' is present on the page.]]>
+              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_112414082718AM.png'> <img src='./CreatePost_TC1048_112414082718AM.png' height='700' width='700'/> </a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- RelatingTVShowsDynamicQueues_TC4389 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@5c3bb813]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-11-20T15:55:25Z" finished-at="2014-11-20T15:55:26Z">
+        </test-method> <!-- CreatePost_TC1048 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="stopSelenium" is-config="true" duration-ms="760" started-at="2014-11-24T08:27:18Z" finished-at="2014-11-24T08:27:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RelatingTVShowsDynamicQueues_TC4389 status=SUCCESS method=RelatingTVShowsDynamicQueues.RelatingTVShowsDynamicQueues_TC4389()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@5c3bb813] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreatePost_TC1048 status=FAILURE method=CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues@5c3bb813]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-20T15:55:26Z" finished-at="2014-11-20T15:55:26Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-24T08:27:19Z" finished-at="2014-11-24T08:27:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
