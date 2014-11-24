@@ -74,7 +74,7 @@ public class BasicInformation {
     }
     
     private By CustomButton_Btn(String label) {
-    	return By.id("edit-field-" + label.toLowerCase() + "-und-0-select");
+    	return By.id("edit-field-" + label.toLowerCase() + "-und-0-browse-button");
     }
     
     

@@ -37,7 +37,7 @@ public class Logo {
     
     private By Edit_Btn = By.id("edit-field-cover-logo-und-0-edit");
     
-    private By Select_Btn = By.id("edit-field-logo-und-0-select");
+    private By Select_Btn = By.id("edit-field-logo-und-0-browse-button");
     
     
     //PAGE OBJECT METHODS

@@ -2,12 +2,12 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
@@ -20,13 +20,16 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 public class CoverMedia {
 
     private Config config;
+    private Integer timeout;
     private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public CoverMedia(final Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
         config = new Config();
-        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -34,7 +37,7 @@ public class CoverMedia {
     
     private By Edit_Btn = By.id("edit-field-cover-media-und-0-edit");
     
-    private By Select_Btn = By.cssSelector("a[id*= 'cover-media-und-0-select']");
+    private By Select_Btn = By.xpath("//a[contains(@id, 'cover-media')][text()='Browse']");
     
     
     //PAGE OBJECT METHODS
@@ -52,14 +55,14 @@ public class CoverMedia {
     public void ClickEditBtn() throws Exception {
     	
     	Reporter.log("Click the Cover Media 'Edit' button.");
-    	waitFor.ElementVisible(Edit_Btn).click();
+    	interact.Click(waitFor.ElementVisible(Edit_Btn));
     	
     }
     
     public void ClickSelectBtn() throws Exception {
     	
     	Reporter.log("Click the Cover Media 'Select' button.");
-    	waitFor.ElementVisible(Select_Btn).click();
+    	interact.Click(waitFor.ElementVisible(Select_Btn));
     	
     }
     

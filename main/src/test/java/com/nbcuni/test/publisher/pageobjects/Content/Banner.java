@@ -37,7 +37,7 @@ public class Banner {
     
     private By Edit_Btn = By.id("edit-field-cover-banner-und-0-edit");
     
-    private By Select_Btn = By.id("edit-field-banner-und-0-select");
+    private By Select_Btn = By.id("edit-field-banner-und-0-browse-button");
     
     
     //PAGE OBJECT METHODS

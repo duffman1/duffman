@@ -72,7 +72,7 @@ public class EntityReferenceVerification extends ParentTest{
         		String mpxVideoFileFieldTitle = "MPXVideoFile" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxVideoFileFieldTitle);
         		contentTypes.SelectFieldType("File");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
@@ -92,7 +92,7 @@ public class EntityReferenceVerification extends ParentTest{
         		String mpxVideoImageFieldTitle = "MPXVideoImage" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxVideoImageFieldTitle);
         		contentTypes.SelectFieldType("Image");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
@@ -146,7 +146,7 @@ public class EntityReferenceVerification extends ParentTest{
         		String mpxFCVideoFileFieldTitle = "FCMPXVideoFile" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxFCVideoFileFieldTitle);
         		contentTypes.SelectFieldType("File");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
@@ -166,7 +166,7 @@ public class EntityReferenceVerification extends ParentTest{
         		String mpxFCVideoImageFieldTitle = "FCMPXVideoImage" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxFCVideoImageFieldTitle);
         		contentTypes.SelectFieldType("Image");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
@@ -212,7 +212,7 @@ public class EntityReferenceVerification extends ParentTest{
         		String mpxPlayerFileFieldTitle = "MPXPlayerFile" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxPlayerFileFieldTitle);
         		contentTypes.SelectFieldType("File");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
@@ -230,7 +230,7 @@ public class EntityReferenceVerification extends ParentTest{
         		String mpxPlayerImageFieldTitle = "MPXPlayerImage" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxPlayerImageFieldTitle);
         		contentTypes.SelectFieldType("Image");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
@@ -280,7 +280,7 @@ public class EntityReferenceVerification extends ParentTest{
         		String mpxFCPlayerFileFieldTitle = "FCMPXPlayerFile" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxFCPlayerFileFieldTitle);
         		contentTypes.SelectFieldType("File");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
@@ -299,7 +299,7 @@ public class EntityReferenceVerification extends ParentTest{
         		String mpxFCPlayerImageFieldTitle = "FCMPXPlayerImage" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxFCPlayerImageFieldTitle);
         		contentTypes.SelectFieldType("Image");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();

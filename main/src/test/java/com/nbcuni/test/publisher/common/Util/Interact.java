@@ -51,7 +51,7 @@ public class Interact {
     		case "xpath": locator = By.xpath(elementID); break;
     		case "cssSelector": locator = By.cssSelector(elementID); break;
     		case "linkText": locator = By.linkText(elementID); break;
-    		case "id": locator = By.id(elementID); break;
+    		case "id": locator = By.id(elementID.replace("]", "")); break;
     	}
     	
     	System.out.println(locator.toString());

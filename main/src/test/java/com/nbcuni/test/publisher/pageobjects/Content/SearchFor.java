@@ -23,12 +23,14 @@ import java.util.List;
 
 public class SearchFor {
 
+	private Driver webDriver;
     private Config config;
     private WaitFor waitFor;
     private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public SearchFor(Driver webDriver) {
+    	this.webDriver = webDriver;
         config = new Config();
         Integer timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
@@ -316,8 +318,8 @@ public class SearchFor {
     public void VerifyMPXResultSetMPXStatus(String status) throws Exception {
 
     	Reporter.log("Get all the MPX result set 'Status' items.");
-    	List<WebElement> resultSet = waitFor.ElementsVisible(AllMPXResultSetStatus_Itms);
-        
+    	List<WebElement> resultSet = webDriver.findElements(AllMPXResultSetStatus_Itms);
+    			
         if (status == "Published") {
         	Reporter.log("Assert that result set size for Published items is greater than 0.");
         	Assert.assertTrue(resultSet.size() > 0);

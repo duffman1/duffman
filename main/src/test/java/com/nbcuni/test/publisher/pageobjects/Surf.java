@@ -54,6 +54,7 @@ public class Surf {
     public void ClickSignInBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign-in' button.");
+    	Thread.sleep(2000);
     	interact.Click(waitFor.ElementVisible(SignIn_Btn));
     	
     }
