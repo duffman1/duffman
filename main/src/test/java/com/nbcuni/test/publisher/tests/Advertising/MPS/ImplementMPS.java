@@ -26,7 +26,7 @@ public class ImplementMPS extends ParentTest {
      * TEST CASE - TC2901
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/18554111347
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void ImplementMPS_TC2901() throws Exception {
         
         	Reporter.log("STEP 1");
