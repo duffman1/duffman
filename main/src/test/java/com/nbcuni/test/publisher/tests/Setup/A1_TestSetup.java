@@ -75,8 +75,7 @@ public class A1_TestSetup {
                 
                 //disable necessary modules
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
-                		"ImageField Focus", "Database logging", "MPS", 
-                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", 
+                		"ImageField Focus", "Database logging", "MPS", "Event Countdown", 
                 		"TVE Auth Example", "Pub SURF Example",
                 		"simpleSAMLphp authentication", "Program Guide Example", 
                 		"Doubleclick for Publishers", "Automated Logout")) {
@@ -87,8 +86,7 @@ public class A1_TestSetup {
             	
                 //uninstall some high data usage modules that overflow lists
                 //TODO - this should only be done when needed and not every execution
-                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue", 
-                		"Event Countdown")) {
+                for (String module : Arrays.asList("MPS", "Event Countdown")) {
                 	navigation.ClickPrimaryTabNavLnk("Uninstall");
                 	if (modules.IsModuleInstalled(module)) {
                     	modules.UninstallModule(module);
@@ -131,7 +129,7 @@ public class A1_TestSetup {
                 		privateFileSystemPath = "/mnt/files/nbcupublisher7.acceptance/sites/default/files-private";
                 	}
                 	else if (config.getConfigValueString("AppURL").contains("acc-test")) {
-                		privateFileSystemPath = "/mnt/files/nbcupublisher7.acceptance/sites/default/files-private";
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7devi0/sites/default/files-private";
                 	}
                 	else {
                 		privateFileSystemPath = "/mnt/files/nbcupublisher7." + config.getConfigValueString("AppURL").replace("http://", "").replace(".publisher7.com", "") + "/sites/default/files-private";
