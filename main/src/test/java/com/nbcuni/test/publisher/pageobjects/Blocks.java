@@ -1,14 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Blocks Library. Copyright
@@ -19,73 +17,69 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class Blocks {
 
-    private Driver webDriver;
+    private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public Blocks(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//a[text()='Pub Sauce']")
-    private WebElement PubSauce_Lnk;
+    private By SaveBlocks_Btn = By.xpath("//input[@id='edit-submit']");
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-submit']")
-    private WebElement SaveBlocks_Btn;
-    
-    private WebElement BlockLocator_Ddl(String blockName) {
-    	return webDriver.findElement(By.xpath("(//td[text()='" + blockName + "']/..//select)[1]"));
+    private By BlockLocator_Ddl(String blockName) {
+    	return By.xpath("(//td[text()='" + blockName + "']/..//select)[1]");
     }
     
-    private WebElement SelectedBlock_Ctr(String blockName) {
-    	return webDriver.findElement(By.xpath("//td[@class='block'][contains(text(), '" + blockName + "')]/../td[2]//select/option[@selected='selected']"));
+    private By SelectedBlock_Ctr(String blockName) {
+    	return By.xpath("//td[@class='block'][contains(text(), '" + blockName + "')]/../td[2]//select/option[@selected='selected']");
     }
     
-    private WebElement HomePageBlock_Ctr(String blockName) {
-    	return webDriver.findElement(By.xpath("//div[@class='region region-sidebar-first']/div[@id='block-dfp-" + blockName + "']"));
+    private By HomePageBlock_Ctr(String blockName) {
+    	return By.xpath("//div[@class='region region-sidebar-first']/div[@id='block-dfp-" + blockName + "']");
     }
    
     
     //PAGE OBJECT METHODS
-    public void ClickPubSauceLnk() throws Exception {
-    	
-    	Reporter.log("Click the 'Pub Sauce' link.");
-    	PubSauce_Lnk.click();
-    }
-    
     public void SelectRegion(String blockName, String regionLocation) throws Exception{
     	
     	Reporter.log("Select the block name '" + blockName + "' from the '" + regionLocation + "' drop down list.");
-    	Thread.sleep(1000);
-    	new Select(BlockLocator_Ddl(blockName)).selectByVisibleText(regionLocation);
+    	interact.Select(waitFor.ElementVisible(BlockLocator_Ddl(blockName)), regionLocation);
     	
     }
     
     public void ClickSaveBlocksBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save Blocks' button.");
-    	SaveBlocks_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SaveBlocks_Btn));
+    	
     }
     
     public void VerifySelectedRegion(String blockName, String regionLocation) throws Exception {
     	
     	Reporter.log("Assert that the selected block '" + blockName + "' contains the '" + regionLocation + "' text.");
-    	Assert.assertTrue(SelectedBlock_Ctr(blockName).getText().contains(regionLocation));
+    	waitFor.ElementContainsText((SelectedBlock_Ctr(blockName)), regionLocation);
+    	
     }
     
     public void VerifyScriptSourceInPage(String scriptSrc) throws Exception {
     	
     	Reporter.log("Assert the page source contains the '" + scriptSrc + "'.");
-    	Assert.assertTrue(webDriver.getPageSource().contains(scriptSrc));
+    	waitFor.PageSourceContainsText(scriptSrc);
     	
     }
     
     public void VerifyHomePageBlockPresent(String blockName) throws Exception {
     	
     	Reporter.log("Assert the home page block '" + blockName + "' is present.");
-    	Thread.sleep(500); //stale element exception
-    	Assert.assertTrue(HomePageBlock_Ctr(blockName).isDisplayed());
+    	waitFor.ElementVisible(HomePageBlock_Ctr(blockName));
+    	
     }
     
 }
