@@ -15,7 +15,7 @@ public class MPSEndToEndIntegration extends ParentTest {
      * TEST CASE - TC3996
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20554120099
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify", "broken"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
     public void MPSEndToEndIntegration_TC3996() throws Exception {
         	
         	Reporter.log("STEP 1");
@@ -31,7 +31,7 @@ public class MPSEndToEndIntegration extends ParentTest {
         	
             Reporter.log("STEP 3");
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
-            mpsConfiguration.EnterMPSHost("mps.io");
+            mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();

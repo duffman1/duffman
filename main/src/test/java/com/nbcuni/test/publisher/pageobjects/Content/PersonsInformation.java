@@ -65,7 +65,7 @@ public class PersonsInformation {
     	return txa;
     }
     
-    @FindBy(how = How.XPATH, using = "//a[@id='edit-field-person-cover-photo-und-0-select']")
+    @FindBy(how = How.XPATH, using = "//a[@id='edit-field-person-cover-photo-und-0-browse-button']")
     private WebElement CoverPhotoSelect_Btn;
     
     

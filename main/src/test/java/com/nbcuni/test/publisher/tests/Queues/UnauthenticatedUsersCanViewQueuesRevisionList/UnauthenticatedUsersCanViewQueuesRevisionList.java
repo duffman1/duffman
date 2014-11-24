@@ -19,7 +19,7 @@ public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void UnauthenticatedUsersCanViewQueuesRevisionList_Test() throws Exception{
     	
-        //Step 1
+    	//Step 1
         applib.openApplication();
         
         //Step 2

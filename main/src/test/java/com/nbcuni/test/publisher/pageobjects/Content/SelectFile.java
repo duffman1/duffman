@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.LocalFileDetector;
@@ -101,7 +102,7 @@ public class SelectFile {
     	return By.xpath("//label[contains(text(), '" + label + "')]/..//input[contains(@id, 'upload')][1]");
     }
     
-    private By Body_Txt = By.xpath("//body");
+    private By MediaBrowser_Tst = By.xpath("//div[@id='media-browser-tabset']");
     
     private By CustomUpload_Btn(String label) {
     	return By.xpath("//label[contains(text(), '" + label + "')]/..//input[contains(@id, 'upload')][2]");
@@ -120,9 +121,11 @@ public class SelectFile {
     		
     		webDriver.switchTo().frame(waitFor.ElementPresent(SelectFile_Frm));
     		
-    		if (waitFor.ElementPresent(Body_Txt).getText().contains("Select a file")) {
+    		try {
+    			webDriver.findElement(MediaBrowser_Tst);
     			break;
     		}
+    		catch (NoSuchElementException e) { }
     			
     		Thread.sleep(1000);
     		webDriver.switchTo().defaultContent();

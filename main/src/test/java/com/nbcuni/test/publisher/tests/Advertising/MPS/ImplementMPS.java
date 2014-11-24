@@ -26,7 +26,7 @@ public class ImplementMPS extends ParentTest {
      * TEST CASE - TC2901
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/18554111347
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void ImplementMPS_TC2901() throws Exception {
         
         	Reporter.log("STEP 1");
@@ -43,7 +43,7 @@ public class ImplementMPS extends ParentTest {
             modules.DisableModule("Doubleclick for Publishers");
             navigation.Configuration("MPS Configuration");
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
-            mpsConfiguration.EnterMPSHost("mps.io");
+            mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();

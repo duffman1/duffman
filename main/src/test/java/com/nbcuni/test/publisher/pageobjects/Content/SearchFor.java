@@ -235,6 +235,13 @@ public class SearchFor {
     	
     }
     
+    public void VerifyNoSearchResultsPresent() throws Exception {
+    	
+    	Reporter.log("Verify there are no search results present.");
+    	waitFor.ElementsNotPresent(AllSearchResults_Lnks);
+    	
+    }
+    
     public Integer GetMPXSearchResultSize() throws Exception {
 
     	Reporter.log("Get the number of results in the result set.");

@@ -57,9 +57,9 @@ public class BasicInformation {
     			By.xpath("//body[@id='tinymce']"));
     }
     
-    private By CoverSelect_Btn = By.xpath("//a[contains(@id, 'cover')][text()='Select']");
+    private By CoverSelect_Btn = By.xpath("//a[contains(@id, 'cover')][text()='Browse']");
     
-    private By MediaItemsSelect_Btn = By.xpath("//input[@id='edit-field-media-items-und-add-more']");
+    private By MediaItemsSelect_Btn = By.xpath("//a[@id='edit-field-media-items-und-0-browse-button']");
     
     private By Cover_Img = By.xpath("//div[@class='media-thumbnail']/img");
     

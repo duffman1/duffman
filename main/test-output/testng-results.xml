@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
+    <line>
+      <![CDATA[STEP 1]]>
+    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -14,119 +17,278 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add content' link.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' link.]]>
+      <![CDATA[STEP 2 - 3]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Title' is present as a required field.]]>
+      <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Body' is present as a required field.]]>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
     </line>
     <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
+      <![CDATA[Clear all 'Name' text box values.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+      <![CDATA[Clear all 'Value' text box values.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
     </line>
     <line>
-      <![CDATA[Enter '6468fd64268b41f' in the 'Title' text box.]]>
+      <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Click the 'Document Write' radio button.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
     </line>
     <line>
-      <![CDATA[Select the 'WYSIWYG Mini' from the 'Text format' drop down list.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cover' select button.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_112414082718AM.png ]]>
+      <![CDATA[Click the 'Home' link.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_112414082718AM.png'> <img src='./CreatePost_TC1048_112414082718AM.png' height='700' width='700'/> </a>]]>
+      <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter 'var mpsopts = {"host":"stage-mps.nbcuni.com"}' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'DOM Injection (Only select this method if JQuery is enabled).' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/?x=y'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mps call parameter '"qs":"eD15"' is present in the page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
+    </line>
+    <line>
+      <![CDATA[Un-check the 'Send Query Strings' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'Site-Install","path":"\/","qs":"eD15"' is not present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Document Write' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Send Query Strings' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'key1' in the 'Name' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'value1' in the 'Value' text box with index '1'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add another opt' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'key2' in the 'Name' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '{"key":"value", "key2": "value2"}' in the 'Value' text box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'JSON' check box with index '2'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify 'var mpsopts = {"host":"stage-mps.nbcuni.com","key1":"value1","key2":{"key":"value","key2":"value2"}}' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'key3' in the 'Name' text box with index '3'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'jshdhdhdhjdhshd' in the 'Value' text box with index '3'.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'JSON' check box with index '3'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify error message of 'If the json checkbox is checked, this must be a valid json object.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify '//stage-mps.nbcuni.com/request/page/jsonp?CALLBACK=mpsCallback' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Name' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Clear all 'Value' text box values.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46386" started-at="2014-11-24T13:26:33Z" finished-at="2014-11-24T13:27:19Z">
+  <suite name="Default suite" duration-ms="78228" started-at="2014-11-24T17:59:22Z" finished-at="2014-11-24T18:00:40Z">
     <groups>
       <group name="full">
-        <method signature="CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="CreatePost_TC1048" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
+        <method signature="MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="MPSConfigurationPage_TC3306" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
+        <method signature="MPSConfigurationPage.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="Cleanup" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="46386" started-at="2014-11-24T13:26:33Z" finished-at="2014-11-24T13:27:19Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-11-24T08:26:33Z" finished-at="2014-11-24T08:26:33Z">
+    <test name="Default test" duration-ms="78228" started-at="2014-11-24T17:59:22Z" finished-at="2014-11-24T18:00:40Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="suiteSetup" is-config="true" duration-ms="31" started-at="2014-11-24T12:59:22Z" finished-at="2014-11-24T12:59:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="startSelenium" is-config="true" duration-ms="3279" started-at="2014-11-24T08:26:33Z" finished-at="2014-11-24T08:26:36Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="startSelenium" is-config="true" duration-ms="3339" started-at="2014-11-24T12:59:22Z" finished-at="2014-11-24T12:59:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost.CreatePost_TC1048() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.MPSConfigurationPage_TC3306() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="CreatePost_TC1048" duration-ms="42333" started-at="2014-11-24T08:26:36Z" finished-at="2014-11-24T08:27:18Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Select file frame not present after 20 seconds.]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Select file frame not present after 20 seconds.
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.pageobjects.Content.SelectFile.SwitchToSelectFileFrm(SelectFile.java:118)
-	at com.nbcuni.test.publisher.pageobjects.Content.SelectFile.SelectDefaultCoverImg(SelectFile.java:356)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost.CreatePost_TC1048(CreatePost.java:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="MPSConfigurationPage_TC3306" duration-ms="71146" started-at="2014-11-24T12:59:25Z" finished-at="2014-11-24T13:00:36Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -140,74 +302,292 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add content' link.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' link.]]>
+              <![CDATA[STEP 2 - 3]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Title' is present as a required field.]]>
+              <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Body' is present as a required field.]]>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
             </line>
             <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
+              <![CDATA[Clear all 'Name' text box values.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Moderation State' is present as a required field.]]>
+              <![CDATA[Clear all 'Value' text box values.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
             </line>
             <line>
-              <![CDATA[Enter '6468fd64268b41f' in the 'Title' text box.]]>
+              <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Click the 'Document Write' radio button.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
             </line>
             <line>
-              <![CDATA[Select the 'WYSIWYG Mini' from the 'Text format' drop down list.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cover' select button.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_112414082718AM.png ]]>
+              <![CDATA[Click the 'Home' link.]]>
             </line>
             <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreatePost_TC1048_112414082718AM.png'> <img src='./CreatePost_TC1048_112414082718AM.png' height='700' width='700'/> </a>]]>
+              <![CDATA[Verify the mps call parameter '"site":"pub7-development"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"is_content":0' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"type":"other"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter 'var mpsopts = {"host":"stage-mps.nbcuni.com"}' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'DOM Injection (Only select this method if JQuery is enabled).' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id="mps-load"' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'mpsload.async=false; head.insertBefore(mpsload,head.firstChild)' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/?x=y'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"title":"Welcome to' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"path":"\/"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mps call parameter '"qs":"eD15"' is present in the page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
+            </line>
+            <line>
+              <![CDATA[Un-check the 'Send Query Strings' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'Site-Install","path":"\/","qs":"eD15"' is not present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Document Write' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Send Query Strings' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'key1' in the 'Name' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'value1' in the 'Value' text box with index '1'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add another opt' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'key2' in the 'Name' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '{"key":"value", "key2": "value2"}' in the 'Value' text box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'JSON' check box with index '2'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify 'var mpsopts = {"host":"stage-mps.nbcuni.com","key1":"value1","key2":{"key":"value","key2":"value2"}}' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'key3' in the 'Name' text box with index '3'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'jshdhdhdhjdhshd' in the 'Value' text box with index '3'.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'JSON' check box with index '3'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify error message of 'If the json checkbox is checked, this must be a valid json object.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify '//stage-mps.nbcuni.com/request/page/jsonp?CALLBACK=mpsCallback' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Name' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Clear all 'Value' text box values.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreatePost_TC1048 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="stopSelenium" is-config="true" duration-ms="760" started-at="2014-11-24T08:27:18Z" finished-at="2014-11-24T08:27:19Z">
+        </test-method> <!-- MPSConfigurationPage_TC3306 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-11-24T13:00:36Z" finished-at="2014-11-24T13:00:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreatePost_TC1048 status=FAILURE method=CreatePost.CreatePost_TC1048()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPSConfigurationPage_TC3306 status=SUCCESS method=MPSConfigurationPage.MPSConfigurationPage_TC3306()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost@c6787c1]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-24T08:27:19Z" finished-at="2014-11-24T08:27:19Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="startSelenium" is-config="true" duration-ms="2590" started-at="2014-11-24T13:00:37Z" finished-at="2014-11-24T13:00:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="Cleanup" duration-ms="1" started-at="2014-11-24T13:00:39Z" depends-on-methods="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage.MPSConfigurationPage_TC3306" finished-at="2014-11-24T13:00:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="stopSelenium" is-config="true" duration-ms="566" started-at="2014-11-24T13:00:39Z" finished-at="2014-11-24T13:00:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=MPSConfigurationPage.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage@387a2618]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-24T13:00:40Z" finished-at="2014-11-24T13:00:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

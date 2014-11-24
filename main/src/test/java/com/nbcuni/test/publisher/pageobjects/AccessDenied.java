@@ -1,11 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 
@@ -18,17 +16,18 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class AccessDenied {
 
+	private Config config;
+	private Integer timeout;
 	private WaitFor waitFor;
-	
-    //PAGE OBJECT CONSTRUCTOR
+	//PAGE OBJECT CONSTRUCTOR
     public AccessDenied(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 10);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.TAG_NAME, using = "body")
-    private WebElement Body_Txt;
+    private By Body_Txt = By.xpath("//body");
     
     //PAGE OBJECT METHODS
     public void VerifyAccessDeniedTxt() throws Exception {

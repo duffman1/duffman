@@ -17,7 +17,7 @@ public class MPSConfigurationPage extends ParentTest {
      * TEST CASE - TC3306
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/19393095610
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void MPSConfigurationPage_TC3306() throws Exception {
         
         	Reporter.log("STEP 1");
@@ -36,14 +36,14 @@ public class MPSConfigurationPage extends ParentTest {
             Reporter.log("STEP 4");
             MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.CleanAllMPSOptions();
-            mpsConfiguration.EnterMPSHost("mps.io");
+            mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             navigation.Home();
-            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"is_content\":0", "\"type\":\"other\"", "var mpsopts = {\"host\":\"mps.io\"}"));
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"is_content\":0", "\"type\":\"other\"", "var mpsopts = {\"host\":\"stage-mps.nbcuni.com\"}"));
             
             Reporter.log("STEP 5");
             navigation.Configuration("MPS Configuration");
@@ -67,7 +67,7 @@ public class MPSConfigurationPage extends ParentTest {
             
             Reporter.log("STEP 8");
             navigation.Configuration("MPS Configuration");
-            mpsConfiguration.EnterMPSHost("mps.io");
+            mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();
@@ -80,7 +80,7 @@ public class MPSConfigurationPage extends ParentTest {
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             navigation.Home();
-            contentParent.VerifySourceInPage(Arrays.asList("var mpsopts = {\"host\":\"mps.io\",\"key1\":\"value1\",\"key2\":{\"key\":\"value\",\"key2\":\"value2\"}}"));
+            contentParent.VerifySourceInPage(Arrays.asList("var mpsopts = {\"host\":\"stage-mps.nbcuni.com\",\"key1\":\"value1\",\"key2\":{\"key\":\"value\",\"key2\":\"value2\"}}"));
             
             Reporter.log("STEP 9");
             navigation.Configuration("MPS Configuration");
@@ -92,7 +92,7 @@ public class MPSConfigurationPage extends ParentTest {
             
             Reporter.log("STEP 10");
             navigation.Home();
-            contentParent.VerifySourceInPage(Arrays.asList("//mps.io/request/page/jsonp?CALLBACK=mpsCallback"));
+            contentParent.VerifySourceInPage(Arrays.asList("//stage-mps.nbcuni.com/request/page/jsonp?CALLBACK=mpsCallback"));
             
             Reporter.log("STEP 11 - N/A");
             
@@ -105,7 +105,7 @@ public class MPSConfigurationPage extends ParentTest {
             
     }
     
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"}, dependsOnMethods = {"MPSConfigurationPage_TC3306"}, alwaysRun=true)
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"MPSConfigurationPage_TC3306"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
 		if (testSuccessful == false) {
 			

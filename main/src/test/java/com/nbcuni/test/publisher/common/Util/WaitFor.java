@@ -144,6 +144,20 @@ public class WaitFor {
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
+    public void ElementsNotPresent(final By locator) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+    		.withMessage("Elements not present.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return webDriver.findElements(loc).size() == 0;
+    			}
+    		});
+    	
+    }
+    
     public WebElement ElementVisible(final WebElement element) throws Exception {
     	
     	this.elementWait(element)

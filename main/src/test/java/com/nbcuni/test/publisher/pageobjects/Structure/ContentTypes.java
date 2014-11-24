@@ -68,7 +68,7 @@ public class ContentTypes {
     private By Widget_Ddl = By.id("edit-fields-add-new-field-widget-type");
     
     private By FieldSelect_Btn(String fieldName) {
-    	return By.id("edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-select");
+    	return By.id("edit-field-" + fieldName + "-und-field-" + fieldName + "-und-0-browse-button");
     }
     
     private By Field_Txt(String fieldName) {

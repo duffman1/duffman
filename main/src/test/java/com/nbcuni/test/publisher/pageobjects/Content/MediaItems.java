@@ -59,7 +59,7 @@ public class MediaItems {
     
     private By EditAll_Btn = By.id("media-edit-all-button");
     
-    private By Add_Btn = By.xpath("//input[contains(@id, 'edit-field-media-items-und-add-more')]");
+    private By Add_Btn = By.xpath("//a[text()='Add media']");
     
     
     //PAGE OBJECT METHODS

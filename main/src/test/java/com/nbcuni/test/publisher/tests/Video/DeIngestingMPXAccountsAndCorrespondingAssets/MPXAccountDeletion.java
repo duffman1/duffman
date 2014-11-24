@@ -61,7 +61,7 @@ public class MPXAccountDeletion extends ParentTest {
         	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle("Automation");
         	searchFor.ClickApplyBtn();
-        	Assert.assertTrue(searchFor.GetSearchResultSize() == 0);
+        	searchFor.VerifyNoSearchResultsPresent();
         	
         	//Step 10
         	navigation.Configuration("Media: thePlatform mpx settings");
