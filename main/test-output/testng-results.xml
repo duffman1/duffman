@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
-    <line>
-      <![CDATA[SETUP - create new user]]>
-    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -20,121 +17,209 @@
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'People' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add user' link.]]>
+      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'Username' text box.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
     </line>
     <line>
-      <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'E-mail address' text box.]]>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
     </line>
     <line>
-      <![CDATA[Check the 'editor' check box.]]>
+      <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter '7ecc5156d71d4dd' in the 'First Name' text box.]]>
+      <![CDATA[Click the 'Performance' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'b6a2027a6bd14bd' in the 'Last Name' text box.]]>
+      <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Create new account' button.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 7fa11d06397642e@780bd6c99b96462.com.' is present.]]>
+      <![CDATA[Check the 'TVE Auth Example' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 1]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Request new password' link.]]>
+      <![CDATA[Click the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Click the 'Blocks' link.]]>
     </line>
     <line>
-      <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'E-mail' text box.]]>
+      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Reset password' button.]]>
+      <![CDATA[Click the 'Save Blocks' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Further instructions have been sent to your e-mail address.' is present.]]>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Click the 'Home' link.]]>
     </line>
     <line>
-      <![CDATA[Verify that the auto email titled 'Replacement login information for 7fa11d06397642e@780bd6c99b96462.com at ' arrives in the gmail inbox.]]>
+      <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
     </line>
     <line>
-      <![CDATA[STEP 5 and 6 - not available for automation as of yet]]>
+      <![CDATA[Click the 'Home' link.]]>
     </line>
     <line>
-      <![CDATA[STEP 7]]>
+      <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[Click the 'Home' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Request new password' link.]]>
+      <![CDATA[Click the 'Configure jQuery' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'notvalid@nbcuni.com' in the 'E-mail' text box.]]>
+      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Reset password' button.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify error message of 'Sorry, notvalid@nbcuni.com is not recognized as an e-mail address.' is present.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'SIGN IN' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Performance' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Uninstall' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58624" started-at="2014-11-25T02:10:02Z" finished-at="2014-11-25T02:11:00Z">
+  <suite name="Default suite" duration-ms="240331" started-at="2014-11-25T03:52:40Z" finished-at="2014-11-25T03:56:40Z">
     <groups>
       <group name="full">
-        <method signature="PasswordReset.PasswordReset_TC2186()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="PasswordReset_TC2186" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset"/>
+        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="58624" started-at="2014-11-25T02:10:02Z" finished-at="2014-11-25T02:11:00Z">
-      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="suiteSetup" is-config="true" duration-ms="30" started-at="2014-11-24T21:10:02Z" finished-at="2014-11-24T21:10:02Z">
+    <test name="Default test" duration-ms="240331" started-at="2014-11-25T03:52:40Z" finished-at="2014-11-25T03:56:40Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="suiteSetup" is-config="true" duration-ms="26" started-at="2014-11-24T22:52:40Z" finished-at="2014-11-24T22:52:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="startSelenium" is-config="true" duration-ms="3350" started-at="2014-11-24T21:10:02Z" finished-at="2014-11-24T21:10:05Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="startSelenium" is-config="true" duration-ms="3292" started-at="2014-11-24T22:52:40Z" finished-at="2014-11-24T22:52:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset.PasswordReset_TC2186() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="PasswordReset_TC2186()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="PasswordReset_TC2186" duration-ms="54691" started-at="2014-11-24T21:10:05Z" finished-at="2014-11-24T21:11:00Z">
+        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="ImplementTVEModulesCore_TC3261" duration-ms="233264" started-at="2014-11-24T22:52:43Z" finished-at="2014-11-24T22:56:37Z">
           <reporter-output>
-            <line>
-              <![CDATA[SETUP - create new user]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -151,110 +236,226 @@
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'People' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add user' link.]]>
+              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'Username' text box.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
             </line>
             <line>
-              <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'E-mail address' text box.]]>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
             </line>
             <line>
-              <![CDATA[Check the 'editor' check box.]]>
+              <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter '7ecc5156d71d4dd' in the 'First Name' text box.]]>
+              <![CDATA[Click the 'Performance' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'b6a2027a6bd14bd' in the 'Last Name' text box.]]>
+              <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Create new account' button.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 7fa11d06397642e@780bd6c99b96462.com.' is present.]]>
+              <![CDATA[Check the 'TVE Auth Example' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 1]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Request new password' link.]]>
+              <![CDATA[Click the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Click the 'Blocks' link.]]>
             </line>
             <line>
-              <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'E-mail' text box.]]>
+              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Reset password' button.]]>
+              <![CDATA[Click the 'Save Blocks' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Further instructions have been sent to your e-mail address.' is present.]]>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Click the 'Home' link.]]>
             </line>
             <line>
-              <![CDATA[Verify that the auto email titled 'Replacement login information for 7fa11d06397642e@780bd6c99b96462.com at ' arrives in the gmail inbox.]]>
+              <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
             </line>
             <line>
-              <![CDATA[STEP 5 and 6 - not available for automation as of yet]]>
+              <![CDATA[Click the 'Home' link.]]>
             </line>
             <line>
-              <![CDATA[STEP 7]]>
+              <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[Click the 'Home' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Request new password' link.]]>
+              <![CDATA[Click the 'Configure jQuery' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'notvalid@nbcuni.com' in the 'E-mail' text box.]]>
+              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Reset password' button.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify error message of 'Sorry, notvalid@nbcuni.com is not recognized as an e-mail address.' is present.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'SIGN IN' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Performance' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Uninstall' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PasswordReset_TC2186 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-11-24T21:11:00Z" finished-at="2014-11-24T21:11:00Z">
+        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="stopSelenium" is-config="true" duration-ms="577" started-at="2014-11-24T22:56:37Z" finished-at="2014-11-24T22:56:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PasswordReset_TC2186 status=SUCCESS method=PasswordReset.PasswordReset_TC2186()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1] output=SETUP - create new user]]]>
+                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-24T21:11:00Z" finished-at="2014-11-24T21:11:00Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="startSelenium" is-config="true" duration-ms="2615" started-at="2014-11-24T22:56:37Z" finished-at="2014-11-24T22:56:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="Cleanup" duration-ms="1" started-at="2014-11-24T22:56:40Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261" finished-at="2014-11-24T22:56:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-11-24T22:56:40Z" finished-at="2014-11-24T22:56:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-24T22:56:40Z" finished-at="2014-11-24T22:56:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

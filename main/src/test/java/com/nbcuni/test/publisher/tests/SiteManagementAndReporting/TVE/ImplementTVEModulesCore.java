@@ -57,6 +57,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         TVEAuthExample tveAuthExample = new TVEAuthExample(webDriver);
         ErrorChecking errorChecking = new ErrorChecking(webDriver);
         
+        navigation.Home();
         if (!tveAuthExample.isMVPDConfigured()) {
         	tveAuthExample.ClickMVPDSetupLnk();
             MVPDConnection mvpdConnection = new MVPDConnection(webDriver);
@@ -71,9 +72,11 @@ public class ImplementTVEModulesCore extends ParentTest {
             contentParent.VerifyPageContentNotPresent(Arrays.asList("The MVPD Connection must be setup."));
         }
         else {
+        	System.out.println("MVPD IS ALREADY CONFIGURED.");
         	Reporter.log("MVPD IS ALREADY CONFIGURED.");
         }
         
+        navigation.Home();
         if (!tveAuthExample.isAdobePassConfigured()) {
         	tveAuthExample.ClickAdobePassSetupLnk();
             AdobePass adobePass = new AdobePass(webDriver);
@@ -98,6 +101,7 @@ public class ImplementTVEModulesCore extends ParentTest {
             contentParent.VerifyPageContentNotPresent(Arrays.asList("The Adobe Pass configuration must be setup."));
         }
         else {
+        	System.out.println("ADOBE PASS IS ALREADY CONFIGURED.");
         	Reporter.log("ADOBE PASS IS ALREADY CONFIGURED.");
         }
         

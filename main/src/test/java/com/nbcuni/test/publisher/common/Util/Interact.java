@@ -40,7 +40,7 @@ public class Interact {
     	String elementObject[] = ele.toString().split("->");
     	System.out.println("Element object zero = " + elementObject[0]);
     	System.out.println("Element object one = " + elementObject[1]);
-    	String element[] = elementObject[1].split(": ");
+    	String element[] = elementObject[1].split(": ", 2);
     	
     	System.out.println("Element zero = " + element[0]);
     	System.out.println("Element one = " + element[1]);

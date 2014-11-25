@@ -53,8 +53,9 @@ public class MPXLogin {
     public void Login(String userName, String passWord) throws Exception {
     	wait.until(ExpectedConditions.visibilityOf(Username_Txb)).sendKeys(userName);
     	Password_Txb.sendKeys(passWord);
+    	Thread.sleep(1000);
     	SignIn_Btn.click();
-        mpxAssets.WaitForAllAssetsToLoad();
+    	mpxAssets.WaitForAllAssetsToLoad();
         
     }
     

@@ -25,7 +25,7 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class TVEAuthExample {
 
-	private WebDriver webDriver;
+	private Driver webDriver;
 	private Config config;
 	private Integer timeout;
 	private WaitFor waitFor;
@@ -133,7 +133,7 @@ public class TVEAuthExample {
     public void VerifyAuthenticationStatusChecked(final String txt) throws Exception {
     	
     	Reporter.log("Verify the 'Authentication status checked:' value is '" + txt + "'.");
-    	waitFor.ElementContainsText(AuthenticatedStatusChecked_Ctr, txt);
+    	new WaitFor(webDriver, 120).ElementContainsText(AuthenticatedStatusChecked_Ctr, txt);
     	
     }
     

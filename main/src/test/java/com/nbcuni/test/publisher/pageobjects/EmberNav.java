@@ -61,7 +61,7 @@ public class EmberNav {
     	return By.xpath("//a[contains(@class,'navbar-menu-item')][text()='" + lnkTxt + "']");
     }
     
-    private By Home_Lnk = By.xpath("//a[@class='navbar-icon navbar-icon-home']");
+    private By Home_Lnk = By.xpath("//a[contains(@class, 'navbar-icon navbar-icon-home')]");
     
     private By Menu_Lnk = By.xpath("//a[@id='navbar-item--2'][text()='Menu']");
     
@@ -132,7 +132,7 @@ public class EmberNav {
     	
     	Reporter.log("Click the 'Home' link.");
     	Thread.sleep(500);
-    	waitFor.ElementVisible(Home_Lnk).click();
+    	interact.Click(waitFor.ElementVisible(Home_Lnk));
     	
     }
     
