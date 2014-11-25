@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
@@ -14,211 +14,90 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
+      <![CDATA[Click the 'Menu' link to hide the navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+      <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+      <![CDATA[Click the 'Character Profile' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Enter '2b8aef6d67fb442' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Performance' link.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Check the 'TVE Auth Example' check box.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Blocks' link.]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save Blocks' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' link.]]>
-    </line>
-    <line>
-      <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' link.]]>
-    </line>
-    <line>
-      <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configure jQuery' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'SIGN IN' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
-    </line>
-    <line>
-      <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
-    </line>
-    <line>
-      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Performance' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the primary nav 'Uninstall' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Uninstall' button to confirm.]]>
+      <![CDATA[Verify success message of 'Character Profile 2b8aef6d67fb442 has been created.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="240331" started-at="2014-11-25T03:52:40Z" finished-at="2014-11-25T03:56:40Z">
+  <suite name="Default suite" duration-ms="46679" started-at="2014-11-25T13:23:24Z" finished-at="2014-11-25T13:24:11Z">
     <groups>
       <group name="full">
-        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
-        <method signature="ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1d89c040]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="240331" started-at="2014-11-25T03:52:40Z" finished-at="2014-11-25T03:56:40Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="suiteSetup" is-config="true" duration-ms="26" started-at="2014-11-24T22:52:40Z" finished-at="2014-11-24T22:52:40Z">
+    <test name="Default test" duration-ms="46679" started-at="2014-11-25T13:23:24Z" finished-at="2014-11-25T13:24:11Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1d89c040]" name="suiteSetup" is-config="true" duration-ms="28" started-at="2014-11-25T08:23:24Z" finished-at="2014-11-25T08:23:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="startSelenium" is-config="true" duration-ms="3292" started-at="2014-11-24T22:52:40Z" finished-at="2014-11-24T22:52:43Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1d89c040]" name="startSelenium" is-config="true" duration-ms="3389" started-at="2014-11-25T08:23:24Z" finished-at="2014-11-25T08:23:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="ImplementTVEModulesCore_TC3261" duration-ms="233264" started-at="2014-11-24T22:52:43Z" finished-at="2014-11-24T22:56:37Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1d89c040]" name="CreateCharacterProfile_TC1041" duration-ms="42712" started-at="2014-11-25T08:23:28Z" finished-at="2014-11-25T08:24:10Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
@@ -233,229 +112,83 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
+              <![CDATA[Click the 'Menu' link to hide the navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+              <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+              <![CDATA[Click the 'Character Profile' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Enter '2b8aef6d67fb442' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Performance' link.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Check the 'TVE Auth Example' check box.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Blocks' link.]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save Blocks' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' link.]]>
-            </line>
-            <line>
-              <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' link.]]>
-            </line>
-            <line>
-              <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Configure jQuery' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'SIGN IN' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
-            </line>
-            <line>
-              <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
-            </line>
-            <line>
-              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Performance' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the primary nav 'Uninstall' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Uninstall' button to confirm.]]>
+              <![CDATA[Verify success message of 'Character Profile 2b8aef6d67fb442 has been created.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="stopSelenium" is-config="true" duration-ms="577" started-at="2014-11-24T22:56:37Z" finished-at="2014-11-24T22:56:37Z">
+        </test-method> <!-- CreateCharacterProfile_TC1041 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1d89c040]" name="stopSelenium" is-config="true" duration-ms="569" started-at="2014-11-25T08:24:10Z" finished-at="2014-11-25T08:24:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1d89c040] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="startSelenium" is-config="true" duration-ms="2615" started-at="2014-11-24T22:56:37Z" finished-at="2014-11-24T22:56:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.Cleanup() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="Cleanup" duration-ms="1" started-at="2014-11-24T22:56:40Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261" finished-at="2014-11-24T22:56:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Cleanup -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-11-24T22:56:40Z" finished-at="2014-11-24T22:56:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@55c3b22c]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-24T22:56:40Z" finished-at="2014-11-24T22:56:40Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1d89c040]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-11-25T08:24:11Z" finished-at="2014-11-25T08:24:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -41,7 +41,7 @@ public class EmberNav {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private By AllMenuVertical_Lnks = By.xpath("//button[@class='navbar-icon navbar-toggle navbar-icon-toggle-vertical']");
+    private By MenuVertical_Lnk = By.xpath("(//button[@class='navbar-icon navbar-toggle navbar-icon-toggle-vertical'])[1]");
     
     private By PrimaryVerticalExpand_Lnk(String lnkTxt) {
     	return By.xpath("//a[contains(@id,'navbar-link-admin-')][text()='" + lnkTxt + "']/../button");
@@ -90,13 +90,7 @@ public class EmberNav {
     public void ClickMenuVerticalBtn() throws Exception {
     	
     	Reporter.log("Click the 'vertical' menu button to set the menu nav to vertical orientation.");
-    	for (WebElement ele : waitFor.ElementsPresent(AllMenuVertical_Lnks)) {
-    		if (ele.isDisplayed()) {
-    			interact.Click(ele);
-    			Thread.sleep(1000);
-    			break;
-    		}
-    	}
+    	interact.Click(waitFor.ElementVisible(MenuVertical_Lnk));
     	
     }
     
@@ -147,7 +141,7 @@ public class EmberNav {
     		}
     		
     		if (!waitFor.ElementPresent(Content_Lnk).isDisplayed()) {
-    			Reporter.log("Click the 'Menu' link to show navigation menu items.");
+    			Reporter.log("Click the 'Menu' link to show the navigation menu items.");
     			interact.Click(waitFor.ElementVisible(Menu_Lnk));
     		}
     		else {
@@ -162,14 +156,28 @@ public class EmberNav {
     }
     
     public void HideMenu() throws Exception {
-    	/*
-    	if (waitFor.ElementPresent(Content_Lnk).isDisplayed()) {
-    		Reporter.log("Click the 'Menu' link to hide navigation menu items.");
-    		webDriver.findElement(Menu_Lnk).click();
+    	
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	
+    	for (int I = 0; I <= timeout; I++) {
+    		
+    		if (I == timeout) {
+    			Assert.fail("Main menu still visible after " + timeout + " seconds.");
+    		}
+    		
+    		if (waitFor.ElementPresent(Content_Lnk).isDisplayed()) {
+    			Reporter.log("Click the 'Menu' link to hide the navigation menu items.");
+    			interact.Click(waitFor.ElementVisible(Menu_Lnk));
+    		}
+    		else {
+    			break;
+    		}
+    		
+    		Thread.sleep(1000);
     	}
     	
-    	waitFor.ElementNotVisible(Content_Lnk);
-    	*/
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	
     }
     
     public void ClickMainMenuLnk(String menuLnkTxt) throws Exception {
