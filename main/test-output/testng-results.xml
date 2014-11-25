@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[SETUP - create new user]]>
+    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -17,244 +20,121 @@
       <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Click the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add content' link.]]>
+      <![CDATA[Click the 'Add user' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Gallery' link.]]>
+      <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'Username' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter '283c13869ca54d5' in the 'Title' text box.]]>
+      <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'E-mail address' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'View Library' button.]]>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
+      <![CDATA[Check the 'editor' check box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Enter '7ecc5156d71d4dd' in the 'First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+      <![CDATA[Enter 'b6a2027a6bd14bd' in the 'Last Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Create new account' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+      <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 7fa11d06397642e@780bd6c99b96462.com.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Logout' button.]]>
     </line>
     <line>
-      <![CDATA[Click media thumbnail image number 1]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[Click media thumbnail image number 2]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Click on the 'Submit' button.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+      <![CDATA[Click the 'Request new password' link.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+      <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'E-mail' text box.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Reset password' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save' button.]]>
+      <![CDATA[Verify success message of 'Further instructions have been sent to your e-mail address.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Media Gallery 283c13869ca54d5 has been created.' is present.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+      <![CDATA[Verify that the auto email titled 'Replacement login information for 7fa11d06397642e@780bd6c99b96462.com at ' arrives in the gmail inbox.]]>
     </line>
     <line>
-      <![CDATA[Get the file id of image number 1.]]>
+      <![CDATA[STEP 5 and 6 - not available for automation as of yet]]>
     </line>
     <line>
-      <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+      <![CDATA[STEP 7]]>
     </line>
     <line>
-      <![CDATA[Get the file id of image number 2.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+      <![CDATA[Click the 'Request new password' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+      <![CDATA[Enter 'notvalid@nbcuni.com' in the 'E-mail' text box.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Reset password' button.]]>
     </line>
     <line>
-      <![CDATA[Get the unique url for image number 1.]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/UniqueURL_TC1056_112414044100PM.png ]]>
-    </line>
-    <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/UniqueURL_TC1056_112414044100PM.png'> <img src='./UniqueURL_TC1056_112414044100PM.png' height='700' width='700'/> </a>]]>
+      <![CDATA[Verify error message of 'Sorry, notvalid@nbcuni.com is not recognized as an e-mail address.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59507" started-at="2014-11-24T21:40:01Z" finished-at="2014-11-24T21:41:01Z">
+  <suite name="Default suite" duration-ms="58624" started-at="2014-11-25T02:10:02Z" finished-at="2014-11-25T02:11:00Z">
     <groups>
       <group name="full">
-        <method signature="UniqueURL.UniqueURL_TC1056()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@408f3be4]" name="UniqueURL_TC1056" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL"/>
+        <method signature="PasswordReset.PasswordReset_TC2186()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="PasswordReset_TC2186" class="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="59507" started-at="2014-11-24T21:40:01Z" finished-at="2014-11-24T21:41:01Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@408f3be4]" name="suiteSetup" is-config="true" duration-ms="22" started-at="2014-11-24T16:40:01Z" finished-at="2014-11-24T16:40:01Z">
+    <test name="Default test" duration-ms="58624" started-at="2014-11-25T02:10:02Z" finished-at="2014-11-25T02:11:00Z">
+      <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="suiteSetup" is-config="true" duration-ms="30" started-at="2014-11-24T21:10:02Z" finished-at="2014-11-24T21:10:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@408f3be4]" name="startSelenium" is-config="true" duration-ms="3479" started-at="2014-11-24T16:40:01Z" finished-at="2014-11-24T16:40:05Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="startSelenium" is-config="true" duration-ms="3350" started-at="2014-11-24T21:10:02Z" finished-at="2014-11-24T21:10:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL.UniqueURL_TC1056() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset.PasswordReset_TC2186() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="UniqueURL_TC1056()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@408f3be4]" name="UniqueURL_TC1056" duration-ms="55218" started-at="2014-11-24T16:40:05Z" finished-at="2014-11-24T16:41:00Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Timed out after 20 seconds: Element not visible.
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 20 seconds: Element not visible.
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.nbcuni.test.publisher.common.Util.WaitFor.ElementVisible(WaitFor.java:181)
-	at com.nbcuni.test.publisher.pageobjects.Content.MediaItems.GetImageUniqueUrl(MediaItems.java:122)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL.UniqueURL_TC1056(UniqueURL.java:66)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.122)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: f94a7774ba4a07decc9fb62a5b8a706b
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.3CoJLy}, rotatable=false, locationContextEnabled=true, version=38.0.2125.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 10.60 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: 4ba65843-f0ca-4f8f-b4be-2439fe5c6d93
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.3CoJLy}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=4ba65843-f0ca-4f8f-b4be-2439fe5c6d93, version=38.0.2125.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.nbcuni.test.publisher.common.Util.WaitFor$8.apply(WaitFor.java:184)
-	at com.nbcuni.test.publisher.common.Util.WaitFor$8.apply(WaitFor.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 27 more
-Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:136)
-	... 35 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=38.0.2125.122)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.4 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Session ID: f94a7774ba4a07decc9fb62a5b8a706b
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.3CoJLy}, rotatable=false, locationContextEnabled=true, version=38.0.2125.122, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '192.168.0.4', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.7.0_25'
-Driver info: driver.version: EventFiringWebDriver
-	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
-	at sun.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
-	at com.sun.proxy.$Proxy2.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:184)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:47)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="PasswordReset_TC2186()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="PasswordReset_TC2186" duration-ms="54691" started-at="2014-11-24T21:10:05Z" finished-at="2014-11-24T21:11:00Z">
           <reporter-output>
+            <line>
+              <![CDATA[SETUP - create new user]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -271,116 +151,110 @@ Driver info: driver.version: EventFiringWebDriver
               <![CDATA[Click the 'Menu' link to show navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Click the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add content' link.]]>
+              <![CDATA[Click the 'Add user' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Gallery' link.]]>
+              <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'Username' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter '283c13869ca54d5' in the 'Title' text box.]]>
+              <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'E-mail address' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'View Library' button.]]>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
+              <![CDATA[Check the 'editor' check box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Enter '7ecc5156d71d4dd' in the 'First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+              <![CDATA[Enter 'b6a2027a6bd14bd' in the 'Last Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Create new account' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+              <![CDATA[Verify success message of 'A welcome message with further instructions has been e-mailed to the new user 7fa11d06397642e@780bd6c99b96462.com.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Logout' button.]]>
             </line>
             <line>
-              <![CDATA[Click media thumbnail image number 1]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[Click media thumbnail image number 2]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
-              <![CDATA[Click on the 'Submit' button.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+              <![CDATA[Click the 'Request new password' link.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+              <![CDATA[Enter '7fa11d06397642e@780bd6c99b96462.com' in the 'E-mail' text box.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Reset password' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save' button.]]>
+              <![CDATA[Verify success message of 'Further instructions have been sent to your e-mail address.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Media Gallery 283c13869ca54d5 has been created.' is present.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+              <![CDATA[Verify that the auto email titled 'Replacement login information for 7fa11d06397642e@780bd6c99b96462.com at ' arrives in the gmail inbox.]]>
             </line>
             <line>
-              <![CDATA[Get the file id of image number 1.]]>
+              <![CDATA[STEP 5 and 6 - not available for automation as of yet]]>
             </line>
             <line>
-              <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+              <![CDATA[STEP 7]]>
             </line>
             <line>
-              <![CDATA[Get the file id of image number 2.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+              <![CDATA[Click the 'Request new password' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+              <![CDATA[Enter 'notvalid@nbcuni.com' in the 'E-mail' text box.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Reset password' button.]]>
             </line>
             <line>
-              <![CDATA[Get the unique url for image number 1.]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/UniqueURL_TC1056_112414044100PM.png ]]>
-            </line>
-            <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/UniqueURL_TC1056_112414044100PM.png'> <img src='./UniqueURL_TC1056_112414044100PM.png' height='700' width='700'/> </a>]]>
+              <![CDATA[Verify error message of 'Sorry, notvalid@nbcuni.com is not recognized as an e-mail address.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- UniqueURL_TC1056 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@408f3be4]" name="stopSelenium" is-config="true" duration-ms="787" started-at="2014-11-24T16:41:00Z" finished-at="2014-11-24T16:41:01Z">
+        </test-method> <!-- PasswordReset_TC2186 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2014-11-24T21:11:00Z" finished-at="2014-11-24T21:11:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=UniqueURL_TC1056 status=FAILURE method=UniqueURL.UniqueURL_TC1056()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@408f3be4] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=PasswordReset_TC2186 status=SUCCESS method=PasswordReset.PasswordReset_TC2186()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1] output=SETUP - create new user]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@408f3be4]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-24T16:41:01Z" finished-at="2014-11-24T16:41:01Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset@c6787c1]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-24T21:11:00Z" finished-at="2014-11-24T21:11:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL -->
+      </class> <!-- com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordReset -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

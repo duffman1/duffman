@@ -40,17 +40,17 @@ public class Interact {
     	String elementObject[] = ele.toString().split("->");
     	System.out.println("Element object zero = " + elementObject[0]);
     	System.out.println("Element object one = " + elementObject[1]);
-    	String element[] = elementObject[1].replace("]]", "]").split(": ");
+    	String element[] = elementObject[1].split(": ");
     	
     	System.out.println("Element zero = " + element[0]);
-    	System.out.println("Elmenet one = " + element[1]);
+    	System.out.println("Element one = " + element[1]);
     	String locatorType = element[0].trim();
     	String elementID = element[1];
     	
     	switch (locatorType) {
-    		case "xpath": locator = By.xpath(elementID); break;
-    		case "cssSelector": locator = By.cssSelector(elementID); break;
-    		case "linkText": locator = By.linkText(elementID); break;
+    		case "xpath": locator = By.xpath(elementID.replace("]]", "]")); break;
+    		case "css selector": locator = By.cssSelector(elementID.replace("]]", "]")); break;
+    		case "link text": locator = By.linkText(elementID.replace("]", "")); break;
     		case "id": locator = By.id(elementID.replace("]", "")); break;
     	}
     	
