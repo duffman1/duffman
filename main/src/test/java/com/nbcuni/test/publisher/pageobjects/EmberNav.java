@@ -157,6 +157,7 @@ public class EmberNav {
     
     public void HideMenu() throws Exception {
     	
+    	/* TODO - this needs to be reliable - causes flaky problems
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
     	for (int I = 0; I <= timeout; I++) {
@@ -177,7 +178,7 @@ public class EmberNav {
     	}
     	
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-    	
+    	*/
     }
     
     public void ClickMainMenuLnk(String menuLnkTxt) throws Exception {
