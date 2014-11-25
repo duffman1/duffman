@@ -47,11 +47,14 @@ public class Interact {
     	String locatorType = element[0].trim();
     	String elementID = element[1];
     	
+    	elementID = elementID.substring(0, elementID.length() - 1);
+    	System.out.println("Element final = " + elementID);
+    	
     	switch (locatorType) {
-    		case "xpath": locator = By.xpath(elementID.replace("]]", "]")); break;
-    		case "css selector": locator = By.cssSelector(elementID.replace("]]", "]")); break;
-    		case "link text": locator = By.linkText(elementID.replace("]", "")); break;
-    		case "id": locator = By.id(elementID.replace("]", "")); break;
+    		case "xpath": locator = By.xpath(elementID); break;
+    		case "css selector": locator = By.cssSelector(elementID); break;
+    		case "link text": locator = By.linkText(elementID); break;
+    		case "id": locator = By.id(elementID); break;
     	}
     	
     	System.out.println(locator.toString());
