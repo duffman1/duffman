@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
@@ -77,7 +76,7 @@ public class EditImage {
     public void VerifyTitleTextValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Title Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(TitleText_Txb(index)).getAttribute("value"), value);
+    	waitFor.ElementContainsAttribute(TitleText_Txb(index), "value", value);
     	
     }
     
@@ -91,7 +90,8 @@ public class EditImage {
     public void VerifyAltTextValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Alt Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(AltText_Txb(index)).getAttribute("value"), value);
+    	waitFor.ElementContainsAttribute(AltText_Txb(index), "value", value);
+    	
     }
     
     public void EnterAltText(String index, String altTxt) throws Exception {
@@ -104,7 +104,8 @@ public class EditImage {
     public void VerifySourceValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Source box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(Source_Txb(index)).getAttribute("value"), value);
+    	waitFor.ElementContainsAttribute(Source_Txb(index), "value", value);
+    	
     }
     
     public void EnterSource(String index, String source) throws Exception {
@@ -117,7 +118,8 @@ public class EditImage {
     public void VerifyCreditValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Credit Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(Credit_Txb(index)).getAttribute("value"), value);
+    	waitFor.ElementContainsAttribute(Credit_Txb(index), "value", value);
+    	
     }
     
     public void EnterCreditValue(String index, String value) throws Exception {
@@ -130,7 +132,8 @@ public class EditImage {
     public void VerifyCopyrightValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Copyright Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(Copyright_Txb(index)).getAttribute("value"), value);
+    	waitFor.ElementContainsAttribute(Copyright_Txb(index), "value", value);
+    	
     }
     
     public void EnterCopyright(String index, String value) throws Exception {
@@ -143,7 +146,8 @@ public class EditImage {
     public void VerifyKeywordsValue(String index, String value) throws Exception {
     	
     	Reporter.log("Assert that the Keywords Text box with index '" + index + "' value matches '" + value + "'.");
-    	Assert.assertEquals(waitFor.ElementVisible(Keywords_Txb(index)).getAttribute("value"), value);
+    	waitFor.ElementContainsAttribute(Keywords_Txb(index), "value", value);
+    	
     }
     
     public void EnterKeywordsValue(String index, String value) throws Exception {

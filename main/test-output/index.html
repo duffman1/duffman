@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>2 groups</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery" hash-for-method="CreateMediaGallery_TC1042">CreateMediaGallery_TC1042</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished" hash-for-method="SchedulingContentPublishUnpublished_TC2159">SchedulingContentPublishUnpublished_TC2159</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,106 +116,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreateMediaGallery_TC1042">
-                  </a> <!-- CreateMediaGallery_TC1042 -->
-                  <span class="method-name">CreateMediaGallery_TC1042</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=39.0.2171.71)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1 milliseconds
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a&apos;, time: &apos;2014-03-27 17:17:32&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 8fe31e4244913cff177454f04022a72e
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.u1aq4x}, rotatable=false, locationContextEnabled=true, version=39.0.2171.71, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Command duration or timeout: 15 milliseconds
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: b00a1ad2-90ac-40d5-a3d6-fe0df4f337a1
-Driver info: com.nbcuni.test.publisher.common.Driver.Driver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.u1aq4x}, rotatable=false, locationContextEnabled=true, webdriver.remote.sessionid=b00a1ad2-90ac-40d5-a3d6-fe0df4f337a1, version=39.0.2171.71, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.defaultContent(RemoteWebDriver.java:889)
-	at com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_TC1042(CreateMediaGallery.java:91)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=39.0.2171.71)
-  (Driver info: chromedriver=2.8.241036,platform=Mac OS X 10.9.5 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1 milliseconds
-Build info: version: &apos;2.41.0&apos;, revision: &apos;3192d8a&apos;, time: &apos;2014-03-27 17:17:32&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.7.0_25&apos;
-Session ID: 8fe31e4244913cff177454f04022a72e
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/.org.chromium.Chromium.u1aq4x}, rotatable=false, locationContextEnabled=true, version=39.0.2171.71, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d31c7c56c340d6f45a76976d43506cd6cc&apos;, time: &apos;2014-06-03 10:52:47&apos;
-System info: host: &apos;BACLARK77-MAC1.local&apos;, ip: &apos;192.168.0.4&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.7.0_25&apos;
-Driver info: driver.version: RemoteWebDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.defaultContent(RemoteWebDriver.java:885)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringTargetLocator.defaultContent(EventFiringWebDriver.java:593)
-	at org.openqa.selenium.remote.server.handler.SwitchToFrame.call(SwitchToFrame.java:45)
-	at org.openqa.selenium.remote.server.handler.SwitchToFrame.call(SwitchToFrame.java:1)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:170)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-
-</div> <!-- stack-trace -->
+                  <a name="SchedulingContentPublishUnpublished_TC2159">
+                  </a> <!-- SchedulingContentPublishUnpublished_TC2159 -->
+                  <span class="method-name">SchedulingContentPublishUnpublished_TC2159</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1654643960/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--861131695/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -224,7 +143,7 @@ Driver info: driver.version: RemoteWebDriver
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -249,10 +168,18 @@ Driver info: driver.version: RemoteWebDriver
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
+              <span class="test-group-name">certify</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">SchedulingContentPublishUnpublished_TC2159</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">CreateMediaGallery_TC1042</span>
+                <span class="method-in-group-name">SchedulingContentPublishUnpublished_TC2159</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -260,7 +187,7 @@ Driver info: driver.version: RemoteWebDriver
               <span class="test-group-name">mpx</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">CreateMediaGallery_TC1042</span>
+                <span class="method-in-group-name">SchedulingContentPublishUnpublished_TC2159</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -282,14 +209,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CreateMediaGallery_TC1042')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery')
-data.setCell(0, 3, 65139);
+data.setCell(0, 1, 'SchedulingContentPublishUnpublished_TC2159')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished')
+data.setCell(0, 3, 176493);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -301,53 +228,237 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">CreateMediaGallery_TC1042</span>
+              <span class="reporter-method-name">SchedulingContentPublishUnpublished_TC2159</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">STEP 1</span>
                 <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">SETUP</span>
+                <span class="reporter-method-output">STEP 2 and 3</span>
                 <span class="reporter-method-output">Click the 'Menu' link to show the navigation menu items.</span>
-                <span class="reporter-method-output">Click the 'Configuration' menu link.</span>
-                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' link.</span>
-                <span class="reporter-method-output">Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</span>
-                <span class="reporter-method-output">MPX is already configured.</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Content types' link.</span>
-                <span class="reporter-method-output">Click the 'manage field' link for content type 'Media Gallery'.</span>
-                <span class="reporter-method-output">Click the 'edit' link for field 'Media Items'.</span>
-                <span class="reporter-method-output">Click the 'Save settings' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Saved Media Items configuration.' is present.</span>
-                <span class="reporter-method-output">STEP 2</span>
                 <span class="reporter-method-output">Click the 'Content' menu link.</span>
                 <span class="reporter-method-output">Click the 'Add content' link.</span>
-                <span class="reporter-method-output">Click the 'Media Gallery' link.</span>
-                <span class="reporter-method-output">STEP 3</span>
-                <span class="reporter-method-output">Enter '9c8b1ad09b5d4d1' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Click the 'Post' link.</span>
+                <span class="reporter-method-output">Enter '99f0a3be1a9840c' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Switch to the Synopsis frame.</span>
                 <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
-                <span class="reporter-method-output">Enter 'short description' in the 'Short Description' text area.</span>
-                <span class="reporter-method-output">Click the 'Media Items Select' button.</span>
-                <span class="reporter-method-output">Click the 'Add files' link.</span>
-                <span class="reporter-method-output">Click the 'All Files' icon.</span>
-                <span class="reporter-method-output">Click the local 'Pictures' icon.</span>
-                <span class="reporter-method-output">Click the test picture link.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Start upload' link.</span>
-                <span class="reporter-method-output">Wait for file upload to reach 100%</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
                 <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Click the 'Add' button.</span>
-                <span class="reporter-method-output">Click the 'Add files' link.</span>
-                <span class="reporter-method-output">Click the 'All Files' icon.</span>
-                <span class="reporter-method-output">Click the local 'Pictures' icon.</span>
-                <span class="reporter-method-output">Click the test picture link.</span>
-                <span class="reporter-method-output">Click the 'Open' button.</span>
-                <span class="reporter-method-output">Click the 'Start upload' link.</span>
-                <span class="reporter-method-output">Wait for file upload to reach 100%</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
                 <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/CreateMediaGallery_TC1042_112614084130AM.png </span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 99f0a3be1a9840c has been created.' is present.</span>
+                <span class="reporter-method-output">STEP 4</span>
+                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
+                <span class="reporter-method-output">STEP 5</span>
+                <span class="reporter-method-output">Select revision titled '99f0a3be1a9840c'.</span>
+                <span class="reporter-method-output">Verify that the 'Operation' option count equals '5'.</span>
+                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
+                <span class="reporter-method-output">STEP 6</span>
+                <span class="reporter-method-output">Enter '11/26/2014' in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '02:13 PM' in the 'Time' text box.</span>
+                <span class="reporter-method-output">STEP 7</span>
+                <span class="reporter-method-output">Click the 'Schedule' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
+                <span class="reporter-method-output">STEP 8</span>
+                <span class="reporter-method-output">Verify the scheduled text '99f0a3be1a9840c' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text '11/26/2014 - ' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the 'Run now' link is present for content item '99f0a3be1a9840c' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">Verify the 'Cancel' link is present for content item '99f0a3be1a9840c' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">STEP 9</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Enter title futurePost11/26/2014.</span>
+                <span class="reporter-method-output">Click the 'Apply' button.</span>
+                <span class="reporter-method-output">Get the text of the first search result set item.</span>
+                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
+                <span class="reporter-method-output">Verify the text 'Revision state: Published' is present in the work bench info block.</span>
+                <span class="reporter-method-output">Verify the text 'Public: Yes' is present in the work bench info block.</span>
+                <span class="reporter-method-output">STEP 10</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Post' link.</span>
+                <span class="reporter-method-output">Enter '86967a6b0f324c5' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 86967a6b0f324c5 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
+                <span class="reporter-method-output">Select revision titled '86967a6b0f324c5'.</span>
+                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
+                <span class="reporter-method-output">Enter '11/26/2014' in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '02:18 PM' in the 'Time' text box.</span>
+                <span class="reporter-method-output">Click the 'Schedule' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
+                <span class="reporter-method-output">Verify the scheduled text '86967a6b0f324c5' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text '11/26/2014 - ' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Click the 'Run now' link for content item '86967a6b0f324c5' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">STEP 11</span>
+                <span class="reporter-method-output">Verify the scheduled text '86967a6b0f324c5' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text '11/26/2014 - ' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Completed' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">STEP 12</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Post' link.</span>
+                <span class="reporter-method-output">Enter '0b333afefeeb405' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 0b333afefeeb405 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
+                <span class="reporter-method-output">Select revision titled '0b333afefeeb405'.</span>
+                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
+                <span class="reporter-method-output">Enter '11/26/2014' in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '02:18 PM' in the 'Time' text box.</span>
+                <span class="reporter-method-output">Click the 'Schedule' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
+                <span class="reporter-method-output">Verify the scheduled text '0b333afefeeb405' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text '11/26/2014 - ' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Click the 'Run now' expand menu link for content item '0b333afefeeb405' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">Click the 'Cancel' link for content item '0b333afefeeb405' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">Click the 'Confirm' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been cancelled.' is present.</span>
+                <span class="reporter-method-output">Verify the text 'Moderate to Published' is NOT present on the page.</span>
+                <span class="reporter-method-output">STEP 13</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Post' link.</span>
+                <span class="reporter-method-output">Enter 'a8e82b591d9341c' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post a8e82b591d9341c has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Add Scheduled Revision' link.</span>
+                <span class="reporter-method-output">Select revision titled 'a8e82b591d9341c'.</span>
+                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
+                <span class="reporter-method-output">Enter '11/26/2014' in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '02:18 PM' in the 'Time' text box.</span>
+                <span class="reporter-method-output">Click the 'Schedule' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'a8e82b591d9341c' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text '11/26/2014 - ' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Click the 'Run now' link for content item 'a8e82b591d9341c' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'a8e82b591d9341c' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text '11/26/2014 - ' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Completed' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">STEP 14</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Post' link.</span>
+                <span class="reporter-method-output">Enter 'e2b6141f717d443' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post e2b6141f717d443 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Edit Draft' link in the work bench.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post e2b6141f717d443 has been updated.' is present.</span>
+                <span class="reporter-method-output">STEP 15 and 16</span>
+                <span class="reporter-method-output">Click the 'Revisions' link in the work bench.</span>
+                <span class="reporter-method-output">Verify the number of present revisions entries equals '2'.</span>
+                <span class="reporter-method-output">Click the 'Edit' extend menu button.</span>
+                <span class="reporter-method-output">Click the 'Schedule' menu button.</span>
+                <span class="reporter-method-output">Select revision titled 'e2b6141f717d443'.</span>
+                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
+                <span class="reporter-method-output">Enter '11/26/2014' in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '02:18 PM' in the 'Time' text box.</span>
+                <span class="reporter-method-output">Click the 'Schedule' button.</span>
+                <span class="reporter-method-output">Verify success message of 'The scheduled revision operation has been saved' is present.</span>
+                <span class="reporter-method-output">STEP 17</span>
+                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'e2b6141f717d443' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text '11/26/2014 - ' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the 'Run now' link is present for content item 'e2b6141f717d443' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">STEP 18 and 19 - TODO</span>
+                <span class="reporter-method-output">STEP 20</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Post' link.</span>
+                <span class="reporter-method-output">Enter '4e38ea3666a749b' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Select 'Moderate to Published' from the 'Select operation' drop down list.</span>
+                <span class="reporter-method-output">Enter '11/27/2014' in the 'Date' text box.</span>
+                <span class="reporter-method-output">Enter '02:14 PM' in the 'Time' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Post 4e38ea3666a749b has been created.' is present.</span>
+                <span class="reporter-method-output">Verify success message of '4e38ea3666a749b has been scheduled to Moderate to Published on 11/27/2014 - ' is present.</span>
+                <span class="reporter-method-output">Click the 'Schedule' link in the work bench.</span>
+                <span class="reporter-method-output">Verify the scheduled text '4e38ea3666a749b' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text '11/27/2014 - ' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Click the 'Run now' link for content item '4e38ea3666a749b' with action 'Moderate to Published'.</span>
+                <span class="reporter-method-output">Verify the scheduled text '4e38ea3666a749b' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Moderate to Published' is present in the scheduled queue.</span>
+                <span class="reporter-method-output">Verify the scheduled text 'Completed' is present in the scheduled queue.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -365,28 +476,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.SchedulingContentPublishUnpublished</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Med...)</span>
-                <span class="method-start">36 ms</span>
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManageme...)</span>
+                <span class="method-start">33 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">CreateMediaGallery_TC1042</span>
-                <span class="method-start">3954 ms</span>
+                <span class="method-name">SchedulingContentPublishUnpublished_TC2159</span>
+                <span class="method-start">3315 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=CreateMediaGallery_TC1042 status=FAILURE method=CreateMediaGallery.CreateMediaGalle...)</span>
-                <span class="method-start">69099 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=SchedulingContentPublishUnpublished_TC2159 status=SUCCESS method=SchedulingContentP...)</span>
+                <span class="method-start">179809 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTeardown</span>
-                <span class="method-start">69731 ms</span>
+                <span class="method-start">180400 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
