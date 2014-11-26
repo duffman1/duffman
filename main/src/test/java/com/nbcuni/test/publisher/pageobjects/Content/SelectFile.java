@@ -294,8 +294,7 @@ public class SelectFile {
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
     	Reporter.log("Verify the file image '" + imageSrc + "' is present.");
-    	WebElement ele = waitFor.ElementVisible(File_Img);
-    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(File_Img, "src", imageSrc);
     	
     	Reporter.log("Verify the img is loaded and visible.");
     	waitFor.ImageVisible(ele);
@@ -305,8 +304,7 @@ public class SelectFile {
     public void VerifyMediaThumbnailImagePresent(String imageSrc, String imageIndex) throws Exception {
     	
     	Reporter.log("Verify the media thumbnail image '" + imageSrc + "' is present.");
-    	WebElement ele = waitFor.ElementVisible(MediaThumbnail_Img(imageIndex));
-    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(MediaThumbnail_Img(imageIndex), "src", imageSrc);
     	
     	Reporter.log("Verify the the img is loaded and visible.");
     	waitFor.ImageVisible(ele);

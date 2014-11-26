@@ -3,7 +3,6 @@ package com.nbcuni.test.publisher.pageobjects.Logo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.LocalFileDetector;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
@@ -128,8 +127,7 @@ public class AddLogo {
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
     	Reporter.log("Verify the file image '" + imageSrc + "' is present.");
-    	WebElement ele = waitFor.ElementVisible(File_Img);
-    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(File_Img, "src", imageSrc);
     	
     	Reporter.log("Verify the the img is loaded and visible.");
     	waitFor.ImageVisible(ele);

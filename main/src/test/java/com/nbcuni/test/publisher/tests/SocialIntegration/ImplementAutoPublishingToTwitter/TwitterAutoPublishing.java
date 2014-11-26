@@ -52,7 +52,7 @@ public class TwitterAutoPublishing extends ParentTest{
         //Step 3
         navigation.Configuration("Twitter");
         navigation.ClickPrimaryTabNavLnk("Settings");
-        Twitter twitter = new Twitter(webDriver, applib);
+        Twitter twitter = new Twitter(webDriver);
         twitter.EnterOAuthConsumerKey("5Ur95TtwzHY2A9hMKg");
         twitter.EnterOAuthConsumerSecret("GEHafCRDdJpRoaJ4Zk4tPYDObR3IkeEtnr5otrpIs");
         twitter.ClickSaveConfigurationBtn();
@@ -61,7 +61,7 @@ public class TwitterAutoPublishing extends ParentTest{
         //Step 3a
         navigation.Configuration("Twitter");
         navigation.ClickPrimaryTabNavLnk("Post");
-        NodeTypes nodeTypes = new NodeTypes(webDriver, applib);
+        NodeTypes nodeTypes = new NodeTypes(webDriver);
         nodeTypes.EnablePostNode();
         
         //Step 4 - NA as we log in to twitter at a later step

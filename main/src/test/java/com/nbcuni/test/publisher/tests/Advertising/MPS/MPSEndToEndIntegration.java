@@ -2,12 +2,14 @@ package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
+import com.nbcuni.test.publisher.pageobjects.Structure.MPSBlocks;
 
 public class MPSEndToEndIntegration extends ParentTest {
 	
@@ -26,6 +28,15 @@ public class MPSEndToEndIntegration extends ParentTest {
         	modules.DisableModule("Pixelman");
         	modules.EnableModule("MPS");
         	
+        	Reporter.log("SETUP");
+        	navigation.Structure("MPS Blocks");
+            MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
+            mpsBlocks.ClickAddLnk();
+            String blockName = random.GetCharacterString(15);
+            mpsBlocks.EnterBlockName(blockName);
+            mpsBlocks.ClickSaveBtn();
+            contentParent.VerifyMessageStatus(blockName.toLowerCase() + " has been created.");
+            
         	Reporter.log("STEP 2");
         	navigation.Configuration("MPS Configuration");
         	
@@ -49,7 +60,7 @@ public class MPSEndToEndIntegration extends ParentTest {
             
             Reporter.log("STEP 6 and 7");
             Blocks blocks = new Blocks(webDriver);
-            blocks.SelectRegion("topmulti (MPS)", "Footer");
+            blocks.SelectRegion(blockName + " (MPS)", "Footer");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");
             
@@ -60,7 +71,7 @@ public class MPSEndToEndIntegration extends ParentTest {
         	
         	Reporter.log("CLEANUP");
         	navigation.Structure("Blocks");
-        	blocks.SelectRegion("topmulti (MPS)", "- None -");
+        	blocks.SelectRegion(blockName + " (MPS)", "- None -");
         	blocks.ClickSaveBlocksBtn();
         	
         	

@@ -32,7 +32,7 @@ public class Interact {
         config = new Config();
     }
     
-    private By GetByLocator(WebElement ele) {
+    public By GetByLocator(WebElement ele) {
     	
     	By locator = null;
     	

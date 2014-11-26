@@ -1,13 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Twitter;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.AppLib;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Node Types Library. Copyright
@@ -18,31 +19,38 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class NodeTypes {
 
-    ContentParent contentParent;
+    private ContentParent contentParent;
+    private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
-    public NodeTypes(Driver webDriver, AppLib applib) {
-        PageFactory.initElements(webDriver, this);
+    public NodeTypes(Driver webDriver) {
         contentParent = new ContentParent(webDriver);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-twitter-post-types-post")
-    private WebElement Post_Cbx;
+    private By Post_Cbx = By.id("edit-twitter-post-types-post");
     
-    @FindBy(how = How.XPATH, using = "//input[@value='Save configuration']")
-    private WebElement SaveConfiguration_Btn;
+    private By SaveConfiguration_Btn = By.xpath("//input[@value='Save configuration']");
     
     
     //PAGE OBJECT METHODS
     public void EnablePostNode() throws Exception {
     	
-    	if (Post_Cbx.isSelected() == false) {
+    	WebElement ele = waitFor.ElementVisible(Post_Cbx);
+    	if (ele.isSelected() == false) {
+    		
     		Reporter.log("Check the 'Post' checkbox.");
-    		Post_Cbx.click();
+    		interact.Click(ele);
     		
     		Reporter.log("Click the 'Save configuration' button.");
-    		SaveConfiguration_Btn.click();
+    		interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
     		
     		contentParent.VerifyMessageStatus("The configuration options have been saved.");
     	}

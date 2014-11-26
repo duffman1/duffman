@@ -3,7 +3,6 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
@@ -46,7 +45,7 @@ public class MediaItems {
     }
     
     private By Unique_Url(String imageIndex) {
-    	return By.xpath("(//div[@class='media-thumbnail']/../../..//div[3]/a)[" + imageIndex + "]");
+    	return By.xpath("(//div[contains(@id, 'edit-field-media-items')][contains(@class, 'media-widget')]//a)[" + imageIndex + "]");
     }
     
     private By MediaVideo_Frm(String itemTtl, String videoIndex) {
@@ -66,11 +65,10 @@ public class MediaItems {
     public void VerifyFileImagePresent(String imageSrc, String imageIndex) throws Exception {
     	
     	Reporter.log("Verify the img source of the Media Item contains '" + imageSrc + "'.");
-    	WebElement img = waitFor.ElementVisible(MediaItem_Img(imageIndex));
-    	Assert.assertTrue(img.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(MediaItem_Img(imageIndex), "src", imageSrc);
     	
     	Reporter.log("Assert the the img is loaded and visible.");
-    	waitFor.ImageVisible(img);
+    	waitFor.ImageVisible(ele);
     	
     }
     

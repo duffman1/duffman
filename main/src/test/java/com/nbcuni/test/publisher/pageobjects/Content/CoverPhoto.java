@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
@@ -19,14 +18,14 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class CoverPhoto {
 
-    private Config config;
+	private Config config;
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public CoverPhoto(final Driver webDriver) {
-        config = new Config();
+    	config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
         interact = new Interact(webDriver, timeout);
@@ -44,8 +43,7 @@ public class CoverPhoto {
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
     	Reporter.log("Assert that img source of the Cover Photo contains '" + imageSrc + "'.");
-    	WebElement ele = waitFor.ElementVisible(CoverPhoto_Img);
-    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(CoverPhoto_Img, "src", imageSrc);
     	
     	Reporter.log("Assert the the img is loaded and visible.");
     	waitFor.ImageVisible(ele);

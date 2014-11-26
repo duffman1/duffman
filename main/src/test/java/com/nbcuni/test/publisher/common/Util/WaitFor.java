@@ -22,7 +22,7 @@ public class WaitFor {
 	private Driver webDriver;
 	private Integer timeout = 0;
 	private Config config;
-    
+	
     public WaitFor(Driver webDriver, Integer waitTime) {
         this.webDriver = webDriver;
         timeout = waitTime;
@@ -365,6 +365,22 @@ public class WaitFor {
     			@Override
     			public Boolean apply(By loc) {
     				return !webDriver.findElement(loc).getText().contains(text);
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
+    }
+    
+    public WebElement ElementContainsAttribute(final By locator, final String attribute, final String attributeValue) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, 
+    				ElementNotVisibleException.class))
+    		.withMessage("Attribute '" + attribute + "' with value '" + attributeValue + "' not present in element.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return webDriver.findElement(loc).getAttribute(attribute).contains(attributeValue);
     			}
     		});
     	

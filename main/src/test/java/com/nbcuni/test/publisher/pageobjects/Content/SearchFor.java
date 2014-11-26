@@ -157,11 +157,10 @@ public class SearchFor {
     public void VerifySearchThumbnailImgPresent(String title, String imgName) throws Exception {
 
     	Reporter.log("Verify the search thumbnail named '" + imgName + "' is present for search result '" + title + "'.");
-    	WebElement img = waitFor.ElementVisible(SearchThumbnail_Img(title));
-    	Assert.assertTrue(waitFor.ElementVisible(img).getAttribute("src").contains(imgName));
+    	WebElement ele = waitFor.ElementContainsAttribute(SearchThumbnail_Img(title), "src", imgName);
     	
     	Reporter.log("Verify the the img is loaded and visible.");
-    	waitFor.ImageVisible(img);
+    	waitFor.ImageVisible(ele);
     	
     }
     

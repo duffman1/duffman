@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
@@ -85,8 +84,7 @@ public class Logos {
     public void VerifyHomePageLogoImgPresent(final String imageSrc) throws Exception {
     	
     	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
-    	WebElement ele = waitFor.ElementVisible(HomeLogo_Img);
-    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(HomeLogo_Img, "src", imageSrc);
     	
     	Reporter.log("Assert the the img is loaded and visible.");
     	waitFor.ImageVisible(ele);
@@ -96,8 +94,7 @@ public class Logos {
     public void VerifyLogoImgPresent(String logoTitle, String imageSrc) throws Exception {
     	
     	Reporter.log("Assert the file image '" + imageSrc + "' is present.");
-    	WebElement ele = waitFor.ElementVisible(Logo_Img(logoTitle));
-    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(Logo_Img(logoTitle), "src", imageSrc);
     	
     	Reporter.log("Assert the the img is loaded and visible.");
     	waitFor.ImageVisible(ele);

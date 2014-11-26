@@ -78,7 +78,7 @@ public class TwitterLogin {
     	Reporter.log("Enter '" + userName + "' in the 'Userame or email' text box.");
     	for (WebElement el : waitFor.ElementsPresent(AllUsernameOrEmail_Txbs)) {
     		if (el.isDisplayed()) {
-    			el.sendKeys(userName);
+    			interact.Type(el, userName);
     			break;
     		}
     	}
@@ -89,7 +89,7 @@ public class TwitterLogin {
     	Reporter.log("Enter '" + password + "' in the 'Password' text box.");
     	for (WebElement el : waitFor.ElementsPresent(AllPassword_Txbs)) {
     		if (el.isDisplayed()) {
-    			el.sendKeys(password);
+    			interact.Type(el, password);
     			break;
     		}
     	}
@@ -121,7 +121,7 @@ public class TwitterLogin {
     	Reporter.log("Click the 'Sign In' button.");
     	for (WebElement el : waitFor.ElementsPresent(AllSignIn_Btns)) {
     		if (el.isDisplayed()) {
-    			el.click();
+    			interact.Click(el);
     			break;
     		}
     	}
@@ -141,6 +141,7 @@ public class TwitterLogin {
         		Thread.sleep(1000);
         		webDriver.navigate().refresh();
         	}
+        	
         }
     }
     

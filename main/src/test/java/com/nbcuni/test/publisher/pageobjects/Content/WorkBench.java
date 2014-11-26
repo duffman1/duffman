@@ -108,8 +108,7 @@ public class WorkBench {
     public void VerifyFileImagePresent(String imageSrc, String imageIndex) throws Exception {
     	
     	Reporter.log("Assert that img source of the Media Item contains '" + imageSrc + "'.");
-    	WebElement ele = waitFor.ElementVisible(WorkBench_Img(imageIndex));
-    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(WorkBench_Img(imageIndex), "src", imageSrc);
     	
     	Reporter.log("Assert the the img is loaded and visible.");
     	waitFor.ImageVisible(ele);

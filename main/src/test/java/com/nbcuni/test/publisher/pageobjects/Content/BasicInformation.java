@@ -2,7 +2,6 @@ package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
@@ -160,8 +159,7 @@ public class BasicInformation {
     public void VerifyCoverImagePresent(String imageSrc) throws Exception {
     	
     	Reporter.log("Verify the Cover image src contains '" + imageSrc + "'.");
-    	WebElement ele = waitFor.ElementVisible(Cover_Img);
-    	Assert.assertTrue(ele.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(Cover_Img, "src", imageSrc);
     	
     	Reporter.log("Wait for the image to fully load.");
     	waitFor.ImageVisible(ele);
