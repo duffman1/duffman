@@ -22,11 +22,15 @@ public class WaitFor {
 	private Driver webDriver;
 	private Integer timeout = 0;
 	private Config config;
+	private Interact interact;
+	
+	private String staleElement = "stale element";
 	
     public WaitFor(Driver webDriver, Integer waitTime) {
         this.webDriver = webDriver;
         timeout = waitTime;
         config = new Config();
+        interact = new Interact(webDriver, waitTime);
     }
     
     private FluentWait<By> byWait(final By locator) throws Exception {
@@ -428,13 +432,27 @@ public class WaitFor {
     
     public void ImageVisible(final WebElement image) throws Exception {
     	
+    	final String imageVisibleJS = "return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0";
+    	
     	this.elementWait(image)
     		.ignoring(NoSuchElementException.class)
     		.withMessage("Image not visible.")
     		.until(new Function<WebElement, Boolean>() {
     			@Override
     			public Boolean apply(WebElement ele) {
-    				return (Boolean) webDriver.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", image);
+    				Boolean imgPresent = false;
+    				try {
+    					imgPresent = (Boolean) webDriver.executeScript(imageVisibleJS, image);
+    				}
+    				catch (WebDriverException e) {
+    					if (e.getMessage().toString().contains(staleElement))
+    					{
+    						System.out.println("image element is stale.");
+    						webDriver.findElement(interact.GetByLocator(ele));
+    						imgPresent = (Boolean) webDriver.executeScript(imageVisibleJS, ele);
+    					}
+    				}
+    				return imgPresent;
     			}
     		});
     	
