@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -90,11 +91,12 @@ public class ParentTest {
         	System.out.println("Failed to capture screenshot");
         }
         
-    	//Clear cache in the event of the very annoying state flow node error
+    	//Clear cache in the event of some errors that require it
+    	List<String> cacheErrors = Arrays.asList("StateFlowNode", "Draft", "workbench_moderation_to_published");
     	try {
     		if (!result.isSuccess()) {
     			String errorMessage = result.getThrowable().getMessage().toString();
-    			if (errorMessage.contains("StateFlowNode") || errorMessage.contains("Draft")) {
+    			if (cacheErrors.contains(errorMessage)) {
     				applib.openApplication();
         			webDriver.switchTo().defaultContent();
         			FlushCache flushCache = new FlushCache(webDriver);
