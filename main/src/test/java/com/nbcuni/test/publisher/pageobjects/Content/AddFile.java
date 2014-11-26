@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
+import org.sikuli.basics.Settings;
 import org.sikuli.script.Key;
 import org.sikuli.script.KeyModifier;
 import org.sikuli.script.Pattern;
@@ -37,6 +38,8 @@ public class AddFile {
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
         sikuli = new Screen();
+        Settings.ActionLogs = false;
+        Settings.InfoLogs = false;
         mpxAssets = new MPXAssets();
         waitFor = new WaitFor(webDriver, timeout);
         interact = new Interact(webDriver, timeout);
