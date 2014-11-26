@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
@@ -14,7 +17,16 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
@@ -23,157 +35,322 @@
       <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Gallery' link.]]>
+      <![CDATA[Click the 'TV Show' link.]]>
     </line>
     <line>
-      <![CDATA[Enter '035b521b8f7e45c' in the 'Title' text box.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
+      <![CDATA[Enter '492c8caa46804dd' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'View Library' button.]]>
+      <![CDATA[Switch to the Synopsis frame.]]>
     </line>
     <line>
-      <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Apply' button.]]>
+      <![CDATA[Click the Logo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Verify the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click media thumbnail image number 1]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click media thumbnail image number 2]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click on the 'Submit' button.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Media Gallery 035b521b8f7e45c has been created.' is present.]]>
+      <![CDATA[Click the Cover Media 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Get the file id of image number 1.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Get the file id of image number 2.]]>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Banner 'Select' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Show 492c8caa46804dd has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add content' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Season' link.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '0f3f6c72ba14448' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Season Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Relationships' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select '492c8caa46804dd' from the 'Show' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Season 0f3f6c72ba14448 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add content' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Episode' link.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '2c0e10ccaaf14d8' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Relationships' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select '492c8caa46804dd' from the 'Show' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select '0f3f6c72ba14448' from the 'Season' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'TV Episode 2c0e10ccaaf14d8 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+      <![CDATA[Click the 'Additional Information' link.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Enter 'tag1' in the 'Tags' text box.]]>
     </line>
     <line>
-      <![CDATA[Get the unique url for image number 1.]]>
+      <![CDATA[Enter 'tag2' in the 'Tags' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Get the unique url for image number 2.]]>
+      <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cancel' button.]]>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/node/1326/item/2176'.]]>
+      <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+      <![CDATA[Click the 'Document Write' radio button.]]>
     </line>
     <line>
-      <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Current Item' is present on the page.]]>
+      <![CDATA[Clear all 'Name' text box values.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'HanSolo' is present on the page.]]>
+      <![CDATA[Clear all 'Value' text box values.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Current Item Index' is present on the page.]]>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '0' is present on the page.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Current Item ID' is present on the page.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the text '2176' is present on the page.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Current Item URL' is present on the page.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/content/2c0e10ccaaf14d8'.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'http://qa5.publisher7.com/node/1326/item/2176' is present on the page.]]>
+      <![CDATA[Verify '"cag":{"tags":"tag1|tag2","show":"492c8caa46804dd","season":"0f3f6c72ba14448"}' is present in page source.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40310" started-at="2014-11-26T00:05:02Z" finished-at="2014-11-26T00:05:42Z">
+  <suite name="Default suite" duration-ms="107028" started-at="2014-11-26T01:51:58Z" finished-at="2014-11-26T01:53:45Z">
     <groups>
       <group name="full">
-        <method signature="UniqueURL.UniqueURL_TC1056()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@137efe53]" name="UniqueURL_TC1056" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL"/>
+        <method signature="TrackEntityReferences.TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="TrackEntityReferences_TC5445" class="com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="40310" started-at="2014-11-26T00:05:02Z" finished-at="2014-11-26T00:05:42Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@137efe53]" name="suiteSetup" is-config="true" duration-ms="28" started-at="2014-11-25T19:05:02Z" finished-at="2014-11-25T19:05:02Z">
+    <test name="Default test" duration-ms="107028" started-at="2014-11-26T01:51:58Z" finished-at="2014-11-26T01:53:45Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="suiteSetup" is-config="true" duration-ms="22" started-at="2014-11-25T20:51:58Z" finished-at="2014-11-25T20:51:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@137efe53]" name="startSelenium" is-config="true" duration-ms="3368" started-at="2014-11-25T19:05:02Z" finished-at="2014-11-25T19:05:05Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="startSelenium" is-config="true" duration-ms="3298" started-at="2014-11-25T20:51:58Z" finished-at="2014-11-25T20:52:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL.UniqueURL_TC1056() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences.TrackEntityReferences_TC5445() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="UniqueURL_TC1056()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@137efe53]" name="UniqueURL_TC1056" duration-ms="36367" started-at="2014-11-25T19:05:05Z" finished-at="2014-11-25T19:05:42Z">
+        <test-method status="PASS" signature="TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="TrackEntityReferences_TC5445" duration-ms="103149" started-at="2014-11-25T20:52:01Z" finished-at="2014-11-25T20:53:44Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -187,7 +364,16 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
@@ -196,149 +382,311 @@
               <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Gallery' link.]]>
+              <![CDATA[Click the 'TV Show' link.]]>
             </line>
             <line>
-              <![CDATA[Enter '035b521b8f7e45c' in the 'Title' text box.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
+              <![CDATA[Enter '492c8caa46804dd' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'View Library' button.]]>
+              <![CDATA[Switch to the Synopsis frame.]]>
             </line>
             <line>
-              <![CDATA[Enter 'HanSolo' in the 'File name' text box.]]>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Apply' button.]]>
+              <![CDATA[Click the Logo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the media thumbnail image 'HanSolo' is present.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Verify the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click media thumbnail image number 1]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click media thumbnail image number 2]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click on the 'Submit' button.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Media Gallery 035b521b8f7e45c has been created.' is present.]]>
+              <![CDATA[Click the Cover Media 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Get the file id of image number 1.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Get the file id of image number 2.]]>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Banner 'Select' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Show 492c8caa46804dd has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add content' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Season' link.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '0f3f6c72ba14448' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Season Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Relationships' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select '492c8caa46804dd' from the 'Show' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Season 0f3f6c72ba14448 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add content' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Episode' link.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '2c0e10ccaaf14d8' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Relationships' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select '492c8caa46804dd' from the 'Show' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select '0f3f6c72ba14448' from the 'Season' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'TV Episode 2c0e10ccaaf14d8 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+              <![CDATA[Click the 'Additional Information' link.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Enter 'tag1' in the 'Tags' text box.]]>
             </line>
             <line>
-              <![CDATA[Get the unique url for image number 1.]]>
+              <![CDATA[Enter 'tag2' in the 'Tags' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the img source of the Media Item contains 'HanSolo'.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Get the unique url for image number 2.]]>
+              <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cancel' button.]]>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/node/1326/item/2176'.]]>
+              <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+              <![CDATA[Click the 'Document Write' radio button.]]>
             </line>
             <line>
-              <![CDATA[Verify that the image link is present and contains file url 'HanSolo'.]]>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Current Item' is present on the page.]]>
+              <![CDATA[Clear all 'Name' text box values.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'HanSolo' is present on the page.]]>
+              <![CDATA[Clear all 'Value' text box values.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Current Item Index' is present on the page.]]>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '0' is present on the page.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Current Item ID' is present on the page.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the text '2176' is present on the page.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Current Item URL' is present on the page.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/content/2c0e10ccaaf14d8'.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'http://qa5.publisher7.com/node/1326/item/2176' is present on the page.]]>
+              <![CDATA[Verify '"cag":{"tags":"tag1|tag2","show":"492c8caa46804dd","season":"0f3f6c72ba14448"}' is present in page source.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- UniqueURL_TC1056 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@137efe53]" name="stopSelenium" is-config="true" duration-ms="566" started-at="2014-11-25T19:05:42Z" finished-at="2014-11-25T19:05:42Z">
+        </test-method> <!-- TrackEntityReferences_TC5445 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2014-11-25T20:53:44Z" finished-at="2014-11-25T20:53:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=UniqueURL_TC1056 status=SUCCESS method=UniqueURL.UniqueURL_TC1056()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@137efe53] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=TrackEntityReferences_TC5445 status=SUCCESS method=TrackEntityReferences.TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL@137efe53]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-25T19:05:42Z" finished-at="2014-11-25T19:05:42Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-25T20:53:45Z" finished-at="2014-11-25T20:53:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages.UniqueURL -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -74,7 +74,7 @@ public class DrupalForFacebook {
     //PAGE OBJECT METHODS
     public boolean FacebookAppExists() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     	
     	boolean existingAppPresent = false;
     	try {

@@ -43,10 +43,8 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         navigation.Structure("Facebook Apps");
         DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
         Delete delete = new Delete(webDriver);
-        boolean appAlreadyExists = drupalForFacebook.FacebookAppExists();
-        if (appAlreadyExists == true) {
+        if (drupalForFacebook.FacebookAppExists()) {
         	drupalForFacebook.ClickEditLnk();
-        	delete.ClickDeleteBtn();
         	delete.ClickDeleteBtn();
         	delete.ClickDeleteBtn();
         }
