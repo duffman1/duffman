@@ -5,7 +5,6 @@ import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.EntityTracker;
-import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.Reports.EntityTrackerReports;
@@ -15,6 +14,7 @@ import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +37,6 @@ public class CollectEditorialActivity extends ParentTest {
         	Reporter.log("STEP 2");
         	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("Entity Tracker");
-        	FlushCache flushCache = new FlushCache(webDriver);
-        	flushCache.FlushAllCache();
         	
         	Reporter.log("STEP 3");
         	navigation.Configuration("Entity tracker");
@@ -57,10 +55,15 @@ public class CollectEditorialActivity extends ParentTest {
         	navigation.Reports("Entity tracker report");
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        	Date currentDate = new Date();
+        	Calendar cal2DaysPast = Calendar.getInstance();
+        	Calendar cal1DaysPast = Calendar.getInstance();
+        	cal2DaysPast.add(Calendar.DATE, -2);
+        	cal1DaysPast.add(Calendar.DATE, -1);
+        	Date date2DaysPast = cal2DaysPast.getTime();
+        	Date date1DaysPast = cal1DaysPast.getTime();
         	EntityTrackerReports entityTrackerReports = new EntityTrackerReports(webDriver);
-        	entityTrackerReports.EnterFromDate(pub7DateFormat.format(currentDate));
-        	entityTrackerReports.EnterToDate(pub7DateFormat.format(currentDate));
+        	entityTrackerReports.EnterFromDate(pub7DateFormat.format(date2DaysPast));
+        	entityTrackerReports.EnterToDate(pub7DateFormat.format(date1DaysPast));
         	entityTrackerReports.ClickApplyBtn();
         	
         	Reporter.log("STEP 6 - N/A");
