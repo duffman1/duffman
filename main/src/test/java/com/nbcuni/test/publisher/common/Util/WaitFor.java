@@ -435,7 +435,8 @@ public class WaitFor {
     	final String imageVisibleJS = "return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0";
     	
     	this.elementWait(image)
-    		.ignoring(NoSuchElementException.class)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, 
+    				ElementNotVisibleException.class))
     		.withMessage("Image not visible.")
     		.until(new Function<WebElement, Boolean>() {
     			@Override
