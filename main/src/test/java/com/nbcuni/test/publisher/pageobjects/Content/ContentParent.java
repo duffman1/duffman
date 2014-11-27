@@ -66,6 +66,7 @@ public class ContentParent {
     public void ClickSaveBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
+    	Thread.sleep(500);
     	interact.Click(waitFor.ElementVisible(Save_Btn));
     	
     }

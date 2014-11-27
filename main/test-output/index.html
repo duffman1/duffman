@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains" hash-for-method="SSODefinedDomains_TC3474">SSODefinedDomains_TC3474</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -115,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains" hash-for-method="Cleanup">Cleanup</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie" hash-for-method="CastCrewFieldCollectionsVerificationMovie_Test">CastCrewFieldCollectionsVerificationMovie_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -130,67 +116,17 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="SSODefinedDomains_TC3474">
-                  </a> <!-- SSODefinedDomains_TC3474 -->
-                  <span class="method-name">SSODefinedDomains_TC3474</span>
-                  <div class="stack-trace">java.lang.AssertionError: Error text of &apos;Error message
-Warning: apc_store(): GC cache entry &apos;drupal.xautoload.a3edf034ad6148f1532ebf48762fdcbbb426a46c1c210c3a46d96b590393e7f1.apc_prefix&apos; was on gc-list for 6998 seconds in xautoload_ApcKeyManager_Enabled-&gt;renewApcPrefix() (line 30 of /mnt/www/html/nbcupublisher7qa5/docroot/profiles/publisher/modules/contrib/xautoload/lib/ApcKeyManager/Enabled.php).&apos; is present in application.
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking.VerifyNoMessageErrorsPresent(ErrorChecking.java:149)
-	at com.nbcuni.test.publisher.pageobjects.Content.ContentParent.VerifyMessageStatus(ContentParent.java:84)
-	at com.nbcuni.test.publisher.pageobjects.Modules.VerifyConfigurationSaved(Modules.java:110)
-	at com.nbcuni.test.publisher.pageobjects.Modules.EnableModule(Modules.java:157)
-	at com.nbcuni.test.publisher.pageobjects.Modules.VerifyModuleEnabled(Modules.java:226)
-	at com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains.SSODefinedDomains_TC3474(SSODefinedDomains.java:36)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Cleanup">
-                  </a> <!-- Cleanup -->
-                  <span class="method-name">Cleanup</span>
+                  <a name="CastCrewFieldCollectionsVerificationMovie_Test">
+                  </a> <!-- CastCrewFieldCollectionsVerificationMovie_Test -->
+                  <span class="method-name">CastCrewFieldCollectionsVerificationMovie_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,7 +134,7 @@ Warning: apc_store(): GC cache entry &apos;drupal.xautoload.a3edf034ad6148f1532e
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse-1227088959/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--1543439051/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -207,7 +143,7 @@ Warning: apc_store(): GC cache entry &apos;drupal.xautoload.a3edf034ad6148f1532e
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -232,14 +168,10 @@ Warning: apc_store(): GC cache entry &apos;drupal.xautoload.a3edf034ad6148f1532e
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">sensitive</span>
+              <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">Cleanup</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">SSODefinedDomains_TC3474</span>
+                <span class="method-in-group-name">CastCrewFieldCollectionsVerificationMovie_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -259,20 +191,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Cleanup')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains')
-data.setCell(0, 3, 62552);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'SSODefinedDomains_TC3474')
-data.setCell(1, 2, 'com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains')
-data.setCell(1, 3, 43955);
+data.setCell(0, 1, 'CastCrewFieldCollectionsVerificationMovie_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie')
+data.setCell(0, 3, 202385);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -284,43 +212,202 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">Cleanup</span>
+              <span class="reporter-method-name">CastCrewFieldCollectionsVerificationMovie_Test</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com/user'.</span>
+                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com/admin/config/people/simplesamlphp_auth'.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
-                <span class="reporter-method-output">Verify success message of 'SimpleSAMLphp authentication is NOT yet activated.' is present.</span>
                 <span class="reporter-method-output">Click the 'Menu' link to show the navigation menu items.</span>
-                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Uncheck the 'Pub SSO' module checkbox.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
-                <span class="reporter-method-output">Uncheck the 'simpleSAMLphp authentication' module checkbox.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">SSODefinedDomains_TC3474</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STEP 1</span>
-                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com/user'.</span>
-                <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
-                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
-                <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">STEP 2</span>
-                <span class="reporter-method-output">Click the 'Menu' link to show the navigation menu items.</span>
-                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Check the 'Pub SSO' check box.</span>
-                <span class="reporter-method-output">Click the 'Save configuration' button.</span>
-                <span class="reporter-method-output">Click the 'Continue' button to enable additional modules.</span>
-                <span class="reporter-method-output">Verify success message of 'The configuration options have been saved.' is present.</span>
-                <span class="reporter-method-output">Screenshot saved to /Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSODefinedDomains_TC3474_112614025423PM.png </span>
-                <span class="reporter-method-output"><br><br><a href='/Users/brandonclark/SQE-TEST-Pub7/main/test-output/screenshots/SSODefinedDomains_TC3474_112614025423PM.png'> <img src='./SSODefinedDomains_TC3474_112614025423PM.png' height='700' width='700'/> </a></span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Character Profile' link.</span>
+                <span class="reporter-method-output">Enter 'Character101110b09a' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile Character101110b09a has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Character Profile' link.</span>
+                <span class="reporter-method-output">Enter 'Charactera08bd81100' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile Charactera08bd81100 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Character Profile' link.</span>
+                <span class="reporter-method-output">Enter 'Character8eb562ada7' in the 'Character First Name' text box.</span>
+                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
+                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Character Profile Character8eb562ada7 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Person' link.</span>
+                <span class="reporter-method-output">Enter 'Personf650dad9c1' in the 'First name' text box.</span>
+                <span class="reporter-method-output">Enter a random block of text in the 'Biography' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover Photo' Select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Person Personf650dad9c1 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Person' link.</span>
+                <span class="reporter-method-output">Enter 'Personfda3cd1d82' in the 'First name' text box.</span>
+                <span class="reporter-method-output">Enter a random block of text in the 'Biography' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover Photo' Select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Person Personfda3cd1d82 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Person' link.</span>
+                <span class="reporter-method-output">Enter 'Person9df478b0bf' in the 'First name' text box.</span>
+                <span class="reporter-method-output">Enter a random block of text in the 'Biography' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover Photo' Select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Person Person9df478b0bf has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the 'Add content' link.</span>
+                <span class="reporter-method-output">Click the 'Movie' link.</span>
+                <span class="reporter-method-output">Enter 'Movieb2b5b5aded26468' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
+                <span class="reporter-method-output">Enter a randomized text string into the 'Body' text area.</span>
+                <span class="reporter-method-output">Click the 'Cover' select button.</span>
+                <span class="reporter-method-output">Enter the file path for file upload.</span>
+                <span class="reporter-method-output">Click the 'Upload' button.</span>
+                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
+                <span class="reporter-method-output">Click the 'Next' button.</span>
+                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
+                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the 'Cast/Crew' link.</span>
+                <span class="reporter-method-output">Enter 'Personf650dad9c1' in the Person text box.</span>
+                <span class="reporter-method-output">Click the 'Personf650dad9c1' from the auto complete option list.</span>
+                <span class="reporter-method-output">Select the 'Character' from the 'Role' drop down list.</span>
+                <span class="reporter-method-output">Verify that the 'Character' text box is displayed.</span>
+                <span class="reporter-method-output">Enter 'Character101110b09a' in the 'Character' text box.</span>
+                <span class="reporter-method-output">Click the 'Character101110b09a' from the auto complete option list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Movie Movieb2b5b5aded26468 has been created.' is present.</span>
+                <span class="reporter-method-output">Click the 'Revisions' link in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Edit' menu button.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Create New Revision' checkbox is checked.</span>
+                <span class="reporter-method-output">Click the 'Cast/Crew' link.</span>
+                <span class="reporter-method-output">Verify the value of the 'Person' text box equals 'Personf650dad9c1'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Character' text box equals 'Character101110b09a'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Click the 'Add Another Item' button.</span>
+                <span class="reporter-method-output">Enter 'Personfda3cd1d82' in the Person text box.</span>
+                <span class="reporter-method-output">Click the 'Personfda3cd1d82' from the auto complete option list.</span>
+                <span class="reporter-method-output">Select the 'Character' from the 'Role' drop down list.</span>
+                <span class="reporter-method-output">Verify that the 'Character' text box is displayed.</span>
+                <span class="reporter-method-output">Enter 'Charactera08bd81100' in the 'Character' text box.</span>
+                <span class="reporter-method-output">Click the 'Charactera08bd81100' from the auto complete option list.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter 'Movie71ac8a0d937f4cd' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Movie Movie71ac8a0d937f4cd has been updated.' is present.</span>
+                <span class="reporter-method-output">Click the 'Revisions' link in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Edit' menu button.</span>
+                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
+                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
+                <span class="reporter-method-output">Verify the 'Create New Revision' checkbox is checked.</span>
+                <span class="reporter-method-output">Click the 'Cast/Crew' link.</span>
+                <span class="reporter-method-output">Verify the value of the 'Person' text box equals 'Personf650dad9c1'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Character' text box equals 'Character101110b09a'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Person' text box equals 'Personfda3cd1d82'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Character' text box equals 'Charactera08bd81100'.</span>
+                <span class="reporter-method-output">Click the 'Add Another Item' button.</span>
+                <span class="reporter-method-output">Enter 'Person9df478b0bf' in the Person text box.</span>
+                <span class="reporter-method-output">Click the 'Person9df478b0bf' from the auto complete option list.</span>
+                <span class="reporter-method-output">Select the 'Character' from the 'Role' drop down list.</span>
+                <span class="reporter-method-output">Verify that the 'Character' text box is displayed.</span>
+                <span class="reporter-method-output">Enter 'Character8eb562ada7' in the 'Character' text box.</span>
+                <span class="reporter-method-output">Click the 'Character8eb562ada7' from the auto complete option list.</span>
+                <span class="reporter-method-output">Scroll to and click the 'Basic Information' tab.</span>
+                <span class="reporter-method-output">Enter 'b803aef25e3f40b' in the 'Title' text box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Verify success message of 'Movie b803aef25e3f40b has been updated.' is present.</span>
+                <span class="reporter-method-output">Click the 'Revisions' link in the work bench.</span>
+                <span class="reporter-method-output">Click the 'Edit' extend menu button.</span>
+                <span class="reporter-method-output">Click the 'Delete' button.</span>
+                <span class="reporter-method-output">Click the 'Confirm Delete' button.</span>
+                <span class="reporter-method-output">Click the 'Edit' menu button.</span>
+                <span class="reporter-method-output">Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa4dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.</span>
+                <span class="reporter-method-output">Click the 'Cast/Crew' link.</span>
+                <span class="reporter-method-output">Verify the value of the 'Person' text box equals 'Personf650dad9c1'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Character' text box equals 'Character101110b09a'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Person' text box equals 'Personfda3cd1d82'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Character' text box equals 'Charactera08bd81100'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Person' text box equals 'Person9df478b0bf'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Role' drop down list equals 'Character'.</span>
+                <span class="reporter-method-output">Verify the value of the 'Character' text box equals 'Character8eb562ada7'.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -338,40 +425,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains.SSODefi...)</span>
-                <span class="method-start">35 ms</span>
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelation...)</span>
+                <span class="method-start">28 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">SSODefinedDomains_TC3474</span>
-                <span class="method-start">3344 ms</span>
+                <span class="method-name">CastCrewFieldCollectionsVerificationMovie_Test</span>
+                <span class="method-start">3371 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=SSODefinedDomains_TC3474 status=FAILURE method=SSODefinedDomains.SSODefinedDomains_...)</span>
-                <span class="method-start">47302 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains.Cleanup...)</span>
-                <span class="method-start">48100 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Cleanup</span>
-                <span class="method-start">50743 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=Cleanup status=SUCCESS method=SSODefinedDomains.Cleanup()[pri:0, instance:com.nbcun...)</span>
-                <span class="method-start">113296 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=CastCrewFieldCollectionsVerificationMovie_Test status=SUCCESS method=CastCrewFieldC...)</span>
+                <span class="method-start">205757 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTeardown</span>
-                <span class="method-start">113891 ms</span>
+                <span class="method-start">206353 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
