@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.tests.SocialIntegration.Facebook;
 import java.net.URL;
 import java.util.Arrays;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -113,21 +114,18 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         //Step 14
         webDriver.navigate().to(new URL("https://www.facebook.com/"));
         for (int I = 0 ; ; I++) {
-        	if (I >= 10) {
+        	if (I >= 20) {
         		Assert.fail("Facebook app post has not posted to facebook.");
         	}
-        	boolean postUpdatePresent = false;
-            
+        	
         	try {
-        		contentParent.VerifyPageContentPresent(Arrays.asList("Publisher Seven Test User", 
-                		postTitle, "Publisher 7 Test App"));
-        		postUpdatePresent = true;
+        		for (String text : Arrays.asList("Publisher Seven Test User", 
+                		postTitle, "Publisher 7 Test App")) {
+        			Assert.assertTrue(webDriver.findElement(By.xpath("//body")).getText().contains(text));
+        		}
+        		break;
         	}
-        	catch (AssertionError e) {
-        		postUpdatePresent = false;
-        	}
-        	if (postUpdatePresent == true) { break; }
-        	else {
+        	catch (AssertionError e) { 
         		Thread.sleep(1000);
         		applib.refreshPage();
         	}

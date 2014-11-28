@@ -2,6 +2,9 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
+      <![CDATA[STEP 1]]>
+    </line>
+    <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
@@ -14,22 +17,40 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
+      <![CDATA[SETUP]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
     </line>
     <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
+    </line>
+    <line>
       <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
       <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' link.]]>
+      <![CDATA[Click the 'TV Show' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Character101110b09a' in the 'Character First Name' text box.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Enter '6c4421734ab44a0' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the Logo 'Select' button.]]>
     </line>
     <line>
       <![CDATA[Enter the file path for file upload.]]>
@@ -59,31 +80,31 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+      <![CDATA[Click the Cover Media 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile Character101110b09a has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character Profile' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Charactera08bd81100' in the 'Character First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Click the Banner 'Select' button.]]>
     </line>
     <line>
       <![CDATA[Enter the file path for file upload.]]>
@@ -113,16 +134,19 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Character Profile Charactera08bd81100 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'TV Show 6c4421734ab44a0 has been created.' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
@@ -131,217 +155,16 @@
       <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Character Profile' link.]]>
+      <![CDATA[Click the 'TV Season' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Character8eb562ada7' in the 'Character First Name' text box.]]>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
     </line>
     <line>
-      <![CDATA[Click the Cover Photo 'Select' button.]]>
+      <![CDATA[Enter '4591a2c1c1ea4ef' in the 'Title' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Character Profile Character8eb562ada7 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Personf650dad9c1' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person Personf650dad9c1 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Personfda3cd1d82' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person Personfda3cd1d82 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Person9df478b0bf' in the 'First name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover Photo' Select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Person Person9df478b0bf has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Movie' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Movieb2b5b5aded26468' in the 'Title' text box.]]>
+      <![CDATA[Enter '1' in the 'Season Number' text box.]]>
     </line>
     <line>
       <![CDATA[Switch to the Synopsis frame.]]>
@@ -365,12 +188,6 @@
       <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
       <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
@@ -380,37 +197,49 @@
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
+      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
     </line>
     <line>
-      <![CDATA[Enter 'Personf650dad9c1' in the Person text box.]]>
+      <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Personf650dad9c1' from the auto complete option list.]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+      <![CDATA[Click the 'Relationships' link.]]>
     </line>
     <line>
-      <![CDATA[Verify that the 'Character' text box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Character101110b09a' in the 'Character' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character101110b09a' from the auto complete option list.]]>
+      <![CDATA[Select '6c4421734ab44a0' from the 'Show' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie Movieb2b5b5aded26468 has been created.' is present.]]>
+      <![CDATA[Verify success message of 'TV Season 4591a2c1c1ea4ef has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
+      <![CDATA[Click the 'Add content' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TV Episode' link.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'ab8539050e5345c' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
     </line>
     <line>
       <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -419,196 +248,103 @@
       <![CDATA[Click the 'Publishing Options' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
+      <![CDATA[Click the 'Relationships' link.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'Personf650dad9c1'.]]>
+      <![CDATA[Select '6c4421734ab44a0' from the 'Show' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'Character101110b09a'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Another Item' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Personfda3cd1d82' in the Person text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Personfda3cd1d82' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Character' text box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Charactera08bd81100' in the 'Character' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Charactera08bd81100' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Movie71ac8a0d937f4cd' in the 'Title' text box.]]>
+      <![CDATA[Select '4591a2c1c1ea4ef' from the 'Season' drop down list.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie Movie71ac8a0d937f4cd has been updated.' is present.]]>
+      <![CDATA[Verify success message of 'TV Episode ab8539050e5345c has been created.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'Personf650dad9c1'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'Character101110b09a'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'Personfda3cd1d82'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'Charactera08bd81100'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add Another Item' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Person9df478b0bf' in the Person text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Person9df478b0bf' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Character' text box is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Character8eb562ada7' in the 'Character' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Character8eb562ada7' from the auto complete option list.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'b803aef25e3f40b' in the 'Title' text box.]]>
+      <![CDATA[Click the 'Additional Information' link.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Movie b803aef25e3f40b has been updated.' is present.]]>
+      <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Revisions' link in the work bench.]]>
+      <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' extend menu button.]]>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Delete' button.]]>
+      <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Confirm Delete' button.]]>
+      <![CDATA[Click the 'Document Write' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' menu button.]]>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa4dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.]]>
+      <![CDATA[Clear all 'Name' text box values.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Cast/Crew' link.]]>
+      <![CDATA[Clear all 'Value' text box values.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'Personf650dad9c1'.]]>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'Character101110b09a'.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'Personfda3cd1d82'.]]>
+      <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/content/ab8539050e5345c'.]]>
     </line>
     <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'Charactera08bd81100'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Person' text box equals 'Person9df478b0bf'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the value of the 'Character' text box equals 'Character8eb562ada7'.]]>
+      <![CDATA[Verify '"cag":{"tags":"tag1|tag2","show":"6c4421734ab44a0","season":"4591a2c1c1ea4ef"}' is present in page source.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="206313" started-at="2014-11-27T00:07:46Z" finished-at="2014-11-27T00:11:12Z">
+  <suite name="Default suite" duration-ms="111815" started-at="2014-11-28T14:42:06Z" finished-at="2014-11-28T14:43:58Z">
     <groups>
       <group name="full">
-        <method signature="CastCrewFieldCollectionsVerificationMovie.CastCrewFieldCollectionsVerificationMovie_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie@63dad2ac]" name="CastCrewFieldCollectionsVerificationMovie_Test" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie"/>
+        <method signature="TrackEntityReferences.TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="TrackEntityReferences_TC5445" class="com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="206313" started-at="2014-11-27T00:07:46Z" finished-at="2014-11-27T00:11:12Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie@63dad2ac]" name="suiteSetup" is-config="true" duration-ms="21" started-at="2014-11-26T19:07:46Z" finished-at="2014-11-26T19:07:46Z">
+    <test name="Default test" duration-ms="111815" started-at="2014-11-28T14:42:06Z" finished-at="2014-11-28T14:43:58Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="suiteSetup" is-config="true" duration-ms="25" started-at="2014-11-28T09:42:06Z" finished-at="2014-11-28T09:42:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie@63dad2ac]" name="startSelenium" is-config="true" duration-ms="3343" started-at="2014-11-26T19:07:46Z" finished-at="2014-11-26T19:07:49Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="startSelenium" is-config="true" duration-ms="3440" started-at="2014-11-28T09:42:06Z" finished-at="2014-11-28T09:42:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie.CastCrewFieldCollectionsVerificationMovie_Test() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences.TrackEntityReferences_TC5445() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CastCrewFieldCollectionsVerificationMovie_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie@63dad2ac]" name="CastCrewFieldCollectionsVerificationMovie_Test" duration-ms="202385" started-at="2014-11-26T19:07:49Z" finished-at="2014-11-26T19:11:12Z">
+        <test-method status="PASS" signature="TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="TrackEntityReferences_TC5445" duration-ms="107788" started-at="2014-11-28T09:42:09Z" finished-at="2014-11-28T09:43:57Z">
           <reporter-output>
+            <line>
+              <![CDATA[STEP 1]]>
+            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -622,22 +358,40 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
+              <![CDATA[SETUP]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
             </line>
             <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
+            </line>
+            <line>
               <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
               <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' link.]]>
+              <![CDATA[Click the 'TV Show' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Character101110b09a' in the 'Character First Name' text box.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Enter '6c4421734ab44a0' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the Logo 'Select' button.]]>
             </line>
             <line>
               <![CDATA[Enter the file path for file upload.]]>
@@ -667,31 +421,31 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+              <![CDATA[Click the Cover Media 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile Character101110b09a has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character Profile' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Charactera08bd81100' in the 'Character First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Click the Banner 'Select' button.]]>
             </line>
             <line>
               <![CDATA[Enter the file path for file upload.]]>
@@ -721,16 +475,19 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Character Profile Charactera08bd81100 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'TV Show 6c4421734ab44a0 has been created.' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
@@ -739,217 +496,16 @@
               <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Character Profile' link.]]>
+              <![CDATA[Click the 'TV Season' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Character8eb562ada7' in the 'Character First Name' text box.]]>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
             </line>
             <line>
-              <![CDATA[Click the Cover Photo 'Select' button.]]>
+              <![CDATA[Enter '4591a2c1c1ea4ef' in the 'Title' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Character Profile Character8eb562ada7 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Personf650dad9c1' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person Personf650dad9c1 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Personfda3cd1d82' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person Personfda3cd1d82 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Person9df478b0bf' in the 'First name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a random block of text in the 'Biography' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover Photo' Select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Person Person9df478b0bf has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Movie' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Movieb2b5b5aded26468' in the 'Title' text box.]]>
+              <![CDATA[Enter '1' in the 'Season Number' text box.]]>
             </line>
             <line>
               <![CDATA[Switch to the Synopsis frame.]]>
@@ -973,12 +529,6 @@
               <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
               <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
@@ -988,37 +538,49 @@
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
+              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
             </line>
             <line>
-              <![CDATA[Enter 'Personf650dad9c1' in the Person text box.]]>
+              <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Personf650dad9c1' from the auto complete option list.]]>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
+              <![CDATA[Click the 'Relationships' link.]]>
             </line>
             <line>
-              <![CDATA[Verify that the 'Character' text box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Character101110b09a' in the 'Character' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character101110b09a' from the auto complete option list.]]>
+              <![CDATA[Select '6c4421734ab44a0' from the 'Show' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie Movieb2b5b5aded26468 has been created.' is present.]]>
+              <![CDATA[Verify success message of 'TV Season 4591a2c1c1ea4ef has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
+              <![CDATA[Click the 'Add content' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TV Episode' link.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'ab8539050e5345c' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
             </line>
             <line>
               <![CDATA[Scroll the 'Publishing Options' link into view.]]>
@@ -1027,188 +589,92 @@
               <![CDATA[Click the 'Publishing Options' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
+              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
+              <![CDATA[Click the 'Relationships' link.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'Personf650dad9c1'.]]>
+              <![CDATA[Select '6c4421734ab44a0' from the 'Show' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'Character101110b09a'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Another Item' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Personfda3cd1d82' in the Person text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Personfda3cd1d82' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Character' text box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Charactera08bd81100' in the 'Character' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Charactera08bd81100' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Movie71ac8a0d937f4cd' in the 'Title' text box.]]>
+              <![CDATA[Select '4591a2c1c1ea4ef' from the 'Season' drop down list.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie Movie71ac8a0d937f4cd has been updated.' is present.]]>
+              <![CDATA[Verify success message of 'TV Episode ab8539050e5345c has been created.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Create New Revision' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'Personf650dad9c1'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'Character101110b09a'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'Personfda3cd1d82'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'Charactera08bd81100'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add Another Item' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Person9df478b0bf' in the Person text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Person9df478b0bf' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'Character' from the 'Role' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Character' text box is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Character8eb562ada7' in the 'Character' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Character8eb562ada7' from the auto complete option list.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'b803aef25e3f40b' in the 'Title' text box.]]>
+              <![CDATA[Click the 'Additional Information' link.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Movie b803aef25e3f40b has been updated.' is present.]]>
+              <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Revisions' link in the work bench.]]>
+              <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' extend menu button.]]>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Delete' button.]]>
+              <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Confirm Delete' button.]]>
+              <![CDATA[Click the 'Document Write' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' menu button.]]>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'Notice: Trying to get property of non-object in field_collection_field_get_entity() (line 1608 of /mnt/www/html/nbcuqa4dev/docroot/profiles/all/modules/contrib/field_collection/field_collection.module)' is NOT present on the page.]]>
+              <![CDATA[Clear all 'Name' text box values.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Cast/Crew' link.]]>
+              <![CDATA[Clear all 'Value' text box values.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'Personf650dad9c1'.]]>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'Character101110b09a'.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'Personfda3cd1d82'.]]>
+              <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/content/ab8539050e5345c'.]]>
             </line>
             <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'Charactera08bd81100'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Person' text box equals 'Person9df478b0bf'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Role' drop down list equals 'Character'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the value of the 'Character' text box equals 'Character8eb562ada7'.]]>
+              <![CDATA[Verify '"cag":{"tags":"tag1|tag2","show":"6c4421734ab44a0","season":"4591a2c1c1ea4ef"}' is present in page source.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CastCrewFieldCollectionsVerificationMovie_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie@63dad2ac]" name="stopSelenium" is-config="true" duration-ms="576" started-at="2014-11-26T19:11:12Z" finished-at="2014-11-26T19:11:12Z">
+        </test-method> <!-- TrackEntityReferences_TC5445 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-11-28T09:43:57Z" finished-at="2014-11-28T09:43:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CastCrewFieldCollectionsVerificationMovie_Test status=SUCCESS method=CastCrewFieldCollectionsVerificationMovie.CastCrewFieldCollectionsVerificationMovie_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie@63dad2ac] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=TrackEntityReferences_TC5445 status=SUCCESS method=TrackEntityReferences.TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie@63dad2ac]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-11-26T19:11:12Z" finished-at="2014-11-26T19:11:12Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-11-28T09:43:58Z" finished-at="2014-11-28T09:43:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

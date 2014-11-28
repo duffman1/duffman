@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences">
         <methods>
           <include name="startSelenium"/>
           <include name="suiteTeardown"/>
-          <include name="CastCrewFieldCollectionsVerificationMovie_Test"/>
           <include name="suiteSetup"/>
           <include name="stopSelenium"/>
+          <include name="TrackEntityReferences_TC5445"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

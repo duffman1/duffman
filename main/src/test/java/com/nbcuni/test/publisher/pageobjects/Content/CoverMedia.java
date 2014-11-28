@@ -60,7 +60,9 @@ public class CoverMedia {
     public void ClickSelectBtn() throws Exception {
     	
     	Reporter.log("Click the Cover Media 'Select' button.");
-    	interact.Click(waitFor.ElementVisible(Select_Btn));
+    	WebElement ele = waitFor.ElementVisible(Select_Btn);
+    	Thread.sleep(500);
+    	interact.Click(ele);
     	
     }
     

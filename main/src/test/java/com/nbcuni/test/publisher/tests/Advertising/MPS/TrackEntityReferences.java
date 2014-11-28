@@ -36,8 +36,7 @@ public class TrackEntityReferences extends ParentTest {
         	workBench.ClickWorkBenchTab("Edit Draft");
         	AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
         	additionalInformation.ClickAdditionalInformationLnk();
-        	additionalInformation.EnterTag("tag1");
-        	additionalInformation.EnterTag("tag2");
+        	additionalInformation.EnterTag("tag1, tag2");
         	contentParent.ClickSaveBtn();
         	webDriver.switchTo().defaultContent();
         	

@@ -60,7 +60,9 @@ public class Banner {
     public void ClickSelectBtn() throws Exception {
     	
     	Reporter.log("Click the Banner 'Select' button.");
-    	interact.Click(waitFor.ElementVisible(Select_Btn));
+    	WebElement ele = waitFor.ElementVisible(Select_Btn);
+    	Thread.sleep(500);
+    	interact.Click(ele);
     	
     }
     

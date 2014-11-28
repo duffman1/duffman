@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 
@@ -74,16 +75,13 @@ public class AdditionalInformation {
     }
     
     public void EnterTag(String tag) throws Exception {
-    	
     	Reporter.log("Enter '" + tag + "' in the 'Tags' text box.");
     	WebElement ele = waitFor.ElementVisible(Tags_Txb);
-    	String eleValue = ele.getAttribute("value");
-    	if (eleValue.equals("")) {
-    		interact.Type(ele, tag);
-    	}
-    	else {
-    		interact.Type(ele, eleValue + ", " + tag);
-    	}
+    	ele.sendKeys(tag);
+    	Thread.sleep(1000);
+    	ele.sendKeys(Keys.DOWN);
+    	ele.sendKeys(Keys.ENTER);
+    	Thread.sleep(1000);
     	
     }
     
