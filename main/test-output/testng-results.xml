@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
-    <line>
-      <![CDATA[STEP 1]]>
-    </line>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
@@ -17,289 +14,40 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
     </line>
     <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
+      <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add content' link.]]>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'TV Show' link.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '6c4421734ab44a0' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Logo 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Cover Media 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the Banner 'Select' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Show 6c4421734ab44a0 has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'TV Season' link.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '4591a2c1c1ea4ef' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '1' in the 'Season Number' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Relationships' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select '6c4421734ab44a0' from the 'Show' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Season 4591a2c1c1ea4ef has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Content' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add content' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'TV Episode' link.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'ab8539050e5345c' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Publishing Options' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Relationships' link.]]>
-    </line>
-    <line>
-      <![CDATA[Select '6c4421734ab44a0' from the 'Show' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Select '4591a2c1c1ea4ef' from the 'Season' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'TV Episode ab8539050e5345c has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Additional Information' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
     </line>
     <line>
       <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS Configuration' link.]]>
+      <![CDATA[Click the 'Performance' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
+      <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Clear all 'Name' text box values.]]>
-    </line>
-    <line>
-      <![CDATA[Clear all 'Value' text box values.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+      <![CDATA[Check the 'TVE Auth Example' check box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -308,43 +56,170 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/content/ab8539050e5345c'.]]>
+      <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Verify '"cag":{"tags":"tag1|tag2","show":"6c4421734ab44a0","season":"4591a2c1c1ea4ef"}' is present in page source.]]>
+      <![CDATA[Click the 'Structure' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Blocks' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save Blocks' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configure jQuery' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'SIGN IN' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+    </line>
+    <line>
+      <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Performance' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Uninstall' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Uninstall' button to confirm.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="111815" started-at="2014-11-28T14:42:06Z" finished-at="2014-11-28T14:43:58Z">
+  <suite name="Default suite" duration-ms="251279" started-at="2014-12-01T21:13:38Z" finished-at="2014-12-01T21:17:49Z">
     <groups>
       <group name="full">
-        <method signature="TrackEntityReferences.TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="TrackEntityReferences_TC5445" class="com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences"/>
+        <method signature="ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="ImplementTVEModulesCore_TC3261" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
+        <method signature="ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="Cleanup" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="111815" started-at="2014-11-28T14:42:06Z" finished-at="2014-11-28T14:43:58Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="suiteSetup" is-config="true" duration-ms="25" started-at="2014-11-28T09:42:06Z" finished-at="2014-11-28T09:42:06Z">
+    <test name="Default test" duration-ms="251279" started-at="2014-12-01T21:13:38Z" finished-at="2014-12-01T21:17:49Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="suiteSetup" is-config="true" duration-ms="29" started-at="2014-12-01T16:13:38Z" finished-at="2014-12-01T16:13:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="startSelenium" is-config="true" duration-ms="3440" started-at="2014-11-28T09:42:06Z" finished-at="2014-11-28T09:42:09Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="startSelenium" is-config="true" duration-ms="3612" started-at="2014-12-01T16:13:38Z" finished-at="2014-12-01T16:13:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences.TrackEntityReferences_TC5445() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="TrackEntityReferences_TC5445" duration-ms="107788" started-at="2014-11-28T09:42:09Z" finished-at="2014-11-28T09:43:57Z">
+        <test-method status="PASS" signature="ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="ImplementTVEModulesCore_TC3261" duration-ms="243760" started-at="2014-12-01T16:13:42Z" finished-at="2014-12-01T16:17:45Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -358,289 +233,40 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
             </line>
             <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
+              <![CDATA[Verify the 'jQuery Update' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add content' link.]]>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'TV Show' link.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '6c4421734ab44a0' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Logo 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Cover Media 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the Banner 'Select' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Show 6c4421734ab44a0 has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'TV Season' link.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '4591a2c1c1ea4ef' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '1' in the 'Season Number' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Relationships' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select '6c4421734ab44a0' from the 'Show' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Season 4591a2c1c1ea4ef has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Content' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add content' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'TV Episode' link.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'ab8539050e5345c' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '1' in the 'Episode Number' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Scroll the 'Publishing Options' link into view.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Publishing Options' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Draft' from the 'Moderation State' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Relationships' link.]]>
-            </line>
-            <line>
-              <![CDATA[Select '6c4421734ab44a0' from the 'Show' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Select '4591a2c1c1ea4ef' from the 'Season' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'TV Episode ab8539050e5345c has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Additional Information' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
             </line>
             <line>
               <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS Configuration' link.]]>
+              <![CDATA[Click the 'Performance' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
+              <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Clear all 'Name' text box values.]]>
-            </line>
-            <line>
-              <![CDATA[Clear all 'Value' text box values.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+              <![CDATA[Check the 'TVE Auth Example' check box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -649,32 +275,187 @@
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[Verify the 'TVE Adobe Pass' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/content/ab8539050e5345c'.]]>
+              <![CDATA[Verify the 'TVE MVPD' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Verify '"cag":{"tags":"tag1|tag2","show":"6c4421734ab44a0","season":"4591a2c1c1ea4ef"}' is present in page source.]]>
+              <![CDATA[Click the 'Structure' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Blocks' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select the block name 'TVE Auth Example' from the 'Sidebar first' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save Blocks' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The block settings have been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[MVPD IS ALREADY CONFIGURED.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[ADOBE PASS IS ALREADY CONFIGURED.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configure jQuery' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.7' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'false'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'none'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'Optimum' from the 'Al VMPDs:' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'research40' in the 'Optimum ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'support40' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'SIGN IN' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authentication status checked:' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Authenticated' value is 'true'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Selected MVPD:' value is 'Cablevision'.]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/jquery_update'.]]>
+            </line>
+            <line>
+              <![CDATA[Select '1.5' from the 'Default jQuery Version' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Performance' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Caches cleared.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'TVE Auth Example' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Uninstall' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'TVE Auth Example' uninstall checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'The following modules will be completely uninstalled from your site, and all data from these modules will be lost!' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'TVE Auth Example' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Uninstall' button to confirm.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TrackEntityReferences_TC5445 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="stopSelenium" is-config="true" duration-ms="575" started-at="2014-11-28T09:43:57Z" finished-at="2014-11-28T09:43:58Z">
+        </test-method> <!-- ImplementTVEModulesCore_TC3261 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="stopSelenium" is-config="true" duration-ms="578" started-at="2014-12-01T16:17:45Z" finished-at="2014-12-01T16:17:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TrackEntityReferences_TC5445 status=SUCCESS method=TrackEntityReferences.TrackEntityReferences_TC5445()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49] output=STEP 1]]]>
+                <![CDATA[[TestResult name=ImplementTVEModulesCore_TC3261 status=SUCCESS method=ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences@4e61bc49]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-11-28T09:43:58Z" finished-at="2014-11-28T09:43:58Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="startSelenium" is-config="true" duration-ms="2749" started-at="2014-12-01T16:17:46Z" finished-at="2014-12-01T16:17:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.Cleanup() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSelenium -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="Cleanup" duration-ms="1" started-at="2014-12-01T16:17:49Z" depends-on-methods="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore.ImplementTVEModulesCore_TC3261" finished-at="2014-12-01T16:17:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="stopSelenium" is-config="true" duration-ms="564" started-at="2014-12-01T16:17:49Z" finished-at="2014-12-01T16:17:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cleanup status=SUCCESS method=ImplementTVEModulesCore.Cleanup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSelenium -->
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore@366c111d]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-12-01T16:17:49Z" finished-at="2014-12-01T16:17:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.TrackEntityReferences -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE.ImplementTVEModulesCore -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -24,6 +24,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
 public class PublisherAdsSideFiles {
 
+	private Driver webDriver;
 	private Config config;
 	private Integer timeout;
 	private Interact interact;
@@ -33,6 +34,7 @@ public class PublisherAdsSideFiles {
 	
     //PAGE OBJECT CONSTRUCTOR
     public PublisherAdsSideFiles(Driver webDriver) {
+    	this.webDriver = webDriver;
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
     	waitFor = new WaitFor(webDriver, timeout);
@@ -149,7 +151,7 @@ public class PublisherAdsSideFiles {
     			"Safecount", "Smartadserver", "Unicast", "Videoegg", "Viewpoint");
     	
     	List<String> notAllowedSideFiles = new ArrayList<String>();
-    	for (WebElement el :  waitFor.ElementsPresent(AdSideFileNames_Txt)) {
+    	for (WebElement el :  webDriver.findElements(AdSideFileNames_Txt)) {
     		String sideFile = el.getText();
     		if (!allowedSideFiles.contains(sideFile)) {
     			notAllowedSideFiles.add(sideFile);

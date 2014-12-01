@@ -126,7 +126,9 @@ public class TVEAuthExample {
     public void ClickConfigureJQueryLnk() throws Exception {
     	
     	Reporter.log("Click the 'Configure jQuery' link.");
-    	interact.Click(waitFor.ElementVisible(ConfigureJQuery_Lnk));
+    	WebElement ele = waitFor.ElementVisible(ConfigureJQuery_Lnk);
+    	Thread.sleep(1000);
+    	interact.Click(ele);
     	
     }
     
