@@ -1,17 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Add a New Side File Library. Copyright
@@ -22,129 +17,110 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class AddNewSideFile {
 
-	private Driver webDriver;
 	private Config config;
-	private Overlay overlay;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public AddNewSideFile(Driver webDriver) {
-    	this.webDriver = webDriver;
     	config = new Config();
-    	PageFactory.initElements(webDriver, this);
-    	overlay = new Overlay(webDriver);
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-name")
-    private WebElement Name_Txb;
+    private By Name_Txb = By.id("edit-name");
     
-    @FindBy(how = How.ID, using = "edit-machine-name")
-    private WebElement MachineName_Txb;
+    private By MachineName_Txb = By.id("edit-machine-name");
     
-    @FindBy(how = How.ID, using = "edit-path")
-    private WebElement Path_Txb;
+    private By Path_Txb = By.id("edit-path");
     
-    @FindBy(how = How.ID, using = "edit-file-type")
-    private WebElement ResponseType_Ddl;
+    private By ResponseType_Ddl = By.id("edit-file-type");
     
-    @FindBy(how = How.ID, using = "edit-content")
-    private WebElement Content_Txa;
+    private By Content_Txa = By.id("edit-content");
     
-    @FindBy(how = How.CSS, using = "input[value='Save']")
-    private WebElement Save_Btn;
+    private By Save_Btn = By.cssSelector("input[value='Save']");
     
-    @FindBy(how = How.ID, using = "edit-delete")
-    private WebElement Revert_Btn;
+    private By Revert_Btn = By.id("edit-delete");
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Export']")
-    private WebElement Export_Lnk;
+    private By Export_Lnk = By.xpath("//a[text()='Export']");
     
-    @FindBy(how = How.ID, using = "edit-code")
-    private WebElement Export_Txa;
+    private By Export_Txa = By.id("edit-code");
     
-    @FindBy(how = How.ID, using = "edit-next")
-    private WebElement Update_Btn;
+    private By Update_Btn = By.id("edit-next");
     
     
     //PAGE OBJECT METHODS
     public void EnterName(String name) throws Exception {
     
     	Reporter.log("Enter '" + name + "' in the 'Name' text box.");
-    	Name_Txb.clear();
-    	Name_Txb.sendKeys(name);
+    	interact.Type(waitFor.ElementVisible(Name_Txb), name);
+   
     }
     
     public void EnterMachineName(String name) throws Exception {
         
     	Reporter.log("Enter '" + name + "' in the 'Machine Name' text box.");
-    	MachineName_Txb.clear();
-    	MachineName_Txb.sendKeys(name);
+    	interact.Type(waitFor.ElementVisible(MachineName_Txb), name);
+    	
     }
     
     public void EnterPath(String path) throws Exception {
         
     	Reporter.log("Enter '" + path + "' in the 'Path' text box.");
-    	Path_Txb.clear();
-    	Path_Txb.sendKeys(path);
+    	interact.Type(waitFor.ElementVisible(Path_Txb), path);
+    	
     }
     
     public void SelectResponseType(String option) throws Exception {
         
     	Reporter.log("Select the '" + option + "' from the 'Response type' drop down list.");
-    	new Select(ResponseType_Ddl).selectByVisibleText(option);
+    	interact.Select(waitFor.ElementPresent(ResponseType_Ddl), option);
+    	
     }
     
     public void EnterContent(String content) throws Exception {
         
     	Reporter.log("Enter '" + content + "' in the 'Content' text box.");
-    	Content_Txa.sendKeys(content);
+    	interact.Type(waitFor.ElementVisible(Content_Txa), content);
+    	
     }
     
     public void ClickSaveBtn() throws Exception {
         
     	Reporter.log("Click the 'Save' button.");
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-    	try {
-    		Save_Btn.click();
-    	}
-    	catch (NoSuchElementException e) {
-    		webDriver.navigate().refresh();
-    		overlay.SwitchToActiveFrame();
-    		Save_Btn.click();
-    	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	interact.Click(waitFor.ElementVisible(Save_Btn));
+    	
     }
     
     public void ClickRevertBtn() throws Exception {
         
     	Reporter.log("Click the 'Revert' button.");
-    	Revert_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Revert_Btn));
+    	
     }
     
     public void ClickExportTab() throws Exception {
         
     	Reporter.log("Click the 'Export' tab.");
-    	try {
-    		Export_Lnk.click();
-    	}
-    	catch (WebDriverException e) {
-    		webDriver.executeScript("arguments[0].click();", Export_Lnk);
-    		
-    	}
+    	interact.Click(waitFor.ElementVisible(Export_Lnk));
+    	
     }
     
     public String CopyExportTxt() throws Exception {
         
     	Reporter.log("Copy the text from the 'Export' text area.");
-    	return Export_Txa.getAttribute("value");
+    	return waitFor.ElementVisible(Export_Txa).getAttribute("value");
+    	
     }
     
     public void ClickUpdateBtn() throws Exception {
         
     	Reporter.log("Click the 'Update' button.");
-    	Update_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Update_Btn));
+    	
     }
-    
-    
     
 }

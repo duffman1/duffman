@@ -1,7 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.Config;
+
 import org.testng.Reporter;
+import org.sikuli.basics.Settings;
 import org.sikuli.script.*;
 
 /*********************************************
@@ -19,6 +21,8 @@ public class MPXPublishMedia {
     
     public MPXPublishMedia() {
         sikuli = new Screen();
+        Settings.ActionLogs = false;
+        Settings.InfoLogs = false;
         config = new Config();
         mpxAssets = new MPXAssets();
     }

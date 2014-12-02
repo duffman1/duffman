@@ -1,21 +1,24 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.EntityTracker;
-import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.Reports.EntityTrackerReports;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
-public class CollectEditorialActivity extends ParentTest{
+public class CollectEditorialActivity extends ParentTest {
 	
     /*************************************************************************************
      * TEST CASE - TC5071
@@ -24,6 +27,8 @@ public class CollectEditorialActivity extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void CollectEditorialActivity_TC5071() throws Exception {
          
+    		webDriver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+        
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
@@ -33,29 +38,29 @@ public class CollectEditorialActivity extends ParentTest{
         	modules.VerifyModuleEnabled("Entity Tracker");
         	
         	Reporter.log("STEP 3");
-        	taxonomy.NavigateSite("Configuration>>Content authoring>>Entity tracker");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Configuration("Entity tracker");
         	EntityTracker entityTracker = new EntityTracker(webDriver);
         	for (String role : Arrays.asList("administrator", "editor", "senior editor")) {
         		entityTracker.CheckRoleCbx(role);
         	}
         	entityTracker.ClickSaveConfigurationBtn();
         	contentParent.VerifyPageContentPresent(Arrays.asList("The configuration options have been saved."));
-        	overlay.ClickCloseOverlayLnk();
         	
-        	Reporter.log("STEP 4");
-        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
-        	createDefaultContent.Post("Draft");
+        	Reporter.log("STEP 4 - N/A");
+        	//test uses an existing content from several days ago
         	
         	Reporter.log("STEP 5");
-        	taxonomy.NavigateSite("Reports>>Entity tracker report");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Reports("Entity tracker report");
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-        	Date currentDate = new Date();
+        	Calendar cal7DaysPast = Calendar.getInstance();
+        	Calendar calToday = Calendar.getInstance();
+        	cal7DaysPast.add(Calendar.DATE, -7);
+        	Date date7DaysPast = cal7DaysPast.getTime();
+        	Date dateToday = calToday.getTime();
         	EntityTrackerReports entityTrackerReports = new EntityTrackerReports(webDriver);
-        	entityTrackerReports.EnterFromDate(pub7DateFormat.format(currentDate));
-        	entityTrackerReports.EnterToDate(pub7DateFormat.format(currentDate));
+        	entityTrackerReports.EnterFromDate(pub7DateFormat.format(date7DaysPast));
+        	entityTrackerReports.EnterToDate(pub7DateFormat.format(dateToday));
         	entityTrackerReports.ClickApplyBtn();
         	
         	Reporter.log("STEP 6 - N/A");
@@ -72,7 +77,6 @@ public class CollectEditorialActivity extends ParentTest{
         	Reporter.log("STEP 8");
         	applib.openSitePage("/node/" + childNodeID.toString());
         	contentParent.VerifyPageContentPresent(Arrays.asList(childTitle));
-        	
         	//TODO - some additional steps as time allows
             
     }

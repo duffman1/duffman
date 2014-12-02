@@ -104,6 +104,7 @@ public class SimpleEXIFIPTCMappings {
     public void ClickSaveBtn() throws Exception {
     	Reporter.log("Click the 'Save' button.");
     	Save_Btn.click();
+    	Thread.sleep(5000); //terrible wait but this action doesn't produce a success warning or any other indicator of a submit
     }
     
    

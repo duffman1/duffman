@@ -2,13 +2,10 @@ package com.nbcuni.test.publisher.pageobjects.TVEModule;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,6 +13,8 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com TVE Auth Example Library. Copyright
@@ -26,54 +25,48 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class TVEAuthExample {
 
-	WebDriver webDriver;
-	Config config;
-	WebDriverWait wait;
+	private Driver webDriver;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public TVEAuthExample(Driver webDriver) {
     	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
         config = new Config();
-        wait = (WebDriverWait) new WebDriverWait(webDriver, 180).ignoring(StaleElementReferenceException.class);
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//li[contains(text(), 'MVPD')]/a[text()='setup']")
-    private WebElement MVPDSetup_Lnk;
+    private By MVPDSetup_Lnk = By.xpath("//li[contains(text(), 'MVPD')]/a[text()='setup']");
     
-    @FindBy(how = How.XPATH, using = "//li[contains(text(), 'Adobe')]/a[text()='setup']")
-    private WebElement AdobeSetup_Lnk;
+    private By AdobeSetup_Lnk = By.xpath("//li[contains(text(), 'Adobe')]/a[text()='setup']");
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Configure jQuery']")
-    private WebElement ConfigureJQuery_Lnk;
+    private By ConfigureJQuery_Lnk = By.xpath("//a[text()='Configure jQuery']");
     
-    @FindBy(how = How.CSS, using = "dd[class='authCheckStatus']")
-    private WebElement AuthenticatedStatusChecked_Ctr;
+    private By AuthenticatedStatusChecked_Ctr = By.cssSelector("dd[class='authCheckStatus']");
     
-    @FindBy(how = How.CSS, using = "dd[class='authN']")
-    private WebElement Authenticated_Ctr;
+    private By Authenticated_Ctr = By.cssSelector("dd[class='authN']");
     
-    @FindBy(how = How.CSS, using = "dd[class='selectedMvpd']")
-    private WebElement SelectedMVPD_Ctr;
+    private By SelectedMVPD_Ctr = By.cssSelector("dd[class='selectedMvpd']");
     
-    @FindBy(how = How.CSS, using = "select[class='allMvpds']")
-    private WebElement AllMVPDS_Ddl;
+    private By AllMVPDS_Ddl = By.cssSelector("select[class='allMvpds']");
     
-    @FindBy(how = How.CSS, using = "input[class='loginBtn']")
-    private WebElement Login_Btn;
+    private By Login_Btn = By.cssSelector("input[class='loginBtn']");
     
-    @FindBy(how = How.CSS, using = "button[class='logoutBtn']")
-    private WebElement Logout_Btn;
+    private By Logout_Btn = By.cssSelector("button[class='logoutBtn']");
     
     
     //PAGE OBJECT METHODS
     public Boolean TVEAuthAlreadyConfigured() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     	Boolean alreadyConfigured;
     	try {
-    		MVPDSetup_Lnk.isDisplayed();
+    		webDriver.findElement(MVPDSetup_Lnk);
     		alreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {
@@ -81,14 +74,15 @@ public class TVEAuthExample {
     	}
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
+    	
     }
     
     public Boolean isMVPDConfigured() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     	Boolean alreadyConfigured;
     	try {
-    		MVPDSetup_Lnk.isDisplayed();
+    		webDriver.findElement(MVPDSetup_Lnk);
     		alreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {
@@ -96,14 +90,15 @@ public class TVEAuthExample {
     	}
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
+    	
     }
     
     public Boolean isAdobePassConfigured() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     	Boolean alreadyConfigured;
     	try {
-    		AdobeSetup_Lnk.isDisplayed();
+    		webDriver.findElement(AdobeSetup_Lnk);
     		alreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {
@@ -111,78 +106,79 @@ public class TVEAuthExample {
     	}
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
+    	
     }
 
     public void ClickMVPDSetupLnk() throws Exception {
     	
     	Reporter.log("Click the 'setup' link for MVPD Connection.");
-    	MVPDSetup_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(MVPDSetup_Lnk));
+    	
     }
     
     public void ClickAdobePassSetupLnk() throws Exception {
     	
     	Reporter.log("Click the 'setup' link for Adobe Pass configuration.");
-    	AdobeSetup_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(AdobeSetup_Lnk));
+    	
     }
     
     public void ClickConfigureJQueryLnk() throws Exception {
     	
     	Reporter.log("Click the 'Configure jQuery' link.");
-    	ConfigureJQuery_Lnk.click();
+    	WebElement ele = waitFor.ElementVisible(ConfigureJQuery_Lnk);
+    	Thread.sleep(1000);
+    	interact.Click(ele);
+    	
     }
     
     public void VerifyAuthenticationStatusChecked(final String txt) throws Exception {
     	
     	Reporter.log("Verify the 'Authentication status checked:' value is '" + txt + "'.");
-    	wait.until(new ExpectedCondition<Boolean>() {
-    		public Boolean apply(WebDriver webDriver) {
-    			return AuthenticatedStatusChecked_Ctr.getText().equals(txt);
-    			
-   		 	}
-    	});
+    	new WaitFor(webDriver, 120).ElementContainsText(AuthenticatedStatusChecked_Ctr, txt);
+    	
     }
     
     public void VerifyAuthenticated(final String txt) throws Exception {
     	
     	Reporter.log("Verify the 'Authenticated' value is '" + txt + "'.");
-    	wait.until(new ExpectedCondition<Boolean>() {
-    		public Boolean apply(WebDriver webDriver) {
-    			return Authenticated_Ctr.getText().equals(txt);
-   		 	}
-    	});
+    	waitFor.ElementContainsText(Authenticated_Ctr, txt);
+    	
     }
     
     public void VerifySelectedMVPD(final String txt) throws Exception {
     	
     	Reporter.log("Verify the 'Selected MVPD:' value is '" + txt + "'.");
-    	wait.until(new ExpectedCondition<Boolean>() {
-    		public Boolean apply(WebDriver webDriver) {
-    			return SelectedMVPD_Ctr.getText().contains(txt);
-   		 	}
-    	});
+    	waitFor.ElementContainsText(SelectedMVPD_Ctr, txt);
+    	
     }
     
     public void SelectMVPD(String option) throws Exception {
     	
     	Reporter.log("Select '" + option + "' from the 'Al VMPDs:' drop down list.");
-    	wait.until(new ExpectedCondition<Boolean>() {
+    	final WebElement ele = waitFor.ElementVisible(AllMVPDS_Ddl);
+    	
+    	new WebDriverWait(webDriver, 10).until(new ExpectedCondition<Boolean>() {
     		public Boolean apply(WebDriver webDriver) {
-    			return new Select(AllMVPDS_Ddl).getOptions().size() > 0;
+    			return new Select(ele).getOptions().size() > 0;
    		 	}
     	});
-    	new Select(AllMVPDS_Ddl).selectByVisibleText(option);
+    	interact.Select(ele, option);
+    	
     }
     
     public void ClickLoginBtn() throws Exception {
     	
     	Reporter.log("Click the 'login' button.");
-    	Login_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Login_Btn));
+    	
     }
     
     public void ClickLogoutBtn() throws Exception {
     	
     	Reporter.log("Click the 'Logout' button.");
-    	Logout_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Logout_Btn));
+    	
     }
     
 }

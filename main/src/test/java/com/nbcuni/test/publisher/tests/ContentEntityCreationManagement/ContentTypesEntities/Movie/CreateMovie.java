@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import org.testng.annotations.Test;
@@ -22,25 +22,21 @@ public class CreateMovie extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
-            taxonomy.NavigateSite("Content>>Add content>>Character Profile");
+        	navigation.AddContent("Character Profile");
             
             //Step 3 
             CharactersInformation charactersInformation = new CharactersInformation(webDriver);
-            overlay.SwitchToActiveFrame();
             String characterName = "Character" + random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
             CoverPhoto coverPhoto = new CoverPhoto(webDriver);
             coverPhoto.ClickSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
             
             //Step 4
-            taxonomy.NavigateSite("Content>>Add content>>Movie");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Movie");
             
             //Step 5
             CastCrew castCrew = new CastCrew(webDriver);
@@ -64,28 +60,22 @@ public class CreateMovie extends ParentTest{
             castCrew.VerifyCharacterTxbDisplayed();
             
             //Step 9 
-            overlay.switchToDefaultContent(true);
-            taxonomy.NavigateSite("Content>>Add content>>Person");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Person");
             
             //Step 10
             PersonsInformation personsInformation = new PersonsInformation(webDriver);
             String personFirstName = "Person" + random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             personsInformation.EnterBiography();
-            overlay.SwitchToActiveFrame();
             personsInformation.ClickCoverPhotoSelectBtn();
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             
             //Step 11
-            taxonomy.NavigateSite("Content>>Add content>>Movie");
+            navigation.AddContent("Movie");
             
             //Step 12
-            overlay.SwitchToActiveFrame();
             castCrew.ClickCastCrewLnk();
             
             //Step 13
@@ -99,18 +89,14 @@ public class CreateMovie extends ParentTest{
             String movieTitle = "Movie" + random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
             basicInformation.EnterSynopsis();
-            overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
             //Step 15
             WorkBench workBench = new WorkBench(webDriver);
             workBench.ClickWorkBenchTab("Edit Draft");
-            overlay.SwitchToActiveFrame();
             castCrew.ClickCastCrewLnk();
             castCrew.VerifyCharacterTxbDisplayed();
             castCrew.VerifyPersonNameValue(personFirstName, "1");
@@ -125,7 +111,6 @@ public class CreateMovie extends ParentTest{
             contentParent.ClickSaveBtn();
             
             //Step 17
-            overlay.switchToDefaultContent(true);
             workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
             
     }

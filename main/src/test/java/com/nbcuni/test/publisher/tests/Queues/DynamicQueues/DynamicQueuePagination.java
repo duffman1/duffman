@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentPagination;
@@ -10,9 +10,12 @@ import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueueTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -34,14 +37,12 @@ public class DynamicQueuePagination extends ParentTest {
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-        taxonomy.NavigateSite("Content");
-        overlay.SwitchToActiveFrame();
+        navigation.Content();
         Boolean contentPresent = false;
         SearchFor searchFor = new SearchFor(webDriver);
         if (searchFor.GetSearchResultSize() > 20) {
         	contentPresent = true;
         }
-        overlay.ClickCloseOverlayLnk();
         
         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         List<String> postTitles = new ArrayList<String>();
@@ -54,8 +55,9 @@ public class DynamicQueuePagination extends ParentTest {
         Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Dynamic Queue");
         
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Dynamic Queue types");
+        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver);
+        dynamicQueueTypes.ClickAddDynamicQueueTypeLnk();
         
         String dynamicQueueTypeName = random.GetCharacterString(15);
         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
@@ -63,13 +65,12 @@ public class DynamicQueuePagination extends ParentTest {
         addDynamicQueueType.SelectCacheLifetime("1 min");
         addDynamicQueueType.SelectEntityType();
         addDynamicQueueType.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));
-        overlay.ClickCloseOverlayLnk();
-       
-        taxonomy.NavigateSite("Content>>Dynamic Queues>>Add " + dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
-       
+        
+        navigation.Content("Dynamic Queues");
+        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+        dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
+        
         String dynamicQueueTitle = random.GetCharacterString(15);
         AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
         addDynamicQueue.EnterTitle(dynamicQueueTitle);
@@ -80,14 +81,11 @@ public class DynamicQueuePagination extends ParentTest {
         addDynamicQueue.EnterItemsPerPage(5);
         addDynamicQueue.EnterTotalItemsLimit(10);
         addDynamicQueue.ClickSaveDynamicQueueBtn();
-        overlay.switchToDefaultContent(true);  
+        webDriver.switchTo().defaultContent();  
         
         Reporter.log("STEP 3");
-        taxonomy.NavigateSite("Content>>Dynamic Queues");
-        overlay.SwitchToActiveFrame();
-        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+        navigation.Content("Dynamic Queues");
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
-        overlay.ClickCloseOverlayLnk();
         String parentWindow = webDriver.getWindowHandle();
         applib.openNewWindow();
         applib.switchToNewWindow(parentWindow);

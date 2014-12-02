@@ -26,12 +26,8 @@ public class RevisionState {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    List<WebElement> RevisionsState_Trs() {
-    	return webDriver.findElements(By.xpath("//table[@id='revision-form-table']/tbody/tr"));
-    }
-    
     List<WebElement> Node_Num() {
-    	return webDriver.findElements(By.xpath("//*[@id='revision-form-table']/tbody/..//td[@class='views-field views-field-vid']"));
+    	return webDriver.findElements(By.xpath("//tbody//td[@class='views-field views-field-vid']"));
     }
     
     //PAGE OBJECT METHODS
@@ -39,7 +35,7 @@ public class RevisionState {
     	
     	Reporter.log("Verify the number of present revisions entries equals '" + revisionCount + "'.");
     	Assert.assertTrue(Node_Num().size() == (revisionCount));
-    	Assert.assertTrue(RevisionsState_Trs().size() - 1 == (revisionCount));
+    	
     }
 
 }

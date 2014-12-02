@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.P
 
 import java.util.Arrays;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import org.testng.Assert;
@@ -22,8 +22,7 @@ public class UniqueURL extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
-        	taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
-        	overlay.SwitchToActiveFrame();
+        	navigation.AddContent("Media Gallery");
         	
         	//Step 3
         	BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -44,7 +43,7 @@ public class UniqueURL extends ParentTest{
             selectFile.ClickMediaThumbnailImage("1");
             selectFile.ClickMediaThumbnailImage("2");
             selectFile.ClickSubmitBtn();
-            overlay.SwitchToActiveFrame();
+            webDriver.switchTo().defaultContent();
             
             //Step 5
             MediaItems mediaItems = new MediaItems(webDriver);
@@ -52,7 +51,6 @@ public class UniqueURL extends ParentTest{
             mediaItems.VerifyFileImagePresent("HanSolo", "2");
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
         	WorkBench workBench = new WorkBench(webDriver);
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
@@ -64,7 +62,6 @@ public class UniqueURL extends ParentTest{
         	
         	//Step 6
         	workBench.ClickWorkBenchTab("Edit Draft");
-        	overlay.SwitchToActiveFrame();
         	mediaItems.VerifyFileImagePresent("HanSolo", "1");
         	String uniqueUrl1 = mediaItems.GetImageUniqueUrl("1");
         	Assert.assertTrue(uniqueUrl1.contains(fileId1));
@@ -74,8 +71,7 @@ public class UniqueURL extends ParentTest{
         	
         	//Step 7
         	contentParent.ClickCancelBtn();
-        	overlay.switchToDefaultContent(true);
-        	webDriver.navigate().to(uniqueUrl1);
+        	applib.openSitePage(uniqueUrl1);
         	Thread.sleep(1000); 
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
         	workBench.VerifyFileImageLinkPresent("HanSolo", "2");

@@ -1,10 +1,11 @@
 package com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst;
 
-import org.testng.Assert;
+import java.util.Arrays;
+
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SiteCatalyst;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -26,9 +27,8 @@ public class ImplementSiteCatalyst extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
-        	taxonomy.NavigateSite("Configuration>>System>>SiteCatalyst");
-        	overlay.SwitchToActiveFrame();
-            
+        	navigation.Configuration("SiteCatalyst");
+        	
         	//Step 3
         	SiteCatalyst siteCatalyst = new SiteCatalyst(webDriver, applib);
         	siteCatalyst.ClickCustomVariablesLnk();
@@ -42,9 +42,7 @@ public class ImplementSiteCatalyst extends ParentTest {
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
         	
         	//Step 5
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
-        	overlay.SwitchToActiveFrame();
+        	navigation.AddContent("Media Gallery");
         	BasicInformation basicInformation = new BasicInformation(webDriver);
         	String mediaGalleryTitle = "MediaGallery" + random.GetCharacterString(10);
         	basicInformation.EnterTitle(mediaGalleryTitle);
@@ -59,22 +57,14 @@ public class ImplementSiteCatalyst extends ParentTest {
         	siteCatalystVariables.EnterBlankVariableName(newVariableName);
         	siteCatalystVariables.EnterBlankVariableValue(newVariableValue);
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Media Gallery " + mediaGalleryTitle + " has been created.");
         	
         	//Step 7
-        	String pageSource = webDriver.getPageSource();
-        	if (!pageSource.contains(sPageNameVariable)) {
-        		Assert.fail("Page source does not contain site catalyst variable '" + sPageNameVariable + "'.");
-        	}
-        	if (!pageSource.contains(newVariableName) || !pageSource.contains(newVariableValue)) {
-        		Assert.fail("Page source does not contain site catalyst name/variable '" + newVariableName + "'.");
-        	}
+        	contentParent.VerifySourceInPage(Arrays.asList(sPageNameVariable, newVariableName, newVariableValue));
         	
         	//Step 8
         	WorkBench workBench = new WorkBench(webDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
-        	overlay.SwitchToActiveFrame();
         	siteCatalystVariables.ClickSiteCatalystVariablesTab();
         	String updatedVariableValue = random.GetCharacterString(15);
         	siteCatalystVariables.EnterVariableValue(newVariableName, updatedVariableValue);
@@ -83,15 +73,8 @@ public class ImplementSiteCatalyst extends ParentTest {
         	siteCatalystVariables.EnterBlankVariableName(newVariableName2);
         	siteCatalystVariables.EnterBlankVariableValue(newVariableValue2);
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent(true);
         	contentParent.VerifyMessageStatus("Media Gallery " + mediaGalleryTitle + " has been updated.");
-        	String pageSource2 = webDriver.getPageSource();
-        	if (!pageSource2.contains(updatedVariableValue)) {
-        		Assert.fail("Page source does not contain site catalyst variable '" + updatedVariableValue + "'.");
-        	}
-        	if (!pageSource2.contains(newVariableName2) || !pageSource2.contains(newVariableValue2)) {
-        		Assert.fail("Page source does not contain site catalyst name/variable '" + newVariableName2 + "'.");
-        	}
+        	contentParent.VerifySourceInPage(Arrays.asList(updatedVariableValue, newVariableName2, newVariableValue2));
         	
         	//Step 9 - NA
     }

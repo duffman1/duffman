@@ -1,13 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Manage Display Library. Copyright
@@ -20,34 +19,36 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class ManageDisplay {
 	
-	private Driver webDriver;
-
+	private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
+    
     //PAGE OBJECT CONSTRUCTOR
     public ManageDisplay(Driver webDriver) {
-    	this.webDriver = webDriver;
-    	PageFactory.initElements(webDriver, this);
+    	config = new Config();
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-fields-field-movie-cover-media-type")
-    private WebElement CoverMediaFormat_Ddl;
+    private By CoverMediaFormat_Ddl = By.id("edit-fields-field-movie-cover-media-type");
     
-    @FindBy(how = How.XPATH, using = "//div[@class='field-formatter-summary']/em[contains(text(), 'Default')]")
-    private WebElement DefaultViewMode_Txt;
+    private By DefaultViewMode_Txt = By.xpath("//div[@class='field-formatter-summary']/em[contains(text(), 'Default')]");
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    public WebElement Save_Btn;
+    public By Save_Btn = By.id("edit-submit");
     
-    private WebElement ViewMode_Cbx(String modeName) {
-    	return webDriver.findElement(By.xpath("//label[text()='"+ modeName +" ']/../input"));
+    private By ViewMode_Cbx(String modeName) {
+    	return By.xpath("//label[text()='"+ modeName +" ']/../input");
     }
     
-    private WebElement Viewmode_Tab(String modeName){
-    	return webDriver.findElement(By.xpath("//ul[contains(@class,'secondary')]/li/a[text()='"+ modeName +"']"));
+    private By Viewmode_Tab(String modeName){
+    	return By.xpath("//ul[contains(@class,'secondary')]/li/a[text()='"+ modeName +"']");
     }
     
-    private WebElement Format_Ddl(String fieldLabel) {
-    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + fieldLabel + "')]/..//select[contains(@class, 'formatter')]"));
+    private By Format_Ddl(String fieldLabel) {
+    	return By.xpath("//td[contains(text(), '" + fieldLabel + "')]/..//select[contains(@class, 'formatter')]");
     }
     
     
@@ -55,43 +56,43 @@ public class ManageDisplay {
     public void SelectCoverMediaFormat(String option) throws Exception {
     
     	Reporter.log("Select '" + option + "' from the Cover Media 'Format' drop down list.");
-    	new Select(CoverMediaFormat_Ddl).selectByVisibleText(option);
+    	interact.Select(waitFor.ElementVisible(CoverMediaFormat_Ddl), option);
+    	
     }
     
     public void VerifyDefaultViewModeSelected() throws Exception {
         
     	Reporter.log("Verify the default view mode is selected.");
-    	DefaultViewMode_Txt.isDisplayed();
+    	waitFor.ElementVisible(DefaultViewMode_Txt);
+    	
     }
     
     public void ClickSaveBtn() throws Exception {
         
     	Reporter.log("Click the 'Save' button.");
-    	Save_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Save_Btn));
+    	
     }
     
     public void ClickViewMode(String viewMode) throws Exception{
     	
     	Reporter.log("Click the '"+ viewMode +"' checkbox.");
-    	ViewMode_Cbx(viewMode).click();
+    	interact.Click(waitFor.ElementVisible(ViewMode_Cbx(viewMode)));
+    	
     }
     
     public void ClickViewModeTab(String viewMode) throws Exception{
     	
     	Reporter.log("Click the '"+ viewMode +"' Tab.");
-    	try {
-    		Viewmode_Tab(viewMode).click();
-    	}
-    	catch (Exception e) {
-    		webDriver.executeScript("arguments[0].click();", Viewmode_Tab(viewMode));
-    	}
+    	interact.Click(waitFor.ElementVisible(Viewmode_Tab(viewMode)));
     	
     }
 
     public void SelectFormat(String fieldLabel, String formatOption) throws Exception{
     	
     	Reporter.log("Select '" + formatOption + "' from the 'FORMAT' drop down list for 'FIELD' with label '" + fieldLabel + "'.");
-    	new Select(Format_Ddl(fieldLabel)).selectByVisibleText(formatOption);
+    	interact.Select(waitFor.ElementVisible(Format_Ddl(fieldLabel)), formatOption);
+    	
     }
 }
     

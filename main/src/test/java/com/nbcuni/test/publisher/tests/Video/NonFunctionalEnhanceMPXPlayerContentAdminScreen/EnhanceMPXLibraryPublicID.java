@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -28,15 +28,11 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         //Setup
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
-    	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         
         //Step 2
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        overlay.ClickCloseOverlayLnk();
-        taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        overlay.SwitchToActiveFrame();
+        navigation.Content("Files", "mpxPlayers");
         SearchFor searchFor = new SearchFor(webDriver);
         searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
@@ -53,7 +49,6 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         	//Step 4
         	searchFor.EnterTitle(playerName);
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent(true);
         	searchFor.VerifyMPXResultPublicID(playerName, playerID);
         		
         	//Step 5

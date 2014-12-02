@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
@@ -17,12 +17,12 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
     public void AddApplyEmbeddedMetadataButtonAllImageForms_Test() throws Exception{
          
         	//Step 1
+    		Boolean publicFileOptionPresent = true;
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
-            taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
-            overlay.SwitchToActiveFrame();
+        	navigation.Configuration("Simple EXIF/IPTC Mappings");
             SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
             simpleEXIFIPTCMappings.SelectAltText("Title");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
@@ -34,11 +34,9 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             simpleEXIFIPTCMappings.SelectMediaTags("Title");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
-            overlay.ClickCloseOverlayLnk();
             
             //Step 3
-            taxonomy.NavigateSite("Content>>Add content>>Post");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Post");
             CoverMedia coverMedia = new CoverMedia(webDriver);
             coverMedia.ClickSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
@@ -47,8 +45,10 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("NUP_155306_0046.JPG");
         	selectFile.ClickNextBtn();
-        	selectFile.ClickPublicLocalFilesRdb();
-        	selectFile.ClickNextBtn();
+        	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+        	if (publicFileOptionPresent == true) {
+        		selectFile.ClickNextBtn();
+        	}
         	selectFile.VerifyFileImagePresent("NUP_155306_0046");
             
             //Step 4
@@ -74,9 +74,9 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             editImage.EnterTitleText("1", "ModifiedTitle.JPG");
             editImage.EnterSource("1", "ModifiedSource");
             editImage.ClickSaveBtn("1");
-            overlay.SwitchToActiveFrame();
             
             //Step 8
+            webDriver.switchTo().defaultContent();
             coverMedia.ClickEditBtn();
             editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("1", "ModifiedTitle.JPG");

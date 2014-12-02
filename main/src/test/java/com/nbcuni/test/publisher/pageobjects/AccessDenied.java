@@ -1,12 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Access Denied Library. Copyright
@@ -17,22 +16,25 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class AccessDenied {
 
-    //PAGE OBJECT CONSTRUCTOR
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	//PAGE OBJECT CONSTRUCTOR
     public AccessDenied(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.TAG_NAME, using = "body")
-    private WebElement Body_Txt;
+    private By Body_Txt = By.xpath("//body");
     
     //PAGE OBJECT METHODS
     public void VerifyAccessDeniedTxt() throws Exception {
     	
     	Reporter.log("Verify access denied text is present.");
-    	if (!Body_Txt.getText().contains("You are not authorized to access this page.")) {
-    		Assert.fail("The text 'You are not authorized to access this page.' is not present.");
-    	}
+    	waitFor.ElementContainsText(Body_Txt, "You are not authorized to access this page.");
+    	
     }
     
 }

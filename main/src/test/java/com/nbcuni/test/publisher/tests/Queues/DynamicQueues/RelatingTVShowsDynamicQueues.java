@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -11,9 +11,12 @@ import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueueTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 public class RelatingTVShowsDynamicQueues extends ParentTest{
@@ -36,49 +39,41 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
         String tvShowName1 = createDefaultContent.TVShow("Published");
         
         Reporter.log("STEP 2");
-        taxonomy.NavigateSite("Structure>>Dynamic Queue types>>Add dynamic queue type");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Dynamic Queue types");
+        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver);
+        dynamicQueueTypes.ClickAddDynamicQueueTypeLnk();
         String dynamicQueueTypeName = random.GetCharacterString(15);
         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
         addDynamicQueueType.EnterName(dynamicQueueTypeName);
         addDynamicQueueType.SelectEntityType();
         addDynamicQueueType.SelectCacheLifetime("1 min");
         addDynamicQueueType.ClickSaveBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList(dynamicQueueTypeName));
-        overlay.ClickCloseOverlayLnk();
         
         Reporter.log("STEP 3 - MOVED TO SETUP");
         
         Reporter.log("STEP 4");
-        taxonomy.NavigateSite("Structure>>Content types>>Movie>>Manage fields");
-    	overlay.SwitchToActiveFrame();
-    	ContentTypes contentTypes = new ContentTypes(webDriver);
-    	if (contentTypes.IsFieldPresent("Relationships").equals(false)) {
+        navigation.Structure("Content types");
+        ContentTypes contentTypes = new ContentTypes(webDriver);
+        contentTypes.ClickManageFieldLnk("Movie");
+        if (contentTypes.IsFieldPresent("Relationships").equals(false)) {
     		contentTypes.EnterAddExistingField("Relationships");
         	contentTypes.SelectExistingField("Pub TV Relationship: field_tv_shows (TV Shows)");
         	contentParent.ClickSaveBtn();
-        	overlay.SwitchToActiveFrame();
         	com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships relationships = new com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships(webDriver);
         	relationships.SelectTVRelationshipWidgetDepth("Show");
         	relationships.ClickSaveSettingsBtn();
         	contentParent.VerifyMessageStatus("Saved Relationships configuration.");
-        	overlay.ClickCloseOverlayLnk();
+        	
     	}
-    	else {
-    		overlay.ClickCloseOverlayLnk();
-    	}
-    	taxonomy.NavigateSite("Content>>Add content>>Movie");
-    	overlay.SwitchToActiveFrame();
+    	navigation.AddContent("Movie");
     	BasicInformation basicInformation = new BasicInformation(webDriver);
     	String movieTitle = random.GetCharacterString(15);
     	basicInformation.EnterTitle(movieTitle);
         basicInformation.EnterSynopsis();
-        overlay.SwitchToActiveFrame();
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToActiveFrame();
         com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webDriver);
         relationshipsContent.SelectShow(tvShowName1);
         contentParent.WaitForThrobberNotPresent();
@@ -91,9 +86,10 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
     	Reporter.log("STEP 5"); //TODO
     	
     	Reporter.log("STEP 6");
-    	taxonomy.NavigateSite("Content>>Dynamic Queues>>Add " + dynamicQueueTypeName);
-        overlay.SwitchToActiveFrame();
-        
+    	navigation.Content("Dynamic Queues");
+    	DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+    	dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
+    	
         Reporter.log("STEP 7");
         String dynamicQueueTitle = random.GetCharacterString(15);
         AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
@@ -102,14 +98,10 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
         addDynamicQueue.SelectTVShow(tvShowName1);
         addDynamicQueue.ClickSortByNewestRdb();
         addDynamicQueue.ClickSaveDynamicQueueBtn();
-        overlay.switchToDefaultContent(true);
         
         Reporter.log("STEP 8");
-        taxonomy.NavigateSite("Content>>Dynamic Queues");
-        overlay.SwitchToActiveFrame();
-        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+        navigation.Content("Dynamic Queues");
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
-        overlay.ClickCloseOverlayLnk();
         String parentWindow = webDriver.getWindowHandle();
         applib.openNewWindow();
         applib.switchToNewWindow(parentWindow);

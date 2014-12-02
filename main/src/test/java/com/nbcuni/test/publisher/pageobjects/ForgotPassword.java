@@ -1,14 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com ForgotPassword Library. Copyright
@@ -19,43 +17,47 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class ForgotPassword {
 
-	private WebDriverWait wait;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public ForgotPassword(Driver webDriver) {
-    	PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+    	config = new Config();
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//a[text()='Request new password']")
-    private WebElement RequestNewPassword_Lnk;
+    private By RequestNewPassword_Lnk = By.xpath("//a[text()='Request new password']");
     
-    @FindBy(how = How.ID, using = "edit-name")
-    private WebElement Email_Txb;
+    private By Email_Txb = By.id("edit-name");
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement ResetPassword_Btn;
+    private By ResetPassword_Btn = By.id("edit-submit");
     
     
     //PAGE OBJECT METHODS
     public void ClickRequestPasswordLnk() throws Exception {
     	
     	Reporter.log("Click the 'Request new password' link.");
-    	RequestNewPassword_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(RequestNewPassword_Lnk));
+    	
     }
     
     public void EnterEmail(String emailAddress) throws Exception {
     	
     	Reporter.log("Enter '" + emailAddress + "' in the 'E-mail' text box.");
-    	Thread.sleep(500);
-    	wait.until(ExpectedConditions.visibilityOf(Email_Txb)).sendKeys(emailAddress);
+    	interact.Type(waitFor.ElementVisible(Email_Txb), emailAddress);
+    	
     }
     
     public void ClickResetPasswordBtn() throws Exception {
     	
     	Reporter.log("Click the 'Reset password' button.");
-    	ResetPassword_Btn.click();
+    	interact.Click(waitFor.ElementVisible(ResetPassword_Btn));
+    	
     }
     
 }

@@ -1,18 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects.Twitter;
 
 import java.util.Arrays;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 /*********************************************
@@ -26,62 +25,60 @@ public class TwitterLogin {
 
 	private Driver webDriver;
 	private ContentParent contentParent;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public TwitterLogin(Driver webDriver, AppLib applib) {
     	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
         contentParent = new ContentParent(webDriver);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "username_or_email")
-    private WebElement AdminUsernameOrEmail_Txb;
+    private By AdminUsernameOrEmail_Txb = By.id("username_or_email");
     
-    private List<WebElement> UsernameOrEmail_Txbs() {
-    	return webDriver.findElements(By.xpath("//input[@name='session[username_or_email]']"));
-    }
+    private By AllUsernameOrEmail_Txbs = By.xpath("//input[@name='session[username_or_email]']");
     
-    @FindBy(how = How.ID, using = "password")
-    private WebElement AdminPassword_Txb;
+    private By AdminPassword_Txb = By.id("password");
     
-    private List<WebElement> Password_Txbs() {
-    	return webDriver.findElements(By.xpath("//input[@name='session[password]']"));
-    }
+    private By AllPassword_Txbs = By.xpath("//input[@name='session[password]']");
     
-    @FindBy(how = How.ID, using = "allow")
-    private WebElement AuthorizeApp_Btn;
+    private By AuthorizeApp_Btn = By.id("allow");
     
-    @FindBy(how = How.XPATH, using = "//input[@value='Sign in and Tweet']")
-    private WebElement SignInAndTweet_Btn;
+    private By SignInAndTweet_Btn = By.xpath("//input[@value='Log in and Tweet']");
     
-    @FindBy(how = How.XPATH, using = "//input[@value='Tweet']")
-    private WebElement Tweet_Btn;
+    private By Tweet_Btn = By.xpath("//input[@value='Tweet']");
     
-    private List<WebElement> SignIn_Btns() {
-    	return webDriver.findElements(By.xpath("//button[text()='Sign in']"));
-    }
+    private By AllSignIn_Btns = By.xpath("//button[text()='Log in']");
     
     
     //PAGE OBJECT METHODS
     public void EnterAdminUsernameOrEmail(String userName) throws Exception {
     	
     	Reporter.log("Enter '" + userName + "' in the 'Userame or email' text box.");
-    	AdminUsernameOrEmail_Txb.sendKeys(userName);
+    	interact.Type(waitFor.ElementVisible(AdminUsernameOrEmail_Txb), userName);
+    	
     }
     
     public void EnterAdminPassword(String password) throws Exception {
     	
     	Reporter.log("Enter '" + password + "' in the 'Password' text box.");
-    	AdminPassword_Txb.sendKeys(password);
+    	interact.Type(waitFor.ElementVisible(AdminPassword_Txb), password);
+    	
     }
     
     public void EnterUsernameOrEmail(String userName) throws Exception {
     	
     	Reporter.log("Enter '" + userName + "' in the 'Userame or email' text box.");
-    	for (WebElement el : UsernameOrEmail_Txbs()) {
+    	for (WebElement el : waitFor.ElementsPresent(AllUsernameOrEmail_Txbs)) {
     		if (el.isDisplayed()) {
-    			el.sendKeys(userName);
+    			interact.Type(el, userName);
     			break;
     		}
     	}
@@ -90,9 +87,9 @@ public class TwitterLogin {
     public void EnterPassword(String password) throws Exception {
     	
     	Reporter.log("Enter '" + password + "' in the 'Password' text box.");
-    	for (WebElement el : Password_Txbs()) {
+    	for (WebElement el : waitFor.ElementsPresent(AllPassword_Txbs)) {
     		if (el.isDisplayed()) {
-    			el.sendKeys(password);
+    			interact.Type(el, password);
     			break;
     		}
     	}
@@ -101,27 +98,30 @@ public class TwitterLogin {
     public void ClickAuthorizeAppBtn() throws Exception {
     	
     	Reporter.log("Click the 'Authorize App' button.");
-    	AuthorizeApp_Btn.click();
+    	interact.Click(waitFor.ElementVisible(AuthorizeApp_Btn));
+    	
     }
     
     public void ClickSignInAndTweetBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign in and Tweet' button.");
-    	SignInAndTweet_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SignInAndTweet_Btn));
+    	
     }
     
     public void ClickTweetBtn() throws Exception {
     	
     	Reporter.log("Click the 'Tweet' button.");
-    	Tweet_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Tweet_Btn));
+    	
     }
     
     public void ClickSignInBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign In' button.");
-    	for (WebElement el : SignIn_Btns()) {
+    	for (WebElement el : waitFor.ElementsPresent(AllSignIn_Btns)) {
     		if (el.isDisplayed()) {
-    			el.click();
+    			interact.Click(el);
     			break;
     		}
     	}
@@ -141,6 +141,7 @@ public class TwitterLogin {
         		Thread.sleep(1000);
         		webDriver.navigate().refresh();
         	}
+        	
         }
     }
     

@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespon
 import java.util.Arrays;
 import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
@@ -33,22 +33,19 @@ public class EntityReferenceVerification extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
         //Setup
         if (configuredAccounts.contains("DB TV")) {
         		
         	//Step 1
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Structure>>Content types>>Add content type");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Structure("Content types");
         	ContentTypes contentTypes = new ContentTypes(webDriver);
+        	contentTypes.ClickAddContentLnk();
             String contentTypeName = "MPX" + random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
             contentTypes.ClickSaveAddFieldsBtn();
-        	overlay.SwitchToActiveFrame();
         		
         	//Step 2
         	String mpxVideoEntityFieldTitle = "MPXVideoEntity" + random.GetCharacterString(10);
@@ -56,7 +53,6 @@ public class EntityReferenceVerification extends ParentTest{
         	contentTypes.SelectFieldType("Entity Reference");
         	contentTypes.SelectWidget("Select list");
         	contentTypes.ClickSaveBtn();
-        	overlay.SwitchToActiveFrame();
         		
         	//Step 3
         	FieldSettings fieldSettings = new FieldSettings(webDriver, applib);
@@ -65,25 +61,21 @@ public class EntityReferenceVerification extends ParentTest{
         	fieldSettings.CheckTargetBundleCbx("MPX Video for Account \"DB TV\" (2312945284) ");
         	fieldSettings.SelectSortBy("Don't sort");
         	fieldSettings.ClickSaveFieldSettingsBtn();
-        	overlay.SwitchToActiveFrame();
         	contentParent.VerifyMessageStatus("Updated field " + mpxVideoEntityFieldTitle + " field settings.");
         		
         	//Step 4
         		Edit edit = new Edit(webDriver, applib);
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxVideoEntityFieldTitle + " configuration.");
         		
         		//Step 5
         		String mpxVideoFileFieldTitle = "MPXVideoFile" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxVideoFileFieldTitle);
         		contentTypes.SelectFieldType("File");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxVideoFileFieldTitle + " field settings.");
         		
         		//Step 6
@@ -94,19 +86,16 @@ public class EntityReferenceVerification extends ParentTest{
         		edit.CheckAllowedURISchemesCbx("public:// (Public files)");
         		edit.CheckAllowedURISchemesCbx("private:// (Private files)");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxVideoFileFieldTitle + " configuration.");
         		
         		//Step 7
         		String mpxVideoImageFieldTitle = "MPXVideoImage" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxVideoImageFieldTitle);
         		contentTypes.SelectFieldType("Image");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxVideoImageFieldTitle + " field settings.");
         		
         		//Step 8
@@ -116,7 +105,6 @@ public class EntityReferenceVerification extends ParentTest{
         		edit.CheckAllowedURISchemesCbx("public:// (Public files)");
         		edit.CheckAllowedURISchemesCbx("private:// (Private files)");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxVideoImageFieldTitle + " configuration.");
         		
         		//Step 9
@@ -125,21 +113,15 @@ public class EntityReferenceVerification extends ParentTest{
         		contentTypes.SelectFieldType("Field collection");
         		contentTypes.SelectWidget("Embedded");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxVideoFieldCollectionsTitle + " field settings.");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxVideoFieldCollectionsTitle + " configuration.");
-        		overlay.ClickCloseOverlayLnk();
         		
         		//Step 10
-        		taxonomy.NavigateSite("Structure>>Field collections");
-        		overlay.SwitchToActiveFrame();
+        		navigation.Structure("Field collections");
         		FieldCollections fieldCollections = new FieldCollections(webDriver, applib);
         		fieldCollections.ClickManageFieldsLnk(mpxVideoFieldCollectionsTitle.toLowerCase());
-        		overlay.SwitchToActiveFrame();
         		
         		//Step 11
         		String mpxFCVideoEntityFieldTitle = "FCMPXVideoEntity" + random.GetCharacterString(10);
@@ -147,7 +129,6 @@ public class EntityReferenceVerification extends ParentTest{
         		contentTypes.SelectFieldType("Entity Reference");
         		contentTypes.SelectWidget("Select list");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		
         		//Step 12
         		fieldSettings.SelectTargetType("File");
@@ -155,24 +136,20 @@ public class EntityReferenceVerification extends ParentTest{
         		fieldSettings.CheckTargetBundleCbx("MPX Video for Account \"DB TV\" (2312945284) ");
         		fieldSettings.SelectSortBy("Don't sort");
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxFCVideoEntityFieldTitle + " field settings.");
         		
         		//Step 13
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxFCVideoEntityFieldTitle + " configuration.");
         		
         		//Step 14
         		String mpxFCVideoFileFieldTitle = "FCMPXVideoFile" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxFCVideoFileFieldTitle);
         		contentTypes.SelectFieldType("File");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxFCVideoFileFieldTitle + " field settings.");
         		
         		//Step 15
@@ -183,19 +160,16 @@ public class EntityReferenceVerification extends ParentTest{
         		edit.CheckAllowedURISchemesCbx("public:// (Public files)");
         		edit.CheckAllowedURISchemesCbx("private:// (Private files)");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxFCVideoFileFieldTitle + " configuration.");
         		
         		//Step 16
         		String mpxFCVideoImageFieldTitle = "FCMPXVideoImage" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxFCVideoImageFieldTitle);
         		contentTypes.SelectFieldType("Image");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxFCVideoImageFieldTitle + " field settings.");
         		
         		//Step 17
@@ -205,18 +179,15 @@ public class EntityReferenceVerification extends ParentTest{
         		edit.CheckAllowedURISchemesCbx("public:// (Public files)");
         		edit.CheckAllowedURISchemesCbx("private:// (Private files)");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxFCVideoImageFieldTitle + " configuration.");
         		
         		//Step 18
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
-        		overlay.ClickCloseOverlayLnk();
         		
         		//Step 19
-        		taxonomy.NavigateSite("Structure>>Content types>>" + contentTypeName + ">>Manage fields");
-        		overlay.SwitchToActiveFrame();
+        		navigation.Structure("Content types");
+        		contentTypes.ClickManageFieldLnk(contentTypeName);
         		
         		//Step 20
         		String mpxPlayerEntityFieldTitle = "MPXPlayerEntity" + random.GetCharacterString(10);
@@ -224,7 +195,6 @@ public class EntityReferenceVerification extends ParentTest{
         		contentTypes.SelectFieldType("Entity Reference");
         		contentTypes.SelectWidget("Select list");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		
         		//Step 21
         		fieldSettings.SelectTargetType("File");
@@ -232,24 +202,20 @@ public class EntityReferenceVerification extends ParentTest{
         		fieldSettings.CheckTargetBundleCbx("MPX Player");
         		fieldSettings.SelectSortBy("Don't sort");
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxPlayerEntityFieldTitle + " field settings.");
         		
         		//Step 22
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxPlayerEntityFieldTitle + " configuration.");
         		
         		//Step 23
         		String mpxPlayerFileFieldTitle = "MPXPlayerFile" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxPlayerFileFieldTitle);
         		contentTypes.SelectFieldType("File");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxPlayerFileFieldTitle + " field settings.");
         		
         		//Step 24
@@ -258,19 +224,16 @@ public class EntityReferenceVerification extends ParentTest{
         		edit.CheckAllowedURISchemesCbx("public:// (Public files)");
         		edit.CheckAllowedURISchemesCbx("private:// (Private files)");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxPlayerFileFieldTitle + " configuration.");
         		
         		//Step 25
         		String mpxPlayerImageFieldTitle = "MPXPlayerImage" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxPlayerImageFieldTitle);
         		contentTypes.SelectFieldType("Image");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxPlayerImageFieldTitle + " field settings.");
         		
         		//Step 26
@@ -279,7 +242,6 @@ public class EntityReferenceVerification extends ParentTest{
         		edit.CheckAllowedURISchemesCbx("public:// (Public files)");
         		edit.CheckAllowedURISchemesCbx("private:// (Private files)");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxPlayerImageFieldTitle + " configuration.");
         		
         		//Step 27
@@ -288,20 +250,14 @@ public class EntityReferenceVerification extends ParentTest{
         		contentTypes.SelectFieldType("Field collection");
         		contentTypes.SelectWidget("Embedded");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxPlayerFieldCollectionsTitle + " field settings.");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxPlayerFieldCollectionsTitle + " configuration.");
-        		overlay.ClickCloseOverlayLnk();
         		
         		//Step 28
-        		taxonomy.NavigateSite("Structure>>Field collections");
-        		overlay.SwitchToActiveFrame();
+        		navigation.Structure("Field collections");
         		fieldCollections.ClickManageFieldsLnk(mpxPlayerFieldCollectionsTitle.toLowerCase());
-        		overlay.SwitchToActiveFrame();
         		
         		//Step 29
         		String mpxFCPlayerEntityFieldTitle = "FCMPXPlayerEntity" + random.GetCharacterString(10);
@@ -309,7 +265,6 @@ public class EntityReferenceVerification extends ParentTest{
         		contentTypes.SelectFieldType("Entity Reference");
         		contentTypes.SelectWidget("Select list");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		
         		//Step 30
         		fieldSettings.SelectTargetType("File");
@@ -317,22 +272,18 @@ public class EntityReferenceVerification extends ParentTest{
         		fieldSettings.CheckTargetBundleCbx("MPX Player");
         		fieldSettings.SelectSortBy("Don't sort");
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxFCPlayerEntityFieldTitle + " field settings.");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxFCPlayerEntityFieldTitle + " configuration.");
         		
         		//Step 31
         		String mpxFCPlayerFileFieldTitle = "FCMPXPlayerFile" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxFCPlayerFileFieldTitle);
         		contentTypes.SelectFieldType("File");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxFCPlayerFileFieldTitle + " field settings.");
         		
         		//Step 32
@@ -342,19 +293,16 @@ public class EntityReferenceVerification extends ParentTest{
         		edit.CheckAllowedURISchemesCbx("public:// (Public files)");
         		edit.CheckAllowedURISchemesCbx("private:// (Private files)");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxFCPlayerFileFieldTitle + " configuration.");
         		
         		//Step 33
         		String mpxFCPlayerImageFieldTitle = "FCMPXPlayerImage" + random.GetCharacterString(10);
         		contentTypes.EnterAddNewField(mpxFCPlayerImageFieldTitle);
         		contentTypes.SelectFieldType("Image");
-        		contentTypes.SelectWidget("Media file selector");
+        		contentTypes.SelectWidget("Media browser");
         		contentTypes.ClickSaveBtn();
-        		overlay.SwitchToActiveFrame();
         		fieldSettings.ClickPublicFilesRdb();
         		fieldSettings.ClickSaveFieldSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Updated field " + mpxFCPlayerImageFieldTitle + " field settings.");
         		
         		//Step 34
@@ -363,21 +311,18 @@ public class EntityReferenceVerification extends ParentTest{
         		edit.CheckAllowedURISchemesCbx("public:// (Public files)");
         		edit.CheckAllowedURISchemesCbx("private:// (Private files)");
         		edit.ClickSaveSettingsBtn();
-        		overlay.SwitchToActiveFrame();
         		contentParent.VerifyMessageStatus("Saved " + mpxFCPlayerImageFieldTitle + " configuration.");
-        		overlay.ClickCloseOverlayLnk();
         		
         		//Step 35
-        		taxonomy.NavigateSite("Content>>Add content>>" + contentTypeName);
-        		overlay.SwitchToActiveFrame();
+        		navigation.AddContent(contentTypeName);
         		ErrorChecking errorChecking = new ErrorChecking(webDriver);
         		errorChecking.VerifyNoMessageErrorsPresent();
         		
         		//Steps 36 and 37
-        		contentParent.VerifyPageContentPresent(Arrays.asList(mpxVideoEntityFieldTitle, mpxVideoFileFieldTitle, mpxVideoImageFieldTitle, mpxVideoFieldCollectionsTitle.toUpperCase(),
+        		contentParent.VerifyPageContentPresent(Arrays.asList(mpxVideoEntityFieldTitle, mpxVideoFileFieldTitle, mpxVideoImageFieldTitle, mpxVideoFieldCollectionsTitle,
         				mpxFCVideoEntityFieldTitle, mpxFCVideoFileFieldTitle, mpxFCVideoImageFieldTitle,
         					mpxPlayerEntityFieldTitle, mpxPlayerFileFieldTitle, mpxPlayerImageFieldTitle,
-        						mpxPlayerFieldCollectionsTitle.toUpperCase(), mpxFCPlayerEntityFieldTitle, mpxFCPlayerFileFieldTitle, mpxFCPlayerImageFieldTitle));
+        						mpxPlayerFieldCollectionsTitle, mpxFCPlayerEntityFieldTitle, mpxFCPlayerFileFieldTitle, mpxFCPlayerImageFieldTitle));
         		
         		//Step 38
         		BasicInformation basicInformation = new BasicInformation(webDriver);
@@ -392,7 +337,7 @@ public class EntityReferenceVerification extends ParentTest{
         		contentParent.WaitForThrobberNotPresent();
         		selectFile.ClickSearchResultTtl("AutomationDefault");
         		selectFile.ClickSubmitBtn();
-        		overlay.SwitchToActiveFrame();
+        		selectFile.WaitForSelectFileFrameClose();
         		basicInformation.ClickCustomBtn(mpxVideoImageFieldTitle);
         		selectFile.SwitchToSelectFileFrm();
         		selectFile.EnterTitle("AutomationDefault");
@@ -400,9 +345,8 @@ public class EntityReferenceVerification extends ParentTest{
         		contentParent.WaitForThrobberNotPresent();
         		selectFile.ClickSearchResultTtl("AutomationDefault");
         		selectFile.ClickSubmitBtn();
-        		overlay.SwitchToActiveFrame();
+        		selectFile.WaitForSelectFileFrameClose();
         		contentParent.ClickSaveBtn();
-        		overlay.switchToDefaultContent(true);
         		contentParent.VerifyMessageStatus(contentTypeName + " " + title + " has been created.");
         		
         		//Step 39 through 43 - N/A as de-ingestion occurs previously

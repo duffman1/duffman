@@ -63,6 +63,7 @@ public class AppLib {
     }
     
     public void openSitePage(String location) throws Exception {
+    	location = location.replace(config.getConfigValueString("AppURL"), "");
         Reporter.log("Open url '" + config.getConfigValueString("AppURL") + location + "'.");
         webDriver.navigate().to(config.getConfigValueString("AppURL") + location);   
     }
@@ -96,6 +97,11 @@ public class AppLib {
     public void refreshPage() throws Exception {
     	Reporter.log("Refresh the page.");
     	webDriver.navigate().refresh();
+    }
+    
+    public void goBack() throws Exception {
+    	Reporter.log("Navigate back.");
+    	webDriver.navigate().back();
     }
     
     

@@ -1,10 +1,11 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
+import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -78,22 +79,20 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         
         //Note - test requires mpx configuration
     	Settings settings = new Settings(webDriver);
-    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
-        
+    	navigation.Configuration("Media: thePlatform mpx settings");
+    	
         	//Setup
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	if (configuredAccounts.contains("DB TV")) {
         		
-        		overlay.ClickCloseOverlayLnk();
-        		taxonomy.NavigateSite("Structure>>File types>>MPX Video for Account \"DB TV\" (2312945284)");
-        		overlay.SwitchToActiveFrame();
+        		navigation.Structure("File types");
+        		FileTypes fileTypes = new FileTypes(webDriver);
+        		fileTypes.ClickEditFileTypeLnk("MPX Video for Account \"DB TV\" (2312945284)");
         		MPXFileType mpxFileType = new MPXFileType(webDriver);
         		boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
         		if (isMPXValueOverrideEnabled == false) {
             	
         			mpxFileType.ClickSaveBtn();
-        			overlay.SwitchToActiveFrame();
         			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
         			contentParent.VerifyMessageStatus("has been updated.");
         		}
@@ -137,24 +136,22 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	applib.openApplication();
             	Cron cron = new Cron(webDriver);
             	if (config.getConfigValueString("DrushIngestion").equals("false")) {
-                	cron.RunCron(true);
+                	cron.RunCron();
                 }
             	
         	    //Step 8
-        	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	    overlay.SwitchToActiveFrame();
+            	navigation.Content("Files", "mpxMedia");
         	    
         	    //Step 9
         	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
-        	    overlay.switchToDefaultContent(true);
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
             	    if (config.getConfigValueString("DrushIngestion").equals("true")) {
             	    	int refreshCount = 0;
             	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                            	
-                    		   webDriver.navigate().refresh();
+                    		   applib.refreshPage();
                     		   refreshCount++;
                     		   if (refreshCount == 10) {
                     		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
@@ -162,18 +159,17 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
                     	   }
             		}
             	    else {
-            	    	cron.RunCron(false);
-                		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            	    	cron.RunCron();
+            	    	navigation.Content("Files", "mpxMedia");
             	    }
                 	searchFor.EnterTitle(mediaTitle);
                 	searchFor.ClickApplyBtn();
             	}
-        	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
         	    SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	    String pub7Date20DaysInPast = pub7DateFormat.format(date20DaysInPast);
         	    String pub7Date7DaysInPast = pub7DateFormat.format(date7DaysInPast);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7Date20DaysInPast + " - 04:00 AM"
-        	    		, pub7Date7DaysInPast + " - 04:00 AM", "Expired"));
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7Date20DaysInPast
+        	    		, pub7Date7DaysInPast, "Expired"));
         	    
         	    //Step 10
         	    searchFor.ClickSearchTitleLnk(mediaTitle);
@@ -182,13 +178,12 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    SimpleDateFormat pub7WorkflowDateFormat = new SimpleDateFormat("EEEE, MMMM d, yyyy");
         	    String pub7WorkflowDate20DaysInPast = pub7WorkflowDateFormat.format(date20DaysInPast);
         	    String pub7WorkflowDate7DaysInPast = pub7WorkflowDateFormat.format(date7DaysInPast);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDate20DaysInPast + " - 04:00",
-        	    		pub7WorkflowDate7DaysInPast + " - 04:00"));
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDate20DaysInPast,
+        	    		pub7WorkflowDate7DaysInPast));
         	    
         	    //Step 12
         	    WorkBench workBench = new WorkBench(webDriver);
         	    workBench.ClickWorkBenchTab("Edit");
-        	    overlay.SwitchToActiveFrame();
         	    
         	    //Step 13
         	    EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
@@ -197,8 +192,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    
         	    //Step 14
         	    ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
-        	    scheduleQueue.ClickScheduleTab();
-        	    overlay.SwitchToActiveFrame();
+        	    navigation.ClickPrimaryTabNavLnk("Schedule");
         	    scheduleQueue.VerifyScheduleTableisEmpty();
         	    
         	    //Step 15 through 25 - TODO automate as time allows but not an automation priority
@@ -234,25 +228,22 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    //Step 29
         	    applib.openApplication();
         	    if (config.getConfigValueString("DrushIngestion").equals("false")) {
-        	    	cron.RunCron(true);
+        	    	cron.RunCron();
         	    }
         	    else {
         	    	Thread.sleep(10000); //TODO - dynamic wait
         	    }
         	    
         	    //Step 30
-        	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	    overlay.SwitchToActiveFrame();
+        	    navigation.Content("Files", "mpxMedia");
         	    
         	    //Step 31
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
-        	    overlay.switchToDefaultContent(true);
-        	    searchFor.VerifySearchResultsPresent(Arrays.asList(mediaTitle));
         	    String pub7DateToday = pub7DateFormat.format(dateToday);
         	    String pub7Date1YearInFuture = pub7DateFormat.format(date1YearInFuture);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(pub7DateToday + " - 04:00 AM"
-        	    		, pub7Date1YearInFuture + " - 04:00 AM", "Published"));
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7DateToday
+        	    		, pub7Date1YearInFuture, "Published"));
         	    
         	    //Step 32
         	    searchFor.ClickSearchTitleLnk(mediaTitle);
@@ -260,23 +251,21 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    //Step 33
         	    String pub7WorkflowDateToday = pub7WorkflowDateFormat.format(dateToday);
         	    String pub7WorkflowDate1YearInFuture = pub7WorkflowDateFormat.format(date1YearInFuture);
-        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDateToday + " - 04:00",
-        	    		pub7WorkflowDate1YearInFuture + " - 04:00"));
+        	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, pub7WorkflowDateToday,
+        	    		pub7WorkflowDate1YearInFuture));
         	    
         	    //Step 34
         	    workBench.ClickWorkBenchTab("Edit");
-        	    overlay.SwitchToActiveFrame();
         	    
         	    //Step 35
         	    editMPXVideo.VerifyMPXAvailableDate(pub7DateToday);
         	    editMPXVideo.VerifyMPXExpirationDate(pub7Date1YearInFuture);
         	    
         	    //Step 36
-        	    scheduleQueue.ClickScheduleTab();
-        	    overlay.SwitchToActiveFrame();
+        	    navigation.ClickPrimaryTabNavLnk("Schedule");
         	    scheduleQueue.VerifyRunNowLnkPresent(mediaTitle, "Unpublish");
         	    contentParent.VerifyPageContentPresent(Arrays.asList(mediaTitle, 
-        	    		"Unpublish", pub7Date1YearInFuture + " - 04:00"));
+        	    		"Unpublish", pub7Date1YearInFuture));
         	    
         	    //Step 37 - NA
         	    

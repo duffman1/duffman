@@ -3,15 +3,18 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ProgramG
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ProgramGuide;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 
-public class ProgramGuideVerification extends ParentTest{
+public class ProgramGuideVerification extends ParentTest {
+	
+	private Boolean testSuccessful = false;
+	
 	/*************************************************************************************
      * TEST CASE - TC1579
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/17926339982
@@ -23,44 +26,36 @@ public class ProgramGuideVerification extends ParentTest{
 		UserLogin userLogin = applib.openApplication();
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			    
-		//Step 2 and 3	   
+		//Step 2 and 3	
+		navigation.Modules();
 		Modules modules = new Modules(webDriver);
-		taxonomy.NavigateSite("Modules");
-		overlay.SwitchToActiveFrame();
-		modules.EnterFilterName("Program Guide");
 		modules.EnableModule("Program Guide");
-		modules.EnterFilterName("Program Guide Example");
 		modules.EnableModule("Program Guide Example");
-		overlay.ClickCloseOverlayLnk();
 			    
 		//Step 4
-		taxonomy.NavigateSite("Structure>>Blocks");        
-		overlay.SwitchToActiveFrame();
-		        
+		navigation.Structure("Blocks");
+		       
 		//Step 5
 		Blocks blocks = new Blocks(webDriver);
-		blocks.SelectRegion("Program Guide", "Content");
+		blocks.SelectRegion("Program Guide", "Footer fourth column");
 		blocks.ClickSaveBlocksBtn();
-		overlay.SwitchToActiveFrame();
 		ContentParent contentParent = new ContentParent(webDriver);
 		contentParent.VerifyMessageStatus("The block settings have been updated.");
 		        
 		//Step 6
-		blocks.VerifySelectedRegion("Program Guide", "Content");
-		overlay.ClickCloseOverlayLnk();
-		taxonomy.NavigateSite("Configuration>>Web services>>Program Guide");
-		      
+		blocks.VerifySelectedRegion("Program Guide", "Footer fourth column");
+		navigation.Configuration("Program Guide");
+  
 		//Step 7
-		overlay.SwitchToActiveFrame();
 		ProgramGuide programGuide = new ProgramGuide(webDriver);
 		programGuide.EnterDataURL();
 		      
 		//Step 8
 		programGuide.ClickSaveConfigBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");      
-		overlay.ClickCloseOverlayLnk();
 		        
 		//Step 9
+		navigation.Home();
 	    programGuide.VerifyProgramGuideText();
         
         //Step 10
@@ -69,17 +64,15 @@ public class ProgramGuideVerification extends ParentTest{
         //Step 11 - N/A
         
         //Step 12
-        taxonomy.NavigateSite("Home>>Run cron");
-        overlay.SwitchToActiveFrame();
-        ErrorChecking errorChecking = new ErrorChecking(webDriver);
-        errorChecking.VerifyNoMessageErrorsPresent();
+        Cron cron = new Cron(webDriver);
+        cron.RunCron();
 	    
         //Step 13
+        navigation.Reports("Status report");
         programGuide.ProgramGuideRunCronStatus();
-        overlay.ClickCloseOverlayLnk();
         
         //Step 14
-        taxonomy.NavigateSite("Home");
+        navigation.Home();
         
         //Step 15
         programGuide.VerifyProgramGuideText();
@@ -91,11 +84,23 @@ public class ProgramGuideVerification extends ParentTest{
         programGuide.VerifyProgramGuideContainsShows();
         
         //Step 19
-        taxonomy.NavigateSite("Structure>>Blocks");
-        overlay.SwitchToActiveFrame();
-        blocks.SelectRegion("Program Guide", "- None -");
-        blocks.ClickSaveBlocksBtn();
+        navigation.Modules();
+        modules.DisableModule("Program Guide Example");
         
+        testSuccessful = true;
     }
+	
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"ProgramGuideVerification_TC1579"}, alwaysRun=true)
+	public void Cleanup() throws Exception {
+    	if (testSuccessful == false) {
+    		UserLogin userLogin = applib.openApplication();
+    		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+    		navigation.Modules();
+    		Modules modules = new Modules(webDriver);
+    		modules.DisableModule("Program Guide Example");
+    		
+    	}
+		
+	}
     
 }

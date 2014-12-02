@@ -1,12 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Focal Point Library. Copyright
@@ -16,53 +17,62 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class FocalPoint {
 		
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
+	
 	//PAGE OBJECT CONSTRUCTOR
 	public FocalPoint(Driver webDriver) {
-		PageFactory.initElements(webDriver, this);
+		config = new Config();
+		timeout = config.getConfigValueInt("WaitForWaitTime");
+		waitFor = new WaitFor(webDriver, timeout);
+		interact = new Interact(webDriver, timeout);
 		
 	}
 
 	//PAGE OBJECT IDENTIFIERS
-	@FindBy(how = How.ID, using ="edit-focal-point-enabled-for-image")
-	private WebElement StandardImageFields_Cbx;
+	private By StandardImageFields_Cbx = By.id("edit-focal-point-enabled-for-image");
 	
-	@FindBy(how = How.ID, using ="edit-focal-point-enabled-for-media")
-	private WebElement MediaModuleImageFields_Cbx;
+	private By MediaModuleImageFields_Cbx = By.id("edit-focal-point-enabled-for-media");
 	
-	@FindBy(how = How.ID, using ="edit-focal-point-preview-image-style")
-	private WebElement PreviewImageStyle_Ddl;
+	private By PreviewImageStyle_Ddl = By.id("edit-focal-point-preview-image-style");
 	
-	@FindBy(how = How.ID, using ="edit-submit")
-	private WebElement SaveConfiguration_Btn;
+	private By SaveConfiguration_Btn = By.id("edit-submit");
 
 	
 	//PAGE OBJECT METHODS
 	public void ClickStandardImageFieldsCbx() throws Exception {
 
-		if (StandardImageFields_Cbx.isSelected() == false) {
+		WebElement ele = waitFor.ElementVisible(StandardImageFields_Cbx);
+		if (ele.isSelected() == false) {
 			Reporter.log("Check the 'Standard image fields' check box.");
-			StandardImageFields_Cbx.click();
+			interact.Click(ele);
 		}
 	}
 	
 	public void ClickMediaModuleImageFieldsCbx() throws Exception {
 
-		if (MediaModuleImageFields_Cbx.isSelected() == false) {
+		WebElement ele = waitFor.ElementVisible(MediaModuleImageFields_Cbx);
+		if (ele.isSelected() == false) {
 			Reporter.log("Check the 'Media module image fields' check box.");
-			MediaModuleImageFields_Cbx.click();
+			ele.click();
 		}
+		
 	}
 	
 	public void SelectPreviewImageStyle(String option) throws Exception {
 
 		Reporter.log("Select '" + option + "' from the 'Preview Image Style' drop down list.");
-		new Select(PreviewImageStyle_Ddl).selectByVisibleText(option);
+		interact.Select(waitFor.ElementVisible(PreviewImageStyle_Ddl), option);
+		
 	}
 	
 	public void ClickSaveConfigurationBtn() throws Exception {
 
 		Reporter.log("Click the 'Save configuration' button.");
-		SaveConfiguration_Btn.click();
+		interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
+		
 	}
 
 }

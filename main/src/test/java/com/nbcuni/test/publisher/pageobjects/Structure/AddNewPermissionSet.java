@@ -1,15 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -24,106 +22,108 @@ import java.util.List;
 
 public class AddNewPermissionSet {
 
-    private Driver webDriver;
-    ContentParent contentParent;
+    private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public AddNewPermissionSet(Driver webDriver, AppLib applib) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        contentParent = new ContentParent(webDriver);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-name")
-    private WebElement PermissionSetName_Txb;
+    private By PermissionSetName_Txb = By.id("edit-name");
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement Save_Btn;
+    private By Save_Btn = By.id("edit-submit");
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Edit']")
-    private WebElement Edit_Tab;
+    private By Edit_Tab = By.xpath("//a[text()='Edit']");
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Export']")
-    private WebElement Export_Tab;
+    private By Export_Tab = By.xpath("//a[text()='Export']");
     
-    @FindBy(how = How.ID, using = "edit-code")
-    private WebElement Export_Txa;
+    private By Export_Txa = By.id("edit-code");
     
-    private WebElement Permission_Cbx(String value) {
-    	return webDriver.findElement(By.cssSelector("input[value='" + value + "']"));
+    private By Permission_Cbx(String value) {
+    	return By.cssSelector("input[value='" + value + "']");
     }
     
-    private List<WebElement> AllPermission_Cbxs() {
-    	return webDriver.findElements(By.cssSelector("table[id='permissions'] input[type='checkbox']"));
-    }
-    
+    private By AllPermission_Cbxs = By.cssSelector("table[id='permissions'] input[type='checkbox']");
+   
     
     //PAGE OBJECT METHODS
     public void EnterPermissionSetName(String setName) throws Exception {
     	
     	Reporter.log("Enter '" + setName + "' in the 'Permission Set Name' text box.");
-    	PermissionSetName_Txb.sendKeys(setName);
+    	interact.Type(waitFor.ElementVisible(PermissionSetName_Txb), setName);
+    	
     }
     
     public void EnablePermissions(List<String> permissionValues) throws Exception {
     	
     	for (String value : permissionValues) {
-    		if (Permission_Cbx(value).isSelected() == false) {
+    		WebElement ele = waitFor.ElementVisible(Permission_Cbx(value));
+    		if (!ele.isSelected()) {
     			Reporter.log("Check the '" + value + "' checkbox.");
-    			try {
-    				Permission_Cbx(value).click();
-    			}
-    			catch (WebDriverException e) {
-    				contentParent.Scroll("-500");
-    				Permission_Cbx(value).click();
-    			}
+    			interact.ScrollToTop();
+    			interact.Click(ele);
     		}
     	}
+    	
     }
     
     public void DisablePermissions(List<String> permissionValues) throws Exception {
     	
     	for (String value : permissionValues) {
-    		if (Permission_Cbx(value).isSelected() == true) {
+    		WebElement ele = waitFor.ElementVisible(Permission_Cbx(value));
+    		if (ele.isSelected()) {
     			Reporter.log("Uncheck the '" + value + "' checkbox.");
-    			Permission_Cbx(value).click();
+    			interact.ScrollToTop();
+    			interact.Click(ele);
     		}
     	}
+    	
     }
     
     public void VerifyAllPermissionCbxsNotChecked() throws Exception {
     	
     	Reporter.log("Verify all permission checkboxes are not checked.");
-    	for (WebElement cbx : AllPermission_Cbxs()) {
-    		if (cbx.isSelected() == true) {
+    	for (WebElement cbx : waitFor.ElementsPresent(AllPermission_Cbxs)) {
+    		if (cbx.isSelected()) {
     			Assert.fail("Check box with value '" + cbx.getAttribute("value") + "' is checked.");
     		}
     	}
+    	
     }
     
     public void ClickSaveBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
-    	Save_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Save_Btn));
+    	
     }
     
     public void ClickExportTab() throws Exception {
     	
     	Reporter.log("Click the 'Export' tab.");
-    	Export_Tab.click();
+    	interact.Click(waitFor.ElementVisible(Export_Tab));
+    	
     }
     
     public void ClickEditTab() throws Exception {
     	
     	Reporter.log("Click the 'Edit' tab.");
-    	Edit_Tab.click();
+    	interact.Click(waitFor.ElementVisible(Edit_Tab));
+    	
     }
     
     public void VerifyExportCodeValue(String value) throws Exception {
     	
     	Reporter.log("Verify 'Export' text area value is '" + value + "'.");
-    	Assert.assertEquals(Export_Txa.getAttribute("value"), value);
+    	Assert.assertEquals(waitFor.ElementVisible(Export_Txa).getAttribute("value"), value);
+    	
     }
     
 }

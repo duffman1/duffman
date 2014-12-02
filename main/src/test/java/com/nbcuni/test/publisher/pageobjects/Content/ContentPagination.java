@@ -1,16 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-import java.util.List;
+
 
 /*********************************************
  * publisher.nbcuni.com Content Pagination Library. Copyright 
@@ -21,47 +19,46 @@ import java.util.List;
 
 public class ContentPagination {
 
-	private Driver webDriver;
-	private WebDriverWait wait;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentPagination(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS      
-    @FindBy(how = How.XPATH, using = "//div[@class='item-list']")
-    private WebElement Pager_Ctr;
+    private By Pager_Ctr = By.xpath("//div[@class='item-list']");
     
-    private List<WebElement> PageNumber_Lnks() {
-    	return webDriver.findElements(By.xpath("//div[@class='item-list']/ul/li"));
-    }
+    private By AllPageNumber_Lnks = By.xpath("//div[@class='item-list']/ul/li");
     
-    @FindBy(how = How.XPATH, using = "//div[@class='item-list']//a[contains(text(), 'next')]")
-    private WebElement NextPage_Lnk;
+    private By NextPage_Lnk = By.xpath("//div[@class='item-list']//a[contains(text(), 'next')]");
     
     
     //PAGE OBJECT METHODS
     public void VerifyPageCtrPresent() throws Exception {
     	
     	Reporter.log("Verify the pagination links are present.");
-    	wait.until(ExpectedConditions.visibilityOf(Pager_Ctr));
+    	waitFor.ElementVisible(Pager_Ctr);
     	
     }
     
     public void VerifyCorrectNumberOfPagesDisplayed(Integer numberOfPages) throws Exception{
     
     	Reporter.log("Verify the number of pages equals '" + numberOfPages.toString() + ".");
-    	Assert.assertTrue(PageNumber_Lnks().size() == numberOfPages);	 
+    	Assert.assertTrue(waitFor.ElementsPresent(AllPageNumber_Lnks).size() == numberOfPages);	 
     
     }
     
-    public void ClickNextPageLnk(){
+    public void ClickNextPageLnk() throws Exception {
     	
     	Reporter.log("Click the 'next >' Link");
-    	NextPage_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(NextPage_Lnk));
     	
     }
     

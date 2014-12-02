@@ -1,16 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import java.util.List;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -22,46 +20,43 @@ import org.testng.Reporter;
  *********************************************/
 public class WorkBench {
 
-	private Driver webDriver;
-    private Config config;
-    private WebDriverWait wait;
+	private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
 	//PAGE OBJECT CONSTRUCTORS
     public WorkBench(Driver webDriver) {
-        this.webDriver = webDriver;
         config = new Config();
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
+    
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS
-    @FindBy(how = How.CLASS_NAME, using = "workbench-info-block")
-    private WebElement WorkBenchInfo_Ctr;
+    private By WorkBenchInfo_Ctr = By.xpath("//div[@class='workbench-info-block']");
     
-    private WebElement WorkBench_Tab(String tabName) {
-    	return webDriver.findElement(By.xpath("//a[text()='" + tabName + "']"));
+    private By WorkBench_Tab(String tabName) {
+    	return By.xpath("//a[text()='" + tabName + "']");
     }
     
-    @FindBy(how = How.XPATH, using ="//li[@class='block-configure first last']/a[contains(text(),'Configure block')]")
-    private WebElement ConfigureBlock_Lnk;
-    
-    private WebElement CloneContent_Lnk(String contentType) {
-    	return webDriver.findElement(By.xpath("//a[text() = 'Clone this " + contentType + "']"));
+    private By CloneContent_Lnk(String contentType) {
+    	return By.xpath("//a[text() = 'Clone this " + contentType + "']");
     }
     
-    @FindBy(how = How.CSS, using = "iframe[id='pdk-player']")
-    private WebElement MPXPlayer_Frm;
+    private By MPXPlayer_Frm = By.cssSelector("iframe[id='pdk-player']");
     
-    private WebElement WorkBench_Img(String imageIndex) {
-    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'image')]//img)[" + imageIndex + "]"));
+    private By WorkBench_Img(String imageIndex) {
+    	return By.xpath("(//div[contains(@class, 'image')]//img)[" + imageIndex + "]");
     }
     
-    private WebElement WorkBenchImg_Lnk(String linkIndex) {
-    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'image')]//a[contains(@type, 'image')])[" + linkIndex + "]"));
+    private By WorkBenchImg_Lnk(String linkIndex) {
+    	return By.xpath("(//div[contains(@class, 'image')]//a[contains(@type, 'image')])[" + linkIndex + "]");
     }
     
-    private WebElement WorkBenchFileImage_Ids(String imageIndex) {
-    	return webDriver.findElement(By.xpath("(//div[contains(@class, 'image')])[" + imageIndex + "]"));
+    private By WorkBenchFileImage_Ids(String imageIndex) {
+    	return By.xpath("(//div[contains(@class, 'image')])[" + imageIndex + "]");
     }
     
     
@@ -69,89 +64,87 @@ public class WorkBench {
     public void ClickWorkBenchTab(String tabName) throws Exception{
     
     	Reporter.log("Click the '" + tabName + "' link in the work bench.");
-    	wait.until(ExpectedConditions.visibilityOf(WorkBench_Tab(tabName)));
-    	Thread.sleep(500);
-    	WorkBench_Tab(tabName).click();
+    	interact.Click(waitFor.ElementVisible(WorkBench_Tab(tabName)));
 
     }
     
     public void VerifyWorkBenchTabPresent(String tabName) throws Exception {  	
     	 	
-    	Reporter.log("Verify the '" + tabName + "' is present in the work bench.");
-    	WorkBench_Tab(tabName).isDisplayed(); 	
+    	Reporter.log("Verify the '" + tabName + "' tab is present in the work bench.");
+    	waitFor.ElementVisible(WorkBench_Tab(tabName));
+    	 	
     }
 
     public void VerifyWorkBenchBlockTextPresent(List<String> txtItems) throws Exception {
 
         for (String text : txtItems) {
         	Reporter.log("Verify the text '" + text + "' is present in the work bench info block.");
-        	Assert.assertTrue(WorkBenchInfo_Ctr.getText().contains(text), "Text '" + text + "' was not present in the work bench info block.");
+        	waitFor.ElementContainsText(WorkBenchInfo_Ctr, text);
         }
+        
     }
     
     public void ClickCloneContentLnk(String contentType) throws Exception {
         
     	Reporter.log("Click the 'Clone this " + contentType + "' link.");
-    	CloneContent_Lnk(contentType).click();
+    	interact.Click(waitFor.ElementVisible(CloneContent_Lnk(contentType)));
+    	
     }
     
     public void VerifyMPXPlayerPresent() throws Exception {
         
     	Reporter.log("Verify the mpx video player frame is present.");
-        MPXPlayer_Frm.isDisplayed();
+    	waitFor.ElementVisible(MPXPlayer_Frm);
+        
     }
     
     public void VerifyMPXPlayerSourceNotPresent(String source) throws Exception {
         
     	Reporter.log("Verify the mpx video player frame source does NOT contain '" + source + "'.");
-        Assert.assertFalse(MPXPlayer_Frm.getAttribute("src").contains(source));
+        Assert.assertFalse(waitFor.ElementVisible(MPXPlayer_Frm).getAttribute("src").contains(source));
+        
     }
     
     public void VerifyFileImagePresent(String imageSrc, String imageIndex) throws Exception {
     	
     	Reporter.log("Assert that img source of the Media Item contains '" + imageSrc + "'.");
-    	Assert.assertTrue(WorkBench_Img(imageIndex).getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(WorkBench_Img(imageIndex), "src", imageSrc);
     	
     	Reporter.log("Assert the the img is loaded and visible.");
-    	boolean imgLoaded;
-        for (int second = 0; ; second++){
-            if (second >= 30) {
-                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
-            }
-            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
-            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
-            			WorkBench_Img(imageIndex));
-            if (imgLoaded == true){ break;}
-            Thread.sleep(500);
-        }
+    	waitFor.ImageVisible(ele);
+    	
     }
     
     public void VerifyFileImageLinkPresent(String imageHref, String linkIndex) throws Exception {
     	
     	Reporter.log("Verify that the image link is present and contains file url '" + imageHref + "'.");
-    	Assert.assertTrue(WorkBenchImg_Lnk(linkIndex).getAttribute("href").contains(imageHref));
+    	Assert.assertTrue(waitFor.ElementVisible(WorkBenchImg_Lnk(linkIndex)).getAttribute("href").contains(imageHref));
     	
     }
     
     public void VerifyFileImageSize(String imageIndex, String height, String width) throws Exception {
     	
     	Reporter.log("Assert that the workbench image width = '" + width + "' and the image height = '" + height + "'.");
-    	Assert.assertEquals(WorkBench_Img(imageIndex).getAttribute("width"), width);
-    	Assert.assertEquals(WorkBench_Img(imageIndex).getAttribute("height"), height);
+    	WebElement ele = waitFor.ElementVisible(WorkBench_Img(imageIndex));
+    	Assert.assertEquals(ele.getAttribute("width"), width);
+    	Assert.assertEquals(ele.getAttribute("height"), height);
     	  
     }
     
-    public String GetFileImageId(String imageIndex) {
+    public String GetFileImageId(String imageIndex) throws Exception {
     	
     	Reporter.log("Get the file id of image number " + imageIndex + ".");
-    	return WorkBenchFileImage_Ids(imageIndex).getAttribute("id").replace("file-", "");
+    	return waitFor.ElementVisible(WorkBenchFileImage_Ids(imageIndex)).getAttribute("id").replace("file-", "");
+    
     }
     
     public String GetContentNodeNumber() throws Exception {
         
     	Reporter.log("Note the node number for the content item.");
-    	return WorkBench_Tab("Edit Draft").getAttribute("href").replace(config.getConfigValueString("AppURL") + 
-    			"/node/", "").replace("/edit", "");
+    	String[] splitOn = waitFor.ElementVisible(WorkBench_Tab("Edit Draft")).getAttribute("href").split("/edit");
+    	String nodeID = splitOn[0].replace(config.getConfigValueString("AppURL") + 
+    			"/node/", "");
+    	return nodeID;
 
     }
 

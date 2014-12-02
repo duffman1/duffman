@@ -1,13 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues;
 
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
 import java.util.List;
@@ -21,56 +21,63 @@ import java.util.List;
 
 public class AddQueueType {
 
-    private Driver webDriver;
+    private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public AddQueueType(Driver webDriver, AppLib applib) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-label")
-    private WebElement Name_Txb;
+    private By Name_Txb = By.id("edit-label");
     
-    @FindBy(how = How.ID, using = "edit-target")
-    private WebElement EntityType_Ddl;
+    private By EntityType_Ddl = By.id("edit-target");
     
-    private WebElement ContentType_Cbx(String contentType) {
-    	return webDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
+    private By ContentType_Cbx(String contentType) {
+    	return By.xpath("//label[text()='" + contentType + " ']/../input");
     }
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement SaveQueueType_Btn;
+    private By SaveQueueType_Btn = By.id("edit-submit");
     
     
     //PAGE OBJECT METHODS
     public void EnterName(String queueTypeName) throws Exception {
     	
     	Reporter.log("Enter '" + queueTypeName + "' in the 'Name' text box.");
-    	Name_Txb.sendKeys(queueTypeName);
+    	interact.Type(waitFor.ElementVisible(Name_Txb), queueTypeName);
+    	
     }
     
     public void SelectEntityType(String entityType) throws Exception {
     	
     	Reporter.log("Select '" + entityType + "' from the 'Entity type' drop down list.");
-    	new Select(EntityType_Ddl).selectByVisibleText(entityType);
+    	interact.Select(waitFor.ElementVisible(EntityType_Ddl), entityType);
+    	
     }
     
     public void EnableContentTypes(List<String> contentTypes) throws Exception {
     	
     	for (String contentType : contentTypes) {
-    		if (ContentType_Cbx(contentType).isSelected() == false) {
+    		WebElement ele = waitFor.ElementVisible(ContentType_Cbx(contentType));
+    		if (!ele.isSelected()) {
     			Reporter.log("Check the '" + contentType + "' check box.");
-    			ContentType_Cbx(contentType).click();
+    			interact.Click(ele);
     		}
     	}
+    	
     }
     
     public void ClickSaveQueueTypeBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save queue type' button.");
-    	SaveQueueType_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SaveQueueType_Btn));
+    	
     }
     
     

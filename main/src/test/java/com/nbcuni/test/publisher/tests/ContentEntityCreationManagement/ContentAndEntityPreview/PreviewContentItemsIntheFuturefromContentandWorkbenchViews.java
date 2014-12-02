@@ -6,10 +6,12 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -48,40 +50,43 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
 	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "certify"})
 	public void PreviewContentItemsIntheFuturefromContentandWorkbenchViews_Test() throws Exception{
 		
-		//Step 1
+		Reporter.log("STEP 1");
     	UserLogin userLogin = applib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
-        //Step 2        
-    	taxonomy.NavigateSite("Content>>Add content>>Post");
-    	overlay.SwitchToActiveFrame();
+        Reporter.log("SETUP");
+        navigation.Modules();
+        Modules modules = new Modules(webDriver);
+        modules.DisableModule("Pub SPS (Site Preview System)");
+        
+        Reporter.log("STEP 2");    
+        navigation.AddContent("Post");
     	BasicInformation basicInformation = new BasicInformation(webDriver);
     	String postTitle = random.GetCharacterString(15);
     	basicInformation.EnterTitle(postTitle);    	
     	basicInformation.EnterSynopsis();
-    	overlay.SwitchToActiveFrame();
     	String shortDescriptionText = random.GetCharacterString(25);
     	basicInformation.EnterShortDescription(shortDescriptionText);
     	basicInformation.ClickCoverSelectBtn();
     	SelectFile selectFile = new SelectFile(webDriver);
     	selectFile.SelectDefaultCoverImg();
-    	overlay.SwitchToActiveFrame();
     	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
     	publishingOptions.ClickPublishingOptionsLnk();
     	publishingOptions.SelectModerationState("Published");
     	ContentParent contentParent = new ContentParent(webDriver);
     	contentParent.ClickSaveBtn();
-    	overlay.switchToDefaultContent(true);
     	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
+    	Thread.sleep(2000);
+    	String postURL = webDriver.getCurrentUrl();
     	
-        //Step 3
+        Reporter.log("STEP 3");
     	SitePreview sitePreview = new SitePreview(webDriver);
-        sitePreview.ClickPreviewSiteLnk();    	
+        sitePreview.ClickInteractivePreviewBtn();    	
         
-    	//Step 4			
+    	Reporter.log("STEP 4");			
         sitePreview.SelectACondition();
 		
-        //Step 5
+        Reporter.log("STEP 5");
         Calendar cal = Calendar.getInstance();
     	cal.add(Calendar.DATE, 1);
     	Date date = cal.getTime();
@@ -94,64 +99,58 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         sitePreview.EnterDate(sPreviewDate);
         sitePreview.EnterTime("16:40");
         
-        //Step 6        
-        sitePreview.ClickEnablePreviewBtn(); 
+        Reporter.log("STEP 6");        
+        sitePreview.ClickEnablePreviewLnk(); 
         
-        //Step 7  
-        sitePreview.VerifyDisablePreviewBtnVisible();
-        sitePreview.VerifyUpdatePreviewBtnVisible();
+        Reporter.log("STEP 7");
+        sitePreview.ClickInteractivePreviewBtn();
+        sitePreview.VerifyDisablePreviewLnkVisible();
+        sitePreview.VerifyUpdatePreviewLnkVisible();
         
         //Step 8
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
-        overlay.SwitchToActiveFrame();
         String updatedPostTitle = "Updated" + postTitle;
         String updatedShortDescription = "Updated" + shortDescriptionText;
         basicInformation.EnterTitle(updatedPostTitle);
         basicInformation.EnterShortDescription(updatedShortDescription);
         String updatedBodyTxt = basicInformation.EnterSynopsis(); 
-        overlay.SwitchToActiveFrame();
         contentParent.ClickSaveBtn();
         
         //Step 9
-    	overlay.switchToDefaultContent(true);
     	workBench.ClickWorkBenchTab("Schedule");
-    	overlay.SwitchToActiveFrame();
     	ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
     	scheduleQueue.ClickAddScheduledRevisionLnk();
-    	overlay.SwitchToActiveFrame();
     	scheduleQueue.SelectRevision(updatedPostTitle);
     	scheduleQueue.SelectOperation("Moderate to Published");
     	scheduleQueue.EnterDate(sStandardDate);
     	scheduleQueue.EnterTime("12:40 PM");
     	scheduleQueue.ClickScheduleBtn();
-    	overlay.SwitchToActiveFrame();
     	contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
-    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 10
+    	applib.openSitePage(postURL);
+    	sitePreview.ClickInteractivePreviewBtn();
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
     	sitePreview.VerifyDateValue(sPreviewDate);
     	sitePreview.VerifyTimeValue("16:40");
-    	webDriver.navigate().refresh();  
+    	applib.refreshPage(); 
     	contentParent.VerifyPageContentPresent(Arrays.asList(updatedShortDescription, updatedBodyTxt));
+    	Thread.sleep(2000);
     	
     	//Step 11
-    	sitePreview.ClickPreviewSiteLnk();
-    	sitePreview.VerifyDisablePreviewBtnNotVisible();
+    	sitePreview.ClickInteractivePreviewBtn();
+    	sitePreview.VerifyEnablePreviewLnkNotPresent();
     	
     	//Step 12
-    	sitePreview.ClickPreviewSiteLnk();
-    	sitePreview.VerifyDisablePreviewBtnVisible();
+    	sitePreview.VerifyDisablePreviewLnkVisible();
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
     	sitePreview.VerifyDateValue(sPreviewDate);
     	sitePreview.VerifyTimeValue("16:40");
     	
     	//Step 13
     	workBench.ClickWorkBenchTab("Schedule");
-    	overlay.SwitchToActiveFrame();    	
     	scheduleQueue.ClickAddScheduledRevisionLnk();    	
-    	overlay.SwitchToActiveFrame();
     	scheduleQueue.SelectRevision(updatedPostTitle);
     	scheduleQueue.SelectOperation("Moderate to Published");    	
     	cal.add(Calendar.DATE, 2);
@@ -160,11 +159,10 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	scheduleQueue.EnterDate(ssDate);
     	scheduleQueue.EnterTime("1:40 AM");
     	scheduleQueue.ClickScheduleBtn();
-    	overlay.SwitchToActiveFrame();
     	contentParent.VerifyMessageStatus("The scheduled revision operation has been saved"); 
-    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 14
+    	sitePreview.ClickInteractivePreviewBtn();
     	sitePreview.VerifySelectAConditionValue("Site as of ...");
     	sitePreview.VerifyDateValue(sPreviewDate);
     	sitePreview.VerifyTimeValue("16:40");
@@ -172,23 +170,24 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
     	//Step 15
     	sitePreview.EnterDate(pub7PreviewDateFormat.format(dateafter2));
         sitePreview.EnterTime("16:40");
-        sitePreview.ClickUpdatePreviewBtn();
+        sitePreview.ClickUpdatePreviewLnk();
         
         //Step 16
-        overlay.switchToDefaultContent(true);
+        applib.openSitePage(postURL);
         contentParent.VerifyPageContentPresent(Arrays.asList(updatedShortDescription, updatedBodyTxt));
         
     	//Step 17
-    	sitePreview.ClickDisablePreviewBtn();
+        sitePreview.ClickInteractivePreviewBtn();
+    	sitePreview.ClickDisablePreviewLnk();
     	
     	//Step 18
-    	sitePreview.ClickPreviewSiteLnk();
+    	sitePreview.ClickInteractivePreviewBtn();
     	
     	//Step 19
     	sitePreview.VerifySelectAConditionValue("- Select -");
     	
     	//Step 20
-    	sitePreview.VerifyEnablePreviewBtnVisible();
+    	sitePreview.VerifyEnablePreviewLnkVisible();
       
     		
 	}

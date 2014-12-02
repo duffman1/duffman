@@ -3,9 +3,8 @@ package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespon
 import java.util.Arrays;
 import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
@@ -38,13 +37,11 @@ public class MPXAccountDeletion extends ParentTest {
             Cron cron = new Cron(webDriver);
             
             //Step 4
-            taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            overlay.SwitchToActiveFrame();
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
+            navigation.Configuration("Media: thePlatform mpx settings");
+            List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	settings.ExpandAccountList();
         	
         	//Step 5 through 8
-        	ContentParent contentParent = new ContentParent(webDriver);
         	ErrorChecking errorChecking = new ErrorChecking(webDriver);
         	List<WebElement> AllDeleteAccountButtons = settings.GetAllDeleteAccountButtons();
         	Assert.assertTrue(configuredAccounts.size() == AllDeleteAccountButtons.size());
@@ -54,29 +51,21 @@ public class MPXAccountDeletion extends ParentTest {
         		settings.GetAllDeleteAccountButtons().get(0).click();
         		contentParent.VerifyPageContentPresent(Arrays.asList("You are about to delete account", "and all of its assets. This action cannot be undone."));
         		settings.ClickDeleteBtn();
-        		overlay.switchToDefaultContent(true);
-        		overlay.SwitchToFrame("Deleting MPX Account");
-        		overlay.switchToDefaultContent(true);
-        		overlay.WaitForFrameNotPresent("Deleting MPX Account");
-        		overlay.SwitchToActiveFrame();
-        		contentParent.VerifyMessageStatus("Beginning process of deleting account");
+        		contentParent.WaitForProgressBarNotPresent();
         		errorChecking.VerifyNoMessageErrorsPresent();
         		
         	}
         	
         	//Step 9
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Content("Files", "mpxMedia");
         	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle("Automation");
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent(true);
-        	Assert.assertTrue(searchFor.GetSearchResultSize() == 0);
+        	searchFor.VerifyNoSearchResultsPresent();
         	
         	//Step 10
-        	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-            settings.EnterUsername(config.getConfigValueString("MPXUsername"));
+        	navigation.Configuration("Media: thePlatform mpx settings");
+        	settings.EnterUsername(config.getConfigValueString("MPXUsername"));
         	settings.EnterPassword(config.getConfigValueString("MPXPassword"));
         	settings.ClickConnectToMPXBtn();
         	contentParent.VerifyMessageStatus("Login successful");
@@ -93,16 +82,15 @@ public class MPXAccountDeletion extends ParentTest {
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
         	
         	//Step 11
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        	navigation.Content("Files", "mpxMedia");
         	mpxMedia.ExpandMPXMedia();
             mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
-            cron.RunCron(false);
-    	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            cron.RunCron();
+            navigation.Content("Files", "mpxMedia");
     	    searchFor.EnterTitle("Automation");
     	    searchFor.ClickApplyBtn();
-    	    overlay.switchToDefaultContent(true);
     	    int I = 0;
     	    while (!searchFor.GetFirstMPXMediaSearchResult().contains("Automation")) {
     	    	I++; 

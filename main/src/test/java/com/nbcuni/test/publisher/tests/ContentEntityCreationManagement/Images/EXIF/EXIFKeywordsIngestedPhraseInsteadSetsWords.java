@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
@@ -18,12 +18,12 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
     public void EXIFKeywordsIngestedPhraseInsteadSetsWords_TC17() throws Exception{
          
         	//Step 1
+    		Boolean publicFileOptionPresent = true;
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 1a
-            taxonomy.NavigateSite("Configuration>>Media>>Simple EXIF/IPTC Mappings");
-            overlay.SwitchToActiveFrame();
+        	navigation.Configuration("Simple EXIF/IPTC Mappings");
             SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
             simpleEXIFIPTCMappings.SelectAltText("Title");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
@@ -35,14 +35,11 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             simpleEXIFIPTCMappings.SelectMediaTags("none");
             simpleEXIFIPTCMappings.SelectSource("Source");
             simpleEXIFIPTCMappings.ClickSaveBtn();
-            overlay.ClickCloseOverlayLnk();
             
             //Step 2
-            taxonomy.NavigateSite("Content>>Files");
-            overlay.SwitchToActiveFrame();
+            navigation.Content("Files");
             Content content = new Content(webDriver);
             content.ClickAddFileLnk();
-            overlay.SwitchToActiveFrame();
             AddFile addFile = new AddFile(webDriver);
             addFile.ClickAddFilesLnk();
             if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
@@ -59,7 +56,6 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             addFile.ClickStartUploadLnk();
             addFile.WaitForSuccessfulUpload();
             addFile.ClickNextBtn();
-            overlay.SwitchToActiveFrame();
             
             //Step 3
             EditImage editImage = new EditImage(webDriver);
@@ -70,16 +66,12 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.VerifyCopyrightValue("1", "2013 NBCUniversal Media, LLC");
             editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
             editImage.ClickSaveBtn("1");
-            overlay.SwitchToActiveFrame();
             ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyMessageStatus("Image");
             contentParent.VerifyMessageStatus("has been updated.");
-            overlay.ClickCloseOverlayLnk();
-            overlay.switchToDefaultContent(true);
             
             //Step 4
-            taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Media Gallery");
             BasicInformation basicInformation = new BasicInformation(webDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
@@ -101,7 +93,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             addFile.ClickStartUploadLnk();
             addFile.WaitForSuccessfulUpload();
             addFile.ClickNextBtn();
-            overlay.SwitchToActiveFrame();
+            webDriver.switchTo().defaultContent();
             
             //Step 5
             MediaItems mediaItems = new MediaItems(webDriver);
@@ -117,7 +109,6 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.VerifyCopyrightValue("1", "2013 NBCUniversal Media, LLC");
             editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
             editImage.ClickCloseWindowImg();
-            overlay.SwitchToActiveFrame();
             
             //Step 7
             basicInformation.ClickCoverSelectBtn();
@@ -126,8 +117,10 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
         	selectFile.ClickUploadBtn();
         	selectFile.WaitForFileUploaded("NUP_155306_0046.JPG");
         	selectFile.ClickNextBtn();
-        	selectFile.ClickPublicLocalFilesRdb();
-        	selectFile.ClickNextBtn();
+        	publicFileOptionPresent = selectFile.ClickPublicLocalFilesRdb();
+        	if (publicFileOptionPresent == true) {
+        		selectFile.ClickNextBtn();
+        	}
         	
         	//Step 8
         	editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
@@ -138,7 +131,8 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
         	selectFile.VerifyFileImagePresent("NUP_155306_0046");
         	selectFile.ClickSaveBtn();
-        	overlay.SwitchToActiveFrame();
+        	selectFile.WaitForSelectFileFrameClose();
+        	webDriver.switchTo().defaultContent();
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             

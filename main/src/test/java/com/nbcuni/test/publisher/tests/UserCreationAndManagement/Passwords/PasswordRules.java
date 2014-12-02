@@ -4,7 +4,7 @@ import java.util.Arrays;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -36,10 +36,9 @@ public class PasswordRules extends ParentTest {
         userLogin.ClickLoginBtn();
         
         Reporter.log("STEP 2");
-        taxonomy.ClickActiveUserMenuLnk();
+        applib.openSitePage("/user");
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit");
-        overlay.SwitchToActiveFrame();
         
         Reporter.log("STEP 3");
         addUser.EnterPassword(" ");
@@ -105,14 +104,12 @@ public class PasswordRules extends ParentTest {
         contentParent.VerifyMessageStatus("The changes have been saved.");
         
         Reporter.log("STEP 13");
-        overlay.ClickCloseOverlayLnk();
         logout.ClickLogoutBtn();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-        taxonomy.NavigateSite("Configuration>>People>>Password policies>>List");
-        overlay.SwitchToActiveFrame();
+        navigation.Configuration("Password policies");
+        navigation.ClickPrimaryTabNavLnk("List");
         PasswordPolicies passwordPolicies = new PasswordPolicies(webDriver);
         passwordPolicies.ClickViewLnk();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyPageContentPresent(Arrays.asList("Expiration", "365"));
     	
     }

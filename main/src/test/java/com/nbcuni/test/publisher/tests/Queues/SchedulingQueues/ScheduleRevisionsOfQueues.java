@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Queues.SchedulingQueues;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
@@ -43,34 +43,30 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
-        taxonomy.NavigateSite("Content>>Queues>>Add Promo Queue");
-        overlay.SwitchToActiveFrame();
+        navigation.Content("Queues");
+        Queues queues = new Queues(webDriver);
+        queues.ClickAddPromoQueueLnk();
         
         //Step 3
-        Queues queues = new Queues(webDriver);
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.EnterQueueItem(postTitle, "1");
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
-        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle)); 
         
         //Step 4
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         
         //Step 5, 6, and 7 (truncated)
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
-        scheduleQueue.ClickScheduleTab();
-        overlay.SwitchToActiveFrame();
+        navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.ClickAddScheduledRevisionLnk();
         
         //Step 8
-        overlay.SwitchToActiveFrame();
         scheduleQueue.SelectRevision(queueTitle);
         scheduleQueue.SelectOperation("Moderate to Publish");
         Calendar cal = Calendar.getInstance();
@@ -83,16 +79,11 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         
         //Step 9
         scheduleQueue.ClickScheduleBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The scheduled revision operation has been saved.");
-        overlay.ClickCloseOverlayLnk();
-        taxonomy.NavigateSite("Content>>Queues");
-        overlay.SwitchToActiveFrame();
+        navigation.Content("Queues");
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
-        scheduleQueue.ClickScheduleTab();
-        overlay.SwitchToActiveFrame();
+        navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(queueTitle, "Moderate to Publish", sDate + " - 05:00 PM"));
         
     }

@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.basics.Settings;
 import org.sikuli.script.*;
 import org.testng.Reporter;
 
@@ -34,6 +36,8 @@ public class MPXAddPlayer {
     	PageFactory.initElements(webDriver, this);
     	wait = new WebDriverWait(webDriver, 10);
         sikuli = new Screen();
+        Settings.ActionLogs = false;
+        Settings.InfoLogs = false;
     	mpxAssets = new MPXAssets();
         
     }

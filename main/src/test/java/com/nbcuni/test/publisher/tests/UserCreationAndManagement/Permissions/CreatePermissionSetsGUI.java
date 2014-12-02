@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 import java.util.Arrays;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.People.ApplyPermissionSet;
@@ -25,22 +25,21 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//Step 2
-    	taxonomy.NavigateSite("Structure>>Permission Sets>>Add");
-    	overlay.SwitchToActiveFrame();
+    	navigation.Structure("Permission Sets");
+    	PermissionSets permissionSets = new PermissionSets(webDriver);
+    	permissionSets.ClickAddLnk();
     	
     	//Step 3
     	AddNewPermissionSet addNewPermissionSet = new AddNewPermissionSet(webDriver, applib);
     	String setName = random.GetCharacterString(15);
     	addNewPermissionSet.EnterPermissionSetName(setName);
-    	addNewPermissionSet.EnablePermissions(Arrays.asList("flush caches", "edit any document files"));
+    	addNewPermissionSet.EnablePermissions(Arrays.asList("view own files", "edit any document files"));
     	addNewPermissionSet.ClickSaveBtn();
     	contentParent.VerifyMessageStatus(setName + " has been created.");
-    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 4
-    	taxonomy.NavigateSite("People>>Permissions>>Apply Permission Set");
-    	overlay.SwitchToActiveFrame();
-    	ApplyPermissionSet applyPermissionSet = new ApplyPermissionSet(webDriver, applib);
+    	navigation.People("Permissions", "Apply Permission Set");
+    	ApplyPermissionSet applyPermissionSet = new ApplyPermissionSet(webDriver);
     	applyPermissionSet.SelectRolePermissionSet("Role: Senior Editor", setName);
     	applyPermissionSet.ClickApplyPermissionSetsBtn();
     	contentParent.VerifyMessageWarning("Applying a permission set may cause you to no longer have access to change user permissions.");
@@ -50,29 +49,22 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	contentParent.VerifyMessageStatus("senior editor");
     	
     	//Step 5
-    	applyPermissionSet.ClickPermissionsBtn();
-    	overlay.SwitchToActiveFrame();
+    	navigation.ClickSecondaryTabNavLnk("Permissions");
     	Permissions permissions = new Permissions(webDriver, applib);
-    	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("flush caches", "edit any document files"));
-    	overlay.ClickCloseOverlayLnk();
+    	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("view own files", "edit any document files"));
     	
     	//Step 6
-    	taxonomy.NavigateSite("Structure>>Permission Sets");
-    	overlay.SwitchToActiveFrame();
-    	PermissionSets permissionSets = new PermissionSets(webDriver);
+    	navigation.Structure("Permission Sets");
     	permissionSets.ClickPermissionSetEditLnk(setName);
-    	overlay.SwitchToActiveFrame();
     	
     	//Step 7
-    	addNewPermissionSet.DisablePermissions(Arrays.asList("flush caches", "edit any document files"));
+    	addNewPermissionSet.DisablePermissions(Arrays.asList("view own files", "edit any document files"));
     	addNewPermissionSet.EnablePermissions(Arrays.asList("create post content", "edit own post content"));
     	addNewPermissionSet.ClickSaveBtn();
     	contentParent.VerifyMessageStatus(setName + " has been updated.");
-    	overlay.ClickCloseOverlayLnk();
     	
     	//Step 8
-    	taxonomy.NavigateSite("People>>Permissions>>Apply Permission Set");
-    	overlay.SwitchToActiveFrame();
+    	navigation.People("Permissions", "Apply Permission Set");
     	applyPermissionSet.SelectRolePermissionSet("Role: Senior Editor", setName);
     	applyPermissionSet.ClickApplyPermissionSetsBtn();
     	contentParent.VerifyMessageWarning("Applying a permission set may cause you to no longer have access to change user permissions.");
@@ -82,28 +74,21 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	contentParent.VerifyMessageStatus("senior editor");
     	
     	//Step 9
-    	applyPermissionSet.ClickPermissionsBtn();
-    	overlay.SwitchToActiveFrame();
+    	navigation.ClickSecondaryTabNavLnk("Permissions");
     	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("create post content", "edit own post content"));
-    	permissions.VerifyPermissionsNotSelected("senior editor", Arrays.asList("flush caches", "edit any document files"));
-    	overlay.ClickCloseOverlayLnk();
+    	permissions.VerifyPermissionsNotSelected("senior editor", Arrays.asList("view own files", "edit any document files"));
     	
     	//Step 10
-    	taxonomy.NavigateSite("Structure>>Permission Sets");
-    	overlay.SwitchToActiveFrame();
+    	navigation.Structure("Permission Sets");
     	permissionSets.ClickPermissionSetExpandEditLnk(setName);
     	permissionSets.ClickPermissionSetDeleteLnk(setName);
-    	overlay.SwitchToActiveFrame();
     	Delete delete = new Delete(webDriver);
     	delete.ClickDeleteBtn();
-    	overlay.SwitchToActiveFrame();
     	contentParent.VerifyMessageStatus("The item has been deleted.");
     	permissionSets.VerifyPermissionSetNotPresent(setName);
     	
     	//Cleanup
-    	overlay.ClickCloseOverlayLnk();
-    	taxonomy.NavigateSite("People>>Permissions>>Apply Permission Set");
-    	overlay.SwitchToActiveFrame();
+    	navigation.People("Permissions", "Apply Permission Set");
     	applyPermissionSet.SelectRolePermissionSet("Role: Senior Editor", "Publisher Senior Editor Permissions Set");
     	applyPermissionSet.ClickApplyPermissionSetsBtn();
     	contentParent.VerifyMessageWarning("Applying a permission set may cause you to no longer have access to change user permissions.");

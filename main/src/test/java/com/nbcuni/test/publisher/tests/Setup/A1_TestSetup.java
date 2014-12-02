@@ -7,13 +7,16 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
+
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
@@ -22,10 +25,8 @@ import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
-import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
-import org.openqa.selenium.Alert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -37,8 +38,10 @@ public class A1_TestSetup {
      *************************************************************************************/
     public Boolean TestSetup_Test(Driver webDriver, AppLib applib) throws Exception {
     	
+    	EmberNav navigation = new EmberNav(webDriver);
     	Config config = new Config();
-		
+		ContentParent contentParent = new ContentParent(webDriver);
+		WaitFor waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     	Boolean abortTestSuite = false;
     	Boolean allIterationsFailed = false;
     	
@@ -54,55 +57,41 @@ public class A1_TestSetup {
             	UserLogin userLogin = applib.openApplication();
             	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             	
-            	//set pub sauce theme
-                applib.openSitePage("/admin/appearance");
-                new Select(webDriver.findElement(By.id("edit-admin-theme--2"))).selectByVisibleText("Pub Sauce");
-                ContentParent contentParent = new ContentParent(webDriver);
-                contentParent.ClickSaveBtn();
-                
-            	//enable overlay module if necessary
+            	//disable overlay module if necessary
             	applib.openSitePage("/admin/modules");
                 Modules modules = new Modules(webDriver);
-                if (modules.IsModuleEnabled("Overlay") == true) {
-                	applib.openSitePage("/#overlay=admin/modules");
+                String overlayModule = "Overlay";
+                if (modules.IsModuleEnabled(overlayModule) == true) {
+                	modules.DisableModule(overlayModule);
                 }
-                else {
-                	modules.EnterFilterName("Overlay");
-                    modules.EnableModule("Overlay");
-                }
-                Overlay overlay = new Overlay(webDriver);
-                overlay.SwitchToActiveFrame();
+                webDriver.switchTo().defaultContent();
                 
                 //enable necessary modules
-                for (String module : Arrays.asList("Field UI", "Administration menu", 
-                		"Administration menu Adminimal Theme", "Pub Post", "Logo Manager", "Devel")) {
+                for (String module : Arrays.asList("Field UI", "Pub Post", "Logo Manager", "Devel")) {
                 	if (!modules.IsModuleEnabled(module)) {
-                		modules.EnterFilterName(module);
-                        modules.EnableModule(module);
+                		modules.EnableModule(module);
                 	}
                 }
                 
                 //disable necessary modules
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
-                		"ImageField Focus", "Database logging", "MPS", 
-                		"Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown", 
-                		"Mobile Friendly Navigation Toolbar", "TVE Auth Example", "Pub SURF Example")) {
+                		"ImageField Focus", "Database logging", "MPS", "Event Countdown", 
+                		"TVE Auth Example", "Pub SURF Example",
+                		"simpleSAMLphp authentication", "Program Guide Example", 
+                		"Doubleclick for Publishers", "Automated Logout")) {
                 	if (modules.IsModuleEnabled(module)) {
-                		modules.EnterFilterName(module);
-                    	modules.DisableModule(module);
+                		modules.DisableModule(module);
                 	}
                 }
             	
                 //uninstall some high data usage modules that overflow lists
-                for (String module : Arrays.asList("MPS", "Dynamic Queue Workbench", "Dynamic Queue", "Event Countdown")) {
-                	overlay.ClickOverlayTab("Uninstall");
-                    overlay.SwitchToActiveFrame();
-                    if (modules.IsModuleInstalled(module)) {
+                //TODO - this should only be done when needed and not every execution
+                for (String module : Arrays.asList("MPS", "Event Countdown")) {
+                	navigation.ClickPrimaryTabNavLnk("Uninstall");
+                	if (modules.IsModuleInstalled(module)) {
                     	modules.UninstallModule(module);
-                    	overlay.SwitchToActiveFrame();
                     }
                 }
-                overlay.ClickCloseOverlayLnk();
                 
                 //set timezone utc
             	applib.openSitePage("/admin/config/regional/settings");
@@ -125,21 +114,7 @@ public class A1_TestSetup {
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
                 new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
                 contentParent.ClickSaveBtn();
-                Taxonomy taxonomy = new Taxonomy(webDriver);
-                taxonomy.NavigateSite("Home");
-                
-                //set admin menu perms
-                applib.openSitePage("/admin/people/permissions");
-                Permissions permissions = new Permissions(webDriver, applib);
-                WebElement cbx = webDriver.findElement(By.xpath("//label[contains(text(),'editor')]/../input[@value='access administration menu']"));
-                if (!cbx.isSelected()) {
-                	cbx.click();
-                	Alert alert1 = webDriver.switchTo().alert();
-            		alert1.accept();
-            		webDriver.switchTo().defaultContent();
-            		permissions.ClickSaveConfigurationsBtn();
-                }
-                
+
                 //set file system paths if not already set
                 applib.openSitePage("/admin/config/media/file-system");
                 WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
@@ -148,10 +123,10 @@ public class A1_TestSetup {
                 if (PrivateFileSystemPath_Txb.getAttribute("value").equals("")) {
                 	String privateFileSystemPath = null;
                 	if (config.getConfigValueString("AppURL").contains(".pr")) {
-                		privateFileSystemPath = "";
+                		privateFileSystemPath = "sites/default/files-private";
                 	}
                 	else if (config.getConfigValueString("AppURL").contains("acc.")) {
-                		privateFileSystemPath = "/mnt/files/nbcupublisher7acc/sites/default/files-private";
+                		privateFileSystemPath = "/mnt/files/nbcupublisher7.acceptance/sites/default/files-private";
                 	}
                 	else if (config.getConfigValueString("AppURL").contains("acc-test")) {
                 		privateFileSystemPath = "/mnt/files/nbcupublisher7devi0/sites/default/files-private";
@@ -171,12 +146,10 @@ public class A1_TestSetup {
                 	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
                 	contentParent.ClickSaveBtn();
                 }
-                taxonomy.NavigateSite("Home");
                 
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
-                taxonomy.NavigateSite("Content>>Add content>>Post");
-            	overlay.SwitchToActiveFrame();
-            	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
+                navigation.AddContent("Post");
+                contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
             	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             	publishingOptions.ClickPublishingOptionsLnk();
             	contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
@@ -188,22 +161,17 @@ public class A1_TestSetup {
             	String postTitle = "futurePost" + pub7DateFormat.format(currentDate) + random.GetCharacterString(15);
             	basicInformation.EnterTitle(postTitle);
             	basicInformation.EnterSynopsis();
-            	overlay.SwitchToActiveFrame();
             	basicInformation.ClickCoverSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToActiveFrame();
             	publishingOptions.ClickPublishingOptionsLnk();
             	publishingOptions.SelectModerationState("Draft");
             	contentParent.ClickSaveBtn();
-            	overlay.switchToDefaultContent(true);
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
             	WorkBench workBench = new WorkBench(webDriver);
                 workBench.ClickWorkBenchTab("Schedule");
-                overlay.SwitchToActiveFrame();
                 ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
                 scheduleQueue.ClickAddScheduledRevisionLnk();
-                overlay.SwitchToActiveFrame();
                 scheduleQueue.SelectRevision(postTitle);
                 scheduleQueue.VerifyOperationOptions(Arrays.asList("Revert", "Delete", "Moderate to Draft", 
                 		"Moderate to Published", "Moderate to Unpublished"));
@@ -219,18 +187,13 @@ public class A1_TestSetup {
                 scheduleQueue.EnterDate(pub7Date5MinuteFuture);
                 scheduleQueue.EnterTime(pub7Time5MinuteFuture);
                 scheduleQueue.ClickScheduleBtn();
-                overlay.SwitchToActiveFrame();
                 contentParent.VerifyMessageStatus("The scheduled revision operation has been saved");
-            	overlay.ClickCloseOverlayLnk();
             	
             	//schedule a new logo to be used later in the suite
-            	applib.openSitePage("/#overlay=admin/content/logos");
-            	overlay.SwitchToActiveFrame();
+            	applib.openSitePage("/admin/content/logos");
             	Logos logos = new Logos(webDriver, applib);
         	    logos.DeleteAllLogos();
-            	overlay.ClickCloseOverlayLnk();
-            	applib.openSitePage("/#overlay=logo/add");
-                overlay.SwitchToActiveFrame();
+            	applib.openSitePage("/logo/add");
                 AddLogo addLogo = new AddLogo(webDriver);
                 String logoTitle = random.GetCharacterString(15);
                 addLogo.EnterTitle(logoTitle);
@@ -253,13 +216,11 @@ public class A1_TestSetup {
         	    addLogo.EnterEndDate(pub7LogoDateFormat.format(date120MinuteFuture));
         	    addLogo.EnterEndTime(pub7LogoTimeFormat.format(date120MinuteFuture));
         	    addLogo.ClickSaveBtn();
-        	    overlay.SwitchToActiveFrame();
         	    SimpleDateFormat pub7CreatedLogoDateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
         	    pub7CreatedLogoDateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
             	contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
         	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date120MinuteFuture).replace("24:", "00:")));
         	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
-        	    overlay.ClickCloseOverlayLnk();
         	    
         	    //configure mpx if needed
         	    Settings settings = new Settings(webDriver);
@@ -281,7 +242,10 @@ public class A1_TestSetup {
                 allowedContentTypes.add("tv-season");
                 allowedContentTypes.add("tv-show");
                 allowedContentTypes.add("event-countdown");
-                List<WebElement> allContentTypes = webDriver.findElements(By.xpath("//a[text()='Content']/../ul//a[text()='Add content']/..//ul/li/a"));
+                applib.openSitePage("/node/add");
+                String allContentLnksLoc = "//div[@id='content']//ul[@class='admin-list']//a";
+                waitFor.ElementVisible(By.xpath(allContentLnksLoc));
+                List<WebElement> allContentTypes = webDriver.findElements(By.xpath(allContentLnksLoc));
                 List<String> allContentTypeURLsToDelete = new ArrayList<String>();
                 for (WebElement contentType : allContentTypes) {
                 	allContentTypeURLsToDelete.add(contentType.getAttribute("href").replace(config.getConfigValueString("AppURL") + "/node/add/", ""));
@@ -295,7 +259,7 @@ public class A1_TestSetup {
                 }
                 
                 //flush all caches
-                taxonomy.NavigateSite("Home>>Flush all caches");
+                new FlushCache(webDriver).FlushAllCache();
                 
                 break;
         	}

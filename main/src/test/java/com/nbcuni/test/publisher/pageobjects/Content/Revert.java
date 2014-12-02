@@ -1,11 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Revert Library. Copyright
@@ -16,21 +17,26 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class Revert {
 
+	private Config config;
+	private WaitFor waitFor;
+	
     //PAGE OBJECT CONSTRUCTOR
     public Revert(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
+        config = new Config();
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement Revert_Btn;
+    private By Revert_Btn = By.id("edit-submit");
     
     
     //PAGE OBJECT METHODS
     public void ClickRevertBtn() throws Exception {
     	
     	Reporter.log("Click the 'Revert' button.");
-    	Revert_Btn.click();
+    	waitFor.ElementVisible(Revert_Btn).click();
+    	
     }
     
 }

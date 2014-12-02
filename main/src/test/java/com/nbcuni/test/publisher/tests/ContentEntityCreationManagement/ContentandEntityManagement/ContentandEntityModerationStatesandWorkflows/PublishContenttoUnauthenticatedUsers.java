@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -29,15 +29,13 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        taxonomy.NavigateSite("Content>>Add content>>Media Gallery"); 
+    	navigation.AddContent("Media Gallery");
         BasicInformation basicInformation = new BasicInformation(webDriver);
-        overlay.SwitchToActiveFrame();
         String title = random.GetCharacterString(15);
         basicInformation.EnterTitle(title);
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToActiveFrame();
         basicInformation.VerifyCoverImagePresent("HanSolo");        
        
         //Step 3

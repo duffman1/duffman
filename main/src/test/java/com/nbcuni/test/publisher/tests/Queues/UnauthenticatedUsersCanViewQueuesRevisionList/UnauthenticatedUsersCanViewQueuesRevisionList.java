@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueues
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.AccessDenied;
 
 public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
@@ -19,21 +19,20 @@ public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void UnauthenticatedUsersCanViewQueuesRevisionList_Test() throws Exception{
     	
-        //Step 1
+    	//Step 1
         applib.openApplication();
         
         //Step 2
-        webDriver.navigate().to(config.getConfigValueString("AppURL") + "/#overlay=admin/content/queues/manage/all/revisions-state-flow-states");
-        overlay.SwitchToActiveFrame();
+        applib.openSitePage("/admin/content/queues/manage/all/revisions-state-flow-states");
         AccessDenied accessDenied = new AccessDenied(webDriver);
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 3
-        webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/content/queues/");
+        applib.openSitePage("/admin/content/queues/");
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 4
-        webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/content/queues/manage/all/revisions-state-flow-states");
+        applib.openSitePage("/admin/content/queues/manage/all/revisions-state-flow-states");
         accessDenied.VerifyAccessDeniedTxt();
         
         

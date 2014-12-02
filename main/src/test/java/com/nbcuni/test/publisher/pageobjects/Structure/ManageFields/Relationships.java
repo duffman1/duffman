@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.ManageFields;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Relationships Library. Copyright
@@ -17,30 +17,38 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class Relationships {
 
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
+	
     //PAGE OBJECT CONSTRUCTOR
     public Relationships(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-instance-widget-settings-depth")
-    private WebElement TVRelationshipWidgetDepth_Ddl;
+    private By TVRelationshipWidgetDepth_Ddl = By.id("edit-instance-widget-settings-depth");
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement SaveSettings_Btn;
+    private By SaveSettings_Btn = By.id("edit-submit");
     
     
     //PAGE OBJECT METHODS
     public void SelectTVRelationshipWidgetDepth(String depth) throws Exception {
     	
     	Reporter.log("Select '" + depth + "' from the 'TV Relationship Widget Depth' drop down list.");
-    	new Select(TVRelationshipWidgetDepth_Ddl).selectByVisibleText(depth);
+    	interact.Select(waitFor.ElementVisible(TVRelationshipWidgetDepth_Ddl), depth);
+    	
     }
     
     public void ClickSaveSettingsBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save settings' button.");
-    	SaveSettings_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SaveSettings_Btn));
+    	
     }
     
 }

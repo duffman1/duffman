@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import org.testng.annotations.Test;
@@ -25,24 +25,19 @@ public class CreateTVEpisode extends ParentTest{
             for (String state : allStates) {
             
             	//Step 1A
-            	taxonomy.NavigateSite("Content>>Add content>>Person");
-            	overlay.SwitchToActiveFrame();
+            	navigation.AddContent("Person");
             	PersonsInformation personsInformation = new PersonsInformation(webDriver);
             	String personFirstName = random.GetCharacterString(15);
             	personsInformation.EnterFirstName(personFirstName);
             	personsInformation.EnterBiography();
-            	overlay.SwitchToActiveFrame();
             	personsInformation.ClickCoverPhotoSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToActiveFrame();
             	contentParent.ClickSaveBtn();
-            	overlay.switchToDefaultContent(true);
             	contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
             	
             	//Step 2
-            	taxonomy.NavigateSite("Content>>Add content>>TV Episode");
-            	overlay.SwitchToActiveFrame();
+            	navigation.AddContent("TV Episode");
             	
             	//Step 3
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Episode", "Synopsis"));
@@ -57,13 +52,11 @@ public class CreateTVEpisode extends ParentTest{
             	basicInformation.EnterTitle(tvEpisodeTitle);
             	basicInformation.EnterEpisodeNumber("1");
             	basicInformation.EnterSynopsis();
-                overlay.SwitchToActiveFrame();
                 
             	//Step 5
             	basicInformation.ClickCoverSelectBtn();
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToActiveFrame();
-        	
+            	
             	//Step 6
             	publishingOptions.ClickPublishingOptionsLnk();
             	publishingOptions.SelectModerationState(state);

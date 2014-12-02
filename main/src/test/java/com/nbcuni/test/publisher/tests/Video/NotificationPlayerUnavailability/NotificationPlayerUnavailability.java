@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability;
 import java.util.Arrays;
 import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -20,7 +20,6 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
 public class NotificationPlayerUnavailability extends ParentTest{
@@ -69,8 +68,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
@@ -92,30 +90,15 @@ public class NotificationPlayerUnavailability extends ParentTest{
                 mpxAddPlayer.EnterPlayerTitle(playerTitle);
                 mpxAddPlayer.ClickSaveBtn();
                 applib.openApplication();
-                taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-                overlay.SwitchToActiveFrame();
+                navigation.Content("Files", "mpxPlayers");
                 MPXPlayers MPXPlayers = new MPXPlayers(webDriver);
                 MPXPlayers.ClickSyncMPXPlayersLnk();
                 MPXPlayers.ClickSyncMPXPlayersNowLnk();
                 contentParent.VerifyMessageStatus("Processed players manually for all accounts");
-        	    SearchFor searchFor = new SearchFor(webDriver);
-        	    searchFor.EnterTitle(playerTitle);
-                searchFor.ClickApplyBtn();
-                overlay.switchToDefaultContent(true);
-                Cron cron = new Cron(webDriver);
-                if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
-        	    	//re-run cron as sometimes media assets aren't in the first ingested queue
-        	    	cron.RunCron(false);
-            	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-            	    searchFor.EnterTitle(playerTitle);
-                    searchFor.ClickApplyBtn();
-                    if (!searchFor.GetFirstMPXPlayerSearchResult().equals(playerTitle)) {
-            	    	Assert.fail("MPX Player has not been successfully ingested into pub 7."); 
-            	    }
-        	    }
-                
+        	    
         	    //Step 2a
-        	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+                navigation.Content("Files", "mpxMedia");
+                SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle("Automation");
         	    searchFor.SelectStatus("Published");
         	    searchFor.SelectMPXMediaSource("DB TV");
@@ -123,7 +106,6 @@ public class NotificationPlayerUnavailability extends ParentTest{
         	    searchFor.ClickSearchTitleLnk(searchFor.GetFirstMPXMediaSearchResult());
         	    WorkBench workBench = new WorkBench(webDriver);
         	    workBench.ClickWorkBenchTab("Edit");
-        	    overlay.SwitchToActiveFrame();
         	    EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
         	    editMPXVideo.SelectPubMPXVideoPlayer(playerTitle);
         	    contentParent.ClickSaveBtn();
@@ -147,72 +129,48 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	applib.openApplication();
             	
             	//Step 5
-            	cron.RunCron(true);
+            	Cron cron = new Cron(webDriver);
+            	cron.RunCron();
             	
         	    //Step 6
-        	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        	    overlay.SwitchToActiveFrame();
+            	navigation.Content("Files", "mpxPlayers");
         	    
-        	    //Step 7 - note that multiple cron runs are sometimes necessary for disabled player to be present
-        	    ErrorChecking errorChecking = new ErrorChecking(webDriver);
-        	    try {
-        	    	errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);	
-        	    }
-        	    catch (AssertionError | NoSuchElementException ex) {
-        	    	
-        	    	//re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    	overlay.switchToDefaultContent(true);
-        	    	cron.RunCron(true);
-        	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        	    	overlay.SwitchToActiveFrame();
-        	    	errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
-        	   
-        	    }
+        	    //Step 7
+            	ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        	    errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);	
         	    
                 //Step 8
                 searchFor.EnterTitle(playerTitle);
                 searchFor.ClickApplyBtn();
-                overlay.switchToDefaultContent(true);
                 searchFor.ClickSearchTitleLnk(playerTitle);
                 workBench.ClickWorkBenchTab("Edit");
-                overlay.SwitchToActiveFrame();
                 PublishingOptions publishingOptions = new PublishingOptions(webDriver);
                 publishingOptions.ClickPublishingOptionsLnk();
-                overlay.SwitchToActiveFrame();
                 publishingOptions.UncheckPublishedCbx();
                 contentParent.ClickSaveBtn();
-                overlay.switchToDefaultContent(true);
                 contentParent.VerifyMessageStatus("MPX Player " + playerTitle + " has been updated.");
                 
                 //Step 9
-                taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-                overlay.SwitchToActiveFrame();
+                navigation.Content("Files", "mpxPlayers");
                 errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 
                 //Step 10
-                MPXMedia mpxMedia = new MPXMedia(webDriver);
-                mpxMedia.ClickMPXMediaLnk();
-                overlay.SwitchToActiveFrame();
+                navigation.ClickSecondaryTabNavLnk("mpxMedia");
                 errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
-                overlay.ClickCloseOverlayLnk();
                 
                 //Step 11
-                taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-                overlay.SwitchToActiveFrame();
+                navigation.Configuration("Media: thePlatform mpx settings");
                 errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 
                 //Step 12
+                MPXMedia mpxMedia = new MPXMedia(webDriver);
                 mpxMedia.ClickMPXPlayerUnpublishedHereLnk(playerTitle);
-                overlay.SwitchToActiveFrame();
                 publishingOptions.ClickPublishingOptionsLnk();
-                overlay.SwitchToActiveFrame();
                 publishingOptions.CheckPublishedCbx();
                 contentParent.ClickSaveBtn();
-                overlay.switchToDefaultContent(true);
                 
                 //Step 13
-                taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-                overlay.SwitchToActiveFrame();
+                navigation.Content("Files", "mpxPlayers");
                 errorChecking.VerifyMPXPlayerDisabledAndUnpublished(playerTitle);
                 
                 //Step 14
@@ -234,24 +192,12 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	//Step 16
             	webDriver.close();
             	webDriver.switchTo().window(parentWindow);
-            	overlay.SwitchToActiveFrame();
-            	overlay.ClickCloseOverlayLnk();
-            	cron.RunCron(true);
+            	cron.RunCron();
         	    
         	    //Step 17
-        	    taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-                overlay.SwitchToActiveFrame();
-                try {
-        	    	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished."));
-        	    }
-        	    catch (AssertionError e) {
-        	    	//re-run cron as this step can be flaky and sometimes require a second cron run.
-        	    	overlay.switchToDefaultContent(true);
-        	    	cron.RunCron(true);
-        	    	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        	    	overlay.SwitchToActiveFrame();
-        	    	contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished."));
-        	    }
+            	navigation.Content("Files", "mpxPlayers");
+        	    contentParent.VerifyPageContentNotPresent(Arrays.asList("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished."));
+        	    
         	}
         	else {
         		Assert.fail("DB TV account must be configured.");

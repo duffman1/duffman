@@ -3,15 +3,15 @@ package com.nbcuni.test.publisher.tests.SocialIntegration.Facebook;
 import java.net.URL;
 import java.util.Arrays;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
@@ -36,50 +36,33 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 3
-        taxonomy.NavigateSite("Modules");
-        overlay.SwitchToActiveFrame();
+        navigation.Modules();
         Modules modules = new Modules(webDriver);
-        modules.EnterFilterName("Pub Social");
         modules.EnableModule("Pub Social");
-        overlay.ClickCloseOverlayLnk();
         
         //Step 3a
-        taxonomy.NavigateSite("Structure>>Facebook Apps");
-        overlay.SwitchToActiveFrame();
+        navigation.Structure("Facebook Apps");
         DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
         Delete delete = new Delete(webDriver);
-        ContentParent contentParent = new ContentParent(webDriver);
-        boolean appAlreadyExists = drupalForFacebook.FacebookAppExists();
-        if (appAlreadyExists == true) {
+        if (drupalForFacebook.FacebookAppExists()) {
         	drupalForFacebook.ClickEditLnk();
-        	overlay.SwitchToActiveFrame();
-        	delete.ClickDeleteBtn();
-        	overlay.switchToDefaultContent(true);
         	delete.ClickDeleteBtn();
         	delete.ClickDeleteBtn();
-        }
-        else {
-        	overlay.ClickCloseOverlayLnk();
         }
         
         //Step 4
-        taxonomy.NavigateSite("Structure>>Facebook Apps>>Add App");
-        if (appAlreadyExists == false) {
-        	overlay.SwitchToFrame("Drupal for Facebook");
-        }
+        navigation.Structure("Facebook Apps");
+        navigation.ClickPrimaryTabNavLnk("Add App");
         String label = random.GetCharacterString(15);
         drupalForFacebook.EnterLabel(label);
         drupalForFacebook.EnterFacebookAppId("125235334322205");
         drupalForFacebook.EnterSecret("a9b07339789b4ea75b3951f81fe27def");
         drupalForFacebook.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Created facebook application Publisher 7 Test App (" + label + ").");
-        overlay.switchToDefaultContent(true);
         
         //Step 5
-        taxonomy.NavigateSite("Structure>>Facebook Apps>>Stream Posts");
-        if (appAlreadyExists == false) {
-        	overlay.SwitchToActiveFrame();
-        }
+        navigation.Structure("Facebook Apps");
+        navigation.ClickPrimaryTabNavLnk("Stream Posts");
         drupalForFacebook.ClickPostViaPub7Lnk();
         
         //Step 6
@@ -99,17 +82,16 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
         
         //Step 10
-        taxonomy.NavigateSite("Configuration>>Web services>>Facebook");
-        NodeTypes nodeTypes = new NodeTypes(webDriver, applib);
+        navigation.Configuration("Facebook");
+        NodeTypes nodeTypes = new NodeTypes(webDriver);
         nodeTypes.EnablePostNode();
         
         //Step 11
-        taxonomy.NavigateSite("Content>>Add content>>Post");
+        navigation.AddContent("Post");
         BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
-        overlay.switchToDefaultContent(true);
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
@@ -117,7 +99,6 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
-        overlay.SwitchToActiveFrame();
         
         //Step 12
         Revisions revisions = new Revisions(webDriver);
@@ -132,25 +113,21 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         
         //Step 14
         webDriver.navigate().to(new URL("https://www.facebook.com/"));
-        overlay.switchToDefaultContent(true);
         for (int I = 0 ; ; I++) {
-        	if (I >= 10) {
+        	if (I >= 20) {
         		Assert.fail("Facebook app post has not posted to facebook.");
         	}
-        	boolean postUpdatePresent = false;
-            
+        	
         	try {
-        		contentParent.VerifyPageContentPresent(Arrays.asList("Publisher Seven Test User", 
-                		postTitle, "Publisher 7 Test App"));
-        		postUpdatePresent = true;
+        		for (String text : Arrays.asList("Publisher Seven Test User", 
+                		postTitle, "Publisher 7 Test App")) {
+        			Assert.assertTrue(webDriver.findElement(By.xpath("//body")).getText().contains(text));
+        		}
+        		break;
         	}
-        	catch (AssertionError e) {
-        		postUpdatePresent = false;
-        	}
-        	if (postUpdatePresent == true) { break; }
-        	else {
+        	catch (AssertionError e) { 
         		Thread.sleep(1000);
-        		webDriver.navigate().refresh();
+        		applib.refreshPage();
         	}
         }
         

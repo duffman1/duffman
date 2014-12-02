@@ -2,9 +2,8 @@ package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -34,22 +33,20 @@ public class Settings {
 
     private Driver webDriver;
     private WebDriverWait wait;
-    private Overlay overlay;
-    private Taxonomy taxonomy;
     private Cron cron;
     private MPXMedia mpxMedia;
     private Config config;
+    private EmberNav navigation;
     
     //PAGE OBJECT CONSTRUCTOR
     public Settings(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
-        overlay = new Overlay(webDriver);
-        taxonomy = new Taxonomy(webDriver);
         mpxMedia = new MPXMedia(webDriver);
         cron = new Cron(webDriver);
         config = new Config();
+        navigation = new EmberNav(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -447,9 +444,8 @@ public class Settings {
     
     public void ConfigureMPXIfNeeded() throws Exception {
     	
-    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
-        
+    	navigation.Configuration("Media: thePlatform mpx settings");
+    	
     	if (this.IsMPXConfigured() == false) {
     		this.EnterUsername(config.getConfigValueString("MPXUsername"));
         	this.EnterPassword(config.getConfigValueString("MPXPassword"));
@@ -463,26 +459,22 @@ public class Settings {
         		this.CheckSyncMPXMediaOnCronBtn();
         	}
         	this.ClickSaveConfigurationsBtn();
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Content("Files", "mpxMedia");
         	mpxMedia.ExpandMPXMedia();
             mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
-            overlay.ClickCloseOverlayLnk();
-            cron.RunCron(true);
+            cron.RunCron();
     	}
     	else {
     		Reporter.log("MPX is already configured.");
-    		overlay.ClickCloseOverlayLnk();
+    		
     	}
     }
     
     public void ConfigureMPXIngestionType() throws Exception {
     	
-    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
-        
+    	navigation.Configuration("Media: thePlatform mpx settings");
+    	
     	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		this.UnCheckSyncMPXMediaOnCronBtn();
         }
@@ -490,14 +482,12 @@ public class Settings {
         	this.CheckSyncMPXMediaOnCronBtn();
         }
         this.ClickSaveConfigurationsBtn();
-        overlay.ClickCloseOverlayLnk();
         
-        taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-    	overlay.SwitchToActiveFrame();
-    	mpxMedia.ExpandMPXMedia();
+        navigation.Content("Files", "mpxMedia");
+        mpxMedia.ExpandMPXMedia();
         mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
         mpxMedia.ClickSyncMPXMediaNowLnk();
-        overlay.ClickCloseOverlayLnk();
+        
     }
     
     public void DeleteAllOldMPXFileTypes() throws Exception { //TODO - add elements from script to page factory
@@ -505,13 +495,14 @@ public class Settings {
     	//delete any old mpx account file types (DE3921)
         webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         try {
+        	webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/structure/file-types");
         	List<String> eachURL = new ArrayList<String>();
         	String allURLs = null;
-        	for (WebElement el : webDriver.findElements(By.xpath("//a[contains(text(), 'MPX Video for Account')][contains(text(), 'DB TV')]"))) {
+        	for (WebElement el : webDriver.findElements(By.xpath("//td[contains(text(), 'MPX Video for Account')][contains(text(), 'DB TV')]/..//a[text()='edit file type']"))) {
         		allURLs = allURLs + el.getAttribute("href");
         		eachURL.add(el.getAttribute("href"));
         	}
-        	allURLs = allURLs.replaceAll(config.getConfigValueString("AppURL") + "/admin/structure/file-types/manage/", "");
+        	allURLs = allURLs.replaceAll(config.getConfigValueString("AppURL") + "/admin/structure/file-types/manage/", "").replaceAll("/edit", "");
         	String[] index = allURLs.split("mpx_video_");
         	
         	ArrayList<Integer> allIndexInts = new ArrayList<Integer>();

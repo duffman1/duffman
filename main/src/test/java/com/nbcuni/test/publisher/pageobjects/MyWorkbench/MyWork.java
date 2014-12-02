@@ -1,14 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.MyWorkbench;
 
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com My Work Library. Copyright
@@ -20,11 +22,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class MyWork {
 
 	private Driver webDriver;
+	private WaitFor waitFor;
 	
     //PAGE OBJECT CONSTRUCTOR
     public MyWork(Driver webDriver) {
     	this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        waitFor = new WaitFor(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -55,13 +59,13 @@ public class MyWork {
     	
     }
     
-    public void VerifyContentItemData(List<String> contentData) {
+    public void VerifyContentItemData(List<String> contentData) throws Exception {
     	
-    	String contentItemTxt = ContentItem_Ctr(contentData.get(0)).getText();
-		
     	for (String data : contentData) {
     		Reporter.log("Verify that text '" + data + "' is present in the content item titled '" + contentData.get(0) + "'.");
-    		Assert.assertTrue(contentItemTxt.contains(data));
+    		waitFor.ElementContainsText(ContentItem_Ctr(contentData.get(0)), data);
+    		
+    		
     	}
     }
     

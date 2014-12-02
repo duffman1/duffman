@@ -4,6 +4,7 @@ import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 
+import org.sikuli.basics.Settings;
 import org.sikuli.script.*;
 import org.testng.Reporter;
 
@@ -23,6 +24,8 @@ public class MPXAddMedia {
     
     public MPXAddMedia(AppLib applib) {
     	sikuli = new Screen();
+    	Settings.ActionLogs = false;
+        Settings.InfoLogs = false;
         mpxAssets = new MPXAssets();
         addFile = new AddFile(null);
         config = new Config();

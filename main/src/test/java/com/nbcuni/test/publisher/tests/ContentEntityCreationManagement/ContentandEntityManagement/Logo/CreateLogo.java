@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
@@ -30,14 +30,9 @@ public class CreateLogo extends ParentTest{
         	logos.VerifyHomePageLogoImgPresent("nbclogosmall");
         	
         	//Step 3
-        	try {
-        		taxonomy.NavigateSite("Content>>Logos>>Add Logo");
-        	}
-        	catch (Exception | AssertionError e) {
-        		taxonomy.NavigateSite("Content>>Add Logo");
-        	}
-            overlay.SwitchToActiveFrame();
-            
+        	navigation.Content("Logos");
+        	logos.ClickAddLogoLnk();
+        	
             //Step 4
             AddLogo addLogo = new AddLogo(webDriver);
             String logoTitle = random.GetCharacterString(15);
@@ -63,7 +58,6 @@ public class CreateLogo extends ParentTest{
     	    addLogo.ClickSaveBtn();
     	    
     	    //Step 5
-    	    overlay.SwitchToActiveFrame();
     	    SimpleDateFormat pub7DateTimeFormat = new SimpleDateFormat("EEE, MM/dd/yyyy - kk:mm");
         	pub7DateTimeFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	contentParent.VerifyPageContentPresent(Arrays.asList(logoTitle, 
@@ -71,11 +65,8 @@ public class CreateLogo extends ParentTest{
     	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
     	    
     	    //Step 6
-    	    overlay.ClickCloseOverlayLnk();
-    	    taxonomy.NavigateSite("Content>>Logos");
-    	    overlay.SwitchToActiveFrame();
+    	    navigation.Content("Logos");
     	    logos.DeleteAllLogos();
-    	    overlay.SwitchToActiveFrame();
     	    contentParent.VerifyMessageStatus("Logo has been deleted successfully.");
     	    contentParent.VerifyPageContentNotPresent(Arrays.asList(logoTitle, 
     	    		pub7DateTimeFormat.format(date2DaysFuture).replace("24:", "00:"), pub7DateTimeFormat.format(date2DaysFuture).replace("24:", "00:")));

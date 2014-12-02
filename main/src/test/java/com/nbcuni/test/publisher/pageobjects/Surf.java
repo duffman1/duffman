@@ -1,17 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Surf Library. Copyright
@@ -23,95 +18,92 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 public class Surf {
 
     private Driver webDriver;
-    private WebDriverWait wait;
-    private ContentParent contentParent;
+    private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Surf(Driver webDriver, AppLib applib) {
+    public Surf(Driver webDriver) {
         this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 30);
-        contentParent = new ContentParent(webDriver);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "action-signin")
-    private WebElement SignIn_Btn;
+    private By SignIn_Btn = By.id("action-signin");
     
-    @FindBy(how = How.XPATH, using = "//iframe[contains(@id, 'easyXDM')]")
-    private WebElement SurfContainer_Frm;
+    private By SurfContainer_Frm = By.xpath("//iframe[contains(@id, 'easyXDM')]");
     
-    @FindBy(how = How.ID, using = "display-frame")
-    private WebElement SurfLogin_Frm;
+    private By SurfLogin_Frm = By.id("display-frame");
     
-    @FindBy(how = How.ID, using = "input_username")
-    private WebElement EmailOrUsername_Txb;
+    private By EmailOrUsername_Txb = By.id("input_username");
     
-    @FindBy(how = How.ID, using = "input_password")
-    private WebElement Password_Txb;
+    private By Password_Txb = By.id("input_password");
     
-    @FindBy(how = How.ID, using = "button_submit")
-    private WebElement SignInF_Btn;
+    private By SignInF_Btn = By.id("button_submit");
     
-    @FindBy(how = How.ID, using = "action-edit")
-    private WebElement EditYourProfile_Btn;
+    private By SignOut_Btn = By.id("action-signout");
     
-    @FindBy(how = How.ID, using = "action-signout")
-    private WebElement SignOut_Btn;
-    
-    @FindBy(how = How.ID, using = "surf-info")
-    private WebElement SurfInfo_Ctr;
+    private By SurfInfo_Ctr = By.id("surf-info");
     
     
     //PAGE OBJECT METHODS
     public void ClickSignInBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign-in' button.");
-    	wait.until(ExpectedConditions.visibilityOf(SignIn_Btn));
     	Thread.sleep(2000);
-    	SignIn_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SignIn_Btn));
+    	
     }
     
     public void SwitchToSurfFrm() throws Exception {
     	
     	Reporter.log("Switch to the Surf frame.");
-    	webDriver.switchTo().frame(SurfContainer_Frm);
-    	webDriver.switchTo().frame(SurfLogin_Frm);
+    	webDriver.switchTo().frame(waitFor.ElementPresent(SurfContainer_Frm));
+    	webDriver.switchTo().frame(waitFor.ElementPresent(SurfLogin_Frm));
+    	
     }
     
     public void EnterEmailUsername(String userName) throws Exception {
     	
     	Reporter.log("Enter '" + userName + "' in the 'Email or Username' text box.");
-    	EmailOrUsername_Txb.sendKeys(userName);
+    	interact.Type(waitFor.ElementVisible(EmailOrUsername_Txb), userName);
+    	
     }
     
     public void EnterPassword(String password) throws Exception {
     	
     	Reporter.log("Enter '" + password + "' in the 'Password' text box.");
-    	Password_Txb.sendKeys(password);
+    	interact.Type(waitFor.ElementVisible(Password_Txb), password);
+    	
     }
     
     public void ClickSurfFrmSignInBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign In' button.");
-    	SignInF_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SignInF_Btn));
+    	
     }
     
     public void VerifyUsernamePresent(String userName) throws Exception {
     	
     	Reporter.log("Verify surf username '" + userName + "' is present.");
-    	wait.until(ExpectedConditions.visibilityOf(SurfInfo_Ctr));
-    	Assert.assertTrue(SurfInfo_Ctr.getText().contains(userName));
+    	waitFor.ElementContainsText(SurfInfo_Ctr, userName);
+    	
     }
     
     public void ClickSignOutBtn() throws Exception {
     	
     	Reporter.log("Click the 'Sign Out' button.");
-    	contentParent.Scroll("-500");
-    	wait.until(ExpectedConditions.visibilityOf(SignOut_Btn)).click();
+    	interact.ScrollToTop();
+    	interact.Click(waitFor.ElementVisible(SignOut_Btn));
     	
     	Reporter.log("Verify the 'Sign In' button is present.");
-    	wait.until(ExpectedConditions.visibilityOf(SignIn_Btn));
+    	waitFor.ElementVisible(SignIn_Btn);
+    	
     }
     
 }

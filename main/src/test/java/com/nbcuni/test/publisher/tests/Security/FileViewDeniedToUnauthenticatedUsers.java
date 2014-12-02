@@ -1,12 +1,11 @@
 package com.nbcuni.test.publisher.tests.Security;
 
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.AccessDenied;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
@@ -22,14 +21,12 @@ public class FileViewDeniedToUnauthenticatedUsers extends ParentTest{
     public void FileViewDeniedToUnauthenticatedUsers_Test() throws Exception{
     	
     	//Step 1
-        applib.openApplication();
-        webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/content/file");
+        applib.openSitePage("/admin/content/file");
         AccessDenied accessDenied = new AccessDenied(webDriver);
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 2
         UserLogin userLogin = new UserLogin(webDriver);
-        PageFactory.initElements(webDriver, userLogin);
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         new WebDriverWait(webDriver, 10).until(ExpectedConditions.titleContains("Content"));
         

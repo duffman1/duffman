@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -23,62 +25,69 @@ import org.testng.Reporter;
 
 public class DynamicQueues {
 
-    private Driver webDriver;
     private Config config;
+    private WaitFor waitFor;
+    private Interact interact;
+    private Integer timeout;
     
     //PAGE OBJECT CONSTRUCTOR
     public DynamicQueues(Driver webDriver) {
-        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private WebElement Edit_Lnk(String dynamicQueueName) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//a[text()='Edit']"));
+    private By AddDynamicQueue_Lnk(String dynamicQueueName) {
+    	return By.xpath("//div[@id='content']//a[text()='Add " + dynamicQueueName + "']");
     }
     
-    private List<WebElement> AllDynamicQueue_Lnks() {
-    	return webDriver.findElements(By.xpath("//div[contains(@class, 'dynamic-queue')]//h2/a"));
+    private By Edit_Lnk(String dynamicQueueName) {
+    	return By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//a[text()='Edit']");
     }
     
-    private WebElement Status_Lnk(String dynamicQueueName) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//td[contains(@class,'views-field-status')]"));
+    private By AllDynamicQueue_Lnks = By.xpath("//div[contains(@class, 'dynamic-queue')]//h2/a");
+    
+    private By Status_Lnk(String dynamicQueueName) {
+    	return By.xpath("//a[contains(text(), '" + dynamicQueueName + "')]/../..//td[contains(@class,'views-field-status')]");
     }
     
     
     //PAGE OBJECT METHODS
+    public void ClickAddDynamicQueueLnk(String dynamicQueueName) throws Exception {
+    	
+    	Reporter.log("Click the 'Add " + dynamicQueueName + "' link.");
+    	interact.Click(waitFor.ElementVisible(AddDynamicQueue_Lnk(dynamicQueueName)));
+    	
+    }
+    
     public void ClickEditLnk(String dynamicQueueName) throws Exception {
     	
     	Reporter.log("Click the 'edit' link for Dynamic Queue Name '" + dynamicQueueName + ".");
-    	Edit_Lnk(dynamicQueueName).click();
+    	interact.Click(waitFor.ElementVisible(Edit_Lnk(dynamicQueueName)));
+    	
     }
     
     public String GetDynamicQueueNodeNumber(String dynamicQueueName) throws Exception {
         
-    	return Edit_Lnk(dynamicQueueName).getAttribute("href").replace(config.getConfigValueString("AppURL") + 
+    	return waitFor.ElementVisible(Edit_Lnk(dynamicQueueName)).getAttribute("href").replace(config.getConfigValueString("AppURL") + 
     			"/dynamic-queue/", "").replace("/edit?destination=admin/content/dynamic-queue", "");
-
-    }
-    
-    public String GetDynamicQueueStatus(String dynamicQueueName) throws Exception {
-        
-    	return Status_Lnk(dynamicQueueName).getText();
 
     }
     
     public void VerifyDynamicQueueStatus(String dynamicQueueName, String status) throws Exception {
 
-    	if (! ((GetDynamicQueueStatus(dynamicQueueName).trim()).equalsIgnoreCase(status.trim())) )
-    	    Assert.fail("Dynamic Queue: "+ dynamicQueueName + "status: "+ GetDynamicQueueStatus(dynamicQueueName) + 
-    	    		" is not equals to Expected status: "+ status);
-    		
+    	Reporter.log("Verify dynamic queue '" + dynamicQueueName + "' status is '" + status + "'.");
+    	waitFor.ElementContainsText(Status_Lnk(dynamicQueueName), status);
+    	
     }
     
     public void VerifyVisibleLnkCount(Integer expectedVisibleCount) throws Exception {
     	
     	List<WebElement> allVisibleDQLnks = new ArrayList<WebElement>();
-    	for (WebElement dqLnk : AllDynamicQueue_Lnks()) {
+    	for (WebElement dqLnk : waitFor.ElementsVisible(AllDynamicQueue_Lnks)) {
     		if (dqLnk.isDisplayed()) {
     			allVisibleDQLnks.add(dqLnk);
     		}
@@ -86,6 +95,7 @@ public class DynamicQueues {
     	
     	Reporter.log("Verify the visible count of Dynamic Queue Links equals '" + expectedVisibleCount.toString() + "'.");
     	Assert.assertTrue(allVisibleDQLnks.size() == expectedVisibleCount);
+    	
     }
     
 }

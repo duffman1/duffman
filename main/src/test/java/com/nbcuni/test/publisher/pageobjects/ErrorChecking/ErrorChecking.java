@@ -6,15 +6,17 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Content Parent Library. Copyright
@@ -27,12 +29,14 @@ public class ErrorChecking {
 
     private Driver webDriver;
     private Config config;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public ErrorChecking(Driver webDriver) {
         this.webDriver = webDriver;
         config = new Config();
         PageFactory.initElements(webDriver, this);
+        waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -42,8 +46,8 @@ public class ErrorChecking {
     @FindBy(how = How.XPATH, using = "//div[@class='messages error']/ul")
     private WebElement MoreThanOneError_Ctr;
     
-    private WebElement DisabledPlayerError_Ctr(String playerTitle) {
-    	return webDriver.findElement(By.xpath("//div[@class='messages error']/ul/li//em[contains(text(), '" + playerTitle + "')]/../.."));
+    private By DisabledPlayerError_Ctr(String playerTitle) {
+    	return By.xpath("//div[@class='messages error']/ul/li//em[contains(text(), '" + playerTitle + "')]/../..");
     }
     
     private List<WebElement> Error_Itms() {
@@ -54,45 +58,32 @@ public class ErrorChecking {
     //PAGE OBJECT METHODS
     public void VerifyErrorMessagePresent(String errorMessage) throws Exception {
     	
-    	if (!Error_Ctr.getText().contains(errorMessage)) {
-    		Assert.fail("Error message container does not contain error message '" + errorMessage + "'.");
-    	}
+    	waitFor.ElementContainsText(Error_Ctr, errorMessage);
+    	
     }
     
     public void VerifyAllRequiredFields(List<String> allFieldTitles) throws Exception {
     	
     	for (String field : allFieldTitles) {
-    		Assert.assertTrue(Error_Ctr.getText().contains(field + " field is required."));
+    		waitFor.ElementContainsText(Error_Ctr, field + " field is required.");
     	}
     }
     
     public void VerifyMPXPlayerDisabled(String playerTitle) throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), 
+    			"An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.");
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), 
+    			"To change its status in MPX, log into mpx.theplatform");
     	
-    	Reporter.log("Verify that the disabled player text is present for player titled '" + playerTitle + "'.");
-    	String disabledPlayerTxt = DisabledPlayerError_Ctr(playerTitle).getText();
-    	if (!disabledPlayerTxt.contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled in MPX.")) {
-    		Assert.fail("Disabled player text not present for player titled '" + playerTitle + "'.");
-    	}
-    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in MPX, log into mpx.theplatform"));
-    	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyMPXPlayerDisabledAndUnpublished(String playerTitle) throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), "An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished.");
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), "To change its status in Publisher, click here");
+    	waitFor.ElementContainsText(DisabledPlayerError_Ctr(playerTitle), "To change its status in MPX, log into mpx.theplatform");
     	
-    	Reporter.log("Verify that the disabled and unpublished player text is present for player titled '" + playerTitle + "'.");
-    	String disabledPlayerTxt = DisabledPlayerError_Ctr(playerTitle).getText();
-    	if (!disabledPlayerTxt.contains("An MPXplayer that's in use (" + playerTitle + ") has been disabled and unpublished.")) {
-    		Assert.fail("Disabled and unpublished player text not present for player titled '" + playerTitle + "'.");
-    	}
-    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in Publisher, click here"));
-    	Assert.assertTrue(disabledPlayerTxt.contains("To change its status in MPX, log into mpx.theplatform"));
-    	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyNoMessageErrorsPresent() throws Exception{
@@ -147,7 +138,7 @@ public class ErrorChecking {
     				//check the error text isn't in list of allowed errors
     				boolean ignoreError = false;
     				for (int i=0; i<allowedErrors.size(); i++) {
-    					if(errorText.contains(allowedErrors.get(i))) {
+    					if(errorText.contains(allowedErrors.get(i)) || errorText.equals("") || errorText.isEmpty() || errorText.equals(null)) {
     						//ignore error
     						ignoreError = true;
     					}
@@ -171,7 +162,7 @@ public class ErrorChecking {
     				for (String errorText : Errors) {
     					boolean ignoreError = false;
     					for (int i=0; i<allowedErrors.size(); i++) {
-    						if(errorText.contains(allowedErrors.get(i))) {
+    						if(errorText.contains(allowedErrors.get(i)) || errorText.equals("") || errorText.isEmpty() || errorText.equals(null)) {
     							//ignore error
     							ignoreError = true;
     						}

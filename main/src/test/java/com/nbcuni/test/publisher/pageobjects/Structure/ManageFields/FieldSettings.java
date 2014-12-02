@@ -2,15 +2,13 @@ package com.nbcuni.test.publisher.pageobjects.Structure.ManageFields;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Field Settings Library. Copyright
@@ -21,79 +19,78 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class FieldSettings {
 
-    private Driver webDriver;
-    private WebDriverWait wait;
+    private WaitFor waitFor;
+    private Interact interact;
+    private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
     public FieldSettings(Driver webDriver, AppLib applib) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        config = new Config();
+        Integer timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.ID, using = "edit-field-settings-target-type")
-    private WebElement TargetType_Ddl;
+    private By TargetType_Ddl = By.id("edit-field-settings-target-type");
     
-    @FindBy(how = How.XPATH, using = "//label[contains(text(), 'Mode')]/../select")
-    private WebElement Mode_Ddl;
+    private By Mode_Ddl = By.xpath("//label[contains(text(), 'Mode')]/../select");
     
-    private WebElement TargetBundle_Cbx(String bundle) {
-    	return webDriver.findElement(By.xpath("//label[contains(text(), '" + bundle + "')]/../input"));
+    private By TargetBundle_Cbx(String bundle) {
+    	return By.xpath("//label[contains(text(), '" + bundle + "')]/../input");
     }
     
-    @FindBy(how = How.XPATH, using = "//label[contains(text(), 'Sort by')]/../select")
-    private WebElement SortBy_Ddl;
+    private By SortBy_Ddl = By.xpath("//label[contains(text(), 'Sort by')]/../select");
     
-    @FindBy(how = How.ID, using = "edit-field-settings-uri-scheme-public")
-    private WebElement PublicFiles_Rdb;
+    private By PublicFiles_Rdb = By.id("edit-field-settings-uri-scheme-public");
     
-    @FindBy(how = How.ID, using = "edit-submit")
-    private WebElement SaveFieldSettings_Btn;
+    private By SaveFieldSettings_Btn = By.id("edit-submit");
     
     
     //PAGE OBJECT METHODS
     public void SelectTargetType(String type) throws Exception {
     	
     	Reporter.log("Select the '" + type + "' option from the 'Target type' drop down list.");
-    	new Select(TargetType_Ddl).selectByVisibleText(type);
+    	interact.Select(waitFor.ElementVisible(TargetType_Ddl), type);
     	
     }
     
     public void SelectMode(String mode) throws Exception {
     	
     	Reporter.log("Select the '" + mode + "' option from the 'Mode' drop down list.");
-    	Thread.sleep(1000);
-    	new Select(wait.until(ExpectedConditions.visibilityOf(Mode_Ddl))).selectByVisibleText(mode);
+    	interact.Select(waitFor.ElementVisible(Mode_Ddl), mode);
     	
     }
     
     public void CheckTargetBundleCbx(String label) throws Exception {
     	
-    	if (TargetBundle_Cbx(label).isSelected() == false) {
+    	WebElement cbx = waitFor.ElementVisible(TargetBundle_Cbx(label));
+    	
+    	if (cbx.isSelected() == false) {
     		Reporter.log("Chech the '" + label + "' 'Target bundles' check box.");
-    		TargetBundle_Cbx(label).click();
+    		interact.Click(cbx);
     	}
+    	
     }
     
     public void SelectSortBy(String sortBy) throws Exception {
     	
     	Reporter.log("Select the '" + sortBy + "' option from the 'Sort by' drop down list.");
-    	new Select(SortBy_Ddl).selectByVisibleText(sortBy);
+    	interact.Select(waitFor.ElementVisible(SortBy_Ddl), sortBy);
     	
     }
     
     public void ClickPublicFilesRdb() throws Exception {
     	
     	Reporter.log("Click the 'Public files' radio button.");
-    	PublicFiles_Rdb.click();
+    	interact.Click(waitFor.ElementVisible(PublicFiles_Rdb));
     	
     }
 
     public void ClickSaveFieldSettingsBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save field settings' button.");
-    	SaveFieldSettings_Btn.click();
+    	interact.Click(waitFor.ElementVisible(SaveFieldSettings_Btn));
     	
     }
     

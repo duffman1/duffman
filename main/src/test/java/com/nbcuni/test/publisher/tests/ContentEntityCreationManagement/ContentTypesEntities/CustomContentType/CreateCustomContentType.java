@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
@@ -22,22 +22,21 @@ public class CreateCustomContentType extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
-            taxonomy.NavigateSite("Structure>>Content types>>Add content type");
-            overlay.SwitchToActiveFrame();
+        	navigation.Structure("Content types");
             
             //Step 3
             ContentTypes contentTypes = new ContentTypes(webDriver);
+            contentTypes.ClickAddContentLnk();
             String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
             
             //Step 4
             contentTypes.ClickSaveBtn();
-            contentTypes.VerifyContentTypeSaved(contentTypeName);
-            overlay.ClickCloseOverlayLnk();
-            
+            contentParent.VerifyMessageStatus("The content type " + contentTypeName + " has been added.");
+        	
             //Step 5
-            taxonomy.NavigateSite("Structure>>Content types>>" + contentTypeName + ">>Manage fields");
-            overlay.SwitchToActiveFrame();
+            navigation.Structure("Content types");
+            contentTypes.ClickManageFieldLnk(contentTypeName);
             
             //Step 6
             String newFieldName = random.GetCharacterString(15);
@@ -45,29 +44,23 @@ public class CreateCustomContentType extends ParentTest{
             contentTypes.EnterAddNewField(newFieldName);
             contentTypes.SelectFieldType(newFieldType);
             contentTypes.ClickSaveBtn();
-            overlay.SwitchToActiveFrame();
             contentTypes.ClickSaveBtn();
-            overlay.SwitchToActiveFrame();
             contentParent.VerifyMessageStatus("Updated field " + newFieldName + " field settings.");
             contentTypes.ClickSaveBtn();
-            overlay.SwitchToActiveFrame();
             contentParent.VerifyMessageStatus("Saved " + newFieldName + " configuration.");
             contentTypes.ClickSaveBtn();
             
             //Step 7
-            overlay.ClickCloseOverlayLnk();
-            taxonomy.NavigateSite("Content>>Add content>>" + contentTypeName);
-            overlay.SwitchToActiveFrame();
-            contentTypes.VerifyFieldSaveBtnPresent(newFieldName);
+            navigation.AddContent(contentTypeName);
+            contentTypes.VerifyFieldSelectBtnPresent(newFieldName);
             
             //Step 8
             BasicInformation basicInformation = new BasicInformation(webDriver);
             String contentTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(contentTitle);
             basicInformation.EnterSynopsis();
-            overlay.SwitchToActiveFrame();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
+            webDriver.switchTo().defaultContent();
             contentParent.VerifyMessageStatus(contentTypeName + " " + contentTitle + " has been created.");
             
     }

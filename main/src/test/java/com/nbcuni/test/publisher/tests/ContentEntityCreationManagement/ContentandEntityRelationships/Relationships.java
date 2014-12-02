@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Contenta
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
@@ -27,41 +27,37 @@ public class Relationships extends ParentTest{
     	String tvShowTitle1 = createDefaultContent.TVShow("Draft");
     	
     	Reporter.log("STEP 2");
-    	taxonomy.NavigateSite("Structure>>Content types>>Movie>>Manage fields");
-    	overlay.SwitchToActiveFrame();
+    	navigation.Structure("Content types");
     	
     	Reporter.log("STEP 3");
     	ContentTypes contentTypes = new ContentTypes(webDriver);
+    	contentTypes.ClickManageFieldLnk("Movie");
     	if (contentTypes.IsFieldPresent("Relationships").equals(false)) {
     		contentTypes.EnterAddExistingField("Relationships");
         	contentTypes.SelectExistingField("Pub TV Relationship: field_tv_shows (TV Shows)");
         	contentParent.ClickSaveBtn();
-        	overlay.SwitchToActiveFrame();
         	
         	Reporter.log("STEP 4");
         	com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships relationships = new com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships(webDriver);
         	relationships.SelectTVRelationshipWidgetDepth("Show");
         	relationships.ClickSaveSettingsBtn();
         	contentParent.VerifyMessageStatus("Saved Relationships configuration.");
-        	overlay.ClickCloseOverlayLnk();
+        	
     	}
     	else {
     		Reporter.log("STEP 4 - N/A as Relationships field is already configured");
-    		overlay.ClickCloseOverlayLnk();
+    		
     	}
     	
     	Reporter.log("STEP 5");
-    	taxonomy.NavigateSite("Content>>Add content>>Movie");
-    	overlay.SwitchToActiveFrame();
+    	navigation.AddContent("Movie");
     	BasicInformation basicInformation = new BasicInformation(webDriver);
     	String movieTitle = random.GetCharacterString(15);
     	basicInformation.EnterTitle(movieTitle);
         basicInformation.EnterSynopsis();
-        overlay.SwitchToActiveFrame();
         basicInformation.ClickCoverSelectBtn();
         SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
-        overlay.SwitchToActiveFrame();
         
         Reporter.log("STEP 6");
         com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webDriver);

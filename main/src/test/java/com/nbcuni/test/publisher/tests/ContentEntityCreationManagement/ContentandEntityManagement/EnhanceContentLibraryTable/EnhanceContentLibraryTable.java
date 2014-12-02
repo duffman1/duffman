@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -35,15 +35,12 @@ public class EnhanceContentLibraryTable extends ParentTest{
     	//Step 1 and 2
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         Settings settings = new Settings(webDriver);
         if (settings.IsMPXConfigured() == true) { 
         
         	//Step 3
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Files");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Content("Files");
         	
         	//Step 4
         	SearchFor searchFor = new SearchFor(webDriver);
@@ -58,32 +55,26 @@ public class EnhanceContentLibraryTable extends ParentTest{
         	Integer resultSetSize = searchFor.GetSearchResultSize();
         	Assert.assertTrue(resultSetSize >= 1);
         	searchFor.ClickSearchHeaderColumnLnk("Title");
-        	overlay.SwitchToActiveFrame();
         	Assert.assertTrue(searchFor.GetSearchResultSize() == resultSetSize);
         	
         	//Step 8
         	searchFor.ClickSearchHeaderColumnLnk("Type");
-        	overlay.SwitchToActiveFrame();
         	Assert.assertTrue(searchFor.GetSearchResultSize() >= 1);
         	
         	//Step 9
         	searchFor.ClickSearchHeaderColumnLnk("Size");
-        	overlay.SwitchToActiveFrame();
         	Assert.assertTrue(searchFor.GetSearchResultSize() >= 1);
         	
         	//Step 10
         	searchFor.ClickSearchHeaderColumnLnk("Uploaded By");
-        	overlay.SwitchToActiveFrame();
         	Assert.assertTrue(searchFor.GetSearchResultSize() >= 1);
         	
         	//Step 11
         	searchFor.ClickSearchHeaderColumnLnk("Upload date");
-        	overlay.SwitchToActiveFrame();
         	Assert.assertTrue(searchFor.GetSearchResultSize() >= 1);
         	
         	//Step 12
         	searchFor.ClickSearchHeaderColumnLnk("Upload date");
-        	overlay.SwitchToActiveFrame();
         	Assert.assertTrue(searchFor.GetSearchResultSize() >= 1);
         }
         else { 

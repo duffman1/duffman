@@ -2,8 +2,9 @@ package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentT
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -11,6 +12,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.EditImage;
 import com.nbcuni.test.publisher.pageobjects.Content.MediaItems;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Edit;
 
 public class CreateMediaGallery extends ParentTest{
@@ -29,34 +31,34 @@ public class CreateMediaGallery extends ParentTest{
         	Reporter.log("SETUP");
         	Settings settings = new Settings(webDriver);
         	settings.ConfigureMPXIfNeeded();
-        	taxonomy.NavigateSite("Structure>>Content types>>Media Gallery>>Manage fields>>Media Items");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Structure("Content types");
+        	ContentTypes contentTypes = new ContentTypes(webDriver);
+        	contentTypes.ClickManageFieldLnk("Media Gallery");
+        	contentTypes.ClickEditLnk("Media Items");
         	Edit edit = new Edit(webDriver, applib);
         	edit.CheckAllowedRemoteMediaTypesCbx("MPX Video for Account \"DB TV\"");
         	edit.ClickSaveSettingsBtn();
         	contentParent.VerifyMessageStatus("Saved Media Items configuration.");
-        	overlay.ClickCloseOverlayLnk();
         	
             Reporter.log("STEP 2");
-            taxonomy.NavigateSite("Content>>Add content>>Media Gallery");
-            overlay.SwitchToActiveFrame();
+            navigation.AddContent("Media Gallery");
             
             Reporter.log("STEP 3");
             BasicInformation basicInformation = new BasicInformation(webDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             basicInformation.EnterSynopsis();
-            overlay.SwitchToActiveFrame();
             basicInformation.EnterShortDescription("short description");
             AddFile addFile = new AddFile(webDriver);
             MediaItems mediaItems = new MediaItems(webDriver);
             SelectFile selectFile = new SelectFile(webDriver);
             for(int Count=0;Count<2;Count++) {
+            	webDriver.switchTo().defaultContent();
             	if (Count == 0) {
             		basicInformation.ClickMediaItemsSelectBtn();
             	}
             	else {
-            		mediaItems.WaitForImgLoadComplete();
+            		contentParent.WaitForThrobberNotPresent();
             		mediaItems.ClickAddBtn();
             	}
                 selectFile.SwitchToSelectFileFrm();
@@ -85,8 +87,8 @@ public class CreateMediaGallery extends ParentTest{
                 addFile.ClickStartUploadLnk();
                 addFile.WaitForSuccessfulUpload();
                 addFile.ClickNextBtn();
-                overlay.SwitchToActiveFrame();
             }
+            webDriver.switchTo().defaultContent();
             mediaItems.VerifyFileImagePresent("IPTCDefault", "1");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
             
@@ -100,7 +102,6 @@ public class CreateMediaGallery extends ParentTest{
             editImage.EnterKeywordsValue("1", keywords);
             editImage.ClickSaveBtn("2");
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             
             Reporter.log("STEP 7");
             mediaItems.ClickEditAllBtn();
@@ -108,7 +109,6 @@ public class CreateMediaGallery extends ParentTest{
             editImage.VerifyKeywordsValue("1", keywords);
             editImage.ClickSaveBtn("2");
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             
             Reporter.log("STEP 8");
             mediaItems.ClickAddBtn();
@@ -119,37 +119,62 @@ public class CreateMediaGallery extends ParentTest{
     		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
     		selectFile.ClickSubmitBtn();
-            overlay.SwitchToActiveFrame();
-            mediaItems.WaitForImgLoadComplete();
+    		webDriver.switchTo().defaultContent();
+            contentParent.WaitForThrobberNotPresent();
             
             Reporter.log("STEP 9");
             mediaItems.ClickEditAllBtn();
             editImage.WaitForEditImageFrameOpen();
-            try {
-            	editImage.VerifyMPXPlayerPresent();
-            }
-            catch (Exception | AssertionError e) {
-            	editImage.VerifyMPXVideoLnkPresent("AutomationWThumb");
-            }
+            editImage.VerifyMPXObjectPresent();
             
             Reporter.log("STEP 10");
-            editImage.ClickCancelLnk();
+            editImage.ClickCloseWindowImg();
+            //editImage.ClickCancelLnk();
             editImage.WaitForEditImageFrameClose();
-            overlay.SwitchToActiveFrame();
             
             Reporter.log("OPTIONAL STEP");
             basicInformation.ClickCoverSelectBtn();
             selectFile.SelectDefaultCoverImg();
-            overlay.SwitchToActiveFrame();
             basicInformation.VerifyCoverImagePresent("HanSolo");
             
             Reporter.log("STEP 11");
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
-            Reporter.log("STEP 12 - 14 N/A");
+            Reporter.log("STEP 12");
+            /* 12.2.14 commented out while Mani works on the Select file defect
+            navigation.AddContent("Media Gallery");
+            String title2 = random.GetCharacterString(15);
+            basicInformation.EnterTitle(title2);
+            basicInformation.EnterSynopsis();
+            basicInformation.EnterShortDescription("short description");
+            mediaItems.ClickSelectBtn();
+            selectFile.SwitchToSelectFileFrm();
+            selectFile.ClickViewLibraryBtn();
+    		selectFile.EnterFileName("HanSolo");
+    		contentParent.WaitForThrobberNotPresent();
+    		selectFile.ClickMediaThumbnailImage("1");
+    		selectFile.ClickMediaThumbnailImage("2");
+    		selectFile.ClickMediaThumbnailImage("3");
+    		selectFile.ClickSubmitBtn();
+    		webDriver.switchTo().defaultContent();
+    		selectFile.WaitForSelectFileFrameClose();
+            contentParent.WaitForThrobberNotPresent();
+            mediaItems.VerifyFileImagePresent("HanSolo", "1");
+            mediaItems.VerifyFileImagePresent("HanSolo", "2");
+            mediaItems.VerifyFileImagePresent("HanSolo", "3");
+            mediaItems.ClickEditAllBtn();
+            editImage.WaitForEditImageFrameOpen();
+            editImage.EnterKeywordsValue("1", keywords);
+            editImage.ClickSaveBtn("2");
+            editImage.WaitForEditImageFrameClose();
+            basicInformation.ClickCoverSelectBtn();
+            selectFile.SelectDefaultCoverImg();
+            basicInformation.VerifyCoverImagePresent("HanSolo");
             
-
+            Reporter.log("STEP 13");
+            contentParent.ClickSaveBtn();
+            contentParent.VerifyMessageStatus("Media Gallery " + title2 + " has been created.");
+            */
     }
 }

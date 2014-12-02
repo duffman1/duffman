@@ -1,16 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import java.util.NoSuchElementException;
-
-import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
 import org.testng.Reporter;
 
 /*********************************************
@@ -22,112 +17,104 @@ import org.testng.Reporter;
 public class GigyaShareBar {
 
 	private Driver webDriver;
-	private WebDriverWait wait;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
 	//PAGE OBJECT CONSTRUCTORS
-    public GigyaShareBar(Driver webDriver, AppLib applib) {
+    public GigyaShareBar(Driver webDriver) {
     	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = (WebDriverWait) new WebDriverWait(webDriver, 30).ignoring(NoSuchElementException.class);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Tumblr']")
-    private WebElement Tumblr_Btn;
+    private By Tumblr_Btn = By.xpath("//div[contains(@class, 'gig')][text()='Tumblr']");
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Email']")
-    private WebElement Email_Btn;
+    private By Email_Btn = By.xpath("//div[contains(@class, 'gig')][text()='Email']");
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Google']")
-    private WebElement GooglePlus_Btn;
+    private By GooglePlus_Btn = By.xpath("//div[contains(@class, 'gig')][text()='Google']");
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Foursquare']")
-    private WebElement Foursquare_Btn;
+    private By Foursquare_Btn = By.xpath("//div[contains(@class, 'gig')][text()='Foursquare']");
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')][text()='Print']")
-    private WebElement Print_Btn;
+    private By Print_Btn = By.xpath("//div[contains(@class, 'gig')][text()='Print']");
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')]//iframe[contains(@id, 'twitter')]")
-    private WebElement Twitter_Frm;
+    private By Twitter_Frm = By.xpath("//div[contains(@class, 'gig')]//iframe[contains(@id, 'twitter')]");
     
-    @FindBy(how = How.XPATH, using = "//span[@class='label'][text()='Tweet']")
-    private WebElement Tweet_Btn;
+    private By Tweet_Btn = By.xpath("//span[@class='label'][text()='Tweet']");
     
-    @FindBy(how = How.XPATH, using = "//span[@class='pluginButtonLabel'][text()='Like']")
-    private WebElement Like_Btn;
+    private By Like_Btn = By.xpath("//span[@class='pluginButtonLabel'][text()='Like']");
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@class, 'gig')]//iframe[contains(@title, 'Facebook')]")
-    private WebElement Facebook_Frm;
+    private By Facebook_Frm = By.xpath("//div[contains(@class, 'gig')]//iframe[contains(@title, 'Facebook')]");
     
   
     //PAGE OBJECT METHODS
     public void VerifyTumblrBtnPresent() throws Exception{
     
     	Reporter.log("Verify the Tumblr gigya share link is present.");
-    	wait.until(ExpectedConditions.visibilityOf(Tumblr_Btn));
+    	waitFor.ElementVisible(Tumblr_Btn);
     	
     }
     
     public void VerifyEmailBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Email gigya share link is present.");
-    	wait.until(ExpectedConditions.visibilityOf(Email_Btn));
+    	waitFor.ElementVisible(Email_Btn);
     	
     }
 
     public void VerifyGooglePlusBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Google Plus gigya share link is present.");
-    	wait.until(ExpectedConditions.visibilityOf(GooglePlus_Btn));
+    	waitFor.ElementVisible(GooglePlus_Btn);
     	
     }
     
     public void VerifyFoursquareBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Foursquare gigya share link is present.");
-    	wait.until(ExpectedConditions.visibilityOf(Foursquare_Btn));
+    	waitFor.ElementVisible(Foursquare_Btn);
     	
     }
     
     public void VerifyPrintBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Print gigya share link is present.");
-    	wait.until(ExpectedConditions.visibilityOf(Print_Btn));
+    	waitFor.ElementVisible(Print_Btn);
     	
     }
     
     public void VerifyTwitterBtnPresent() throws Exception {
         
     	Reporter.log("Verify the Twitter gigya share link is present.");
-    	wait.until(ExpectedConditions.visibilityOf(Twitter_Frm));
+    	waitFor.ElementVisible(Twitter_Frm);
     	
     }
     
     public void ClickTweetButton() throws Exception {
         
     	Reporter.log("Click the 'Tweet' button.");
-    	wait.until(ExpectedConditions.visibilityOf(Twitter_Frm));
-    	webDriver.switchTo().frame(Twitter_Frm);
-    	Tweet_Btn.click();
+    	webDriver.switchTo().frame(waitFor.ElementPresent(Twitter_Frm));
+    	interact.Click(waitFor.ElementVisible(Tweet_Btn));
     	
     }
     
     public void ClickLikeButton() throws Exception {
         
     	Reporter.log("Click the 'Like' button.");
-    	wait.until(ExpectedConditions.visibilityOf(Facebook_Frm));
-    	webDriver.switchTo().frame(Facebook_Frm);
-    	Like_Btn.click();
+    	webDriver.switchTo().frame(waitFor.ElementPresent(Facebook_Frm));
+    	interact.Click(waitFor.ElementVisible(Like_Btn));
     	
     }
     
     public void VerifyFacebookBtnPresent() throws Exception{
         
     	Reporter.log("Verify the Facebook gigya share link is present.");
-    	wait.until(ExpectedConditions.visibilityOf(Facebook_Frm));
+    	waitFor.ElementPresent(Facebook_Frm);
     	
     }
-    
-    
 
 }

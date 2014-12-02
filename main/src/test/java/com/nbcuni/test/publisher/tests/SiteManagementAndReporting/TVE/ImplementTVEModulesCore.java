@@ -6,10 +6,11 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.TVEModule.AdobePass;
 import com.nbcuni.test.publisher.pageobjects.TVEModule.MVPDConnection;
@@ -19,6 +20,8 @@ import com.nbcuni.test.publisher.pageobjects.TVEModule.jQueryUpdate;
 
 public class ImplementTVEModulesCore extends ParentTest {
 
+	Boolean testSuccessful = false;
+	
 	/*************************************************************************************
 	 * TEST CASE - TC3261
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/19279373530
@@ -36,31 +39,27 @@ public class ImplementTVEModulesCore extends ParentTest {
         applib.openSitePage("/admin/config/development/jquery_update");
         jqueryUpdate.SelectDefaultjQueryVersion("1.5");
         jqueryUpdate.ClickSaveConfigurationBtn();
-        taxonomy.NavigateSite("Home>>Flush all caches");
-        taxonomy.NavigateSite("Home");
+        contentParent.VerifyMessageStatus("The configuration options have been saved");
+        FlushCache flushCache = new FlushCache(webDriver);
+        flushCache.FlushAllCache();
         
-		taxonomy.NavigateSite("Modules");
-        overlay.SwitchToActiveFrame();
+		navigation.Modules();
         for (String module : Arrays.asList("TVE Auth Example", "TVE Adobe Pass", "TVE MVPD")) {
-        	modules.EnterFilterName(module);
         	modules.EnableModule(module);
         }
-        overlay.ClickCloseOverlayLnk();
-		
-		taxonomy.NavigateSite("Structure>>Blocks");
-		overlay.SwitchToActiveFrame();
+        
+		navigation.Structure("Blocks");
 		Blocks blocks = new Blocks(webDriver);
         blocks.SelectRegion("TVE Auth Example", "Sidebar first");
         blocks.ClickSaveBlocksBtn();
         contentParent.VerifyMessageStatus("The block settings have been updated.");
-        overlay.ClickCloseOverlayLnk();
         
         TVEAuthExample tveAuthExample = new TVEAuthExample(webDriver);
         ErrorChecking errorChecking = new ErrorChecking(webDriver);
         
+        navigation.Home();
         if (!tveAuthExample.isMVPDConfigured()) {
         	tveAuthExample.ClickMVPDSetupLnk();
-            overlay.SwitchToActiveFrame();
             MVPDConnection mvpdConnection = new MVPDConnection(webDriver);
             mvpdConnection.EnterMVPDServiceURL("http://mvpd-admin.nbcuni.com/mvpd/service");
             mvpdConnection.EnterRequestorID("Syfy");
@@ -68,18 +67,18 @@ public class ImplementTVEModulesCore extends ParentTest {
             mvpdConnection.EnterGenericErrorMessage("Oops! Something went wrong while fetching providers!");
             mvpdConnection.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
-            taxonomy.NavigateSite("Home");
+            navigation.Home();
             contentParent.VerifyPageContentNotPresent(Arrays.asList("The MVPD Connection must be setup."));
         }
         else {
+        	System.out.println("MVPD IS ALREADY CONFIGURED.");
         	Reporter.log("MVPD IS ALREADY CONFIGURED.");
         }
         
+        navigation.Home();
         if (!tveAuthExample.isAdobePassConfigured()) {
         	tveAuthExample.ClickAdobePassSetupLnk();
-            overlay.SwitchToActiveFrame();
             AdobePass adobePass = new AdobePass(webDriver);
             adobePass.EnterAccessEnablerLocation("http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf");
             adobePass.EnterRequestTimeout("30000");
@@ -97,23 +96,22 @@ public class ImplementTVEModulesCore extends ParentTest {
             adobePass.EnterResourceID("syfy");
             adobePass.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
-            taxonomy.NavigateSite("Home");
+            navigation.Home();
             contentParent.VerifyPageContentNotPresent(Arrays.asList("The Adobe Pass configuration must be setup."));
         }
         else {
+        	System.out.println("ADOBE PASS IS ALREADY CONFIGURED.");
         	Reporter.log("ADOBE PASS IS ALREADY CONFIGURED.");
         }
         
+        navigation.Home();
         tveAuthExample.ClickConfigureJQueryLnk();
-        overlay.SwitchToActiveFrame();
         jqueryUpdate.SelectDefaultjQueryVersion("1.7");
         jqueryUpdate.ClickSaveConfigurationBtn();
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
-        overlay.ClickCloseOverlayLnk();
         
-        taxonomy.NavigateSite("Home");
+        navigation.Home();
         tveAuthExample.VerifyAuthenticationStatusChecked("true");
         tveAuthExample.VerifyAuthenticated("false");
         tveAuthExample.VerifySelectedMVPD("none");
@@ -127,32 +125,51 @@ public class ImplementTVEModulesCore extends ParentTest {
         tveAuthExample.VerifySelectedMVPD("Cablevision");
         errorChecking.VerifyNoMessageErrorsPresent();
         
+        Reporter.log("CLEANUP");
+        applib.openSitePage("/admin/config/development/jquery_update");
+		Thread.sleep(1000);
+		jqueryUpdate.SelectDefaultjQueryVersion("1.5");
+		jqueryUpdate.ClickSaveConfigurationBtn(); 
+		contentParent.VerifyMessageStatus("The configuration options have been saved");
+		flushCache.FlushAllCache();
+		navigation.Modules();
+		for (String module : Arrays.asList("TVE Auth Example")) {
+			modules.DisableModule(module);
+        	navigation.ClickPrimaryTabNavLnk("Uninstall");
+            if (modules.IsModuleInstalled(module)) {
+            	modules.UninstallModule(module);
+            }
+        }
+		
+        testSuccessful = true;
+        
 	}
 	 
 	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"ImplementTVEModulesCore_TC3261"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
-		UserLogin userLogin = applib.openApplication();
-		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-		applib.openSitePage("/admin/config/development/jquery_update");
-		Thread.sleep(1000);
-		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
-		jqueryUpdate.SelectDefaultjQueryVersion("1.5");
-		jqueryUpdate.ClickSaveConfigurationBtn(); 
-		taxonomy.NavigateSite("Home>>Flush all caches");
-		taxonomy.NavigateSite("Home");
-		Modules modules = new Modules(webDriver);
-		taxonomy.NavigateSite("Modules");
-		overlay.SwitchToActiveFrame();
-		for (String module : Arrays.asList("TVE Auth Example")) {
-			modules.EnterFilterName(module);
-			modules.DisableModule(module);
-        	overlay.ClickOverlayTab("Uninstall");
-            overlay.SwitchToActiveFrame();
-            if (modules.IsModuleInstalled(module)) {
-            	modules.UninstallModule(module);
-            	overlay.SwitchToActiveFrame();
-            }
-        }
+		
+		if (testSuccessful == false) {
+			UserLogin userLogin = applib.openApplication();
+			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+			applib.openSitePage("/admin/config/development/jquery_update");
+			Thread.sleep(1000);
+			jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
+			jqueryUpdate.SelectDefaultjQueryVersion("1.5");
+			jqueryUpdate.ClickSaveConfigurationBtn(); 
+			contentParent.VerifyMessageStatus("The configuration options have been saved");
+			FlushCache flushCache = new FlushCache(webDriver);
+			flushCache.FlushAllCache();
+			Modules modules = new Modules(webDriver);
+			navigation.Modules();
+			for (String module : Arrays.asList("TVE Auth Example")) {
+				modules.DisableModule(module);
+	        	navigation.ClickPrimaryTabNavLnk("Uninstall");
+	            if (modules.IsModuleInstalled(module)) {
+	            	modules.UninstallModule(module);
+	            	
+	            }
+	        }
+		}
 		
 	}
 }

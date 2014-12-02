@@ -3,20 +3,15 @@ package com.nbcuni.test.publisher.pageobjects.Structure;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
@@ -31,8 +26,9 @@ public class PublisherAdsSideFiles {
 
 	private Driver webDriver;
 	private Config config;
-	private WebDriverWait wait;
-	private Overlay overlay;
+	private Integer timeout;
+	private Interact interact;
+	private WaitFor waitFor;
 	private Delete delete;
 	private ContentParent contentParent;
 	
@@ -40,47 +36,46 @@ public class PublisherAdsSideFiles {
     public PublisherAdsSideFiles(Driver webDriver) {
     	this.webDriver = webDriver;
     	config = new Config();
-    	PageFactory.initElements(webDriver, this);
-    	wait = new WebDriverWait(webDriver, 10);
-    	overlay = new Overlay(webDriver);
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	waitFor = new WaitFor(webDriver, timeout);
+    	interact = new Interact(webDriver, timeout);
     	delete = new Delete(webDriver);
     	contentParent = new ContentParent(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.LINK_TEXT, using = "Add")
-    private WebElement Add_Lnk;
+    private By Add_Lnk = By.linkText("Add");
     
-    private WebElement AdSideFile_Lnk(String linkPath) {
-    	return webDriver.findElement(By.xpath("//a[text()='" + linkPath + "']"));
+    private By Import_Lnk = By.linkText("Import");
+    
+    private By AdSideFile_Lnk(String linkPath) {
+    	return By.xpath("//a[text()='" + linkPath + "']");
     }
     
-    private WebElement AdSideFileEdit_Lnk(String adName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='Edit']"));
+    private By AdSideFileEdit_Lnk(String adName) {
+    	return By.xpath("//td[text()='" + adName + "']/..//a[text()='Edit']");
     }
     
-    private WebElement AdSideFileName_Txt(String adName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']"));
+    private By AdSideFileName_Txt(String adName) {
+    	return By.xpath("//td[text()='" + adName + "']");
     }
     
-    private WebElement AdSideFileStorage_Txt(String adName, String storageType) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/../td[contains(@class, 'storage')][text()='" + storageType + "']"));
+    private By AdSideFileStorage_Txt(String adName, String storageType) {
+    	return By.xpath("//td[text()='" + adName + "']/../td[contains(@class, 'storage')][text()='" + storageType + "']");
     }
     
-    private WebElement AdSideFileExpandEdit_Lnk(String adName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='open']"));
+    private By AdSideFileExpandEdit_Lnk(String adName) {
+    	return By.xpath("//td[text()='" + adName + "']/..//a[text()='open']");
     }
     
-    private List<WebElement> AdSideFileNames_Txt() {
-    	return webDriver.findElements(By.xpath("//td[@class='ctools-export-ui-name']"));
+    private By AdSideFileNames_Txt = By.xpath("//td[@class='ctools-export-ui-name']");
+    	
+    private By AdSideFileClone_Lnk(String adName) {
+    	return By.xpath("//td[text()='" + adName + "']/..//a[text()='Clone']");
     }
     
-    private WebElement AdSideFileClone_Lnk(String adName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='Clone']"));
-    }
-    
-    private WebElement AdSideFileDelete_Lnk(String adName) {
-    	return webDriver.findElement(By.xpath("//td[text()='" + adName + "']/..//a[text()='Delete']"));
+    private By AdSideFileDelete_Lnk(String adName) {
+    	return By.xpath("//td[text()='" + adName + "']/..//a[text()='Delete']");
     }
     
     
@@ -88,77 +83,64 @@ public class PublisherAdsSideFiles {
     public void ClickAddLnk() throws Exception {
     
     	Reporter.log("Click the 'Add' link.");
-    	Add_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(Add_Lnk));
+    	
+    }
+    
+    public void ClickImportLnk() throws Exception {
+        
+    	Reporter.log("Click the 'Import' link.");
+    	interact.Click(waitFor.ElementVisible(Import_Lnk));
+    	
     }
     
     public void ClickAdSideFileLnk(String path) throws Exception {
         
     	Reporter.log("Click the Ad Side File link with path '" + path + "'.");
-    	AdSideFile_Lnk(path).click();
+    	interact.Click(waitFor.ElementVisible(AdSideFile_Lnk(path)));
+    	
     }
     
     public void ClickAdSideFileEditLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File 'Edit' link for adName + '" + adName + "'.");
-    	AdSideFileEdit_Lnk(adName).click();
+    	interact.Click(waitFor.ElementVisible(AdSideFileEdit_Lnk(adName)));
+    	
     }
     
     public void VerifyAdSideFileStorageType(String adName, String storageType) throws Exception {
         
     	Reporter.log("Verify storage type for Ad Side File '" + adName + "' is set to '" + storageType + "'.");
-    	AdSideFileStorage_Txt(adName, storageType).isDisplayed();
+    	waitFor.ElementVisible(AdSideFileStorage_Txt(adName, storageType));
+    	
     }
     
     public void ClickAdSideFileExpandEditLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File expand link for adName + '" + adName + "'.");
-    	AdSideFileExpandEdit_Lnk(adName).click();
+    	interact.Click(waitFor.ElementVisible(AdSideFileExpandEdit_Lnk(adName)));
+    	
     }
     
     public void ClickAdSideFileCloneLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File 'Clone' link for adName + '" + adName + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(AdSideFileClone_Lnk(adName)));
-    	Thread.sleep(500); //pause required here
-    	try {
-    		AdSideFileClone_Lnk(adName).click();
-    	}
-    	catch (WebDriverException e) {
-    		webDriver.executeScript("arguments[0].click();", AdSideFileClone_Lnk(adName));
-    	}
+    	interact.Click(waitFor.ElementVisible(AdSideFileClone_Lnk(adName)));
+    	
     }
     
     public void ClickAdSideFileDeleteLnk(String adName) throws Exception {
         
     	Reporter.log("Click the Ad Side File 'Delete' link for adName + '" + adName + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(AdSideFileDelete_Lnk(adName)));
-    	Thread.sleep(500); //pause required here
-    	try {
-    		AdSideFileDelete_Lnk(adName).click();
-    	}
-    	catch (WebDriverException e) {
-    		webDriver.executeScript("arguments[0].click();", AdSideFileDelete_Lnk(adName));
-    	}
+    	interact.Click(waitFor.ElementVisible(AdSideFileDelete_Lnk(adName)));
+    	
     }
     
     public void VerifyAdSideFileNotPresent(String adName) throws Exception {
         
     	Reporter.log("Verify Ad Side File '" + adName + "' is NOT present.");
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	boolean elPresent = true;
-    	try {
-    		
-    		AdSideFileName_Txt(adName).isDisplayed();
-    		elPresent = true;
-    	}
-    	catch (Exception e) {
+    	waitFor.ElementNotPresent(AdSideFileName_Txt(adName));
     	
-    		elPresent = false;
-    	}
-    	if (elPresent == true) {
-    		Assert.fail("Ad side file '" + adName + "' is present when it should not be");
-    	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void DeleteAllUnwantedSideFiles() throws Exception {
@@ -169,7 +151,7 @@ public class PublisherAdsSideFiles {
     			"Safecount", "Smartadserver", "Unicast", "Videoegg", "Viewpoint");
     	
     	List<String> notAllowedSideFiles = new ArrayList<String>();
-    	for (WebElement el : this.AdSideFileNames_Txt()) {
+    	for (WebElement el :  webDriver.findElements(AdSideFileNames_Txt)) {
     		String sideFile = el.getText();
     		if (!allowedSideFiles.contains(sideFile)) {
     			notAllowedSideFiles.add(sideFile);
@@ -180,9 +162,7 @@ public class PublisherAdsSideFiles {
     		
     		this.ClickAdSideFileExpandEditLnk(sideFile);
     	    this.ClickAdSideFileDeleteLnk(sideFile);
-    	    overlay.SwitchToActiveFrame();
     	    delete.ClickDeleteBtn();
-    	    overlay.SwitchToActiveFrame();
     	    contentParent.VerifyMessageStatus("The item has been deleted.");
     	    this.VerifyAdSideFileNotPresent(sideFile);
     		

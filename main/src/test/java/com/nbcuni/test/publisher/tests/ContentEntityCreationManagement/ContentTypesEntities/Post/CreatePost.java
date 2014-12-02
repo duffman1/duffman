@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
@@ -28,9 +28,8 @@ public class CreatePost extends ParentTest{
             for (String state : allStates) {
             
             	//Step 1a
-            	taxonomy.NavigateSite("Content>>Add content>>Post");
-            	overlay.SwitchToActiveFrame();
-            
+            	navigation.AddContent("Post");
+            	
             	//Step 2
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
             	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
@@ -45,20 +44,17 @@ public class CreatePost extends ParentTest{
             	basicInformation.EnterSynopsis();
             
             	//Step 4
-            	overlay.SwitchToActiveFrame();
             	basicInformation.SelectTextFormat("WYSIWYG Mini");
             	basicInformation.ClickCoverSelectBtn();
             	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SelectDefaultCoverImg();
-            	overlay.SwitchToActiveFrame();
-            
+            	
             	//Step 5
             	publishingOptions.ClickPublishingOptionsLnk();
             	publishingOptions.SelectModerationState(state);
             
             	//Step 6
             	contentParent.ClickSaveBtn();
-            	overlay.switchToDefaultContent(true);
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
             	WorkBench workBench = new WorkBench(webDriver);
             	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));

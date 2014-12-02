@@ -2,7 +2,7 @@ package com.nbcuni.test.publisher.tests.Video.Player;
 
 import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
@@ -46,24 +46,20 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	if (configuredAccounts.contains("DB TV") || configuredAccounts.contains("NBCU TVE Dev - NBC")) {
         		
         		//Step 2
-        		overlay.switchToDefaultContent(true);
-        		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-
+        		navigation.Content("Files", "mpxMedia");
+        		
         		//Step 3
-        		overlay.SwitchToActiveFrame();
         		SearchFor searchFor = new SearchFor(webDriver);
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
 
         		//Step 4
-        		overlay.switchToDefaultContent(true);
         		Content content = new Content(webDriver);
         		content.ClickEditMenuBtn("AutomationDefault");
         		
@@ -76,15 +72,13 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		contentParent.ClickSaveBtn();
             
         		//Step 8 through 19 (truncated as test steps no longer match application functionality)
-        		overlay.switchToDefaultContent(true);
-        		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        		navigation.Content("Files", "mpxMedia");
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
         		content.ClickEditMenuBtn("AutomationDefault");
         		editMPXVideo.SelectPubMPXVideoPlayer("VeXC0F2L9wg2");
         		contentParent.ClickSaveBtn();
-        		overlay.switchToDefaultContent(true);
-        		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+        		navigation.Content("Files", "mpxMedia");
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
         		content.ClickEditMenuBtn("AutomationDefault");

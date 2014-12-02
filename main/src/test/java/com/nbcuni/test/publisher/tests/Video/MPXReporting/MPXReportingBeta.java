@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.Video.MPXReporting;
 import java.util.Arrays;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXStatusBeta;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -36,8 +36,8 @@ public class MPXReportingBeta extends ParentTest{
         	modules.VerifyModuleEnabled("Media: ThePlatform mpx Reports");
         	
         	Reporter.log("STEP 3");
-        	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings>>Media: thePlatform MPX Status (BETA)");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Configuration("Media: thePlatform mpx settings");
+        	navigation.ClickPrimaryTabNavLnk("Media: thePlatform MPX Status (BETA)");
         	
         	Reporter.log("STEP 4");
         	contentParent.VerifyPageContentPresent(Arrays.asList("Total Videos Ingested:", "View all videos here.", 

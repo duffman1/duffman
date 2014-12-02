@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.XMLSiteMap;
@@ -13,6 +13,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypeStructure;
+import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 
 public class SEOOptimizationModule extends ParentTest {
 
@@ -28,16 +29,14 @@ public class SEOOptimizationModule extends ParentTest {
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
        
 		//Step 2
+		navigation.Modules();
 		Modules module = new Modules(webDriver);
-		taxonomy.NavigateSite("Modules");
-		overlay.SwitchToActiveFrame();
-		module.EnterFilterName("Pub SEO");
 		module.EnableModule("Pub SEO");
-		overlay.ClickCloseOverlayLnk();
-    
+		
 		//Step 3
-		taxonomy.NavigateSite("Structure>>Content types>>Post");
-		overlay.SwitchToActiveFrame();
+		navigation.Structure("Content types");
+		ContentTypes contentTypes = new ContentTypes(webDriver);
+		contentTypes.ClickEditLnk("Post");
 		
 		//Step 4
 		ContentTypeStructure contentTypeStructure = new ContentTypeStructure(webDriver);
@@ -46,34 +45,27 @@ public class SEOOptimizationModule extends ParentTest {
 		contentTypeStructure.ClickSaveContentType();
 		ContentParent contentParent = new ContentParent(webDriver);
 		contentParent.VerifyMessageStatus("The content type Post has been updated.");
-		overlay.ClickCloseOverlayLnk();
 		
 		//Step 5
 		CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
 		String DraftPostTitle = createDefaultContent.Post("Draft");
 		String PublishedPostTitle = createDefaultContent.Post("Published");
-		System.out.println(PublishedPostTitle);
 		
 		//Step 6
 		Cron cron = new Cron(webDriver);
-		cron.RunCron(true);
+		cron.RunCron();
 		
 		//Step 7
-		taxonomy.NavigateSite("Configuration>>Search and metadata>>XML sitemap>>Rebuild links");
-		overlay.SwitchToActiveFrame();
+		navigation.Configuration("XML sitemap");
+		navigation.ClickPrimaryTabNavLnk("Rebuild links");
 		XMLSiteMap xmlSiteMap = new XMLSiteMap(webDriver);
 		xmlSiteMap.ClickSaveAndRestoreCbx();
 		xmlSiteMap.ClickRebuildSitemapBtn();
-		Thread.sleep(2000); //TODO - dynamic wait
-		overlay.switchToDefaultContent(true);
-		overlay.WaitForFrameNotPresent("Rebuilding Sitemap");
-		overlay.SwitchToActiveFrame();
+		contentParent.WaitForProgressBarNotPresent();
 		contentParent.VerifyMessageStatus("The sitemap links were rebuilt.");
-		overlay.ClickCloseOverlayLnk();
 			
 		//Step 8
-		taxonomy.NavigateSite("Configuration>>Search and metadata>>XML sitemap");
-		overlay.SwitchToActiveFrame();
+		navigation.Configuration("XML sitemap");
 		xmlSiteMap.ClickXMLSiteMapLnk();
 		contentParent.VerifyPageContentPresent(Arrays.asList(PublishedPostTitle));
 		contentParent.VerifyPageContentNotPresent(Arrays.asList(DraftPostTitle));

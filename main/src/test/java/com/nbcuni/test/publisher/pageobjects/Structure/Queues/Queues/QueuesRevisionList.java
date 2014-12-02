@@ -1,18 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Queues Revision List Library. Copyright
@@ -23,105 +18,106 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class QueuesRevisionList {
 
-	private Driver webDriver;
-	private WebDriverWait wait;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public QueuesRevisionList(Driver webDriver) {
-    	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+    	config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "(//input[@value='Update State'])[1]")
-    private WebElement UpdateState_Btn;
+    private By UpdateState_Btn = By.xpath("(//input[@value='Update State'])[1]");
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Revisions']")
-    private WebElement Revision_Lnk;
+    private By Revision_Lnk = By.xpath("//a[text()='Revisions']");
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Schedule']")
-    private WebElement Schedule_Tab;
+    private By Schedule_Tab = By.xpath("//a[text()='Schedule']");
     
-    @FindBy(how = How.XPATH, using = "(//td[@class='views-field views-field-history-list'])[1]")
-    private WebElement StateFlowHistoryEvent_Txt;
+    private By StateFlowHistoryEvent_Txt = By.xpath("(//td[@class='views-field views-field-history-list'])[1]");
     
-    @FindBy(how = How.ID, using = "edit-cancel")
-    private WebElement Cancel_Lnk;
+    private By Cancel_Lnk = By.id("edit-cancel");
     
-    private WebElement EditExtendMenu_Btn(String index) {
-		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='operations'])[" + index + "]"));
+    private By EditExtendMenu_Btn(String index) {
+		return By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='operations'])[" + index + "]");
 	}
 	
-	private WebElement EditMenuDelete_Btn(String index) {
-		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='Delete'])[" + index + "]"));
+	private By EditMenuDelete_Btn(String index) {
+		return By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='Delete'])[" + index + "]");
 	}
 	
-	private WebElement EditMenu_Btn(String index) {
-		return webDriver.findElement(By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='Edit'])[" + index + "]"));
+	private By EditMenu_Btn(String index) {
+		return By.xpath("(//table[contains(@class, 'views-table')]//td/..//a[text()='Edit'])[" + index + "]");
 	}
 	
-	List<WebElement> StateFlow_Rws() {
-		return webDriver.findElements(By.xpath("//table[contains(@class, 'views-table')]//tr[contains(@class, 'state-flow')]"));
-	}
-    
+	private By AllStateFlow_Rws = By.xpath("//table[contains(@class, 'views-table')]//tr[contains(@class, 'state-flow')]");
+	
     
     //PAGE OBJECT METHODS
     public void ClickRevisionsLnk() throws Exception {
     	
     	Reporter.log("Click the 'Revisions' tab.");
-    	Revision_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(Revision_Lnk));
+    	
     }
     
     public void VerifyStateFlowHistoryEvent(String messageTxt) throws Exception {
     	
     	Reporter.log("Verify the revision event text of '" + messageTxt + "'.");
-    	if (!StateFlowHistoryEvent_Txt.getText().contains(messageTxt)) {
-    		Assert.fail("Revision history text of '" + messageTxt + "' is not present.");
-    	}
+    	waitFor.ElementContainsText(StateFlowHistoryEvent_Txt, messageTxt);
+    	
     }
     
     public void ClickCancelLnk() throws Exception {
     	
     	Reporter.log("Click the 'Cancel' link.");
-    	Cancel_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(Cancel_Lnk));
+    	
     }
     
     public void ClickUpdateStateBtn() throws Exception {
     	
     	Reporter.log("Click the 'Update state' button.");
-    	UpdateState_Btn.click();
+    	interact.Click(waitFor.ElementVisible(UpdateState_Btn));
+    	
     }
     
     public void ClickEditQueueExtendMenuBtn(String revisionIndex) throws Exception {
     	
     	Reporter.log("Click the 'Expand' arrow to extend the edit menu for queue revision index '" + revisionIndex + "'.");
-    	EditExtendMenu_Btn(revisionIndex).click();
+    	interact.Click(waitFor.ElementVisible(EditExtendMenu_Btn(revisionIndex)));
+    	
     }
     
     public void ClickDeleteQueueMenuBtn(String revisionIndex) throws Exception {
     	
     	Reporter.log("Click the 'Delete' button for the queue revision index '" + revisionIndex + "'.");
-    	wait.until(ExpectedConditions.visibilityOf(EditMenuDelete_Btn(revisionIndex))).click();
+    	interact.Click(waitFor.ElementVisible(EditMenuDelete_Btn(revisionIndex)));
     	
     }
     
     public void ClickEditQueueMenuBtn(String revisionIndex) throws Exception {
     	
     	Reporter.log("Click the 'Edit' button for queue revision index + '" + revisionIndex + "'.");
-    	EditMenu_Btn(revisionIndex).click();
+    	interact.Click(waitFor.ElementVisible(EditMenu_Btn(revisionIndex)));
+    	
     }
     
     public void VerifyRevisionCount(int revisionCount) throws Exception {
     	
     	Reporter.log("Verify the count of revisions in the Queues revision list is '" + revisionCount + "'.");
-    	Assert.assertEquals(StateFlow_Rws().size(), revisionCount);
+    	Assert.assertEquals(waitFor.ElementsVisible(AllStateFlow_Rws).size(), revisionCount);
+    	
     }
     
     public void clickScheduleTab() throws Exception{
     	
     	Reporter.log("Click Schedule Tab");	
-    	Schedule_Tab.click();
+    	interact.Click(waitFor.ElementVisible(Schedule_Tab));
     	
     }
     

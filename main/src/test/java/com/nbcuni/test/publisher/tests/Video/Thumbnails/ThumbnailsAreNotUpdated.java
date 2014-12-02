@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.Video.Thumbnails;
 import java.util.List;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -55,21 +55,17 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
+    	navigation.Configuration("Media: thePlatform mpx settings");
     	Settings settings = new Settings(webDriver);
-    	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
-        
+    	
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
         	if (configuredAccounts.contains("DB TV")) {
         		
-        		overlay.ClickCloseOverlayLnk();
-        		taxonomy.NavigateSite("Structure>>File types");
-        		overlay.SwitchToActiveFrame();
-        	
+        		navigation.Structure("File types");
+        		
         		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
-        		overlay.SwitchToActiveFrame();
         		
         		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
         		manageFileDisplay.CheckPubMPXImageCbx();
@@ -78,7 +74,6 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		ContentParent contentParent = new ContentParent(webDriver);
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
-        		overlay.ClickCloseOverlayLnk();
         		
         		//Step 3
         		MPXLogin mpxLogin = new MPXLogin(webDriver);
@@ -118,31 +113,29 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 applib.openApplication();
                 Cron cron = new Cron(webDriver);
                 if (config.getConfigValueString("DrushIngestion").equals("false")) {
-                	cron.RunCron(true);
+                	cron.RunCron();
                 }
                 
         		//Step 14
-        	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-        	    overlay.SwitchToActiveFrame();
+                navigation.Content("Files", "mpxMedia");
         	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
-        	    overlay.switchToDefaultContent(true);
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
             	    if (config.getConfigValueString("DrushIngestion").equals("true")) {
             	    	int refreshCount = 0;
             	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                            	
-                    		   webDriver.navigate().refresh();
+                    		   applib.refreshPage();
                     		   refreshCount++;
                     		   if (refreshCount == 10) {
-                    		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
+                    			   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
                     		   }
                     	   }
             		}
             	    else {
-            	    	cron.RunCron(false);
-                		taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            	    	cron.RunCron();
+            	    	navigation.Content("Files", "mpxMedia");
             	    }
                 	searchFor.EnterTitle(mediaTitle);
                 	searchFor.ClickApplyBtn();
@@ -152,8 +145,8 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		//Step 15 through 21 - TODO as time allows. This initial test is more about initial mpx thumbnail ingestion than thumbnail update.
         		
         	    //Cleanup
-        	    taxonomy.NavigateSite("Structure>>File types");
-        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        	    navigation.Structure("File types");
+        	    fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		manageFileDisplay.UnCheckPubMPXImageCbx();
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		contentParent.VerifyMessageStatus("Your settings have been saved.");

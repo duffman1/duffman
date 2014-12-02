@@ -2,12 +2,12 @@ package com.nbcuni.test.publisher.pageobjects.Configuration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Entity Tracker Library. Copyright
@@ -17,37 +17,43 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 *********************************************/
 public class EntityTracker {
 		
-	private Driver webDriver;
+	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public EntityTracker(Driver webDriver) {
-		this.webDriver = webDriver;
-		PageFactory.initElements(webDriver, this);
-		
+		config = new Config();
+		timeout = config.getConfigValueInt("WaitForWaitTime");
+		waitFor = new WaitFor(webDriver, timeout);
+		interact = new Interact(webDriver, timeout);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
-	private WebElement Role_Cbx(String role) {
-		return webDriver.findElement(By.xpath("//label[text()='" + role + " ']/../input[contains(@id, 'edit-entity-tracker-roles')]"));
+	private By Role_Cbx(String role) {
+		return By.xpath("//label[text()='" + role + " ']/../input[contains(@id, 'edit-entity-tracker-roles')]");
 	}
 
-	@FindBy(how = How.ID, using ="edit-submit")
-	private WebElement SaveConfiguration_Btn;
+	private By SaveConfiguration_Btn = By.id("edit-submit");
 
 	
 	//PAGE OBJECT METHODS
 	public void CheckRoleCbx(String roleName) throws Exception {
 
-		if (!Role_Cbx(roleName).isSelected()) {
+		WebElement ele = waitFor.ElementVisible(Role_Cbx(roleName));
+		if (!ele.isSelected()) {
 			Reporter.log("Check the '" + roleName + "' check box.");
-			Role_Cbx(roleName).click();
+			interact.Click(ele);
 		}
+		
 	}
 
 	public void ClickSaveConfigurationBtn() throws Exception {
 		
 		Reporter.log("Click the 'Save configuration' button.");
-		SaveConfiguration_Btn.click();
+		interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
+		
 	}
 	
 }

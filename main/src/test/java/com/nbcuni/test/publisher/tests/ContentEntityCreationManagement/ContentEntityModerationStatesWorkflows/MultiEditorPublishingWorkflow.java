@@ -6,7 +6,7 @@ import java.util.List;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
@@ -53,8 +53,7 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         String seniorEditorUserName = addUser.AddDefaultUser(Arrays.asList("senior editor"), false);
         
         //Setup - ensure editor and senior editor have correct permissions
-        taxonomy.NavigateSite("People>>Permissions");
-        overlay.SwitchToActiveFrame();
+        navigation.People("Permissions");
         Permissions permissions = new Permissions(webDriver, applib);
         List<String> userRoles = Arrays.asList("editor", "senior editor");
         for (String role : userRoles) {
@@ -62,11 +61,10 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
             		"edit any post content", "delete any post content", "create files", "access workbench",
             			"access advanced_link autocomplete", "access collection list", "create collections",
             				"edit collections", "view collections", "delete collections", "view the administration theme",
-            					"access user profiles"));
+            					"access user profiles", "access navbar", "create character_profile content"));
         }
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
-        overlay.ClickCloseOverlayLnk();
         Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         
@@ -80,24 +78,20 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         //Step 3
         WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
-        overlay.SwitchToActiveFrame();
             
         //Step 4
         PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.VerifyModerationStateValue("Draft");
         publishingOptions.VerifyAssignToValue(editorUserName);
-        overlay.ClickCloseOverlayLnk();
         
         //Step 5
         //TODO
         
         //Step 6
-        taxonomy.NavigateSite("My Workbench");
-        overlay.SwitchToActiveFrame();
+        navigation.WorkBench();
         MyWork myWork = new MyWork(webDriver);
         myWork.ClickMyWorkBtn();
-        overlay.SwitchToActiveFrame();
         SearchFor searchFor = new SearchFor(webDriver);
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
@@ -106,7 +100,6 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         
         //Step 7
         myWork.ClickEditLnk(postTitle);
-        overlay.SwitchToActiveFrame();
         
         //Step 8 - N/A 
         
@@ -115,16 +108,13 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         publishingOptions.EnterAssignTo(seniorEditorUserName);
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
-        overlay.ClickCloseOverlayLnk();
         
         //Step 10
-        taxonomy.NavigateSite("My Workbench");
-        overlay.SwitchToActiveFrame();
+        navigation.WorkBench();
         contentParent.VerifyPageContentNotPresent(Arrays.asList(postTitle));
         
         //Step 11
         myWork.ClickMyWorkBtn();
-        overlay.SwitchToActiveFrame();
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
         Thread.sleep(1000); //TODO - dynamic wait
@@ -133,13 +123,11 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         //Step 12 TODO automate as time allows
         
         //Step 13
-        overlay.ClickCloseOverlayLnk();
         logout.ClickLogoutBtn();
         userLogin.Login(seniorEditorUserName, userPassword);
         
         //Step 14
-        taxonomy.NavigateSite("My Workbench");
-        overlay.SwitchToActiveFrame();
+        navigation.WorkBench();
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         //Step 15 - N/A

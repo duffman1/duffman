@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.Queues;
@@ -36,72 +36,57 @@ public class DeleteRevisionsQueues extends ParentTest {
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        taxonomy.NavigateSite("Content>>Queues");
-        overlay.SwitchToActiveFrame();
+        navigation.Content("Queues");
         
         //Step 3
         Queues queues = new Queues(webDriver);
         queues.ClickAddPromoQueueLnk();
-        overlay.SwitchToActiveFrame();
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
-        overlay.SwitchToActiveFrame();
         queues.VerifyQueuesInList(Arrays.asList(queueTitle));
         
         //Step 4
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         queues.EnterQueueItem("a", "1");
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
-        overlay.SwitchToActiveFrame();
         
         //Step 5
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         queues.EnterQueueItem("b", "2");
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
-        overlay.SwitchToActiveFrame();
         
         //Step 6
         queues.ClickEditQueueMenuBtn(queueTitle);
-        overlay.SwitchToActiveFrame();
         QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
         queuesRevisionList.ClickRevisionsLnk();
-        overlay.SwitchToActiveFrame();
         
         //Step 7
         queuesRevisionList.ClickEditQueueExtendMenuBtn("1");
         queuesRevisionList.ClickDeleteQueueMenuBtn("1");
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageError("This revision cannot be deleted because it is currently the primary revision for this queue");
         
         //Step 8
         queuesRevisionList.ClickEditQueueExtendMenuBtn("2");
         queuesRevisionList.ClickDeleteQueueMenuBtn("2");
-        overlay.SwitchToActiveFrame();
         
         //Step 9
         Delete delete = new Delete(webDriver);
         delete.ClickDeleteRevisionBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The revision has been successfully deleted.");
         
         //Step 10
         queuesRevisionList.ClickEditQueueExtendMenuBtn("2");
         queuesRevisionList.ClickDeleteQueueMenuBtn("2");
-        overlay.SwitchToActiveFrame();
         delete.ClickDeleteRevisionBtn();
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageStatus("The revision has been successfully deleted.");
         
         //Step 11
         queuesRevisionList.ClickEditQueueExtendMenuBtn("1");
         queuesRevisionList.ClickDeleteQueueMenuBtn("1");
-        overlay.SwitchToActiveFrame();
         contentParent.VerifyMessageError("This revision cannot be deleted because it is currently the primary revision for this queue");
         
         //Step 12

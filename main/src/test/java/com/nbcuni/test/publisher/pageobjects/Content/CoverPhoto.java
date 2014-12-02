@@ -1,13 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
+
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Cover Photo Library. Copyright
@@ -18,55 +18,50 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class CoverPhoto {
 
-    private Driver webDriver;
+	private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
+    private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
     public CoverPhoto(final Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    	config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//div[contains(@id, 'field-character-cover-photo')]//img")
-    private WebElement CoverPhoto_Img;
+    private By CoverPhoto_Img = By.xpath("//div[contains(@id, 'field-character-cover-photo')]//img");
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@id, 'field-character-cover-photo')]//a[text()='Edit']")
-    private WebElement Edit_Btn;
+    private By Edit_Btn = By.xpath("//div[contains(@id, 'field-character-cover-photo')]//a[text()='Edit']");
     
-    @FindBy(how = How.XPATH, using = "//div[contains(@id, 'field-character-cover-photo')]//a[text()='Select']")
-    private WebElement Select_Btn;
+    private By Select_Btn = By.xpath("//div[contains(@id, 'field-character-cover-photo')]//a[text()='Browse']");
     
     
     //PAGE OBJECT METHODS
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
     	Reporter.log("Assert that img source of the Cover Photo contains '" + imageSrc + "'.");
-    	Assert.assertTrue(CoverPhoto_Img.getAttribute("src").contains(imageSrc));
+    	WebElement ele = waitFor.ElementContainsAttribute(CoverPhoto_Img, "src", imageSrc);
     	
     	Reporter.log("Assert the the img is loaded and visible.");
-    	boolean imgLoaded;
-        for (int second = 0; ; second++){
-            if (second >= 30) {
-                Assert.fail("Image '" + imageSrc + "' is not fully loaded after timeout");
-            }
-            imgLoaded = (Boolean) ((JavascriptExecutor)webDriver).executeScript(
-            			"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", 
-            			CoverPhoto_Img);
-            if (imgLoaded == true){ break;}
-            Thread.sleep(500);
-        }
+    	waitFor.ImageVisible(ele);
+    	
     }
     
     public void ClickEditBtn() throws Exception {
     	
     	Reporter.log("Click the Cover Photo 'Edit' button.");
-    	Edit_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Edit_Btn));
+    	
     }
     
     public void ClickSelectBtn() throws Exception {
     	
     	Reporter.log("Click the Cover Photo 'Select' button.");
-    	Select_Btn.click();
+    	interact.Click(waitFor.ElementVisible(Select_Btn));
+    	
     }
     
     

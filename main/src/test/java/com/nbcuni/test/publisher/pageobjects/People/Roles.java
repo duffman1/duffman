@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +9,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Roles Library. Copyright
@@ -20,11 +23,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class Roles {
 
     private Driver webDriver;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public Roles(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
+        waitFor = new WaitFor(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -51,7 +56,7 @@ public class Roles {
     	List<WebElement> allColumns = RoleRows_Ctr();
     	
     	Reporter.log("Verify all the required role permissions are present in the 'Role' list.");
-    	Assert.assertTrue(allColumns.get(0).getText().contains("anonymous user"));
+    	waitFor.ElementContainsText(allColumns.get(0), "anonymous user");
     	Assert.assertTrue(allColumns.get(1).getText().contains("authenticated user"));
     	Assert.assertTrue(allColumns.get(2).getText().contains("administrator"));
     	Assert.assertTrue(allColumns.get(3).getText().contains("editor"));

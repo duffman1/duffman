@@ -4,7 +4,7 @@ import java.util.Arrays;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
@@ -18,7 +18,7 @@ public class TrackEntityReferences extends ParentTest {
      * TEST CASE - TC5445
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/23568460386
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mps"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void TrackEntityReferences_TC5445() throws Exception {
         
         	Reporter.log("STEP 1");
@@ -34,26 +34,22 @@ public class TrackEntityReferences extends ParentTest {
         	String tvEpisodeTitle = createDefaultContent.TVEpisode("Draft", tvShowTitle, tvSeasonTitle);
         	WorkBench workBench = new WorkBench(webDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
-        	overlay.SwitchToActiveFrame();
         	AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
         	additionalInformation.ClickAdditionalInformationLnk();
-        	additionalInformation.EnterTag("tag1");
-        	additionalInformation.EnterTag("tag2");
+        	additionalInformation.EnterTag("tag1, tag2");
         	contentParent.ClickSaveBtn();
-        	overlay.switchToDefaultContent(true);
+        	webDriver.switchTo().defaultContent();
         	
         	Reporter.log("STEP 2");
-        	taxonomy.NavigateSite("Configuration>>Web services>>MPS Configuration");
-            overlay.SwitchToActiveFrame();
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
-            mpsConfiguration.EnterMPSHost("mps.io");
+        	navigation.Configuration("MPS Configuration");
+        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
             mpsConfiguration.CheckSendQueryStringsCbx();
             mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 3");
             applib.openSitePage("/content/" + tvEpisodeTitle);

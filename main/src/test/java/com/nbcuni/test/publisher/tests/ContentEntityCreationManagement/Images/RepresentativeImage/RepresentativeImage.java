@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 
@@ -26,30 +26,23 @@ public class RepresentativeImage extends ParentTest {
         	String postTitle = createDefaultContent.Post("Published");
         	
         	Reporter.log("STEP 3");
-        	taxonomy.NavigateSite("Content");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Content();
         	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle(postTitle);
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent(true);
         	searchFor.VerifySearchThumbnailImgPresent(postTitle, "HanSolo");
         	
         	Reporter.log("STEP 4");
-        	taxonomy.NavigateSite("Home");
-        	taxonomy.NavigateSite("Content>>Files");
-            overlay.SwitchToActiveFrame();
-            Thumbnails thumbnails = new Thumbnails(webDriver);
+        	navigation.Content("Files");
+        	Thumbnails thumbnails = new Thumbnails(webDriver);
         	thumbnails.VerifyThumbnailImagePresent("HanSolo", "1");
-            overlay.ClickCloseOverlayLnk();
             
             Reporter.log("STEP 5");
-        	taxonomy.NavigateSite("Content>>Add content>>Post");
-        	overlay.SwitchToActiveFrame();
-            BasicInformation basicInformation = new BasicInformation(webDriver);
+            navigation.AddContent("Post");
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
             String postTitle2 = random.GetCharacterString(15);
             basicInformation.EnterTitle(postTitle2);
             basicInformation.EnterSynopsis();
-            overlay.SwitchToActiveFrame();
             basicInformation.ClickCoverSelectBtn();
             SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
@@ -59,17 +52,14 @@ public class RepresentativeImage extends ParentTest {
     		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
     		selectFile.ClickSubmitBtn();
-            overlay.SwitchToActiveFrame();
+            webDriver.switchTo().defaultContent();
             contentParent.ClickSaveBtn();
-            overlay.switchToDefaultContent(true);
             contentParent.VerifyMessageStatus("Post " + postTitle2 + " has been created.");
             
             Reporter.log("STEP 6");
-            taxonomy.NavigateSite("Content");
-        	overlay.SwitchToActiveFrame();
-        	searchFor.EnterTitle(postTitle2);
+            navigation.Content();
+            searchFor.EnterTitle(postTitle2);
         	searchFor.ClickApplyBtn();
-        	overlay.switchToDefaultContent(true);
         	searchFor.VerifySearchThumbnailImgPresent(postTitle2, "nbclogosmall");
         	
         	//TODO - step 7 to repeat 1 through 6 for all content items as time allows

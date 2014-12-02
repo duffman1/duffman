@@ -1,16 +1,14 @@
 package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.common.Driver.*;
-import com.nbcuni.test.publisher.pageobjects.Overlay;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
+import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.tests.Setup.A1_TestSetup;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -19,6 +17,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -29,10 +28,11 @@ public class ParentTest {
     protected AppLib applib;
     protected Random random;
     protected Taxonomy taxonomy;
-    protected Overlay overlay;
+    protected EmberNav navigation;
     protected Config config = new Config();
     protected ContentParent contentParent;
     protected StartGridHubNode startGridHubNode;
+    protected Interact interact;
     
     public static Boolean abortTestSuite = false;
     
@@ -65,8 +65,9 @@ public class ParentTest {
             applib = new AppLib(webDriver);
             random = new Random();
             taxonomy = new Taxonomy(webDriver);
-            overlay = new Overlay(webDriver);
+            navigation = new EmberNav(webDriver);
             contentParent = new ContentParent(webDriver);
+            interact = new Interact(webDriver, config.getConfigValueInt("WaitForWaitTime"));
             
             webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
             webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
@@ -90,20 +91,20 @@ public class ParentTest {
         	System.out.println("Failed to capture screenshot");
         }
         
+    	//Clear cache in the event of some errors that require it
+    	List<String> cacheErrors = Arrays.asList("StateFlowNode", "Draft", "workbench_moderation_to_published");
     	try {
     		if (!result.isSuccess()) {
-    			webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-    			applib.openApplication();
-    			webDriver.switchTo().defaultContent();
-    			webDriver.navigate().to(webDriver.findElement(By.xpath("//a[text()='Flush all caches']")).getAttribute("href"));
-            	new WebDriverWait(webDriver, 10).until(new ExpectedCondition<Boolean>() {
-            		public Boolean apply(WebDriver webDriver) {
-            			return webDriver.findElement(By.xpath("//div[@class='messages status']")).getText().contains("Every cache cleared");
-           		 	}
-            	});
-            	Reporter.setCurrentTestResult(result); 
-            	Reporter.log("Cache was cleared on test failure");
-            	Reporter.setCurrentTestResult(null);
+    			String errorMessage = result.getThrowable().getMessage().toString();
+    			if (cacheErrors.contains(errorMessage)) {
+    				applib.openApplication();
+        			webDriver.switchTo().defaultContent();
+        			FlushCache flushCache = new FlushCache(webDriver);
+        			flushCache.FlushAllCache();
+        			Reporter.setCurrentTestResult(result); 
+                	Reporter.log("Cache was cleared on test failure");
+                	Reporter.setCurrentTestResult(null);
+        		}
     		}
     	}
     	catch (Exception e) {

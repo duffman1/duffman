@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.Configuration;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
@@ -25,8 +25,7 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         
         //Setup
         Settings settings = new Settings(webDriver);
@@ -62,10 +61,8 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
             	settings.VerifyImportAccountsDisabled();
             	settings.ClickSaveConfigurationsBtn();
             	contentParent.VerifyMessageStatus("The configuration options have been saved.");
-            	overlay.ClickCloseOverlayLnk();
-            	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            	overlay.SwitchToActiveFrame();
-                mpxMedia.ExpandMPXMedia();
+            	navigation.Content("Files", "mpxMedia");
+            	mpxMedia.ExpandMPXMedia();
                 if (numberSelectedAccounts.equals(1)) {
                 	mpxMedia.SelectMPXPlayerForAccount2("AutomationPlayer1");
             	}
@@ -99,35 +96,30 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         	contentParent.VerifyMessageStatus("Setting import account \"DB%20TV\" for account");
         	contentParent.VerifyMessageStatus("Retrieving import account information for \"DB%20TV\".");
         	settings.VerifyImportAccountsDisabled();
-        	overlay.ClickCloseOverlayLnk();
         	
         	//Step 6 TODO
         	
         	//Step 7
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            overlay.SwitchToActiveFrame();
-            mpxMedia.ExpandMPXMedia();
+        	navigation.Content("Files", "mpxMedia");
+        	mpxMedia.ExpandMPXMedia();
             mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
         	
         	//Step 8
             cron.ClickRunCronToCompleteImportLnk();
-            overlay.SwitchToActiveFrame();
             cron.ClickRunCronBtn();
             contentParent.VerifyMessageStatus("Cron run successfully.");
-            overlay.ClickCloseOverlayLnk();
             
             //Step 9
-            taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            overlay.SwitchToActiveFrame();
+            navigation.Content("Files", "mpxMedia");
             SearchFor searchFor = new SearchFor(webDriver);
             searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("AutomationDefault"));
 
             //Step 10
-            taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
+            navigation.Configuration("Media: thePlatform mpx settings");
             settings.ExpandAddAccounts();
         	settings.EnterUsername(config.getConfigValueString("MPXUsername"));
         	settings.EnterPassword(config.getConfigValueString("MPXPassword"));
@@ -139,15 +131,15 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
         	settings.VerifyImportAccountsDisabled();
         	settings.ClickSaveConfigurationsBtn();
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
-        	taxonomy.NavigateSite("Content>>Files>>mpxMedia");
-            mpxMedia.ExpandMPXMedia();
+        	navigation.Content("Files", "mpxMedia");
+        	mpxMedia.ExpandMPXMedia();
             mpxMedia.SelectMPXPlayerForAccount2("AutomationPlayer1");
             mpxMedia.ClickSyncMPXMediaNowLnk();
             contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
             cron.ClickRunCronToCompleteImportLnk();
             cron.ClickRunCronBtn();
             contentParent.VerifyMessageStatus("Cron run successfully.");
-            taxonomy.NavigateSite("Content>>Files>>mpxMedia");
+            navigation.Content("Files", "mpxMedia");
             searchFor.EnterTitle("The Golf Fix 2/4");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("The Golf Fix 2/4"));

@@ -92,7 +92,6 @@ public class AddDynamicQueue {
     public void EnterTitle(String queueTitle) throws Exception {
     	
     	Reporter.log("Enter '" + queueTitle + "' in the 'Title' text box.");
-    	Title_Txb.click();
     	Title_Txb.clear();
     	Title_Txb.sendKeys(queueTitle);
     }

@@ -3,7 +3,7 @@ package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles;
 import org.testng.annotations.Test;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.People.Roles;
@@ -22,8 +22,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        taxonomy.NavigateSite("People>>Permissions");
-        overlay.SwitchToActiveFrame();
+    	navigation.People("Permissions");
         
         //Step 3
         Permissions permissions = new Permissions(webDriver, applib);
@@ -32,8 +31,7 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
         //Step 4
         Roles roles = new Roles(webDriver);
         roles.ClickRolesBtn();
-        overlay.SwitchToActiveFrame();
-       
+        
         //Step 5
         roles.VerifyRoleRows();
        

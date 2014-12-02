@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen;
 
 import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.RerunOnFailure;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -38,15 +38,11 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         //Step 1a
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
-    	
-        taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
-        overlay.SwitchToActiveFrame();
+    	navigation.Configuration("Media: thePlatform mpx settings");
         
         //Step 2
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	overlay.ClickCloseOverlayLnk();
-        	taxonomy.NavigateSite("Content>>Files>>mpxPlayers");
-        	overlay.SwitchToActiveFrame();
+        	navigation.Content("Files", "mpxPlayers");
         	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
@@ -65,7 +61,6 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		
         		//Step 5
         		searchFor.ClickResetBtn();
-        		overlay.switchToDefaultContent(true);
         		Thread.sleep(2000); //TODO - add dynamic wait for search result validation
         		Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         		Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
@@ -78,7 +73,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		//Step 6c
         		searchFor.SelectMPXPlayerAccount(configuredAccounts.get(0));
         		searchFor.ClickApplyBtn();
-        		overlay.switchToDefaultContent(true);
+        		webDriver.switchTo().defaultContent();
         		searchFor.VerifyMPXResultSetSource(configuredAccounts.get(0));
         		
         		//Step 7
