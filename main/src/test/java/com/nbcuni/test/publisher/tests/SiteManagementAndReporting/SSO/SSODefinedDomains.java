@@ -37,7 +37,6 @@ public class SSODefinedDomains extends ParentTest {
 			
 		Reporter.log("STEP 3");
 		navigation.Configuration("SimpleSAMLphp Auth Settings");
-		taxonomy.NavigateSite("Configuration>>People>>SimpleSAMLphp Auth Settings");
 			
 		Reporter.log("STEP 4");
 		simpleSAML.VerifyDefaultSettings();
@@ -70,7 +69,7 @@ public class SSODefinedDomains extends ParentTest {
 	       
 		Reporter.log("STEP 10 AND 11");
 		applib.refreshPage();
-		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
+		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOUsername")));
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
 		Reporter.log("STEP 12");

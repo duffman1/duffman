@@ -128,7 +128,8 @@ public class CreateMediaGallery extends ParentTest{
             editImage.VerifyMPXObjectPresent();
             
             Reporter.log("STEP 10");
-            editImage.ClickCancelLnk();
+            editImage.ClickCloseWindowImg();
+            //editImage.ClickCancelLnk();
             editImage.WaitForEditImageFrameClose();
             
             Reporter.log("OPTIONAL STEP");
