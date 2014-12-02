@@ -1,16 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -19,6 +11,8 @@ import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Add User Library. Copyright
@@ -29,233 +23,230 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class AddUser {
 
-	private Driver webDriver;
 	private EmberNav navigation;
 	private ContentParent contentParent;
 	private Random random;
-	private WebDriverWait wait;
 	private Config config;
+	private Integer timeout;
 	private People people;
+	private WaitFor waitFor;
+	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
     public AddUser(Driver webDriver) {
-    	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        navigation = new EmberNav(webDriver);
+    	navigation = new EmberNav(webDriver);
         contentParent = new ContentParent(webDriver);
         random = new Random();
-        wait = new WebDriverWait(webDriver, 10);
         config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
         people = new People(webDriver);
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-name']")
-    private WebElement Username_Txb;
+    private By Username_Txb = By.xpath("//input[@id='edit-name']");
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-mail']")
-    private WebElement EmailAddress_Txb;
+    private By EmailAddress_Txb = By.xpath("//input[@id='edit-mail']");
     
-    @FindBy(how = How.XPATH, using = "//a[text()='Change your password']")
-    private WebElement ChangeYourPassword_Lnk;
+    private By ChangeYourPassword_Lnk = By.xpath("//a[text()='Change your password']");
     
-    @FindBy(how = How.ID, using = "edit-current-pass")
-    private WebElement CurrentPassword_Txb;
+    private By CurrentPassword_Txb = By.id("edit-current-pass");
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-pass-pass1']")
-    private WebElement Password_Txb;
+    private By Password_Txb = By.xpath("//input[@id='edit-pass-pass1']");
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-pass-pass2']")
-    private WebElement ConfirmPassword_Txb;
+    private By ConfirmPassword_Txb = By.xpath("//input[@id='edit-pass-pass2']");
     
-    private WebElement Role_Cbx(String role) {
-    	return webDriver.findElement(By.xpath("//label[text()='" + role + " ']/../input"));
+    private By Role_Cbx(String role) {
+    	return By.xpath("//label[text()='" + role + " ']/../input");
     }
     
-    @FindBy(how = How.ID, using = "edit-notify")
-    private WebElement NotifyUserNewAccount_Cbx;
+    private By NotifyUserNewAccount_Cbx = By.id("edit-notify");
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-field-first-name-und-0-value']")
-    private WebElement FirstName_Txb;
+    private By FirstName_Txb = By.xpath("//input[@id='edit-field-first-name-und-0-value']");
     
-    @FindBy(how = How.XPATH, using = "//input[@id='edit-field-last-name-und-0-value']")
-    private WebElement LastName_Txb;
+    private By LastName_Txb = By.xpath("//input[@id='edit-field-last-name-und-0-value']");
     
-    @FindBy(how = How.XPATH, using = "//input[@value='Create new account']")
-    private WebElement CreateNewAccount_Btn;
+    private By CreateNewAccount_Btn = By.xpath("//input[@value='Create new account']");
     
-    @FindBy(how = How.CSS, using = "div[class='password-suggestions description']")
-    private WebElement PasswordStrength_Ctr;
+    private By PasswordStrength_Ctr = By.cssSelector("div[class='password-suggestions description']");
     
-    @FindBy(how = How.CSS, using = "div[class='password-confirm']")
-    private WebElement PasswordMatch_Ctr;
+    private By PasswordMatch_Ctr = By.cssSelector("div[class='password-confirm']");
     
     
     //PAGE OBJECT METHODS
     public void EnterUsername(String userName) throws Exception {
     	
     	Reporter.log("Enter '" + userName + "' in the 'Username' text box.");
-    	Username_Txb.sendKeys(userName);
+    	interact.Type(waitFor.ElementVisible(Username_Txb), userName);
     	
     }
     
     public void EnterEmailAddress(String emailAddress) throws Exception {
     	
     	Reporter.log("Enter '" + emailAddress + "' in the 'E-mail address' text box.");
-    	EmailAddress_Txb.sendKeys(emailAddress);
+    	interact.Type(waitFor.ElementVisible(EmailAddress_Txb), emailAddress);
     	
     }
     
     public void EnterCurrentPassword(String passWord) throws Exception {
     	
     	Reporter.log("Enter '" + passWord + "' in the 'Current password' text box.");
+    	WebElement ele = waitFor.ElementVisible(CurrentPassword_Txb);
     	Thread.sleep(500);
-    	CurrentPassword_Txb.sendKeys(passWord);
+    	interact.Type(ele, passWord);
     	
     }
 
     public void EnterPassword(String passWord) throws Exception {
     	
     	Reporter.log("Enter '" + passWord + "' in the 'Password' text box.");
-    	Password_Txb.clear();
-    	Password_Txb.sendKeys(passWord);
+    	interact.Type(waitFor.ElementVisible(Password_Txb), passWord);
     	
     }
     
     public void EnterConfirmPassword(String passWord) throws Exception {
     	
     	Reporter.log("Enter '" + passWord + "' in the 'Confirm password' text box.");
-    	ConfirmPassword_Txb.clear();
-    	ConfirmPassword_Txb.sendKeys(passWord);
+    	interact.Type(waitFor.ElementVisible(ConfirmPassword_Txb), passWord);
+    	
     }
     
     public void CheckRoleCbx(List<String> roles) throws Exception {
     	
     	for (String role : roles) {
-    		if (Role_Cbx(role).isSelected() == false) {
+    		WebElement ele = waitFor.ElementVisible(Role_Cbx(role));
+    		if (ele.isSelected() == false) {
     			Reporter.log("Check the '" + role + "' check box.");
-    			Role_Cbx(role).click();
+    			interact.Click(ele);
     		}
     	}
+    	
     }
     
     public void CheckNotifyUserNewAccountCbx() throws Exception {
     	
-    	if (NotifyUserNewAccount_Cbx.isSelected() == false) {
+    	WebElement ele = waitFor.ElementVisible(NotifyUserNewAccount_Cbx);
+    	if (!ele.isSelected()) {
     		Reporter.log("Check the 'Notify user of a new account' check box.");
-    		NotifyUserNewAccount_Cbx.click();
+    		interact.Click(ele);
     	}
+    	
     }
     
     public void EnterFirstName(String firstName) throws Exception {
     	
     	Reporter.log("Enter '" + firstName + "' in the 'First Name' text box.");
-    	FirstName_Txb.sendKeys(firstName);
+    	interact.Type(waitFor.ElementVisible(FirstName_Txb), firstName);
     	
     }
     
     public void EnterLastName(String lastName) throws Exception {
     	
     	Reporter.log("Enter '" + lastName + "' in the 'Last Name' text box.");
-    	LastName_Txb.sendKeys(lastName);
+    	interact.Type(waitFor.ElementVisible(LastName_Txb), lastName);
     	
     }
     
     public void ClickCreateNewAccountBtn() throws Exception {
     	
     	Reporter.log("Click the 'Create new account' button.");
-    	CreateNewAccount_Btn.click();
+    	interact.Click(waitFor.ElementVisible(CreateNewAccount_Btn));
+    	
     }
     
     public void VerifyPasswordStrengthCtrNotPresent() throws Exception {
     	
     	Reporter.log("Verify the password strength container is not present.");
-    	wait.until(ExpectedConditions.not(ExpectedConditions.visibilityOf(PasswordStrength_Ctr)));
+    	waitFor.ElementNotVisible(PasswordStrength_Ctr);
+    	
     }
     
     public void VerifyPasswordStrengthTxtPresent(List<String> strengthMessages) throws Exception {
     	
-    	String strengthTxt = wait.until(ExpectedConditions.visibilityOf(PasswordStrength_Ctr)).getText();
-    	
     	for (String message : strengthMessages) {
     		Reporter.log("Verify that password strength message '" + message + "' is present.");
-    		Assert.assertTrue(strengthTxt.contains(message), 
-    				"Password strength message '" + message + " is not present.");
+    		waitFor.ElementContainsText(PasswordStrength_Ctr, message);
     	}
+    	
     }
     
     public void VerifyPasswordStrengthTxtNotPresent(List<String> strengthMessages) throws Exception {
     	
-    	String strengthTxt = wait.until(ExpectedConditions.visibilityOf(PasswordStrength_Ctr)).getText();
-    	
     	for (String message : strengthMessages) {
     		Reporter.log("Verify that password strength message '" + message + "' is not present.");
-    		Assert.assertFalse(strengthTxt.contains(message), 
-    				"Password strength message '" + message + " is present when it should not be.");
+    		waitFor.ElementNotContainsText(PasswordStrength_Ctr, message);
     	}
+    	
     }
     
     public void VerifyPasswordsMatch(Boolean match) throws Exception {
     	
-    	String passwordMatchTxt = wait.until(ExpectedConditions.visibilityOf(PasswordMatch_Ctr)).getText();
-    	
     	if (match == true) {
     		Reporter.log("Verify password match text equals 'yes'.");
-    		Assert.assertTrue(passwordMatchTxt.contains("yes"), "Password match text of 'yes' is not present.");
+    		waitFor.ElementContainsText(PasswordMatch_Ctr, "yes");
     	}
     	else {
     		Reporter.log("Verify password match text equals 'no'.");
-    		Assert.assertTrue(passwordMatchTxt.contains("no"), "Password match text of 'no' is not present.");
+    		waitFor.ElementContainsText(PasswordMatch_Ctr, "no");
     	}
     }
     
     public void VerifyUsernameNotPresent() throws Exception {
     	
     	Reporter.log("Verify the 'Username' text box is not present.");
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	try {
-    		Username_Txb.isDisplayed();
-    		Assert.fail("Username text box is present when it should not be.");
-    	}
-    	catch (NoSuchElementException e) { }
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	waitFor.ElementNotPresent(Username_Txb);
     	
     }
     
     public void VerifyPasswordNotPresent() throws Exception {
     	
     	Reporter.log("Verify the 'Password' and 'Password Confirm' text boxes are not present.");
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	try {
-    		Password_Txb.isDisplayed();
-    		ConfirmPassword_Txb.isDisplayed();
-    		Assert.fail("Password/Password Confirm text boxes are present when they should not be.");
-    	}
-    	catch (NoSuchElementException e) { }
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	waitFor.ElementNotPresent(Password_Txb);
     	
     }
 
     public void VerifyUsernameValueAndIsDisabled(String userName) throws Exception {
     	
     	Reporter.log("Verify the 'Username' value is '" + userName + "' and the text box is disabled.");
-    	Assert.assertEquals(userName, Username_Txb.getAttribute("value"));
-    	Assert.assertFalse(Username_Txb.isEnabled());
+    	WebElement ele = waitFor.ElementVisible(Username_Txb);
+    	Assert.assertEquals(userName, ele.getAttribute("value"));
+    	Assert.assertFalse(ele.isEnabled());
     	
     }
     
     public void VerifyEmailAddressValueAndIsDisabled(String email) throws Exception {
     	
     	Reporter.log("Verify the 'E-mail address' value is '" + email + "' and the text box is disabled.");
-    	Assert.assertEquals(email, EmailAddress_Txb.getAttribute("value"));
-    	Assert.assertFalse(EmailAddress_Txb.isEnabled());
+    	WebElement ele = waitFor.ElementVisible(EmailAddress_Txb);
+    	Assert.assertEquals(email, ele.getAttribute("value"));
+    	Assert.assertFalse(ele.isEnabled());
+    	
+    }
+    
+    public void VerifyRoleCbxPresentAndEnabled(List<String> allRoles) throws Exception {
+    	
+    	for (String role : allRoles) {
+    		WebElement ele = waitFor.ElementVisible(Role_Cbx(role));
+    		Reporter.log("Verify the role '" + role + "' check box is present and enabled.");
+    		Assert.assertTrue(ele.isDisplayed());
+    		Assert.assertTrue(ele.isEnabled());
+    	}
+    	
+    }
+    
+    public void VerifyRoleCbxNotPresent(List<String> allRoles) throws Exception {
+    	
+    	for (String role : allRoles) {
+    		waitFor.ElementNotPresent(Role_Cbx(role));
+    	}
     	
     }
     
     public void ClickChangeYourPasswordLnk() throws Exception {
     	
     	Reporter.log("Click the 'Change your password' link.");
-    	ChangeYourPassword_Lnk.click();
+    	interact.Click(waitFor.ElementVisible(ChangeYourPassword_Lnk));
     	
     }
     

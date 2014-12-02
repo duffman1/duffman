@@ -1,5 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +13,8 @@ import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Simple SAML Library. Copyright
@@ -21,12 +26,18 @@ public class SimpleSAML {
 		
 	private Driver webDriver;
 	private Config config;
+	private Integer timeout;
+	private WaitFor waitFor;
+	private Interact interact;
 	
 	//PAGE OBJECT CONSTRUCTOR
 	public SimpleSAML(Driver webDriver) {
+		this.webDriver = webDriver;
 		PageFactory.initElements(webDriver, this);
 		config = new Config();
-		this.webDriver = webDriver;
+		timeout = config.getConfigValueInt("WaitForWaitTime");
+		waitFor = new WaitFor(webDriver, timeout);
+		interact = new Interact(webDriver, timeout);
 	}
 
 	//PAGE OBJECT IDENTIFIERS
@@ -54,6 +65,10 @@ public class SimpleSAML {
 	@FindBy(how = How.ID, using ="edit-simplesamlphp-auth-mailattr")
 	private WebElement WhichAttributeEmail_Txb;
 	
+	private By RolesAuthenticateSSO_Cbx(String role){
+		return By.xpath("//label[text()='" + role + " ']/../input");
+	}
+	
 	@FindBy(how = How.ID, using ="edit-submit")
 	private WebElement SaveConfiguration_Btn;
 	
@@ -62,14 +77,14 @@ public class SimpleSAML {
 	public void VerifyDefaultSettings() throws Exception {
 
 		//TODO - extend for all sites
-		if (config.getConfigValueString("AppURL").contains("install.qa5")) {
+		if (config.getConfigValueString("AppURL").contains("qa5")) {
 			
 			Reporter.log("Verify the value of the 'Installation directory' text box equals '/mnt/www/html/nbcupublisher7qa5/simplesamlphp' and the text box is disabled.");
 			Assert.assertEquals(InstallationDirectory_Txb.getAttribute("value"), "/mnt/www/html/nbcupublisher7qa5/simplesamlphp");
 			Assert.assertFalse(InstallationDirectory_Txb.isEnabled());
 			
 			Reporter.log("Verify the value of the 'Authentication source for this SP' text box equals 'pub-qa5install' and the text box is disabled.");
-			Assert.assertEquals(AuthenticationSource_Txb.getAttribute("value"), "pub-qa5install");
+			Assert.assertEquals(AuthenticationSource_Txb.getAttribute("value"), "pub-qa5");
 			Assert.assertFalse(AuthenticationSource_Txb.isEnabled());
 			
 			Reporter.log("Verify the ' Force https for login links' check box is checked and disabled.");
@@ -98,6 +113,30 @@ public class SimpleSAML {
     	UploadCertificate_Upl.sendKeys(pathToFile);
     	
     }
+	
+	public void CheckRolesAuthenticateSSO(List<String> allRoles) throws Exception {
+		
+		for (String role : allRoles) {
+			WebElement ele = waitFor.ElementVisible(RolesAuthenticateSSO_Cbx(role));
+			if (!ele.isSelected()) {
+				Reporter.log("Check the '" + role + "' checkbox.");
+				interact.Click(ele);
+			}
+		}
+		
+	}
+	
+	public void UnCheckRolesAuthenticateSSO(List<String> allRoles) throws Exception {
+		
+		for (String role : allRoles) {
+			WebElement ele = waitFor.ElementVisible(RolesAuthenticateSSO_Cbx(role));
+			if (ele.isSelected()) {
+				Reporter.log("Un-Check the '" + role + "' checkbox.");
+				interact.Click(ele);
+			}
+		}
+		
+	}
 	
 	public void ClickSaveConfigurationBtn() throws Exception {
     	
