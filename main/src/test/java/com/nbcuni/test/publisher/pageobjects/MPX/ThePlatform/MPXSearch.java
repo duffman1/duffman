@@ -68,8 +68,10 @@ public class MPXSearch {
     	
     	Reporter.log("Click the 'Search by Players Title' link.");
     	mpxAssets.WaitForImgPresent(getImagePath() + "Search/Titles_Ddl.png");
+    	Thread.sleep(3000);
     	sikuli.click(getImagePath() + "Search/Titles_Ddl.png");
     	mpxAssets.WaitForImgPresent(getImagePath() + "Search/Titles_Lnk.png");
+    	Thread.sleep(3000);
     	sikuli.click(getImagePath() + "Search/Titles_Lnk.png");
     	
     	Thread.sleep(4000); //TODO - replace with dynamic wait

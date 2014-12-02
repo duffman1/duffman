@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper">
         <methods>
           <include name="startSelenium"/>
+          <include name="Cleanup"/>
           <include name="suiteTeardown"/>
-          <include name="CreateMediaGallery_TC1042"/>
           <include name="suiteSetup"/>
           <include name="stopSelenium"/>
+          <include name="Phase1ContentTypeMapper_TC5260"/>
         </methods>
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper.Phase1ContentTypeMapper -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
