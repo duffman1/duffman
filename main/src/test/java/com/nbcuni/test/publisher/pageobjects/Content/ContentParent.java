@@ -68,6 +68,7 @@ public class ContentParent {
     	Reporter.log("Click the 'Save' button.");
     	Thread.sleep(500);
     	interact.Click(waitFor.ElementVisible(Save_Btn));
+    	Thread.sleep(1000);
     	
     }
     

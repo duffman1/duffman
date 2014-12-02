@@ -127,6 +127,7 @@ public class EmberNav {
     	Reporter.log("Click the 'Home' link.");
     	Thread.sleep(500);
     	interact.Click(waitFor.ElementVisible(Home_Lnk));
+    	Thread.sleep(1000);
     	
     }
     
@@ -197,6 +198,7 @@ public class EmberNav {
     	WebElement ele = waitFor.ElementVisible(AddContent_Lnk);
     	Thread.sleep(500);
     	interact.Click(ele);
+    	Thread.sleep(1000);
     	
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
@@ -208,6 +210,8 @@ public class EmberNav {
     	WebElement ele = waitFor.ElementVisible(AdminLnkByTxt_Lnk(lnkTxt));
     	Thread.sleep(500);
     	interact.Click(ele);
+    	Thread.sleep(1000);
+    	
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -218,6 +222,8 @@ public class EmberNav {
     	WebElement ele = waitFor.ElementVisible(TabBar_Lnk(lnkTxt));
     	Thread.sleep(500);
     	interact.Click(ele);
+    	Thread.sleep(1000);
+    	
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }
@@ -228,6 +234,8 @@ public class EmberNav {
     	WebElement ele = waitFor.ElementVisible(SecondaryTabBar_Lnk(lnkTxt));
     	Thread.sleep(500);
     	interact.Click(ele);
+    	Thread.sleep(1000);
+    	
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     }

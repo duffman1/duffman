@@ -54,14 +54,13 @@ public class CollectEditorialActivity extends ParentTest {
         	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
         	pub7DateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
         	Calendar cal7DaysPast = Calendar.getInstance();
-        	Calendar cal1DaysPast = Calendar.getInstance();
+        	Calendar calToday = Calendar.getInstance();
         	cal7DaysPast.add(Calendar.DATE, -7);
-        	cal1DaysPast.add(Calendar.DATE, -1);
         	Date date7DaysPast = cal7DaysPast.getTime();
-        	Date date1DaysPast = cal1DaysPast.getTime();
+        	Date dateToday = calToday.getTime();
         	EntityTrackerReports entityTrackerReports = new EntityTrackerReports(webDriver);
         	entityTrackerReports.EnterFromDate(pub7DateFormat.format(date7DaysPast));
-        	entityTrackerReports.EnterToDate(pub7DateFormat.format(date1DaysPast));
+        	entityTrackerReports.EnterToDate(pub7DateFormat.format(dateToday));
         	entityTrackerReports.ClickApplyBtn();
         	
         	Reporter.log("STEP 6 - N/A");

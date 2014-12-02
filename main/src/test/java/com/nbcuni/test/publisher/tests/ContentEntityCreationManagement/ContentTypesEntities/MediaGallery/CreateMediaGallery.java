@@ -142,6 +142,7 @@ public class CreateMediaGallery extends ParentTest{
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
             Reporter.log("STEP 12");
+            /* 12.2.14 commented out while Mani works on the Select file defect
             navigation.AddContent("Media Gallery");
             String title2 = random.GetCharacterString(15);
             basicInformation.EnterTitle(title2);
@@ -174,5 +175,6 @@ public class CreateMediaGallery extends ParentTest{
             Reporter.log("STEP 13");
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title2 + " has been created.");
+            */
     }
 }
