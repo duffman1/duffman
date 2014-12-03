@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -131,12 +132,19 @@ public class ErrorChecking {
     			//THIRD - check errors in case of 1 error
     			if (moreThan1Error == false) {
     				
+    				boolean ignoreError = false;
+    				
     				//get the text of the error
-    				String errorText = Error_Ctr.getText();
+    				String errorText = "";
+    				try {
+    					errorText = Error_Ctr.getText();
+    				}
+    				catch (NoSuchElementException e) {
+    					ignoreError = true;
+    				}
     				errorText.replace("Error message", "");
     				
     				//check the error text isn't in list of allowed errors
-    				boolean ignoreError = false;
     				for (int i=0; i<allowedErrors.size(); i++) {
     					if(errorText.contains(allowedErrors.get(i)) || errorText.equals("") || errorText.isEmpty() || errorText.equals(null)) {
     						//ignore error

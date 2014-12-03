@@ -50,6 +50,7 @@ public class RepresentativeImage extends ParentTest {
     		selectFile.EnterTitle("AutomationWThumb");
     		selectFile.ClickApplyBtn();
     		contentParent.WaitForThrobberNotPresent();
+    		selectFile.ClickPub7MPXVideoBtn();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
     		selectFile.ClickSubmitBtn();
             webDriver.switchTo().defaultContent();
