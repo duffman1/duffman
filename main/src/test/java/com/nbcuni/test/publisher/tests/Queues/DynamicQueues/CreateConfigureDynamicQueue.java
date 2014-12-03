@@ -53,6 +53,9 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         String postTitle = createDefaultContent.Post("Published", postBody);
         String unpublishedPostBody = random.GetCharacterString(15);
         String unpublishedPostTitle = createDefaultContent.Post("Draft", unpublishedPostBody);
+        System.out.println("Character profile title = " + characterProfileTitle);
+        System.out.println("Post title = " + postTitle);
+        System.out.println("Unpublished Post title = " + unpublishedPostTitle);
         String nameNumber_ErrorMessage = "Name cannot be a number. It is recommended that this name begin with a capital letter and contain only letters, numbers, and spaces.";
       
         Reporter.log("STEP 2");
