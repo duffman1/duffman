@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>1 group</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue" hash-for-method="Cleanup">Cleanup</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue" hash-for-method="CreateConfigureDynamicQueue_TC4197">CreateConfigureDynamicQueue_TC4197</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability" hash-for-method="NotificationPlayerUnavailability_Test">NotificationPlayerUnavailability_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -124,21 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue</span>
+              <span class="class-name">com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Cleanup">
-                  </a> <!-- Cleanup -->
-                  <span class="method-name">Cleanup</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="CreateConfigureDynamicQueue_TC4197">
-                  </a> <!-- CreateConfigureDynamicQueue_TC4197 -->
-                  <span class="method-name">CreateConfigureDynamicQueue_TC4197</span>
+                  <a name="NotificationPlayerUnavailability_Test">
+                  </a> <!-- NotificationPlayerUnavailability_Test -->
+                  <span class="method-name">NotificationPlayerUnavailability_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--235599650/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/33/xf0ch4pd75qbhlq2gf2s58l40000gn/T/testng-eclipse--875533860/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -155,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue&quot;/&gt;
+      &lt;class name=&quot;com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -180,14 +168,26 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
+              <span class="test-group-name">certify</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">NotificationPlayerUnavailability_Test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">full</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">Cleanup</span>
+                <span class="method-in-group-name">NotificationPlayerUnavailability_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">mpx</span>
+              <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">CreateConfigureDynamicQueue_TC4197</span>
+                <span class="method-in-group-name">NotificationPlayerUnavailability_Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -207,20 +207,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CreateConfigureDynamicQueue_TC4197')
-data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue')
-data.setCell(0, 3, 300024);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Cleanup')
-data.setCell(1, 2, 'com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue')
-data.setCell(1, 3, 1);
+data.setCell(0, 1, 'NotificationPlayerUnavailability_Test')
+data.setCell(0, 2, 'com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability')
+data.setCell(0, 3, 368778);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -232,270 +228,94 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">CreateConfigureDynamicQueue_TC4197</span>
+              <span class="reporter-method-name">NotificationPlayerUnavailability_Test</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STEP 1</span>
                 <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
                 <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
                 <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
                 <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">SETUP</span>
                 <span class="reporter-method-output">Click the 'Menu' link to show the navigation menu items.</span>
-                <span class="reporter-method-output">Click the 'Content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Add content' link.</span>
-                <span class="reporter-method-output">Click the 'Character Profile' link.</span>
-                <span class="reporter-method-output">Enter '4f7244dd6c6e4f7' in the 'Character First Name' text box.</span>
-                <span class="reporter-method-output">Enter 'ed0c7cd0e078405' into the 'Biography' text area.</span>
-                <span class="reporter-method-output">Click the Cover Photo 'Select' button.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
-                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' link.</span>
+                <span class="reporter-method-output">Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.</span>
+                <span class="reporter-method-output">MPX is already configured.</span>
+                <span class="reporter-method-output">Click the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' link.</span>
+                <span class="reporter-method-output">Get all the selected import account options and store to a list.</span>
+                <span class="reporter-method-output">Open the mpx platform.</span>
+                <span class="reporter-method-output">Click the 'Players' link.</span>
+                <span class="reporter-method-output">Click the 'All Players' link.</span>
+                <span class="reporter-method-output">Click the 'Add' button.</span>
+                <span class="reporter-method-output">Enter 'AutomationPlayerda33ed8761' in the 'Title' text box.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Assert that img source of the Cover Photo contains 'HanSolo'.</span>
-                <span class="reporter-method-output">Assert the the img is loaded and visible.</span>
+                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the primary nav 'Files' link.</span>
+                <span class="reporter-method-output">Click the secondary nav 'mpxPlayers'.</span>
+                <span class="reporter-method-output">Click the 'Sync MPX Players' link.</span>
+                <span class="reporter-method-output">Click the 'Sync MPX Players Now' link.</span>
+                <span class="reporter-method-output">Verify success message of 'Processed players manually for all accounts' is present.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the primary nav 'Files' link.</span>
+                <span class="reporter-method-output">Click the secondary nav 'mpxMedia'.</span>
+                <span class="reporter-method-output">Enter title Automation.</span>
+                <span class="reporter-method-output">Select the 'Published' from the 'MPX Status/Published' drop down list.</span>
+                <span class="reporter-method-output">Select the DB TV from the 'Source' select ddl.</span>
+                <span class="reporter-method-output">Click the 'Apply' button.</span>
+                <span class="reporter-method-output">Get the text of the first search result set item.</span>
+                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
+                <span class="reporter-method-output">Click the 'Edit' link in the work bench.</span>
+                <span class="reporter-method-output">Select 'AutomationPlayerda33ed8761' from the 'Video Player' drop down list.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Open the mpx platform.</span>
+                <span class="reporter-method-output">Click the 'Players' link.</span>
+                <span class="reporter-method-output">Click the 'All Players' link.</span>
+                <span class="reporter-method-output">Click the 'Player Title' label to give focus to the player item.</span>
+                <span class="reporter-method-output">Click the 'Disable Player' check box.</span>
+                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com'.</span>
+                <span class="reporter-method-output">Click the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Click the 'Cron' link.</span>
+                <span class="reporter-method-output">Click the 'Run Cron' button.</span>
+                <span class="reporter-method-output">Click the 'Content' menu link.</span>
+                <span class="reporter-method-output">Click the primary nav 'Files' link.</span>
+                <span class="reporter-method-output">Click the secondary nav 'mpxPlayers'.</span>
+                <span class="reporter-method-output">Enter title AutomationPlayerda33ed8761.</span>
+                <span class="reporter-method-output">Click the 'Apply' button.</span>
+                <span class="reporter-method-output">Click the first search title link in the search result set.</span>
+                <span class="reporter-method-output">Click the 'Edit' link in the work bench.</span>
                 <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
                 <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Published' from the 'Moderation State' drop down list.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Character Profile 4f7244dd6c6e4f7 has been created.' is present.</span>
+                <span class="reporter-method-output">Verify success message of 'MPX Player AutomationPlayerda33ed8761 has been updated.' is present.</span>
                 <span class="reporter-method-output">Click the 'Content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Add content' link.</span>
-                <span class="reporter-method-output">Click the 'Post' link.</span>
-                <span class="reporter-method-output">Enter '69897cc0302746e' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter '7877981ae671497' into the 'Body' text area.</span>
-                <span class="reporter-method-output">Click the 'Cover' select button.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
-                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
+                <span class="reporter-method-output">Click the primary nav 'Files' link.</span>
+                <span class="reporter-method-output">Click the secondary nav 'mpxPlayers'.</span>
+                <span class="reporter-method-output">Click the secondary nav 'mpxMedia'.</span>
+                <span class="reporter-method-output">Click the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Click the 'Media: thePlatform mpx settings' link.</span>
+                <span class="reporter-method-output">Click the 'click here' link for the unpublished player titled 'AutomationPlayerda33ed8761'.</span>
                 <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
                 <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Published' from the 'Moderation State' drop down list.</span>
+                <span class="reporter-method-output">Check the 'Published' checkbox</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 69897cc0302746e has been created.' is present.</span>
                 <span class="reporter-method-output">Click the 'Content' menu link.</span>
-                <span class="reporter-method-output">Click the 'Add content' link.</span>
-                <span class="reporter-method-output">Click the 'Post' link.</span>
-                <span class="reporter-method-output">Enter '033a2b223cc2481' in the 'Title' text box.</span>
-                <span class="reporter-method-output">Switch to the Synopsis frame.</span>
-                <span class="reporter-method-output">Enter '6685a6dfff60409' into the 'Body' text area.</span>
-                <span class="reporter-method-output">Click the 'Cover' select button.</span>
-                <span class="reporter-method-output">Enter the file path for file upload.</span>
-                <span class="reporter-method-output">Click the 'Upload' button.</span>
-                <span class="reporter-method-output">Wait for the file link to be visible after upload.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Click the 'Public Local Files' radio button.</span>
-                <span class="reporter-method-output">Click the 'Next' button.</span>
-                <span class="reporter-method-output">Verify the file image 'HanSolo' is present.</span>
-                <span class="reporter-method-output">Verify the img is loaded and visible.</span>
+                <span class="reporter-method-output">Click the primary nav 'Files' link.</span>
+                <span class="reporter-method-output">Click the secondary nav 'mpxPlayers'.</span>
+                <span class="reporter-method-output">Click the MPX 'Login' link for the unpublished player 'AutomationPlayerda33ed8761'.</span>
+                <span class="reporter-method-output">Switch to new browser tab/window.</span>
+                <span class="reporter-method-output">Click the 'Players' link.</span>
+                <span class="reporter-method-output">Click the 'All Players' link.</span>
+                <span class="reporter-method-output">Click the 'Player Title' label to give focus to the player item.</span>
+                <span class="reporter-method-output">Click the 'Disable Player' check box.</span>
                 <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Scroll the 'Publishing Options' link into view.</span>
-                <span class="reporter-method-output">Click the 'Publishing Options' link.</span>
-                <span class="reporter-method-output">Select 'Draft' from the 'Moderation State' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Post 033a2b223cc2481 has been created.' is present.</span>
-                <span class="reporter-method-output">STEP 2</span>
-                <span class="reporter-method-output">Click the 'Modules' menu link.</span>
-                <span class="reporter-method-output">Verify the 'Dynamic Queue' check box is checked.</span>
-                <span class="reporter-method-output">Verify the 'Dynamic Queue Workbench' check box is checked.</span>
-                <span class="reporter-method-output">STEP 3</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' link.</span>
-                <span class="reporter-method-output">Click the 'Add dynamic queue type' link.</span>
-                <span class="reporter-method-output">STEP 4</span>
-                <span class="reporter-method-output">Enter '25' in the 'Name' text box.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">STEP 5</span>
-                <span class="reporter-method-output">Click the 'MachineNameEdit_Lnk' button.</span>
-                <span class="reporter-method-output">Enter '5787593769d5415' in the 'Name' text box.</span>
-                <span class="reporter-method-output">Enter '5787593769d5415' in the 'MachineName' text box.</span>
-                <span class="reporter-method-output">Select '1 min' from the 'Cache lifetime' drop down list.</span>
-                <span class="reporter-method-output">Select 'Content' or 'Node' from the 'Entity type' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify the text '5787593769d5415' is present on the page.</span>
-                <span class="reporter-method-output">STEP 6&7</span>
+                <span class="reporter-method-output">Click the 'Configuration' menu link.</span>
+                <span class="reporter-method-output">Click the 'Cron' link.</span>
+                <span class="reporter-method-output">Click the 'Run Cron' button.</span>
                 <span class="reporter-method-output">Click the 'Content' menu link.</span>
-                <span class="reporter-method-output">Click the primary nav 'Dynamic Queues' link.</span>
-                <span class="reporter-method-output">Click the 'Add 5787593769d5415' link.</span>
-                <span class="reporter-method-output">Enter '2dd3b35f946e4e1' in the 'Title' text box.</span>
-                <span class="reporter-method-output"></span>
-                <span class="reporter-method-output"></span>
-                <span class="reporter-method-output">Click the 'Newest' radio button under 'Sort by'.</span>
-                <span class="reporter-method-output">Select 'Publish' from the 'TV Shows' drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save Dynamic Queue' button.</span>
-                <span class="reporter-method-output">STEP 8 </span>
-                <span class="reporter-method-output">Click the 'Content' menu link.</span>
-                <span class="reporter-method-output">Click the primary nav 'Dynamic Queues' link.</span>
-                <span class="reporter-method-output">Verify dynamic queue '2dd3b35f946e4e1' status is 'Published'.</span>
-                <span class="reporter-method-output">STEP 9 - MOVED TO SETUP</span>
-                <span class="reporter-method-output">STEP 10 </span>
-                <span class="reporter-method-output">Open a new browser window.</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Open url 'http://qa5.publisher7.com/dynamic-queue/6'.</span>
-                <span class="reporter-method-output">Verify the text '033a2b223cc2481' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '69897cc0302746e' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '4f7244dd6c6e4f7' is present on the page.</span>
-                <span class="reporter-method-output">STEP 11</span>
-                <span class="reporter-method-output">STEP 12</span>
-                <span class="reporter-method-output">STEP 13</span>
-                <span class="reporter-method-output">STEP 14</span>
-                <span class="reporter-method-output">Switch to the parent tab/window.</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' link.</span>
-                <span class="reporter-method-output">Click the 'edit' link for Dynamic Queue Type '5787593769d5415.</span>
-                <span class="reporter-method-output">STEP 15</span>
-                <span class="reporter-method-output">Check the 'Movie' check box.</span>
-                <span class="reporter-method-output">Check the 'Person' check box.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">STEP 16</span>
-                <span class="reporter-method-output">Click the 'Content' menu link.</span>
-                <span class="reporter-method-output">Click the primary nav 'Dynamic Queues' link.</span>
-                <span class="reporter-method-output">Click the 'Add 5787593769d5415' link.</span>
-                <span class="reporter-method-output">Verify Target bundle content count equals '2'.</span>
-                <span class="reporter-method-output">Verify content type 'Movie' is present in list of Target bundles.</span>
-                <span class="reporter-method-output">Verify content type 'Person' is present in list of Target bundles.</span>
-                <span class="reporter-method-output">STEP 17</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' link.</span>
-                <span class="reporter-method-output">Click the 'manage display' link for Dynamic Queue Type '5787593769d5415.</span>
-                <span class="reporter-method-output">Verify the text 'Full content' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Teaser' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Revision comparison' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Tokens' is present on the page.</span>
-                <span class="reporter-method-output">STEP 18</span>
-                <span class="reporter-method-output">Select 'Full content' from the 'Entity List' Formate drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Refresh the page.</span>
-                <span class="reporter-method-output">Verify the text '033a2b223cc2481' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '69897cc0302746e' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '4f7244dd6c6e4f7' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '6685a6dfff60409' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '7877981ae671497' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'ed0c7cd0e078405' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Character: First Name' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Cover Media' is present on the page.</span>
-                <span class="reporter-method-output">STEP 19</span>
-                <span class="reporter-method-output">Switch to the parent tab/window.</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' link.</span>
-                <span class="reporter-method-output">Click the 'manage display' link for Dynamic Queue Type '5787593769d5415.</span>
-                <span class="reporter-method-output">Select 'Teaser' from the 'Entity List' Formate drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Refresh the page.</span>
-                <span class="reporter-method-output">Verify the text '033a2b223cc2481' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '69897cc0302746e' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '4f7244dd6c6e4f7' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '6685a6dfff60409' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '7877981ae671497' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'ed0c7cd0e078405' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Character: First Name' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'Cover Media' is NOT present on the page.</span>
-                <span class="reporter-method-output">STEP 20</span>
-                <span class="reporter-method-output">STEP 21</span>
-                <span class="reporter-method-output">Switch to the parent tab/window.</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Display suite' link.</span>
-                <span class="reporter-method-output">Click the 'View modes' link.</span>
-                <span class="reporter-method-output">Click the 'Add a view mode' link.</span>
-                <span class="reporter-method-output">Enter '92a5aab2c70d43c' in the 'Label' text box.</span>
-                <span class="reporter-method-output">Click the 'Node' Entity check box.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The view mode 92a5aab2c70d43c has been saved' is present.</span>
-                <span class="reporter-method-output">STEP 22,23,24</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Content types' link.</span>
-                <span class="reporter-method-output">Click the 'manage display' link for content type 'Post'.</span>
-                <span class="reporter-method-output">Click the '92a5aab2c70d43c' checkbox.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the '92a5aab2c70d43c' Tab.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Body'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Categories'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Tags'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Contributor'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Media Gallery'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Media'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Description'.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Content types' link.</span>
-                <span class="reporter-method-output">Click the 'manage display' link for content type 'Character Profile'.</span>
-                <span class="reporter-method-output">Click the '92a5aab2c70d43c' checkbox.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the '92a5aab2c70d43c' Tab.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Biography'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: First Name'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Middle Name'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Last Name'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Cover Photo'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Alias'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Birth Date'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Prefix'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Character: Suffix'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Gigya Share Bar'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'External Links'.</span>
-                <span class="reporter-method-output">Select '<Hidden>' from the 'FORMAT' drop down list for 'FIELD' with label 'Short Biography'.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">STEP 25</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Dynamic Queue types' link.</span>
-                <span class="reporter-method-output">Click the 'manage display' link for Dynamic Queue Type '5787593769d5415.</span>
-                <span class="reporter-method-output">Select '92a5aab2c70d43c' from the 'Entity List' Formate drop down list.</span>
-                <span class="reporter-method-output">Click the 'Save' button.</span>
-                <span class="reporter-method-output">Verify success message of 'Your settings have been saved.' is present.</span>
-                <span class="reporter-method-output">STEP 26</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Refresh the page.</span>
-                <span class="reporter-method-output">Verify the text '033a2b223cc2481' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '69897cc0302746e' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '4f7244dd6c6e4f7' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '6685a6dfff60409' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text '7877981ae671497' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text 'ed0c7cd0e078405' is NOT present on the page.</span>
-                <span class="reporter-method-output">STEP 27</span>
-                <span class="reporter-method-output">Switch to the parent tab/window.</span>
-                <span class="reporter-method-output">Click the 'People' menu link.</span>
-                <span class="reporter-method-output">Click the primary nav 'Permissions' link.</span>
-                <span class="reporter-method-output">Check the 'access dynamic queues' checkbox for the 'anonymous user' role.</span>
-                <span class="reporter-method-output">Check the 'access dynamic queues' checkbox for the 'authenticated user' role.</span>
-                <span class="reporter-method-output">Click the 'Save Permissions' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The changes have been saved.' is present.</span>
-                <span class="reporter-method-output">Click the 'Logout' button.</span>
-                <span class="reporter-method-output">STEP 28</span>
-                <span class="reporter-method-output">Switch to new browser tab/window.</span>
-                <span class="reporter-method-output">Refresh the page.</span>
-                <span class="reporter-method-output">Verify the text '69897cc0302746e' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '4f7244dd6c6e4f7' is present on the page.</span>
-                <span class="reporter-method-output">Verify the text '033a2b223cc2481' is NOT present on the page.</span>
-                <span class="reporter-method-output">Verify the text '6685a6dfff60409' is NOT present on the page.</span>
-                <span class="reporter-method-output">Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.</span>
-                <span class="reporter-method-output">Enter 'pa55word' in the 'Password' text box.</span>
-                <span class="reporter-method-output">Click the 'Login' button.</span>
-                <span class="reporter-method-output">Click the 'Structure' menu link.</span>
-                <span class="reporter-method-output">Click the 'Display suite' link.</span>
-                <span class="reporter-method-output">Click the 'View modes' link.</span>
-                <span class="reporter-method-output">Click the 'Delete' link for label '92a5aab2c70d43c'.</span>
-                <span class="reporter-method-output">Click the 'Delete' button.</span>
-                <span class="reporter-method-output">Verify success message of 'The view mode 92a5aab2c70d43c has been deleted.' is present.</span>
+                <span class="reporter-method-output">Click the primary nav 'Files' link.</span>
+                <span class="reporter-method-output">Click the secondary nav 'mpxPlayers'.</span>
+                <span class="reporter-method-output">Verify the text 'An MPXplayer that's in use (AutomationPlayerda33ed8761) has been disabled and unpublished.' is NOT present on the page.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -513,38 +333,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.CreateC...)</span>
-                <span class="method-start">31 ms</span>
+                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlaye...)</span>
+                <span class="method-start">40 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">CreateConfigureDynamicQueue_TC4197</span>
-                <span class="method-start">3173 ms</span>
+                <span class="method-name">NotificationPlayerUnavailability_Test</span>
+                <span class="method-start">4142 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=CreateConfigureDynamicQueue_TC4197 status=SUCCESS method=CreateConfigureDynamicQueu...)</span>
-                <span class="method-start">303198 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">startSelenium(public void com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue.Cleanup...)</span>
-                <span class="method-start">303772 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Cleanup</span>
-                <span class="method-start">306264 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">stopSelenium([TestResult name=Cleanup status=SUCCESS method=CreateConfigureDynamicQueue.Cleanup()[pri:0, instance...)</span>
-                <span class="method-start">306265 ms</span>
+                <span class="method-name">stopSelenium([TestResult name=NotificationPlayerUnavailability_Test status=SUCCESS method=NotificationPlayerUnava...)</span>
+                <span class="method-start">372923 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteTeardown</span>
-                <span class="method-start">306854 ms</span>
+                <span class="method-start">373517 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

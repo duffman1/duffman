@@ -48,7 +48,7 @@ public class ErrorChecking {
     private WebElement MoreThanOneError_Ctr;
     
     private By DisabledPlayerError_Ctr(String playerTitle) {
-    	return By.xpath("//div[@class='messages error']/ul/li//em[contains(text(), '" + playerTitle + "')]/../..");
+    	return By.xpath("//div[@class='messages error']//em[contains(text(), '" + playerTitle + "')]/../..");
     }
     
     private List<WebElement> Error_Itms() {
