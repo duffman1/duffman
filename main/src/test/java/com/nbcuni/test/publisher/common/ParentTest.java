@@ -102,7 +102,7 @@ public class ParentTest {
                 Reporter.setCurrentTestResult(null);
     		}
     	}
-    	catch (Exception e) {
+    	catch (Exception | AssertionError e) {
     		System.out.println("Failed to flush cache");
     	}
     	
