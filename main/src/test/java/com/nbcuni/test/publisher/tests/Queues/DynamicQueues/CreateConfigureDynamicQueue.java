@@ -193,7 +193,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         contentParent.VerifyMessageStatus("Your settings have been saved.");
         manageDisplays.ClickViewModeTab(viewModeLabel);
         for (String fieldLabel : Arrays.asList("Body", "Categories", "Tags", "Contributor", "Media Gallery", 
-        		"Cover Media", "Gigya Share Bar", "Short Description")) {
+        		"Cover Media", "Short Description")) {
         	manageDisplays.SelectFormat(fieldLabel, "<Hidden>");
         	contentParent.WaitForThrobberNotPresent();
         }
@@ -208,7 +208,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         manageDisplays.ClickViewModeTab(viewModeLabel);
         for (String fieldLabel : Arrays.asList("Biography", "Character: First Name", "Character: Middle Name",
         		"Character: Last Name", "Cover Photo", "Alias", "Birth Date", "Character: Prefix", "Character: Suffix",
-        		"Gigya Share Bar", "External Links", "Short Biography")) {
+        		"External Links", "Short Biography")) {
         	manageDisplays.SelectFormat(fieldLabel, "<Hidden>");
         	contentParent.WaitForThrobberNotPresent();
         }

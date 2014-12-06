@@ -17,7 +17,7 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
      * TEST CASE - TC3978
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20523473657
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void FunctionalImplementGigyaShareBar_TC3978() throws Exception{
     	
     	//Step 1
