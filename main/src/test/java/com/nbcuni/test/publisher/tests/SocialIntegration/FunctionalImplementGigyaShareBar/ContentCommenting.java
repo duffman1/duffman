@@ -21,7 +21,7 @@ public class ContentCommenting extends ParentTest{
      * TEST CASE - TC3977
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/20523176723
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void ContentCommenting_TC3977() throws Exception{
     	
     	Reporter.log("STEP 1");
