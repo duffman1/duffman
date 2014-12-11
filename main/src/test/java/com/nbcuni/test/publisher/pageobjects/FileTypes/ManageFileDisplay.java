@@ -39,8 +39,11 @@ public class ManageFileDisplay {
     @FindBy(how = How.ID, using = "edit-displays-pub-mpx-image-status")
     private WebElement PubMPXImage_Cbx;
     
-    @FindBy(how = How.ID, using = "edit-displays-pub-mpx-video-status")
+    @FindBy(how = How.ID, using = "edit-displays-pub-mpx-video-by-guid-status")
     private WebElement PubMPXVideo_Cbx;
+    
+    @FindBy(how = How.ID, using = "edit-displays-pub-mpx-video-status")
+    private WebElement PubMPXVideoDeprecated_Cbx;
     
     private WebElement PubMPXVideoPlayerForAccount_Ddl(String playerTitle) {
     	return webDriver.findElement(By.xpath("//select[contains(@id, 'player')]//optgroup/option[contains(text(), '" + playerTitle + "')]"));
@@ -71,11 +74,19 @@ public class ManageFileDisplay {
     	}
     }
 
-    public void ClickPubMPXVideoCbx() throws Exception {
+    public void CheckPubMPXVideoCbx() throws Exception {
     	
     	if (PubMPXVideo_Cbx.isSelected() == false) {
-    		Reporter.log("Click the 'Pub MPX Video' checkbox");
+    		Reporter.log("Check the 'Pub MPX Video' checkbox");
     		PubMPXVideo_Cbx.click();
+    	}
+    }
+    
+    public void UnCheckPubMPXVideoDeprecatedCbx() throws Exception {
+    	
+    	if (PubMPXVideoDeprecated_Cbx.isSelected() == true) {
+    		Reporter.log("Un-check the ' Pub MPX Video (Deprecated)' checkbox");
+    		PubMPXVideoDeprecated_Cbx.click();
     	}
     }
     

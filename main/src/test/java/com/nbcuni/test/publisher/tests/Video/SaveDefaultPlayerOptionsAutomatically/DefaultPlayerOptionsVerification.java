@@ -66,7 +66,8 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		
         		//Step 15
         		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
-        		manageFileDisplay.ClickPubMPXVideoCbx();
+        		manageFileDisplay.CheckPubMPXVideoCbx();
+        		manageFileDisplay.UnCheckPubMPXVideoDeprecatedCbx();
         		manageFileDisplay.ClickPubMPXVideoLnk();
         		manageFileDisplay.SelectMPXVideoPlayer("AutomationPlayer2");
         		manageFileDisplay.ClickSaveConfigurationBtn();
