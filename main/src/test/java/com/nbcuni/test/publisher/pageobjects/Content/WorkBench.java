@@ -122,15 +122,6 @@ public class WorkBench {
     	
     }
     
-    public void VerifyFileImageSize(String imageIndex, String height, String width) throws Exception {
-    	
-    	Reporter.log("Assert that the workbench image width = '" + width + "' and the image height = '" + height + "'.");
-    	WebElement ele = waitFor.ElementVisible(WorkBench_Img(imageIndex));
-    	Assert.assertEquals(ele.getAttribute("width"), width);
-    	Assert.assertEquals(ele.getAttribute("height"), height);
-    	  
-    }
-    
     public String GetFileImageId(String imageIndex) throws Exception {
     	
     	Reporter.log("Get the file id of image number " + imageIndex + ".");

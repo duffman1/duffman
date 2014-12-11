@@ -70,10 +70,6 @@ public class Modules {
     	return By.xpath("//label[text()='" + moduleName + "']/../../..//input");
     }
     
-    private By Configure_Lnk(String moduleName) {
-    	return By.xpath("//label/strong[text()='" + moduleName + "']/../../../td//a[text()='Configure']");
-    }
-    
     private By Category_Lnk(String categoryName) {
     	return By.xpath("//div[@id='module-filter-tabs']//a[contains(text(), '" + categoryName + "')]");
     }
@@ -224,13 +220,6 @@ public class Modules {
     	
     	navigation.Modules();
     	this.EnableModule(moduleName);
-    	
-    }
-    
-    public void ClickConfigureLnk(String moduleName) throws Exception {
-    	
-    	Reporter.log("Click the '" + moduleName + "' module 'Configure' link.");
-    	interact.Click(waitFor.ElementVisible(Configure_Lnk(moduleName)));
     	
     }
     
