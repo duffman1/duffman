@@ -391,6 +391,22 @@ public class WaitFor {
     	return webDriver.findElement(locator);
     }
     
+    public WebElement ElementNotContainsAttribute(final By locator, final String attribute, final String attributeValue) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, 
+    				ElementNotVisibleException.class))
+    		.withMessage("Attribute '" + attribute + "' with value '" + attributeValue + "' still present in element.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return !webDriver.findElement(loc).getAttribute(attribute).contains(attributeValue);
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
+    }
+    
     public void TitleContains(final String text) throws Exception {
     	
     	this.driverWait()

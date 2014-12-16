@@ -99,9 +99,16 @@ public class WorkBench {
     }
     
     public void VerifyMPXPlayerSourceNotPresent(String source) throws Exception {
-        Thread.sleep(1000);
+        
     	Reporter.log("Verify the mpx video player frame source does NOT contain '" + source + "'.");
-        Assert.assertFalse(waitFor.ElementVisible(MPXPlayer_Frm).getAttribute("src").contains(source));
+        waitFor.ElementNotContainsAttribute(MPXPlayer_Frm, "src", source);
+        
+    }
+    
+    public void VerifyMPXPlayerSourcePresent(String source) throws Exception {
+        
+    	Reporter.log("Verify the mpx video player frame source does NOT contain '" + source + "'.");
+        waitFor.ElementContainsAttribute(MPXPlayer_Frm, "src", source);
         
     }
     

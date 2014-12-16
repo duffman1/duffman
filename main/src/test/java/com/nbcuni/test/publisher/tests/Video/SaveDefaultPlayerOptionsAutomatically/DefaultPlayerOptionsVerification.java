@@ -65,7 +65,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		
         		//Step 15
-        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
+        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
         		manageFileDisplay.CheckPubMPXVideoCbx();
         		manageFileDisplay.UnCheckPubMPXVideoDeprecatedCbx();
         		manageFileDisplay.ClickPubMPXVideoLnk();
@@ -89,9 +89,27 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		workBench.VerifyMPXPlayerPresent();
         		
         		//Test Case TC1812
-        		workBench.VerifyMPXPlayerSourceNotPresent("embed");
+        		workBench.VerifyMPXPlayerSourcePresent("embed");
         		
-        		//Step 20 through 21 - N/A
+        		/*
+        		navigation.Structure("File types");
+        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        		Thread.sleep(1000);
+        		manageFileDisplay.CheckPubMPXVideoDeprecatedCbx();
+        		manageFileDisplay.UnCheckPubMPXVideoCbx();
+        		manageFileDisplay.ClickSaveConfigurationBtn();
+        		contentParent.VerifyMessageStatus("Your settings have been saved.");
+        		manageFileDisplay.SelectMPXVideoPlayerDeprecated("AutomationPlayer2");
+        		manageFileDisplay.ClickSaveConfigurationBtn();
+        		contentParent.VerifyMessageStatus("Your settings have been saved.");
+        		navigation.Content("Files", "mpxMedia");
+        		searchFor.EnterTitle("AutomationDefault");
+        		searchFor.ClickApplyBtn();
+        		searchFor.ClickSearchTitleLnk("AutomationDefault");
+        		workBench.VerifyMPXPlayerPresent();
+        		workBench.VerifyMPXPlayerSourceNotPresent("embed");
+        		*/
+        		
         	}
         	else {
         		Assert.fail("DB TV account must be configured.");

@@ -89,7 +89,7 @@ public class FocalPointModule extends ParentTest{
         navigation.Structure("File types");
         FileTypes fileTypes = new FileTypes(webDriver);
         fileTypes.ClickManageFileDisplayLnk("Image");
-        ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
+        ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
         manageFileDisplay.CheckImageCbx();
         manageFileDisplay.SelectImageStyle("AutomationFocalStyle");
         manageFileDisplay.ClickSaveConfigurationBtn();

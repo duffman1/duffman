@@ -67,7 +67,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		
-        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
+        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
         		manageFileDisplay.CheckPubMPXImageCbx();
         		manageFileDisplay.ClickPubMPXImageLnk();
         		manageFileDisplay.SelectMPXImageStyle("Thumbnail (100x100)");
