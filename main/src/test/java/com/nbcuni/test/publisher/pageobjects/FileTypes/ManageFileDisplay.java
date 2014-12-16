@@ -1,8 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.FileTypes;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
@@ -47,10 +48,6 @@ public class ManageFileDisplay {
     private By PubMPXVideoPlayerForAccount_Ddl = By.xpath("//select[contains(@id, 'edit-displays-pub-mpx-video-by-guid-settings-pub-mpx-video-player')]");
     
     private By PubMPXVideoPlayerForAccountDeprecated_Ddl = By.xpath("//select[contains(@id, 'edit-displays-pub-mpx-video-settings-pub-mpx-video-player')]");
-    
-    private By PubMPXVideoPlayerForAccount_Opt(String playerTitle) {
-    	return By.xpath("//select[contains(@id, 'player')]//optgroup/option[contains(text(), '" + playerTitle + "')]");
-    }
     
     private By PubMPXImageStyle_Ddl = By.id("edit-displays-pub-mpx-image-settings-pub-mpx-image-image-style");
     
@@ -144,17 +141,33 @@ public class ManageFileDisplay {
     public void SelectMPXVideoPlayer(String playerName) throws Exception {
     	
     	Reporter.log("Select the '" + playerName + "' player from the 'Pub MPX Video Player for Account...' drop down list.");
-    	interact.Click(waitFor.ElementVisible(PubMPXVideoPlayerForAccount_Ddl));
-    	interact.Click(waitFor.ElementPresent(PubMPXVideoPlayerForAccount_Opt(playerName)));
-    	
+    	WebElement element = waitFor.ElementVisible(PubMPXVideoPlayerForAccount_Ddl);
+        interact.Click(element);
+
+        List<WebElement> options = element.findElements(By.tagName("option"));
+        for(WebElement option : options){
+            String optTxt = option.getText();
+            if(optTxt.contains(playerName)){
+                option.click();
+                break;
+            }
+        }
     }
     
     public void SelectMPXVideoPlayerDeprecated(String playerName) throws Exception {
     	
     	Reporter.log("Select the '" + playerName + "' player from the 'Pub MPX Video Player for Account...' drop down list.");
-    	interact.Click(waitFor.ElementVisible(PubMPXVideoPlayerForAccountDeprecated_Ddl));
-    	interact.Click(waitFor.ElementPresent(PubMPXVideoPlayerForAccount_Opt(playerName)));
-    	
+    	WebElement element = waitFor.ElementVisible(PubMPXVideoPlayerForAccountDeprecated_Ddl);
+        interact.Click(element);
+
+        List<WebElement> options = element.findElements(By.tagName("option"));
+        for(WebElement option : options){
+            String optTxt = option.getText();
+            if(optTxt.contains(playerName)){
+                option.click();
+                break;
+            }
+        }
     }
     
     public void SelectMPXImageStyle(String style) throws Exception {

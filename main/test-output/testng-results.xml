@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
@@ -45,12 +45,6 @@
     </line>
     <line>
       <![CDATA[Click the 'DB TV manage file display' link.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'Pub MPX Video' checkbox]]>
-    </line>
-    <line>
-      <![CDATA[Un-check the ' Pub MPX Video (Deprecated)' checkbox]]>
     </line>
     <line>
       <![CDATA[Click the 'Pub MPX Video' link.]]>
@@ -113,34 +107,52 @@
       <![CDATA[Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved to /Users/brandonclark/git/SQE-TEST-Pub7/main/test-output/screenshots/DefaultPlayerOptionsVerification_Test_121614011313PM.png ]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[<br><br><a href='/Users/brandonclark/git/SQE-TEST-Pub7/main/test-output/screenshots/DefaultPlayerOptionsVerification_Test_121614011313PM.png'> <img src='./DefaultPlayerOptionsVerification_Test_121614011313PM.png' height='700' width='700'/> </a>]]>
+      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/admin/config/development/performance'.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Cache was cleared on test failure]]>
+      <![CDATA[Click the primary nav 'Files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title AutomationDefault.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the first search title link in the search result set.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mpx video player frame is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="101217" started-at="2014-12-16T18:11:47Z" finished-at="2014-12-16T18:13:28Z">
+  <suite name="Default suite" duration-ms="92306" started-at="2014-12-16T18:24:28Z" finished-at="2014-12-16T18:26:00Z">
     <groups>
       <group name="mpx">
-        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@766b0524]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
+        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
       </group> <!-- mpx -->
       <group name="full">
-        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@766b0524]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
+        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="101217" started-at="2014-12-16T18:11:47Z" finished-at="2014-12-16T18:13:28Z">
+    <test name="Default test" duration-ms="92306" started-at="2014-12-16T18:24:28Z" finished-at="2014-12-16T18:26:00Z">
       <class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@766b0524]" name="suiteSetup" is-config="true" duration-ms="22" started-at="2014-12-16T13:11:47Z" finished-at="2014-12-16T13:11:47Z">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="suiteSetup" is-config="true" duration-ms="23" started-at="2014-12-16T13:24:28Z" finished-at="2014-12-16T13:24:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@766b0524]" name="startSelenium" is-config="true" duration-ms="3060" started-at="2014-12-16T13:11:47Z" finished-at="2014-12-16T13:11:50Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="startSelenium" is-config="true" duration-ms="3072" started-at="2014-12-16T13:24:28Z" finished-at="2014-12-16T13:24:31Z">
           <params>
             <param index="0">
               <value>
@@ -151,51 +163,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="FAIL" signature="DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@766b0524]" name="DefaultPlayerOptionsVerification_Test" duration-ms="82408" started-at="2014-12-16T13:11:50Z" finished-at="2014-12-16T13:13:13Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Timed out after 30 seconds: Element not clickable.
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '172.17.101.172', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.5', java.version: '1.7.0_25'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 30 seconds: Element not clickable.
-Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
-System info: host: 'BACLARK77-MAC1.local', ip: '172.17.101.172', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.5', java.version: '1.7.0_25'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.nbcuni.test.publisher.common.Util.Interact.Click(Interact.java:94)
-	at com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFileDisplay.SelectMPXVideoPlayerDeprecated(ManageFileDisplay.java:156)
-	at com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test(DefaultPlayerOptionsVerification.java:101)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="DefaultPlayerOptionsVerification_Test" duration-ms="88649" started-at="2014-12-16T13:24:31Z" finished-at="2014-12-16T13:26:00Z">
           <reporter-output>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
@@ -241,12 +209,6 @@ Driver info: driver.version: unknown
             </line>
             <line>
               <![CDATA[Click the 'DB TV manage file display' link.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'Pub MPX Video' checkbox]]>
-            </line>
-            <line>
-              <![CDATA[Un-check the ' Pub MPX Video (Deprecated)' checkbox]]>
             </line>
             <line>
               <![CDATA[Click the 'Pub MPX Video' link.]]>
@@ -309,28 +271,49 @@ Driver info: driver.version: unknown
               <![CDATA[Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Screenshot saved to /Users/brandonclark/git/SQE-TEST-Pub7/main/test-output/screenshots/DefaultPlayerOptionsVerification_Test_121614011313PM.png ]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[<br><br><a href='/Users/brandonclark/git/SQE-TEST-Pub7/main/test-output/screenshots/DefaultPlayerOptionsVerification_Test_121614011313PM.png'> <img src='./DefaultPlayerOptionsVerification_Test_121614011313PM.png' height='700' width='700'/> </a>]]>
+              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[Cache was cleared on test failure]]>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title AutomationDefault.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the first search title link in the search result set.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mpx video player frame is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
             </line>
           </reporter-output>
         </test-method> <!-- DefaultPlayerOptionsVerification_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@766b0524]" name="stopSelenium" is-config="true" duration-ms="15737" started-at="2014-12-16T13:13:13Z" finished-at="2014-12-16T13:13:28Z">
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-12-16T13:26:00Z" finished-at="2014-12-16T13:26:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=DefaultPlayerOptionsVerification_Test status=FAILURE method=DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@766b0524] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=DefaultPlayerOptionsVerification_Test status=SUCCESS method=DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@766b0524]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-12-16T13:13:28Z" finished-at="2014-12-16T13:13:28Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-12-16T13:26:00Z" finished-at="2014-12-16T13:26:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->

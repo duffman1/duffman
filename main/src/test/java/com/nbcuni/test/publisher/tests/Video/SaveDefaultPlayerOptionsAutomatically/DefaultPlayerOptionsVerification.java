@@ -91,7 +91,6 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		//Test Case TC1812
         		workBench.VerifyMPXPlayerSourcePresent("embed");
         		
-        		/*
         		navigation.Structure("File types");
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		Thread.sleep(1000);
@@ -108,7 +107,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		searchFor.ClickSearchTitleLnk("AutomationDefault");
         		workBench.VerifyMPXPlayerPresent();
         		workBench.VerifyMPXPlayerSourceNotPresent("embed");
-        		*/
+        		
         		
         	}
         	else {
