@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -26,7 +26,97 @@
       <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
     </line>
     <line>
-      <![CDATA[MPX is already configured.]]>
+      <![CDATA[Enter mpx username in the 'Username for New Account' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter mpx password in the 'Password for New Account' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Connect to MPX' button.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'DB TV' from the first 'Select Import Account for...' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[click the 'Set Import Account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configurations' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cron' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run Cron' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configurations' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Media' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
     </line>
     <line>
       <![CDATA[Click the 'Configuration' menu link.]]>
@@ -38,79 +128,31 @@
       <![CDATA[Get all the selected import account options and store to a list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
+      <![CDATA[Click the 'ACCOUNT LIST' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'File types' link.]]>
+      <![CDATA[Wait for 'Delete Account' button to be visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'DB TV manage file display' link.]]>
+      <![CDATA[Get each of the 'Delete Account' buttons]]>
     </line>
     <line>
-      <![CDATA[Click the 'Pub MPX Video' link.]]>
+      <![CDATA[Get each of the 'Delete Account' buttons]]>
     </line>
     <line>
-      <![CDATA[Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
+      <![CDATA[Get each of the 'Delete Account' buttons]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Verify the text 'You are about to delete account' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+      <![CDATA[Verify the text 'and all of its assets. This action cannot be undone.' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Click the 'Delete' button.]]>
     </line>
     <line>
-      <![CDATA[Click the primary nav 'Files' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the secondary nav 'mpxMedia'.]]>
-    </line>
-    <line>
-      <![CDATA[Enter title AutomationDefault.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mpx video player frame is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'File types' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'DB TV manage file display' link.]]>
-    </line>
-    <line>
-      <![CDATA[Check the ' Pub MPX Video (Deprecated)' checkbox]]>
-    </line>
-    <line>
-      <![CDATA[Un-Check the 'Pub MPX Video' checkbox]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+      <![CDATA[Get each of the 'Delete Account' buttons]]>
     </line>
     <line>
       <![CDATA[Click the 'Content' menu link.]]>
@@ -122,51 +164,123 @@
       <![CDATA[Click the secondary nav 'mpxMedia'.]]>
     </line>
     <line>
-      <![CDATA[Enter title AutomationDefault.]]>
+      <![CDATA[Enter title Automation.]]>
     </line>
     <line>
       <![CDATA[Click the 'Apply' button.]]>
     </line>
     <line>
-      <![CDATA[Click the first search title link in the search result set.]]>
+      <![CDATA[Verify there are no search results present.]]>
     </line>
     <line>
-      <![CDATA[Verify the mpx video player frame is present.]]>
+      <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
+      <![CDATA[Click the 'Media: thePlatform mpx settings' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter mpx username in the 'Username for New Account' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter mpx password in the 'Password for New Account' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Connect to MPX' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Login successful' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'DB TV' from the first 'Select Import Account for...' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[click the 'Set Import Account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Setting import account "DB%20TV" for account' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configurations' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+    </line>
+    <line>
+      <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cron' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Run Cron' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the primary nav 'Files' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter title Automation.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Apply' button.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
+    </line>
+    <line>
+      <![CDATA[Get the text of the first search result set item.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="92306" started-at="2014-12-16T18:24:28Z" finished-at="2014-12-16T18:26:00Z">
+  <suite name="Default suite" duration-ms="391798" started-at="2014-12-17T20:31:18Z" finished-at="2014-12-17T20:37:50Z">
     <groups>
-      <group name="mpx">
-        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
-      </group> <!-- mpx -->
-      <group name="full">
-        <method signature="DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="DefaultPlayerOptionsVerification_Test" class="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification"/>
-      </group> <!-- full -->
+      <group name="onrequest">
+        <method signature="MPXAccountDeletion.MPXAccountDeletion_TC1884()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion@1ca718f3]" name="MPXAccountDeletion_TC1884" class="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion"/>
+      </group> <!-- onrequest -->
     </groups>
-    <test name="Default test" duration-ms="92306" started-at="2014-12-16T18:24:28Z" finished-at="2014-12-16T18:26:00Z">
-      <class name="com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="suiteSetup" is-config="true" duration-ms="23" started-at="2014-12-16T13:24:28Z" finished-at="2014-12-16T13:24:28Z">
+    <test name="Default test" duration-ms="391798" started-at="2014-12-17T20:31:18Z" finished-at="2014-12-17T20:37:50Z">
+      <class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion@1ca718f3]" name="suiteSetup" is-config="true" duration-ms="30" started-at="2014-12-17T15:31:18Z" finished-at="2014-12-17T15:31:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="startSelenium" is-config="true" duration-ms="3072" started-at="2014-12-16T13:24:28Z" finished-at="2014-12-16T13:24:31Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion@1ca718f3]" name="startSelenium" is-config="true" duration-ms="3445" started-at="2014-12-17T15:31:18Z" finished-at="2014-12-17T15:31:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion.MPXAccountDeletion_TC1884() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="DefaultPlayerOptionsVerification_Test" duration-ms="88649" started-at="2014-12-16T13:24:31Z" finished-at="2014-12-16T13:26:00Z">
+        <test-method status="PASS" signature="MPXAccountDeletion_TC1884()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion@1ca718f3]" name="MPXAccountDeletion_TC1884" duration-ms="387763" started-at="2014-12-17T15:31:21Z" finished-at="2014-12-17T15:37:49Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[Open url 'http://acc-test.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -190,7 +304,97 @@
               <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
             </line>
             <line>
-              <![CDATA[MPX is already configured.]]>
+              <![CDATA[Enter mpx username in the 'Username for New Account' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter mpx password in the 'Password for New Account' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Connect to MPX' button.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'DB TV' from the first 'Select Import Account for...' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[click the 'Set Import Account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configurations' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cron' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run Cron' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configurations' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Media' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
             </line>
             <line>
               <![CDATA[Click the 'Configuration' menu link.]]>
@@ -202,79 +406,31 @@
               <![CDATA[Get all the selected import account options and store to a list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
+              <![CDATA[Click the 'ACCOUNT LIST' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'File types' link.]]>
+              <![CDATA[Wait for 'Delete Account' button to be visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'DB TV manage file display' link.]]>
+              <![CDATA[Get each of the 'Delete Account' buttons]]>
             </line>
             <line>
-              <![CDATA[Click the 'Pub MPX Video' link.]]>
+              <![CDATA[Get each of the 'Delete Account' buttons]]>
             </line>
             <line>
-              <![CDATA[Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
+              <![CDATA[Get each of the 'Delete Account' buttons]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Verify the text 'You are about to delete account' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+              <![CDATA[Verify the text 'and all of its assets. This action cannot be undone.' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Click the 'Delete' button.]]>
             </line>
             <line>
-              <![CDATA[Click the primary nav 'Files' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the secondary nav 'mpxMedia'.]]>
-            </line>
-            <line>
-              <![CDATA[Enter title AutomationDefault.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mpx video player frame is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'File types' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'DB TV manage file display' link.]]>
-            </line>
-            <line>
-              <![CDATA[Check the ' Pub MPX Video (Deprecated)' checkbox]]>
-            </line>
-            <line>
-              <![CDATA[Un-Check the 'Pub MPX Video' checkbox]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Select the 'AutomationPlayer2' player from the 'Pub MPX Video Player for Account...' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Your settings have been saved.' is present.]]>
+              <![CDATA[Get each of the 'Delete Account' buttons]]>
             </line>
             <line>
               <![CDATA[Click the 'Content' menu link.]]>
@@ -286,38 +442,113 @@
               <![CDATA[Click the secondary nav 'mpxMedia'.]]>
             </line>
             <line>
-              <![CDATA[Enter title AutomationDefault.]]>
+              <![CDATA[Enter title Automation.]]>
             </line>
             <line>
               <![CDATA[Click the 'Apply' button.]]>
             </line>
             <line>
-              <![CDATA[Click the first search title link in the search result set.]]>
+              <![CDATA[Verify there are no search results present.]]>
             </line>
             <line>
-              <![CDATA[Verify the mpx video player frame is present.]]>
+              <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the mpx video player frame source does NOT contain 'embed'.]]>
+              <![CDATA[Click the 'Media: thePlatform mpx settings' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter mpx username in the 'Username for New Account' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter mpx password in the 'Password for New Account' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Connect to MPX' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Login successful' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'DB TV' from the first 'Select Import Account for...' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[click the 'Set Import Account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Setting import account "DB%20TV" for account' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configurations' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+            </line>
+            <line>
+              <![CDATA[Select 'AutomationPlayer1' from the first 'Import Player' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sync MPX Media Now' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Processed video import/update manually for all accounts.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cron' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Run Cron' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the primary nav 'Files' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the secondary nav 'mpxMedia'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter title Automation.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Apply' button.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
+            </line>
+            <line>
+              <![CDATA[Get the text of the first search result set item.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- DefaultPlayerOptionsVerification_Test -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="stopSelenium" is-config="true" duration-ms="567" started-at="2014-12-16T13:26:00Z" finished-at="2014-12-16T13:26:00Z">
+        </test-method> <!-- MPXAccountDeletion_TC1884 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion@1ca718f3]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2014-12-17T15:37:49Z" finished-at="2014-12-17T15:37:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=DefaultPlayerOptionsVerification_Test status=SUCCESS method=DefaultPlayerOptionsVerification.DefaultPlayerOptionsVerification_Test()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPXAccountDeletion_TC1884 status=SUCCESS method=MPXAccountDeletion.MPXAccountDeletion_TC1884()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion@1ca718f3] output=Open url 'http://acc-test.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification@559590fc]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-12-16T13:26:00Z" finished-at="2014-12-16T13:26:00Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion@1ca718f3]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2014-12-17T15:37:50Z" finished-at="2014-12-17T15:37:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically.DefaultPlayerOptionsVerification -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.MPXAccountDeletion -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
