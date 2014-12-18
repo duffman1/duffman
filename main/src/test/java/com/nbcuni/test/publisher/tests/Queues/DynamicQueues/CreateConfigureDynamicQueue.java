@@ -225,6 +225,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 26");
         applib.switchToNewWindow(parentWindow);
+        Thread.sleep(60000); //cache expiration
         applib.refreshPage();
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
         contentParent.VerifyPageContentNotPresent(Arrays.asList(unpublishedPostBody, postBody, charProfBiography));
