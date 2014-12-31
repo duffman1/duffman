@@ -46,10 +46,9 @@ public class SnippetInlineContent extends ParentTest{
         	basicInformation.EnterSynopsis("<strong>Embedding a youtube video</strong>");
         	basicInformation.ClickYoutubeBtn();
         	EmbedYoutubeVideo embedYoutubeVideo = new EmbedYoutubeVideo(webDriver);
-        	String videoSrc = "http://www.youtube.com/embed/yp9pTFcD2uk?end=2";
         	String height = "360";
         	String width = "640";
-        	embedYoutubeVideo.EnterYoutubeURL(videoSrc);
+        	embedYoutubeVideo.EnterYoutubeURL("http://www.youtube.com/embed/yp9pTFcD2uk");
         	embedYoutubeVideo.EnterHeight(height);
         	embedYoutubeVideo.EnterWidth(width);
         	embedYoutubeVideo.ClickOkBtn();
@@ -57,7 +56,7 @@ public class SnippetInlineContent extends ParentTest{
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
         	Reporter.log("STEP 5");
-        	embedYoutubeVideo.VerifyVideoPresent(videoSrc, height, width);
+        	embedYoutubeVideo.VerifyVideoPresent("//youtube.com/embed/yp9pTFcD2uk", height, width);
 
     }
 }

@@ -90,6 +90,7 @@ public class EmbedYoutubeVideo {
     	
     	Reporter.log("Verify the youtube video with src '" + videoSrc + "', height '" + height + "', and '" + width + "' is visible.");
     	wait.until(ExpectedConditions.visibilityOf(Video_Frm(videoSrc, height, width)));
+    	
     }
     
 }
