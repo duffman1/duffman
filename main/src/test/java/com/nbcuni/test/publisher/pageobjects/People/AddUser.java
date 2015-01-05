@@ -224,6 +224,22 @@ public class AddUser {
     	
     }
     
+    public void VerifyPasswordEnabled() throws Exception {
+    	
+    	Reporter.log("Verify the 'Password' text box is enabled.");
+    	waitFor.ElementEnabled(Password_Txb);
+    	
+    }
+    
+    public void VerifyEmailAddressValueAndIsEnabled(String email) throws Exception {
+    	
+    	Reporter.log("Verify the 'E-mail address' value is '" + email + "' and the text box is disabled.");
+    	WebElement ele = waitFor.ElementVisible(EmailAddress_Txb);
+    	Assert.assertEquals(email, ele.getAttribute("value"));
+    	Assert.assertFalse(ele.isEnabled());
+    	
+    }
+    
     public void VerifyRoleCbxPresentAndEnabled(List<String> allRoles) throws Exception {
     	
     	for (String role : allRoles) {

@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -23,123 +23,360 @@
       <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Click the 'People' menu link.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Publisher WYSIWYG' check box is checked.]]>
+      <![CDATA[Click the 'Add user' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '206448849' in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'E-mail address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'senior editor' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create new account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '206448856' in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'publisher_testuser2@testmail.com' in the 'E-mail address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'editor' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create new account' button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '206448858' in the 'Username' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'publisher_testuser3@testmail.com' in the 'E-mail address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'administrator' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Create new account' button.]]>
     </line>
     <line>
       <![CDATA[STEP 3]]>
     </line>
     <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Text formats' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'configure' link for text format 'Publisher'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Limit allowed HTML tags' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Publisher youtube formatter' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Convert line breaks into HTML' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Verify that the 'Correct faulty and chopped off HTML' checkbox is checked.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the allowed html tags in the 'Allowed HTML tags' text box.]]>
+      <![CDATA[Check the 'Pub SSO' check box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The text format Publisher has been updated.' is present.]]>
+      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add content' link.]]>
+      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Post' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'a253bb7bdcca447' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '<strong>Embedding a youtube video</strong>' into the 'Body' text area.]]>
-    </line>
-    <line>
-      <![CDATA[Click the embed youtube button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'http://www.youtube.com/embed/yp9pTFcD2uk' in the 'Paste YouTube Video URL' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '360' in the 'Height' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '640' in the 'Width' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'OK' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Post a253bb7bdcca447 has been created.' is present.]]>
+      <![CDATA[Enter the file path for certificate upload.]]>
     </line>
     <line>
       <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Verify the youtube video with src '//youtube.com/embed/yp9pTFcD2uk', height '360', and '640' is visible.]]>
+      <![CDATA[Check the 'Editor' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Check the 'Senior Editor' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Federated Login' link is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify error message of 'Please login with your SSO. Click here to be redirected to the SSO login page.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'publisher_testuser2@testmail.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify error message of 'Please login with your SSO. Click here to be redirected to the SSO login page.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Click here' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '206448849' in the 'SSO ID' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Sign In' button.]]>
+    </line>
+    <line>
+      <![CDATA[Refresh the page.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the text '206448849' is present on the page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Change your password' link.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to new browser tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 11]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the parent tab/window.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'publisher_testuser3@testmail.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Password' text box is enabled.]]>
+    </line>
+    <line>
+      <![CDATA[CLEANUP]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' link.]]>
+    </line>
+    <line>
+      <![CDATA[Un-Check the 'Editor' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Un-Check the 'Senior Editor' checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'SimpleSAMLphp auth is not yet activated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Modules' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Home' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
+    </line>
+    <line>
+      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'Federated Login' link is not present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'Email Address' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Login' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Logout' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48036" started-at="2014-12-31T14:35:50Z" finished-at="2014-12-31T14:36:38Z">
+  <suite name="Default suite" duration-ms="156001" started-at="2015-01-05T15:59:14Z" finished-at="2015-01-05T16:01:50Z">
     <groups>
-      <group name="full">
-        <method signature="SnippetInlineContent.SnippetInlineContent_TC5129()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent@400457b5]" name="SnippetInlineContent_TC5129" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent"/>
-      </group> <!-- full -->
+      <group name="sensitive">
+        <method signature="SSOAuthenticationModes.SSOAuthenticationModes_TC6519()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="SSOAuthenticationModes_TC6519" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes"/>
+      </group> <!-- sensitive -->
     </groups>
-    <test name="Default test" duration-ms="48036" started-at="2014-12-31T14:35:50Z" finished-at="2014-12-31T14:36:38Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent@400457b5]" name="suiteSetup" is-config="true" duration-ms="27" started-at="2014-12-31T09:35:50Z" finished-at="2014-12-31T09:35:50Z">
+    <test name="Default test" duration-ms="156001" started-at="2015-01-05T15:59:14Z" finished-at="2015-01-05T16:01:50Z">
+      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="suiteSetup" is-config="true" duration-ms="23" started-at="2015-01-05T10:59:14Z" finished-at="2015-01-05T10:59:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent@400457b5]" name="startSelenium" is-config="true" duration-ms="3738" started-at="2014-12-31T09:35:50Z" finished-at="2014-12-31T09:35:54Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="startSelenium" is-config="true" duration-ms="3345" started-at="2015-01-05T10:59:14Z" finished-at="2015-01-05T10:59:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent.SnippetInlineContent_TC5129() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes.SSOAuthenticationModes_TC6519() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SnippetInlineContent_TC5129()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent@400457b5]" name="SnippetInlineContent_TC5129" duration-ms="43710" started-at="2014-12-31T09:35:54Z" finished-at="2014-12-31T09:36:38Z">
+        <test-method status="PASS" signature="SSOAuthenticationModes_TC6519()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="SSOAuthenticationModes_TC6519" duration-ms="152072" started-at="2015-01-05T10:59:17Z" finished-at="2015-01-05T11:01:49Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP 1]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -157,110 +394,347 @@
               <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Click the 'People' menu link.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Publisher WYSIWYG' check box is checked.]]>
+              <![CDATA[Click the 'Add user' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '206448849' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'E-mail address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'senior editor' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create new account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '206448856' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'publisher_testuser2@testmail.com' in the 'E-mail address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'editor' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create new account' button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '206448858' in the 'Username' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'publisher_testuser3@testmail.com' in the 'E-mail address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'administrator' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Create new account' button.]]>
             </line>
             <line>
               <![CDATA[STEP 3]]>
             </line>
             <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Text formats' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'configure' link for text format 'Publisher'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Limit allowed HTML tags' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Publisher youtube formatter' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Convert line breaks into HTML' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Verify that the 'Correct faulty and chopped off HTML' checkbox is checked.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the allowed html tags in the 'Allowed HTML tags' text box.]]>
+              <![CDATA[Check the 'Pub SSO' check box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The text format Publisher has been updated.' is present.]]>
+              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add content' link.]]>
+              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Post' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'a253bb7bdcca447' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '<strong>Embedding a youtube video</strong>' into the 'Body' text area.]]>
-            </line>
-            <line>
-              <![CDATA[Click the embed youtube button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'http://www.youtube.com/embed/yp9pTFcD2uk' in the 'Paste YouTube Video URL' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '360' in the 'Height' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '640' in the 'Width' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'OK' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Post a253bb7bdcca447 has been created.' is present.]]>
+              <![CDATA[Enter the file path for certificate upload.]]>
             </line>
             <line>
               <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Verify the youtube video with src '//youtube.com/embed/yp9pTFcD2uk', height '360', and '640' is visible.]]>
+              <![CDATA[Check the 'Editor' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Check the 'Senior Editor' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Federated Login' link is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify error message of 'Please login with your SSO. Click here to be redirected to the SSO login page.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'publisher_testuser2@testmail.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify error message of 'Please login with your SSO. Click here to be redirected to the SSO login page.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Click here' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '206448849' in the 'SSO ID' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Sign In' button.]]>
+            </line>
+            <line>
+              <![CDATA[Refresh the page.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the text '206448849' is present on the page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Change your password' link.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to new browser tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 11]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the parent tab/window.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'publisher_testuser3@testmail.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Password' text box is enabled.]]>
+            </line>
+            <line>
+              <![CDATA[CLEANUP]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' link.]]>
+            </line>
+            <line>
+              <![CDATA[Un-Check the 'Editor' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Un-Check the 'Senior Editor' checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'SimpleSAMLphp auth is not yet activated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Modules' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Home' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
+            </line>
+            <line>
+              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'Federated Login' link is not present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'Email Address' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Login' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Logout' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SnippetInlineContent_TC5129 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent@400457b5]" name="stopSelenium" is-config="true" duration-ms="576" started-at="2014-12-31T09:36:38Z" finished-at="2014-12-31T09:36:38Z">
+        </test-method> <!-- SSOAuthenticationModes_TC6519 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2015-01-05T11:01:49Z" finished-at="2015-01-05T11:01:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SnippetInlineContent_TC5129 status=SUCCESS method=SnippetInlineContent.SnippetInlineContent_TC5129()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent@400457b5] output=STEP 1]]]>
+                <![CDATA[[TestResult name=SSOAuthenticationModes_TC6519 status=SUCCESS method=SSOAuthenticationModes.SSOAuthenticationModes_TC6519()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent@400457b5]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2014-12-31T09:36:38Z" finished-at="2014-12-31T09:36:38Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2015-01-05T11:01:50Z" finished-at="2015-01-05T11:01:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent -->
+      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

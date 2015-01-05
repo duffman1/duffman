@@ -41,8 +41,7 @@ public class SimpleSAML {
 	}
 
 	//PAGE OBJECT IDENTIFIERS
-	@FindBy(how = How.ID, using ="edit-simplesamlphp-auth-activate")
-	private WebElement Activate_Cbx;
+	private By Activate_Cbx = By.id("edit-simplesamlphp-auth-activate");
 	
 	@FindBy(how = How.ID, using ="edit-simplesamlphp-auth-installdir")
 	private WebElement InstallationDirectory_Txb;
@@ -148,17 +147,21 @@ public class SimpleSAML {
 	
 	public void CheckActivateAuthCbx() throws Exception {
     	
-		if (Activate_Cbx.isSelected() == false) {
+		WebElement ele = waitFor.ElementVisible(Activate_Cbx);
+		interact.ScrollToTop();
+		if (!ele.isSelected()) {
 			Reporter.log("Click the 'Activate authentication via SimpleSAMLphp' check box.");
-	    	Activate_Cbx.click();
+	    	interact.Click(ele);
 		}
     }
 	
 	public void UnCheckActivateAuthCbx() throws Exception {
     	
-		if (Activate_Cbx.isSelected() == true) {
+		WebElement ele = waitFor.ElementVisible(Activate_Cbx);
+		interact.ScrollToTop();
+		if (ele.isSelected()) {
 			Reporter.log("Click the 'Activate authentication via SimpleSAMLphp' check box.");
-	    	Activate_Cbx.click();
+			interact.Click(ele);
 		}
     }
 }

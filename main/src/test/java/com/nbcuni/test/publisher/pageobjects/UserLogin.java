@@ -37,6 +37,8 @@ public class UserLogin {
     
     private By LogIn_Btn = By.cssSelector("input[value='Log in']");
     
+    private By FederatedLogIn_Lnk = By.xpath("//a[text()='Federated Log In']");
+    
     
     //PAGE OBJECT METHODS
     public void EnterEmailAddress(String emailAddress) throws Exception {
@@ -57,6 +59,20 @@ public class UserLogin {
     	
     	Reporter.log("Click the 'Login' button.");
     	interact.Click(waitFor.ElementVisible(LogIn_Btn));
+    	
+    }
+    
+    public void VerifyFederatedLoginLnkPresent() throws Exception {
+    	
+    	Reporter.log("Verify the 'Federated Login' link is present.");
+    	waitFor.ElementVisible(FederatedLogIn_Lnk);
+    	
+    }
+    
+    public void VerifyFederatedLoginLnkNotPresent() throws Exception {
+    	
+    	Reporter.log("Verify the 'Federated Login' link is not present.");
+    	waitFor.ElementNotPresent(FederatedLogIn_Lnk);
     	
     }
     
