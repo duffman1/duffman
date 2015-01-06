@@ -69,8 +69,6 @@ public class MPSConfiguration {
     
     private By PatternForCategoryField_Txb = By.id("edit-mps-cat-pattern");
     
-    private By ReplacementPatterns_Lnk = By.xpath("//fieldset[@id='edit-token-help']/legend//a");
-    
     private By BrowseAvailableTokens_Lnk = By.linkText("Browse available tokens.");
     
     private By MPSExpander_Lnk = By.xpath("//td[contains(text(), 'MPS')][1]/span[@class='expander']");
@@ -181,13 +179,6 @@ public class MPSConfiguration {
     	
     	Reporter.log("Click the 'Add another opt' button.");
     	interact.Click(waitFor.ElementVisible(AddAnotherOpt_Btn));
-    	
-    }
-    
-    public void ClickReplacementPatternsLnk() throws Exception { 
-    	
-    	Reporter.log("Click the 'REPLACEMENT PATTERNS' link.");
-    	interact.Click(waitFor.ElementVisible(ReplacementPatterns_Lnk));
     	
     }
     

@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+      <![CDATA[STEP 1]]>
     </line>
     <line>
-      <![CDATA[STEP 1]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
       <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -17,148 +17,190 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[SETUP]]>
     </line>
     <line>
       <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'People' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add user' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '206448849' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'senior editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '206448856' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'publisher_testuser2@testmail.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'editor' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '206448858' in the 'Username' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'publisher_testuser3@testmail.com' in the 'E-mail address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Check the 'administrator' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Create new account' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 3]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Pub SSO' check box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
       <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' link.]]>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
     </line>
     <line>
-      <![CDATA[Enter the file path for certificate upload.]]>
+      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save configuration' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2 - N/A]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Content' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Add content' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Movie' link.]]>
+    </line>
+    <line>
+      <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '311ba155a963402' in the 'Title' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Switch to the Synopsis frame.]]>
+    </line>
+    <line>
+      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Cover' select button.]]>
+    </line>
+    <line>
+      <![CDATA[Enter the file path for file upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Upload' button.]]>
+    </line>
+    <line>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Next' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the img is loaded and visible.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Additional Information' link.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 311ba155a963402 has been created.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"content"' is present in page source.]]>
     </line>
     <line>
       <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Check the 'Editor' checkbox.]]>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
     </line>
     <line>
-      <![CDATA[Check the 'Senior Editor' checkbox.]]>
+      <![CDATA[Click the 'URL path settings' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Enter '862f00404c' in the 'URL alias' text box.]]>
     </line>
     <line>
-      <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Verify success message of 'Movie 311ba155a963402 has been updated.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 6]]>
     </line>
     <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+      <![CDATA[Verify '"cat":"862f00404c"' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'URL path settings' link.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '862f00404c/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Save' button.]]>
+    </line>
+    <line>
+      <![CDATA[Verify success message of 'Movie 311ba155a963402 has been updated.' is present.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8]]>
+    </line>
+    <line>
+      <![CDATA[Verify '"cat":"862f00404c|mps-testing|2arg"}' is present in page source.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Configuration' menu link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'Browse available tokens' link.]]>
+    </line>
+    <line>
+      <![CDATA[Click the 'MPS' link.]]>
+    </line>
+    <line>
+      <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
+    </line>
+    <line>
+      <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
@@ -167,109 +209,41 @@
       <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Federated Login' link is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify error message of 'Please login with your SSO. Click here to be redirected to the SSO login page.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'publisher_testuser2@testmail.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify error message of 'Please login with your SSO. Click here to be redirected to the SSO login page.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Click here' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '206448849' in the 'SSO ID' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Sign In' button.]]>
-    </line>
-    <line>
-      <![CDATA[Refresh the page.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '206448849' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Change your password' link.]]>
-    </line>
-    <line>
-      <![CDATA[Switch to new browser tab/window.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
-    </line>
-    <line>
       <![CDATA[STEP 11]]>
     </line>
     <line>
-      <![CDATA[Switch to the parent tab/window.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/content/311ba155a963402'.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Logout' button.]]>
+      <![CDATA[Verify '"cat":"862f00404c|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+      <![CDATA[STEP 12]]>
     </line>
     <line>
-      <![CDATA[Enter 'publisher_testuser3@testmail.com' in the 'Email Address' text box.]]>
+      <![CDATA[Open url 'http://qa5.publisher7.com/devel/php'.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+      <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Login' button.]]>
+      <![CDATA[Click the 'Execute' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Password' text box is enabled.]]>
+      <![CDATA[Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|06
+**'.]]>
     </line>
     <line>
       <![CDATA[CLEANUP]]>
@@ -278,105 +252,45 @@
       <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'SimpleSAMLphp Auth Settings' link.]]>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
     </line>
     <line>
-      <![CDATA[Un-Check the 'Editor' checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Un-Check the 'Senior Editor' checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+      <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
     </line>
     <line>
       <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'SimpleSAMLphp auth is not yet activated.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Home' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
-    </line>
-    <line>
-      <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the 'Federated Login' link is not present.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'Email Address' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Login' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Logout' button.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="156001" started-at="2015-01-05T15:59:14Z" finished-at="2015-01-05T16:01:50Z">
+  <suite name="Default suite" duration-ms="108853" started-at="2015-01-06T13:14:34Z" finished-at="2015-01-06T13:16:23Z">
     <groups>
-      <group name="sensitive">
-        <method signature="SSOAuthenticationModes.SSOAuthenticationModes_TC6519()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="SSOAuthenticationModes_TC6519" class="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes"/>
-      </group> <!-- sensitive -->
+      <group name="full">
+        <method signature="MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@2194038f]" name="MPSSupportTokens_TC3641" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+      </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="156001" started-at="2015-01-05T15:59:14Z" finished-at="2015-01-05T16:01:50Z">
-      <class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="suiteSetup" is-config="true" duration-ms="23" started-at="2015-01-05T10:59:14Z" finished-at="2015-01-05T10:59:14Z">
+    <test name="Default test" duration-ms="108853" started-at="2015-01-06T13:14:34Z" finished-at="2015-01-06T13:16:23Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@2194038f]" name="suiteSetup" is-config="true" duration-ms="30" started-at="2015-01-06T08:14:34Z" finished-at="2015-01-06T08:14:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="startSelenium" is-config="true" duration-ms="3345" started-at="2015-01-05T10:59:14Z" finished-at="2015-01-05T10:59:17Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@2194038f]" name="startSelenium" is-config="true" duration-ms="4067" started-at="2015-01-06T08:14:34Z" finished-at="2015-01-06T08:14:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes.SSOAuthenticationModes_TC6519() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens.MPSSupportTokens_TC3641() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="SSOAuthenticationModes_TC6519()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="SSOAuthenticationModes_TC6519" duration-ms="152072" started-at="2015-01-05T10:59:17Z" finished-at="2015-01-05T11:01:49Z">
+        <test-method status="PASS" signature="MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@2194038f]" name="MPSSupportTokens_TC3641" duration-ms="104184" started-at="2015-01-06T08:14:38Z" finished-at="2015-01-06T08:16:22Z">
           <reporter-output>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
+              <![CDATA[STEP 1]]>
             </line>
             <line>
-              <![CDATA[STEP 1]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
             <line>
               <![CDATA[Enter 'admin@publisher.nbcuni.com' in the 'Email Address' text box.]]>
@@ -388,148 +302,190 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[SETUP]]>
             </line>
             <line>
               <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'People' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add user' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '206448849' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'senior editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '206448856' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'publisher_testuser2@testmail.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'editor' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '206448858' in the 'Username' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'publisher_testuser3@testmail.com' in the 'E-mail address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Confirm password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Check the 'administrator' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'Test' in the 'First Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'User1' in the 'Last Name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Create new account' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 3]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Pub SSO' check box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Continue' button to enable additional modules.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
               <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' link.]]>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
             </line>
             <line>
-              <![CDATA[Enter the file path for certificate upload.]]>
+              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save configuration' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2 - N/A]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"content"' is not present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Content' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Add content' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Movie' link.]]>
+            </line>
+            <line>
+              <![CDATA[Scroll to and click the 'Basic Information' tab.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '311ba155a963402' in the 'Title' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Switch to the Synopsis frame.]]>
+            </line>
+            <line>
+              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Cover' select button.]]>
+            </line>
+            <line>
+              <![CDATA[Enter the file path for file upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Upload' button.]]>
+            </line>
+            <line>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Next' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the img is loaded and visible.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Additional Information' link.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Syndicated' from the 'Movie Type' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'G' from the 'Rating' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Select the 'Action' from the 'Primary Genre' drop down list.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 311ba155a963402 has been created.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"content"' is present in page source.]]>
             </line>
             <line>
               <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Check the 'Editor' checkbox.]]>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
             </line>
             <line>
-              <![CDATA[Check the 'Senior Editor' checkbox.]]>
+              <![CDATA[Click the 'URL path settings' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Uncheck the 'Generate automatic URL alias' check box.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Enter '862f00404c' in the 'URL alias' text box.]]>
             </line>
             <line>
-              <![CDATA[Verify the text 'A certificate exists for this instance of SimpleSAMLphp.' is present on the page.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Verify success message of 'Movie 311ba155a963402 has been updated.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 6]]>
             </line>
             <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+              <![CDATA[Verify '"cat":"862f00404c"' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'URL path settings' link.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '862f00404c/mps-testing/2arg/3arg/4arg/5arg/6arg' in the 'URL alias' text box.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Save' button.]]>
+            </line>
+            <line>
+              <![CDATA[Verify success message of 'Movie 311ba155a963402 has been updated.' is present.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8]]>
+            </line>
+            <line>
+              <![CDATA[Verify '"cat":"862f00404c|mps-testing|2arg"}' is present in page source.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Configuration' menu link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'Browse available tokens' link.]]>
+            </line>
+            <line>
+              <![CDATA[Click the 'MPS' link.]]>
+            </line>
+            <line>
+              <![CDATA[Verify the 'MPS CAT Property' link with text '[mps:cat-pattern:?]' is present.]]>
+            </line>
+            <line>
+              <![CDATA[Enter '[mps:cat-pattern:?]' in the 'Pattern for Category Field' text box.]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
@@ -538,109 +494,41 @@
               <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Federated Login' link is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify error message of 'Please login with your SSO. Click here to be redirected to the SSO login page.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'publisher_testuser2@testmail.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify error message of 'Please login with your SSO. Click here to be redirected to the SSO login page.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Click here' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '206448849' in the 'SSO ID' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Sign In' button.]]>
-            </line>
-            <line>
-              <![CDATA[Refresh the page.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '206448849' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Change your password' link.]]>
-            </line>
-            <line>
-              <![CDATA[Switch to new browser tab/window.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the user is redirected to the SSO Password Reset page.]]>
-            </line>
-            <line>
               <![CDATA[STEP 11]]>
             </line>
             <line>
-              <![CDATA[Switch to the parent tab/window.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/content/311ba155a963402'.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Logout' button.]]>
+              <![CDATA[Verify '"cat":"862f00404c|mps-testing|2arg|3arg|4arg"}' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
+              <![CDATA[STEP 12]]>
             </line>
             <line>
-              <![CDATA[Enter 'publisher_testuser3@testmail.com' in the 'Email Address' text box.]]>
+              <![CDATA[Open url 'http://qa5.publisher7.com/devel/php'.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
+              <![CDATA[Enter 'variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';' in the 'PHP Code to Execute' text area.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Login' button.]]>
+              <![CDATA[Click the 'Execute' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Password' text box is enabled.]]>
+              <![CDATA[Verify the expected response is 'Status message
+devel
+brand|show|season|episode
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast
+brand|show|~|episode
+brand|show|season
+brand|show|season|~|episode
+~|show
+
+~|brand|season
+season|episode
+brand|season|06
+**'.]]>
             </line>
             <line>
               <![CDATA[CLEANUP]]>
@@ -649,92 +537,32 @@
               <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'SimpleSAMLphp Auth Settings' link.]]>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
             </line>
             <line>
-              <![CDATA[Un-Check the 'Editor' checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Un-Check the 'Senior Editor' checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Activate authentication via SimpleSAMLphp' check box.]]>
+              <![CDATA[Enter '' in the 'Pattern for Category Field' text box.]]>
             </line>
             <line>
               <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'SimpleSAMLphp auth is not yet activated.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'Pub SSO' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Uncheck the 'simpleSAMLphp authentication' module checkbox.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Home' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
-            </line>
-            <line>
-              <![CDATA[Open url 'http://qa5.publisher7.com/user'.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the 'Federated Login' link is not present.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'publisher_testuser1@testmail.com' in the 'Email Address' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'pa55word' in the 'Password' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Login' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Logout' button.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SSOAuthenticationModes_TC6519 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="stopSelenium" is-config="true" duration-ms="571" started-at="2015-01-05T11:01:49Z" finished-at="2015-01-05T11:01:50Z">
+        </test-method> <!-- MPSSupportTokens_TC3641 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@2194038f]" name="stopSelenium" is-config="true" duration-ms="592" started-at="2015-01-06T08:16:22Z" finished-at="2015-01-06T08:16:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SSOAuthenticationModes_TC6519 status=SUCCESS method=SSOAuthenticationModes.SSOAuthenticationModes_TC6519()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4] output=Open url 'http://qa5.publisher7.com'.]]]>
+                <![CDATA[[TestResult name=MPSSupportTokens_TC3641 status=SUCCESS method=MPSSupportTokens.MPSSupportTokens_TC3641()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@2194038f] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes@75ebad4]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2015-01-05T11:01:50Z" finished-at="2015-01-05T11:01:50Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens@2194038f]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2015-01-06T08:16:23Z" finished-at="2015-01-06T08:16:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

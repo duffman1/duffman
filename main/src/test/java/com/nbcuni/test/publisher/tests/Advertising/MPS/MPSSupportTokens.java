@@ -93,7 +93,6 @@ public class MPSSupportTokens extends ParentTest {
             
             Reporter.log("STEP 9");
             navigation.Configuration("MPS Configuration");
-            mpsConfiguration.ClickReplacementPatternsLnk();
             mpsConfiguration.ClickBrowseAvailableTokensLnk();
             mpsConfiguration.ClickMPSExpanderLnk();
             mpsConfiguration.VerifyMPSCatPropertyLnkPresent();
