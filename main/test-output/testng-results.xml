@@ -2,9 +2,6 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[STEP 1]]>
-    </line>
-    <line>
       <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
     </line>
     <line>
@@ -17,139 +14,88 @@
       <![CDATA[Click the 'Login' button.]]>
     </line>
     <line>
-      <![CDATA[SETUP]]>
-    </line>
-    <line>
       <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Configuration' menu link.]]>
+      <![CDATA[Click the 'Content' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'MPS Configuration' link.]]>
+      <![CDATA[Click the 'Add content' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
+      <![CDATA[Click the 'Character Profile' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Document Write' radio button.]]>
+      <![CDATA[Enter '03786e4dda8240b' in the 'Character First Name' text box.]]>
     </line>
     <line>
-      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+      <![CDATA[Click the Cover Photo 'Select' button.]]>
     </line>
     <line>
-      <![CDATA[Clear all 'Name' text box values.]]>
+      <![CDATA[Enter the file path for file upload.]]>
     </line>
     <line>
-      <![CDATA[Clear all 'Value' text box values.]]>
+      <![CDATA[Click the 'Upload' button.]]>
     </line>
     <line>
-      <![CDATA[Uncheck all 'JSON' check boxes.]]>
+      <![CDATA[Wait for the file link to be visible after upload.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save configuration' button.]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+      <![CDATA[Click the 'Public Local Files' radio button.]]>
     </line>
     <line>
-      <![CDATA[STEP 2]]>
+      <![CDATA[Click the 'Next' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Modules' menu link.]]>
+      <![CDATA[Verify the file image 'HanSolo' is present.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'MPS' check box is checked.]]>
+      <![CDATA[Verify the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Verify the 'Views UI' check box is checked.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[STEP 3 - N/A]]>
+      <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
     </line>
     <line>
-      <![CDATA[STEP 4]]>
+      <![CDATA[Assert the the img is loaded and visible.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
+      <![CDATA[Click the 'Save' button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Views' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add new view' link.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '21f8f5f9767848f' in the 'View name' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Select 'Movie' from the 'of type' drop down list.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'foo/bar/biz' in the 'Path' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save & exit' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the text '21f8f5f9767848f' is present on the page.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 5]]>
-    </line>
-    <line>
-      <![CDATA[Verify '"cat":"foo|bar|biz"' is present in page source.]]>
-    </line>
-    <line>
-      <![CDATA[CLEANUP]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Views' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the extend edit menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' menu link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Delete' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'The view has been deleted.' is present.]]>
+      <![CDATA[Verify success message of 'Character Profile 03786e4dda8240b has been created.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58452" started-at="2015-01-07T19:47:08Z" finished-at="2015-01-07T19:48:06Z">
+  <suite name="Default suite" duration-ms="45350" started-at="2015-01-12T22:25:30Z" finished-at="2015-01-12T22:26:15Z">
     <groups>
       <group name="full">
-        <method signature="MPSURLPathSegment.MPSURLPathSegment_TC6529()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@6d90d6c5]" name="MPSURLPathSegment_TC6529" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment"/>
+        <method signature="CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1629bc56]" name="CreateCharacterProfile_TC1041" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="58452" started-at="2015-01-07T19:47:08Z" finished-at="2015-01-07T19:48:06Z">
-      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@6d90d6c5]" name="suiteSetup" is-config="true" duration-ms="31" started-at="2015-01-07T14:47:08Z" finished-at="2015-01-07T14:47:08Z">
+    <test name="Default test" duration-ms="45350" started-at="2015-01-12T22:25:30Z" finished-at="2015-01-12T22:26:15Z">
+      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1629bc56]" name="suiteSetup" is-config="true" duration-ms="30" started-at="2015-01-12T17:25:30Z" finished-at="2015-01-12T17:25:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@6d90d6c5]" name="startSelenium" is-config="true" duration-ms="3542" started-at="2015-01-07T14:47:08Z" finished-at="2015-01-07T14:47:11Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1629bc56]" name="startSelenium" is-config="true" duration-ms="3609" started-at="2015-01-12T17:25:30Z" finished-at="2015-01-12T17:25:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment.MPSURLPathSegment_TC6529() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile.CreateCharacterProfile_TC1041() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="MPSURLPathSegment_TC6529()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@6d90d6c5]" name="MPSURLPathSegment_TC6529" duration-ms="54323" started-at="2015-01-07T14:47:11Z" finished-at="2015-01-07T14:48:06Z">
+        <test-method status="PASS" signature="CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1629bc56]" name="CreateCharacterProfile_TC1041" duration-ms="41156" started-at="2015-01-12T17:25:33Z" finished-at="2015-01-12T17:26:15Z">
           <reporter-output>
-            <line>
-              <![CDATA[STEP 1]]>
-            </line>
             <line>
               <![CDATA[Open url 'http://qa5.publisher7.com'.]]>
             </line>
@@ -163,128 +109,80 @@
               <![CDATA[Click the 'Login' button.]]>
             </line>
             <line>
-              <![CDATA[SETUP]]>
-            </line>
-            <line>
               <![CDATA[Click the 'Menu' link to show the navigation menu items.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Configuration' menu link.]]>
+              <![CDATA[Click the 'Content' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'MPS Configuration' link.]]>
+              <![CDATA[Click the 'Add content' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
+              <![CDATA[Click the 'Character Profile' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Document Write' radio button.]]>
+              <![CDATA[Enter '03786e4dda8240b' in the 'Character First Name' text box.]]>
             </line>
             <line>
-              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
+              <![CDATA[Click the Cover Photo 'Select' button.]]>
             </line>
             <line>
-              <![CDATA[Clear all 'Name' text box values.]]>
+              <![CDATA[Enter the file path for file upload.]]>
             </line>
             <line>
-              <![CDATA[Clear all 'Value' text box values.]]>
+              <![CDATA[Click the 'Upload' button.]]>
             </line>
             <line>
-              <![CDATA[Uncheck all 'JSON' check boxes.]]>
+              <![CDATA[Wait for the file link to be visible after upload.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save configuration' button.]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
+              <![CDATA[Click the 'Public Local Files' radio button.]]>
             </line>
             <line>
-              <![CDATA[STEP 2]]>
+              <![CDATA[Click the 'Next' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Modules' menu link.]]>
+              <![CDATA[Verify the file image 'HanSolo' is present.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'MPS' check box is checked.]]>
+              <![CDATA[Verify the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Verify the 'Views UI' check box is checked.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[STEP 3 - N/A]]>
+              <![CDATA[Assert that img source of the Cover Photo contains 'HanSolo'.]]>
             </line>
             <line>
-              <![CDATA[STEP 4]]>
+              <![CDATA[Assert the the img is loaded and visible.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
+              <![CDATA[Click the 'Save' button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Views' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add new view' link.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '21f8f5f9767848f' in the 'View name' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Select 'Movie' from the 'of type' drop down list.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'foo/bar/biz' in the 'Path' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save & exit' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the text '21f8f5f9767848f' is present on the page.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 5]]>
-            </line>
-            <line>
-              <![CDATA[Verify '"cat":"foo|bar|biz"' is present in page source.]]>
-            </line>
-            <line>
-              <![CDATA[CLEANUP]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Views' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the extend edit menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' menu link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Delete' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'The view has been deleted.' is present.]]>
+              <![CDATA[Verify success message of 'Character Profile 03786e4dda8240b has been created.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MPSURLPathSegment_TC6529 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@6d90d6c5]" name="stopSelenium" is-config="true" duration-ms="574" started-at="2015-01-07T14:48:06Z" finished-at="2015-01-07T14:48:06Z">
+        </test-method> <!-- CreateCharacterProfile_TC1041 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1629bc56]" name="stopSelenium" is-config="true" duration-ms="573" started-at="2015-01-12T17:26:15Z" finished-at="2015-01-12T17:26:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=MPSURLPathSegment_TC6529 status=SUCCESS method=MPSURLPathSegment.MPSURLPathSegment_TC6529()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@6d90d6c5] output=STEP 1]]]>
+                <![CDATA[[TestResult name=CreateCharacterProfile_TC1041 status=SUCCESS method=CreateCharacterProfile.CreateCharacterProfile_TC1041()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1629bc56] output=Open url 'http://qa5.publisher7.com'.]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@6d90d6c5]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2015-01-07T14:48:06Z" finished-at="2015-01-07T14:48:06Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile@1629bc56]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2015-01-12T17:26:15Z" finished-at="2015-01-12T17:26:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment -->
+      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -62,7 +62,7 @@ public class MPSURLPathSegment extends ParentTest {
         	Reporter.log("STEP 5");
         	contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"foo|bar|biz\""));
             
-        	//TODO - remaining steps redundant. Following up with Pete
+        	//remaining steps redundant. Not necessary for automation.
         	
         	Reporter.log("CLEANUP");
         	navigation.Structure("Views");

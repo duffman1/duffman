@@ -342,7 +342,7 @@ public class SelectFile {
     public void WaitForSelectFileFrameClose() throws Exception {
     	
     	webDriver.switchTo().defaultContent();
-    	waitFor.ElementNotVisible(SelectFile_Frm);
+    	waitFor.ElementNotPresent(SelectFile_Frm);
     	
     }
     
