@@ -14,6 +14,7 @@
   	<parameter name="GithubUpdatePRResults" value="true"></parameter>
   	<parameter name="RunSetupScripts" value="false"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
+  	<parameter name="ClearCacheOnFailure" value="false"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
   	
   	<!--REPORT CONFIG-->
@@ -214,6 +215,7 @@
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOUseProduction"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.MPXSnippets.VideoSnippetsInContent"/>
 		</classes>
 	</test>
   	

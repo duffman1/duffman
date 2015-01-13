@@ -6,9 +6,11 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.TextFormat;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.EmbedYoutubeVideo;
+import com.nbcuni.test.publisher.pageobjects.Content.EmbedVideo;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 public class SnippetInlineContent extends ParentTest{
@@ -44,19 +46,19 @@ public class SnippetInlineContent extends ParentTest{
         	String postTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(postTitle);
         	basicInformation.EnterSynopsis("<strong>Embedding a youtube video</strong>");
-        	basicInformation.ClickYoutubeBtn();
-        	EmbedYoutubeVideo embedYoutubeVideo = new EmbedYoutubeVideo(webDriver);
+        	basicInformation.ClickEmbedYoutubeBtn();
+        	EmbedVideo embedVideo = new EmbedVideo(webDriver);
         	String height = "360";
         	String width = "640";
-        	embedYoutubeVideo.EnterYoutubeURL("http://www.youtube.com/embed/yp9pTFcD2uk");
-        	embedYoutubeVideo.EnterHeight(height);
-        	embedYoutubeVideo.EnterWidth(width);
-        	embedYoutubeVideo.ClickOkBtn();
+        	embedVideo.EnterYouTubeVideoURL("http://www.youtube.com/embed/yp9pTFcD2uk");
+        	embedVideo.EnterHeight(height);
+        	embedVideo.EnterWidth(width);
+        	embedVideo.ClickOkBtn();
         	contentParent.ClickSaveBtn();
         	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
         	Reporter.log("STEP 5");
-        	embedYoutubeVideo.VerifyVideoPresent("//youtube.com/embed/yp9pTFcD2uk", height, width);
+        	embedVideo.VerifyVideoPresent("//youtube.com/embed/yp9pTFcD2uk", height, width);
 
     }
 }

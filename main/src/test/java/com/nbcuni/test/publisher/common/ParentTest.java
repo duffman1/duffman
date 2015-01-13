@@ -90,21 +90,23 @@ public class ParentTest {
         	System.out.println("Failed to capture screenshot");
         }
         
-    	//Clear cache in the event of a failure
-    	try {
-    		if (!result.isSuccess()) {
-    			applib.openSitePage("/admin/config/development/performance");
-    			webDriver.switchTo().defaultContent();
-    			Thread.sleep(1000);
-        		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        		webDriver.findElement(By.id("edit-clear")).click();
-        		Reporter.setCurrentTestResult(result); 
-                Reporter.log("Cache was cleared on test failure");
-                Reporter.setCurrentTestResult(null);
-    		}
-    	}
-    	catch (Exception | AssertionError e) {
-    		System.out.println("Failed to flush cache");
+    	if (config.getConfigValueString("ClearCacheOnFailure").equals("true")) {
+    		//Clear cache in the event of a failure
+        	try {
+        		if (!result.isSuccess()) {
+        			applib.openSitePage("/admin/config/development/performance");
+        			webDriver.switchTo().defaultContent();
+        			Thread.sleep(1000);
+            		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            		webDriver.findElement(By.id("edit-clear")).click();
+            		Reporter.setCurrentTestResult(result); 
+                    Reporter.log("Cache was cleared on test failure");
+                    Reporter.setCurrentTestResult(null);
+        		}
+        	}
+        	catch (Exception | AssertionError e) {
+        		System.out.println("Failed to flush cache");
+        	}
     	}
     	
         try {
