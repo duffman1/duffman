@@ -55,12 +55,13 @@ public class MPSURLPathSegment extends ParentTest {
         	addNewView.EnterViewName(viewName);
         	addNewView.SelectOfType("Movie");
         	contentParent.WaitForThrobberNotPresent();
-        	addNewView.EnterPath("foo/bar/biz");
+        	String randomPath = random.GetCharacterString(10);
+        	addNewView.EnterPath(randomPath + "/foo/bar");
         	addNewView.ClickSaveAndExitBtn();
         	contentParent.VerifyPageContentPresent(Arrays.asList(viewName));
         	
         	Reporter.log("STEP 5");
-        	contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"foo|bar|biz\""));
+        	contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"" + randomPath + "|foo|bar\""));
             
         	//remaining steps redundant. Not necessary for automation.
         	

@@ -26,348 +26,126 @@
       <![CDATA[Click the 'Configuration' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media: thePlatform mpx settings' link.]]>
+      <![CDATA[Click the 'MPS Configuration' link.]]>
     </line>
     <line>
-      <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+      <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
     </line>
     <line>
-      <![CDATA[MPX is already configured.]]>
+      <![CDATA[Click the 'Document Write' radio button.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Structure' menu link.]]>
+      <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content types' link.]]>
+      <![CDATA[Clear all 'Name' text box values.]]>
     </line>
     <line>
-      <![CDATA[Click the 'manage field' link for content type 'Media Gallery'.]]>
+      <![CDATA[Clear all 'Value' text box values.]]>
     </line>
     <line>
-      <![CDATA[Click the 'edit' link for field 'Media Items'.]]>
+      <![CDATA[Uncheck all 'JSON' check boxes.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Save settings' button.]]>
+      <![CDATA[Click the 'Save configuration' button.]]>
     </line>
     <line>
-      <![CDATA[Verify success message of 'Saved Media Items configuration.' is present.]]>
+      <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
     </line>
     <line>
       <![CDATA[STEP 2]]>
     </line>
     <line>
-      <![CDATA[Click the 'Content' menu link.]]>
+      <![CDATA[Click the 'Modules' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add content' link.]]>
+      <![CDATA[Verify the 'MPS' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Gallery' link.]]>
+      <![CDATA[Verify the 'Views UI' check box is checked.]]>
     </line>
     <line>
-      <![CDATA[STEP 3]]>
+      <![CDATA[STEP 3 - N/A]]>
     </line>
     <line>
-      <![CDATA[Enter '47ddf783883c43f' in the 'Title' text box.]]>
+      <![CDATA[STEP 4]]>
     </line>
     <line>
-      <![CDATA[Switch to the Synopsis frame.]]>
+      <![CDATA[Click the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+      <![CDATA[Click the 'Views' link.]]>
     </line>
     <line>
-      <![CDATA[Enter 'short description' in the 'Short Description' text area.]]>
+      <![CDATA[Click the 'Add new view' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Media Items Select' button.]]>
+      <![CDATA[Enter '3e98960feb3040a' in the 'View name' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add files' link.]]>
+      <![CDATA[Select 'Movie' from the 'of type' drop down list.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Enter 'e062d537bb/foo/bar' in the 'Path' text box.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
+      <![CDATA[Click the 'Save & exit' button.]]>
     </line>
     <line>
-      <![CDATA[Click the test picture link.]]>
+      <![CDATA[Verify the text '3e98960feb3040a' is present on the page.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Open' button.]]>
+      <![CDATA[STEP 5]]>
     </line>
     <line>
-      <![CDATA[Click the 'Start upload' link.]]>
+      <![CDATA[Verify '"cat":"e062d537bb|foo|bar"' is present in page source.]]>
     </line>
     <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
+      <![CDATA[CLEANUP]]>
     </line>
     <line>
-      <![CDATA[Click the 'Next' button.]]>
+      <![CDATA[Click the 'Structure' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add' button.]]>
+      <![CDATA[Click the 'Views' link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'Add files' link.]]>
+      <![CDATA[Click the extend edit menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the 'All Files' icon.]]>
+      <![CDATA[Click the 'Delete' menu link.]]>
     </line>
     <line>
-      <![CDATA[Click the local 'Pictures' icon.]]>
+      <![CDATA[Click the 'Delete' button.]]>
     </line>
     <line>
-      <![CDATA[Click the test picture link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Open' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Start upload' link.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 4 and 5]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit All' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 6]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'a2983e4d2b38477' in the 'Keywords' text box with index '1'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button with index '2'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 7]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit All' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that the Keywords Text box with index '1' value matches 'a2983e4d2b38477'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button with index '2'.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 8]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter 'AutomationWThumb' in the 'Title' text box.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Apply' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click mpx media thumbnail image number 1]]>
-    </line>
-    <line>
-      <![CDATA[Click on the 'Submit' button.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 9]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit All' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the MPX Player frame is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 10]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Window' image.]]>
-    </line>
-    <line>
-      <![CDATA[OPTIONAL STEP]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Cover' select button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter the file path for file upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Upload' button.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the file link to be visible after upload.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Public Local Files' radio button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the file image 'HanSolo' is present.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the Cover image src contains 'HanSolo'.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for the image to fully load.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 11]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Media Gallery 47ddf783883c43f has been created.' is present.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 12]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Add files' link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the test picture link.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Open' button.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Start upload' link.]]>
-    </line>
-    <line>
-      <![CDATA[Wait for file upload to reach 100%]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Next' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-    </line>
-    <line>
-      <![CDATA[Assert the the img is loaded and visible.]]>
-    </line>
-    <line>
-      <![CDATA[STEP 13]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit All' button.]]>
-    </line>
-    <line>
-      <![CDATA[Enter '3aa9697cff.jpg' in the 'Title Text' text box with index '3'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button with index '2'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Edit All' button.]]>
-    </line>
-    <line>
-      <![CDATA[Assert that the Title Text box with index '3' value matches '3aa9697cff.jpg'.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Close Window' image.]]>
-    </line>
-    <line>
-      <![CDATA[Click the 'Save' button.]]>
-    </line>
-    <line>
-      <![CDATA[Verify success message of 'Media Gallery 47ddf783883c43f has been updated.' is present.]]>
+      <![CDATA[Verify success message of 'The view has been deleted.' is present.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="144100" started-at="2015-01-13T13:45:02Z" finished-at="2015-01-13T13:47:26Z">
+  <suite name="Default suite" duration-ms="60425" started-at="2015-01-13T14:10:36Z" finished-at="2015-01-13T14:11:36Z">
     <groups>
-      <group name="mpx">
-        <method signature="CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@7a2e4418]" name="CreateMediaGallery_TC1042" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
-      </group> <!-- mpx -->
       <group name="full">
-        <method signature="CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@7a2e4418]" name="CreateMediaGallery_TC1042" class="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery"/>
+        <method signature="MPSURLPathSegment.MPSURLPathSegment_TC6529()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@69af4318]" name="MPSURLPathSegment_TC6529" class="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment"/>
       </group> <!-- full -->
     </groups>
-    <test name="Default test" duration-ms="144100" started-at="2015-01-13T13:45:02Z" finished-at="2015-01-13T13:47:26Z">
-      <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@7a2e4418]" name="suiteSetup" is-config="true" duration-ms="32" started-at="2015-01-13T08:45:02Z" finished-at="2015-01-13T08:45:02Z">
+    <test name="Default test" duration-ms="60425" started-at="2015-01-13T14:10:36Z" finished-at="2015-01-13T14:11:36Z">
+      <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@69af4318]" name="suiteSetup" is-config="true" duration-ms="34" started-at="2015-01-13T09:10:36Z" finished-at="2015-01-13T09:10:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@7a2e4418]" name="startSelenium" is-config="true" duration-ms="3487" started-at="2015-01-13T08:45:02Z" finished-at="2015-01-13T08:45:06Z">
+        <test-method status="PASS" signature="startSelenium(java.lang.reflect.Method)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@69af4318]" name="startSelenium" is-config="true" duration-ms="3392" started-at="2015-01-13T09:10:36Z" finished-at="2015-01-13T09:10:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery.CreateMediaGallery_TC1042() throws java.lang.Exception]]>
+                <![CDATA[public void com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment.MPSURLPathSegment_TC6529() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSelenium -->
-        <test-method status="PASS" signature="CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@7a2e4418]" name="CreateMediaGallery_TC1042" duration-ms="140019" started-at="2015-01-13T08:45:06Z" finished-at="2015-01-13T08:47:26Z">
+        <test-method status="PASS" signature="MPSURLPathSegment_TC6529()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@69af4318]" name="MPSURLPathSegment_TC6529" duration-ms="56451" started-at="2015-01-13T09:10:39Z" finished-at="2015-01-13T09:11:35Z">
           <reporter-output>
             <line>
               <![CDATA[STEP 1]]>
@@ -394,338 +172,119 @@
               <![CDATA[Click the 'Configuration' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media: thePlatform mpx settings' link.]]>
+              <![CDATA[Click the 'MPS Configuration' link.]]>
             </line>
             <line>
-              <![CDATA[Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.]]>
+              <![CDATA[Enter 'stage-mps.nbcuni.com' in the 'MPS Host' text box.]]>
             </line>
             <line>
-              <![CDATA[MPX is already configured.]]>
+              <![CDATA[Click the 'Document Write' radio button.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Structure' menu link.]]>
+              <![CDATA[Enter 'pub7-development' in the 'Site Instance Override' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content types' link.]]>
+              <![CDATA[Clear all 'Name' text box values.]]>
             </line>
             <line>
-              <![CDATA[Click the 'manage field' link for content type 'Media Gallery'.]]>
+              <![CDATA[Clear all 'Value' text box values.]]>
             </line>
             <line>
-              <![CDATA[Click the 'edit' link for field 'Media Items'.]]>
+              <![CDATA[Uncheck all 'JSON' check boxes.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Save settings' button.]]>
+              <![CDATA[Click the 'Save configuration' button.]]>
             </line>
             <line>
-              <![CDATA[Verify success message of 'Saved Media Items configuration.' is present.]]>
+              <![CDATA[Verify success message of 'The configuration options have been saved.' is present.]]>
             </line>
             <line>
               <![CDATA[STEP 2]]>
             </line>
             <line>
-              <![CDATA[Click the 'Content' menu link.]]>
+              <![CDATA[Click the 'Modules' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add content' link.]]>
+              <![CDATA[Verify the 'MPS' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Gallery' link.]]>
+              <![CDATA[Verify the 'Views UI' check box is checked.]]>
             </line>
             <line>
-              <![CDATA[STEP 3]]>
+              <![CDATA[STEP 3 - N/A]]>
             </line>
             <line>
-              <![CDATA[Enter '47ddf783883c43f' in the 'Title' text box.]]>
+              <![CDATA[STEP 4]]>
             </line>
             <line>
-              <![CDATA[Switch to the Synopsis frame.]]>
+              <![CDATA[Click the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Enter a randomized text string into the 'Body' text area.]]>
+              <![CDATA[Click the 'Views' link.]]>
             </line>
             <line>
-              <![CDATA[Enter 'short description' in the 'Short Description' text area.]]>
+              <![CDATA[Click the 'Add new view' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Media Items Select' button.]]>
+              <![CDATA[Enter '3e98960feb3040a' in the 'View name' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add files' link.]]>
+              <![CDATA[Select 'Movie' from the 'of type' drop down list.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Enter 'e062d537bb/foo/bar' in the 'Path' text box.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
+              <![CDATA[Click the 'Save & exit' button.]]>
             </line>
             <line>
-              <![CDATA[Click the test picture link.]]>
+              <![CDATA[Verify the text '3e98960feb3040a' is present on the page.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Open' button.]]>
+              <![CDATA[STEP 5]]>
             </line>
             <line>
-              <![CDATA[Click the 'Start upload' link.]]>
+              <![CDATA[Verify '"cat":"e062d537bb|foo|bar"' is present in page source.]]>
             </line>
             <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
+              <![CDATA[CLEANUP]]>
             </line>
             <line>
-              <![CDATA[Click the 'Next' button.]]>
+              <![CDATA[Click the 'Structure' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add' button.]]>
+              <![CDATA[Click the 'Views' link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'Add files' link.]]>
+              <![CDATA[Click the extend edit menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the 'All Files' icon.]]>
+              <![CDATA[Click the 'Delete' menu link.]]>
             </line>
             <line>
-              <![CDATA[Click the local 'Pictures' icon.]]>
+              <![CDATA[Click the 'Delete' button.]]>
             </line>
             <line>
-              <![CDATA[Click the test picture link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Open' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Start upload' link.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 4 and 5]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit All' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 6]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'a2983e4d2b38477' in the 'Keywords' text box with index '1'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button with index '2'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 7]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit All' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that the Keywords Text box with index '1' value matches 'a2983e4d2b38477'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button with index '2'.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 8]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'PUBLISHER 7 MPX VIDEO' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter 'AutomationWThumb' in the 'Title' text box.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Apply' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click mpx media thumbnail image number 1]]>
-            </line>
-            <line>
-              <![CDATA[Click on the 'Submit' button.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 9]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit All' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the MPX Player frame is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 10]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Window' image.]]>
-            </line>
-            <line>
-              <![CDATA[OPTIONAL STEP]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Cover' select button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter the file path for file upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Upload' button.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the file link to be visible after upload.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Public Local Files' radio button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the file image 'HanSolo' is present.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the Cover image src contains 'HanSolo'.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for the image to fully load.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 11]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Media Gallery 47ddf783883c43f has been created.' is present.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 12]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit Draft' link in the work bench.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Add files' link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the test picture link.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Open' button.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Start upload' link.]]>
-            </line>
-            <line>
-              <![CDATA[Wait for file upload to reach 100%]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Next' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'IPTCDefault'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[Verify the img source of the Media Item contains 'nbclogosmall'.]]>
-            </line>
-            <line>
-              <![CDATA[Assert the the img is loaded and visible.]]>
-            </line>
-            <line>
-              <![CDATA[STEP 13]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit All' button.]]>
-            </line>
-            <line>
-              <![CDATA[Enter '3aa9697cff.jpg' in the 'Title Text' text box with index '3'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button with index '2'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Edit All' button.]]>
-            </line>
-            <line>
-              <![CDATA[Assert that the Title Text box with index '3' value matches '3aa9697cff.jpg'.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Close Window' image.]]>
-            </line>
-            <line>
-              <![CDATA[Click the 'Save' button.]]>
-            </line>
-            <line>
-              <![CDATA[Verify success message of 'Media Gallery 47ddf783883c43f has been updated.' is present.]]>
+              <![CDATA[Verify success message of 'The view has been deleted.' is present.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- CreateMediaGallery_TC1042 -->
-        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@7a2e4418]" name="stopSelenium" is-config="true" duration-ms="584" started-at="2015-01-13T08:47:26Z" finished-at="2015-01-13T08:47:26Z">
+        </test-method> <!-- MPSURLPathSegment_TC6529 -->
+        <test-method status="PASS" signature="stopSelenium(org.testng.ITestResult)[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@69af4318]" name="stopSelenium" is-config="true" duration-ms="572" started-at="2015-01-13T09:11:35Z" finished-at="2015-01-13T09:11:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CreateMediaGallery_TC1042 status=SUCCESS method=CreateMediaGallery.CreateMediaGallery_TC1042()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@7a2e4418] output=STEP 1]]]>
+                <![CDATA[[TestResult name=MPSURLPathSegment_TC6529 status=SUCCESS method=MPSURLPathSegment.MPSURLPathSegment_TC6529()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@69af4318] output=STEP 1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopSelenium -->
-        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery@7a2e4418]" name="suiteTeardown" is-config="true" duration-ms="1" started-at="2015-01-13T08:47:27Z" finished-at="2015-01-13T08:47:27Z">
+        <test-method status="PASS" signature="suiteTeardown()[pri:0, instance:com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment@69af4318]" name="suiteTeardown" is-config="true" duration-ms="0" started-at="2015-01-13T09:11:36Z" finished-at="2015-01-13T09:11:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTeardown -->
-      </class> <!-- com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery.CreateMediaGallery -->
+      </class> <!-- com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
