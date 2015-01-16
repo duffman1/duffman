@@ -420,6 +420,19 @@ public class WaitFor {
     	
     }
     
+    public void URL(final String url) throws Exception {
+    	
+    	this.driverWait()
+    		.withMessage("URL does not equal '" + url + "'.")
+    		.until(new Function<Driver, Boolean>() {
+    			@Override
+    			public Boolean apply(Driver drv) {
+    				return drv.getCurrentUrl().equals(url);
+    			}
+    		});
+    	
+    }
+    
     public void PageSourceContainsText(final String text) throws Exception {
     	
     	this.driverWait()
