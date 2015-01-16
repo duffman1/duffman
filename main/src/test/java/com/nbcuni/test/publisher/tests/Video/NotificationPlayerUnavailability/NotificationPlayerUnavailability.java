@@ -130,6 +130,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	//Step 5
             	Cron cron = new Cron(webDriver);
             	cron.RunCron();
+            	cron.RunCron(); //intermittent failures where a second cron is required to ingest players
             	
         	    //Step 6
             	navigation.Content("Files", "mpxPlayers");
@@ -191,6 +192,7 @@ public class NotificationPlayerUnavailability extends ParentTest{
             	//Step 16
             	webDriver.close();
             	webDriver.switchTo().window(parentWindow);
+            	cron.RunCron();
             	cron.RunCron();
         	    
         	    //Step 17

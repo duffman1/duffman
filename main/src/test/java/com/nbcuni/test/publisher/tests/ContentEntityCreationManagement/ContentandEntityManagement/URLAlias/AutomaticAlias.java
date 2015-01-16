@@ -5,8 +5,10 @@ import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.URLAliases;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.URLPathSettings;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -39,6 +41,9 @@ public class AutomaticAlias extends ParentTest {
             URLPathSettings urlPathSettings = new URLPathSettings(webDriver);
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.VerifyGenerateAutomateURLAliasChecked();
+            PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+            publishingOptions.ClickPublishingOptionsLnk();
+            publishingOptions.SelectModerationState("Published");
             
             Reporter.log("STEP 3");
             contentParent.ClickSaveBtn();
