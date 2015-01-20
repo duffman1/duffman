@@ -46,6 +46,8 @@ public class BasicInformation {
     
     private By EmbedMPX_Btn = By.xpath("//a[@title='Embed MPX Video']");
     
+    private By EmbedImage_Btn = By.id("cke_16");
+    
     private By Body_Txa = By.id("edit-body-und-0-value");
     
     private WebElement Synopsis_Frm() throws Exception {
@@ -214,6 +216,13 @@ public class BasicInformation {
     	
     	Reporter.log("Click the embed mpx button.");
     	interact.Click(waitFor.ElementVisible(EmbedMPX_Btn));
+    	
+    }
+    
+    public void ClickEmbedImageBtn() throws Exception {
+    	
+    	Reporter.log("Click the embed image button.");
+    	interact.Click(waitFor.ElementVisible(EmbedImage_Btn));
     	
     }
     

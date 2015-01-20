@@ -61,6 +61,10 @@ public class EmbedVideo {
     	return By.xpath("(//youtube[@class='google-youtube'])[" + index + "]");
     }
     
+    private By EmbeddedImage_Img(String index) {
+    	return By.xpath("(//img[@class='media-element file-full'])[" + index + "]");
+    }
+    
     
     //PAGE OBJECT METHODS
     public void SwitchToSynopsisFrm() throws Exception {
@@ -133,6 +137,36 @@ public class EmbedVideo {
     	new Actions(webDriver).contextClick(waitFor.ElementVisible(EmbededYouTubeVideo_Tag(index)))
     		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
     		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
+    	
+    	webDriver.switchTo().defaultContent();
+    	
+    }
+    
+    public void VerifyEmbeddedImagePresent(String index, String src, String width, String height) throws Exception {
+    	
+    	Reporter.log("Verify image is present with src '" + src + "', width = '" + width + "', and height = '" + height + "'.");
+    	waitFor.ElementContainsAttribute(EmbeddedImage_Img(index), "src", src);
+    	waitFor.ElementContainsAttribute(EmbeddedImage_Img(index), "width", width);
+    	waitFor.ElementContainsAttribute(EmbeddedImage_Img(index), "height", height);
+    	waitFor.ImageVisible(waitFor.ElementVisible(EmbeddedImage_Img(index)));
+    	
+    }
+    
+    public void VerifyEmbeddedImageAdjustedPresent(String index, String src, String pWidth, String pHeight) throws Exception {
+    	
+    	Reporter.log("Verify image is present with src '" + src + "', adjusted width = '" + pWidth + "' pixels, and adjusted height = '" + pHeight + "' pixels.");
+    	waitFor.ElementContainsAttribute(EmbeddedImage_Img(index), "src", src);
+    	waitFor.ElementContainsAttribute(EmbeddedImage_Img(index), "style", "width: " + pWidth + "px; height: " + pHeight + "px;");
+    	waitFor.ImageVisible(waitFor.ElementVisible(EmbeddedImage_Img(index)));
+    	
+    }
+    
+    public void DoubleClickImagePropertiesBtn(String index) throws Exception {
+    	
+    	this.SwitchToSynopsisFrm();
+    	
+    	Reporter.log("Double click and select the 'Image Properties' option.");
+    	new Actions(webDriver).doubleClick(waitFor.ElementVisible(EmbeddedImage_Img(index))).build().perform();
     	
     	webDriver.switchTo().defaultContent();
     	
