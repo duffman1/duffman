@@ -25,7 +25,7 @@ public class PageURLReflectRevision extends ParentTest {
 	* TEST CASE - TC6585
     * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/28252175590
 	*************************************************************************************/
-	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+	@Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
         public void PageURLReflectRevision_TC6585() throws Exception{
 
         Reporter.log("STEP 1");
