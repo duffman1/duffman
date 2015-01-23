@@ -77,10 +77,11 @@ public class A1_TestSetup {
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
                 		"ImageField Focus", "Database logging", "MPS", "Event Countdown", 
                 		"TVE Auth Example", "Pub SURF Example",
-                		"simpleSAMLphp authentication", "Program Guide Example", 
+                		"SimpleSAMLphp authentication", "Program Guide Example", 
                 		"Doubleclick for Publishers", "Automated Logout", "Dynamic Queue Workbench",
                 		"Dynamic Queue")) {
                 	if (modules.IsModuleEnabled(module)) {
+                		
                 		modules.DisableModule(module);
                 	}
                 }
