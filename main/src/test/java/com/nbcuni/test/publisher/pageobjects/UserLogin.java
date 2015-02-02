@@ -21,6 +21,7 @@ public class UserLogin {
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
+    private EmberNav navigation;
     
     //PAGE OBJECT CONSTRUCTOR
     public UserLogin(Driver webDriver) {
@@ -28,6 +29,7 @@ public class UserLogin {
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
         interact = new Interact(webDriver, timeout);
+        navigation = new EmberNav(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -82,6 +84,9 @@ public class UserLogin {
     	this.EnterPassword(password);
     	this.ClickLoginBtn();
     	Thread.sleep(1000);
+    	
+    	navigation.ShowMenu();
+    	navigation.ClickMenuHorizontalBtn();
     }
     
     

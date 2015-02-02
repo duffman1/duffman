@@ -43,6 +43,8 @@ public class EmberNav {
     //PAGE OBJECT IDENTIFIERS
     private By MenuVertical_Lnk = By.xpath("(//button[@class='navbar-icon navbar-toggle navbar-icon-toggle-vertical'])[1]");
     
+    private By MenuHorizontal_Lnk = By.xpath("(//button[@class='navbar-icon navbar-toggle navbar-icon-toggle-horizontal'])[1]");
+    
     private By PrimaryVerticalExpand_Lnk(String lnkTxt) {
     	return By.xpath("//a[contains(@id,'navbar-link-admin-')][text()='" + lnkTxt + "']/../button");
     }
@@ -91,6 +93,13 @@ public class EmberNav {
     	
     	Reporter.log("Click the 'vertical' menu button to set the menu nav to vertical orientation.");
     	interact.Click(waitFor.ElementVisible(MenuVertical_Lnk));
+    	
+    }
+    
+    public void ClickMenuHorizontalBtn() throws Exception {
+    	
+    	Reporter.log("Click the 'horizontal' menu button to set the menu nav to horizontal orientation.");
+    	interact.Click(waitFor.ElementVisible(MenuHorizontal_Lnk));
     	
     }
     
