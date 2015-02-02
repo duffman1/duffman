@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.pageobjects;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -98,8 +99,20 @@ public class EmberNav {
     
     public void ClickMenuHorizontalBtn() throws Exception {
     	
-    	Reporter.log("Click the 'horizontal' menu button to set the menu nav to horizontal orientation.");
-    	interact.Click(waitFor.ElementVisible(MenuHorizontal_Lnk));
+    	Boolean elementPresent = false;
+    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	try {
+    		webDriver.findElement(MenuHorizontal_Lnk);
+    		elementPresent = true;
+    	}
+    	catch (NoSuchElementException e) {}
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	
+    	if (elementPresent) {
+    		Reporter.log("Click the 'horizontal' menu button to set the menu nav to horizontal orientation.");
+    		interact.Click(waitFor.ElementVisible(MenuHorizontal_Lnk));
+    	}
     	
     }
     
