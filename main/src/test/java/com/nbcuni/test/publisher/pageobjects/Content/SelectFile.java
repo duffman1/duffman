@@ -244,14 +244,11 @@ public class SelectFile {
     	
     }
     
-    public void VerifyFocalPointCrossHairLocation(String pixelX, String pixelY, Integer xCoord, Integer yCoord) throws Exception {
+    public void VerifyFocalPointCrossHairLocation(String pixelX, String pixelY) throws Exception {
     	
     	Reporter.log("Verify the focal point crosshair is in the center of the image.");
     	waitFor.ElementContainsAttribute(this.FocalPoint_Ind, "style", "position: relative; left: " 
     			+ pixelX + "px; top: " + pixelY + "px;");
-    	System.out.println(waitFor.ElementPresent(FocalPoint_Ind).getLocation().getX());
-    	System.out.println(waitFor.ElementPresent(FocalPoint_Ind).getLocation().getY());
-    	waitFor.ElementLocation(FocalPoint_Ind, xCoord, yCoord);
     	
     }
     

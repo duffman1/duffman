@@ -68,7 +68,7 @@ public class ImageSnippetsInlineWithContent extends ParentTest{
         	}
         	
         	Reporter.log("STEP 6");
-        	selectFile.VerifyFocalPointCrossHairLocation("125", "157.5", 174, 255);
+        	selectFile.VerifyFocalPointCrossHairLocation("125", "157.5");
         	
         	Reporter.log("STEP 7");
         	selectFile.ClickSaveBtn();
