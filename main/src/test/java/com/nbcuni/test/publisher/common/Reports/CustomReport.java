@@ -119,18 +119,7 @@ public class CustomReport extends EmailableReporter {
 		
   	  	} catch (IOException e) { System.out.println("Failed to copy emailable-report.html to reports directory."); }
 
-  	  	/*
-  	  	//copy the emailable har file to the reports directory
-  	  	File harResultsFile = new File(outputDirectory + File.separator + "DefaultHar.har");
-  	  	String harFilePath = filePath.replace(".html", ".har");
-  	  	try {
-	  		FileUtils.copyFile(harResultsFile, new File(harFilePath));
-	  		System.out.println("Har Report saved to: " + harFilePath);
-		
-	  	} catch (IOException e) { System.out.println("Failed to copy DefaultHar.har to reports directory."); }
-		*/
-  	  	
-  	  	//create a new zip report file and attach html report, har report, and failed screenshots
+  	  	//create a new zip report file and attach html report and failed screenshots
   	  	String zipFilePath = filePath.replace(".html", ".zip");
   	  	String zipFileName = environmentTitle + "-" + status + "-" + attachmentDateTimeFormat.format(date) + ".zip";
   	  	try {
@@ -142,7 +131,6 @@ public class CustomReport extends EmailableReporter {
   	  		AddFilesToZip addFilesToZip = new AddFilesToZip();
   	  		List<File> allFilesToZip = new ArrayList<File>();
   	  		allFilesToZip.add(new File(filePath));
-  	  		//allFilesToZip.add(new File(harFilePath));
   	  		
   	  		for (String failedScreenshot : failedScreenshots) {
 	  			allFilesToZip.add(new File(failedScreenshot));
@@ -156,13 +144,9 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	    
   	  	//upload zip report file to rally
-  	  	String rallyAttachmentContentId = null;
-  	  	String rallyReportAttachmentURL = null;
   	  	if (config.getConfigValueString("UploadReportToRally").equals("true")) {
   	  		try {
-  	  			rallyAttachmentContentId = uploadReport.uploadFileAttachment(zipFilePath, zipFileName);
-  	  			rallyAttachmentContentId = rallyAttachmentContentId.replace("https://rally1.rallydev.com/slm/webservice/1.40/attachment/", "").replace(".js", "");
-  	  			rallyReportAttachmentURL = "https://rally1.rallydev.com/slm/attachment/" + rallyAttachmentContentId + "/" + zipFileName;
+  	  			uploadReport.uploadFileAttachment(zipFilePath, zipFileName);
   	  		} catch (Exception e) {
   	  			System.out.println("Failed to upload zip report to Rally.");
   	  		}
@@ -176,14 +160,16 @@ public class CustomReport extends EmailableReporter {
   	  	
   	  		HashMap results = new HashMap();
   	  		HashMap screenshotPaths = new HashMap();
+  	  		HashMap logFilePaths = new HashMap();
   	  		
   	  	  	for (ITestResult passed_result : passedTests.getAllResults()) {
   	  	  	
   	  	  		String methodName = passed_result.getMethod().getMethodName();
   	  	  		if (methodName.contains("_TC")) {
   	  	  			String[] tcID = methodName.split("_");
-  	  	  		
   	  	  			results.put(tcID[1], "passed");
+  	  	  			String logFilePath = config.getConfigValueFilePath("PathToScreenshots") + methodName + "_" + attachmentDateTimeFormat.format(new Date(passed_result.getEndMillis())) + ".txt";
+  	  	  			logFilePaths.put(tcID[1], logFilePath);
   	  	  		}
   	  	  		
   	  	  	}
@@ -194,12 +180,14 @@ public class CustomReport extends EmailableReporter {
 	  	  		String methodName = failed_result.getMethod().getMethodName();
 	  	  		if (methodName.contains("_TC")) {
 	  	  			String screenshotPath = config.getConfigValueFilePath("PathToScreenshots") + methodName + "_" + attachmentDateTimeFormat.format(new Date(failed_result.getEndMillis())) + ".png";
+	  	  			String logFilePath = config.getConfigValueFilePath("PathToScreenshots") + methodName + "_" + attachmentDateTimeFormat.format(new Date(failed_result.getEndMillis())) + ".txt";
 	  	  			String[] tcID = methodName.split("_");
 	  	  		
 	  	  			if (!tcUpdatedFailed.contains(methodName)) {
-	  	  			results.put(tcID[1], "failed");
-	  	  			screenshotPaths.put(tcID[1], screenshotPath);
-	  	  			tcUpdatedFailed.add(methodName);
+	  	  				results.put(tcID[1], "failed");
+	  	  				screenshotPaths.put(tcID[1], screenshotPath);
+	  	  				logFilePaths.put(tcID[1], logFilePath);
+	  	  				tcUpdatedFailed.add(methodName);
 	  	  			}
 	  	  		}
 	  	  		
@@ -207,7 +195,7 @@ public class CustomReport extends EmailableReporter {
   	  	  	
   	  	  	UpdateTestResultsRally updateTestResultsRally = new UpdateTestResultsRally();
   	  	    try {
-				updateTestResultsRally.updateTestResult(results, screenshotPaths);
+				updateTestResultsRally.updateTestResult(results, screenshotPaths, logFilePaths);
 			} catch (Exception e) { e.printStackTrace(); }
 			
   	  	}
@@ -243,6 +231,7 @@ public class CustomReport extends EmailableReporter {
   	  	}
   	  	
   	  	//update github for pull request environment executions
+  	  	/*TODO
   	  	UploadReportsGitHub uploadReportsGitHub = new UploadReportsGitHub();
   	  	if (config.getConfigValueString("AppURL").contains(".pr.")) {
   	  		if (config.getConfigValueString("GithubUpdatePRResults").equals("true")) {
@@ -252,5 +241,6 @@ public class CustomReport extends EmailableReporter {
   	  			System.out.println("Github Pull Request results not updated per configuration setting.");
   	  		}
   	  	}
+  	  	*/
 	}
 }

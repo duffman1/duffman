@@ -36,12 +36,12 @@
   	<parameter name="SSOEmail" value="FID.Publisher@nbcuni.com"></parameter>
   	
   	<!--RALLY CONFIG-->
-  	<parameter name="RallyUsername" value=""></parameter>
-  	<parameter name="RallyPassword" value=""></parameter>
+  	<parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>
+  	<parameter name="RallyPassword" value="tufNewcyd4#"></parameter>
   	<parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
-  	<parameter name="RallyWorkspace" value="Digital Products"></parameter>
+  	<parameter name="RallyWorkspace" value="Digital Backbone Products"></parameter>
   	<parameter name="RallyProject" value="Publisher 7"></parameter>
-  	<parameter name="RallyTaskID" value="TA72292"></parameter>
+  	<parameter name="RallyTCID" value="TC7084"></parameter>
   	
   	<!--GITHUB CONFIG-->
   	<parameter name="GithubUsername" value=""></parameter>
@@ -107,6 +107,7 @@
 		</groups>
 
 		<classes>
+		    <!--  
 			<class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL" runscron="true" runslocal="true"/>		        	
 			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts" runscron="true"/>
@@ -117,8 +118,10 @@
 			<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification"/>
-			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>	
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
+				-->
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+			<!--  
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Thumbnails.ThumbnailsAreNotUpdated" runscron="true" runslocal="true"/>
@@ -218,7 +221,7 @@
 			<class name="com.nbcuni.test.publisher.tests.Video.MPXSnippets.VideoSnippetsInContent"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.PageURLReflectRevision"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.ImageSnippetsInlineWithContent"/>
-			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.Solr.SolrSearchConfiguration"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.Solr.SolrSearchConfiguration"/> -->
 		</classes>
 	</test>
   	

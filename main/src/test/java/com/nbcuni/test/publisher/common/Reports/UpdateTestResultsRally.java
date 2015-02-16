@@ -29,7 +29,7 @@ import org.apache.commons.codec.binary.Base64;
 public class UpdateTestResultsRally {
 
     @SuppressWarnings({ "resource", "deprecation", "rawtypes" })
-	public void updateTestResult(Map allResults, Map allScreenshotPaths) throws Exception{
+	public void updateTestResult(Map allResults, Map allScreenshotPaths, Map allLogFilePaths) throws Exception{
 
     	Config config = new Config();
     	
@@ -41,14 +41,14 @@ public class UpdateTestResultsRally {
         // Credentials
         String userName = config.getConfigValueString("RallyUsername");
         String userPassword = config.getConfigValueString("RallyPassword");
-
+        
         RallyRestApi restApi = new RallyRestApi(
                         new URI(rallyURL),
                         userName,
                         userPassword);
         restApi.setWsapiVersion(wsapiVersion);
         restApi.setApplicationName(applicationName);
-
+        
         //User settings
         String testerUserName = userName;
 
@@ -65,7 +65,7 @@ public class UpdateTestResultsRally {
         Iterator iterator = allResults.entrySet().iterator();
         while (iterator.hasNext()) {
         	
-        	//get the tcid, result, and screenshot from the maps.
+        	//get the tcid, result, screenshot, and step log file from the maps.
         	Map.Entry tcResult = (Map.Entry)iterator.next();
         	String tcID = tcResult.getKey().toString();
         	String passFail = tcResult.getValue().toString();
@@ -74,6 +74,7 @@ public class UpdateTestResultsRally {
         		screenshotPath = allScreenshotPaths.get(tcID).toString();
         	}
         	catch (NullPointerException e) { }
+        	String logFilePath = allLogFilePaths.get(tcID).toString();
         	
         	// Query for Test Case 
             QueryRequest testCaseRequest = new QueryRequest("TestCase");
@@ -105,70 +106,117 @@ public class UpdateTestResultsRally {
                 newTestCaseResult.addProperty("Notes", "Automated Test Run");
                 newTestCaseResult.addProperty("Tester", userRef);
                 newTestCaseResult.addProperty("TestCase", testCaseRef);
+                CreateRequest createRequest = new CreateRequest("testcaseresult", newTestCaseResult);
+                CreateResponse createResponse = restApi.create(createRequest);
 
-                	CreateRequest createRequest = new CreateRequest("testcaseresult", newTestCaseResult);
-                	CreateResponse createResponse = restApi.create(createRequest);
-
-                	if(createResponse.wasSuccessful()){
+                if(createResponse.wasSuccessful()){
                 		
-                		//Read Test Case
-                		String ref = Ref.getRelativeRef(createResponse.getObject().get("_ref").getAsString());
-                		GetRequest getRequest = new GetRequest(ref);
-                		getRequest.setFetch(new Fetch("Date", "Verdict"));
-                		GetResponse getResponse = restApi.get(getRequest);
-                		getResponse.getObject();
+                	//Read Test Case
+                	String ref = Ref.getRelativeRef(createResponse.getObject().get("_ref").getAsString());
+                	GetRequest getRequest = new GetRequest(ref);
+                	getRequest.setFetch(new Fetch("Date", "Verdict"));
+                	GetResponse getResponse = restApi.get(getRequest);
+                	getResponse.getObject();
                 		
-                		if (screenshotPath != null) {
+                	//Read In File Contents
+            		String logFile = logFilePath;
+            		long logAttachmentSize;
                 		
-                			//Read In File Content
-                			String screenshotFile = screenshotPath;
-                			long attachmentSize;
-
-                			//Open file
-                			RandomAccessFile myFileHandle = new RandomAccessFile(screenshotFile, "r");
-                        
-                			//check screenshot length
-                			long longLength = myFileHandle.length();
-                			long maxLength = 5000000;
-                			if (longLength >= maxLength) throw new IOException("File size >= 5 MB Upper limit for Rally.");
-                			int fileLength = (int) longLength;            
-
-                			// Read file and return data
-                			byte[] fileBytes = new byte[fileLength];
-                			myFileHandle.readFully(fileBytes);
-                			String imageBase64String = Base64.encodeBase64String(fileBytes);
-                			attachmentSize = fileLength;
-
-                			//create AttachmentContent from image string
-                			JsonObject myAttachmentContent = new JsonObject();
-                			myAttachmentContent.addProperty("Content", imageBase64String);
-                			CreateRequest attachmentContentCreateRequest = new CreateRequest("AttachmentContent", myAttachmentContent);
-                			CreateResponse attachmentContentResponse = restApi.create(attachmentContentCreateRequest);
-                			String myAttachmentContentRef = attachmentContentResponse.getObject().get("_ref").getAsString();
-                        
-                			//create the Attachment itself
-                			JsonObject myAttachment = new JsonObject();
-                			myAttachment.addProperty("TestCaseResult", ref);
-                			myAttachment.addProperty("Content", myAttachmentContentRef);
-                			myAttachment.addProperty("Name", "ScreenshotOfFailure.jpg");
-                			myAttachment.addProperty("Description", "Attachment of Failed Screenshot");
-                			myAttachment.addProperty("ContentType","image/jpg");
-                			myAttachment.addProperty("Size", attachmentSize);
-                			myAttachment.addProperty("User", userRef);          
-
-                			CreateRequest attachmentCreateRequest = new CreateRequest("Attachment", myAttachment);
-                			CreateResponse attachmentResponse = restApi.create(attachmentCreateRequest);
-                			attachmentResponse.getObject().get("_ref").getAsString();
-                        
-                			//release file resources
-                			myFileHandle.close();
-                		}
-                       
-                		System.out.println("Updated Rally test case result for test case '" + tcID + "'.");
+            		//Open files
+            		RandomAccessFile logFileHandle = new RandomAccessFile(logFile, "r");
                     
+            		long maxLength = 5000000;
+            			
+            		//check log file length
+            		long logLongLength = logFileHandle.length();
+            		if (logLongLength >= maxLength) throw new IOException("File size >= 5 MB Upper limit for Rally.");
+            		int logFileLength = (int) logLongLength;  
+
+            		//Read file and return data
+            		byte[] logFileBytes = new byte[(int) logFileLength];
+            		logFileHandle.readFully(logFileBytes);
+            		String logImageBase64String = Base64.encodeBase64String(logFileBytes);
+            		logAttachmentSize = logFileLength;
+
+            		//create log AttachmentContent from image string
+            		JsonObject logAttachmentContent = new JsonObject();
+            			
+            		logAttachmentContent.addProperty("Content", logImageBase64String);
+            		CreateRequest logAttachmentContentCreateRequest = new CreateRequest("AttachmentContent", logAttachmentContent);
+            		CreateResponse logAttachmentContentResponse = restApi.create(logAttachmentContentCreateRequest);
+            		for (String error : logAttachmentContentResponse.getErrors()) {
+            			System.out.println(error);
+            		}
+            		String logAttachmentContentRef = logAttachmentContentResponse.getObject().get("_ref").getAsString();
+            			
+            		//create the log Attachment itself
+            		JsonObject logAttachment = new JsonObject();
+            		logAttachment.addProperty("TestCaseResult", ref);
+            		logAttachment.addProperty("Content", logAttachmentContentRef);
+            		logAttachment.addProperty("Name", "testStepLog.jpg");
+            		logAttachment.addProperty("Description", "Attachment of Logged Test Steps");
+            		logAttachment.addProperty("ContentType","text/plain");
+            		logAttachment.addProperty("Size", logAttachmentSize);
+            		logAttachment.addProperty("User", userRef);          
+            		CreateRequest logAttachmentCreateRequest = new CreateRequest("Attachment", logAttachment);
+            		CreateResponse logAttachmentResponse = restApi.create(logAttachmentCreateRequest);
+            		logAttachmentResponse.getObject().get("_ref").getAsString();
+                    
+            		//release file resources
+            		logFileHandle.close();
+            			
+            		//attach screenshot if failure
+                	if (screenshotPath != null) {
+                		
+                		//Read In File Contents
+                		String screenshotFile = screenshotPath;
+                		long screenshotAttachmentSize;
+                			
+                		//Open files
+                		RandomAccessFile screenshotFileHandle = new RandomAccessFile(screenshotFile, "r");
+                			
+                		//check screenshot length
+                		long screenshotLongLength = screenshotFileHandle.length();
+                		if (screenshotLongLength >= maxLength) throw new IOException("File size >= 5 MB Upper limit for Rally.");
+                		int screenshotFileLength = (int) screenshotLongLength; 
+                			
+                		//Read file and return data
+                		byte[] screenshotFileBytes = new byte[screenshotFileLength];
+                		screenshotFileHandle.readFully(screenshotFileBytes);
+                		String screenshotImageBase64String = Base64.encodeBase64String(screenshotFileBytes);
+                		screenshotAttachmentSize = screenshotFileLength;
+                			
+                		//create Screenshot AttachmentContent from image string
+                		JsonObject screenshotAttachmentContent = new JsonObject();
+                		screenshotAttachmentContent.addProperty("Content", screenshotImageBase64String);
+                		CreateRequest screenshotAttachmentContentCreateRequest = new CreateRequest("AttachmentContent", screenshotAttachmentContent);
+                		CreateResponse screenshotAttachmentContentResponse = restApi.create(screenshotAttachmentContentCreateRequest);
+                		String screenshotAttachmentContentRef = screenshotAttachmentContentResponse.getObject().get("_ref").getAsString();
+                        
+                		//create the Screenshot Attachment itself
+                		JsonObject screenshotAttachment = new JsonObject();
+                		screenshotAttachment.addProperty("TestCaseResult", ref);
+                		screenshotAttachment.addProperty("Content", screenshotAttachmentContentRef);
+                		screenshotAttachment.addProperty("Name", "ScreenshotOfFailure.jpg");
+                		screenshotAttachment.addProperty("Description", "Attachment of Failed Screenshot");
+                		screenshotAttachment.addProperty("ContentType","image/jpg");
+                		screenshotAttachment.addProperty("Size", screenshotAttachmentSize);
+                		screenshotAttachment.addProperty("User", userRef);          
+                		CreateRequest screenshotAttachmentCreateRequest = new CreateRequest("Attachment", screenshotAttachment);
+                		CreateResponse screenshotAttachmentResponse = restApi.create(screenshotAttachmentCreateRequest);
+                		screenshotAttachmentResponse.getObject().get("_ref").getAsString();
+                        
+                		//release file resources
+                		screenshotFileHandle.close();
+                			
                 	}
+                       
+                	System.out.println("Updated Rally test case result for test case '" + tcID + "'.");
+                    
+                }
             }
             catch (Exception e) {
+            	e.printStackTrace();
             	System.out.println("Failed to update test case for " + tcID);
             }
         }

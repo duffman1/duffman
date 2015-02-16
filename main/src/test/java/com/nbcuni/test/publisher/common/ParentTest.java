@@ -89,6 +89,8 @@ public class ParentTest {
         } catch (Exception e) {
         	System.out.println("Failed to capture screenshot");
         }
+    	
+    	applib.attachReporterLogging(result);
         
     	if (config.getConfigValueString("ClearCacheOnFailure").equals("true")) {
     		//Clear cache in the event of a failure

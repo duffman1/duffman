@@ -12,9 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**************************************************************************.
  * NBC.com Application Library. Copyright
@@ -35,8 +38,6 @@ public class AppLib {
     	wait = new WebDriverWait(webDriver, 10);
     }
 
-    
-    
     public void attachScreenshot(ITestResult result) throws Exception {
     	
     	Date date = new Date(result.getEndMillis());
@@ -54,6 +55,31 @@ public class AppLib {
         Reporter.log("<br><br><a href='" + filePath + "'> <img src='./" + methodName + ".png' height='700' width='700'/> </a>");
         Reporter.setCurrentTestResult(null);
       
+    }
+    
+    public void attachReporterLogging(ITestResult result) throws Exception {
+    	
+    	Date date = new Date(result.getEndMillis());
+    	SimpleDateFormat dateTimeFormat = new SimpleDateFormat("MMddyyhhmmssa");
+    	String screenshotDateTime = dateTimeFormat.format(date);
+        String methodName = result.getMethod().getMethodName() + "_" + screenshotDateTime;
+        
+        String filePath = config.getConfigValueFilePath("PathToScreenshots") + methodName + ".txt";
+        File testLogFile = new File(filePath);
+        testLogFile.createNewFile();
+        
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(testLogFile, true));
+    	new Reporter();
+		List<String> reportResults = Reporter.getOutput(result);
+		bufferedWriter.write("TEST STARTED - " + dateTimeFormat.format(result.getStartMillis()));
+		bufferedWriter.newLine();
+    	for (String reportLn : reportResults) {
+    		bufferedWriter.write(reportLn);
+    		bufferedWriter.newLine();
+    	}
+    	bufferedWriter.write("TEST COMPLETED - " + dateTimeFormat.format(result.getStartMillis()));
+    	bufferedWriter.close();
+        
     }
     
     public UserLogin openApplication() throws Exception {
