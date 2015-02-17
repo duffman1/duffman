@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage;
+package com.nbcuni.test.publisher.tests.feature.F29;
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
@@ -14,7 +14,7 @@ public class RepresentativeImage extends ParentTest {
      * TEST CASE - TC3217
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/19212549516
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx", "F29"})
     public void RepresentativeImage_TC3217() throws Exception{
          
         	Reporter.log("STEP 1");

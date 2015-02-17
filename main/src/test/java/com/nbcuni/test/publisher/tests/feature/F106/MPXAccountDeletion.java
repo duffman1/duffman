@@ -20,7 +20,7 @@ public class MPXAccountDeletion extends ParentTest {
      * TEST CASE - TC1884
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/18169765713
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"onrequest", "F106"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "F106"})
     public void MPXAccountDeletion_TC1884() throws Exception{
     	
     	if (config.getConfigValueString("DrushIngestion").equals("false")) {

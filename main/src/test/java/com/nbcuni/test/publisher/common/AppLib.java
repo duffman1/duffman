@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -30,12 +31,14 @@ public class AppLib {
 
 	Config config = new Config();
 	private WebDriverWait wait;
+	private ErrorChecking errorChecking;
 	
     private Driver webDriver;
     
     public AppLib(Driver webDriver) {
     	this.webDriver = webDriver;
     	wait = new WebDriverWait(webDriver, 10);
+    	errorChecking = new ErrorChecking(webDriver);
     }
 
     public void attachScreenshot(ITestResult result) throws Exception {
@@ -85,6 +88,7 @@ public class AppLib {
     public UserLogin openApplication() throws Exception {
         Reporter.log("Open url '" + config.getConfigValueString("AppURL") + "'.");
         webDriver.navigate().to(config.getConfigValueString("AppURL"));   
+        errorChecking.VerifyNoMessageErrorsPresent();
         return new UserLogin(webDriver);
     }
     
