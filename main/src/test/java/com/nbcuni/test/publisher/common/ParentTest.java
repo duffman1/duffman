@@ -55,7 +55,7 @@ public class ParentTest {
             
         	List<String> allLocalTests = config.getAllLocalTests();
         	Boolean runLocally = false;
-        	if (allLocalTests.contains(method.getName())) {
+        	if (allLocalTests.contains(method.getDeclaringClass().getCanonicalName())) {
         		runLocally = true;
         	}
         	

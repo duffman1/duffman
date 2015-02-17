@@ -148,7 +148,7 @@ public class Config {
     
     public List<String> getAllLocalTests() {
     	
-    	List<String> allLocalTests = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//custom[@runslocal='true']/@name");
+    	List<String> allLocalTests = this.getXPathValuesFromFile(this.getConfigFileLocation(), "//class[@runslocal='true']/@name");
     	List<String> allLocalTestsCleaned = new ArrayList<String>();
     	
     	for (String localTest: allLocalTests) {
