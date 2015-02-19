@@ -121,6 +121,7 @@ public class EmbedVideo {
     	this.SwitchToSynopsisFrm();
     	
     	Reporter.log("Right click and select the 'Edit MPX Video' option for video with index '" + index + "'.");
+    	Thread.sleep(1000);
     	new Actions(webDriver).contextClick(waitFor.ElementVisible(EmbededMPXVideo_Tag(index)))
     		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
     		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();

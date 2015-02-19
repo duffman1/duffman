@@ -501,8 +501,7 @@ public class WaitFor {
     					if (e.getMessage().toString().contains(staleElement))
     					{
     						System.out.println("image element is stale.");
-    						webDriver.findElement(interact.GetByLocator(ele));
-    						imgPresent = (Boolean) webDriver.executeScript(imageVisibleJS, ele);
+    						imgPresent = (Boolean) webDriver.executeScript(imageVisibleJS, webDriver.findElement(interact.GetByLocator(ele)));
     					}
     				}
     				return imgPresent;
