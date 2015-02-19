@@ -15,10 +15,10 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ImportMPXPlayer extends ParentTest{
+public class ImportPlayer extends ParentTest{
 	
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx", "certify"})
-    public void ImportMPXPlayer_Test() throws Exception {
+    public void NotificationPlayerUnavailability_Test() throws Exception {
 
     	//NOTE - Test steps re-ordered and truncated for automation optimization
     	UserLogin userLogin = applib.openApplication();
@@ -70,7 +70,6 @@ public class ImportMPXPlayer extends ParentTest{
         	    EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
         	    editMPXVideo.SelectPubMPXVideoPlayer(playerTitle);
         	    contentParent.ClickSaveBtn();
-        	    contentParent.VerifyMessageStatus("has been updated.");
         	    
         	}
         	else {
