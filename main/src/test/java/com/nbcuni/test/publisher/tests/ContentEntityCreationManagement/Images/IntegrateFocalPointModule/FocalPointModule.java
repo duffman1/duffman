@@ -116,7 +116,6 @@ public class FocalPointModule extends ParentTest{
                 
         //Step 11
         selectFile.DoucleClickFocalPointIndicator();
-        selectFile.VerifyFocalPointCoordinates("50,50");
         selectFile.ClickSaveBtn();
         webDriver.switchTo().defaultContent();
         selectFile.WaitForSelectFileFrameClose();
@@ -126,9 +125,7 @@ public class FocalPointModule extends ParentTest{
         //Step 12
         WorkBench workBench = new WorkBench(webDriver);
         workBench.VerifyFileImageLinkPresent("HanSolo", "1");
-        //workBench.VerifyFileImagePresent("HanSolo", "1");
-        //workBench.VerifyFileImageSize("1", "200", "200");
-            
+          
         //Cleanup
         navigation.Modules();
         modules.DisableModule("Focal Point");

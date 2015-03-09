@@ -252,11 +252,12 @@ public class SelectFile {
     	
     }
     
-    public void VerifyFocalPointCoordinates(String coordinatesTxt) throws Exception {
+    public void EnterFocalPointCoordinates(String coordinatesTxt) throws Exception {
     	
-    	Reporter.log("Verify value of 'Focal Point' text box is '" + coordinatesTxt + "'.");
-    	WebElement ele = waitFor.ElementVisible(FocalPoint_Txb);
-    	Assert.assertEquals(ele.getAttribute("value"), coordinatesTxt);
+    	Reporter.log("Enter '" + coordinatesTxt + "' in the 'Focal Point' text box.");
+    	WebElement element = waitFor.ElementVisible(FocalPoint_Txb);
+    	interact.Click(element);
+    	interact.Type(waitFor.ElementVisible(FocalPoint_Txb), coordinatesTxt);
     	
     }
     
