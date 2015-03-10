@@ -13,7 +13,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
      * TEST CASE 
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17266417771 
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void AddApplyEmbeddedMetadataButtonAllImageForms_Test() throws Exception{
          
         	//Step 1
