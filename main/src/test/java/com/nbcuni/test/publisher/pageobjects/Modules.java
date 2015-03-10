@@ -66,6 +66,10 @@ public class Modules {
     	return By.xpath("//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input");
     }
     
+    private By ModuleName_Tgl(String moduleName) {
+    	return By.xpath("//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']/div[contains(@class, 'toggle')]");
+    }
+    
     private By UninstallModuleName_Cbx(String moduleName) {
     	return By.xpath("//label[text()='" + moduleName + "']/../../..//input");
     }
@@ -126,7 +130,7 @@ public class Modules {
     		
     		Reporter.log("Check the '" + moduleName + "' check box.");
     		interact.ScrollToTop();
-    		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
+    		interact.Click(waitFor.ElementVisible(ModuleName_Tgl(moduleName)));
     		
     		Reporter.log("Click the 'Save configuration' button.");
     		interact.ScrollToTop();
@@ -166,7 +170,7 @@ public class Modules {
     	if (waitFor.ElementPresent(ModuleName_Cbx(moduleName)).isSelected() == true) {
     		Reporter.log("Uncheck the '" + moduleName + "' module checkbox.");
     		interact.ScrollToTop();
-    		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
+    		interact.Click(waitFor.ElementVisible(ModuleName_Tgl(moduleName)));
     		
     		Reporter.log("Click the 'Save configuration' button.");
     		interact.ScrollToTop();

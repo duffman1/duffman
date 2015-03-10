@@ -8,11 +8,11 @@
 	<parameter name="ReRunOnFailure" value="false"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
 	<parameter name="RunRemotely" value="false"></parameter>
-	<parameter name="SendReportAutoEmails" value="true"></parameter>
-  	<parameter name="UploadReportToRally" value="true"></parameter>
-  	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
-  	<parameter name="GithubUpdatePRResults" value="true"></parameter>
-  	<parameter name="RunSetupScripts" value="false"></parameter>
+	<parameter name="SendReportAutoEmails" value="false"></parameter>
+  	<parameter name="UploadReportToRally" value="false"></parameter>
+  	<parameter name="UpdateIndividualRallyTCs" value="false"></parameter>
+  	<parameter name="GithubUpdatePRResults" value="false"></parameter>
+  	<parameter name="RunSetupScripts" value="true"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
   	<parameter name="ClearCacheOnFailure" value="false"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
@@ -55,7 +55,7 @@
   	<parameter name="MPXPassword" value="Pa55word"></parameter>
   	<parameter name="MPXVideoUploadPause" value="5000"></parameter>
   	<parameter name="MPXAssetBufferPause" value="0"></parameter>
-  	<parameter name="DrushIngestion" value="false"></parameter>
+  	<parameter name="DrushIngestion" value="true"></parameter>
   	
   	<!--SIKULI CONFIG-->
   	<parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"></parameter>

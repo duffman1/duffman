@@ -90,8 +90,15 @@ public class ParentTest {
         	System.out.println("Failed to capture screenshot");
         }
     	
-    	applib.attachReporterLogging(result);
-        
+    	/* TODO - implement this
+    	try {
+    		applib.attachReporterLogging(result);
+    	}
+    	catch (Exception e) {
+    		System.out.println("Failed to capture reporter logging.");
+    	}
+        */
+    	
     	if (config.getConfigValueString("ClearCacheOnFailure").equals("true")) {
     		//Clear cache in the event of a failure
         	try {
