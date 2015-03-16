@@ -104,7 +104,7 @@ public class MPSSupportTokens extends ParentTest {
             
             Reporter.log("STEP 11");
             applib.openSitePage(movieURL);
-            contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"" + baseAlias + "|mps-testing|2arg|3arg|4arg\"}"));
+            contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"" + baseAlias + "|mps-testing\"}"));
             
             Reporter.log("STEP 12");
             applib.openSitePage("/devel/php");
