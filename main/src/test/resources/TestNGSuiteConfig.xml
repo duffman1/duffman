@@ -5,14 +5,14 @@
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
-	<parameter name="RunRemotely" value="fase"></parameter>
-	<parameter name="SendReportAutoEmails" value="false"></parameter>
+	<parameter name="RunRemotely" value="true"></parameter>
+	<parameter name="SendReportAutoEmails" value="true"></parameter>
   	<parameter name="UploadReportToRally" value="false"></parameter>
-  	<parameter name="UpdateIndividualRallyTCs" value="false"></parameter>
+  	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
   	<parameter name="GithubUpdatePRResults" value="false"></parameter>
-  	<parameter name="RunSetupScripts" value="false"></parameter>
+  	<parameter name="RunSetupScripts" value="true"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
   	<parameter name="ClearCacheOnFailure" value="true"></parameter>
   	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
@@ -37,7 +37,7 @@
   	
   	<!--RALLY CONFIG-->
   	<parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>
-  	<parameter name="RallyPassword" value=""></parameter>
+  	<parameter name="RallyPassword" value="tufNewcyd4#"></parameter>
   	<parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
   	<parameter name="RallyWorkspace" value="Digital Backbone Products"></parameter>
   	<parameter name="RallyProject" value="Publisher 7"></parameter>

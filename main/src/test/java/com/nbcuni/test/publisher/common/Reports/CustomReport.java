@@ -195,7 +195,7 @@ public class CustomReport extends EmailableReporter {
   	  	  	
   	  	  	UpdateTestResultsRally updateTestResultsRally = new UpdateTestResultsRally();
   	  	    try {
-				updateTestResultsRally.updateTestResult(results, screenshotPaths, logFilePaths);
+				updateTestResultsRally.updateTestResult(results);
 			} catch (Exception e) { e.printStackTrace(); }
 			
   	  	}
