@@ -1,2 +1,0 @@
-cd ~/SQE-TEST-Pub7/main
-mvn test -Dgroups=mpx -DexcludedGroups=sensitive,broken -Dparallel=classes -DthreadCount=2 -Dsystem.test.appurl=http://qa5.publisher7.com -Dsystem.test.rerunonfailure=true -Dsystem.test.rerunonfailurecount=3 -Dsystem.test.runremotely=true -Dsystem.test.runsetupscripts=true -Dsystem.test.sendreportemailaddress=brandon.clark@nbcuni.com -Dsystem.test.uploadreporttorally=false -Dsystem.test.updateindividualrallytcs=true -Dsystem.test.drushingestion=true -Dsystem.test.rallyusername=brandon.clark@nbcuni.com -Dsystem.test.rallypassword=tufNewcyd4#

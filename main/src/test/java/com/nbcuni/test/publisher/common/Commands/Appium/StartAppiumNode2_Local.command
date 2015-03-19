@@ -1,1 +1,0 @@
-appium -a localhost -p 4725 -bp 5002 -U FA37TS911185 --nodeconfig /Users/brandonclark/ESPNDemo/main/src/test/java/com/sdg/test/publisher/common/CommandFiles/AppiumNodeConfig2.json
