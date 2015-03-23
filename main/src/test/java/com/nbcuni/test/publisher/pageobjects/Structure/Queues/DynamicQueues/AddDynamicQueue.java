@@ -49,8 +49,12 @@ public class AddDynamicQueue {
     	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-type']//option[contains(text(), '" + option + "')]"));
     }
     
+    private WebElement FieldMoviePrimaryGenre_Btn() {
+    	return webDriver.findElement(By.id("edit_settings_terms_field_movie_primary_genre_chosen"));
+    }
+    
     private WebElement FieldMoviePrimaryGenre_Opt(String option) {
-    	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-primary-genre']//option[contains(text(), '" + option + "')]"));
+    	return webDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_primary_genre_chosen']/div[@class='chosen-drop']//li[text()='" + option + "']"));
     }
     
     private WebElement FieldMovieSecondaryGenre_Opt(String option) {
@@ -131,6 +135,8 @@ public class AddDynamicQueue {
     public void SelectFieldMoviePrimaryGenreTaxonomy(String option) throws Exception {
     	
     	Reporter.log("Select '" + option + "' from the 'Taxonomy filter for field_movie_primary_genre (Movie)' multi-select list.");
+    	FieldMoviePrimaryGenre_Btn().click();
+    	Thread.sleep(2000);
     	FieldMoviePrimaryGenre_Opt(option).click();
     }
     
