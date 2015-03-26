@@ -67,7 +67,7 @@ public class A1_TestSetup {
                 webDriver.switchTo().defaultContent();
                 
                 //enable necessary modules
-                for (String module : Arrays.asList("Field UI", "Pub Post", "Logo Manager", "Devel")) {
+                for (String module : Arrays.asList("Field UI", "Pub Post", "Logo Manager", "Devel", "Instant Filter")) {
                 	if (!modules.IsModuleEnabled(module)) {
                 		modules.EnableModule(module);
                 	}

@@ -63,7 +63,7 @@ public class Modules {
     }
     
     private By ModuleName_Cbx(String moduleName) {
-    	return By.xpath("//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input");
+    	return By.xpath("//label/strong/span[text()='" + moduleName + "']/../../../../td[@class='checkbox']//input");
     }
     
     @SuppressWarnings("unused")
