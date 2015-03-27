@@ -46,7 +46,7 @@ public class BasicInformation {
     
     private By EmbedMPX_Btn = By.xpath("//a[@title='Embed MPX Video']");
     
-    private By EmbedImage_Btn = By.id("cke_16");
+    private By EmbedImage_Btn = By.id("cke_17");
     
     private By Body_Txa = By.id("edit-body-und-0-value");
     

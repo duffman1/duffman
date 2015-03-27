@@ -55,7 +55,7 @@ public class DrupalForFacebook {
     @FindBy(how = How.ID, using = "pass")
     private WebElement FacebookPassword_Txb;
     
-    @FindBy(how = How.ID, using = "u_0_1")
+    @FindBy(how = How.XPATH, using = "//input[@value='Log In']")
     private WebElement FacebookLogin_Btn;
     
     @FindBy(how = How.XPATH, using = "//a[@class='fieldset-title']")
