@@ -45,8 +45,12 @@ public class AddDynamicQueue {
     	return webDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
     }
     
+    private WebElement FieldMovieType_Btn() {
+    	return webDriver.findElement(By.id("edit_settings_terms_field_movie_type_chosen"));
+    }
+    
     private WebElement FieldMovieType_Opt(String option) {
-    	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-type']//option[contains(text(), '" + option + "')]"));
+    	return webDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_type_chosen']//ul[@class='chosen-results']/li[text()='" + option + "']"));
     }
     
     private WebElement FieldMoviePrimaryGenre_Btn() {
@@ -57,12 +61,20 @@ public class AddDynamicQueue {
     	return webDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_primary_genre_chosen']/div[@class='chosen-drop']//li[text()='" + option + "']"));
     }
     
+    private WebElement FieldMovieSecondaryGenre_Btn() {
+    	return webDriver.findElement(By.id("edit_settings_terms_field_movie_secondary_genre_chosen"));
+    }
+    
     private WebElement FieldMovieSecondaryGenre_Opt(String option) {
     	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-secondary-genre']//option[contains(text(), '" + option + "')]"));
     }
     
+    private WebElement FieldMovieRating_Btn() {
+    	return webDriver.findElement(By.id("edit_settings_terms_field_movie_rating_chosen"));
+    }
+    
     private WebElement FieldMovieRating_Opt(String option) {
-    	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-rating']//option[contains(text(), '" + option + "')]"));
+    	return webDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_rating_chosen']/div[@class='chosen-drop']//li[text()='" + option + "']"));
     }
     
     @FindBy(how = How.ID, using = "edit-settings-tv-show-select")
@@ -129,6 +141,8 @@ public class AddDynamicQueue {
     public void SelectFieldMovieTypeTaxonomy(String option) throws Exception {
     	
     	Reporter.log("Select '" + option + "' from the 'Taxonomy filter for field_movie_type (Movie)' multi-select list.");
+    	FieldMovieType_Btn().click();
+    	Thread.sleep(2000);
     	FieldMovieType_Opt(option).click();
     }
     
@@ -143,12 +157,16 @@ public class AddDynamicQueue {
     public void SelectFieldMovieSecondaryGenreTaxonomy(String option) throws Exception {
     	
     	Reporter.log("Select '" + option + "' from the 'Taxonomy filter for field_movie_secondary_genre (Movie)' multi-select list.");
+    	FieldMovieSecondaryGenre_Btn().click();
+    	Thread.sleep(2000);
     	FieldMovieSecondaryGenre_Opt(option).click();
     }
     
     public void SelectFieldMovieRatingTaxonomy(String option) throws Exception {
     	
     	Reporter.log("Select '" + option + "' from the 'Taxonomy filter for field_movie_rating (Movie)' multi-select list.");
+    	FieldMovieRating_Btn().click();
+    	Thread.sleep(2000);
     	FieldMovieRating_Opt(option).click();
     }
     
