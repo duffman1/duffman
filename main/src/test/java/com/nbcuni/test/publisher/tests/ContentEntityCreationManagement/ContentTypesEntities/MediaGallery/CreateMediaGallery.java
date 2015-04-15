@@ -120,7 +120,9 @@ public class CreateMediaGallery extends ParentTest{
     		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
     		contentParent.WaitForThrobberNotPresent();
+    		Thread.sleep(2000); //TODO - dynamic wait
     		selectFile.ClickSubmitBtn();
+    		Thread.sleep(2000); //TODO - dynamic wait
     		webDriver.switchTo().defaultContent();
             contentParent.WaitForThrobberNotPresent();
             
