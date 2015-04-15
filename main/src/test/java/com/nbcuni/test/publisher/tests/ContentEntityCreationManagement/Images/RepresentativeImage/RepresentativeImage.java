@@ -52,6 +52,7 @@ public class RepresentativeImage extends ParentTest {
     		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickPub7MPXVideoBtn();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
+    		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickSubmitBtn();
             webDriver.switchTo().defaultContent();
             contentParent.ClickSaveBtn();

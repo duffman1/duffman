@@ -331,6 +331,7 @@ public class SelectFile {
     	
     	Reporter.log("Click mpx media thumbnail image number " + imageIndex );
     	interact.Click(waitFor.ElementPresent(MPXMediaThumbnail_Img(imgSrc, imageIndex)));
+    	Thread.sleep(1000);
     	        
     }
     

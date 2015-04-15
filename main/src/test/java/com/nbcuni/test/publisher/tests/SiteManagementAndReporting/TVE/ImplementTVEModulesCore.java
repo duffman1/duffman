@@ -61,9 +61,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         if (!tveAuthExample.isMVPDConfigured()) {
         	tveAuthExample.ClickMVPDSetupLnk();
             MVPDConnection mvpdConnection = new MVPDConnection(webDriver);
-            mvpdConnection.EnterMVPDServiceURL("http://mvpd-admin.nbcuni.com/mvpd/service");
-            mvpdConnection.EnterRequestorID("Syfy");
-            mvpdConnection.SelectInstance("stage");
+            mvpdConnection.EnterMVPDServiceURL("http://mvpd-admin.nbcuni.com/mvpd/service/syfy/prod/desktop");
             mvpdConnection.EnterGenericErrorMessage("Oops! Something went wrong while fetching providers!");
             mvpdConnection.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
