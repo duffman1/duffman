@@ -1,7 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.Thumbnails;
 
-import java.util.List;
-
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
@@ -10,7 +8,6 @@ import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFileDisplay;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
@@ -55,17 +52,12 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
-    	navigation.Configuration("Media: thePlatform mpx settings");
-    	Settings settings = new Settings(webDriver);
+    	navigation.Configuration("Media: thePlatform mpx");
     	
-        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        	if (configuredAccounts.contains("DB TV")) {
-        		
-        		navigation.Structure("File types");
+        navigation.Structure("File types");
         		
         		FileTypes fileTypes = new FileTypes(webDriver);
-        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        		fileTypes.ClickManageFileDisplayLnk("DB TV");
         		
         		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
         		manageFileDisplay.CheckPubMPXImageCbx();
@@ -146,15 +138,10 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		
         	    //Cleanup
         	    navigation.Structure("File types");
-        	    fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        	    fileTypes.ClickManageFileDisplayLnk("DV TV");
         		manageFileDisplay.UnCheckPubMPXImageCbx();
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
-        	}
-        	else {
-        		Assert.fail("DB TV account must be configured.");
-        	}
-        
-        
+        	
     }
 }

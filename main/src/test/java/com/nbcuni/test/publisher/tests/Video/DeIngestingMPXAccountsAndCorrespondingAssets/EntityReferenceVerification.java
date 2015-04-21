@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets;
 
 import java.util.Arrays;
-import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -13,7 +12,6 @@ import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.FieldCollections;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Edit;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.FieldSettings;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class EntityReferenceVerification extends ParentTest{
@@ -33,13 +31,9 @@ public class EntityReferenceVerification extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-    	navigation.Configuration("Media: thePlatform mpx settings");
-        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        //Setup
-        if (configuredAccounts.contains("DB TV")) {
-        		
-        	//Step 1
+    	navigation.Configuration("Media: thePlatform mpx");
+        
+        //Step 1
         	navigation.Structure("Content types");
         	ContentTypes contentTypes = new ContentTypes(webDriver);
         	contentTypes.ClickAddContentLnk();
@@ -350,10 +344,7 @@ public class EntityReferenceVerification extends ParentTest{
         		contentParent.VerifyMessageStatus(contentTypeName + " " + title + " has been created.");
         		
         		//Step 39 through 43 - N/A as de-ingestion occurs previously
-        	}
-        	else {
-        		Assert.fail("DB TV account must be configured.");
-        	}
+        	
         
     }
 }

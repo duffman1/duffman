@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.PlayerImport;
 
-import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -12,7 +11,6 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddPlayer;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ImportPlayer extends ParentTest{
@@ -28,13 +26,9 @@ public class ImportPlayer extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
         
-        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        	if (configuredAccounts.contains("DB TV")) {
-        		
-        		//Step 1
+        //Step 1
         		MPXLogin mpxLogin = new MPXLogin(webDriver);
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
@@ -71,9 +65,5 @@ public class ImportPlayer extends ParentTest{
         	    editMPXVideo.SelectPubMPXVideoPlayer(playerTitle);
         	    contentParent.ClickSaveBtn();
         	    
-        	}
-        	else {
-        		Assert.fail("DB TV account must be configured.");
-        	}
         }
 }

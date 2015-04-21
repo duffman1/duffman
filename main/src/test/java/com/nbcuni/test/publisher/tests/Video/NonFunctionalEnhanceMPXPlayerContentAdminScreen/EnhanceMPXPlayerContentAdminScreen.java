@@ -5,8 +5,11 @@ import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+
 import org.testng.annotations.Test;
-import java.util.List;
+
+import java.util.Arrays;
+
 import org.testng.Assert;
 
 public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
@@ -38,10 +41,9 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         //Step 1a
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
         
         //Step 2
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	navigation.Content("Files", "mpxPlayers");
         	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.VerifyMPXSearchHeaderColumnOrder();
@@ -49,9 +51,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         	//Step 3 - NA, redundant as step 2
         	
         	//Step 4
-        	if (configuredAccounts.contains("DB TV")) {
-        	
-        		String initialFirstResult = searchFor.GetFirstMPXPlayerSearchResult();
+        	String initialFirstResult = searchFor.GetFirstMPXPlayerSearchResult();
         		int initialResultSize = searchFor.GetMPXSearchResultSize();
         		searchFor.EnterTitle("Automation");
         		searchFor.ClickApplyBtn();
@@ -68,13 +68,13 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		//Step 6a - already executed first line of step 2
         		
         		//Step 6b
-        		searchFor.VerifyMPXPlayerAccountOptions(configuredAccounts);
+        		searchFor.VerifyMPXPlayerAccountOptions(Arrays.asList("DB TV"));
         		
         		//Step 6c
-        		searchFor.SelectMPXPlayerAccount(configuredAccounts.get(0));
+        		searchFor.SelectMPXPlayerAccount("DB TV");
         		searchFor.ClickApplyBtn();
         		webDriver.switchTo().defaultContent();
-        		searchFor.VerifyMPXResultSetSource(configuredAccounts.get(0));
+        		searchFor.VerifyMPXResultSetSource("DB TV");
         		
         		//Step 7
         		searchFor.ClickResetBtn();
@@ -97,7 +97,5 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		
         		//Step 10 - NA for automation purposes
         		
-        	}
-        	
     }
 }

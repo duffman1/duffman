@@ -10,7 +10,6 @@ import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
@@ -73,13 +72,9 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
         
-        	//Setup
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	if (configuredAccounts.contains("DB TV")) {
-        		
-        		navigation.Structure("File types");
+        	navigation.Structure("File types");
         		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickEditFileTypeLnk("MPX Video for Account \"DB TV\" (2312945284)");
         		MPXFileType mpxFileType = new MPXFileType(webDriver);
@@ -87,13 +82,10 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
         		if (isMPXValueOverrideEnabled == false) {
             	
         			mpxFileType.ClickSaveBtn();
-        			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
+        			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + "DB TV");
         			contentParent.VerifyMessageStatus("has been updated.");
         		}
-        	}
-        	else {
-        		Assert.fail("DB TV account must be configured.");
-        	}
+        	
 
         	//Step 2 onward will use an existing mpx published video
             navigation.Content("Files", "mpxMedia");

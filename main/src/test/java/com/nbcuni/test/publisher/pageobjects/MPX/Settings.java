@@ -11,9 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -32,7 +30,6 @@ import java.util.concurrent.TimeUnit;
 public class Settings {
 
     private Driver webDriver;
-    private WebDriverWait wait;
     private Cron cron;
     private MPXMedia mpxMedia;
     private Config config;
@@ -42,7 +39,6 @@ public class Settings {
     public Settings(Driver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
         mpxMedia = new MPXMedia(webDriver);
         cron = new Cron(webDriver);
         config = new Config();
@@ -50,35 +46,20 @@ public class Settings {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    @FindBy(how = How.XPATH, using = "//fieldset[@id='edit-accounts']//a")
-    private WebElement AddAccounts_Lnk;
+    @FindBy(how = How.XPATH, using = "//a[text()='Add mpx account']")
+    private WebElement AddMPXAccount_Lnk;
     
-    @FindBy(how = How.XPATH, using = "//fieldset[@id='edit-account-list']//a")
-    private WebElement AccountList_Lnk;
+    @FindBy(how = How.XPATH, using = "//td[text()='No mpx accounts available.']")
+    private WebElement NoMPXAccounts_Txt;
     
-    @FindBy(how = How.CSS, using = "input[id*='edit-accounts-new-0-theplatform-username']")
+    @FindBy(how = How.ID, using = "edit-username")
     private WebElement Username_Txb;
     
-    @FindBy(how = How.CSS, using = "input[id*='edit-accounts-new-0-theplatform-password']")
+    @FindBy(how = How.ID, using = "edit-password")
     private WebElement Password_Txb;
     
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[1]")
-    private WebElement SelectImportAccount1_Ddl;
-    
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[2]")
-    private WebElement SelectImportAccount2_Ddl;
-    
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[3]")
-    private WebElement SelectImportAccount3_Ddl;
-    
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[4]")
-    private WebElement SelectImportAccount4_Ddl;
-    
-    @FindBy(how = How.XPATH, using = "(//select[contains(@id, 'edit-import-accounts-settings')])[5]")
-    private WebElement SelectImportAccount5_Ddl;
-    
-    @FindBy(how = How.ID, using = "edit-import-accounts-actions-submit")
-    private WebElement SetImportAccount_Btn;
+    @FindBy(how = How.XPATH, using = "//select[@id='edit-import-account']")
+    private WebElement SelectImportAccount_Ddl;
     
     @FindBy(how = How.ID, using = "edit-media-theplatform-mpx-cron-videos")
     private WebElement SyncMPXMediaOnCron_Cbx;
@@ -86,11 +67,11 @@ public class Settings {
     @FindBy(how = How.ID, using = "edit-submit")
     private WebElement SaveConfigurations_Btn;
     
-    @FindBy(how = How.CSS, using = "input[value='Connect to MPX']")
-    private WebElement ConnectToMPX_Btn;
+    @FindBy(how = How.CSS, using = "input[value='Continue and edit']")
+    private WebElement ContinueAndEdit_Btn;
     
-    @FindBy(how = How.CSS, using = "input[value='Add New Account']")
-    private WebElement AddNewAccount_Btn;
+    @FindBy(how = How.CSS, using = "input[value='Confirm']")
+    private WebElement Confirm_Btn;
     
     @FindBy(how = How.CSS, using = "input[value='Save']")
     private WebElement Save_Btn;
@@ -98,12 +79,25 @@ public class Settings {
     @FindBy(how = How.ID, using = "edit-media-theplatform-mpx-output-message-watchdog-severity")
     private WebElement DisplayMPXDebugMessageLevel_Ddl;
     
-    private List<WebElement> DeleteAccount_Btns() {
-     return webDriver.findElements(By.cssSelector("input[value*='Delete Account']"));
+    private List<WebElement> DeleteAccount_Lnks() {
+     return webDriver.findElements(By.linkText("Delete"));
     }
     
-    @FindBy(how = How.CSS, using = "input[value='Delete']")
-    private WebElement Delete_Btn;
+    @FindBy(how = How.LINK_TEXT, using = "Delete")
+    private WebElement Delete_Lnk;
+    
+    @FindBy(how = How.LINK_TEXT, using = "Edit")
+    private WebElement Edit_Lnk;
+    
+    @FindBy(how = How.LINK_TEXT, using = "Players not imported")
+    private WebElement PlayersNotImported_Lnk;
+    
+    @FindBy(how = How.LINK_TEXT, using = "Not configured")
+    private WebElement NotConfigured_Lnk;
+    
+    private WebElement DefaultPlayer_Ddl(String player) {
+    	return webDriver.findElement(By.xpath("//select[@id='edit-default-player']//option[contains(text(), '" + player + "')]"));
+    }
     
     private List<WebElement> AllUsername_Txbs() {
      return webDriver.findElements(By.xpath("//input[contains(@id, 'edit-accounts-existing')][contains(@id, 'username')]"));
@@ -111,32 +105,6 @@ public class Settings {
     
     
     //PAGE OBJECT METHODS
-    public void ExpandAddAccounts() throws Exception {
-    
-    	if (AddNewAccount_Btn.isDisplayed() == false) {
-    
-    		Reporter.log("Click the 'ADD ACCOUNTS' link.");
-    		AddAccounts_Lnk.click();
-    
-    		Reporter.log("Wait for 'Add New Account' button to be visible.");
-    		wait.until(ExpectedConditions.visibilityOf(AddNewAccount_Btn));
-    	}
-    
-    }
-    
-    public void ExpandAccountList() throws Exception {
-    
-    	if (DeleteAccount_Btns().get(0).isDisplayed() == false) {
-    
-    		Reporter.log("Click the 'ACCOUNT LIST' link.");
-    		AccountList_Lnk.click();
-    
-    		Reporter.log("Wait for 'Delete Account' button to be visible.");
-    		wait.until(ExpectedConditions.visibilityOf(DeleteAccount_Btns().get(0)));
-    	}
-    
-    }
-    
     public void EnterUsername(String userName) throws Exception {
     
     	Reporter.log("Enter mpx username in the 'Username for New Account' text box.");
@@ -155,11 +123,38 @@ public class Settings {
     	Reporter.log("Click the 'Save' button.");
     	Save_Btn.click();
     }
-
-    public void ClickAddNewAccountBtn() throws Exception {
     
-    	Reporter.log("Click the 'Add New Account' button.");
-    	AddNewAccount_Btn.click();
+    public void ClickPlayersNotImportedLnk() throws Exception {
+        
+    	Reporter.log("Click the 'Players not imported' link.");
+    	PlayersNotImported_Lnk.click();
+    }
+    
+    public void ClickNotConfiguredLnk() throws Exception {
+        
+    	Reporter.log("Click the 'Not configured' link.");
+    	NotConfigured_Lnk.click();
+    }
+
+    public void ClickAddMPXAccountLnk() throws Exception {
+    
+    	Reporter.log("Click the 'Add New Account' link.");
+    	AddMPXAccount_Lnk.click();
+    	
+    }
+    
+    public void ClickConfirmBtn() throws Exception {
+        
+    	Reporter.log("Click the 'Confirm' button.");
+    	Confirm_Btn.click();
+    	
+    }
+    
+    public void SelectDefaultPlayer(String player) throws Exception {
+        
+    	Reporter.log("Select '" + player + "' from the 'Default Player' drop down list.");
+    	DefaultPlayer_Ddl(player).click();
+    	
     }
     
     public void VerifyImportAccountOptions(List<String> accountNames) throws Exception {
@@ -167,52 +162,11 @@ public class Settings {
      //TODO - clean this up and make it a bit more efficient
      webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     
-     boolean ddl2Present = false;
-     boolean ddl3Present = false;
-     boolean ddl4Present = false;
-     boolean ddl5Present = false;
-     Select ddl2 = null;
-     Select ddl3 = null;
-     Select ddl4 = null;
-     Select ddl5 = null;
+     Select ddl1 = new Select(SelectImportAccount_Ddl);
     
-     Select ddl1 = new Select(SelectImportAccount1_Ddl);
-    
-     try {
-    
-    	 ddl2 = new Select(SelectImportAccount2_Ddl);
-    	 ddl2Present = true;
-     }
-     catch (Exception e) {}
-    
-     try {
-    
-    	 ddl3 = new Select(SelectImportAccount3_Ddl);
-    	 ddl3Present = true;
-     }
-     catch (Exception e) {}
-
-        try {
-
-            ddl4 = new Select(SelectImportAccount4_Ddl);
-            ddl4Present = true;
-        }
-        catch (Exception e) {}
+     Reporter.log("Get the account options from the 'Select Import Account for Account...' drop down lists.");
+     List<WebElement> listOptions = ddl1.getOptions();
         
-        try {
-
-            ddl5 = new Select(SelectImportAccount5_Ddl);
-            ddl5Present = true;
-        }
-        catch (Exception e) {}
-    
-        Reporter.log("Get the account options from the 'Select Import Account for Account...' drop down lists.");
-        List<WebElement> listOptions = ddl1.getOptions();
-        if (ddl2Present == true) { listOptions.addAll(ddl2.getOptions()); }
-        if (ddl3Present == true) { listOptions.addAll(ddl3.getOptions()); }
-        if (ddl4Present == true) { listOptions.addAll(ddl4.getOptions()); }
-        if (ddl5Present == true) { listOptions.addAll(ddl5.getOptions()); }
-    
      List<String> optionValues = new ArrayList<String>();
      for (WebElement option : listOptions) {
     
@@ -235,12 +189,11 @@ public class Settings {
     
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     
-    	Reporter.log("Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.");
+    	Reporter.log("Check if the 'No mpx accounts available' text is present. If it is then MPX has not been previously enabled.");
     	boolean mpxAlreadyConfigured = true;
     
     	try {
-    
-    		ConnectToMPX_Btn.isDisplayed();
+    		NoMPXAccounts_Txt.isDisplayed();
     		mpxAlreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {
@@ -250,12 +203,6 @@ public class Settings {
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
     	return mpxAlreadyConfigured;
-    }
-    
-    public void ClickSetImportAccountBtn() throws Exception {
-    
-    	Reporter.log("click the 'Set Import Account' button.");
-    	SetImportAccount_Btn.click();
     }
     
     public void UnCheckSyncMPXMediaOnCronBtn() throws Exception {
@@ -280,73 +227,16 @@ public class Settings {
     	SaveConfigurations_Btn.click();
     }
     
-    public void ClickConnectToMPXBtn() throws Exception {
+    public void ClickContinueAndEditBtn() throws Exception {
     
-    	Reporter.log("Click the 'Connect to MPX' button.");
-    	ConnectToMPX_Btn.click();
+    	Reporter.log("Click the 'Continue and edit' button.");
+    	ContinueAndEdit_Btn.click();
     }
     
-    public void SelectImportAccount1(String account) throws Exception {
+    public void SelectImportAccount(String account) throws Exception {
     
-    	Reporter.log("Select '" + account + "' from the first 'Select Import Account for...' drop down list.");
-    	new Select(SelectImportAccount1_Ddl).selectByVisibleText(account);
-    }
-    
-    public void SelectImportAccount2(String account) throws Exception {
-    
-    	Reporter.log("Select '" + account + "' from the second 'Select Import Account for...' drop down list.");
-    	new Select(SelectImportAccount2_Ddl).selectByVisibleText(account);
-    }
-    
-    public void SelectImportAccount3(String account) throws Exception {
-    
-    	Reporter.log("Select '" + account + "' from the third 'Select Import Account for...' drop down list.");
-    	new Select(SelectImportAccount3_Ddl).selectByVisibleText(account);
-    }
-    
-    public void SelectImportAccount4(String account) throws Exception {
-    
-    	Reporter.log("Select '" + account + "' from the fourth 'Select Import Account for...' drop down list.");
-    	new Select(SelectImportAccount4_Ddl).selectByVisibleText(account);
-    }
-    
-    public void VerifyImportAccountsDisabled() throws Exception {
-    
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    
-    	boolean ddl2Present = false;
-    	boolean ddl3Present = false;
-    
-    	Select ddl1 = new Select(SelectImportAccount1_Ddl);
-    	Select ddl2 = null;
-    	Select ddl3 = null;
-    
-    	try {
-    		ddl2 = new Select(SelectImportAccount2_Ddl);
-    		ddl2Present = true;
-    	}
-    	catch (NoSuchElementException e) {
-    		ddl2Present = false;
-    	}
-    
-    	try {
-    		ddl3 = new Select(SelectImportAccount3_Ddl);
-    		ddl3Present = true;
-    	}
-    	catch (NoSuchElementException e) {
-    		ddl3Present = false;
-    	}
-    
-    	Reporter.log("Verify the 'Select Import Account for...' drop down lists are disabled.");
-    	Assert.assertTrue(ddl1.getFirstSelectedOption().isEnabled() == false);
-    	if (ddl2Present == true) {
-    		Assert.assertTrue(ddl2.getFirstSelectedOption().isEnabled() == false);
-    	}
-    	if (ddl3Present == true) {
-    		Assert.assertTrue(ddl3.getFirstSelectedOption().isEnabled() == false);
-    	}
-    
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	Reporter.log("Select '" + account + "' from the 'Import account' drop down list.");
+    	new Select(SelectImportAccount_Ddl).selectByVisibleText(account);
     }
     
     public void VerifyUsernameValues(String userName, int txbCount) throws Exception {
@@ -361,52 +251,6 @@ public class Settings {
     		Reporter.log("Verify the 'Username' text box value equals '" + userName + "'.");
     		Assert.assertEquals(el.getAttribute("value"), userName);
     	}
-    }
-    
-    public List<String> GetImportAccountSelectedOptions() throws Exception {
-    
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    
-    	boolean ddl2Present = false;
-    	boolean ddl3Present = false;
-        boolean ddl4Present = false;
-        Select ddl2 = null;
-        Select ddl3 = null;
-        Select ddl4 = null;
-    
-        Select ddl1 = new Select(SelectImportAccount1_Ddl);
-    
-        try {
-    
-        	ddl2 = new Select(SelectImportAccount2_Ddl);
-        	ddl2Present = true;
-        }
-        catch (Exception e) {}
-    
-        try {
-    
-        	ddl3 = new Select(SelectImportAccount3_Ddl);
-        	ddl3Present = true;
-        }
-        catch (Exception e) {}
-
-        try {
-
-            ddl4 = new Select(SelectImportAccount4_Ddl);
-            ddl4Present = true;
-        }
-        catch (Exception e) {}
-    
-        Reporter.log("Get all the selected import account options and store to a list.");
-        List<String> selectedOptions = new ArrayList<String>();
-        selectedOptions.add(ddl1.getFirstSelectedOption().getText());
-        if (ddl2Present == true) { selectedOptions.add(ddl2.getFirstSelectedOption().getText()); }
-        if (ddl3Present == true) { selectedOptions.add(ddl3.getFirstSelectedOption().getText()); }
-        if (ddl4Present == true) { selectedOptions.add(ddl4.getFirstSelectedOption().getText()); }
-    
-        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-    
-        return selectedOptions;
     }
     
     public void EnsureMPXDebugMessageLevelNotVerbose() {
@@ -426,32 +270,40 @@ public class Settings {
     
     }
     
-    public List<WebElement> GetAllDeleteAccountButtons() throws Exception {
+    public List<WebElement> GetAllDeleteAccountLnks() throws Exception {
     
-    	Reporter.log("Get each of the 'Delete Account' buttons");
+    	Reporter.log("Get each of the 'Delete Account' links");
     	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    	List<WebElement> allElements = DeleteAccount_Btns();
+    	List<WebElement> allElements = DeleteAccount_Lnks();
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
     	return allElements;
     }
     
-    public void ClickDeleteBtn() throws Exception {
+    public void ClickDeleteLnk() throws Exception {
     
-    	Reporter.log("Click the 'Delete' button.");
-    	Delete_Btn.click();
+    	Reporter.log("Click the 'Delete' link.");
+    	Delete_Lnk.click();
+    }
+    
+    public void ClickEditLnk() throws Exception {
+        
+    	Reporter.log("Click the 'Edit' link.");
+    	Edit_Lnk.click();
     }
     
     public void ConfigureMPXIfNeeded() throws Exception {
     	
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
     	
     	if (this.IsMPXConfigured() == false) {
+    		this.ClickAddMPXAccountLnk();
     		this.EnterUsername(config.getConfigValueString("MPXUsername"));
         	this.EnterPassword(config.getConfigValueString("MPXPassword"));
-        	this.ClickConnectToMPXBtn();
-        	this.SelectImportAccount1("DB TV");
-        	this.ClickSetImportAccountBtn();
+        	this.ClickContinueAndEditBtn();
+        	this.SelectImportAccount("DB TV");
+        	this.ClickSaveBtn();
+        	navigation.ClickPrimaryTabNavLnk("Settings");
         	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		this.UnCheckSyncMPXMediaOnCronBtn();
         	}
@@ -459,10 +311,12 @@ public class Settings {
         		this.CheckSyncMPXMediaOnCronBtn();
         	}
         	this.ClickSaveConfigurationsBtn();
-        	navigation.Content("Files", "mpxMedia");
-        	mpxMedia.ExpandMPXMedia();
-            mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
-            mpxMedia.ClickSyncMPXMediaNowLnk();
+        	navigation.ClickPrimaryTabNavLnk("Accounts");
+        	this.ClickPlayersNotImportedLnk();
+        	mpxMedia.ClickSyncMPXPlayersNowLnk();
+        	this.ClickNotConfiguredLnk();
+        	this.SelectDefaultPlayer("AutomationPlayer1");
+        	this.ClickSaveBtn();
             cron.RunCron();
     	}
     	else {
@@ -473,8 +327,8 @@ public class Settings {
     
     public void ConfigureMPXIngestionType() throws Exception {
     	
-    	navigation.Configuration("Media: thePlatform mpx settings");
-    	
+    	navigation.Configuration("Media: thePlatform mpx");
+    	navigation.ClickPrimaryTabNavLnk("Settings");
     	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		this.UnCheckSyncMPXMediaOnCronBtn();
         }
@@ -485,7 +339,7 @@ public class Settings {
         
         navigation.Content("Files", "mpxMedia");
         mpxMedia.ExpandMPXMedia();
-        mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
+        mpxMedia.SelectMPXPlayerForAccount("AutomationPlayer1");
         mpxMedia.ClickSyncMPXMediaNowLnk();
         
     }

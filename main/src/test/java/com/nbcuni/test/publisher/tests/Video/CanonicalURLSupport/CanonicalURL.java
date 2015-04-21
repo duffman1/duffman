@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport;
 
 import java.util.Arrays;
-import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -9,7 +8,6 @@ import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFields;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
@@ -33,17 +31,13 @@ public class CanonicalURL extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-        navigation.Configuration("Media: thePlatform mpx settings");
-    	Settings settings = new Settings(webDriver);
-        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        Reporter.log("STEP 2");
-        if (configuredAccounts.contains("DB TV")) {
-        	navigation.Structure("File types");
+        navigation.Configuration("Media: thePlatform mpx");
+    	Reporter.log("STEP 2");
+        navigation.Structure("File types");
         	
         	Reporter.log("STEP 3");
         	FileTypes fileTypes = new FileTypes(webDriver);
-        	fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
+        	fileTypes.ClickManageFieldsLnk("DB TV");
         		
         	Reporter.log("STEP 4");
         	ManageFields manageFields = new ManageFields(webDriver);
@@ -62,7 +56,7 @@ public class CanonicalURL extends ParentTest{
     		navigation.Structure("File types");
     			
         	Reporter.log("STEP 7");
-        	fileTypes.ClickEditFileTypeLnk(configuredAccounts.get(0));
+        	fileTypes.ClickEditFileTypeLnk("DB TV");
         	MPXFileType mpxFileType = new MPXFileType(webDriver);
             mpxFileType.SelectURLAliasField("MPX Media Related Link");
         	mpxFileType.ClickSaveBtn();
@@ -123,10 +117,6 @@ public class CanonicalURL extends ParentTest{
         	Reporter.log("Verify URL equals '" + config.getConfigValueString("AppURL") + "/" + canonicalURL + "'.");
         	Assert.assertTrue(webDriver.getCurrentUrl().equals(config.getConfigValueString("AppURL") + "/" + canonicalURL));
         		
-        }
-        else {
-        	Assert.fail("DB TV account must be configured.");
-        }
         
     }
 }
