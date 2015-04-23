@@ -138,7 +138,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		
         	    //Cleanup
         	    navigation.Structure("File types");
-        	    fileTypes.ClickManageFileDisplayLnk("DV TV");
+        	    fileTypes.ClickManageFileDisplayLnk("DB TV");
         		manageFileDisplay.UnCheckPubMPXImageCbx();
         		manageFileDisplay.ClickSaveConfigurationBtn();
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
