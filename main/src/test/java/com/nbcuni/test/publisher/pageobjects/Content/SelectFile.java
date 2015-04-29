@@ -199,7 +199,9 @@ public class SelectFile {
     public void EnterFilePath(String pathToFile) throws Exception {
     	
     	Reporter.log("Enter the file path for file upload.");
-    	waitFor.ElementVisible(BrowseToFile_Upl).sendKeys(pathToFile);
+    	WebElement element = waitFor.ElementVisible(BrowseToFile_Upl);
+    	Thread.sleep(1000);
+    	element.sendKeys(pathToFile);
     	
     }
     
@@ -265,6 +267,7 @@ public class SelectFile {
     	
     	Reporter.log("Wait for the file link to be visible after upload.");
     	waitFor.ElementVisible(File_Lnk(fileName));
+    	Thread.sleep(1000);
     	
     }
     
