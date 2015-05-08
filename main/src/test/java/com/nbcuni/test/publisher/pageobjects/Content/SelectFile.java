@@ -367,6 +367,7 @@ public class SelectFile {
     }
     
     public void SelectDefaultCoverImg() throws Exception {
+    	Thread.sleep(2000);
     	this.SwitchToSelectFileFrm();
     	Integer randomInt = random.GetInteger(0, 3);
         String defaultImgFile = "HanSolo1.jpg";

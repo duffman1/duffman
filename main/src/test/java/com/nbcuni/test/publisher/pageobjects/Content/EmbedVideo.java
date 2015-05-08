@@ -116,28 +116,31 @@ public class EmbedVideo {
     	
     }
     
-    public void RightClickEditMPXVideoBtn(String index) throws Exception {
+    @SuppressWarnings("deprecation")
+	public void RightClickEditMPXVideoBtn(String index) throws Exception {
     	
     	this.SwitchToSynopsisFrm();
     	
     	Reporter.log("Right click and select the 'Edit MPX Video' option for video with index '" + index + "'.");
     	Thread.sleep(1000);
     	new Actions(webDriver).contextClick(waitFor.ElementVisible(EmbededMPXVideo_Tag(index)))
-    		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
-    		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
+    		.pause(1000).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+    		.sendKeys(Keys.RETURN).build().perform();
     	
     	webDriver.switchTo().defaultContent();
     	
     }
     
-    public void RightClickEditYouTubeVideoBtn(String index) throws Exception {
+    @SuppressWarnings("deprecation")
+	public void RightClickEditYouTubeVideoBtn(String index) throws Exception {
     	
     	this.SwitchToSynopsisFrm();
     	
     	Reporter.log("Right click and select the 'Edit YouTube Video' option for video with index '" + index + "'.");
+    	Thread.sleep(1000);
     	new Actions(webDriver).contextClick(waitFor.ElementVisible(EmbededYouTubeVideo_Tag(index)))
-    		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
-    		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
+    		.pause(1000).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+    		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
     	
     	webDriver.switchTo().defaultContent();
     	
