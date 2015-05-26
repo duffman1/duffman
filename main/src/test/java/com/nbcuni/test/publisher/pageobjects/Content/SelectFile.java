@@ -389,21 +389,14 @@ public class SelectFile {
         	break;
         }
     	this.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + defaultImgFile);
-    	this.SwitchToSelectFileFrm();
     	this.ClickUploadBtn();
-    	this.SwitchToSelectFileFrm();
     	this.WaitForFileUploaded(defaultImgFile);
-    	this.SwitchToSelectFileFrm();
     	this.ClickNextBtn();
-    	this.SwitchToSelectFileFrm();
     	Boolean publicFileOptionPresent = this.ClickPublicLocalFilesRdb();
     	if (publicFileOptionPresent == true) {
-    		this.SwitchToSelectFileFrm();
     		this.ClickNextBtn();
     	}
-    	this.SwitchToSelectFileFrm();
     	this.VerifyFileImagePresent("HanSolo");
-    	this.SwitchToSelectFileFrm();
     	this.ClickSaveBtn();
     	this.WaitForSelectFileFrameClose();
     	
