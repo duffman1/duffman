@@ -135,6 +135,12 @@ public class SelectFile {
     	
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
+    	//TODO - this section is for a tricky chrome driver select file frame issue with drupal
+    	//this ugliness should be refactored as soon as possible
+    	webDriver.switchTo().defaultContent();
+    	Thread.sleep(10000);
+    	webDriver.switchTo().frame(waitFor.ElementPresent(SelectFile_Frm));
+    	
     }
     
     public void ClickViewLibraryBtn() throws Exception {
