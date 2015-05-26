@@ -24,7 +24,7 @@ public class VideoSnippetsInContent extends ParentTest{
      * TEST CASE - TC6534
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/28025359436
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx" })
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
     public void VideoSnippetsInContent_TC6534() throws Exception{
         
         	Reporter.log("STEP 1");
