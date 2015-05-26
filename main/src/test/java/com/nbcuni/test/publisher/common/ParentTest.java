@@ -81,14 +81,9 @@ public class ParentTest {
     @AfterMethod(alwaysRun = true)
     public void stopSelenium(ITestResult result) throws Exception {
         
-    	try {
-    		if (!result.isSuccess()) {
-                
-    			applib.attachScreenshot(result);  
-    		}
-        } catch (Exception e) {
-        	System.out.println("Failed to capture screenshot");
-        }
+    	if (!result.isSuccess()) {
+    		applib.attachScreenshot(result);  
+    	}
     	
     	/* TODO - implement this
     	try {

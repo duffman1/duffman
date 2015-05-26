@@ -47,14 +47,24 @@ public class AppLib {
         
         String filePath = config.getConfigValueFilePath("PathToScreenshots") + methodName + ".png";
         Reporter.setCurrentTestResult(result); 
-        Reporter.log("Screenshot saved to " + filePath + " ");
-        System.out.println("Screenshot saved to " + filePath);
-        File scrFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);    
-        FileUtils.copyFile(scrFile, new File(filePath));
+        
+        try {
+        	File scrFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);    
+        	FileUtils.copyFile(scrFile, new File(filePath));
+        	Reporter.log("Screenshot saved to " + filePath + " ");
+            System.out.println("Screenshot saved to " + filePath);
+            Reporter.log("<br><br><a href='" + filePath + "'> <img src='./" + methodName 
+            		+ ".png' height='700' width='700'/> </a>");
             
-        Reporter.log("<br><br><a href='" + filePath + "'> <img src='./" + methodName + ".png' height='700' width='700'/> </a>");
+        } catch (Exception e) {
+        	Reporter.log("FAILED TO CAPTURE SCREENSHOT___");
+        	Reporter.log(e.toString());
+        	System.out.println("Failed to capture screenshot.");
+        	e.printStackTrace();
+        }
+        
         Reporter.setCurrentTestResult(null);
-      
+        
     }
     
     public void attachReporterLogging(ITestResult result) throws Exception {
