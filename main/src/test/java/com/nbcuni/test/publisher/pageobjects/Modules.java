@@ -139,7 +139,7 @@ public class Modules {
     		
         	boolean additionalModulesRequired = false;
         	
-        	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         	try {
         		webDriver.findElement(Continue_Btn).isDisplayed();
         		additionalModulesRequired = true;
