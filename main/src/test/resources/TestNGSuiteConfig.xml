@@ -1,4 +1,4 @@
-<suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="3">
+<suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="4">
 
 	<!--RUNTIME CONFIG-->
 	<parameter name="AppURL" value="http://qa5.publisher7.com"></parameter>
@@ -66,6 +66,7 @@
   	<parameter name="WaitForWaitTime" value="30"></parameter> <!-- Seconds -->
   	<parameter name="PageLoadWaitTime" value="90"></parameter> <!-- Seconds -->
   	<parameter name="PollingTime" value="500"></parameter> <!-- Milliseconds -->
+  	<parameter name="DriverRecyclePause" value="3000"></parameter> <!-- Milliseconds > than node recycle -->
   	
   	<!--MISC CONFIG-->
   	<parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"></parameter>
