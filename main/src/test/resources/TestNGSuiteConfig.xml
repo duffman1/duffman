@@ -5,21 +5,17 @@
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
-	<parameter name="RunRemotely" value="false"></parameter>
+	<parameter name="RunRemotely" value="true"></parameter>
 	<parameter name="SendReportAutoEmails" value="true"></parameter>
   	<parameter name="UploadReportToRally" value="false"></parameter>
   	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
   	<parameter name="GithubUpdatePRResults" value="false"></parameter>
   	<parameter name="RunSetupScripts" value="true"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
-<<<<<<< HEAD
-  	<parameter name="ClearCacheOnFailure" value="false"></parameter>
-=======
-  	<parameter name="ClearCacheOnFailure" value="true"></parameter>
->>>>>>> refs/heads/Brandon
-  	<parameter name="SendReportEmailAddress" value="david.newkirk@nbcuni.com, pete.duff@nbcuni.com, Sruthi.Yarlagadda@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
+    <parameter name="ClearCacheOnFailure" value="true"></parameter>
+    <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"></parameter>
   	
   	<!--REPORT CONFIG-->
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
@@ -59,7 +55,7 @@
   	<parameter name="MPXPassword" value="Pa55word"></parameter>
   	<parameter name="MPXVideoUploadPause" value="5000"></parameter>
   	<parameter name="MPXAssetBufferPause" value="0"></parameter>
-  	<parameter name="DrushIngestion" value="false"></parameter>
+  	<parameter name="DrushIngestion" value="true"></parameter>
   	
   	<!--SIKULI CONFIG-->
   	<parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"></parameter>
@@ -70,6 +66,7 @@
   	<parameter name="WaitForWaitTime" value="30"></parameter> <!-- Seconds -->
   	<parameter name="PageLoadWaitTime" value="90"></parameter> <!-- Seconds -->
   	<parameter name="PollingTime" value="500"></parameter> <!-- Milliseconds -->
+  	<parameter name="DriverRecyclePause" value="3000"></parameter> <!-- Milliseconds > than node recycle -->
   	
   	<!--MISC CONFIG-->
   	<parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"></parameter>

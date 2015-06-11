@@ -74,7 +74,6 @@ public class ImplementTVEModulesCore extends ParentTest {
         	Reporter.log("MVPD IS ALREADY CONFIGURED.");
         }
         
-        navigation.Home();
         if (!tveAuthExample.isAdobePassConfigured()) {
         	tveAuthExample.ClickAdobePassSetupLnk();
             AdobePass adobePass = new AdobePass(webDriver);
@@ -103,7 +102,6 @@ public class ImplementTVEModulesCore extends ParentTest {
         	Reporter.log("ADOBE PASS IS ALREADY CONFIGURED.");
         }
         
-        navigation.Home();
         tveAuthExample.ClickConfigureJQueryLnk();
         jqueryUpdate.SelectDefaultjQueryVersion("1.7");
         jqueryUpdate.ClickSaveConfigurationBtn();

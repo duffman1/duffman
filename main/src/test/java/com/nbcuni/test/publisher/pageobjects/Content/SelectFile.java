@@ -112,6 +112,9 @@ public class SelectFile {
     //PAGE OBJECT IDENTIFIERS
     public void SwitchToSelectFileFrm() throws Exception {
     	
+    	webDriver.switchTo().defaultContent();
+    	Thread.sleep(1000);
+    	
     	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	for (int I = 0; I <= timeout; I++) {
     		
@@ -134,12 +137,6 @@ public class SelectFile {
     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	errorChecking.VerifyNoMessageErrorsPresent();
-    	
-    	//TODO - this section is for a tricky chrome driver select file frame issue with drupal
-    	//this ugliness should be refactored as soon as possible
-    	webDriver.switchTo().defaultContent();
-    	Thread.sleep(10000);
-    	webDriver.switchTo().frame(waitFor.ElementPresent(SelectFile_Frm));
     	
     }
     
@@ -373,7 +370,7 @@ public class SelectFile {
     }
     
     public void SelectDefaultCoverImg() throws Exception {
-    	Thread.sleep(2000);
+    	
     	this.SwitchToSelectFileFrm();
     	Integer randomInt = random.GetInteger(0, 3);
         String defaultImgFile = "HanSolo1.jpg";

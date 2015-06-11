@@ -124,7 +124,8 @@ public class EmbedVideo {
     	Reporter.log("Right click and select the 'Edit MPX Video' option for video with index '" + index + "'.");
     	Thread.sleep(1000);
     	new Actions(webDriver).contextClick(waitFor.ElementVisible(EmbededMPXVideo_Tag(index)))
-    		.pause(1000).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+    		.pause(1000).sendKeys(Keys.ARROW_DOWN).pause(1000).sendKeys(Keys.ARROW_DOWN).pause(1000)
+    		.sendKeys(Keys.ARROW_DOWN).pause(1000).sendKeys(Keys.ARROW_DOWN)
     		.sendKeys(Keys.RETURN).build().perform();
     	
     	webDriver.switchTo().defaultContent();
@@ -139,8 +140,8 @@ public class EmbedVideo {
     	Reporter.log("Right click and select the 'Edit YouTube Video' option for video with index '" + index + "'.");
     	Thread.sleep(1000);
     	new Actions(webDriver).contextClick(waitFor.ElementVisible(EmbededYouTubeVideo_Tag(index)))
-    		.pause(1000).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
-    		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
+    		.pause(1000).sendKeys(Keys.ARROW_DOWN).pause(1000).sendKeys(Keys.ARROW_DOWN).pause(1000).sendKeys(Keys.ARROW_DOWN)
+    		.pause(1000).sendKeys(Keys.ARROW_DOWN).pause(1000).sendKeys(Keys.RETURN).build().perform();
     	
     	webDriver.switchTo().defaultContent();
     	

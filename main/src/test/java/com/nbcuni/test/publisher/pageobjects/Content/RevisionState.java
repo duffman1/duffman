@@ -1,10 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
-import java.util.List;
+import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -17,24 +17,27 @@ import org.testng.Reporter;
 
 public class RevisionState {
 
-    private Driver webDriver;
+	private Config config;
+    private Integer timeout;
+    private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public RevisionState(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    	config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
-    List<WebElement> Node_Num() {
-    	return webDriver.findElements(By.xpath("//tbody//td[@class='views-field views-field-vid']"));
+    private By Node_Num() {
+    	return By.xpath("//tbody//td[@class='views-field views-field-vid']");
     }
     
     //PAGE OBJECT METHODS
     public void VerifyRevisionCount(Integer revisionCount) throws Exception {
     	
     	Reporter.log("Verify the number of present revisions entries equals '" + revisionCount + "'.");
-    	Assert.assertTrue(Node_Num().size() == (revisionCount));
+    	Assert.assertTrue(waitFor.ElementsPresent(Node_Num()).size() == (revisionCount));
     	
     }
 

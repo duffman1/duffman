@@ -303,6 +303,23 @@ public class Settings {
         	this.ClickContinueAndEditBtn();
         	this.SelectImportAccount("DB TV");
         	this.ClickSaveBtn();
+        	
+        	this.ClickPlayersNotImportedLnk();
+        	mpxMedia.ClickSyncMPXPlayersNowLnk();
+        	this.ClickNotConfiguredLnk();
+        	this.SelectDefaultPlayer("AutomationPlayer1");
+        	this.ClickSaveBtn();
+        	
+        	navigation.ClickPrimaryTabNavLnk("Settings");
+        	this.CheckSyncMPXMediaOnCronBtn();
+        	this.ClickSaveConfigurationsBtn();
+        	
+        	navigation.Content("Files", "mpxMedia");
+        	mpxMedia.ClickSyncMPXMediaNowLnk();
+        	
+            cron.RunCron();
+            
+            navigation.Configuration("Media: thePlatform mpx");
         	navigation.ClickPrimaryTabNavLnk("Settings");
         	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		this.UnCheckSyncMPXMediaOnCronBtn();
@@ -310,14 +327,10 @@ public class Settings {
         	else {
         		this.CheckSyncMPXMediaOnCronBtn();
         	}
+        	
         	this.ClickSaveConfigurationsBtn();
         	navigation.ClickPrimaryTabNavLnk("Accounts");
-        	this.ClickPlayersNotImportedLnk();
-        	mpxMedia.ClickSyncMPXPlayersNowLnk();
-        	this.ClickNotConfiguredLnk();
-        	this.SelectDefaultPlayer("AutomationPlayer1");
-        	this.ClickSaveBtn();
-            cron.RunCron();
+            
     	}
     	else {
     		Reporter.log("MPX is already configured.");
