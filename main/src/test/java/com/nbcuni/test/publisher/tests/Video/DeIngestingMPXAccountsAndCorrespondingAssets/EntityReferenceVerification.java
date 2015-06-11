@@ -20,7 +20,7 @@ public class EntityReferenceVerification extends ParentTest{
      * TEST CASE - TC1886
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/18169766623
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx", "deprecated"})
     public void EntityReferenceVerification_TC1886() throws Exception{
     	
     	//Setup
