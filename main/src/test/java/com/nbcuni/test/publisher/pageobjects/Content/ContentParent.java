@@ -136,6 +136,13 @@ public class ContentParent {
     	
     }
     
+    public void VerifyPageURL(String url) throws Exception {
+    	
+    	Reporter.log("Verify page url is '" + url + "'.");
+    	waitFor.URL(url);
+    	
+    }
+    
     public void VerifySourceInPage(List<String> srcItems) throws Exception {
     	
     	for (final String source : srcItems) {

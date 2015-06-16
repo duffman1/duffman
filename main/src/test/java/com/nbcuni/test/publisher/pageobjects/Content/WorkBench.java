@@ -101,7 +101,14 @@ public class WorkBench {
     public void VerifyMPXPlayerSourceNotPresent(String source) throws Exception {
         
     	Reporter.log("Verify the mpx video player frame source does NOT contain '" + source + "'.");
-        Assert.assertFalse(waitFor.ElementVisible(MPXPlayer_Frm).getAttribute("src").contains(source));
+        waitFor.ElementNotContainsAttribute(MPXPlayer_Frm, "src", source);
+        
+    }
+    
+    public void VerifyMPXPlayerSourcePresent(String source) throws Exception {
+        
+    	Reporter.log("Verify the mpx video player frame source does NOT contain '" + source + "'.");
+        waitFor.ElementContainsAttribute(MPXPlayer_Frm, "src", source);
         
     }
     
@@ -120,15 +127,6 @@ public class WorkBench {
     	Reporter.log("Verify that the image link is present and contains file url '" + imageHref + "'.");
     	Assert.assertTrue(waitFor.ElementVisible(WorkBenchImg_Lnk(linkIndex)).getAttribute("href").contains(imageHref));
     	
-    }
-    
-    public void VerifyFileImageSize(String imageIndex, String height, String width) throws Exception {
-    	
-    	Reporter.log("Assert that the workbench image width = '" + width + "' and the image height = '" + height + "'.");
-    	WebElement ele = waitFor.ElementVisible(WorkBench_Img(imageIndex));
-    	Assert.assertEquals(ele.getAttribute("width"), width);
-    	Assert.assertEquals(ele.getAttribute("height"), height);
-    	  
     }
     
     public String GetFileImageId(String imageIndex) throws Exception {

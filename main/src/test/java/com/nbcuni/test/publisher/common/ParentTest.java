@@ -2,13 +2,13 @@ package com.nbcuni.test.publisher.common;
 
 import com.nbcuni.test.publisher.common.Driver.*;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
-import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.tests.Setup.A1_TestSetup;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 
+import org.openqa.selenium.By;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -17,7 +17,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.lang.reflect.Method;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -82,33 +81,36 @@ public class ParentTest {
     @AfterMethod(alwaysRun = true)
     public void stopSelenium(ITestResult result) throws Exception {
         
+    	if (!result.isSuccess()) {
+    		applib.attachScreenshot(result);  
+    	}
+    	
+    	/* TODO - implement this
     	try {
-    		if (!result.isSuccess()) {
-                
-    			applib.attachScreenshot(result);  
-    		}
-        } catch (Exception e) {
-        	System.out.println("Failed to capture screenshot");
-        }
-        
-    	//Clear cache in the event of some errors that require it
-    	List<String> cacheErrors = Arrays.asList("StateFlowNode", "Draft", "workbench_moderation_to_published");
-    	try {
-    		if (!result.isSuccess()) {
-    			String errorMessage = result.getThrowable().getMessage().toString();
-    			if (cacheErrors.contains(errorMessage)) {
-    				applib.openApplication();
-        			webDriver.switchTo().defaultContent();
-        			FlushCache flushCache = new FlushCache(webDriver);
-        			flushCache.FlushAllCache();
-        			Reporter.setCurrentTestResult(result); 
-                	Reporter.log("Cache was cleared on test failure");
-                	Reporter.setCurrentTestResult(null);
-        		}
-    		}
+    		applib.attachReporterLogging(result);
     	}
     	catch (Exception e) {
-    		System.out.println("Failed to flush cache");
+    		System.out.println("Failed to capture reporter logging.");
+    	}
+        */
+    	
+    	if (config.getConfigValueString("ClearCacheOnFailure").equals("true")) {
+    		//Clear cache in the event of a failure
+        	try {
+        		if (!result.isSuccess()) {
+        			applib.openSitePage("/admin/config/development/performance");
+        			webDriver.switchTo().defaultContent();
+        			Thread.sleep(1000);
+            		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            		webDriver.findElement(By.id("edit-clear")).click();
+            		Reporter.setCurrentTestResult(result); 
+                    Reporter.log("Cache was cleared on test failure");
+                    Reporter.setCurrentTestResult(null);
+        		}
+        	}
+        	catch (Exception | AssertionError e) {
+        		System.out.println("Failed to flush cache");
+        	}
     	}
     	
         try {

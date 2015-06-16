@@ -42,7 +42,11 @@ public class BasicInformation {
     
     private By ShortDescription_Txa = By.id("edit-field-summary-und-0-value");
     
-    private By YouTube_Btn = By.xpath("//a[@title='Embed YouTube Video']");
+    private By EmbedYouTube_Btn = By.xpath("//a[@title='Embed YouTube Video']");
+    
+    private By EmbedMPX_Btn = By.xpath("//a[@title='Embed MPX Video']");
+    
+    private By EmbedImage_Btn = By.id("cke_17");
     
     private By Body_Txa = By.id("edit-body-und-0-value");
     
@@ -201,10 +205,24 @@ public class BasicInformation {
     	
     }
     
-    public void ClickYoutubeBtn() throws Exception {
+    public void ClickEmbedYoutubeBtn() throws Exception {
     	
     	Reporter.log("Click the embed youtube button.");
-    	interact.Click(waitFor.ElementVisible(YouTube_Btn));
+    	interact.Click(waitFor.ElementVisible(EmbedYouTube_Btn));
+    	
+    }
+    
+    public void ClickEmbedMPXBtn() throws Exception {
+    	
+    	Reporter.log("Click the embed mpx button.");
+    	interact.Click(waitFor.ElementVisible(EmbedMPX_Btn));
+    	
+    }
+    
+    public void ClickEmbedImageBtn() throws Exception {
+    	
+    	Reporter.log("Click the embed image button.");
+    	interact.Click(waitFor.ElementVisible(EmbedImage_Btn));
     	
     }
     

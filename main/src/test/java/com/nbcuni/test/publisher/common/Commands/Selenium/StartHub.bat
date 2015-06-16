@@ -1,1 +1,0 @@
-java -jar C:\Test\Selenium\selenium-server-standalone-2.41.0.jar -role hub -timeout 120 -browserTimeout 120 -port 4445

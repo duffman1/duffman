@@ -21,6 +21,7 @@ public class UserLogin {
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
+    private EmberNav navigation;
     
     //PAGE OBJECT CONSTRUCTOR
     public UserLogin(Driver webDriver) {
@@ -28,6 +29,7 @@ public class UserLogin {
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
         interact = new Interact(webDriver, timeout);
+        navigation = new EmberNav(webDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -36,6 +38,8 @@ public class UserLogin {
     private By Password_Txb = By.xpath("//input[@id='edit-pass']");
     
     private By LogIn_Btn = By.cssSelector("input[value='Log in']");
+    
+    private By FederatedLogIn_Lnk = By.xpath("//a[text()='Federated Log In']");
     
     
     //PAGE OBJECT METHODS
@@ -60,12 +64,29 @@ public class UserLogin {
     	
     }
     
+    public void VerifyFederatedLoginLnkPresent() throws Exception {
+    	
+    	Reporter.log("Verify the 'Federated Login' link is present.");
+    	waitFor.ElementVisible(FederatedLogIn_Lnk);
+    	
+    }
+    
+    public void VerifyFederatedLoginLnkNotPresent() throws Exception {
+    	
+    	Reporter.log("Verify the 'Federated Login' link is not present.");
+    	waitFor.ElementNotPresent(FederatedLogIn_Lnk);
+    	
+    }
+    
     public void Login(String emailAddress, String password) throws Exception {
     	
     	this.EnterEmailAddress(emailAddress);
     	this.EnterPassword(password);
     	this.ClickLoginBtn();
     	Thread.sleep(1000);
+    	
+    	navigation.ShowMenu();
+    	navigation.ClickMenuHorizontalBtn();
     }
     
     

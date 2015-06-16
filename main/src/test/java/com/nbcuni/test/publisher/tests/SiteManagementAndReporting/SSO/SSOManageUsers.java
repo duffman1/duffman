@@ -22,7 +22,7 @@ public class SSOManageUsers extends ParentTest {
 	 * TEST CASE - TC3853
      * Steps - https://rally1.rallydev.com/#/14663927728ud/detail/testcase/20332795162
 	 *************************************************************************************/
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive", "broken"})
 	 public void SSOManageUsers_TC3853() throws Exception {
 		 
 		UserLogin userLogin = new UserLogin(webDriver); 
@@ -104,7 +104,7 @@ public class SSOManageUsers extends ParentTest {
 		
 	}
 	 
-	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"SSOManageUsers_TC3853"}, alwaysRun=true)
+	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive", "broken"}, dependsOnMethods = {"SSOManageUsers_TC3853"}, alwaysRun=true)
 		public void Cleanup() throws Exception {
 			if (testSuccessful == false) {
 				

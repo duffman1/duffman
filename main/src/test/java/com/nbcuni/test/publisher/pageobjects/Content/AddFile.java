@@ -217,7 +217,7 @@ public class AddFile {
     	
     	Reporter.log("Wait for file upload to reach 100%");
     	new WaitFor(webDriver, 60).ElementVisible(UploadStatus1of1Files_Txt);
-    	Thread.sleep(1000); //slight pause to avoid problematic js alert
+    	Thread.sleep(2000); //slight pause to avoid problematic js alert
     	
     }
     

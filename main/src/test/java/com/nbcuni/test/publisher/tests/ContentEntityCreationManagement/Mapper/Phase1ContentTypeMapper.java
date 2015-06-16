@@ -31,6 +31,7 @@ public class Phase1ContentTypeMapper extends ParentTest {
             navigation.Modules();
             Modules modules = new Modules(webDriver);
             for (String module : Arrays.asList("Pub Schema Example", "RestWS Schema", "RestWS Schema UI")) {
+            	modules.EnterFilterName(module);
             	modules.EnableModule(module);
             }
             
@@ -49,6 +50,7 @@ public class Phase1ContentTypeMapper extends ParentTest {
             
             navigation.Modules();
             for (String module : Arrays.asList("Pub Schema Example", "RestWS Schema UI")) {
+            	modules.EnterFilterName(module);
             	modules.DisableModule(module);
             }
             
@@ -64,6 +66,7 @@ public class Phase1ContentTypeMapper extends ParentTest {
     		navigation.Modules();
     		Modules modules = new Modules(webDriver);
     		for (String module : Arrays.asList("Pub Schema Example", "RestWS Schema UI")) {
+    			modules.EnterFilterName(module);
     			modules.DisableModule(module);
     		}
     	}

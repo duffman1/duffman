@@ -65,8 +65,9 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		
         		//Step 15
-        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver, applib);
-        		manageFileDisplay.ClickPubMPXVideoCbx();
+        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
+        		manageFileDisplay.CheckPubMPXVideoCbx();
+        		manageFileDisplay.UnCheckPubMPXVideoDeprecatedCbx();
         		manageFileDisplay.ClickPubMPXVideoLnk();
         		manageFileDisplay.SelectMPXVideoPlayer("AutomationPlayer2");
         		manageFileDisplay.ClickSaveConfigurationBtn();
@@ -88,9 +89,26 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		workBench.VerifyMPXPlayerPresent();
         		
         		//Test Case TC1812
+        		workBench.VerifyMPXPlayerSourcePresent("embed");
+        		
+        		navigation.Structure("File types");
+        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        		Thread.sleep(1000);
+        		manageFileDisplay.CheckPubMPXVideoDeprecatedCbx();
+        		manageFileDisplay.UnCheckPubMPXVideoCbx();
+        		manageFileDisplay.ClickSaveConfigurationBtn();
+        		contentParent.VerifyMessageStatus("Your settings have been saved.");
+        		manageFileDisplay.SelectMPXVideoPlayerDeprecated("AutomationPlayer2");
+        		manageFileDisplay.ClickSaveConfigurationBtn();
+        		contentParent.VerifyMessageStatus("Your settings have been saved.");
+        		navigation.Content("Files", "mpxMedia");
+        		searchFor.EnterTitle("AutomationDefault");
+        		searchFor.ClickApplyBtn();
+        		searchFor.ClickSearchTitleLnk("AutomationDefault");
+        		workBench.VerifyMPXPlayerPresent();
         		workBench.VerifyMPXPlayerSourceNotPresent("embed");
         		
-        		//Step 20 through 21 - N/A
+        		
         	}
         	else {
         		Assert.fail("DB TV account must be configured.");

@@ -29,16 +29,16 @@ public class TrackEntityReferences extends ParentTest {
         	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("MPS");
         	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
-        	String tvShowTitle = createDefaultContent.TVShow("Draft");
-        	String tvSeasonTitle = createDefaultContent.TVSeason("Draft", tvShowTitle);
-        	String tvEpisodeTitle = createDefaultContent.TVEpisode("Draft", tvShowTitle, tvSeasonTitle);
+        	String tvShowTitle = createDefaultContent.TVShow("Published");
+        	String tvSeasonTitle = createDefaultContent.TVSeason("Published", tvShowTitle);
+        	String tvEpisodeTitle = createDefaultContent.TVEpisode("Published", tvShowTitle, tvSeasonTitle);
         	WorkBench workBench = new WorkBench(webDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
         	AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
         	additionalInformation.ClickAdditionalInformationLnk();
         	additionalInformation.EnterTag("tag1, tag2");
         	contentParent.ClickSaveBtn();
-        	webDriver.switchTo().defaultContent();
+        	contentParent.VerifyMessageStatus("TV Episode " + tvEpisodeTitle + " has been updated.");
         	
         	Reporter.log("STEP 2");
         	navigation.Configuration("MPS Configuration");

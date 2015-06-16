@@ -203,6 +203,13 @@ public class SearchFor {
     	
     }
     
+    public String GetFirstMPXMediaSearchResultURL() throws Exception {
+    	
+    	Reporter.log("Get the url of the first search result set item.");
+    	return waitFor.ElementVisible(FirstMPXMediaSearchResult_Lnk).getAttribute("href");
+    	
+    }
+    
     public List<String> GetAllMPXMediaSearchResult() throws Exception {
     	
     	Reporter.log("Get the text of all search result set items.");

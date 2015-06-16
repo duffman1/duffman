@@ -89,11 +89,10 @@ public class MPSSupportTokens extends ParentTest {
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been updated.");
             
             Reporter.log("STEP 8");
-            contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"" + baseAlias + "|mps-testing|2arg\"}"));
+            contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"" + baseAlias + "|mps-testing\"}"));
             
             Reporter.log("STEP 9");
             navigation.Configuration("MPS Configuration");
-            mpsConfiguration.ClickReplacementPatternsLnk();
             mpsConfiguration.ClickBrowseAvailableTokensLnk();
             mpsConfiguration.ClickMPSExpanderLnk();
             mpsConfiguration.VerifyMPSCatPropertyLnkPresent();
@@ -116,7 +115,7 @@ public class MPSSupportTokens extends ParentTest {
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd");
             dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
             String dayOfWeek = dateFormat.format(date);
-            executePHPCode.VerifyResponse("Status message\ndevel\nbrand|show|season|episode\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|show|~|episode\nbrand|show|season\nbrand|show|season|~|episode\n~|show\n\n~|brand|season\nseason|episode\nbrand|season|" + dayOfWeek + "\n**");
+            executePHPCode.VerifyResponse("Status message\ndevel\nbrand|show|season|episode\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode|cast\nbrand|thisisareallyreallyreallyreallyreallyreallylongurl|season|episode\nbrand|show|~|episode\nbrand|show|season\nbrand|show|season\n~|show\n\n~|brand|season\nseason\nbrand|season|" + dayOfWeek + "\n**");
             
             Reporter.log("CLEANUP");
             navigation.Configuration("MPS Configuration");

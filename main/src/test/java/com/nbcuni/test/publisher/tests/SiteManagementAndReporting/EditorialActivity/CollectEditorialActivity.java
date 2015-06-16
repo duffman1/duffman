@@ -24,7 +24,7 @@ public class CollectEditorialActivity extends ParentTest {
      * TEST CASE - TC5071
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/22667340545
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void CollectEditorialActivity_TC5071() throws Exception {
          
     		webDriver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);

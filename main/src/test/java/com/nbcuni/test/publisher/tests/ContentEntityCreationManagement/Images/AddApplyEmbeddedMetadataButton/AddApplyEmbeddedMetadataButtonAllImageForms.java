@@ -13,7 +13,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
      * TEST CASE 
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17266417771 
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void AddApplyEmbeddedMetadataButtonAllImageForms_Test() throws Exception{
          
         	//Step 1
@@ -102,6 +102,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             editImage.VerifySourceValue("1", "Episodic");
             
             //Steps 12 through 25 TODO automate as time allows
+            
             
     }
 }

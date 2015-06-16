@@ -24,14 +24,12 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class PublishingOptions {
 
-    private Driver webDriver;
     private Config config;
     private Interact interact;
     private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
     public PublishingOptions(Driver webDriver) {
-        this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         config = new Config();
         Integer timeout = config.getConfigValueInt("WaitForWaitTime");
@@ -70,21 +68,13 @@ public class PublishingOptions {
     @FindBy(how = How.ID, using = "edit-revision-scheduler-datetime-timeEntry-popup-1")
     private WebElement Time_Txb;
     
-    private String ScrollUp_Js() {
-    	String jsScrollUp = "window.scrollBy(0,-1000);";
-    	return jsScrollUp;
-    }
-    
     
     //PAGE OBJECT METHODS
     public void ClickPublishingOptionsLnk() throws Exception {
     	
-    	Reporter.log("Scroll the 'Publishing Options' link into view.");
-    	WebElement ele = waitFor.ElementVisible(PublishingOptions_Lnk);
-    	webDriver.executeScript(ScrollUp_Js());
-    	
     	Reporter.log("Click the 'Publishing Options' link.");
-    	interact.Click(ele);
+    	interact.ScrollToTop();
+    	interact.Click(waitFor.ElementVisible(PublishingOptions_Lnk));
     	
     }
     

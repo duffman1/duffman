@@ -15,7 +15,7 @@ public class NavbarExpandingContent extends ParentTest {
      * TEST CASE - TC5935
      * Steps - https://rally1.rallydev.com/#/14663927728/detail/testcase/25519987209
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
     public void NavbarExpandingContent_TC5935() throws Exception {
     	
     	Reporter.log("STEP 1");

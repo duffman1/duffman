@@ -36,7 +36,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
      * @author Vineela Juturu
      * @version 1.0 Date: October 13, 2014
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"})
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void CreateConfigureDynamicQueue_TC4197() throws Exception{
     	
     	webDriver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);
@@ -53,6 +53,9 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         String postTitle = createDefaultContent.Post("Published", postBody);
         String unpublishedPostBody = random.GetCharacterString(15);
         String unpublishedPostTitle = createDefaultContent.Post("Draft", unpublishedPostBody);
+        System.out.println("Character profile title = " + characterProfileTitle);
+        System.out.println("Post title = " + postTitle);
+        System.out.println("Unpublished Post title = " + unpublishedPostTitle);
         String nameNumber_ErrorMessage = "Name cannot be a number. It is recommended that this name begin with a capital letter and contain only letters, numbers, and spaces.";
       
         Reporter.log("STEP 2");
@@ -190,7 +193,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         contentParent.VerifyMessageStatus("Your settings have been saved.");
         manageDisplays.ClickViewModeTab(viewModeLabel);
         for (String fieldLabel : Arrays.asList("Body", "Categories", "Tags", "Contributor", "Media Gallery", 
-        		"Cover Media", "Gigya Share Bar", "Short Description")) {
+        		"Cover Media", "Short Description")) {
         	manageDisplays.SelectFormat(fieldLabel, "<Hidden>");
         	contentParent.WaitForThrobberNotPresent();
         }
@@ -205,7 +208,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         manageDisplays.ClickViewModeTab(viewModeLabel);
         for (String fieldLabel : Arrays.asList("Biography", "Character: First Name", "Character: Middle Name",
         		"Character: Last Name", "Cover Photo", "Alias", "Birth Date", "Character: Prefix", "Character: Suffix",
-        		"Gigya Share Bar", "External Links", "Short Biography")) {
+        		"External Links", "Short Biography")) {
         	manageDisplays.SelectFormat(fieldLabel, "<Hidden>");
         	contentParent.WaitForThrobberNotPresent();
         }
@@ -222,6 +225,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 26");
         applib.switchToNewWindow(parentWindow);
+        Thread.sleep(60000); //cache expiration
         applib.refreshPage();
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
         contentParent.VerifyPageContentNotPresent(Arrays.asList(unpublishedPostBody, postBody, charProfBiography));
@@ -256,7 +260,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
    } 
     
-   @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"CreateConfigureDynamicQueue_TC4197"}, alwaysRun=true)
+   @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"}, dependsOnMethods = {"CreateConfigureDynamicQueue_TC4197"}, alwaysRun=true)
    public void Cleanup() throws Exception {
 		if (testSuccessful == false && viewModeLabel != "") {
 			

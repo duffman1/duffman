@@ -67,7 +67,7 @@ public class A1_TestSetup {
                 webDriver.switchTo().defaultContent();
                 
                 //enable necessary modules
-                for (String module : Arrays.asList("Field UI", "Pub Post", "Logo Manager", "Devel")) {
+                for (String module : Arrays.asList("Field UI", "Pub Post", "Logo Manager", "Devel", "Instant Filter")) {
                 	if (!modules.IsModuleEnabled(module)) {
                 		modules.EnableModule(module);
                 	}
@@ -77,20 +77,31 @@ public class A1_TestSetup {
                 for (String module : Arrays.asList("Sticky Edit Actions", "Acquia Purge", 
                 		"ImageField Focus", "Database logging", "MPS", "Event Countdown", 
                 		"TVE Auth Example", "Pub SURF Example",
-                		"simpleSAMLphp authentication", "Program Guide Example", 
-                		"Doubleclick for Publishers", "Automated Logout")) {
+                		"SimpleSAMLphp authentication", "Program Guide Example", 
+                		"Doubleclick for Publishers", "Automated Logout", "Dynamic Queue Workbench",
+                		"Dynamic Queue")) {
                 	if (modules.IsModuleEnabled(module)) {
+                		
                 		modules.DisableModule(module);
                 	}
                 }
             	
                 //uninstall some high data usage modules that overflow lists
                 //TODO - this should only be done when needed and not every execution
-                for (String module : Arrays.asList("MPS", "Event Countdown")) {
+                for (String module : Arrays.asList("MPS", "Event Countdown", "Dynamic Queue Workbench",
+                		"Dynamic Queue")) {
                 	navigation.ClickPrimaryTabNavLnk("Uninstall");
                 	if (modules.IsModuleInstalled(module)) {
                     	modules.UninstallModule(module);
                     }
+                }
+                
+                //re-install dynamic queue so the site doesn't encounter critical white screen on cache clear
+                navigation.ClickPrimaryTabNavLnk("List");
+                for (String module : Arrays.asList("Dynamic Queue Workbench", "Dynamic Queue")) {
+                	if (!modules.IsModuleEnabled(module)) {
+                		modules.EnableModule(module);
+                	}
                 }
                 
                 //set timezone utc

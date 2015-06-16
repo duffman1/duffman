@@ -3,6 +3,7 @@ package com.nbcuni.test.publisher.pageobjects;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -43,6 +44,8 @@ public class EmberNav {
     //PAGE OBJECT IDENTIFIERS
     private By MenuVertical_Lnk = By.xpath("(//button[@class='navbar-icon navbar-toggle navbar-icon-toggle-vertical'])[1]");
     
+    private By MenuHorizontal_Lnk = By.xpath("(//button[@class='navbar-icon navbar-toggle navbar-icon-toggle-horizontal'])[1]");
+    
     private By PrimaryVerticalExpand_Lnk(String lnkTxt) {
     	return By.xpath("//a[contains(@id,'navbar-link-admin-')][text()='" + lnkTxt + "']/../button");
     }
@@ -61,7 +64,7 @@ public class EmberNav {
     	return By.xpath("//a[contains(@class,'navbar-menu-item')][text()='" + lnkTxt + "']");
     }
     
-    private By Home_Lnk = By.xpath("//a[contains(@class, 'navbar-icon navbar-icon-home')]");
+    private By Home_Lnk = By.xpath("//a[text()='Back to site']");
     
     private By Menu_Lnk = By.xpath("//a[@id='navbar-item--2'][text()='Menu']");
     
@@ -91,6 +94,25 @@ public class EmberNav {
     	
     	Reporter.log("Click the 'vertical' menu button to set the menu nav to vertical orientation.");
     	interact.Click(waitFor.ElementVisible(MenuVertical_Lnk));
+    	
+    }
+    
+    public void ClickMenuHorizontalBtn() throws Exception {
+    	
+    	Boolean elementPresent = false;
+    	
+    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	try {
+    		webDriver.findElement(MenuHorizontal_Lnk);
+    		elementPresent = true;
+    	}
+    	catch (NoSuchElementException e) {}
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	
+    	if (elementPresent) {
+    		Reporter.log("Click the 'horizontal' menu button to set the menu nav to horizontal orientation.");
+    		interact.Click(waitFor.ElementVisible(MenuHorizontal_Lnk));
+    	}
     	
     }
     

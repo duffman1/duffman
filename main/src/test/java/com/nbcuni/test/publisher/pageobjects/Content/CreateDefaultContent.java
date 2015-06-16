@@ -164,6 +164,23 @@ public class CreateDefaultContent {
            
            return tvShowTitle;
        }
+       
+       public String Movie(String moderationState) throws Exception {
+    	   
+    	   navigation.AddContent("Movie");
+           String movieTitle = random.GetCharacterString(15);
+           basicInformation.EnterTitle(movieTitle);
+           basicInformation.EnterSynopsis();
+           basicInformation.ClickCoverSelectBtn();
+           selectFile.SelectDefaultCoverImg();
+           publishingOptions.ClickPublishingOptionsLnk();
+           publishingOptions.SelectModerationState(moderationState);
+           contentParent.ClickSaveBtn();
+           contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
+    	   
+           return movieTitle;
+    	   
+       }
 
 }
 

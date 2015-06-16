@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -375,6 +376,28 @@ public class WaitFor {
     	return webDriver.findElement(locator);
     }
     
+    public WebElement ElementLocation(final By locator, final Integer xCoord, final Integer yCoord) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, 
+    				ElementNotVisibleException.class))
+    		.withMessage("Element not located at x = '" + xCoord.toString() + "' and y = '" + yCoord.toString() + "'.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				Boolean locationSuccess = false;
+    				Point point = webDriver.findElement(loc).getLocation();
+    				if (point.getX() == xCoord && point.getY() == yCoord) {
+    					locationSuccess = true;
+    				}
+    				return locationSuccess;
+    				
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
+    }
+
     public WebElement ElementContainsAttribute(final By locator, final String attribute, final String attributeValue) throws Exception {
     	
     	this.byWait(locator)
@@ -391,6 +414,22 @@ public class WaitFor {
     	return webDriver.findElement(locator);
     }
     
+    public WebElement ElementNotContainsAttribute(final By locator, final String attribute, final String attributeValue) throws Exception {
+    	
+    	this.byWait(locator)
+    		.ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class, 
+    				ElementNotVisibleException.class))
+    		.withMessage("Attribute '" + attribute + "' with value '" + attributeValue + "' still present in element.")
+    		.until(new Function<By, Boolean>() {
+    			@Override
+    			public Boolean apply(By loc) {
+    				return !webDriver.findElement(loc).getAttribute(attribute).contains(attributeValue);
+    			}
+    		});
+    	
+    	return webDriver.findElement(locator);
+    }
+    
     public void TitleContains(final String text) throws Exception {
     	
     	this.driverWait()
@@ -399,6 +438,19 @@ public class WaitFor {
     			@Override
     			public Boolean apply(Driver drv) {
     				return drv.getTitle().contains(text);
+    			}
+    		});
+    	
+    }
+    
+    public void URL(final String url) throws Exception {
+    	
+    	this.driverWait()
+    		.withMessage("URL does not equal '" + url + "'.")
+    		.until(new Function<Driver, Boolean>() {
+    			@Override
+    			public Boolean apply(Driver drv) {
+    				return drv.getCurrentUrl().equals(url);
     			}
     		});
     	
@@ -449,8 +501,7 @@ public class WaitFor {
     					if (e.getMessage().toString().contains(staleElement))
     					{
     						System.out.println("image element is stale.");
-    						webDriver.findElement(interact.GetByLocator(ele));
-    						imgPresent = (Boolean) webDriver.executeScript(imageVisibleJS, ele);
+    						imgPresent = (Boolean) webDriver.executeScript(imageVisibleJS, webDriver.findElement(interact.GetByLocator(ele)));
     					}
     				}
     				return imgPresent;

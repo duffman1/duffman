@@ -1,20 +1,21 @@
 <suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="4">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://acc-test.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://qa5.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
-	<parameter name="RunRemotely" value="false"></parameter>
+	<parameter name="RunRemotely" value="true"></parameter>
 	<parameter name="SendReportAutoEmails" value="true"></parameter>
-  	<parameter name="UploadReportToRally" value="true"></parameter>
+  	<parameter name="UploadReportToRally" value="false"></parameter>
   	<parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
-  	<parameter name="GithubUpdatePRResults" value="true"></parameter>
-  	<parameter name="RunSetupScripts" value="false"></parameter>
+  	<parameter name="GithubUpdatePRResults" value="false"></parameter>
+  	<parameter name="RunSetupScripts" value="true"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
-  	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com, brandon.clark@nbcuni.com"></parameter>
+  	<parameter name="ClearCacheOnFailure" value="true"></parameter>
+  	<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"></parameter>
   	
   	<!--REPORT CONFIG-->
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
@@ -35,12 +36,12 @@
   	<parameter name="SSOEmail" value="FID.Publisher@nbcuni.com"></parameter>
   	
   	<!--RALLY CONFIG-->
-  	<parameter name="RallyUsername" value=""></parameter>
-  	<parameter name="RallyPassword" value=""></parameter>
+  	<parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>
+  	<parameter name="RallyPassword" value="tufNewcyd4#"></parameter>
   	<parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
-  	<parameter name="RallyWorkspace" value="Digital Products"></parameter>
+  	<parameter name="RallyWorkspace" value="Digital Backbone Products"></parameter>
   	<parameter name="RallyProject" value="Publisher 7"></parameter>
-  	<parameter name="RallyTaskID" value="TA67944"></parameter>
+  	<parameter name="RallyTCID" value="TC7084"></parameter>
   	
   	<!--GITHUB CONFIG-->
   	<parameter name="GithubUsername" value=""></parameter>
@@ -65,6 +66,7 @@
   	<parameter name="WaitForWaitTime" value="30"></parameter> <!-- Seconds -->
   	<parameter name="PageLoadWaitTime" value="90"></parameter> <!-- Seconds -->
   	<parameter name="PollingTime" value="500"></parameter> <!-- Milliseconds -->
+  	<parameter name="DriverRecyclePause" value="3000"></parameter> <!-- Milliseconds > than node recycle -->
   	
   	<!--MISC CONFIG-->
   	<parameter name="PathToMediaContent" value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"></parameter>
@@ -106,18 +108,17 @@
 		</groups>
 
 		<classes>
+		    <class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL" runscron="true" runslocal="true"/>		        	
 			<class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Configuration.ConfigurationMultipleMPXAccounts" runscron="true"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSODefinedDomains"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOManageUsers"/>
 			<class name="com.nbcuni.test.publisher.tests.Performance.PageLoads"/>
-			<class name="com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport.CanonicalURL" runscron="true" runslocal="true"/>		        	
-			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification"/>
-			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>	
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
 			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>
@@ -145,7 +146,7 @@
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CloneANode.Cloning"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm.SyncFromMPXButtonToVideoFileEntitiesEditForm"/>
 			<class name="com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers.UndefinedIndexesDisplayingForMPXPlayers"/>
-			<class name="com.nbcuni.test.publisher.tests.Video.NotificationPlayerUnavailability.NotificationPlayerUnavailability" runscron="true" runslocal="true"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.PlayerImport.ImportPlayer" runscron="true" runslocal="true"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows.MultiEditorPublishingWorkflow"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit.SoftCharacterLimit"/>
 			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias.AutomaticAlias"/>
@@ -211,6 +212,14 @@
 			<class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions.AutoLogoutOfApp"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews.NavbarExpandingContent"/>
 			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.LogInWithDrupalCreds"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.AdFolders.AdFoldersRichMediaAds"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOUseProduction"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO.SSOAuthenticationModes"/>
+			<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSURLPathSegment"/>
+			<class name="com.nbcuni.test.publisher.tests.Video.MPXSnippets.VideoSnippetsInContent"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.PageURLReflectRevision"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.ImageSnippetsInlineWithContent"/>
+			<class name="com.nbcuni.test.publisher.tests.SiteManagementAndReporting.Solr.SolrSearchConfiguration"/>
 		</classes>
 	</test>
   	

@@ -11,6 +11,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.EditImage;
 import com.nbcuni.test.publisher.pageobjects.Content.MediaItems;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Edit;
@@ -118,7 +119,10 @@ public class CreateMediaGallery extends ParentTest{
     		selectFile.ClickApplyBtn();
     		contentParent.WaitForThrobberNotPresent();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
+    		contentParent.WaitForThrobberNotPresent();
+    		Thread.sleep(2000); //TODO - dynamic wait
     		selectFile.ClickSubmitBtn();
+    		Thread.sleep(2000); //TODO - dynamic wait
     		webDriver.switchTo().defaultContent();
             contentParent.WaitForThrobberNotPresent();
             
@@ -142,39 +146,36 @@ public class CreateMediaGallery extends ParentTest{
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
             Reporter.log("STEP 12");
-            /* 12.2.14 commented out while Mani works on the Select file defect
-            navigation.AddContent("Media Gallery");
-            String title2 = random.GetCharacterString(15);
-            basicInformation.EnterTitle(title2);
-            basicInformation.EnterSynopsis();
-            basicInformation.EnterShortDescription("short description");
-            mediaItems.ClickSelectBtn();
+            WorkBench workBench = new WorkBench(webDriver);
+            workBench.ClickWorkBenchTab("Edit Draft");
+            mediaItems.VerifyFileImagePresent("IPTCDefault", "1");
+            mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
+            mediaItems.ClickAddBtn();
             selectFile.SwitchToSelectFileFrm();
-            selectFile.ClickViewLibraryBtn();
-    		selectFile.EnterFileName("HanSolo");
-    		contentParent.WaitForThrobberNotPresent();
-    		selectFile.ClickMediaThumbnailImage("1");
-    		selectFile.ClickMediaThumbnailImage("2");
-    		selectFile.ClickMediaThumbnailImage("3");
-    		selectFile.ClickSubmitBtn();
-    		webDriver.switchTo().defaultContent();
-    		selectFile.WaitForSelectFileFrameClose();
-            contentParent.WaitForThrobberNotPresent();
-            mediaItems.VerifyFileImagePresent("HanSolo", "1");
-            mediaItems.VerifyFileImagePresent("HanSolo", "2");
-            mediaItems.VerifyFileImagePresent("HanSolo", "3");
-            mediaItems.ClickEditAllBtn();
-            editImage.WaitForEditImageFrameOpen();
-            editImage.EnterKeywordsValue("1", keywords);
-            editImage.ClickSaveBtn("2");
-            editImage.WaitForEditImageFrameClose();
-            basicInformation.ClickCoverSelectBtn();
-            selectFile.SelectDefaultCoverImg();
-            basicInformation.VerifyCoverImagePresent("HanSolo");
+            addFile.ClickAddFilesLnk();
+            addFile.ClickTestPictureDefaultBtn();
+            addFile.ClickOpenBtn();
+            addFile.ClickStartUploadLnk();
+            addFile.WaitForSuccessfulUpload();
+            addFile.ClickNextBtn();
+            webDriver.switchTo().defaultContent();
+            mediaItems.VerifyFileImagePresent("IPTCDefault", "1");
+            mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
+            mediaItems.VerifyFileImagePresent("nbclogosmall", "3");
             
             Reporter.log("STEP 13");
+            mediaItems.ClickEditAllBtn();
+            editImage.WaitForEditImageFrameOpen();
+            String newImageTitle = random.GetCharacterString(10) + ".jpg";
+            editImage.EnterTitleText("3", newImageTitle);
+            editImage.ClickSaveBtn("2");
+            editImage.WaitForEditImageFrameClose();
+            mediaItems.ClickEditAllBtn();
+            editImage.WaitForEditImageFrameOpen();
+            editImage.VerifyTitleTextValue("3", newImageTitle);
+            editImage.ClickCloseWindowImg();
+            editImage.WaitForEditImageFrameClose();
             contentParent.ClickSaveBtn();
-            contentParent.VerifyMessageStatus("Media Gallery " + title2 + " has been created.");
-            */
+            contentParent.VerifyMessageStatus("Media Gallery " + title + " has been updated.");
     }
 }

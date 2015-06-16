@@ -101,8 +101,9 @@ public class DriverSetup {
         }
         
         try {
-
-             driver = new Driver(new URL(hubAddress), capabilities);
+        	//pause greater than grid node recycle time
+        	Thread.sleep(config.getConfigValueInt("DriverRecyclePause"));
+            driver = new Driver(new URL(hubAddress), capabilities);
         }
         catch (Exception e) {
         	Assert.fail("Failed to initiate driver");

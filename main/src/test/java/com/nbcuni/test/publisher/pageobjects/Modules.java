@@ -63,15 +63,16 @@ public class Modules {
     }
     
     private By ModuleName_Cbx(String moduleName) {
-    	return By.xpath("//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']//input");
+    	return By.xpath("//label/strong/span[text()='" + moduleName + "']/../../../../td[@class='checkbox']//input");
+    }
+    
+    @SuppressWarnings("unused")
+	private By ModuleName_Tgl(String moduleName) {
+    	return By.xpath("//label/strong[text()='" + moduleName + "']/../../../td[@class='checkbox']/div[contains(@class, 'toggle')]");
     }
     
     private By UninstallModuleName_Cbx(String moduleName) {
     	return By.xpath("//label[text()='" + moduleName + "']/../../..//input");
-    }
-    
-    private By Configure_Lnk(String moduleName) {
-    	return By.xpath("//label/strong[text()='" + moduleName + "']/../../../td//a[text()='Configure']");
     }
     
     private By Category_Lnk(String categoryName) {
@@ -138,7 +139,7 @@ public class Modules {
     		
         	boolean additionalModulesRequired = false;
         	
-        	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         	try {
         		webDriver.findElement(Continue_Btn).isDisplayed();
         		additionalModulesRequired = true;
@@ -224,13 +225,6 @@ public class Modules {
     	
     	navigation.Modules();
     	this.EnableModule(moduleName);
-    	
-    }
-    
-    public void ClickConfigureLnk(String moduleName) throws Exception {
-    	
-    	Reporter.log("Click the '" + moduleName + "' module 'Configure' link.");
-    	interact.Click(waitFor.ElementVisible(Configure_Lnk(moduleName)));
     	
     }
     

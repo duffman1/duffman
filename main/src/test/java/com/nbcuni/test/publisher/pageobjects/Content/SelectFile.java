@@ -112,6 +112,9 @@ public class SelectFile {
     //PAGE OBJECT IDENTIFIERS
     public void SwitchToSelectFileFrm() throws Exception {
     	
+    	webDriver.switchTo().defaultContent();
+    	Thread.sleep(1000);
+    	
     	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	for (int I = 0; I <= timeout; I++) {
     		
@@ -199,7 +202,9 @@ public class SelectFile {
     public void EnterFilePath(String pathToFile) throws Exception {
     	
     	Reporter.log("Enter the file path for file upload.");
-    	waitFor.ElementVisible(BrowseToFile_Upl).sendKeys(pathToFile);
+    	WebElement element = waitFor.ElementVisible(BrowseToFile_Upl);
+    	Thread.sleep(1000);
+    	element.sendKeys(pathToFile);
     	
     }
     
@@ -244,11 +249,20 @@ public class SelectFile {
     	
     }
     
-    public void VerifyFocalPointCoordinates(String coordinatesTxt) throws Exception {
+    public void VerifyFocalPointCrossHairLocation(String pixelX, String pixelY) throws Exception {
     	
-    	Reporter.log("Verify value of 'Focal Point' text box is '" + coordinatesTxt + "'.");
-    	WebElement ele = waitFor.ElementVisible(FocalPoint_Txb);
-    	Assert.assertEquals(ele.getAttribute("value"), coordinatesTxt);
+    	Reporter.log("Verify the focal point crosshair is in the center of the image.");
+    	waitFor.ElementContainsAttribute(this.FocalPoint_Ind, "style", "position: relative; left: " 
+    			+ pixelX + "px; top: " + pixelY + "px;");
+    	
+    }
+    
+    public void EnterFocalPointCoordinates(String coordinatesTxt) throws Exception {
+    	
+    	Reporter.log("Enter '" + coordinatesTxt + "' in the 'Focal Point' text box.");
+    	WebElement element = waitFor.ElementVisible(FocalPoint_Txb);
+    	interact.Click(element);
+    	interact.Type(waitFor.ElementVisible(FocalPoint_Txb), coordinatesTxt);
     	
     }
     
@@ -256,6 +270,7 @@ public class SelectFile {
     	
     	Reporter.log("Wait for the file link to be visible after upload.");
     	waitFor.ElementVisible(File_Lnk(fileName));
+    	Thread.sleep(1000);
     	
     }
     
@@ -322,6 +337,7 @@ public class SelectFile {
     	
     	Reporter.log("Click mpx media thumbnail image number " + imageIndex );
     	interact.Click(waitFor.ElementPresent(MPXMediaThumbnail_Img(imgSrc, imageIndex)));
+    	Thread.sleep(1000);
     	        
     }
     
@@ -342,7 +358,7 @@ public class SelectFile {
     public void WaitForSelectFileFrameClose() throws Exception {
     	
     	webDriver.switchTo().defaultContent();
-    	waitFor.ElementNotVisible(SelectFile_Frm);
+    	waitFor.ElementNotPresent(SelectFile_Frm);
     	
     }
     
@@ -354,6 +370,7 @@ public class SelectFile {
     }
     
     public void SelectDefaultCoverImg() throws Exception {
+    	
     	this.SwitchToSelectFileFrm();
     	Integer randomInt = random.GetInteger(0, 3);
         String defaultImgFile = "HanSolo1.jpg";

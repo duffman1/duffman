@@ -6,22 +6,28 @@ import com.google.gson.JsonObject;
 import com.nbcuni.test.publisher.common.Config;
 import com.rallydev.rest.RallyRestApi;
 import com.rallydev.rest.request.CreateRequest;
+import com.rallydev.rest.request.GetRequest;
 import com.rallydev.rest.request.QueryRequest;
 import com.rallydev.rest.response.CreateResponse;
+import com.rallydev.rest.response.GetResponse;
 import com.rallydev.rest.response.QueryResponse;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
+import com.rallydev.rest.util.Ref;
 
 import java.io.RandomAccessFile;
 import java.io.IOException;
 import java.net.URI;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import org.apache.commons.codec.binary.Base64;
 
 public class UploadReportRally {
 
-    @SuppressWarnings("deprecation")
-	public String uploadFileAttachment(String pathToReport, String reportName) throws Exception {
+    @SuppressWarnings({ "resource", "deprecation" })
+	public void uploadFileAttachment(String pathToReport, String reportName) throws Exception {
 
     	Config config = new Config();
     	
@@ -45,7 +51,7 @@ public class UploadReportRally {
         String testerUserName = userName;
 
         //Task ID - update in config with each iteration change
-        String existTaskID = config.getConfigValueString("RallyTaskID");       
+        String tcID = config.getConfigValueString("RallyTCID");       
 
         //Read User
         QueryRequest userRequest = new QueryRequest("User");
@@ -57,49 +63,78 @@ public class UploadReportRally {
         JsonObject userQueryObject = userQueryElement.getAsJsonObject();
         String userRef = userQueryObject.get("_ref").getAsString();
 
-        //Query for existing User Story
-        QueryRequest  existTaskRequest = new QueryRequest("Tasks");
-        existTaskRequest.setFetch(new Fetch("FormattedID","Name"));
-        existTaskRequest.setQueryFilter(new QueryFilter("FormattedID", "=", existTaskID));
-        QueryResponse userStoryQueryResponse = restApi.query(existTaskRequest);
-        userStoryQueryResponse.getResults().get(0).getAsJsonObject();
-        String existUserStoryRef = userStoryQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();
-
-        //Read In File Content
-        String ReportFile = pathToReport;
-        String fileBase64String;
-        long attachmentSize;
-
-        //Open file
-        RandomAccessFile myFileHandle = new RandomAccessFile(ReportFile, "r");
-
-        String attachmentContentId = null;
+        //Query for Test Case 
+        QueryRequest testCaseRequest = new QueryRequest("TestCase");
+        testCaseRequest.setFetch(new Fetch("FormattedID","Name"));
+        testCaseRequest.setQueryFilter(new QueryFilter("FormattedID", "=", tcID));
+        QueryResponse testCaseQueryResponse = restApi.query(testCaseRequest);
+        testCaseQueryResponse.getResults().get(0).getAsJsonObject();
+        String testCaseRef = testCaseQueryResponse.getResults().get(0).getAsJsonObject().get("_ref").getAsString();
         
+        //update report library with status and report
         try {
             
-        	//Get and check length
-            long longlength = myFileHandle.length();
+        	String result;
+        	if (reportName.contains("PASSED")) {
+        		result = "Pass";
+        	}
+        	else {
+        		result = "Fail";
+        	}
+        	
+        	JsonObject newTestCaseResult = new JsonObject();
+            newTestCaseResult.addProperty("Verdict", result);
+            Calendar cal = Calendar.getInstance();
+            Date date = cal.getTime();
+        	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+            String pub7Date = dateFormat.format(date);
+            newTestCaseResult.addProperty("Date", pub7Date);
+            newTestCaseResult.addProperty("Build", "latest build");
+            newTestCaseResult.addProperty("Notes", "Automated Test Run");
+            newTestCaseResult.addProperty("Tester", userRef);
+            newTestCaseResult.addProperty("TestCase", testCaseRef);
+
+            CreateRequest createRequest = new CreateRequest("testcaseresult", newTestCaseResult);
+            CreateResponse createResponse = restApi.create(createRequest);
+
+            //Read Test Case
+            String ref = Ref.getRelativeRef(createResponse.getObject().get("_ref").getAsString());
+            GetRequest getRequest = new GetRequest(ref);
+            getRequest.setFetch(new Fetch("Date", "Verdict"));
+            GetResponse getResponse = restApi.get(getRequest);
+            getResponse.getObject();
+            		
+            //Read In File Content
+            String reportFile = pathToReport;
+            String fileBase64String;
+            long attachmentSize;
+
+            //Open file
+            RandomAccessFile myFileHandle = new RandomAccessFile(reportFile, "r");
+            
+            //Get and check length
+            long filelength = myFileHandle.length();
             //Max upload size for Rally attachments is 5MB
             long maxAttachmentLength = 5120000;
-            if (longlength > maxAttachmentLength) throw new IOException("File size too large for Rally attachment, > 5 MB");
-
+            if (filelength > maxAttachmentLength) throw new IOException("File size too large for Rally attachment, > 5 MB");
+            
             //Read file and return data
-            byte[] fileBytes = new byte[(int) longlength];
+            byte[] fileBytes = new byte[(int) filelength];
             myFileHandle.readFully(fileBytes);
             fileBase64String = Base64.encodeBase64String(fileBytes);
-            attachmentSize = longlength;
-
+            attachmentSize = filelength;
+            
             //First create AttachmentContent from string
             JsonObject myAttachmentContent = new JsonObject();
             myAttachmentContent.addProperty("Content", fileBase64String);
             CreateRequest attachmentContentCreateRequest = new CreateRequest("AttachmentContent", myAttachmentContent);
             CreateResponse attachmentContentResponse = restApi.create(attachmentContentCreateRequest);
             String myAttachmentContentRef = attachmentContentResponse.getObject().get("_ref").getAsString();
-            System.out.println("Attachment Content created: " + myAttachmentContentRef);            
-
-            //Now create the Attachment itself
+            System.out.println("Attachment Content created: " + myAttachmentContentRef);
+            
+            //create the Attachment itself
             JsonObject myAttachment = new JsonObject();
-            myAttachment.addProperty("Artifact", existUserStoryRef);
+            myAttachment.addProperty("TestCaseResult", ref);
             myAttachment.addProperty("Content", myAttachmentContentRef);
             myAttachment.addProperty("Name", reportName);
             myAttachment.addProperty("Description", "Attachment From Automated Test Suite");
@@ -109,30 +144,19 @@ public class UploadReportRally {
 
             CreateRequest attachmentCreateRequest = new CreateRequest("Attachment", myAttachment);
             CreateResponse attachmentResponse = restApi.create(attachmentCreateRequest);
-            attachmentContentId = attachmentResponse.getObject().get("_ref").getAsString();
-            
-            	if (attachmentResponse.wasSuccessful()) {
-            		System.out.println("Successfully created Rally report attachment.");
-            	} else {
-            		String[] attachmentContentErrors;
-            		attachmentContentErrors = attachmentResponse.getErrors();
-                        	System.out.println("Error occurred creating Attachment: ");
-                        	for (int i=0; i<attachmentContentErrors.length;i++) {
-                        		System.out.println(attachmentContentErrors[i]);
-                        	}                   
-            	}
-            
-        } catch (Exception e) {
-                System.out.println("Exception occurred while attempting to create Content and/or Attachment: ");
-                e.printStackTrace();            
+            attachmentResponse.getObject().get("_ref").getAsString();
+                    
+            //release file resources
+            myFileHandle.close();
+            		
+                   
+            System.out.println("Successfully created Rally report attachment to TC '" + tcID + "'.");
+                
         }
-
-        finally {
-            //Release all resources
-        	myFileHandle.close();
-            restApi.close();
+        catch (Exception e) {
+        	System.out.println(e);
+        	System.out.println("Failed to update test report for TC '" + tcID + "'.");
         }
         
-        return attachmentContentId;
     }
 }

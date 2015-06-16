@@ -50,8 +50,12 @@ public class RepresentativeImage extends ParentTest {
     		selectFile.EnterTitle("AutomationWThumb");
     		selectFile.ClickApplyBtn();
     		contentParent.WaitForThrobberNotPresent();
+    		selectFile.ClickPub7MPXVideoBtn();
     		selectFile.ClickMPXMediaThumbnailImage("nbclogosmall", "1");
+    		contentParent.WaitForThrobberNotPresent();
+    		Thread.sleep(2000); //TODO - dynamic wait
     		selectFile.ClickSubmitBtn();
+    		Thread.sleep(2000); //TODO - dynamic wait
             webDriver.switchTo().defaultContent();
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Post " + postTitle2 + " has been created.");

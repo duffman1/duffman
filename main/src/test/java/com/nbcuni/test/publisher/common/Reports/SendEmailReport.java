@@ -85,10 +85,9 @@ public class SendEmailReport extends ParentTest{
                 		+ "<a href='" + appURL + "'>" + appURL 
                 		+ "</a> on <strong>" + machineName + "</strong>.<br /><br />Included test group(s) = " + includedGroups + excludedGroupTxt + "<br />Tests passed = " 
                 		+ passedTestsCount.toString() + "<br />Tests failed = " 
-                		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. " 
-                		+ "A detailed http archive file (HAR) is attached and can be viewed with an online <a href='http://www.softwareishard.com/har/viewer/'>HAR viewer</a>. " 
-                		+ failedTestScreenshotText + "Iteration Report archives are assigned to task " 
-                		+ config.getConfigValueString("RallyTaskID") + "." + "<br /><br />Publisher 7 "
+                		+ failedIndividualTestCount.toString() + "<br /><br />A detailed functional report is attached. "
+                		+ failedTestScreenshotText + "Iteration Report archives are assigned to test case " 
+                		+ config.getConfigValueString("RallyTCID") + "." + "<br /><br />Publisher 7 "
                 		+ "QA Automation</body>";
             }
             messageBodyPart.setContent(messageContent, "text/html");

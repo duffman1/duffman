@@ -61,7 +61,7 @@ public class SendIRCReport {
             writer.flush();
             writer.write("PRIVMSG " + sendTo + " :Total tests failed = " + failedIndividualTestCount.toString() + ".\r\n");
             writer.flush();
-            writer.write("PRIVMSG " + sendTo + " :A detailed test report has been emailed to you as well as posted to Rally attached to " + config.getConfigValueString("RallyTaskID") + ".\r\n");
+            writer.write("PRIVMSG " + sendTo + " :A detailed test report has been emailed to you as well as posted to Rally attached to " + config.getConfigValueString("RallyTCID") + ".\r\n");
             writer.flush();
                 
             //Close writer and release socket

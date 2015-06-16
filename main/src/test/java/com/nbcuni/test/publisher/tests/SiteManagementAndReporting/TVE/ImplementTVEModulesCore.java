@@ -61,9 +61,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         if (!tveAuthExample.isMVPDConfigured()) {
         	tveAuthExample.ClickMVPDSetupLnk();
             MVPDConnection mvpdConnection = new MVPDConnection(webDriver);
-            mvpdConnection.EnterMVPDServiceURL("http://mvpd-admin.nbcuni.com/mvpd/service");
-            mvpdConnection.EnterRequestorID("Syfy");
-            mvpdConnection.SelectInstance("stage");
+            mvpdConnection.EnterMVPDServiceURL("http://mvpd-admin.nbcuni.com/mvpd/service/syfy/prod/desktop");
             mvpdConnection.EnterGenericErrorMessage("Oops! Something went wrong while fetching providers!");
             mvpdConnection.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
@@ -76,7 +74,6 @@ public class ImplementTVEModulesCore extends ParentTest {
         	Reporter.log("MVPD IS ALREADY CONFIGURED.");
         }
         
-        navigation.Home();
         if (!tveAuthExample.isAdobePassConfigured()) {
         	tveAuthExample.ClickAdobePassSetupLnk();
             AdobePass adobePass = new AdobePass(webDriver);
@@ -105,7 +102,6 @@ public class ImplementTVEModulesCore extends ParentTest {
         	Reporter.log("ADOBE PASS IS ALREADY CONFIGURED.");
         }
         
-        navigation.Home();
         tveAuthExample.ClickConfigureJQueryLnk();
         jqueryUpdate.SelectDefaultjQueryVersion("1.7");
         jqueryUpdate.ClickSaveConfigurationBtn();
