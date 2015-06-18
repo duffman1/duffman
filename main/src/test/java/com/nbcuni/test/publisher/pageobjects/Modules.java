@@ -1,8 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
-
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.Interact;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Modules Library. Copyright
@@ -24,7 +23,7 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
  * @version 1.0 Date: December 15, 2013
  *********************************************/
 
-public class Modules {
+public class Modules extends Page {
 
     private Driver webDriver;
     private Config config;
@@ -37,7 +36,8 @@ public class Modules {
     
     //PAGE OBJECT CONSTRUCTOR
     public Modules(Driver webDriver) {
-    	this.webDriver = webDriver;
+        super(webDriver);
+        this.webDriver = webDriver;
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
     	contentParent = new ContentParent(webDriver);
@@ -125,7 +125,7 @@ public class Modules {
     	
     }
     
-    public void EnableModule(String moduleName) throws Exception {
+    public Modules EnableModule(String moduleName) throws Exception {
     	
     	if (waitFor.ElementPresent(ModuleName_Cbx(moduleName)).isSelected() == false) {
     		
@@ -161,7 +161,7 @@ public class Modules {
     	else {
     		Reporter.log("Verify the '" + moduleName + "' check box is checked.");
     	}
-    	
+    	return this;
     }
     
     public boolean DisableModule(String moduleName) throws Exception {

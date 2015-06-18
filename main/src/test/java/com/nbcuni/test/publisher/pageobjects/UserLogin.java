@@ -1,12 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import org.openqa.selenium.By;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com UserLogin Library. Copyright
@@ -15,7 +14,7 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
  * @version 1.0 Date: December 13, 2013
  *********************************************/
 
-public class UserLogin {
+public class UserLogin extends Page {
 
     private Config config;
     private Integer timeout;
@@ -25,6 +24,7 @@ public class UserLogin {
     
     //PAGE OBJECT CONSTRUCTOR
     public UserLogin(Driver webDriver) {
+        super(webDriver);
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
