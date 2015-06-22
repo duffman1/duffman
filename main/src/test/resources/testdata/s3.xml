@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="galleryS3" class="com.nbcuni.test.publisher.bo.MediaGallery">
+        <constructor-arg name="title"
+                         value="#{'TC_8595 checking S3 connectivity with created content types'+ uniqueLaunchId}"/>
+        <constructor-arg name="shortDescription" value="#{'simple description to mark'+ uniqueLaunchId}"/>
+        <constructor-arg name="body"
+                         value="#{'body for checking S3 connectivity with created content types'+ uniqueLaunchId}"/>
+        <constructor-arg name="coverTitle" value="brad_pitt.jpg"/>
+        <constructor-arg>
+            <list value-type="java.lang.String">
+                <value>#{'${images.path}'+'brad_pitt.jpg'}</value>
+                <value>#{'${images.path}'+'hodor.jpg'}</value>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
+
+

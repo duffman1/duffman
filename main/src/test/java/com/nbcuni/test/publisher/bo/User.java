@@ -4,7 +4,6 @@ package com.nbcuni.test.publisher.bo;
  * User component to perform login operation
  */
 
-
 public class User {
 
     private final String user;

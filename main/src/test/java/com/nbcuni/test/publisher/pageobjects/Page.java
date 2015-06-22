@@ -24,6 +24,9 @@ public class Page {
         PageFactory.initElements(new HtmlElementDecorator(webDriver), this);
     }
 
+    public Driver getWebDriver(){
+        return webDriver;
+    }
     public <T extends Page> T navigate(String url, Class<T> clazz) {
         T instance = null;
         webDriver.get(url);
