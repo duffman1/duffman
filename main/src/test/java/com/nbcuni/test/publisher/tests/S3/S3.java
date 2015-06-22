@@ -8,7 +8,6 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery.ManageFields;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.EditCustomCT;
-import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.testng.annotations.Test;
@@ -47,21 +46,18 @@ public class S3 extends BaseTest {
     @Test
     public void imageConfiguration_TC8595() throws Exception {
         menu.Structure("Content types");
-        webDriver.findElement(By.cssSelector("div#content a[href$='add']")).click();
-
-        new ContentTypes(webDriver)
-                .EnterName(content.getContentName()).
+        new ContentTypes(webDriver).
+                addContentType().
+                EnterName(content.getContentName()).
                 ClickSaveAddFieldsBtn().
                 EnterAddNewField(content.getField()).
                 SelectFieldType(content.getFieldType()).
                 SelectWidget(content.getWidget()).
                 ClickSaveBtn();
 
-
-        webDriver.findElement(By.id("edit-field-settings-uri-scheme-s3")).click();
-        webDriver.findElement(By.id("edit-submit")).click();
-
         new ManageFields(webDriver).
+                checkDestinationS3().
+                save().
                 checkS3boxes().
                 checkSchemas().
                 checkDestinationS3().
@@ -69,9 +65,7 @@ public class S3 extends BaseTest {
                 checkAllowedFileTypes().
                 save();
 
-        webDriver.findElement(By.cssSelector("div#tab-bar a[href*='manage']")).click();
-        EditCustomCT editCustomCT = new EditCustomCT(webDriver);
-        editCustomCT.selectImageForBundle(content.getField());
+        new EditCustomCT(webDriver).selectImageForBundle(content.getField());
 
     }
 

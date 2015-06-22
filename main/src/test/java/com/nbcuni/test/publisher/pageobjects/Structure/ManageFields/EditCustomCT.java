@@ -4,6 +4,7 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Page;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
+import ru.yandex.qatools.htmlelements.element.Link;
 import ru.yandex.qatools.htmlelements.element.Select;
 
 /**
@@ -25,7 +26,12 @@ public class EditCustomCT extends Page {
     @FindBy(css = "input#edit-submit")
     private Button saveContentType;
 
+
+     @FindBy(css = "div#tab-bar a[href*='manage']")
+     private Link editContentType;
+
     public void selectImageForBundle(String value) {
+        editContentType.click();
         verticalTabs.selectRepresentativeTab();
         firstBundle.selectByValue("field_" + value.replace('.','_'));
         saveContentType.click();

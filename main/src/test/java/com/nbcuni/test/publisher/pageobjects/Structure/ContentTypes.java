@@ -4,9 +4,12 @@ import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
+import ru.yandex.qatools.htmlelements.element.Link;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,7 +20,7 @@ import java.util.concurrent.TimeUnit;
  * @version 1.1 Date: April 13, 2014
  *********************************************/
 
-public class ContentTypes {
+public class ContentTypes extends Page {
 
     private Driver webDriver;
     private Config config;
@@ -27,6 +30,7 @@ public class ContentTypes {
     
     //PAGE OBJECT CONSTRUCTOR
     public ContentTypes(Driver webDriver) {
+        super(webDriver);
         this.webDriver = webDriver;
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
@@ -34,7 +38,10 @@ public class ContentTypes {
         interact = new Interact(webDriver, timeout);
         
     }
-    
+
+    @FindBy(css="div#content a[href$='add']")
+    private Link addContentTypes;
+
     //PAGE OBJECT IDENTIFIERS
     private By AddContentType_Lnk = By.linkText("Add content type");
     
@@ -119,7 +126,12 @@ public class ContentTypes {
     	Thread.sleep(1000);
     	
     }
-    
+
+    public ContentTypes addContentType(){
+        addContentTypes.click();
+        return this;
+    }
+
     public ContentTypes ClickSaveAddFieldsBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save and add fields' button.");

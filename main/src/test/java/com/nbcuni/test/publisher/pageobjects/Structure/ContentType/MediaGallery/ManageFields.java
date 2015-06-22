@@ -29,6 +29,9 @@ public class ManageFields extends Page {
     @FindBy(id = "edit-instance-required")
     private CheckBox requiredFields;
 
+    @FindBy(id = "edit-field-settings-uri-scheme-s3")
+    private CheckBox uploadDestination;
+
 
     public ManageFields checkS3boxes() {
         mediaBrowserPlugins.checkUpload();
@@ -53,10 +56,11 @@ public class ManageFields extends Page {
         return this;
     }
 
-    public ManageFields checkAllowedFileTypes(){
+    public ManageFields checkAllowedFileTypes() {
         allowedFileType.selectImage();
         return this;
     }
+
     public ManageFields save() {
         saveSettings.click();
         return this;
