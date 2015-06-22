@@ -3,7 +3,6 @@ package com.nbcuni.test.publisher.tests.S3;
 import com.nbcuni.test.publisher.bo.MediaGallery;
 import com.nbcuni.test.publisher.bo.SimpleCustomContent;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ConfigPreferences;
-import com.nbcuni.test.publisher.pageobjects.Content.MediaGalleryPage;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery.ManageFields;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
@@ -33,7 +32,7 @@ public class S3 extends BaseTest {
     private SimpleCustomContent content;
 
 
-    //    @Test
+    @Test
     public void basicConfiguration_TC8099() throws Exception {
         initialPage.
                 navigate(siteMap.getModulesUrl(), Modules.class).
@@ -71,11 +70,11 @@ public class S3 extends BaseTest {
 
 
     //    @Test
-    public void createMediaGallery_TC333() throws Exception {
-        menu.AddContent("Media Gallery");
-        MediaGalleryPage mediaGal = new MediaGalleryPage(webDriver);
-        mediaGal.fillBasicInfo(mediaGallery);
-    }
+//    public void createMediaGallery_TC333() throws Exception {
+//        menu.AddContent("Media Gallery");
+//        MediaGalleryPage mediaGal = new MediaGalleryPage(webDriver);
+//        mediaGal.fillBasicInfo(mediaGallery);
+//    }
 
 
 }
