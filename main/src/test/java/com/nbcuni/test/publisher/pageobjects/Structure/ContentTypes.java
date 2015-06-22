@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.testng.Reporter;
+
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com ContentTypes Library. Copyright
@@ -105,10 +104,11 @@ public class ContentTypes {
     	
     }
     
-    public void EnterName(String name) throws Exception {
+    public ContentTypes EnterName(String name) throws Exception {
     	
     	Reporter.log("Enter '" + name + "' in the 'Name' text box.");
     	interact.Type(waitFor.ElementVisible(Name_Txb), name);
+        return this;
     	
     }
     
@@ -120,18 +120,18 @@ public class ContentTypes {
     	
     }
     
-    public void ClickSaveAddFieldsBtn() throws Exception {
+    public ContentTypes ClickSaveAddFieldsBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save and add fields' button.");
     	interact.Click(waitFor.ElementVisible(SaveAddFields_Btn));
-    	
+    	return this;
     }
     
-    public void EnterAddNewField(String fieldName) throws Exception {
+    public ContentTypes EnterAddNewField(String fieldName) throws Exception {
     	
     	Reporter.log("Enter '" + fieldName + "' in the 'Add new field' text box.");
     	interact.Type(waitFor.ElementVisible(AddNewField_Txb), fieldName);
-    	
+    	return this;
     }
     
     public void EnterAddExistingField(String fieldName) throws Exception {
@@ -141,11 +141,11 @@ public class ContentTypes {
     	
     }
     
-    public void SelectFieldType(String fieldType) throws Exception {
+    public ContentTypes SelectFieldType(String fieldType) throws Exception {
     	
     	Reporter.log("Select '" + fieldType + "' from the 'Field Type' drop down list.");
     	interact.Select(waitFor.ElementVisible(FieldType_Ddl), fieldType);
-        
+        return this;
     }
     
     public void SelectExistingField(String fieldType) throws Exception {
@@ -155,11 +155,11 @@ public class ContentTypes {
         
     }
     
-    public void SelectWidget(String widget) throws Exception {
+    public ContentTypes SelectWidget(String widget) throws Exception {
     	
     	Reporter.log("Select '" + widget + "' from the 'Widget' drop down list.");
     	interact.Select(waitFor.ElementVisible(Widget_Ddl), widget);
-        
+        return this;
     }
     
     public void VerifyFieldSelectBtnPresent(String fieldName) throws Exception {

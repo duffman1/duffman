@@ -34,19 +34,8 @@ public class BasicInfo extends HtmlElement {
     @FindBy(xpath = "//a[@id='edit-field-media-items-und-0-browse-button']")
     Button selectMediaItems;
 
-//    @FindBy(css = "iframe.media-modal-frame")
-//    HtmlElement frame;
-
     @FindBy(id = "edit-body-und-0-value_ifr")
     HtmlElement bodyFrame;
-
-    @FindBy(xpath = "//input[@type='file']")
-    TextInput fileToAttach;
-
-    @FindBy(css = "div.plupload.html5")
-    HtmlElement parentOfFile;
-
-    MediaItemsFrame mediaItemsFrame;
 
     public void setTitle(String title) {
         this.title.sendKeys(title);
@@ -62,15 +51,15 @@ public class BasicInfo extends HtmlElement {
         webDriver.switchTo().defaultContent();
     }
 
+
     public void selectCover(String coverImage) {
-//        if (coverImage == null) return;
-//
-//        selectCover.click();
+        if (coverImage == null) return;
+        selectCover.click();
+
     }
 
     public void selectMediaItems(List<String> items) {
         selectMediaItems.click();
-
         webDriver.switchTo().frame(webDriver.findElement(By.cssSelector("iframe.media-modal-frame")));
 
         ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.overflow='visible';",
@@ -88,5 +77,4 @@ public class BasicInfo extends HtmlElement {
         webDriver.findElement(By.id("edit-next")).click();
         webDriver.switchTo().defaultContent();
     }
-
 }

@@ -17,30 +17,50 @@ public class ManageFields extends Page {
 
     private MediaBrowserPlugins mediaBrowserPlugins;
     private AllowedURISchemas allowedURISchemas;
+    private AllowedFileType allowedFileType;
 
-    @FindBy(id="edit-submit")
+
+    @FindBy(id = "edit-submit")
     private Button saveSettings;
 
-    @FindBy(id="edit-field-settings-uri-scheme-s3")
+    @FindBy(id = "edit-field-settings-uri-scheme-s3")
     private CheckBox amazons3;
 
-    public void checkS3boxes(){
+    @FindBy(id = "edit-instance-required")
+    private CheckBox requiredFields;
+
+
+    public ManageFields checkS3boxes() {
         mediaBrowserPlugins.checkUpload();
         mediaBrowserPlugins.checkViewLibrary();
         mediaBrowserPlugins.checkWeb();
+        return this;
     }
 
-    public void checkSchemas(){
+    public ManageFields checkSchemas() {
         allowedURISchemas.checkPubFiles();
         allowedURISchemas.checkAmazons3();
+        return this;
     }
 
-    public void checkDestinationS3(){
+    public ManageFields checkDestinationS3() {
         amazons3.select();
+        return this;
     }
 
-    public void save(){
-        saveSettings.click();
+    public ManageFields checkRequiredField() {
+        requiredFields.select();
+        return this;
     }
+
+    public ManageFields checkAllowedFileTypes(){
+        allowedFileType.selectImage();
+        return this;
+    }
+    public ManageFields save() {
+        saveSettings.click();
+        return this;
+    }
+
 
 }

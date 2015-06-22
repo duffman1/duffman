@@ -1,14 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.ManageFields;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Field Settings Library. Copyright
@@ -24,7 +22,7 @@ public class FieldSettings {
     private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public FieldSettings(Driver webDriver, AppLib applib) {
+    public FieldSettings(Driver webDriver) {
         config = new Config();
         Integer timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);

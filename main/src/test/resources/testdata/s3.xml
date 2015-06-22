@@ -17,6 +17,14 @@
             </list>
         </constructor-arg>
     </bean>
+
+    <bean id="customCT_TC8595" class="com.nbcuni.test.publisher.bo.SimpleCustomContent">
+        <constructor-arg name="contentName" value="#{'SimpleMediaGallery'+ uniqueLaunchId+'to check S3 connectivity'}"/>
+        <constructor-arg name="field" value="#{'fieldtocarryimage'+ uniqueLaunchId}"/>
+        <constructor-arg name="fieldType" value="#{'Image'}"/>
+        <constructor-arg name="widget" value="#{'Media browser'}"/>
+    </bean>
+
 </beans>
 
 

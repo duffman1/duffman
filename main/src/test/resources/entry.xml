@@ -25,7 +25,7 @@
     </bean>
 
     <bean id="uniqueLaunchId" class="java.lang.String">
-        <constructor-arg value="#{T(java.lang.Math).random()}}"/>
+        <constructor-arg value="#{ T(java.lang.String).valueOf(T(java.lang.Math).random()).substring(0,9)}"/>
     </bean>
 
 

@@ -12,7 +12,8 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import java.util.concurrent.TimeUnit;
 
@@ -36,7 +37,7 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
     @Autowired
     protected SiteMap siteMap;
 
-    @BeforeMethod
+    @BeforeClass
     public void init() throws Exception {
         DriverSetup driverSetup = new DriverSetup();
         webDriver = driverSetup.WebDriverSetup(true);
@@ -49,5 +50,12 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
         menu = new EmberNav(webDriver);
         contentParent = new ContentParent(webDriver);
         random = new Random();
+    }
+
+
+
+    @AfterClass
+    public void tearDown() {
+        webDriver.quit();
     }
 }
