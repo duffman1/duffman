@@ -17,6 +17,9 @@ public class SiteMap {
     @Value("${app.config}")
     String config;
 
+    @Value("${app.add.content}")
+    String addContent;
+
     public String getBaseUrl() {
         return baseUrl;
     }
@@ -27,6 +30,10 @@ public class SiteMap {
 
     public String getConfigUrl() {
         return config;
+    }
+
+    public String getAddContent(){
+        return addContent;
     }
 };
 

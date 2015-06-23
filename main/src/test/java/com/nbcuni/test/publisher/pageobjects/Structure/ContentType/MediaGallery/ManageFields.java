@@ -5,6 +5,7 @@ import com.nbcuni.test.publisher.pageobjects.Page;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.CheckBox;
+import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
 import java.io.File;
@@ -35,12 +36,20 @@ public class ManageFields extends Page {
     @FindBy(id = "edit-field-settings-uri-scheme-s3")
     private CheckBox uploadDestination;
 
+    @FindBy(id="edit-field-settings-amazons3-bucket")
+    private TextInput bucketName;
+
     @FindBy(css = "input[type='file']")
     private TextInput file;
 
-
-    @FindBy(css = "input#edit-field-settings-default-image-upload-button")
+    @FindBy(id = "edit-upload-upload-button")
     private Button upload;
+
+    @FindBy(id = "edit-next")
+    private Button next;
+
+    @FindBy(css="iframe.media-modal-frame")
+    private HtmlElement frame;
 
     public ManageFields checkS3boxes() {
         mediaBrowserPlugins.checkUpload();
@@ -55,8 +64,9 @@ public class ManageFields extends Page {
         return this;
     }
 
-    public ManageFields checkDestinationS3() {
+    public ManageFields checkDestinationS3(String bucketName) {
         amazons3.select();
+        this.bucketName.sendKeys(bucketName);
         return this;
     }
 
@@ -79,8 +89,19 @@ public class ManageFields extends Page {
         return this;
     }
 
+    public ManageFields attachImageFrame(String path) {
+       webDriver.switchTo().frame(frame);
+        attachImage(path);
+        return this;
+    }
+
     public ManageFields save() {
         saveSettings.click();
+        return this;
+    }
+
+    public ManageFields next() {
+        next.click();
         return this;
     }
 
