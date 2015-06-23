@@ -1,6 +1,12 @@
 package com.nbcuni.test.publisher.tests.S3;
 
-import com.nbcuni.test.publisher.bo.MediaGallery;
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.model.ListObjectsRequest;
+import com.amazonaws.services.s3.model.ObjectListing;
+import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.nbcuni.test.publisher.bo.SimpleCustomContent;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ConfigPreferences;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -26,17 +32,14 @@ public class S3 extends BaseTest {
     private String apiBucket;
 
     @Autowired
-    private MediaGallery mediaGallery;
-
-    @Autowired
     private SimpleCustomContent content;
-
 
     @Test
     public void basicConfiguration_TC8099() throws Exception {
         initialPage.
                 navigate(siteMap.getModulesUrl(), Modules.class).
                 EnableModule("AmazonS3").
+                EnableModule("Devel").
                 navigate(siteMap.getConfigUrl(), ConfigPreferences.class).
                 goToAmazonSettings().
                 setRequiredFields(apiKey, apiSecret, apiBucket);
@@ -55,6 +58,7 @@ public class S3 extends BaseTest {
                 ClickSaveBtn();
 
         new ManageFields(webDriver).
+                attachImage(content.getImage()).
                 checkDestinationS3().
                 save().
                 checkS3boxes().
@@ -63,18 +67,17 @@ public class S3 extends BaseTest {
                 checkRequiredField().
                 checkAllowedFileTypes().
                 save();
-
         new EditCustomCT(webDriver).selectImageForBundle(content.getField());
-
     }
 
-
-    //    @Test
-//    public void createMediaGallery_TC333() throws Exception {
-//        menu.AddContent("Media Gallery");
-//        MediaGalleryPage mediaGal = new MediaGalleryPage(webDriver);
-//        mediaGal.fillBasicInfo(mediaGallery);
-//    }
-
-
+    @Test(dependsOnMethods = "imageConfiguration_TC8595")
+    public void getBucketFiles(){
+        AWSCredentials credentials = new BasicAWSCredentials(apiKey, apiSecret);
+        AmazonS3 s3client = new AmazonS3Client(credentials);
+        ListObjectsRequest listObjectsRequest = new ListObjectsRequest().withBucketName(apiBucket);
+        ObjectListing objectListing = s3client.listObjects(listObjectsRequest);
+        for(S3ObjectSummary objectSummary: objectListing.getObjectSummaries()) {
+            System.out.println(objectSummary.getKey());
+        }
+    }
 }

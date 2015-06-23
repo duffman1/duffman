@@ -5,6 +5,9 @@ import com.nbcuni.test.publisher.pageobjects.Page;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.CheckBox;
+import ru.yandex.qatools.htmlelements.element.TextInput;
+
+import java.io.File;
 
 /**
  * Created by kiryl_zayets on 6/18/15.
@@ -32,6 +35,12 @@ public class ManageFields extends Page {
     @FindBy(id = "edit-field-settings-uri-scheme-s3")
     private CheckBox uploadDestination;
 
+    @FindBy(css = "input[type='file']")
+    private TextInput file;
+
+
+    @FindBy(css = "input#edit-field-settings-default-image-upload-button")
+    private Button upload;
 
     public ManageFields checkS3boxes() {
         mediaBrowserPlugins.checkUpload();
@@ -58,6 +67,15 @@ public class ManageFields extends Page {
 
     public ManageFields checkAllowedFileTypes() {
         allowedFileType.selectImage();
+        return this;
+    }
+
+    public ManageFields attachImage(String path) {
+        File file1 = new File(this.getClass().getClassLoader().getResource(path).getPath());
+        if (file1.exists()) {
+            file.sendKeys(file1.getAbsolutePath());
+            upload.click();
+        }
         return this;
     }
 

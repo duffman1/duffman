@@ -9,13 +9,15 @@ public class SimpleCustomContent {
     private String field;
     private String fieldType;
     private String widget;
+    private String image;
 
-    public SimpleCustomContent(String contentName, String field, String fieldType, String widget){
+    public SimpleCustomContent(String contentName, String field, String fieldType, String widget, String image){
 
         this.contentName = contentName;
         this.field = field;
         this.fieldType = fieldType;
         this.widget = widget;
+        this.image = image;
     }
 
     public String getContentName() {
@@ -48,5 +50,13 @@ public class SimpleCustomContent {
 
     public void setWidget(String widget) {
         this.widget = widget;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
