@@ -1,14 +1,7 @@
 package com.nbcuni.test.publisher.tests.S3;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3Client;
-import com.amazonaws.services.s3.model.DeleteObjectRequest;
-import com.amazonaws.services.s3.model.ListObjectsRequest;
-import com.amazonaws.services.s3.model.ObjectListing;
-import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.nbcuni.test.publisher.bo.SimpleCustomContent;
+import com.nbcuni.test.publisher.common.Util.S3Actions;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ConfigPreferences;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery.ManageFields;
@@ -17,8 +10,11 @@ import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.EditCustomCT
 import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.testng.Assert;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
 
 /**
  * Holder for S3 test cases.
@@ -42,24 +38,16 @@ public class S3 extends BaseTest {
     @Autowired
     private String code;
 
-    AmazonS3 s3client;
-    ObjectListing objectListing;
-    ListObjectsRequest listObjectsRequest;
+    @Autowired
+    private S3Actions s3Actions;
 
+
+    String key;
 
     @BeforeGroups(groups = {"S3"})
     public void clearBucket() {
-        AWSCredentials credentials = new BasicAWSCredentials(apiKey, apiSecret);
-        s3client = new AmazonS3Client(credentials);
-       listObjectsRequest = new ListObjectsRequest().withBucketName(apiBucket);
-
-        objectListing = s3client.listObjects(listObjectsRequest);
-        for (S3ObjectSummary objectSummary : objectListing.getObjectSummaries()) {
-            if (objectSummary.getKey().contains(content.getImage().split("/")[1].split("\\.")[0])) {
-                System.out.println(objectSummary.getKey());
-                s3client.deleteObject(new DeleteObjectRequest(apiBucket, objectSummary.getKey()));
-            }
-        }
+        key = content.getImage().split("/")[1].split("\\.")[0];
+        s3Actions.deleteKeysByPattern(apiBucket, key);
     }
 
     @Test
@@ -111,12 +99,7 @@ public class S3 extends BaseTest {
 
     @Test(dependsOnMethods = "imageConfiguration_TC8595")
     public void getBucketFiles() {
-        objectListing = s3client.listObjects(listObjectsRequest);
-        for (S3ObjectSummary objectSummary : objectListing.getObjectSummaries()) {
-            if (objectSummary.getKey().contains(content.getImage().split("/")[1].split("\\.")[0])) {
-                s3client.deleteObject(new DeleteObjectRequest(apiBucket, objectSummary.getKey()));
-                System.out.println(objectSummary.getKey());
-            }
-        }
+        ArrayList<String> uploadedImages = (ArrayList<String>) s3Actions.findKeys(apiBucket, key);
+        Assert.assertEquals(uploadedImages.size(), 3);
     }
 }

@@ -28,5 +28,13 @@
         <constructor-arg value="#{ T(java.lang.String).valueOf(T(java.lang.Math).random()).substring(0,9)}"/>
     </bean>
 
-
+    <bean id="s3auth" class="com.amazonaws.auth.BasicAWSCredentials">
+        <constructor-arg name="accessKey" value="${api.key}"/>
+        <constructor-arg name="secretKey" value="${api.secret}"/>
+    </bean>
+    <bean id="s3client" class="com.amazonaws.services.s3.AmazonS3Client">
+        <constructor-arg name="awsCredentials" ref="s3auth"/>
+    </bean>
+    <bean id="listOfObj" class="com.amazonaws.services.s3.model.ListObjectsRequest"/>
+    <bean id="s3Actions" class="com.nbcuni.test.publisher.common.Util.S3Actions"/>
 </beans>
