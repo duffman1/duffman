@@ -7,9 +7,12 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
+import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.Link;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 import java.util.concurrent.TimeUnit;
 
@@ -41,6 +44,15 @@ public class ContentTypes extends Page {
 
     @FindBy(css="div#content a[href$='add']")
     private Link addContentTypes;
+
+    @FindBy(css="div.media-thumbnail img")
+    private WebElement image;
+
+    @FindBy(id="edit-title")
+    private TextInput title;
+
+    @FindBy(css = "a.button.browse")
+    Button browse;
 
     //PAGE OBJECT IDENTIFIERS
     private By AddContentType_Lnk = By.linkText("Add content type");
@@ -180,7 +192,19 @@ public class ContentTypes extends Page {
     	waitFor.ElementVisible(FieldSelect_Btn(fieldName));
     	
     }
-    
+
+    public void isRendered(){
+        waitVisibilityOfElement(5, image);
+    }
+
+    public void setTitle(String title){
+        this.title.sendKeys(title);
+    }
+
+    public void browseFile(){
+        browse.click();
+    }
+
     public Boolean IsFieldPresent(String fieldName) throws Exception {
     	
     	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);

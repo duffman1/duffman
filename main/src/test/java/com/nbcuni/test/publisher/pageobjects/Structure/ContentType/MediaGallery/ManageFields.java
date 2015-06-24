@@ -25,7 +25,7 @@ public class ManageFields extends Page {
 
 
     @FindBy(id = "edit-submit")
-    private Button saveSettings;
+    private HtmlElement saveSettings;
 
     @FindBy(id = "edit-field-settings-uri-scheme-s3")
     private CheckBox amazons3;
@@ -36,7 +36,7 @@ public class ManageFields extends Page {
     @FindBy(id = "edit-field-settings-uri-scheme-s3")
     private CheckBox uploadDestination;
 
-    @FindBy(id="edit-field-settings-amazons3-bucket")
+    @FindBy(id = "edit-field-settings-amazons3-bucket")
     private TextInput bucketName;
 
     @FindBy(css = "input[type='file']")
@@ -45,10 +45,13 @@ public class ManageFields extends Page {
     @FindBy(id = "edit-upload-upload-button")
     private Button upload;
 
+    @FindBy(id = "edit-upload-remove-button")
+    private HtmlElement remove;
+
     @FindBy(id = "edit-next")
     private Button next;
 
-    @FindBy(css="iframe.media-modal-frame")
+    @FindBy(css = "iframe.media-modal-frame")
     private HtmlElement frame;
 
     public ManageFields checkS3boxes() {
@@ -86,16 +89,18 @@ public class ManageFields extends Page {
             file.sendKeys(file1.getAbsolutePath());
             upload.click();
         }
+        waitVisibilityOfElement(remove);
         return this;
     }
 
     public ManageFields attachImageFrame(String path) {
-       webDriver.switchTo().frame(frame);
+        webDriver.switchTo().frame(frame);
         attachImage(path);
         return this;
     }
 
     public ManageFields save() {
+        waitVisibilityOfElement(saveSettings);
         saveSettings.click();
         return this;
     }
@@ -104,6 +109,4 @@ public class ManageFields extends Page {
         next.click();
         return this;
     }
-
-
 }

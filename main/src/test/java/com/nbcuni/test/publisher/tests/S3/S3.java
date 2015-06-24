@@ -3,11 +3,11 @@ package com.nbcuni.test.publisher.tests.S3;
 import com.nbcuni.test.publisher.bo.SimpleCustomContent;
 import com.nbcuni.test.publisher.common.Util.S3Actions;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ConfigPreferences;
+import com.nbcuni.test.publisher.pageobjects.ContentList;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery.ManageFields;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.EditCustomCT;
-import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.testng.Assert;
@@ -17,7 +17,8 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 
 /**
- * Holder for S3 test cases.
+ * Holder for S3 test cases. Cleanup S3 bucket. Creates custom content type with image field.
+ * Attaches images. Verify that image is uploaded to S3 cloud and have thumbnail.
  */
 
 @Test(groups = {"S3"})
@@ -41,13 +42,16 @@ public class S3 extends BaseTest {
     @Autowired
     private S3Actions s3Actions;
 
-
     String key;
+
+    ArrayList<String> uploadedImagesBefore;
+    ArrayList<String> uploadedImagesAfter;
 
     @BeforeGroups(groups = {"S3"})
     public void clearBucket() {
         key = content.getImage().split("/")[1].split("\\.")[0];
-        s3Actions.deleteKeysByPattern(apiBucket, key);
+        uploadedImagesBefore = (ArrayList<String>) s3Actions.findKeys(apiBucket, key);
+
     }
 
     @Test
@@ -64,8 +68,8 @@ public class S3 extends BaseTest {
     @Test(dependsOnMethods = "basicConfiguration_TC8099")
     public void imageConfiguration_TC8595() throws Exception {
         menu.Structure("Content types");
-        new ContentTypes(webDriver).
-                addContentType().
+        ContentTypes contentTypes = new ContentTypes(webDriver);
+                contentTypes.addContentType().
                 EnterName(content.getContentName()).
                 ClickSaveAddFieldsBtn().
                 EnterAddNewField(content.getField()).
@@ -81,25 +85,22 @@ public class S3 extends BaseTest {
                 checkRequiredField().
                 checkAllowedFileTypes().
                 save();
+
         new EditCustomCT(webDriver).selectImageForBundle(content.getField());
-
         webDriver.get(siteMap.getAddContent());
-
-
-        String loc = String.format("a[href*='%s']:not([class]", code.replace('.', '-'));
-
-        webDriver.findElement(By.cssSelector(loc)).click();
-        webDriver.findElement(By.id("edit-title")).sendKeys(content.getContentName());
-        webDriver.findElement(By.cssSelector("a.button.browse")).click();
-
+        ContentList contentList  = manageFields.navigate(siteMap.getAddContent(), ContentList.class);
+        contentList.openCreatedContentPattern(code);
+        contentTypes.setTitle(content.getContentName());
+        contentTypes.browseFile();
         manageFields.attachImageFrame(content.getImage());
-        manageFields.next().next().save().save();
-
+        manageFields.next().next().save();
+        contentTypes.isRendered();
+        manageFields.save();
     }
 
     @Test(dependsOnMethods = "imageConfiguration_TC8595")
     public void getBucketFiles() {
-        ArrayList<String> uploadedImages = (ArrayList<String>) s3Actions.findKeys(apiBucket, key);
-        Assert.assertEquals(uploadedImages.size(), 3);
+        uploadedImagesAfter = (ArrayList<String>) s3Actions.findKeys(apiBucket, key);
+        Assert.assertEquals(uploadedImagesAfter.size(), 3);
     }
 }
