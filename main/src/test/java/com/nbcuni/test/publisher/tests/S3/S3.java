@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.tests.S3;
 
 import com.nbcuni.test.publisher.bo.SimpleCustomContent;
 import com.nbcuni.test.publisher.common.Util.S3Actions;
+import com.nbcuni.test.publisher.common.Util.Str;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ConfigPreferences;
 import com.nbcuni.test.publisher.pageobjects.ContentList;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -49,9 +50,8 @@ public class S3 extends BaseTest {
 
     @BeforeGroups(groups = {"S3"})
     public void clearBucket() {
-        key = content.getImage().split("/")[1].split("\\.")[0];
+        key = Str.getImageNameFromPath(content.getImage());
         uploadedImagesBefore = (ArrayList<String>) s3Actions.findKeys(apiBucket, key);
-
     }
 
     @Test
@@ -68,8 +68,8 @@ public class S3 extends BaseTest {
     @Test(dependsOnMethods = "basicConfiguration_TC8099")
     public void imageConfiguration_TC8595() throws Exception {
         menu.Structure("Content types");
-        ContentTypes contentTypes = new ContentTypes(webDriver);
-                contentTypes.addContentType().
+        ContentTypes contentTypes = new ContentTypes(webDriver).
+                addContentType().
                 EnterName(content.getContentName()).
                 ClickSaveAddFieldsBtn().
                 EnterAddNewField(content.getField()).
@@ -101,6 +101,10 @@ public class S3 extends BaseTest {
     @Test(dependsOnMethods = "imageConfiguration_TC8595")
     public void getBucketFiles() {
         uploadedImagesAfter = (ArrayList<String>) s3Actions.findKeys(apiBucket, key);
-        Assert.assertEquals(uploadedImagesAfter.size(), 3);
+        uploadedImagesAfter.removeAll(uploadedImagesBefore);
+        Assert.assertEquals(uploadedImagesAfter.size(), 2);
+        Assert.assertTrue(uploadedImagesAfter.get(0).contains(key));
+        Assert.assertTrue(uploadedImagesAfter.get(1).contains(key));
+        Assert.assertTrue(uploadedImagesAfter.get(1).contains("thumbnail"));
     }
 }

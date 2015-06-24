@@ -131,12 +131,12 @@ public class ContentTypes extends Page {
     	
     }
     
-    public void ClickSaveBtn() throws Exception {
+    public ContentTypes ClickSaveBtn() throws Exception {
     	
     	Reporter.log("Click the 'Save' button.");
     	interact.Click(waitFor.ElementVisible(Save_Btn));
     	Thread.sleep(1000);
-    	
+    	return this;
     }
 
     public ContentTypes addContentType(){
