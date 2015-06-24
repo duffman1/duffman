@@ -1,10 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets;
 
-import java.util.Arrays;
-import java.util.List;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
@@ -13,8 +10,12 @@ import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.FieldCollections;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Edit;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.FieldSettings;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class EntityReferenceVerification extends ParentTest{
 	
@@ -55,7 +56,7 @@ public class EntityReferenceVerification extends ParentTest{
         	contentTypes.ClickSaveBtn();
         		
         	//Step 3
-        	FieldSettings fieldSettings = new FieldSettings(webDriver, applib);
+        	FieldSettings fieldSettings = new FieldSettings(webDriver);
         	fieldSettings.SelectTargetType("File");
         	fieldSettings.SelectMode("Simple (with optional filter by bundle)");
         	fieldSettings.CheckTargetBundleCbx("MPX Video for Account \"DB TV\" (2312945284) ");
