@@ -18,12 +18,30 @@
         </constructor-arg>
     </bean>
 
-    <bean id="customCT_TC8595" class="com.nbcuni.test.publisher.bo.SimpleCustomContent">
+    <bean id="ct_without_metadata" class="com.nbcuni.test.publisher.bo.SimpleCustomContent">
         <constructor-arg name="contentName" value="#{'SimpleMediaGallery'+ uniqueLaunchId+'to check S3 connectivity'}"/>
         <constructor-arg name="field" value="#{'fieldtocarryimage'+ uniqueLaunchId}"/>
         <constructor-arg name="fieldType" value="#{'Image'}"/>
         <constructor-arg name="widget" value="#{'Media browser'}"/>
         <constructor-arg name="image" value="#{'${images.path}'+'kirkorov.jpg'}"/>
+    </bean>
+
+    <bean id="ct_metadata" class="com.nbcuni.test.publisher.bo.SimpleCustomContent">
+        <constructor-arg name="contentName" value="#{'SimpleMediaGallery'+ uniqueLaunchId+'to check S3 connectivity'}"/>
+        <constructor-arg name="field" value="#{'fieldtocarryimage'+ uniqueLaunchId}"/>
+        <constructor-arg name="fieldType" value="#{'Image'}"/>
+        <constructor-arg name="widget" value="#{'Media browser'}"/>
+        <constructor-arg name="image" value="#{'${images.path}'+'picture_metadata.jpg'}"/>
+    </bean>
+
+    <bean id="metadata" class="com.nbcuni.test.publisher.bo.Metadata">
+           <constructor-arg name="title" value="simple picture of russian shit singer"/>
+           <constructor-arg name="copyright" value="KirylZayets"/>
+           <constructor-arg name="keywords" value="Kirkorov;fashion;action"/>
+           <constructor-arg name="mediatags" value=""/>
+           <constructor-arg name="credit" value=""/>
+           <constructor-arg name="source" value=""/>
+           <constructor-arg name="alt" value=""/>
     </bean>
 
 </beans>

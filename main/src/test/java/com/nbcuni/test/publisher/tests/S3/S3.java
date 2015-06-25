@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.S3;
 
+import com.nbcuni.test.publisher.bo.Metadata;
 import com.nbcuni.test.publisher.bo.SimpleCustomContent;
 import com.nbcuni.test.publisher.common.Util.S3Actions;
 import com.nbcuni.test.publisher.common.Util.Str;
@@ -9,7 +10,9 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery.ManageFields;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.EditCustomCT;
+import com.nbcuni.test.publisher.pageobjects.Upload;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.testng.Assert;
 import org.testng.annotations.BeforeGroups;
@@ -34,14 +37,15 @@ public class S3 extends BaseTest {
     @Value("${api.bucket}")
     private String apiBucket;
 
-    @Autowired
-    private SimpleCustomContent content;
+    @Autowired @Qualifier("ct_without_metadata") private SimpleCustomContent content;
 
-    @Autowired
-    private String code;
+    @Autowired @Qualifier("ct_metadata") private SimpleCustomContent contentWithMetaData;
 
-    @Autowired
-    private S3Actions s3Actions;
+    @Autowired private String code;
+
+    @Autowired private S3Actions s3Actions;
+
+    @Autowired private Metadata metaTags;
 
     String key;
 
@@ -68,6 +72,7 @@ public class S3 extends BaseTest {
     @Test(dependsOnMethods = "basicConfiguration_TC8099")
     public void imageConfiguration_TC8595() throws Exception {
         menu.Structure("Content types");
+
         ContentTypes contentTypes = new ContentTypes(webDriver).
                 addContentType().
                 EnterName(content.getContentName()).
@@ -85,8 +90,8 @@ public class S3 extends BaseTest {
                 checkRequiredField().
                 checkAllowedFileTypes().
                 save();
-
         new EditCustomCT(webDriver).selectImageForBundle(content.getField());
+
         webDriver.get(siteMap.getAddContent());
         ContentList contentList  = manageFields.navigate(siteMap.getAddContent(), ContentList.class);
         contentList.openCreatedContentPattern(code);
@@ -96,6 +101,21 @@ public class S3 extends BaseTest {
         manageFields.next().next().save();
         contentTypes.isRendered();
         manageFields.save();
+    }
+
+    @Test(dependsOnMethods = "imageConfiguration_TC8595")
+    public void checkMetaDataMapping(){
+        ContentTypes contentTypes = new ContentTypes(webDriver);
+        ManageFields manageFields = new ManageFields(webDriver);
+
+        webDriver.get(siteMap.getAddContent());
+        ContentList contentList  = manageFields.navigate(siteMap.getAddContent(), ContentList.class);
+        contentList.openCreatedContentPattern(code);
+        contentTypes.setTitle(contentWithMetaData.getContentName());
+        contentTypes.browseFile();
+        manageFields.attachImageFrame(contentWithMetaData.getImage());
+        manageFields.next().next();
+        Assert.assertEquals(metaTags, new Upload(webDriver).getMetadata());
     }
 
     @Test(dependsOnMethods = "imageConfiguration_TC8595")

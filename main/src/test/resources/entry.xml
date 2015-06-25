@@ -8,7 +8,7 @@
     <import resource="testdata/s3.xml"/>
 
     <context:component-scan base-package="com.nbcuni"/>
-
+    <context:annotation-config />
 
     <bean id="propertyLoader" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
