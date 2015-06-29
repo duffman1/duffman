@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Entry for browser initialization; Each time new instance is being created;
@@ -24,11 +25,11 @@ public class BrowserProvider {
     @XmlBasedCapabilities Capabilities capabilities;
 
     @Bean
-    @Scope("prototype")
     public WebDriver getDriver() {
         CustomWebDriver webDriver = new CustomWebDriver(url, capabilities);
-
         webDriver.manage().window().maximize();
+        webDriver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return webDriver;
     }
 

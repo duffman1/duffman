@@ -10,6 +10,8 @@
     <context:annotation-config />
 
     <bean class="com.nbcuni.test.publisher.common.Driver.bpp.CapabilitiesPostProcessor"/>
+    <bean class="com.nbcuni.test.publisher.pageobjects.UserLogin" lazy-init="true"/>
+    <bean class="com.nbcuni.test.publisher.pageobjects.EmberNav" lazy-init="true"/>
 
     <bean id="propertyLoader" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
@@ -21,7 +23,7 @@
     </bean>
 
     <bean id="admin" class="com.nbcuni.test.publisher.bo.User">
-        <constructor-arg name="name" value="${user.name}"/>
+        <constructor-arg name="name" value="${user.pub7}"/>
         <constructor-arg name="pass" value="${user.pass}"/>
     </bean>
 

@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -22,7 +23,7 @@ import java.util.concurrent.TimeUnit;
  *          *******************************************
  */
 
-public class EmberNav {
+public class EmberNav extends Page {
 
     private WebDriver webDriver;
     private WaitFor waitFor;
@@ -32,7 +33,9 @@ public class EmberNav {
     private Integer timeout;
 
     //PAGE OBJECT CONSTRUCTOR
+    @Autowired
     public EmberNav(WebDriver webDriver) {
+        super(webDriver);
         this.webDriver = webDriver;
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");

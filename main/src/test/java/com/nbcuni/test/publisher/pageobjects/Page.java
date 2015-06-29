@@ -23,7 +23,8 @@ public class Page {
     @Autowired
     protected SiteMap siteMap;
 
-    public Page(org.openqa.selenium.WebDriver webWebDriver) {
+    @Autowired
+    public Page(WebDriver webWebDriver) {
         this.webWebDriver = webWebDriver;
 
         PageFactory.initElements(new HtmlElementDecorator(webWebDriver), this);
@@ -32,6 +33,8 @@ public class Page {
     public org.openqa.selenium.WebDriver getWebDriver() {
         return webWebDriver;
     }
+
+
 
     public <T extends Page> T navigate(String url, Class<T> clazz) {
         T instance = null;

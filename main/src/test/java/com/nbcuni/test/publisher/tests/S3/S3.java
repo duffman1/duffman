@@ -60,7 +60,7 @@ public class S3 extends BaseTest {
 
     @Test
     public void basicConfiguration_TC8099() throws Exception {
-        initialPage.
+        userLogin.
                 navigate(siteMap.getModulesUrl(), Modules.class).
                 EnableModule("AmazonS3").
                 EnableModule("Devel").

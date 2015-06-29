@@ -22,38 +22,22 @@ import java.util.concurrent.TimeUnit;
 @ContextConfiguration(locations = {"classpath:entry.xml"})
 public class BaseTest extends AbstractCustomContext {
 
-    UserLogin initialPage;
-//    Driver webDriver;
-    EmberNav menu;
-    protected ContentParent contentParent;
-    protected Config config = new Config();
-    protected Random random;
+    @Autowired protected WebDriver webDriver;
 
-    @Autowired
-    WebDriver webDriver;
+    @Autowired protected User admin;
 
-    @Autowired
-    protected User admin;
+    @Autowired protected SiteMap siteMap;
 
-    @Autowired
-    protected SiteMap siteMap;
+    @Autowired protected UserLogin userLogin;
+
+    @Autowired protected EmberNav menu;
 
     @BeforeClass
     public void init() throws Exception {
-//        DriverSetup driverSetup = new DriverSetup();
-//        webDriver = driverSetup.WebDriverSetup(true);
-        webDriver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-        webDriver.get(siteMap.getBaseUrl());
-        initialPage = new UserLogin(webDriver);
-        initialPage.Login(admin.getUser(), admin.getPassword());
-        menu = new EmberNav(webDriver);
-        contentParent = new ContentParent(webDriver);
-        random = new Random();
+        userLogin.
+                navigate().
+                Login(admin.getUser(), admin.getPassword());
     }
-
-
 
     @AfterClass
     public void tearDown() {
