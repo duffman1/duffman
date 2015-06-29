@@ -1,11 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Manage Field Input Library. Copyright
@@ -17,8 +18,8 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class ManageFieldInput {
 
     //PAGE OBJECT CONSTRUCTOR
-    public ManageFieldInput(Driver webDriver) {
-    	PageFactory.initElements(webDriver, this);
+    public ManageFieldInput(WebDriver webWebWebDriver) {
+    	PageFactory.initElements(webWebWebDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

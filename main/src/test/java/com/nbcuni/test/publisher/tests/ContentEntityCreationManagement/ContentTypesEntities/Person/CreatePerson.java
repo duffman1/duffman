@@ -1,11 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person;
 
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.PersonsInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
 
 public class CreatePerson extends ParentTest{
 
@@ -24,14 +24,14 @@ public class CreatePerson extends ParentTest{
         	navigation.AddContent("Person");
             
             //Step 3
-            PersonsInformation personsInformation = new PersonsInformation(webDriver);
+            PersonsInformation personsInformation = new PersonsInformation(webWebWebDriver);
             String personFirstName = random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             personsInformation.EnterBiography();
             
             //Step 4
             personsInformation.ClickCoverPhotoSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             selectFile.SelectDefaultCoverImg();
             contentParent.ClickSaveBtn();
             

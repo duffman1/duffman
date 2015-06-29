@@ -1,18 +1,19 @@
 package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets;
 
-import java.util.Arrays;
-import java.util.List;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MPXAccountDeletion extends ParentTest {
 	
@@ -30,11 +31,11 @@ public class MPXAccountDeletion extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2 and 3
-        	Settings settings = new Settings(webDriver);
+        	Settings settings = new Settings(webWebWebDriver);
         	settings.ConfigureMPXIfNeeded();
         	settings.ConfigureMPXIngestionType();
-            MPXMedia mpxMedia = new MPXMedia(webDriver);
-            Cron cron = new Cron(webDriver);
+            MPXMedia mpxMedia = new MPXMedia(webWebWebDriver);
+            Cron cron = new Cron(webWebWebDriver);
             
             //Step 4
             navigation.Configuration("Media: thePlatform mpx settings");
@@ -42,7 +43,7 @@ public class MPXAccountDeletion extends ParentTest {
         	settings.ExpandAccountList();
         	
         	//Step 5 through 8
-        	ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        	ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
         	List<WebElement> AllDeleteAccountButtons = settings.GetAllDeleteAccountButtons();
         	Assert.assertTrue(configuredAccounts.size() == AllDeleteAccountButtons.size());
         	while (settings.GetAllDeleteAccountButtons().size() > 0) {
@@ -58,7 +59,7 @@ public class MPXAccountDeletion extends ParentTest {
         	
         	//Step 9
         	navigation.Content("Files", "mpxMedia");
-        	SearchFor searchFor = new SearchFor(webDriver);
+        	SearchFor searchFor = new SearchFor(webWebWebDriver);
         	searchFor.EnterTitle("Automation");
         	searchFor.ClickApplyBtn();
         	searchFor.VerifyNoSearchResultsPresent();

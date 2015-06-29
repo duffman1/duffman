@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT;
 
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.DFPAddTags;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
 
 public class GPTTagsVerification extends ParentTest {
 	
@@ -23,11 +23,11 @@ public class GPTTagsVerification extends ParentTest {
             
         	//Setup
             navigation.Modules();
-            Modules modules = new Modules(webDriver);
+            Modules modules = new Modules(webWebWebDriver);
             modules.DisableModule("DART");
             modules.EnableModule("Doubleclick for Publishers");
             navigation.Structure("DFP Ad Tags");
-            DFPAddTags dfpAddTags = new DFPAddTags(webDriver, applib);
+            DFPAddTags dfpAddTags = new DFPAddTags(webWebWebDriver, applib);
             dfpAddTags.ClickGlobalDFPSettingsLnk();
             dfpAddTags.EnterNetworkId("nbcu");
             dfpAddTags.ClickSaveConfigurationBtn();
@@ -51,7 +51,7 @@ public class GPTTagsVerification extends ParentTest {
             navigation.Structure("Blocks");
             
             //Step 6
-            Blocks blocks = new Blocks(webDriver);
+            Blocks blocks = new Blocks(webWebWebDriver);
             blocks.SelectRegion("DFP tag: " + adSlotName, "Sidebar first");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");

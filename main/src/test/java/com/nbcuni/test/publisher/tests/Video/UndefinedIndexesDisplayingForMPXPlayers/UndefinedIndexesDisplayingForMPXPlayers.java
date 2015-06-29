@@ -1,8 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-
+import com.nbcuni.test.publisher.common.ParentTest;
 import org.testng.annotations.Test;
 
 public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{

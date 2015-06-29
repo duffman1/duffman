@@ -1,13 +1,14 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
-import java.util.Arrays;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Structure.AddNewPermissionSet;
 import com.nbcuni.test.publisher.pageobjects.Structure.PermissionSets;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class CustomPermissionSetVerification extends ParentTest {
 	
@@ -26,11 +27,11 @@ public class CustomPermissionSetVerification extends ParentTest {
     	navigation.Structure("Permission Sets");
     	
     	//Step 3
-    	PermissionSets permissionSets = new PermissionSets(webDriver);
+    	PermissionSets permissionSets = new PermissionSets(webWebWebDriver);
     	permissionSets.ClickAddLnk();
     	
     	//Step 4
-    	AddNewPermissionSet addNewPermissionSet = new AddNewPermissionSet(webDriver, applib);
+    	AddNewPermissionSet addNewPermissionSet = new AddNewPermissionSet(webWebWebDriver, applib);
     	String setName = random.GetCharacterString(15);
     	addNewPermissionSet.EnterPermissionSetName(setName);
     	addNewPermissionSet.ClickSaveBtn();
@@ -84,7 +85,7 @@ public class CustomPermissionSetVerification extends ParentTest {
     	navigation.Structure("Permission Sets");
     	permissionSets.ClickPermissionSetExpandEditLnk(setName);
     	permissionSets.ClickPermissionSetDeleteLnk(setName);
-    	Delete delete = new Delete(webDriver);
+    	Delete delete = new Delete(webWebWebDriver);
     	delete.ClickDeleteBtn();
     	contentParent.VerifyMessageStatus("The item has been deleted.");
     	permissionSets.VerifyPermissionSetNotPresent(setName);

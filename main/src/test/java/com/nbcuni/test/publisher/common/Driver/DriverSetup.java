@@ -1,11 +1,13 @@
 package com.nbcuni.test.publisher.common.Driver;
 
-import java.net.URL;
-import java.util.Arrays;
+import com.nbcuni.test.publisher.common.Config;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
-import com.nbcuni.test.publisher.common.Config;
+
+import java.net.URL;
+import java.util.Arrays;
 
 /*********************************************
  * publisher.nbcuni.com Driver Setup Library. Copyright
@@ -17,9 +19,9 @@ import com.nbcuni.test.publisher.common.Config;
 public class DriverSetup {
 
 	private Config config = new Config();
-    Driver driver = null;
-    
-    public Driver WebDriverSetup(Boolean runLocally) throws Exception {
+    WebDriver webDriver = null;
+
+    public WebDriver WebDriverSetup(Boolean runLocally) throws Exception {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -30,9 +32,9 @@ public class DriverSetup {
         else {
         	isMobileRun = false;
         }
-        
+
         String browser = config.getConfigValueString("Browser");
-        
+
         String hubAddress;
         if (isMobileRun.equals(false)) {
         	hubAddress = "http://localhost:" + config.getConfigValueString("RemoteWebDriverHubPort") + "/wd/hub";
@@ -40,7 +42,7 @@ public class DriverSetup {
         else {
         	hubAddress = "http://localhost:" + config.getConfigValueString("LocalAppiumHubPort") + "/wd/hub";
         }
-        
+
         if (isMobileRun.equals(false)) {
         switch (browser)
         {
@@ -74,9 +76,9 @@ public class DriverSetup {
                 capabilities.setJavascriptEnabled(true);
                 break;
         	}
-        } 
+        }
         else {
-        	
+
         	capabilities.setCapability("device", config.getConfigValueString("Device"));
         	if (config.getConfigValueString("Device").equals("Iphone Simulator")) {
         		capabilities.setCapability("app", "safari");
@@ -85,9 +87,9 @@ public class DriverSetup {
         		capabilities.setCapability("app", "chrome");
         	}
         }
-        
+
         capabilities.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
-        
+
         if (config.getConfigValueString("RunRemotely").equals("true")) {
         	if (runLocally.equals(true)) {
         		capabilities.setCapability(CapabilityType.VERSION, "local");
@@ -103,13 +105,13 @@ public class DriverSetup {
         try {
         	//pause greater than grid node recycle time
         	Thread.sleep(config.getConfigValueInt("DriverRecyclePause"));
-            driver = new Driver(new URL(hubAddress), capabilities);
+            webDriver = new Driver(new URL(hubAddress), capabilities);
         }
         catch (Exception e) {
         	Assert.fail("Failed to initiate driver");
         }
 
-        return driver;
+        return webDriver;
     }
     
 }

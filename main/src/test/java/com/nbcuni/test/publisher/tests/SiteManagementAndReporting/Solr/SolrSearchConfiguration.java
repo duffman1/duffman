@@ -1,20 +1,19 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.Solr;
 
-import java.util.Arrays;
-
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Blocks;
+import com.nbcuni.test.publisher.pageobjects.Configuration.Solr;
+import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Blocks;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.Solr;
-import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
-import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import java.util.Arrays;
 
 public class SolrSearchConfiguration extends ParentTest {
 	
@@ -31,7 +30,7 @@ public class SolrSearchConfiguration extends ParentTest {
         
     	Reporter.log("STEP 2");
     	navigation.Modules();
-    	Modules modules = new Modules(webDriver);
+    	Modules modules = new Modules(webWebWebDriver);
     	for (String module : Arrays.asList("Apache Solr framework", "Apache Solr search", 
     			"Acquia agent", "Acquia search", "Search")) {
     		modules.EnableModule(module);
@@ -39,7 +38,7 @@ public class SolrSearchConfiguration extends ParentTest {
     	
     	Reporter.log("STEP 3");
     	navigation.Configuration("Apache Solr search");
-    	Solr solr = new Solr(webDriver);
+    	Solr solr = new Solr(webWebWebDriver);
     	solr.ClickDeleteSolrSearchIndexBtn();
     	
     	Reporter.log("STEP 4");
@@ -48,20 +47,20 @@ public class SolrSearchConfiguration extends ParentTest {
     	solr.ClickIndexAllQueuedContentBtn();
     	solr.ClickIndexAllRemainingBtn();
     	contentParent.WaitForProgressBarNotPresent();
-    	ErrorChecking errorChecking = new ErrorChecking(webDriver);
+    	ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     	Reporter.log("STEP 5");
     	navigation.Structure("Blocks");
     	
     	Reporter.log("STEP 6");
-    	Blocks blocks = new Blocks(webDriver);
+    	Blocks blocks = new Blocks(webWebWebDriver);
     	blocks.SelectRegion("Search form", "Header");
     	blocks.ClickSaveBlocksBtn();
     	contentParent.VerifyMessageStatus("The block settings have been updated.");
     	
     	Reporter.log("STEP 7");
-    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
     	String postTitle = createDefaultContent.Post("Published");
     	
     	Reporter.log("STEP 8");
@@ -78,7 +77,7 @@ public class SolrSearchConfiguration extends ParentTest {
         	}
         	
         	try {
-        		Assert.assertTrue(webDriver.findElement(By.xpath("//body")).getText()
+        		Assert.assertTrue(webWebWebDriver.findElement(By.xpath("//body")).getText()
         				.contains("0 items (100% has been sent to the server)"));
         		break;
         	}

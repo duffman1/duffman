@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.common.Reports;
 
-import java.util.List;
-
+import com.nbcuni.test.publisher.common.Config;
 import org.eclipse.egit.github.core.CommitStatus;
 import org.eclipse.egit.github.core.RepositoryCommit;
 import org.eclipse.egit.github.core.RepositoryId;
@@ -9,7 +8,7 @@ import org.eclipse.egit.github.core.service.CommitService;
 import org.eclipse.egit.github.core.service.PullRequestService;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.Config;
+import java.util.List;
 
 public class UploadReportsGitHub {
 

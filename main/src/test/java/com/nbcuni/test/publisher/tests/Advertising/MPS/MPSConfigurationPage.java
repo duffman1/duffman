@@ -1,13 +1,14 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
-import java.util.Arrays;
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class MPSConfigurationPage extends ParentTest {
 	
@@ -26,7 +27,7 @@ public class MPSConfigurationPage extends ParentTest {
             
         	Reporter.log("SETUP");
         	navigation.Modules();
-        	Modules modules = new Modules(webDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	modules.DisableModule("Pixelman");
         	modules.EnableModule("MPS");
         	
@@ -34,7 +35,7 @@ public class MPSConfigurationPage extends ParentTest {
             navigation.Configuration("MPS Configuration");
             
             Reporter.log("STEP 4");
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
             mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
@@ -112,7 +113,7 @@ public class MPSConfigurationPage extends ParentTest {
 			UserLogin userLogin = applib.openApplication();
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			navigation.Configuration("MPS Configuration");
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
             mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.ClickSaveConfigurationBtn();
 		}

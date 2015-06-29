@@ -1,12 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages;
 
-import java.util.Arrays;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class UniqueURL extends ParentTest{
 	
@@ -25,13 +26,13 @@ public class UniqueURL extends ParentTest{
         	navigation.AddContent("Media Gallery");
         	
         	//Step 3
-        	BasicInformation basicInformation = new BasicInformation(webDriver);
+        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             basicInformation.ClickMediaItemsSelectBtn();
             
             //Step 4
-            SelectFile selectFile = new SelectFile(webDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickViewLibraryBtn();
             selectFile.EnterFileName("HanSolo");
@@ -43,16 +44,16 @@ public class UniqueURL extends ParentTest{
             selectFile.ClickMediaThumbnailImage("1");
             selectFile.ClickMediaThumbnailImage("2");
             selectFile.ClickSubmitBtn();
-            webDriver.switchTo().defaultContent();
+            webWebWebDriver.switchTo().defaultContent();
             
             //Step 5
-            MediaItems mediaItems = new MediaItems(webDriver);
+            MediaItems mediaItems = new MediaItems(webWebWebDriver);
             mediaItems.VerifyFileImagePresent("HanSolo", "1");
             mediaItems.VerifyFileImagePresent("HanSolo", "2");
-            ContentParent contentParent = new ContentParent(webDriver);
+            ContentParent contentParent = new ContentParent(webWebWebDriver);
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
-        	WorkBench workBench = new WorkBench(webDriver);
+        	WorkBench workBench = new WorkBench(webWebWebDriver);
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
         	//workBench.VerifyFileImagePresent("HanSolo", "1");
         	String fileId1 = workBench.GetFileImageId("1");

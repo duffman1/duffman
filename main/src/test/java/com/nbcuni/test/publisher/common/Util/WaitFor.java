@@ -1,33 +1,25 @@
 package com.nbcuni.test.publisher.common.Util;
 
+import com.google.common.base.Function;
+import com.nbcuni.test.publisher.common.Config;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.testng.Assert;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.testng.Assert;
-
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.google.common.base.Function;
-
 public class WaitFor {
 
-	private Driver webDriver;
+	private WebDriver webDriver;
 	private Integer timeout = 0;
 	private Config config;
 	private Interact interact;
 	
 	private String staleElement = "stale element";
 	
-    public WaitFor(Driver webDriver, Integer waitTime) {
+    public WaitFor(WebDriver webDriver, Integer waitTime) {
         this.webDriver = webDriver;
         timeout = waitTime;
         config = new Config();
@@ -50,9 +42,9 @@ public class WaitFor {
     			
     }
     
-    private FluentWait<Driver> driverWait() throws Exception {
+    private FluentWait<WebDriver> driverWait() throws Exception {
     	
-    	return new FluentWait<Driver>(webDriver)
+    	return new FluentWait<WebDriver>(webDriver)
     			.withTimeout(timeout, TimeUnit.SECONDS)
     			.pollingEvery(config.getConfigValueInt("PollingTime"), TimeUnit.MILLISECONDS);
     			
@@ -303,9 +295,9 @@ public class WaitFor {
     	this.driverWait()
     		.ignoring(Exception.class)
     		.withMessage("Multiple windows not present.")
-    		.until(new Function<Driver, Boolean>() {
+    		.until(new Function<WebDriver, Boolean>() {
     			@Override
-    			public Boolean apply(Driver drv) {
+    			public Boolean apply(WebDriver drv) {
     				return !drv.getWindowHandles().equals(1);
     			}
     		});
@@ -434,9 +426,9 @@ public class WaitFor {
     	
     	this.driverWait()
     		.withMessage("Title does not contain text '" + text + "'.")
-    		.until(new Function<Driver, Boolean>() {
+    		.until(new Function<WebDriver, Boolean>() {
     			@Override
-    			public Boolean apply(Driver drv) {
+    			public Boolean apply(WebDriver drv) {
     				return drv.getTitle().contains(text);
     			}
     		});
@@ -447,9 +439,9 @@ public class WaitFor {
     	
     	this.driverWait()
     		.withMessage("URL does not equal '" + url + "'.")
-    		.until(new Function<Driver, Boolean>() {
+    		.until(new Function<WebDriver, Boolean>() {
     			@Override
-    			public Boolean apply(Driver drv) {
+    			public Boolean apply(WebDriver drv) {
     				return drv.getCurrentUrl().equals(url);
     			}
     		});
@@ -460,9 +452,9 @@ public class WaitFor {
     	
     	this.driverWait()
     		.withMessage("Page source does not contain text '" + text + "'.")
-    		.until(new Function<Driver, Boolean>() {
+    		.until(new Function<WebDriver, Boolean>() {
     			@Override
-    			public Boolean apply(Driver drv) {
+    			public Boolean apply(WebDriver drv) {
     				return drv.getPageSource().contains(text);
     			}
     		});
@@ -473,9 +465,9 @@ public class WaitFor {
     	
     	this.driverWait()
     		.withMessage("Page source still contains text '" + text + "'.")
-    		.until(new Function<Driver, Boolean>() {
+    		.until(new Function<WebDriver, Boolean>() {
     			@Override
-    			public Boolean apply(Driver drv) {
+    			public Boolean apply(WebDriver drv) {
     				return !drv.getPageSource().contains(text);
     			}
     		});
@@ -495,13 +487,13 @@ public class WaitFor {
     			public Boolean apply(WebElement ele) {
     				Boolean imgPresent = false;
     				try {
-    					imgPresent = (Boolean) webDriver.executeScript(imageVisibleJS, image);
+    					imgPresent = (Boolean) ((JavascriptExecutor)webDriver).executeScript(imageVisibleJS, image);
     				}
     				catch (WebDriverException e) {
     					if (e.getMessage().toString().contains(staleElement))
     					{
     						System.out.println("image element is stale.");
-    						imgPresent = (Boolean) webDriver.executeScript(imageVisibleJS, webDriver.findElement(interact.GetByLocator(ele)));
+    						imgPresent = (Boolean)((JavascriptExecutor)webDriver).executeScript(imageVisibleJS, webDriver.findElement(interact.GetByLocator(ele)));
     					}
     				}
     				return imgPresent;

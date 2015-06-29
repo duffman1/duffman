@@ -1,16 +1,17 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
-import java.util.Arrays;
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SSOLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SimpleSAML;
+import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.People.People;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class SSODefinedDomains extends ParentTest {
 
@@ -23,10 +24,10 @@ public class SSODefinedDomains extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive", "broken"})
 	 public void SSODefinedDomains_TC3474() throws Exception {
 		 
-		UserLogin userLogin = new UserLogin(webDriver);
-		Logout logout = new Logout(webDriver);
-		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-		Modules modules = new Modules(webDriver);
+		UserLogin userLogin = new UserLogin(webWebWebDriver);
+		Logout logout = new Logout(webWebWebDriver);
+		SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
+		Modules modules = new Modules(webWebWebDriver);
 			
 		Reporter.log("STEP 1");
 		applib.openSitePage("/user");
@@ -62,7 +63,7 @@ public class SSODefinedDomains extends ParentTest {
 		Thread.sleep(1000);
 	        
 		Reporter.log("STEP 9");
-		SSOLogin ssoLogin = new SSOLogin(webDriver);
+		SSOLogin ssoLogin = new SSOLogin(webWebWebDriver);
 		ssoLogin.EnterSSOID(config.getConfigValueString("SSOUsername"));
 		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
@@ -77,7 +78,7 @@ public class SSODefinedDomains extends ParentTest {
 		applib.openSitePage("/user");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		navigation.People();
-		People people = new People(webDriver);
+		People people = new People(webWebWebDriver);
 		people.SeachForUsername(config.getConfigValueString("SSOEmail"));
 		people.ClickUsernameLnk(config.getConfigValueString("SSOEmail"));
 	        
@@ -103,9 +104,9 @@ public class SSODefinedDomains extends ParentTest {
 	public void Cleanup() throws Exception {
 		if (testSuccessful == false) {
 			
-			UserLogin userLogin = new UserLogin(webDriver);
-			SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-			Modules modules = new Modules(webDriver);
+			UserLogin userLogin = new UserLogin(webWebWebDriver);
+			SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
+			Modules modules = new Modules(webWebWebDriver);
 			
 			applib.openSitePage("/user");
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));

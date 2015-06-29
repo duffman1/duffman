@@ -1,14 +1,13 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF;
 
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Surf;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
 
 public class SURFModule extends ParentTest {
 
@@ -29,7 +28,7 @@ public class SURFModule extends ParentTest {
 	       
 		Reporter.log("STEP 3 - 9");
 		navigation.Modules();
-		Modules modules = new Modules(webDriver);
+		Modules modules = new Modules(webWebWebDriver);
 		modules.EnableModule("Pub SURF Example");
 		modules.EnableModule("Surf");
 		
@@ -37,7 +36,7 @@ public class SURFModule extends ParentTest {
 		navigation.Structure("Blocks");
 		
 		Reporter.log("STEP 11");
-		Blocks blocks = new Blocks(webDriver);
+		Blocks blocks = new Blocks(webWebWebDriver);
 		blocks.SelectRegion("Surf Example Actions", "Sidebar first");
 		blocks.SelectRegion("Surf Example Content", "Sidebar first");
 		blocks.ClickSaveBlocksBtn();
@@ -49,7 +48,7 @@ public class SURFModule extends ParentTest {
 		
 		Reporter.log("STEP 14");
 		navigation.Home();
-		Surf surf = new Surf(webDriver);
+		Surf surf = new Surf(webWebWebDriver);
 		surf.ClickSignInBtn();
 		
 		Reporter.log("STEP 15");
@@ -57,7 +56,7 @@ public class SURFModule extends ParentTest {
 		surf.EnterEmailUsername("brandon.clark@nbcuni.com");
 		surf.EnterPassword("tufNewcyd4#");
 		surf.ClickSurfFrmSignInBtn();
-		webDriver.switchTo().defaultContent();
+		webWebWebDriver.switchTo().defaultContent();
 		surf.VerifyUsernamePresent("baclark77");
 		
 		Reporter.log("STEP 16 - N/A");
@@ -85,7 +84,7 @@ public class SURFModule extends ParentTest {
 		 		UserLogin userLogin = applib.openApplication();
 				userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 				navigation.Modules();
-		    	Modules modules = new Modules(webDriver);
+		    	Modules modules = new Modules(webWebWebDriver);
 		    	modules.DisableModule("Pub SURF Example");
 		    	navigation.ClickPrimaryTabNavLnk("Uninstall");
 		    	if (modules.IsModuleInstalled("Pub SURF Example")) {

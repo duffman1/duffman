@@ -1,17 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /*********************************************
  * publisher.nbcuni.com Dynamic Queue Types Library. Copyright
@@ -29,12 +28,12 @@ public class DynamicQueueTypes {
     private Delete delete;
     
     //PAGE OBJECT CONSTRUCTOR
-    public DynamicQueueTypes(Driver webDriver) {
-        delete = new Delete(webDriver);
+    public DynamicQueueTypes(WebDriver webWebWebDriver) {
+        delete = new Delete(webWebWebDriver);
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS

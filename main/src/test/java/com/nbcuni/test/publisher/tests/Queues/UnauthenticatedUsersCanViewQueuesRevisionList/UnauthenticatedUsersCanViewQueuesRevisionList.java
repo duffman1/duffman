@@ -1,10 +1,9 @@
 package com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList;
 
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.AccessDenied;
+import org.testng.annotations.Test;
 
 public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
 	
@@ -24,7 +23,7 @@ public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
         
         //Step 2
         applib.openSitePage("/admin/content/queues/manage/all/revisions-state-flow-states");
-        AccessDenied accessDenied = new AccessDenied(webDriver);
+        AccessDenied accessDenied = new AccessDenied(webWebWebDriver);
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 3

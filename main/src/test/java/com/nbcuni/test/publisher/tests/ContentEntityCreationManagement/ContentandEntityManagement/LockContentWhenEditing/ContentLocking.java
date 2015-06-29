@@ -1,15 +1,17 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.LockContentWhenEditing;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ContentLock;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.Content.Content;
+import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
+import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.People.Roles;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 public class ContentLocking extends ParentTest {
@@ -34,7 +36,7 @@ public class ContentLocking extends ParentTest {
 	  
 		//Step 2
 		navigation.Configuration("Content lock");
-	    ContentLock contentLock = new ContentLock(webDriver);
+	    ContentLock contentLock = new ContentLock(webWebWebDriver);
 	    contentLock.CheckShowLockUnlockMessagesCbx();
 	    contentLock.ClickSaveConfiguration();
 	    contentParent.VerifyMessageStatus("The configuration options have been saved.");
@@ -42,29 +44,29 @@ public class ContentLocking extends ParentTest {
 	    //Step 3 N/A
 	      
 	    //Step 4
-	    AddUser addUser = new AddUser(webDriver);
+	    AddUser addUser = new AddUser(webWebWebDriver);
 	    String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
 	    navigation.People("Permissions", "Roles");
-	    Roles roles = new Roles(webDriver);
+	    Roles roles = new Roles(webWebWebDriver);
 	    roles.ClickEditorEditPermissionsLnk();
-	    Permissions permissions = new Permissions(webDriver, applib);
+	    Permissions permissions = new Permissions(webWebWebDriver, applib);
 	    permissions.EnablePermissions(null, Arrays.asList("create post content", 
         		"edit own post content", "create files", "create character_profile content"));
 	    permissions.ClickSaveConfigurationsBtn();
 	    contentParent.VerifyMessageStatus("The changes have been saved.");
 	    
 	    //Step 5
-	    Logout logout = new Logout(webDriver);
+	    Logout logout = new Logout(webWebWebDriver);
 	    logout.ClickLogoutBtn();
 	    userLogin.Login(userName, "pa55word");
 	        
 	    //Step 6
-	    CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+	    CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
 	    String postTitle = createDefaultContent.Post("Draft");
 	        
 	    //Step 7
 	    navigation.Content();
-	    Content content = new Content(webDriver);
+	    Content content = new Content(webWebWebDriver);
 	    content.ClickEditMenuBtn(postTitle);
 	    
 	    //Step 8

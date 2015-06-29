@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Blocks;
+import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.Structure.MPSBlocks;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Blocks;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
-import com.nbcuni.test.publisher.pageobjects.Structure.MPSBlocks;
 
 public class MPSEndToEndIntegration extends ParentTest {
 	
@@ -24,13 +23,13 @@ public class MPSEndToEndIntegration extends ParentTest {
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	navigation.Modules();
-        	Modules modules = new Modules(webDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	modules.DisableModule("Pixelman");
         	modules.EnableModule("MPS");
         	
         	Reporter.log("SETUP");
         	navigation.Structure("MPS Blocks");
-            MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
+            MPSBlocks mpsBlocks = new MPSBlocks(webWebWebDriver);
             mpsBlocks.ClickAddLnk();
             String blockName = random.GetCharacterString(15);
             mpsBlocks.EnterBlockName(blockName);
@@ -41,7 +40,7 @@ public class MPSEndToEndIntegration extends ParentTest {
         	navigation.Configuration("MPS Configuration");
         	
             Reporter.log("STEP 3");
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
             mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
@@ -59,7 +58,7 @@ public class MPSEndToEndIntegration extends ParentTest {
             navigation.Structure("Blocks");
             
             Reporter.log("STEP 6 and 7");
-            Blocks blocks = new Blocks(webDriver);
+            Blocks blocks = new Blocks(webWebWebDriver);
             blocks.SelectRegion(blockName + " (MPS)", "Footer");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");

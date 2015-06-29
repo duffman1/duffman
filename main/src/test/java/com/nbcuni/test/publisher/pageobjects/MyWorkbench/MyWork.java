@@ -1,16 +1,16 @@
 package com.nbcuni.test.publisher.pageobjects.MyWorkbench;
 
-import java.util.List;
 
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
+import java.util.List;
 
 /*********************************************
  * publisher.nbcuni.com My Work Library. Copyright
@@ -21,14 +21,14 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class MyWork {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private WaitFor waitFor;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public MyWork(Driver webDriver) {
-    	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 10);
+    public MyWork(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
+        waitFor = new WaitFor(webWebWebDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -36,11 +36,11 @@ public class MyWork {
     private WebElement MyWork_Btn;
     
     private WebElement Edit_Lnk(String title) {
-    	return webDriver.findElement(By.xpath("//a[text()='" + title + "']/../..//a[text()='edit']"));
+    	return webWebWebDriver.findElement(By.xpath("//a[text()='" + title + "']/../..//a[text()='edit']"));
     }
     
     private WebElement ContentItem_Ctr(String title) {
-    	return webDriver.findElement(By.xpath("//td[contains(@class, 'title')]/a[text()='" + title + "']/../.."));
+    	return webWebWebDriver.findElement(By.xpath("//td[contains(@class, 'title')]/a[text()='" + title + "']/../.."));
     }
     
     

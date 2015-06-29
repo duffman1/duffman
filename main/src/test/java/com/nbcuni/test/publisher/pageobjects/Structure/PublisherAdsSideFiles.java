@@ -1,19 +1,18 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /*********************************************
 * publisher.nbcuni.com Publisher Ads Side Files Library. Copyright
@@ -24,7 +23,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
 public class PublisherAdsSideFiles {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private Config config;
 	private Integer timeout;
 	private Interact interact;
@@ -33,14 +32,14 @@ public class PublisherAdsSideFiles {
 	private ContentParent contentParent;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public PublisherAdsSideFiles(Driver webDriver) {
-    	this.webDriver = webDriver;
+    public PublisherAdsSideFiles(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
-    	waitFor = new WaitFor(webDriver, timeout);
-    	interact = new Interact(webDriver, timeout);
-    	delete = new Delete(webDriver);
-    	contentParent = new ContentParent(webDriver);
+    	waitFor = new WaitFor(webWebWebDriver, timeout);
+    	interact = new Interact(webWebWebDriver, timeout);
+    	delete = new Delete(webWebWebDriver);
+    	contentParent = new ContentParent(webWebWebDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -151,7 +150,7 @@ public class PublisherAdsSideFiles {
     			"Safecount", "Smartadserver", "Unicast", "Videoegg", "Viewpoint");
     	
     	List<String> notAllowedSideFiles = new ArrayList<String>();
-    	for (WebElement el :  webDriver.findElements(AdSideFileNames_Txt)) {
+    	for (WebElement el :  webWebWebDriver.findElements(AdSideFileNames_Txt)) {
     		String sideFile = el.getText();
     		if (!allowedSideFiles.contains(sideFile)) {
     			notAllowedSideFiles.add(sideFile);

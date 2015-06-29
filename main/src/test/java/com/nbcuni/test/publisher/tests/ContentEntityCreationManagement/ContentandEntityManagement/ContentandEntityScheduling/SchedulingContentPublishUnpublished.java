@@ -1,19 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
-import com.nbcuni.test.publisher.pageobjects.Content.Delete;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Content.RevisionState;
-import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -34,13 +28,13 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         Reporter.log("STEP 2 and 3");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         Reporter.log("STEP 4");
-        WorkBench workBench = new WorkBench(webDriver);
+        WorkBench workBench = new WorkBench(webWebWebDriver);
         workBench.ClickWorkBenchTab("Schedule");
-        ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
+        ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
         scheduleQueue.ClickAddScheduledRevisionLnk();
         
         Reporter.log("STEP 5");
@@ -73,7 +67,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         
         Reporter.log("STEP 9");
         navigation.Content();
-        SearchFor searchFor = new SearchFor(webDriver);
+        SearchFor searchFor = new SearchFor(webWebWebDriver);
         SimpleDateFormat pub7DateFormatEst = new SimpleDateFormat("MM/dd/yyyy");
         Date currentDate = new Date();
         String previouslyScheduledTitle = "futurePost" + pub7DateFormatEst.format(currentDate);
@@ -116,7 +110,7 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(postTitle3, "Moderate to Published", pub7Date5MinutesFuture + " - "));
         scheduleQueue.ClickRunNowExpandLnk(postTitle3, "Moderate to Published");
         scheduleQueue.ClickCancelLnk(postTitle3, "Moderate to Published");
-        Delete delete = new Delete(webDriver);
+        Delete delete = new Delete(webWebWebDriver);
         delete.ClickConfirmBtn();
         contentParent.VerifyMessageStatus("The scheduled revision operation has been cancelled.");
         contentParent.VerifyPageContentNotPresent(Arrays.asList("Moderate to Published"));
@@ -124,10 +118,10 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         Reporter.log("STEP 13");
         navigation.AddContent("Post");
         String postTitle4 = random.GetCharacterString(15);
-        BasicInformation basicInformation = new BasicInformation(webDriver);
+        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         basicInformation.EnterTitle(postTitle4);
         basicInformation.EnterSynopsis();
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Draft");
         contentParent.ClickSaveBtn();
@@ -153,9 +147,9 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         
         Reporter.log("STEP 15 and 16");
         workBench.ClickWorkBenchTab("Revisions");
-        RevisionState revisionState = new RevisionState(webDriver);
+        RevisionState revisionState = new RevisionState(webWebWebDriver);
         revisionState.VerifyRevisionCount(2);
-        Revisions revisions = new Revisions(webDriver);
+        Revisions revisions = new Revisions(webWebWebDriver);
         revisions.ClickEditExtendMenuBtn(postTitle5);
         revisions.ClickScheduleMenuBtn(postTitle5);
         scheduleQueue.SelectRevision(postTitle5);

@@ -1,13 +1,12 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile;
 
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CoverPhoto;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
 
 public class CreateCharacterProfile extends ParentTest {
 	
@@ -26,14 +25,14 @@ public class CreateCharacterProfile extends ParentTest {
         	navigation.AddContent("Character Profile");
             
             //Step 3
-            CharactersInformation charactersInformation = new CharactersInformation(webDriver);
+            CharactersInformation charactersInformation = new CharactersInformation(webWebWebDriver);
             String characterName = random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
             
             //Step 4
-            CoverPhoto coverPhoto = new CoverPhoto(webDriver);
+            CoverPhoto coverPhoto = new CoverPhoto(webWebWebDriver);
             coverPhoto.ClickSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             selectFile.SelectDefaultCoverImg();
             coverPhoto.VerifyFileImagePresent("HanSolo");
             

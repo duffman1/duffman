@@ -1,11 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
+
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
 * publisher.nbcuni.com Display Suite Library. Copyright
@@ -19,9 +19,9 @@ public class DisplaySuite {
 	private WaitFor waitFor;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public DisplaySuite(Driver webDriver) {
-    	PageFactory.initElements(webDriver, this);
-    	waitFor = new WaitFor(webDriver, 10);
+    public DisplaySuite(WebDriver webWebWebDriver) {
+    	PageFactory.initElements(webWebWebDriver, this);
+    	waitFor = new WaitFor(webWebWebDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS

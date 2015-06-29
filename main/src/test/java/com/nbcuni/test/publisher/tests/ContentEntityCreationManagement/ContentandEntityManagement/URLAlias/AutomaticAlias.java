@@ -1,14 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.URLAliases;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.URLPathSettings;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -27,7 +26,7 @@ public class AutomaticAlias extends ParentTest {
             
         	Reporter.log("SETUP");
         	navigation.Configuration("URL aliases", "Settings");
-        	URLAliases urlAliases = new URLAliases(webDriver);
+        	URLAliases urlAliases = new URLAliases(webWebWebDriver);
         	urlAliases.ClickUpdateActionRdb("Do nothing. Leave the old alias intact.");
         	urlAliases.ClickSaveConfigurationBtn();
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
@@ -35,23 +34,23 @@ public class AutomaticAlias extends ParentTest {
         	Reporter.log("STEP 2");
         	navigation.AddContent("Post");
         	String postTitle = random.GetCharacterString(15);
-            BasicInformation basicInformation = new BasicInformation(webDriver);
+            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             basicInformation.EnterTitle(postTitle);
             basicInformation.EnterSynopsis();
-            URLPathSettings urlPathSettings = new URLPathSettings(webDriver);
+            URLPathSettings urlPathSettings = new URLPathSettings(webWebWebDriver);
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.VerifyGenerateAutomateURLAliasChecked();
-            PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+            PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
             publishingOptions.ClickPublishingOptionsLnk();
             publishingOptions.SelectModerationState("Published");
             
             Reporter.log("STEP 3");
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-            String postURL = webDriver.getCurrentUrl();
+            String postURL = webWebWebDriver.getCurrentUrl();
             
             Reporter.log("STEP 4");
-            WorkBench workBench = new WorkBench(webDriver);
+            WorkBench workBench = new WorkBench(webWebWebDriver);
             workBench.ClickWorkBenchTab("Edit Draft");
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.VerifyURLAlias(postTitle);

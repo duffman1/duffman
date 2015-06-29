@@ -1,23 +1,22 @@
 package com.nbcuni.test.publisher.pageobjects.ErrorChecking;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Content Parent Library. Copyright
@@ -28,12 +27,12 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class ErrorChecking {
 
-    private Driver webDriver;
+    private WebDriver webDriver;
     private Config config;
     private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ErrorChecking(Driver webDriver) {
+    public ErrorChecking(WebDriver webDriver) {
         this.webDriver = webDriver;
         config = new Config();
         PageFactory.initElements(webDriver, this);

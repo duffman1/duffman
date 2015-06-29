@@ -1,8 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.SiteMap;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,26 +18,26 @@ import java.lang.reflect.InvocationTargetException;
  * Created by kiryl_zayets on 6/17/15.
  */
 public class Page {
-    protected Driver webDriver;
+    protected org.openqa.selenium.WebDriver webWebDriver;
 
     @Autowired
     protected SiteMap siteMap;
 
-    public Page(Driver webDriver) {
-        this.webDriver = webDriver;
+    public Page(org.openqa.selenium.WebDriver webWebDriver) {
+        this.webWebDriver = webWebDriver;
 
-        PageFactory.initElements(new HtmlElementDecorator(webDriver), this);
+        PageFactory.initElements(new HtmlElementDecorator(webWebDriver), this);
     }
 
-    public Driver getWebDriver() {
-        return webDriver;
+    public org.openqa.selenium.WebDriver getWebDriver() {
+        return webWebDriver;
     }
 
     public <T extends Page> T navigate(String url, Class<T> clazz) {
         T instance = null;
-        webDriver.get(url);
+        webWebDriver.get(url);
         try {
-            instance = clazz.getDeclaredConstructor(Driver.class).newInstance(webDriver);
+            instance = clazz.getDeclaredConstructor(WebDriver.class).newInstance(webWebDriver);
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {
@@ -53,22 +53,22 @@ public class Page {
     ;
 
     public void waitVisibilityOfElement(HtmlElement element) {
-        new WebDriverWait(webDriver, 8).until(ExpectedConditions.visibilityOf(element));
+        new WebDriverWait(webWebDriver, 8).until(ExpectedConditions.visibilityOf(element));
     }
 
     public <T extends WebElement> void waitVisibilityOfElement(int seconds, T element) {
-        new WebDriverWait(webDriver, seconds).until(ExpectedConditions.visibilityOf(element));
+        new WebDriverWait(webWebDriver, seconds).until(ExpectedConditions.visibilityOf(element));
     }
 
     public void waitForElementIsInvisible(int timeOutSec, By by) {
-        new WebDriverWait(webDriver, timeOutSec).until(ExpectedConditions
+        new WebDriverWait(webWebDriver, timeOutSec).until(ExpectedConditions
                 .invisibilityOfElementLocated(by));
     }
 
 
     public UserLogin navigateLoginPage() {
-        webDriver.get(siteMap.getBaseUrl());
-        return new UserLogin(webDriver);
+        webWebDriver.get(siteMap.getBaseUrl());
+        return new UserLogin(webWebDriver);
     }
 
 }

@@ -1,14 +1,15 @@
 package com.nbcuni.test.publisher.tests.Video.Player;
 
-import java.util.List;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class SelectVideoPlayerPerVideoFile extends ParentTest{
 	
@@ -43,7 +44,7 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 on requires prior MPX configuration
-    	Settings settings = new Settings(webDriver);
+    	Settings settings = new Settings(webWebWebDriver);
     	settings.ConfigureMPXIfNeeded();
     	
     	navigation.Configuration("Media: thePlatform mpx settings");
@@ -55,16 +56,16 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		navigation.Content("Files", "mpxMedia");
         		
         		//Step 3
-        		SearchFor searchFor = new SearchFor(webDriver);
+        		SearchFor searchFor = new SearchFor(webWebWebDriver);
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
 
         		//Step 4
-        		Content content = new Content(webDriver);
+        		Content content = new Content(webWebWebDriver);
         		content.ClickEditMenuBtn("AutomationDefault");
         		
         		//Step 5 and 6
-        		EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
+        		EditMPXVideo editMPXVideo = new EditMPXVideo(webWebWebDriver);
         		editMPXVideo.VerifyPubMPXVideoPlayerPresent();
             
         		//Step 7

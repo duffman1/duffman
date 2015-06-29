@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
-import java.util.Arrays;
-
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
+import java.util.Arrays;
 
 public class AddMPSCallsToErrorPages extends ParentTest {
 	
@@ -25,10 +24,10 @@ public class AddMPSCallsToErrorPages extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Modules modules = new Modules(webDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	modules.VerifyModuleEnabled("MPS");
         	navigation.Configuration("MPS Configuration");
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
             mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");

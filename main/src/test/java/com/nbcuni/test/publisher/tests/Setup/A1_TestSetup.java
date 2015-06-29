@@ -1,47 +1,37 @@
 package com.nbcuni.test.publisher.tests.Setup;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
-
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Random;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
-import com.nbcuni.test.publisher.pageobjects.EmberNav;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
-
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class A1_TestSetup {
 	
     /*************************************************************************************
      * Test executes some common setup logic prior to full suite execution
      *************************************************************************************/
-    public Boolean TestSetup_Test(Driver webDriver, AppLib applib) throws Exception {
+    public Boolean TestSetup_Test(WebDriver webWebWebDriver, AppLib applib) throws Exception {
     	
-    	EmberNav navigation = new EmberNav(webDriver);
+    	EmberNav navigation = new EmberNav(webWebWebDriver);
     	Config config = new Config();
-		ContentParent contentParent = new ContentParent(webDriver);
-		WaitFor waitFor = new WaitFor(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+		ContentParent contentParent = new ContentParent(webWebWebDriver);
+		WaitFor waitFor = new WaitFor(webWebWebDriver, config.getConfigValueInt("WaitForWaitTime"));
     	Boolean abortTestSuite = false;
     	Boolean allIterationsFailed = false;
     	
@@ -59,12 +49,12 @@ public class A1_TestSetup {
             	
             	//disable overlay module if necessary
             	applib.openSitePage("/admin/modules");
-                Modules modules = new Modules(webDriver);
+                Modules modules = new Modules(webWebWebDriver);
                 String overlayModule = "Overlay";
                 if (modules.IsModuleEnabled(overlayModule) == true) {
                 	modules.DisableModule(overlayModule);
                 }
-                webDriver.switchTo().defaultContent();
+                webWebWebDriver.switchTo().defaultContent();
                 
                 //enable necessary modules
                 for (String module : Arrays.asList("Field UI", "Pub Post", "Logo Manager", "Devel", "Instant Filter")) {
@@ -106,30 +96,30 @@ public class A1_TestSetup {
                 
                 //set timezone utc
             	applib.openSitePage("/admin/config/regional/settings");
-            	webDriver.findElement(By.xpath("//select[@id='edit-date-default-timezone']/option[contains(text(), 'UTC')]")).click();
+            	webWebWebDriver.findElement(By.xpath("//select[@id='edit-date-default-timezone']/option[contains(text(), 'UTC')]")).click();
             	contentParent.ClickSaveBtn();
             	
             	//set date/time formats
             	applib.openSitePage("/admin/config/regional/date-time");
-            	new Select(webDriver.findElement(By.id("edit-date-format-html5-tools-iso8601"))).selectByValue("c");
-            	new Select(webDriver.findElement(By.id("edit-date-format-long"))).selectByValue("l, F j, Y - H:i");
-            	new Select(webDriver.findElement(By.id("edit-date-format-medium"))).selectByValue("D, m/d/Y - H:i");
-            	new Select(webDriver.findElement(By.id("edit-date-format-short"))).selectByValue("Y-m-d H:i");
-            	new Select(webDriver.findElement(By.id("edit-date-format-edit-date"))).selectByValue("m/d/Y - h:i A");
+            	new Select(webWebWebDriver.findElement(By.id("edit-date-format-html5-tools-iso8601"))).selectByValue("c");
+            	new Select(webWebWebDriver.findElement(By.id("edit-date-format-long"))).selectByValue("l, F j, Y - H:i");
+            	new Select(webWebWebDriver.findElement(By.id("edit-date-format-medium"))).selectByValue("D, m/d/Y - H:i");
+            	new Select(webWebWebDriver.findElement(By.id("edit-date-format-short"))).selectByValue("Y-m-d H:i");
+            	new Select(webWebWebDriver.findElement(By.id("edit-date-format-edit-date"))).selectByValue("m/d/Y - h:i A");
             	contentParent.ClickSaveBtn();
             	
                 //configure media gallery multi select
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items/widget-type");
-                new Select(webDriver.findElement(By.id("edit-widget-type"))).selectByVisibleText("Media multiselect");
+                new Select(webWebWebDriver.findElement(By.id("edit-widget-type"))).selectByVisibleText("Media multiselect");
                 contentParent.ClickSaveBtn();
                 applib.openSitePage("/admin/structure/types/manage/media-gallery/fields/field_media_items");
-                new Select(webDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
+                new Select(webWebWebDriver.findElement(By.id("edit-field-cardinality"))).selectByVisibleText("Unlimited");
                 contentParent.ClickSaveBtn();
 
                 //set file system paths if not already set
                 applib.openSitePage("/admin/config/media/file-system");
-                WebElement PublicFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-public-path"));
-                WebElement PrivateFileSystemPath_Txb = webDriver.findElement(By.id("edit-file-private-path"));
+                WebElement PublicFileSystemPath_Txb = webWebWebDriver.findElement(By.id("edit-file-public-path"));
+                WebElement PrivateFileSystemPath_Txb = webWebWebDriver.findElement(By.id("edit-file-private-path"));
                 
                 if (PrivateFileSystemPath_Txb.getAttribute("value").equals("")) {
                 	String privateFileSystemPath = null;
@@ -151,20 +141,20 @@ public class A1_TestSetup {
                 	PublicFileSystemPath_Txb.sendKeys("sites/default/files");
                 	PrivateFileSystemPath_Txb.clear();
                 	PrivateFileSystemPath_Txb.sendKeys("/mnt/files/nbcupublisher7" + privateFileSystemPath + "/sites/default/files-private");
-                	WebElement TemporaryDirectory_Txb = webDriver.findElement(By.id("edit-file-temporary-path"));
+                	WebElement TemporaryDirectory_Txb = webWebWebDriver.findElement(By.id("edit-file-temporary-path"));
                 	TemporaryDirectory_Txb.clear();
                 	TemporaryDirectory_Txb.sendKeys("/mnt/tmp/nbcupublisher7qa5");
-                	webDriver.findElement(By.id("edit-file-default-scheme-public")).click();
+                	webWebWebDriver.findElement(By.id("edit-file-default-scheme-public")).click();
                 	contentParent.ClickSaveBtn();
                 }
                 
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
                 navigation.AddContent("Post");
                 contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
-            	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+            	PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
             	publishingOptions.ClickPublishingOptionsLnk();
             	contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
-            	BasicInformation basicInformation = new BasicInformation(webDriver);
+            	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             	basicInformation.ClickBasicInformationTab();
             	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
             	Date currentDate = new Date();
@@ -173,15 +163,15 @@ public class A1_TestSetup {
             	basicInformation.EnterTitle(postTitle);
             	basicInformation.EnterSynopsis();
             	basicInformation.ClickCoverSelectBtn();
-            	SelectFile selectFile = new SelectFile(webDriver);
+            	SelectFile selectFile = new SelectFile(webWebWebDriver);
             	selectFile.SelectDefaultCoverImg();
             	publishingOptions.ClickPublishingOptionsLnk();
             	publishingOptions.SelectModerationState("Draft");
             	contentParent.ClickSaveBtn();
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-            	WorkBench workBench = new WorkBench(webDriver);
+            	WorkBench workBench = new WorkBench(webWebWebDriver);
                 workBench.ClickWorkBenchTab("Schedule");
-                ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
+                ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
                 scheduleQueue.ClickAddScheduledRevisionLnk();
                 scheduleQueue.SelectRevision(postTitle);
                 scheduleQueue.VerifyOperationOptions(Arrays.asList("Revert", "Delete", "Moderate to Draft", 
@@ -202,10 +192,10 @@ public class A1_TestSetup {
             	
             	//schedule a new logo to be used later in the suite
             	applib.openSitePage("/admin/content/logos");
-            	Logos logos = new Logos(webDriver, applib);
+            	Logos logos = new Logos(webWebWebDriver, applib);
         	    logos.DeleteAllLogos();
             	applib.openSitePage("/logo/add");
-                AddLogo addLogo = new AddLogo(webDriver);
+                AddLogo addLogo = new AddLogo(webWebWebDriver);
                 String logoTitle = random.GetCharacterString(15);
                 addLogo.EnterTitle(logoTitle);
                 addLogo.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "nbclogosmall.jpg");
@@ -234,7 +224,7 @@ public class A1_TestSetup {
         	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
         	    
         	    //configure mpx if needed
-        	    Settings settings = new Settings(webDriver);
+        	    Settings settings = new Settings(webWebWebDriver);
             	settings.ConfigureMPXIfNeeded();
             	settings.ConfigureMPXIngestionType();
             	
@@ -256,7 +246,7 @@ public class A1_TestSetup {
                 applib.openSitePage("/node/add");
                 String allContentLnksLoc = "//div[@id='content']//ul[@class='admin-list']//a";
                 waitFor.ElementVisible(By.xpath(allContentLnksLoc));
-                List<WebElement> allContentTypes = webDriver.findElements(By.xpath(allContentLnksLoc));
+                List<WebElement> allContentTypes = webWebWebDriver.findElements(By.xpath(allContentLnksLoc));
                 List<String> allContentTypeURLsToDelete = new ArrayList<String>();
                 for (WebElement contentType : allContentTypes) {
                 	allContentTypeURLsToDelete.add(contentType.getAttribute("href").replace(config.getConfigValueString("AppURL") + "/node/add/", ""));
@@ -265,18 +255,18 @@ public class A1_TestSetup {
                 	if (!allowedContentTypes.contains(contentType)) {
                 		
                 		applib.openSitePage("/admin/structure/types/manage/" + contentType + "/delete");
-                		webDriver.findElement(By.id("edit-submit")).click();
+                		webWebWebDriver.findElement(By.id("edit-submit")).click();
                 	}
                 }
                 
                 //flush all caches
-                new FlushCache(webDriver).FlushAllCache();
+                new FlushCache(webWebWebDriver).FlushAllCache();
                 
                 break;
         	}
         	catch (Exception | AssertionError e) {
         		e.printStackTrace();
-        		webDriver.manage().deleteAllCookies();
+        		webWebWebDriver.manage().deleteAllCookies();
         	}
         }
     	
@@ -285,7 +275,7 @@ public class A1_TestSetup {
         		abortTestSuite = true;
         	}
         }
-        webDriver.quit();
+        webWebWebDriver.quit();
         return abortTestSuite;
     }
 }

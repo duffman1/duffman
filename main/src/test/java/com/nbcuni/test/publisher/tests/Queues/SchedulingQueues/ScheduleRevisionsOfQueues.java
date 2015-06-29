@@ -1,13 +1,12 @@
 package com.nbcuni.test.publisher.tests.Queues.SchedulingQueues;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.Queues;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
-
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
 import java.text.SimpleDateFormat;
@@ -39,12 +38,12 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 1a
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
         navigation.Content("Queues");
-        Queues queues = new Queues(webDriver);
+        Queues queues = new Queues(webWebWebDriver);
         queues.ClickAddPromoQueueLnk();
         
         //Step 3
@@ -60,9 +59,9 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         queues.ClickEditQueueMenuBtn(queueTitle);
         
         //Step 5, 6, and 7 (truncated)
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
-        ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
+        ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
         navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.ClickAddScheduledRevisionLnk();
         

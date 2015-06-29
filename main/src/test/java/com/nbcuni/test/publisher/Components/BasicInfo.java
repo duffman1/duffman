@@ -1,8 +1,9 @@
 package com.nbcuni.test.publisher.Components;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
@@ -17,7 +18,7 @@ import java.util.List;
 
 @FindBy(id = "edit-group_required_information")
 public class BasicInfo extends HtmlElement {
-    public Driver webDriver;
+    public WebDriver webWebWebDriver;
 
     @FindBy(xpath = "//input[contains(@id, 'edit-title')]")
     TextInput title;
@@ -46,9 +47,9 @@ public class BasicInfo extends HtmlElement {
     }
 
     public void setBody(String body) {
-        webDriver.switchTo().frame(bodyFrame);
-        webDriver.findElement(By.id("tinymce")).sendKeys(body);
-        webDriver.switchTo().defaultContent();
+        webWebWebDriver.switchTo().frame(bodyFrame);
+        webWebWebDriver.findElement(By.id("tinymce")).sendKeys(body);
+        webWebWebDriver.switchTo().defaultContent();
     }
 
 
@@ -60,21 +61,21 @@ public class BasicInfo extends HtmlElement {
 
     public void selectMediaItems(List<String> items) {
         selectMediaItems.click();
-        webDriver.switchTo().frame(webDriver.findElement(By.cssSelector("iframe.media-modal-frame")));
+        webWebWebDriver.switchTo().frame(webWebWebDriver.findElement(By.cssSelector("iframe.media-modal-frame")));
 
-        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.overflow='visible';",
-                webDriver.findElement(By.cssSelector("div.plupload.html5")));
+        ((JavascriptExecutor) webWebWebDriver).executeScript("arguments[0].style.overflow='visible';",
+                webWebWebDriver.findElement(By.cssSelector("div.plupload.html5")));
 
         this.getClass().getClassLoader().getResource("images/brad_pitt.jpg");
         for (String item : items) {
             File file = new File(this.getClass().getClassLoader().getResource(item).getPath());
             if (file.exists()) {
-                webDriver.findElement(By.xpath("//input[@type='file']")).
+                webWebWebDriver.findElement(By.xpath("//input[@type='file']")).
                         sendKeys(file.getAbsolutePath());
             }
         }
-        webDriver.findElement(By.xpath("//a[@class='plupload_button plupload_start']")).click();
-        webDriver.findElement(By.id("edit-next")).click();
-        webDriver.switchTo().defaultContent();
+        webWebWebDriver.findElement(By.xpath("//a[@class='plupload_button plupload_start']")).click();
+        webWebWebDriver.findElement(By.id("edit-next")).click();
+        webWebWebDriver.switchTo().defaultContent();
     }
 }

@@ -1,8 +1,9 @@
 package com.nbcuni.test.publisher.Components;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
@@ -17,7 +18,7 @@ import java.util.List;
 
 @FindBy(css = "div#media-browser-tabset")
 public class MediaItemsFrame extends HtmlElement {
-    public Driver webDriver;
+    public WebDriver webWebWebDriver;
 
     @FindBy(css = "div.plupload.html5")
     HtmlElement parentOfFile;
@@ -43,25 +44,25 @@ public class MediaItemsFrame extends HtmlElement {
 
 //        webDriver.switchTo().frame(frame);
 
-        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.overflow='visible';",
+        ((JavascriptExecutor) webWebWebDriver).executeScript("arguments[0].style.overflow='visible';",
                 parentOfFile);
 
         this.getClass().getClassLoader().getResource("images/brad_pitt.jpg");
         for (String item : items) {
             File file = new File(this.getClass().getClassLoader().getResource(item).getPath());
             if (file.exists()) {
-                webDriver.findElement(By.xpath("//input[@type='file']")).
+                webWebWebDriver.findElement(By.xpath("//input[@type='file']")).
                         sendKeys(file.getAbsolutePath());
             }
         }
-        webDriver.findElement(By.xpath("//a[@class='plupload_button plupload_start']")).click();
-        webDriver.findElement(By.id("edit-next")).click();
-        webDriver.switchTo().defaultContent();
+        webWebWebDriver.findElement(By.xpath("//a[@class='plupload_button plupload_start']")).click();
+        webWebWebDriver.findElement(By.id("edit-next")).click();
+        webWebWebDriver.switchTo().defaultContent();
     }
 
 
-    public void makeFileVisible(Driver webDriver) {
-        ((JavascriptExecutor) webDriver).executeScript("arguments[0].style.overflow='visible';",
+    public void makeFileVisible(WebDriver webWebWebDriver) {
+        ((JavascriptExecutor) webWebWebDriver).executeScript("arguments[0].style.overflow='visible';",
                 parentOfFile);
     }
 

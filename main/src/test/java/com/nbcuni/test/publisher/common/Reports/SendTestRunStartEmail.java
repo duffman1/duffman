@@ -1,17 +1,12 @@
 package com.nbcuni.test.publisher.common.Reports;
 
-import java.net.InetAddress;
-import java.util.Properties;
+import com.nbcuni.test.publisher.common.Config;
 
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
-import com.nbcuni.test.publisher.common.Config;
+import java.net.InetAddress;
+import java.util.Properties;
 
 public class SendTestRunStartEmail {
 

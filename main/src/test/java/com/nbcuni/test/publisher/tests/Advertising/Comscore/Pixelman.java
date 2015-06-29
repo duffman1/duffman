@@ -1,12 +1,13 @@
 package com.nbcuni.test.publisher.tests.Advertising.Comscore;
 
-import java.util.Arrays;
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class Pixelman extends ParentTest {
 	
@@ -23,7 +24,7 @@ public class Pixelman extends ParentTest {
         
         Reporter.log("STEP 2 -3");
         navigation.Modules();
-    	Modules modules = new Modules(webDriver);
+    	Modules modules = new Modules(webWebWebDriver);
     	modules.EnableModule("Pixelman");
     	
         Reporter.log("STEP 4");

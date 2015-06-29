@@ -1,20 +1,19 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
-import java.util.Arrays;
-
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SSOLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SimpleSAML;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
 import com.nbcuni.test.publisher.pageobjects.People.People;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class SSOAuthenticationModes extends ParentTest {
 
@@ -26,19 +25,19 @@ public class SSOAuthenticationModes extends ParentTest {
 	 public void SSOAuthenticationModes_TC6519() throws Exception {
 		 
 		UserLogin userLogin = applib.openApplication(); 
-		Modules modules = new Modules(webDriver);
-		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-		Logout logout = new Logout(webDriver);
-		WorkBench workBench = new WorkBench(webDriver);
-		AddUser addUser = new AddUser(webDriver);
-		SSOLogin ssoLogin = new SSOLogin(webDriver);
+		Modules modules = new Modules(webWebWebDriver);
+		SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
+		Logout logout = new Logout(webWebWebDriver);
+		WorkBench workBench = new WorkBench(webWebWebDriver);
+		AddUser addUser = new AddUser(webWebWebDriver);
+		SSOLogin ssoLogin = new SSOLogin(webWebWebDriver);
 		
 		Reporter.log("STEP 1");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
 		Reporter.log("STEP 2");
 		navigation.People();
-    	People people = new People(webDriver);
+    	People people = new People(webWebWebDriver);
     	people.ClickAddUserLnk();
 		addUser.EnterUsername("206448849");
 		addUser.EnterEmailAddress("publisher_testuser1@testmail.com");
@@ -115,7 +114,7 @@ public class SSOAuthenticationModes extends ParentTest {
 		workBench.ClickWorkBenchTab("Edit");
 		
 		Reporter.log("STEP 10");
-		String parentWindow = webDriver.getWindowHandle();
+		String parentWindow = webWebWebDriver.getWindowHandle();
 		addUser.ClickChangeYourPasswordLnk();
 	    applib.switchToNewWindow(parentWindow);
 		ssoLogin.VerifySSOPasswordReset();

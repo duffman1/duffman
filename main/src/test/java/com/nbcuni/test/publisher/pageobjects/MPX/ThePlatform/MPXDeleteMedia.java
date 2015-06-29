@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
-import java.util.Iterator;
-
 import com.nbcuni.test.publisher.common.Config;
-
-import org.testng.Reporter;
 import org.sikuli.basics.Settings;
-import org.sikuli.script.*;
+import org.sikuli.script.Match;
+import org.sikuli.script.Screen;
+import org.testng.Reporter;
+
+import java.util.Iterator;
 
 /*********************************************
  * publisher.nbcuni.com MPX Delete Media Library. Copyright

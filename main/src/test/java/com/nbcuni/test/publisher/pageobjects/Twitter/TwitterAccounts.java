@@ -1,14 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Twitter;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
+
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Twitter Library. Copyright
@@ -19,19 +18,19 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class TwitterAccounts {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private Config config;
 	private Integer timeout;
 	private WaitFor waitFor;
 	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public TwitterAccounts(Driver webDriver) {
-    	this.webDriver = webDriver;
+    public TwitterAccounts(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
     	config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -50,16 +49,16 @@ public class TwitterAccounts {
     
     public boolean TwitterAccountExists() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     	
     	boolean existingAccountPresent = false;
     	try {
-    		webDriver.findElement(PublisherSevenAccount_Lnk);
+    		webWebWebDriver.findElement(PublisherSevenAccount_Lnk);
     		existingAccountPresent = true;
     	}
     	catch (Exception e) { }
     	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	return existingAccountPresent;
     }

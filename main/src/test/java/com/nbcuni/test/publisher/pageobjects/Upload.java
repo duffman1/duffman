@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.bo.Metadata;
-import com.nbcuni.test.publisher.common.Driver.Driver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class Upload extends Page {
 
-    public Upload(Driver webDriver) {
+    public Upload(WebDriver webDriver) {
         super(webDriver);
 
     }

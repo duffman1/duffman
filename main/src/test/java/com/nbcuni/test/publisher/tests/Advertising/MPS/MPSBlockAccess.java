@@ -1,16 +1,15 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
-import java.util.Arrays;
-
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.People.AddUser;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.People.AddUser;
+import java.util.Arrays;
 
 public class MPSBlockAccess extends ParentTest {
 	
@@ -27,7 +26,7 @@ public class MPSBlockAccess extends ParentTest {
             
         	Reporter.log("SETUP");
         	navigation.Modules();
-        	Modules modules = new Modules(webDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	modules.DisableModule("Pixelman");
         	modules.EnableModule("MPS");
         	
@@ -35,11 +34,11 @@ public class MPSBlockAccess extends ParentTest {
         	navigation.Structure("MPS Blocks");
         	
         	Reporter.log("STEP 3");
-        	AddUser addUser = new AddUser(webDriver);
+        	AddUser addUser = new AddUser(webWebWebDriver);
             String userName = addUser.AddDefaultUser(Arrays.asList("administrator"), false);
             
             Reporter.log("STEP 4");
-            Logout logout = new Logout(webDriver);
+            Logout logout = new Logout(webWebWebDriver);
             logout.ClickLogoutBtn();
             userLogin.Login(userName, "pa55word");
             

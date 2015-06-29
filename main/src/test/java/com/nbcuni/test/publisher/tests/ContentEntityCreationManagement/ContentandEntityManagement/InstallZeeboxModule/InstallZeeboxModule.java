@@ -1,11 +1,10 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
-
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -31,7 +30,7 @@ public class InstallZeeboxModule extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2 and 3
-            Modules modules = new Modules(webDriver);
+            Modules modules = new Modules(webWebWebDriver);
             modules.VerifyModuleEnabled("zeebox Example");
             
             //Step 4
@@ -39,7 +38,7 @@ public class InstallZeeboxModule extends ParentTest{
             applib.openSitePage("/zeebox-example");
             
             //Step 5
-            ContentParent contentParent = new ContentParent(webDriver);
+            ContentParent contentParent = new ContentParent(webWebWebDriver);
             contentParent.VerifyPageContentPresent(Arrays.asList("Zeebox Follow Button example block",
             		"Zeebox Play-along example block",
             			"Zeebox Hot TV Rooms example block",

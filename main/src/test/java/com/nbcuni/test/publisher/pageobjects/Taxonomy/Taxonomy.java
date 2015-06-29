@@ -1,10 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Taxonomy;
 
-import java.util.List;
-
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import java.util.List;
+
 /*********************************************
  * publisher.nbcuni.com Taxonomy Library. Copyright
  * 
@@ -24,59 +24,59 @@ import org.testng.Reporter;
 
 public class Taxonomy {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private Actions actions; 
 	
     //PAGE OBJECT CONSTRUCTOR
-    public Taxonomy(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        actions = new Actions(webDriver);
+    public Taxonomy(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
+        actions = new Actions(webWebWebDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS AND SCRIPTS
     //private String MouseOver_Js = "var evObj = document.createEvent('MouseEvents');" + "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" + "arguments[0].dispatchEvent(evObj);";
 	
     private WebElement Tier1_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']"));
+    	return webWebWebDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']"));
     }
     
     private WebElement Tier2_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']"));
+    	return webWebWebDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']"));
     }
     
     private WebElement Tier3_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']"));
+    	return webWebWebDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']"));
     }
     
     private WebElement Tier4_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']"));
+    	return webWebWebDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']"));
     }
     
     private WebElement Tier5_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']/..//a[text()='" + tiers[4] + "']"));
+    	return webWebWebDriver.findElement(By.xpath("//li[contains(@class,'admin-menu-toolbar-category')]/a[text()='" + tiers[0] + "']/../ul//a[text()='" + tiers[1] +"']/..//a[text()='" + tiers[2] + "']/..//a[text()='" + tiers[3] + "']/..//a[text()='" + tiers[4] + "']"));
     }
     
     @FindBy(how = How.XPATH, using = "//span[@class='admin-menu-home-icon']")
     private WebElement HomeTier1_Lnk;
     
     private WebElement HomeTier2_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//span[@class='admin-menu-home-icon']/../..//a[text()='" + tiers[1] + "']"));
+    	return webWebWebDriver.findElement(By.xpath("//span[@class='admin-menu-home-icon']/../..//a[text()='" + tiers[1] + "']"));
     }
     
     @FindBy(how = How.XPATH, using = "//span[@class='admin-menu-home-icon']/../..//span[contains(text(), 'Development')]")
     private WebElement HomeDevelopmentTier2_Lnk;
     
     private WebElement HomeDevelopmentTier3_Lnk(String[] tiers) {
-    	return webDriver.findElement(By.xpath("//span[@class='admin-menu-home-icon']/../..//span[contains(text(), 'Development')]/..//a[contains(text(), '" + tiers[2] + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("//span[@class='admin-menu-home-icon']/../..//span[contains(text(), 'Development')]/..//a[contains(text(), '" + tiers[2] + "')]"));
     }
     
     private WebElement TaxonomyItem_Lnk(String menuName) {
-    	return webDriver.findElement(By.xpath("//ul[@id='admin-menu-menu']/..//a[text()=\"" + menuName + "\"]"));
+    	return webWebWebDriver.findElement(By.xpath("//ul[@id='admin-menu-menu']/..//a[text()=\"" + menuName + "\"]"));
     }
     
     private List<WebElement> RunCron_Lnks() {
-    	return webDriver.findElements(By.xpath("//span[@class='admin-menu-home-icon']/../..//a[text()='Run cron']"));
+    	return webWebWebDriver.findElements(By.xpath("//span[@class='admin-menu-home-icon']/../..//a[text()='Run cron']"));
     }
     
     @FindBy(how = How.XPATH, using = "//a[@id='edit-shortcuts']")
@@ -98,10 +98,10 @@ public class Taxonomy {
     	//if mouse-off fails, refresh the page to be sure to close taxonomy menu
     	try {
     		actions.moveToElement(Shortcuts_Lnk).build().perform();
-    		new WebDriverWait(webDriver, 5).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(locator)));
+    		new WebDriverWait(webWebWebDriver, 5).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(locator)));
     	}
     	catch (Exception e) {
-    		webDriver.navigate().refresh();
+    		webWebWebDriver.navigate().refresh();
     	}
     }
     
@@ -109,7 +109,7 @@ public class Taxonomy {
     	
     	String[] tierLevel = menuPath.split(">>");
     	
-    	WebDriverWait wait = new WebDriverWait(webDriver, 10);
+    	WebDriverWait wait = new WebDriverWait(webWebWebDriver, 10);
     	
     	for (int Iter=0;Iter<=3;Iter++) {
     		
@@ -268,7 +268,7 @@ public class Taxonomy {
     	    	}
     		} 
     		catch (Exception e) {
-    			webDriver.navigate().refresh();
+    			webWebWebDriver.navigate().refresh();
     			if (Iter == 3) {
     				Assert.fail("Taxonomy navigation failed after 3 iterations for menu path '" + menuPath + "'.");
     			}

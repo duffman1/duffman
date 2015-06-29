@@ -1,19 +1,18 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar;
 
-import java.net.URL;
-
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.GigyaSettings;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.GigyaShareBar;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Twitter.TwitterLogin;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.net.URL;
 
 public class ContentCommenting extends ParentTest{
 	
@@ -29,12 +28,12 @@ public class ContentCommenting extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("SETUP");
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webWebWebDriver);
         modules.VerifyModuleEnabled("Pub Gigya");
         navigation.Configuration("Gigya settings");
-        WorkBench workBench = new WorkBench(webDriver);
+        WorkBench workBench = new WorkBench(webWebWebDriver);
         workBench.ClickWorkBenchTab("Share");
-        GigyaSettings gigyaSettings = new GigyaSettings(webDriver);
+        GigyaSettings gigyaSettings = new GigyaSettings(webWebWebDriver);
         gigyaSettings.EnterProviders("Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like");
         gigyaSettings.ClickGigyaAdvancedShareBarSettingsLnk();
         gigyaSettings.EnterAdvancedShowShareBarUISettings("wrap|true");
@@ -44,19 +43,19 @@ public class ContentCommenting extends ParentTest{
     	Reporter.log("STEP 2 - N/A");
         
     	Reporter.log("STEP 3");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
         String postTitle = createDefaultContent.Post("Draft");
-        GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver);
-        String parentWindow = webDriver.getWindowHandle();
+        GigyaShareBar gigyaShareBar = new GigyaShareBar(webWebWebDriver);
+        String parentWindow = webWebWebDriver.getWindowHandle();
 	    gigyaShareBar.ClickTweetButton();
 	    applib.switchToNewWindow(parentWindow);
-        TwitterLogin twitterLogin = new TwitterLogin(webDriver, applib);
+        TwitterLogin twitterLogin = new TwitterLogin(webWebWebDriver, applib);
         twitterLogin.EnterUsernameOrEmail("publisherseven");
         twitterLogin.EnterPassword("Publ!$her");
         twitterLogin.ClickSignInAndTweetBtn();
-        webDriver.switchTo().window(parentWindow);
-        webDriver.navigate().to(new URL("https://twitter.com/"));
-        webDriver.switchTo().defaultContent();
+        webWebWebDriver.switchTo().window(parentWindow);
+        webWebWebDriver.navigate().to(new URL("https://twitter.com/"));
+        webWebWebDriver.switchTo().defaultContent();
         twitterLogin.VerifyTwitterPostPresent(postTitle);
         
         Reporter.log("STEP 4");

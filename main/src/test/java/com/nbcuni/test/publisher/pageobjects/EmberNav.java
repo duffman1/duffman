@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 public class EmberNav {
 
-    private Driver webDriver;
+    private WebDriver webDriver;
     private WaitFor waitFor;
     private ErrorChecking errorChecking;
     private Config config;
@@ -32,7 +32,7 @@ public class EmberNav {
     private Integer timeout;
 
     //PAGE OBJECT CONSTRUCTOR
-    public EmberNav(Driver webDriver) {
+    public EmberNav(WebDriver webDriver) {
         this.webDriver = webDriver;
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");

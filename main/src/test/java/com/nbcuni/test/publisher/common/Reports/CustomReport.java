@@ -1,27 +1,17 @@
 package com.nbcuni.test.publisher.common.Reports;
 
+import com.nbcuni.test.publisher.common.Config;
+import org.apache.commons.io.FileUtils;
+import org.testng.*;
+import org.testng.reporters.EmailableReporter;
+import org.testng.xml.XmlSuite;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.zip.ZipOutputStream;
-
-import org.apache.commons.io.FileUtils;
-import org.testng.IResultMap;
-import org.testng.ISuite;
-import org.testng.ISuiteResult;
-import org.testng.ITestContext;
-import org.testng.ITestNGMethod;
-import org.testng.ITestResult;
-import org.testng.reporters.EmailableReporter;
-import org.testng.xml.XmlSuite;
-
-import com.nbcuni.test.publisher.common.Config;
 
 public class CustomReport extends EmailableReporter {
 

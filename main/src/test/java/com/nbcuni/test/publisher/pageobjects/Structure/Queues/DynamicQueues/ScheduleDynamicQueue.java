@@ -1,8 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -27,14 +27,14 @@ import java.util.List;
 
 public class ScheduleDynamicQueue {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public ScheduleDynamicQueue(Driver webDriver) {
-    	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+    public ScheduleDynamicQueue(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
+        wait = new WebDriverWait(webWebWebDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -69,15 +69,15 @@ public class ScheduleDynamicQueue {
     private WebElement Complete_txt;
     
     private WebElement RunNow_Lnk(String contentItemTitle, String action) {
-    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='Run now']"));
+    	return webWebWebDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='Run now']"));
     }
     
     private WebElement ExpandRunNowMenu_Lnk(String contentItemTitle, String action) {
-    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='operations']"));
+    	return webWebWebDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='operations']"));
     }
     
     private WebElement Cancel_Lnk(String contentItemTitle, String action) {
-    	return webDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='Cancel']"));
+    	return webWebWebDriver.findElement(By.xpath("//td[contains(text(), '" + contentItemTitle + "')]/../td[text()='" + action + "']/..//a[text()='Cancel']"));
     }
     
     //PAGE OBJECT METHODS

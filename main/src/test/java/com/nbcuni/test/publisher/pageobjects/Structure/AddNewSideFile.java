@@ -1,12 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
-import org.openqa.selenium.By;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
 /*********************************************
 * publisher.nbcuni.com Add a New Side File Library. Copyright
@@ -23,11 +22,11 @@ public class AddNewSideFile {
 	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public AddNewSideFile(Driver webDriver) {
+    public AddNewSideFile(WebDriver webWebWebDriver) {
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
-    	waitFor = new WaitFor(webDriver, timeout);
-    	interact = new Interact(webDriver, timeout);
+    	waitFor = new WaitFor(webWebWebDriver, timeout);
+    	interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS

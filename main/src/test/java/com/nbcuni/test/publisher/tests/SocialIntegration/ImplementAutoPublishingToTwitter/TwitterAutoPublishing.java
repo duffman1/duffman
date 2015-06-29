@@ -1,22 +1,23 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter;
 
-import java.net.URL;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Twitter.NodeTypes;
 import com.nbcuni.test.publisher.pageobjects.Facebook.Share;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.Twitter.NodeTypes;
 import com.nbcuni.test.publisher.pageobjects.Twitter.Twitter;
 import com.nbcuni.test.publisher.pageobjects.Twitter.TwitterAccounts;
 import com.nbcuni.test.publisher.pageobjects.Twitter.TwitterLogin;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import java.net.URL;
 
 public class TwitterAutoPublishing extends ParentTest{
 	
@@ -42,7 +43,7 @@ public class TwitterAutoPublishing extends ParentTest{
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         navigation.Modules();
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webWebWebDriver);
         modules.EnableModule("Pub Social");
         
         //Step 2
@@ -52,7 +53,7 @@ public class TwitterAutoPublishing extends ParentTest{
         //Step 3
         navigation.Configuration("Twitter");
         navigation.ClickPrimaryTabNavLnk("Settings");
-        Twitter twitter = new Twitter(webDriver);
+        Twitter twitter = new Twitter(webWebWebDriver);
         twitter.EnterOAuthConsumerKey("5Ur95TtwzHY2A9hMKg");
         twitter.EnterOAuthConsumerSecret("GEHafCRDdJpRoaJ4Zk4tPYDObR3IkeEtnr5otrpIs");
         twitter.ClickSaveConfigurationBtn();
@@ -61,25 +62,25 @@ public class TwitterAutoPublishing extends ParentTest{
         //Step 3a
         navigation.Configuration("Twitter");
         navigation.ClickPrimaryTabNavLnk("Post");
-        NodeTypes nodeTypes = new NodeTypes(webDriver);
+        NodeTypes nodeTypes = new NodeTypes(webWebWebDriver);
         nodeTypes.EnablePostNode();
         
         //Step 4 - NA as we log in to twitter at a later step
         
         //Step 5
         navigation.Configuration("Twitter");
-        TwitterAccounts twitterAccounts = new TwitterAccounts(webDriver);
-        TwitterLogin twitterLogin = new TwitterLogin(webDriver, applib);
+        TwitterAccounts twitterAccounts = new TwitterAccounts(webWebWebDriver);
+        TwitterLogin twitterLogin = new TwitterLogin(webWebWebDriver, applib);
         Boolean accountAlreadyExists = twitterAccounts.TwitterAccountExists();
         if (accountAlreadyExists == false) {
         	twitterAccounts.ClickGoToTwitterAddAuthenticatedAccountBtn();
         	twitterLogin.EnterAdminUsernameOrEmail("publisherseven");
         	twitterLogin.EnterAdminPassword("Publ!$her");
         	twitterLogin.ClickAuthorizeAppBtn();
-        	new WebDriverWait(webDriver, 10).until(ExpectedConditions.titleContains("Site-Install"));
+        	new WebDriverWait(webWebWebDriver, 10).until(ExpectedConditions.titleContains("Site-Install"));
         }
         else {
-        	webDriver.navigate().to("https://twitter.com/login");
+        	webWebWebDriver.navigate().to("https://twitter.com/login");
         	twitterLogin.EnterUsernameOrEmail("publisherseven");
         	twitterLogin.EnterPassword("Publ!$her");
         	twitterLogin.ClickSignInBtn();
@@ -88,25 +89,25 @@ public class TwitterAutoPublishing extends ParentTest{
         
         //Step 6
         navigation.AddContent("Post");
-        BasicInformation basicInformation = new BasicInformation(webDriver);
+        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webDriver);
+        WorkBench workBench = new WorkBench(webWebWebDriver);
         workBench.ClickWorkBenchTab("Revisions");
         
         //Step 7
-        Revisions revisions = new Revisions(webDriver);
+        Revisions revisions = new Revisions(webWebWebDriver);
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
         
         //Step 8
-        Share share = new Share(webDriver);
+        Share share = new Share(webWebWebDriver);
         share.ClickTwitterLnk();
         share.ClickPostToTwitterCbx();
         
@@ -118,8 +119,8 @@ public class TwitterAutoPublishing extends ParentTest{
         share.ClickShareBtn();
         
         //Step 11
-        webDriver.navigate().to(new URL("https://twitter.com/"));
-        webDriver.switchTo().defaultContent();
+        webWebWebDriver.navigate().to(new URL("https://twitter.com/"));
+        webWebWebDriver.switchTo().defaultContent();
         twitterLogin.VerifyTwitterPostPresent(tweet);
         
     }

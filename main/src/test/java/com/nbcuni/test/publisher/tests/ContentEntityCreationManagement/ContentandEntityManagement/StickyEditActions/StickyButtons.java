@@ -1,10 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.Content.MetaTags;
+import com.nbcuni.test.publisher.pageobjects.Content.StickyEditActions;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
 import org.testng.annotations.Test;
 
 public class StickyButtons extends ParentTest {
@@ -32,20 +35,20 @@ public class StickyButtons extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 1a
-            Modules modules = new Modules(webDriver);
+            Modules modules = new Modules(webWebWebDriver);
             modules.VerifyModuleEnabled("Sticky Edit Actions");
             
             //Step 2 - NOTE - using post instead of character profile content type
             navigation.AddContent("Post");
-            BasicInformation basicInformation = new BasicInformation(webDriver);
+            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             String postTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(postTitle);
-        	ContentParent contentParent = new ContentParent(webDriver);
+        	ContentParent contentParent = new ContentParent(webWebWebDriver);
         	interact.Scroll("100");
         	basicInformation.EnterSynopsis();
         	
             //Step 3
-            StickyEditActions stickyEditActions = new StickyEditActions(webDriver);
+            StickyEditActions stickyEditActions = new StickyEditActions(webWebWebDriver);
             stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             interact.Scroll("100");
@@ -53,7 +56,7 @@ public class StickyButtons extends ParentTest {
             stickyEditActions.VerifyPreviewBtnPresent();
             
             //Step 4
-            MetaTags metaTags = new MetaTags(webDriver);
+            MetaTags metaTags = new MetaTags(webWebWebDriver);
             metaTags.ClickMetaTagsLnk();stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             interact.Scroll("100");
@@ -84,8 +87,8 @@ public class StickyButtons extends ParentTest {
 	public void Cleanup() throws Exception {
 		if (testSuccessful == false) {
 			
-			UserLogin userLogin = new UserLogin(webDriver);
-			Modules modules = new Modules(webDriver);
+			UserLogin userLogin = new UserLogin(webWebWebDriver);
+			Modules modules = new Modules(webWebWebDriver);
 			applib.openSitePage("/user");
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			navigation.Modules();

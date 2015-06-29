@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
@@ -25,14 +25,14 @@ import java.util.concurrent.TimeUnit;
 
 public class ContentTypes extends Page {
 
-    private Driver webDriver;
+    private WebDriver webDriver;
     private Config config;
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
-    public ContentTypes(Driver webDriver) {
+    public ContentTypes(WebDriver webDriver) {
         super(webDriver);
         this.webDriver = webDriver;
         config = new Config();

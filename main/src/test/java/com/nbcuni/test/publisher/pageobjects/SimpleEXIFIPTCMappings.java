@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Driver.Driver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -19,8 +19,8 @@ import org.testng.Reporter;
 public class SimpleEXIFIPTCMappings {
 
     //PAGE OBJECT CONSTRUCTOR
-    public SimpleEXIFIPTCMappings(Driver webDriver, AppLib applib) {
-        PageFactory.initElements(webDriver, this);
+    public SimpleEXIFIPTCMappings(WebDriver webWebWebDriver, AppLib applib) {
+        PageFactory.initElements(webWebWebDriver, this);
     }
    
     //PAGE OBJECT IDENTIFIERS

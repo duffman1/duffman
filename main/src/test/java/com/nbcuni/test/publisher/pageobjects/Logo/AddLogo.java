@@ -1,14 +1,15 @@
 package com.nbcuni.test.publisher.pageobjects.Logo;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.LocalFileDetector;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.LocalFileDetector;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Add Logo Library. Copyright
@@ -19,19 +20,19 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class AddLogo {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private Config config;
 	private Interact interact;
 	private WaitFor waitFor;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public AddLogo(Driver webDriver) {
-    	this.webDriver = webDriver;
+    public AddLogo(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
         config = new Config();
         Integer timeout = config.getConfigValueInt("WaitForWaitTime");
-        interact = new Interact(webDriver, timeout);
-        waitFor = new WaitFor(webDriver, timeout);
-        webDriver.setFileDetector(new LocalFileDetector());
+        interact = new Interact(webWebWebDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        ((RemoteWebDriver)webWebWebDriver).setFileDetector(new LocalFileDetector());
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -76,8 +77,8 @@ public class AddLogo {
     public void EnterStartTime(String time) throws Exception {
     	
     	Reporter.log("Enter '" + time + "' in the 'Start Time' text box.");
-    	webDriver.executeScript("arguments[0].setAttribute('value', '" 
-    			+ time.replace("PM", "pm").replace("AM", "am") + "');", waitFor.ElementVisible(StartTime_Txb));
+        ((JavascriptExecutor)webWebWebDriver).executeScript("arguments[0].setAttribute('value', '"
+                + time.replace("PM", "pm").replace("AM", "am") + "');", waitFor.ElementVisible(StartTime_Txb));
     	
     }
     
@@ -91,7 +92,7 @@ public class AddLogo {
     public void EnterEndTime(String time) throws Exception {
     	
     	Reporter.log("Enter '" + time + "' in the 'End Time' text box.");
-    	webDriver.executeScript("arguments[0].setAttribute('value', '" 
+    	 ((JavascriptExecutor)webWebWebDriver).executeScript("arguments[0].setAttribute('value', '"
     			+ time.replace("PM", "pm").replace("AM", "am") + "');", waitFor.ElementVisible(EndTime_Txb));
     	
     }

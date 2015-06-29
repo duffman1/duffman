@@ -1,9 +1,8 @@
 package com.nbcuni.test.publisher.common;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +18,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+
+
 /**************************************************************************.
  * NBC.com Application Library. Copyright
  *
@@ -31,9 +32,9 @@ public class AppLib {
 	Config config = new Config();
 	private WebDriverWait wait;
 	
-    private Driver webDriver;
+    private WebDriver webDriver;
     
-    public AppLib(Driver webDriver) {
+    public AppLib(WebDriver webDriver) {
     	this.webDriver = webDriver;
     	wait = new WebDriverWait(webDriver, 10);
     }
@@ -49,7 +50,7 @@ public class AppLib {
         Reporter.setCurrentTestResult(result); 
         
         try {
-        	File scrFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);    
+        	File scrFile = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
         	FileUtils.copyFile(scrFile, new File(filePath));
         	Reporter.log("Screenshot saved to " + filePath + " ");
             System.out.println("Screenshot saved to " + filePath);
@@ -94,22 +95,22 @@ public class AppLib {
     
     public UserLogin openApplication() throws Exception {
         Reporter.log("Open url '" + config.getConfigValueString("AppURL") + "'.");
-        webDriver.navigate().to(config.getConfigValueString("AppURL"));   
+        webDriver.navigate().to(config.getConfigValueString("AppURL"));
         return new UserLogin(webDriver);
     }
     
     public void openSitePage(String location) throws Exception {
     	location = location.replace(config.getConfigValueString("AppURL"), "");
         Reporter.log("Open url '" + config.getConfigValueString("AppURL") + location + "'.");
-        webDriver.navigate().to(config.getConfigValueString("AppURL") + location);   
+        webDriver.navigate().to(config.getConfigValueString("AppURL") + location);
     }
     
     public void openNewWindow() throws Exception {
     	Reporter.log("Open a new browser window.");
-    	webDriver.executeScript("window.open()");
+        ((JavascriptExecutor)webDriver).executeScript("window.open()");
     	wait.until(new ExpectedCondition<Boolean>() {
-    		public Boolean apply(WebDriver webDriver) {
-    			return webDriver.getWindowHandles().size() > 1;
+    		public Boolean apply(org.openqa.selenium.WebDriver webWebDriver) {
+    			return webWebDriver.getWindowHandles().size() > 1;
    		 	}
     	});
     }

@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -17,8 +18,8 @@ import org.testng.Reporter;
 public class MPSBlocks {
 
     //PAGE OBJECT CONSTRUCTOR
-    public MPSBlocks(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
+    public MPSBlocks(WebDriver webWebWebDriver) {
+        PageFactory.initElements(webWebWebDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

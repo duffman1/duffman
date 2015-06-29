@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
@@ -9,15 +9,9 @@ import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSearch;
-import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
+import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.*;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -78,7 +72,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Note - test requires mpx configuration
-    	Settings settings = new Settings(webDriver);
+    	Settings settings = new Settings(webWebWebDriver);
     	navigation.Configuration("Media: thePlatform mpx settings");
     	
         	//Setup
@@ -86,9 +80,9 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	if (configuredAccounts.contains("DB TV")) {
         		
         		navigation.Structure("File types");
-        		FileTypes fileTypes = new FileTypes(webDriver);
+        		FileTypes fileTypes = new FileTypes(webWebWebDriver);
         		fileTypes.ClickEditFileTypeLnk("MPX Video for Account \"DB TV\" (2312945284)");
-        		MPXFileType mpxFileType = new MPXFileType(webDriver);
+        		MPXFileType mpxFileType = new MPXFileType(webWebWebDriver);
         		boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
         		if (isMPXValueOverrideEnabled == false) {
             	
@@ -98,13 +92,13 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         		}
         		
         		//Step 2
-            	MPXLogin mpxLogin = new MPXLogin(webDriver);
+            	MPXLogin mpxLogin = new MPXLogin(webWebWebDriver);
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
             	
             	//Step 3
             	if (configuredAccounts.contains("DB TV")) {
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webWebWebDriver);
             	mpxSelectAccount.SelectAccount("DB TV");
             	
             	//Step 4 (test creates new mpx asset)
@@ -134,7 +128,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	
             	//Step 7
             	applib.openApplication();
-            	Cron cron = new Cron(webDriver);
+            	Cron cron = new Cron(webWebWebDriver);
             	if (config.getConfigValueString("DrushIngestion").equals("false")) {
                 	cron.RunCron();
                 }
@@ -143,7 +137,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	navigation.Content("Files", "mpxMedia");
         	    
         	    //Step 9
-        	    SearchFor searchFor = new SearchFor(webDriver);
+        	    SearchFor searchFor = new SearchFor(webWebWebDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
@@ -182,16 +176,16 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    		pub7WorkflowDate7DaysInPast));
         	    
         	    //Step 12
-        	    WorkBench workBench = new WorkBench(webDriver);
+        	    WorkBench workBench = new WorkBench(webWebWebDriver);
         	    workBench.ClickWorkBenchTab("Edit");
         	    
         	    //Step 13
-        	    EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
+        	    EditMPXVideo editMPXVideo = new EditMPXVideo(webWebWebDriver);
         	    editMPXVideo.VerifyMPXAvailableDate(pub7Date20DaysInPast);
         	    editMPXVideo.VerifyMPXExpirationDate(pub7Date7DaysInPast);
         	    
         	    //Step 14
-        	    ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
+        	    ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
         	    navigation.ClickPrimaryTabNavLnk("Schedule");
         	    scheduleQueue.VerifyScheduleTableisEmpty();
         	    

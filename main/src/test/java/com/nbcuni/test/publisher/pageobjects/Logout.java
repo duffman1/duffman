@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import java.util.concurrent.TimeUnit;
+import com.nbcuni.test.publisher.common.Config;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,8 +10,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
+
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Logout Library. Copyright
@@ -20,13 +22,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class Logout {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Logout(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    public Logout(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
         config = new Config();
     }
     
@@ -40,7 +42,7 @@ public class Logout {
     	
     	Reporter.log("Click the 'Logout' button.");
     	Thread.sleep(1000); //slight pause required here
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		for (int second = 0; ; second++) {
     		
     		if (second >= 30) {
@@ -62,7 +64,7 @@ public class Logout {
             		
             	}
             	catch (WebDriverException e) {
-            		webDriver.executeScript("arguments[0].click();", LogOut_Btn);
+            		 ((JavascriptExecutor)webWebWebDriver).executeScript("arguments[0].click();", LogOut_Btn);
             		
             	}
             }
@@ -71,7 +73,7 @@ public class Logout {
             }
             Thread.sleep(500);
         }
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     

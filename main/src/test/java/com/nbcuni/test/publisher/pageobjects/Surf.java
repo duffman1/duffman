@@ -1,12 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import org.openqa.selenium.By;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Surf Library. Copyright
@@ -17,19 +16,19 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class Surf {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private Config config;
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Surf(Driver webDriver) {
-        this.webDriver = webDriver;
+    public Surf(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -62,8 +61,8 @@ public class Surf {
     public void SwitchToSurfFrm() throws Exception {
     	
     	Reporter.log("Switch to the Surf frame.");
-    	webDriver.switchTo().frame(waitFor.ElementPresent(SurfContainer_Frm));
-    	webDriver.switchTo().frame(waitFor.ElementPresent(SurfLogin_Frm));
+    	webWebWebDriver.switchTo().frame(waitFor.ElementPresent(SurfContainer_Frm));
+    	webWebWebDriver.switchTo().frame(waitFor.ElementPresent(SurfLogin_Frm));
     	
     }
     

@@ -1,22 +1,17 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.TVE;
 
-import java.util.Arrays;
-
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Blocks;
+import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.TVEModule.*;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Blocks;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
-import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
-import com.nbcuni.test.publisher.pageobjects.TVEModule.AdobePass;
-import com.nbcuni.test.publisher.pageobjects.TVEModule.MVPDConnection;
-import com.nbcuni.test.publisher.pageobjects.TVEModule.OptimumLogin;
-import com.nbcuni.test.publisher.pageobjects.TVEModule.TVEAuthExample;
-import com.nbcuni.test.publisher.pageobjects.TVEModule.jQueryUpdate;
+import java.util.Arrays;
 
 public class ImplementTVEModulesCore extends ParentTest {
 
@@ -32,15 +27,15 @@ public class ImplementTVEModulesCore extends ParentTest {
 		UserLogin userLogin = applib.openApplication();
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
-		Modules modules = new Modules(webDriver);
+		Modules modules = new Modules(webWebWebDriver);
 		modules.VerifyModuleEnabled("jQuery Update");
-		jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
+		jQueryUpdate jqueryUpdate = new jQueryUpdate(webWebWebDriver);
 		Thread.sleep(2000);
         applib.openSitePage("/admin/config/development/jquery_update");
         jqueryUpdate.SelectDefaultjQueryVersion("1.5");
         jqueryUpdate.ClickSaveConfigurationBtn();
         contentParent.VerifyMessageStatus("The configuration options have been saved");
-        FlushCache flushCache = new FlushCache(webDriver);
+        FlushCache flushCache = new FlushCache(webWebWebDriver);
         flushCache.FlushAllCache();
         
 		navigation.Modules();
@@ -49,18 +44,18 @@ public class ImplementTVEModulesCore extends ParentTest {
         }
         
 		navigation.Structure("Blocks");
-		Blocks blocks = new Blocks(webDriver);
+		Blocks blocks = new Blocks(webWebWebDriver);
         blocks.SelectRegion("TVE Auth Example", "Sidebar first");
         blocks.ClickSaveBlocksBtn();
         contentParent.VerifyMessageStatus("The block settings have been updated.");
         
-        TVEAuthExample tveAuthExample = new TVEAuthExample(webDriver);
-        ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        TVEAuthExample tveAuthExample = new TVEAuthExample(webWebWebDriver);
+        ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
         
         navigation.Home();
         if (!tveAuthExample.isMVPDConfigured()) {
         	tveAuthExample.ClickMVPDSetupLnk();
-            MVPDConnection mvpdConnection = new MVPDConnection(webDriver);
+            MVPDConnection mvpdConnection = new MVPDConnection(webWebWebDriver);
             mvpdConnection.EnterMVPDServiceURL("http://mvpd-admin.nbcuni.com/mvpd/service/syfy/prod/desktop");
             mvpdConnection.EnterGenericErrorMessage("Oops! Something went wrong while fetching providers!");
             mvpdConnection.ClickSaveConfigurationBtn();
@@ -76,7 +71,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         
         if (!tveAuthExample.isAdobePassConfigured()) {
         	tveAuthExample.ClickAdobePassSetupLnk();
-            AdobePass adobePass = new AdobePass(webDriver);
+            AdobePass adobePass = new AdobePass(webWebWebDriver);
             adobePass.EnterAccessEnablerLocation("http://entitlement.auth-staging.adobe.com/entitlement/AccessEnablerDebug.swf");
             adobePass.EnterRequestTimeout("30000");
             adobePass.EnterAdobeFlashVersion("10.1.13");
@@ -114,7 +109,7 @@ public class ImplementTVEModulesCore extends ParentTest {
         
         tveAuthExample.SelectMVPD("Optimum");
         tveAuthExample.ClickLoginBtn();
-        OptimumLogin optimumLogin = new OptimumLogin(webDriver);
+        OptimumLogin optimumLogin = new OptimumLogin(webWebWebDriver);
         optimumLogin.LoginToOptimum("research40", "support40");
         tveAuthExample.VerifyAuthenticationStatusChecked("true");
         tveAuthExample.VerifyAuthenticated("true");
@@ -149,13 +144,13 @@ public class ImplementTVEModulesCore extends ParentTest {
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			applib.openSitePage("/admin/config/development/jquery_update");
 			Thread.sleep(1000);
-			jQueryUpdate jqueryUpdate = new jQueryUpdate(webDriver);
+			jQueryUpdate jqueryUpdate = new jQueryUpdate(webWebWebDriver);
 			jqueryUpdate.SelectDefaultjQueryVersion("1.5");
 			jqueryUpdate.ClickSaveConfigurationBtn(); 
 			contentParent.VerifyMessageStatus("The configuration options have been saved");
-			FlushCache flushCache = new FlushCache(webDriver);
+			FlushCache flushCache = new FlushCache(webWebWebDriver);
 			flushCache.FlushAllCache();
-			Modules modules = new Modules(webDriver);
+			Modules modules = new Modules(webWebWebDriver);
 			navigation.Modules();
 			for (String module : Arrays.asList("TVE Auth Example")) {
 				modules.DisableModule(module);

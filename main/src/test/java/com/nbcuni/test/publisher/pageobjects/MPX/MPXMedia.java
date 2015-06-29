@@ -1,8 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -25,14 +25,14 @@ import java.util.List;
 
 public class MPXMedia {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MPXMedia(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+    public MPXMedia(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
+        wait = new WebDriverWait(webWebWebDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -43,35 +43,35 @@ public class MPXMedia {
     private WebElement SyncMPXMediaNow_Lnk;
     
     private WebElement SynchMPXMediaForAccount1_Ddl(String playerTitle) {
-    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[1]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[1]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
     }
     
     private WebElement SynchMPXMediaForAccount2_Ddl(String playerTitle) {
-    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[2]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[2]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
     }
     
     private WebElement SynchMPXMediaForAccount3_Ddl(String playerTitle) {
-    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[3]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[3]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
     }
     
     private WebElement SynchMPXMediaForAccount4_Ddl(String playerTitle) {
-    	return webDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[4]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("(//select[contains(@id, 'edit-video-sync-settings')])[4]/optgroup/option[contains(text(), '" + playerTitle + "')]"));
     }
     
     private WebElement ImportAccount_Lbl(String label) {
-    	return webDriver.findElement(By.xpath("//label[contains(@for, 'edit-video-sync-settings')][contains(text(), '" + label + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("//label[contains(@for, 'edit-video-sync-settings')][contains(text(), '" + label + "')]"));
     }
     
     private WebElement ImportAccount_Ddl(String accountName) {
-    	return webDriver.findElement(By.xpath("//label[contains(@for, 'edit-video-sync-settings')][contains(text(), '" + accountName + "')]/../select"));
+    	return webWebWebDriver.findElement(By.xpath("//label[contains(@for, 'edit-video-sync-settings')][contains(text(), '" + accountName + "')]/../select"));
     }
     
     private WebElement MPXUnpublishedPlayer_Lnk(String playerTitle) {
-    	return webDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='here']"));
+    	return webWebWebDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='here']"));
     }
     
     private WebElement MPXLogin_Lnk(String playerTitle) {
-    	return webDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='mpx.theplatform']"));
+    	return webWebWebDriver.findElement(By.xpath("//div[@class='messages error']//strong//em[text()='" + playerTitle + "']/../..//a[text()='mpx.theplatform']"));
     }
     
     

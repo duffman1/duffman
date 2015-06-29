@@ -1,12 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 public class EnhanceContentLibraryTable extends ParentTest{
@@ -36,14 +37,14 @@ public class EnhanceContentLibraryTable extends ParentTest{
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     	navigation.Configuration("Media: thePlatform mpx settings");
-        Settings settings = new Settings(webDriver);
+        Settings settings = new Settings(webWebWebDriver);
         if (settings.IsMPXConfigured() == true) { 
         
         	//Step 3
         	navigation.Content("Files");
         	
         	//Step 4
-        	SearchFor searchFor = new SearchFor(webDriver);
+        	SearchFor searchFor = new SearchFor(webWebWebDriver);
         	searchFor.VerifySearchHeaderColumnOrder();
         	
         	//Step 5 //TODO this step needs additional logic as time allows

@@ -1,14 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Twitter;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Node Types Library. Copyright
@@ -26,12 +25,12 @@ public class NodeTypes {
     private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
-    public NodeTypes(Driver webDriver) {
-        contentParent = new ContentParent(webDriver);
+    public NodeTypes(WebDriver webWebWebDriver) {
+        contentParent = new ContentParent(webWebWebDriver);
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS

@@ -1,13 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
+import com.nbcuni.test.publisher.common.Config;
 import org.sikuli.basics.Settings;
 import org.sikuli.script.Button;
 import org.sikuli.script.Key;
 import org.sikuli.script.KeyModifier;
 import org.sikuli.script.Screen;
 import org.testng.Assert;
-
-import com.nbcuni.test.publisher.common.Config;
 
 /*********************************************
  * publisher.nbcuni.com MPX Assets Library. Copyright

@@ -1,10 +1,12 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
+import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
-
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -31,12 +33,12 @@ public class CreateTVSeason extends ParentTest{
         
         //Step 3
         contentParent.VerifyRequiredFields(Arrays.asList("Title", "Season", "Synopsis"));
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
         
         //Step 4
-        BasicInformation basicInformation = new BasicInformation(webDriver);
+        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         basicInformation.ClickBasicInformationTab();
         String tvSeasonTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(tvSeasonTitle);
@@ -45,7 +47,7 @@ public class CreateTVSeason extends ParentTest{
         
         //Step 5
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver);
+        SelectFile selectFile = new SelectFile(webWebWebDriver);
         selectFile.SelectDefaultCoverImg();
     	
     	//Step 6
@@ -55,7 +57,7 @@ public class CreateTVSeason extends ParentTest{
     	//Step 7
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
-    	WorkBench workBench = new WorkBench(webDriver);
+    	WorkBench workBench = new WorkBench(webWebWebDriver);
     	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
     	
         }

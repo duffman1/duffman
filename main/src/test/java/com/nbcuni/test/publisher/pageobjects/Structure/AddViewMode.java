@@ -1,12 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Structure;
 
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
 * publisher.nbcuni.com Add View Mode Library. Copyright
@@ -17,12 +18,12 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class AddViewMode {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public AddViewMode(Driver webDriver) {
-    	this.webDriver = webDriver;
-    	PageFactory.initElements(webDriver, this);
+    public AddViewMode(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
+    	PageFactory.initElements(webWebWebDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -30,7 +31,7 @@ public class AddViewMode {
     private WebElement Label_Txb;
     
     private WebElement Entity_Cbx(String entity) {
-    	return webDriver.findElement(By.xpath("//div[@id='edit-entities']//label[text()='" + entity + " ']/../input"));
+    	return webWebWebDriver.findElement(By.xpath("//div[@id='edit-entities']//label[text()='" + entity + " ']/../input"));
     }
     
     @FindBy(how = How.ID, using = "edit-submit")

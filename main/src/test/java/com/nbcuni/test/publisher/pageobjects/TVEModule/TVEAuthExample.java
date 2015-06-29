@@ -1,7 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.TVEModule;
 
-import java.util.concurrent.TimeUnit;
-
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -11,10 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.Interact;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com TVE Auth Example Library. Copyright
@@ -25,19 +23,19 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class TVEAuthExample {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private Config config;
 	private Integer timeout;
 	private WaitFor waitFor;
 	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public TVEAuthExample(Driver webDriver) {
-    	this.webDriver = webDriver;
+    public TVEAuthExample(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -63,48 +61,48 @@ public class TVEAuthExample {
     //PAGE OBJECT METHODS
     public Boolean TVEAuthAlreadyConfigured() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     	Boolean alreadyConfigured;
     	try {
-    		webDriver.findElement(MVPDSetup_Lnk);
+    		webWebWebDriver.findElement(MVPDSetup_Lnk);
     		alreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {
     		alreadyConfigured = true;
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
     	
     }
     
     public Boolean isMVPDConfigured() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     	Boolean alreadyConfigured;
     	try {
-    		webDriver.findElement(MVPDSetup_Lnk);
+    		webWebWebDriver.findElement(MVPDSetup_Lnk);
     		alreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {
     		alreadyConfigured = true;
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
     	
     }
     
     public Boolean isAdobePassConfigured() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     	Boolean alreadyConfigured;
     	try {
-    		webDriver.findElement(AdobeSetup_Lnk);
+    		webWebWebDriver.findElement(AdobeSetup_Lnk);
     		alreadyConfigured = false;
     	}
     	catch (NoSuchElementException e) {
     		alreadyConfigured = true;
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	return alreadyConfigured;
     	
     }
@@ -135,7 +133,7 @@ public class TVEAuthExample {
     public void VerifyAuthenticationStatusChecked(final String txt) throws Exception {
     	
     	Reporter.log("Verify the 'Authentication status checked:' value is '" + txt + "'.");
-    	new WaitFor(webDriver, 120).ElementContainsText(AuthenticatedStatusChecked_Ctr, txt);
+    	new WaitFor(webWebWebDriver, 120).ElementContainsText(AuthenticatedStatusChecked_Ctr, txt);
     	
     }
     
@@ -158,8 +156,8 @@ public class TVEAuthExample {
     	Reporter.log("Select '" + option + "' from the 'Al VMPDs:' drop down list.");
     	final WebElement ele = waitFor.ElementVisible(AllMVPDS_Ddl);
     	
-    	new WebDriverWait(webDriver, 10).until(new ExpectedCondition<Boolean>() {
-    		public Boolean apply(WebDriver webDriver) {
+    	new WebDriverWait(webWebWebDriver, 10).until(new ExpectedCondition<Boolean>() {
+    		public Boolean apply(org.openqa.selenium.WebDriver webWebDriver) {
     			return new Select(ele).getOptions().size() > 0;
    		 	}
     	});

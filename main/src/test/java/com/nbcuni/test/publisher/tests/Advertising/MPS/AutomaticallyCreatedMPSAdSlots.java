@@ -1,15 +1,16 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
-import java.util.Arrays;
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Blocks;
+import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.Structure.MPSBlocks;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Blocks;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
-import com.nbcuni.test.publisher.pageobjects.Structure.MPSBlocks;
+
+import java.util.Arrays;
 
 public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
 	
@@ -23,12 +24,12 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	Reporter.log("STEP 1 AND SETUP");
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
-        	Modules modules = new Modules(webDriver);
+        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	navigation.Modules();
             modules.EnableModule("MPS");
             navigation.Structure("MPS Blocks");
-            MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
+            MPSBlocks mpsBlocks = new MPSBlocks(webWebWebDriver);
             mpsBlocks.ClickAddLnk();
             String blockName = random.GetCharacterString(15);
             mpsBlocks.EnterBlockName(blockName);
@@ -53,7 +54,7 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
         	
         	Reporter.log("STEP 4");
         	navigation.Structure("Blocks");
-        	Blocks blocks = new Blocks(webDriver);
+        	Blocks blocks = new Blocks(webWebWebDriver);
         	/* 11.24.15 commented out as we now point to mps stage where these blocks don't exist
         	blocks.SelectRegion("bottommulti (MPS)", "- None -");
         	blocks.SelectRegion("topbanner (MPS)", "- None -");
@@ -80,7 +81,7 @@ public class AutomaticallyCreatedMPSAdSlots extends ParentTest {
             
             Reporter.log("STEP 8");
             Reporter.log("Open mps service page at 'http://stage-mps.nbcuni.com/request/describe/sandbox'.");
-            webDriver.navigate().to("http://stage-mps.nbcuni.com/request/describe/sandbox");
+            webWebWebDriver.navigate().to("http://stage-mps.nbcuni.com/request/describe/sandbox");
             //contentParent.VerifyPageContentPresent(Arrays.asList("{\"instance\":{\"dart_mode\":\"gpt-asynchronous\",\"multislot\":\"0\"},\"adunits\":{\"Box Ad First\":{\"unit\":\"Box Ad First\",\"slot\":\"topbox\",\"sizes\":[\"300x250\"],\"responsive\":0},\"Box Ad Second\":{\"unit\":\"Box Ad Second\",\"slot\":\"bottombox\",\"sizes\":[\"300x250\"],\"responsive\":0},\"Cool Rich 1\":{\"unit\":\"Cool Rich 1\",\"slot\":\"coolrich\",\"responsive\":0},\"Cool Rich 2\":{\"unit\":\"Cool Rich 2\",\"slot\":\"coolrich\",\"responsive\":0},\"Flex Ad First\":{\"unit\":\"Flex Ad First\",\"slot\":\"topmulti\",\"sizes\":[\"300x250\",\"160x600\",\"300x600\"],\"responsive\":0},\"Flex Ad Second\":{\"unit\":\"Flex Ad Second\",\"slot\":\"bottommulti\",\"sizes\":[\"300x250\",\"160x600\",\"300x600\"],\"responsive\":0},\"Logo A\":{\"unit\":\"Logo A\",\"slot\":\"logo\",\"sizes\":[\"88x31\",\"120x90\"],\"responsive\":0},\"Top Banner\":{\"unit\":\"Top Banner\",\"slot\":\"topbanner\",\"sizes\":[\"728x90\",\"970x66\"],\"responsive\":0},\"Top Banner B\":{\"unit\":\"Top Banner B\",\"slot\":\"topbanner\",\"sizes\":[\"2x2\"],\"responsive\":0}},\"components\":[\"id-0516-4520471\",\"monitoring\",\"test.css\"]}"));
             
             Reporter.log("STEP 9");

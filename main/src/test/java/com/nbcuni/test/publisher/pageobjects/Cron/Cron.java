@@ -1,14 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Cron;
 
-import org.openqa.selenium.By;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Cron Library. Copyright
@@ -27,13 +26,13 @@ public class Cron {
 	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public Cron(Driver webDriver) {
+    public Cron(WebDriver webWebWebDriver) {
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
-    	waitFor = new WaitFor(webDriver, timeout);
-    	interact = new Interact(webDriver, timeout);
-        errorChecking = new ErrorChecking(webDriver);
-        navigation = new EmberNav(webDriver);
+    	waitFor = new WaitFor(webWebWebDriver, timeout);
+    	interact = new Interact(webWebWebDriver, timeout);
+        errorChecking = new ErrorChecking(webWebWebDriver);
+        navigation = new EmberNav(webWebWebDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

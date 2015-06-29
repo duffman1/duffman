@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Page;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class ConfigPreferences extends Page {
 
-    public ConfigPreferences(Driver webDriver) {
+    public ConfigPreferences(WebDriver webDriver) {
         super(webDriver);
     }
 
@@ -18,8 +18,8 @@ public class ConfigPreferences extends Page {
     private WebElement amazon;
 
 
-    public Amazons3 goToAmazonSettings(){
+    public Amazons3 goToAmazonSettings() {
         amazon.click();
-        return new Amazons3(this.webDriver);
+        return new Amazons3(this.webWebDriver);
     }
 }

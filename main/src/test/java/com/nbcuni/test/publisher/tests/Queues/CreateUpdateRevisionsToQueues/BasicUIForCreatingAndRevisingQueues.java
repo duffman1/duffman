@@ -1,19 +1,19 @@
 package com.nbcuni.test.publisher.tests.Queues.CreateUpdateRevisionsToQueues;
 
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.Delete;
+import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.Queues;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
-
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
-import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.Queues;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList;
 
 public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
 	
@@ -44,12 +44,12 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         
         //Step 2
         navigation.Content("Queues");
-        Queues queues = new Queues(webDriver);
+        Queues queues = new Queues(webWebWebDriver);
         queues.ClickAddPromoQueueLnk();
         
         //Step 3
         queues.ClickSaveQueueBtn();
-        ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
         errorChecking.VerifyAllRequiredFields(Arrays.asList("Title"));
         
         //Step 4
@@ -64,7 +64,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         queues.ClickDeleteQueueMenuBtn(queueTitle);
         
         //Step 6
-        Delete delete = new Delete(webDriver);
+        Delete delete = new Delete(webWebWebDriver);
         delete.ClickCancelLnk();
         
         //Step 7
@@ -74,7 +74,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         //Step 8
         String modQueueTitle = random.GetCharacterString(15);
         queues.EnterTitle(modQueueTitle);
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         queues.EnterLogMessageStateChange(random.GetCharacterString(10));
         queues.ClickSaveQueueBtn();
@@ -95,7 +95,7 @@ public class BasicUIForCreatingAndRevisingQueues extends ParentTest{
         queues.VerifyQueuesInList(Arrays.asList(modQueueTitle2));
         queues.ClickEditQueueExtendMenuBtn(modQueueTitle2);
         queues.ClickEditQueueMenuBtn(modQueueTitle2);
-        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
+        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webWebWebDriver);
         queuesRevisionList.ClickRevisionsLnk();
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));

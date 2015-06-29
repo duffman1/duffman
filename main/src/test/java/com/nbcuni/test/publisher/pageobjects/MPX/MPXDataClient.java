@@ -1,10 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -14,7 +13,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.Driver.Driver;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /*********************************************
  * publisher.nbcuni.com MPXDataClient Library. Copyright
@@ -25,14 +27,14 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class MPXDataClient {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MPXDataClient(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 30);
+    public MPXDataClient(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
+        wait = new WebDriverWait(webWebWebDriver, 30);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -49,7 +51,7 @@ public class MPXDataClient {
     private WebElement AccountPicker_Btn;
     
     private List<WebElement> Account_Ctr(){
-    	return webDriver.findElements(By.xpath("//ul[@class='first-of-type hastitle']//a"));
+    	return webWebWebDriver.findElements(By.xpath("//ul[@class='first-of-type hastitle']//a"));
     }
     
     @FindBy(how = How.ID, using = "object")
@@ -75,7 +77,7 @@ public class MPXDataClient {
     public void OpenMPXDataClient(String clientType) throws Exception {
     	
     	Reporter.log("Open the mpx data client at http://data." + clientType + ".theplatform.com/" + clientType + "/client.");
-    	webDriver.navigate().to("http://data." + clientType + ".theplatform.com/" + clientType + "/client");
+    	webWebWebDriver.navigate().to("http://data." + clientType + ".theplatform.com/" + clientType + "/client");
     	wait.until(ExpectedConditions.titleIs("Data Service Web Client Login"));
     }
     

@@ -1,18 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.ManageFields;
 
-import java.util.concurrent.TimeUnit;
-
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.Interact;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Edit Field Library. Copyright
@@ -23,19 +22,19 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class Edit {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private Config config;
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Edit(Driver webDriver, AppLib applib) {
-        this.webDriver = webDriver;
+    public Edit(WebDriver webWebWebDriver, AppLib applib) {
+        this.webWebWebDriver = webWebWebDriver;
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -79,16 +78,16 @@ public class Edit {
     
     public void CheckAllowedURISchemesCbx(String uriScheme) throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     	try {
-    		WebElement ele = webDriver.findElement(AllowedURISchemes_Cbx(uriScheme));
+    		WebElement ele = webWebWebDriver.findElement(AllowedURISchemes_Cbx(uriScheme));
     		if (!ele.isSelected()) {
         		Reporter.log("Chech the '" + uriScheme + "' check box under 'Allowed URI schemes'.");
         		interact.Click(ele);
         	}
     	}
     	catch (NoSuchElementException e) {}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
     }
     

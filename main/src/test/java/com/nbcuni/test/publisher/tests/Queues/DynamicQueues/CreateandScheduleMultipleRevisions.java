@@ -1,21 +1,11 @@
 package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.TimeZone;
-
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.SitePreview.SitePreview;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
@@ -23,6 +13,15 @@ import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.Dyna
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
 
 public class CreateandScheduleMultipleRevisions extends ParentTest {
 	
@@ -41,28 +40,28 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	 
          Reporter.log("SETUP");
-         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+         CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
          String charProfBiography = random.GetCharacterString(15);
          String characterProfileTitle = createDefaultContent.CharacterProfile("Published", null, null, charProfBiography);
-         String characterProfileURL = webDriver.getCurrentUrl();
+         String characterProfileURL = webWebWebDriver.getCurrentUrl();
          String postBody = random.GetCharacterString(15);
          String postTitle = createDefaultContent.Post("Published", postBody);
-         String postURL = webDriver.getCurrentUrl();
+         String postURL = webWebWebDriver.getCurrentUrl();
          
          Reporter.log("STEP 2");
          navigation.Modules();
-         Modules modules = new Modules(webDriver);
+         Modules modules = new Modules(webWebWebDriver);
          for (String module : Arrays.asList("Dynamic Queue", "Dynamic Queue Workbench")) {
          	modules.EnableModule(module);
          }
          
          Reporter.log("STEP 3");
          navigation.Structure("Dynamic Queue types");
-         DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver);
+         DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webWebWebDriver);
          dynamicQueueTypes.ClickAddDynamicQueueTypeLnk();
          
          Reporter.log("STEP 4");
-         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
+         AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webWebWebDriver);
          String dynamicQueueTypeName = random.GetCharacterString(15); 
          addDynamicQueueType.EnterName(dynamicQueueTypeName);
          addDynamicQueueType.SelectCacheLifetime("1 min");
@@ -72,12 +71,12 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          
          Reporter.log("STEP 5");
          navigation.Content("Dynamic Queues");
-         DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+         DynamicQueues dynamicQueues = new DynamicQueues(webWebWebDriver);
          dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
          
          Reporter.log("STEP 6");
          String dynamicQueueTitle1 = random.GetCharacterString(15) +"_REVISION1";
-         AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
+         AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webWebWebDriver);
          addDynamicQueue.EnterTitle(dynamicQueueTitle1);       
          addDynamicQueue.CheckTargetBundle_Cbx("Character Profile");
          addDynamicQueue.ClickSortByNewestRdb();
@@ -89,7 +88,7 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          Reporter.log("STEP 8");
          navigation.Content("Dynamic Queues");
          String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle1);
-         String parentWindow = webDriver.getWindowHandle();
+         String parentWindow = webWebWebDriver.getWindowHandle();
          applib.openNewWindow();
          applib.switchToNewWindow(parentWindow);
          applib.openSitePage("/dynamic-queue/" + dynamicQueueNodeID);
@@ -97,8 +96,8 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          
          Reporter.log("STEP 9");
          applib.switchToParentWindow(parentWindow);
-         WorkBench workbench = new WorkBench(webDriver);
-         SearchFor searchFor = new SearchFor(webDriver);
+         WorkBench workbench = new WorkBench(webWebWebDriver);
+         SearchFor searchFor = new SearchFor(webWebWebDriver);
          searchFor.ClickSearchTitleLnk(dynamicQueueTitle1);
          workbench.ClickWorkBenchTab("Edit");
          String dynamicQueueTitle2 = random.GetCharacterString(15) +"_REVISION2"; 
@@ -120,7 +119,7 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          workbench.ClickWorkBenchTab("Revisions");
          
          Reporter.log("STEP 13");
-         QueuesRevisionList dqrevisionslist = new QueuesRevisionList(webDriver);
+         QueuesRevisionList dqrevisionslist = new QueuesRevisionList(webWebWebDriver);
          //int revisionscount = 2;
          //dqrevisionslist.VerifyRevisionCount(revisionscount); //defect of revisions not valid on dq module uninstall
          
@@ -128,7 +127,7 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          dqrevisionslist.clickScheduleTab();
          
          Reporter.log("STEP 15");
-         ScheduleQueue scheduledynamicqueue = new ScheduleQueue(webDriver);
+         ScheduleQueue scheduledynamicqueue = new ScheduleQueue(webWebWebDriver);
          scheduledynamicqueue.VerifyAddScheduleVersionLnkPresent();
          scheduledynamicqueue.ClickAddScheduledRevisionLnk();
          scheduledynamicqueue.SelectRevision(dynamicQueueTitle1);
@@ -162,7 +161,7 @@ public class CreateandScheduleMultipleRevisions extends ParentTest {
          
          Reporter.log("STEP 17");
          applib.openSitePage(characterProfileURL);
-         SitePreview sitepreview = new SitePreview(webDriver);
+         SitePreview sitepreview = new SitePreview(webWebWebDriver);
          sitepreview.ClickInteractivePreviewBtn();
          sitepreview.SelectACondition();
          Thread.sleep(5000);

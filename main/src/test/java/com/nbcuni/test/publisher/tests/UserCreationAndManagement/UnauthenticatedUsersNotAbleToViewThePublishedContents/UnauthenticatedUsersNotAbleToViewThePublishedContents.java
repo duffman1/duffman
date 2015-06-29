@@ -1,18 +1,13 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents;
 
-import java.util.Arrays;
-
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
-import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends ParentTest {
 
@@ -51,21 +46,21 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2  
-    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
     	String postTitle = createDefaultContent.Post("Published");
-    	WorkBench workBench = new WorkBench(webDriver);
+    	WorkBench workBench = new WorkBench(webWebWebDriver);
     	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
     	
     	//Step 3
-        String contentURL = webDriver.getCurrentUrl();
-        Logout logout = new Logout(webDriver);
+        String contentURL = webWebWebDriver.getCurrentUrl();
+        Logout logout = new Logout(webWebWebDriver);
         logout.ClickLogoutBtn();
         
         //Step4	
         applib.openSitePage(contentURL);
         
         //Step5
-        ContentParent contentParent = new ContentParent(webDriver);
+        ContentParent contentParent = new ContentParent(webWebWebDriver);
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         //Step6
@@ -76,12 +71,12 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         
         //Step8
         workBench.ClickWorkBenchTab("Revisions");
-        Revisions revisions = new Revisions(webDriver);
+        Revisions revisions = new Revisions(webWebWebDriver);
         revisions.EnterLogMessageForStateChange("This Revision Comment");
         revisions.ClickUpdateStateBtn();
       
         //Step9
-        contentURL = webDriver.getCurrentUrl();
+        contentURL = webWebWebDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step10
@@ -95,11 +90,11 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
       
         //Step14
         navigation.Content();
-        SearchFor searchFor = new SearchFor(webDriver);
+        SearchFor searchFor = new SearchFor(webWebWebDriver);
         searchFor.ClickSearchTitleLnk(postTitle);
         
         //Step15
-        contentURL = webDriver.getCurrentUrl();
+        contentURL = webWebWebDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step16
@@ -118,7 +113,7 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         workBench.ClickWorkBenchTab("View");
         
         //Step21
-        contentURL = webDriver.getCurrentUrl();
+        contentURL = webWebWebDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step22

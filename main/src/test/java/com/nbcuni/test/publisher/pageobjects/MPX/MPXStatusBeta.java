@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -9,7 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com MPX Statues Beta Library. Copyright
@@ -20,14 +21,14 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class MPXStatusBeta {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private WebDriverWait wait;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public MPXStatusBeta(Driver webDriver) {
-    	this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+    public MPXStatusBeta(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
+        wait = new WebDriverWait(webWebWebDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -35,7 +36,7 @@ public class MPXStatusBeta {
     private WebElement ViewVideosToBeProcessed_Lnk;
     
     private WebElement VideoToBeProcessed_Ttl(String title) {
-    	return webDriver.findElement(By.xpath("(//tbody)[3]//tr/td[4][contains(text(), '" + title + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("(//tbody)[3]//tr/td[4][contains(text(), '" + title + "')]"));
     }
     
     @FindBy(how = How.XPATH, using = "//h3[contains(text(), 'Total Videos Ingested')]")

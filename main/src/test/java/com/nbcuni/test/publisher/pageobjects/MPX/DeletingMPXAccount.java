@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Driver.Driver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -17,8 +17,8 @@ import org.testng.Reporter;
 public class DeletingMPXAccount {
 
 	//PAGE OBJECT CONSTRUCTORS
-    public DeletingMPXAccount(Driver webDriver, AppLib applib) {
-        PageFactory.initElements(webDriver, this);
+    public DeletingMPXAccount(WebDriver webWebWebDriver, AppLib applib) {
+        PageFactory.initElements(webWebWebDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

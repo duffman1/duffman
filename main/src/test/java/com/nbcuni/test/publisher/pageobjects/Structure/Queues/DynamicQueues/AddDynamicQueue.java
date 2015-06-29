@@ -1,11 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -13,6 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /*********************************************
  * publisher.nbcuni.com Add Dynamic Queue Library. Copyright
@@ -25,12 +25,12 @@ import org.testng.Reporter;
 
 public class AddDynamicQueue {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     
     //PAGE OBJECT CONSTRUCTOR
-    public AddDynamicQueue(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
+    public AddDynamicQueue(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -38,43 +38,43 @@ public class AddDynamicQueue {
     private WebElement Title_Txb;
     
     private List<WebElement> AllTargetBundle_Cbxs() {
-    	return webDriver.findElements(By.xpath("//div[@id='edit-settings-target-bundles']//input"));
+    	return webWebWebDriver.findElements(By.xpath("//div[@id='edit-settings-target-bundles']//input"));
     }
     
     private WebElement TargetBundle_Cbx(String contentType) {
-    	return webDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
+    	return webWebWebDriver.findElement(By.xpath("//label[text()='" + contentType + " ']/../input"));
     }
     
     private WebElement FieldMovieType_Btn() {
-    	return webDriver.findElement(By.id("edit_settings_terms_field_movie_type_chosen"));
+    	return webWebWebDriver.findElement(By.id("edit_settings_terms_field_movie_type_chosen"));
     }
     
     private WebElement FieldMovieType_Opt(String option) {
-    	return webDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_type_chosen']//ul[@class='chosen-results']/li[text()='" + option + "']"));
+    	return webWebWebDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_type_chosen']//ul[@class='chosen-results']/li[text()='" + option + "']"));
     }
     
     private WebElement FieldMoviePrimaryGenre_Btn() {
-    	return webDriver.findElement(By.id("edit_settings_terms_field_movie_primary_genre_chosen"));
+    	return webWebWebDriver.findElement(By.id("edit_settings_terms_field_movie_primary_genre_chosen"));
     }
     
     private WebElement FieldMoviePrimaryGenre_Opt(String option) {
-    	return webDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_primary_genre_chosen']/div[@class='chosen-drop']//li[text()='" + option + "']"));
+    	return webWebWebDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_primary_genre_chosen']/div[@class='chosen-drop']//li[text()='" + option + "']"));
     }
     
     private WebElement FieldMovieSecondaryGenre_Btn() {
-    	return webDriver.findElement(By.id("edit_settings_terms_field_movie_secondary_genre_chosen"));
+    	return webWebWebDriver.findElement(By.id("edit_settings_terms_field_movie_secondary_genre_chosen"));
     }
     
     private WebElement FieldMovieSecondaryGenre_Opt(String option) {
-    	return webDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-secondary-genre']//option[contains(text(), '" + option + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("//select[@id='edit-settings-terms-field-movie-secondary-genre']//option[contains(text(), '" + option + "')]"));
     }
     
     private WebElement FieldMovieRating_Btn() {
-    	return webDriver.findElement(By.id("edit_settings_terms_field_movie_rating_chosen"));
+    	return webWebWebDriver.findElement(By.id("edit_settings_terms_field_movie_rating_chosen"));
     }
     
     private WebElement FieldMovieRating_Opt(String option) {
-    	return webDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_rating_chosen']/div[@class='chosen-drop']//li[text()='" + option + "']"));
+    	return webWebWebDriver.findElement(By.xpath("//div[@id='edit_settings_terms_field_movie_rating_chosen']/div[@class='chosen-drop']//li[text()='" + option + "']"));
     }
     
     @FindBy(how = How.ID, using = "edit-settings-tv-show-select")

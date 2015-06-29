@@ -1,22 +1,16 @@
 package com.nbcuni.test.publisher.tests.Video.MPXSnippets;
 
-import java.util.Arrays;
-
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Configuration.TextFormat;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.TextFormat;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.EmbedVideo;
-import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
+import java.util.Arrays;
 
 public class VideoSnippetsInContent extends ParentTest{
 	
@@ -32,22 +26,22 @@ public class VideoSnippetsInContent extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
         	Reporter.log("SETUP");
-        	Settings settings = new Settings(webDriver);
+        	Settings settings = new Settings(webWebWebDriver);
         	settings.ConfigureMPXIfNeeded();
         	navigation.Content("Files", "mpxMedia");
-        	SearchFor searchFor = new SearchFor(webDriver);
+        	SearchFor searchFor = new SearchFor(webWebWebDriver);
         	searchFor.EnterTitle("AutomationDefault");
         	searchFor.ClickApplyBtn();
         	String mpxVideoURL = searchFor.GetFirstMPXMediaSearchResultURL();
         	
         	Reporter.log("STEP 2");
         	navigation.Modules();
-        	Modules modules = new Modules(webDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	modules.EnableModule("Publisher WYSIWYG");
         	
         	Reporter.log("STEP 3");
         	navigation.Configuration("Text formats");
-        	TextFormat textFormat = new TextFormat(webDriver);
+        	TextFormat textFormat = new TextFormat(webWebWebDriver);
         	textFormat.ClickConfigureLnk("Publisher");
         	textFormat.ClickEnabledFilters(Arrays.asList("Limit allowed HTML tags", "Publisher youtube formatter", 
         			"Publisher mpx video formatter", "Convert line breaks into HTML", 
@@ -58,20 +52,20 @@ public class VideoSnippetsInContent extends ParentTest{
         	
         	Reporter.log("STEP 4");
         	navigation.AddContent("Movie");
-        	BasicInformation basicInformation = new BasicInformation(webDriver);
+        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         	String movieTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(movieTitle);
         	basicInformation.EnterSynopsis("test synopsis");
         	basicInformation.ClickEmbedMPXBtn();
         	
         	Reporter.log("STEP 5 AND 6");
-        	EmbedVideo embedVideo = new EmbedVideo(webDriver);
+        	EmbedVideo embedVideo = new EmbedVideo(webWebWebDriver);
         	embedVideo.EnterMPXVideoURL(mpxVideoURL);
         	embedVideo.EnterWidth("640");
         	embedVideo.EnterHeight("360");
         	embedVideo.ClickOkBtn();
         	basicInformation.ClickCoverSelectBtn();
-        	SelectFile selectFile = new SelectFile(webDriver);
+        	SelectFile selectFile = new SelectFile(webWebWebDriver);
         	selectFile.SelectDefaultCoverImg();
         	contentParent.ClickSaveBtn();
         	contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
@@ -80,7 +74,7 @@ public class VideoSnippetsInContent extends ParentTest{
         	embedVideo.VerifyVideoPresent("player.theplatform.com/p", "360", "640");
         	
         	Reporter.log("STEP 8");
-        	WorkBench workBench = new WorkBench(webDriver);
+        	WorkBench workBench = new WorkBench(webWebWebDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
         	basicInformation.ClickEmbedMPXBtn();
         	embedVideo.EnterMPXVideoURL(mpxVideoURL);
@@ -155,12 +149,12 @@ public class VideoSnippetsInContent extends ParentTest{
         	
         	Reporter.log("STEP 18");
         	workBench.ClickWorkBenchTab("Revisions");
-        	Revisions revisions = new Revisions(webDriver);
+        	Revisions revisions = new Revisions(webWebWebDriver);
         	revisions.SelectChangeState("Published");
         	revisions.ClickUpdateStateBtn();
         	contentParent.VerifyMessageStatus(movieTitle + " transitioned to the published state.");
-        	String currentURL = webDriver.getCurrentUrl();
-        	webDriver.manage().deleteAllCookies();
+        	String currentURL = webWebWebDriver.getCurrentUrl();
+        	webWebWebDriver.manage().deleteAllCookies();
         	applib.openSitePage(currentURL);
         	embedVideo.VerifyVideoPresent("player.theplatform.com/p", "200", "200");
         	embedVideo.VerifyVideoPresent("player.theplatform.com/p", "100", "100");

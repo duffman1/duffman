@@ -1,18 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects.Twitter;
 
-import java.util.Arrays;
-
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.Interact;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import java.util.Arrays;
 
 /*********************************************
  * publisher.nbcuni.com Twitter Login Library. Copyright
@@ -23,7 +22,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 
 public class TwitterLogin {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private ContentParent contentParent;
 	private Config config;
 	private Integer timeout;
@@ -31,13 +30,13 @@ public class TwitterLogin {
 	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public TwitterLogin(Driver webDriver, AppLib applib) {
-    	this.webDriver = webDriver;
-        contentParent = new ContentParent(webDriver);
+    public TwitterLogin(WebDriver webWebWebDriver, AppLib applib) {
+    	this.webWebWebDriver = webWebWebDriver;
+        contentParent = new ContentParent(webWebWebDriver);
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -139,7 +138,7 @@ public class TwitterLogin {
         	}
         	catch (AssertionError e) {
         		Thread.sleep(1000);
-        		webDriver.navigate().refresh();
+        		webWebWebDriver.navigate().refresh();
         	}
         	
         }

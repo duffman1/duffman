@@ -1,33 +1,22 @@
 package com.nbcuni.test.publisher.common.Util;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.testng.Assert;
-import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.google.common.base.Function;
+import com.nbcuni.test.publisher.common.Config;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 @SuppressWarnings("unused")
 public class Interact {
 
-	private Driver webDriver;
+	private WebDriver webDriver;
 	private Integer timeout = 0;
 	private Config config;
     
-    public Interact(Driver webDriver, Integer waitTime) {
+    public Interact(WebDriver webDriver, Integer waitTime) {
         this.webDriver = webDriver;
         timeout = waitTime;
         config = new Config();
@@ -79,9 +68,9 @@ public class Interact {
     			
     }
     
-    private FluentWait<Driver> driverWait() throws Exception {
+    private FluentWait<WebDriver> driverWait() throws Exception {
     	
-    	return new FluentWait<Driver>(webDriver)
+    	return new FluentWait<WebDriver>(webDriver)
     			.withTimeout(timeout, TimeUnit.SECONDS)
     			.pollingEvery(config.getConfigValueInt("PollingTime"), TimeUnit.MILLISECONDS);
     			
@@ -169,13 +158,14 @@ public class Interact {
     
     public void Scroll(String scrollCount) throws Exception {
     	
-    	webDriver.executeScript("window.scrollBy(0," + scrollCount + ");"); 
+    	((JavascriptExecutor)webDriver).executeScript("window.scrollBy(0," + scrollCount + ");");
     	
     }
     
     public void ScrollToTop() throws Exception {
     	
-    	webDriver.executeScript("window.scrollTo(0, 0);");
+    	((JavascriptExecutor)webDriver).executeScript("window.scrollTo(0, 0);");
+
     	
     }
     

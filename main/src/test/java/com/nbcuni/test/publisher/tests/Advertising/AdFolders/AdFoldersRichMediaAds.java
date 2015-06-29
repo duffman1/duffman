@@ -1,18 +1,19 @@
 package com.nbcuni.test.publisher.tests.Advertising.AdFolders;
 
-import java.util.Arrays;
-import java.util.List;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Content.Revert;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.AddNewSideFile;
 import com.nbcuni.test.publisher.pageobjects.Structure.ImportSideFile;
 import com.nbcuni.test.publisher.pageobjects.Structure.PublisherAdsSideFiles;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class AdFoldersRichMediaAds extends ParentTest {
 	
@@ -28,7 +29,7 @@ public class AdFoldersRichMediaAds extends ParentTest {
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Setup
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webWebWebDriver);
         modules.VerifyModuleEnabled("Pub Ads");
         
         //Setup
@@ -38,13 +39,13 @@ public class AdFoldersRichMediaAds extends ParentTest {
         navigation.Structure("Publisher Ads Side Files");
         
         //Step 3
-        PublisherAdsSideFiles publisherAdsSideFiles = new PublisherAdsSideFiles(webDriver);
+        PublisherAdsSideFiles publisherAdsSideFiles = new PublisherAdsSideFiles(webWebWebDriver);
         publisherAdsSideFiles.DeleteAllUnwantedSideFiles();
         publisherAdsSideFiles.ClickAddLnk();
         
         //Step 4
         String sideFileName = random.GetCharacterString(15);
-        AddNewSideFile addNewSideFile = new AddNewSideFile(webDriver);
+        AddNewSideFile addNewSideFile = new AddNewSideFile(webWebWebDriver);
         addNewSideFile.EnterName(sideFileName);
         
         //Step 5
@@ -63,8 +64,8 @@ public class AdFoldersRichMediaAds extends ParentTest {
         
         //Step 9
         publisherAdsSideFiles.ClickAdSideFileLnk(sideFilePath);
-        Assert.assertEquals(webDriver.getCurrentUrl(), config.getConfigValueString("AppURL") + "/" + sideFilePath);
-        webDriver.navigate().back();
+        Assert.assertEquals(webWebWebDriver.getCurrentUrl(), config.getConfigValueString("AppURL") + "/" + sideFilePath);
+        webWebWebDriver.navigate().back();
         
         //Step 10
         publisherAdsSideFiles.ClickAdSideFileEditLnk(defaultAddFile);
@@ -79,7 +80,7 @@ public class AdFoldersRichMediaAds extends ParentTest {
         addNewSideFile.ClickRevertBtn();
         
         //Step 13
-        Revert revert = new Revert(webDriver);
+        Revert revert = new Revert(webWebWebDriver);
         revert.ClickRevertBtn();
         contentParent.VerifyMessageStatus("The item has been reverted.");
         publisherAdsSideFiles.VerifyAdSideFileStorageType(defaultAddFile, "Default");
@@ -107,7 +108,7 @@ public class AdFoldersRichMediaAds extends ParentTest {
         publisherAdsSideFiles.ClickImportLnk();
         
         //Step 19
-        ImportSideFile importSideFile = new ImportSideFile(webDriver);
+        ImportSideFile importSideFile = new ImportSideFile(webWebWebDriver);
         importSideFile.EnterSideFileCode(exportTxt);
         importSideFile.UncheckAllowImportOverwriteRecordCbx();
         importSideFile.ClickContinueBtn();
@@ -135,7 +136,7 @@ public class AdFoldersRichMediaAds extends ParentTest {
         for (String sideFile : newlyCreatedSideFiles) {
         	publisherAdsSideFiles.ClickAdSideFileExpandEditLnk(sideFile);
             publisherAdsSideFiles.ClickAdSideFileDeleteLnk(sideFile);
-            Delete delete = new Delete(webDriver);
+            Delete delete = new Delete(webWebWebDriver);
             delete.ClickDeleteBtn();
             contentParent.VerifyMessageStatus("The item has been deleted.");
             publisherAdsSideFiles.VerifyAdSideFileNotPresent(sideFile);

@@ -1,20 +1,15 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.MediaGallery;
 
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.EditImage;
-import com.nbcuni.test.publisher.pageobjects.Content.MediaItems;
-import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Edit;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
 
 public class CreateMediaGallery extends ParentTest{
 	
@@ -30,13 +25,13 @@ public class CreateMediaGallery extends ParentTest{
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
         	Reporter.log("SETUP");
-        	Settings settings = new Settings(webDriver);
+        	Settings settings = new Settings(webWebWebDriver);
         	settings.ConfigureMPXIfNeeded();
         	navigation.Structure("Content types");
-        	ContentTypes contentTypes = new ContentTypes(webDriver);
+        	ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
         	contentTypes.ClickManageFieldLnk("Media Gallery");
         	contentTypes.ClickEditLnk("Media Items");
-        	Edit edit = new Edit(webDriver, applib);
+        	Edit edit = new Edit(webWebWebDriver, applib);
         	edit.CheckAllowedRemoteMediaTypesCbx("MPX Video for Account \"DB TV\"");
         	edit.ClickSaveSettingsBtn();
         	contentParent.VerifyMessageStatus("Saved Media Items configuration.");
@@ -45,16 +40,16 @@ public class CreateMediaGallery extends ParentTest{
             navigation.AddContent("Media Gallery");
             
             Reporter.log("STEP 3");
-            BasicInformation basicInformation = new BasicInformation(webDriver);
+            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             basicInformation.EnterSynopsis();
             basicInformation.EnterShortDescription("short description");
-            AddFile addFile = new AddFile(webDriver);
-            MediaItems mediaItems = new MediaItems(webDriver);
-            SelectFile selectFile = new SelectFile(webDriver);
+            AddFile addFile = new AddFile(webWebWebDriver);
+            MediaItems mediaItems = new MediaItems(webWebWebDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             for(int Count=0;Count<2;Count++) {
-            	webDriver.switchTo().defaultContent();
+            	webWebWebDriver.switchTo().defaultContent();
             	if (Count == 0) {
             		basicInformation.ClickMediaItemsSelectBtn();
             	}
@@ -64,7 +59,7 @@ public class CreateMediaGallery extends ParentTest{
             	}
                 selectFile.SwitchToSelectFileFrm();
                 addFile.ClickAddFilesLnk();
-                if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+                if (((RemoteWebDriver)webWebWebDriver).getCapabilities().getPlatform().toString() == "MAC") {
                 	addFile.ClickPicturesUploadBtn();
                 	if (Count == 0) {
                 		addFile.ClickTestPictureIPTCBtn();
@@ -89,13 +84,13 @@ public class CreateMediaGallery extends ParentTest{
                 addFile.WaitForSuccessfulUpload();
                 addFile.ClickNextBtn();
             }
-            webDriver.switchTo().defaultContent();
+            webWebWebDriver.switchTo().defaultContent();
             mediaItems.VerifyFileImagePresent("IPTCDefault", "1");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
             
             Reporter.log("STEP 4 and 5");
             mediaItems.ClickEditAllBtn();
-            EditImage editImage = new EditImage(webDriver);
+            EditImage editImage = new EditImage(webWebWebDriver);
             editImage.WaitForEditImageFrameOpen();
             
             Reporter.log("STEP 6");
@@ -123,7 +118,7 @@ public class CreateMediaGallery extends ParentTest{
     		Thread.sleep(2000); //TODO - dynamic wait
     		selectFile.ClickSubmitBtn();
     		Thread.sleep(2000); //TODO - dynamic wait
-    		webDriver.switchTo().defaultContent();
+    		webWebWebDriver.switchTo().defaultContent();
             contentParent.WaitForThrobberNotPresent();
             
             Reporter.log("STEP 9");
@@ -146,7 +141,7 @@ public class CreateMediaGallery extends ParentTest{
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             
             Reporter.log("STEP 12");
-            WorkBench workBench = new WorkBench(webDriver);
+            WorkBench workBench = new WorkBench(webWebWebDriver);
             workBench.ClickWorkBenchTab("Edit Draft");
             mediaItems.VerifyFileImagePresent("IPTCDefault", "1");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
@@ -158,7 +153,7 @@ public class CreateMediaGallery extends ParentTest{
             addFile.ClickStartUploadLnk();
             addFile.WaitForSuccessfulUpload();
             addFile.ClickNextBtn();
-            webDriver.switchTo().defaultContent();
+            webWebWebDriver.switchTo().defaultContent();
             mediaItems.VerifyFileImagePresent("IPTCDefault", "1");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "2");
             mediaItems.VerifyFileImagePresent("nbclogosmall", "3");

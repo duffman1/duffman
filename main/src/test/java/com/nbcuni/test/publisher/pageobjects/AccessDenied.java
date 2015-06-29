@@ -1,11 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import org.openqa.selenium.By;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com Access Denied Library. Copyright
@@ -20,10 +19,10 @@ public class AccessDenied {
 	private Integer timeout;
 	private WaitFor waitFor;
 	//PAGE OBJECT CONSTRUCTOR
-    public AccessDenied(Driver webDriver) {
+    public AccessDenied(WebDriver webWebWebDriver) {
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS

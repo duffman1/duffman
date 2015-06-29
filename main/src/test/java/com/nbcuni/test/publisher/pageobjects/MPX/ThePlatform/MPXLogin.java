@@ -1,14 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import org.testng.Reporter;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com MPXLogin Library. Copyright
@@ -19,17 +19,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MPXLogin {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private Config config;
     private MPXAssets mpxAssets;
     private WebDriverWait wait;
     
-    public MPXLogin(Driver webDriver) {
-        this.webDriver = webDriver;
+    public MPXLogin(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
         config = new Config();
-        PageFactory.initElements(webDriver, this);
+        PageFactory.initElements(webWebWebDriver, this);
         mpxAssets = new MPXAssets();
-        wait = new WebDriverWait(webDriver, 10);
+        wait = new WebDriverWait(webWebWebDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFERS
@@ -47,7 +47,7 @@ public class MPXLogin {
     public void OpenMPXThePlatform() throws Exception {
     	
     	Reporter.log("Open the mpx platform.");
-    	webDriver.navigate().to(config.getConfigValueString("MPXUrl"));
+    	webWebWebDriver.navigate().to(config.getConfigValueString("MPXUrl"));
     }
     
     public void Login(String userName, String passWord) throws Exception {

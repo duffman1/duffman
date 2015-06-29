@@ -1,11 +1,10 @@
 package com.nbcuni.test.publisher.common.Listeners;
 
+import com.nbcuni.test.publisher.common.ParentTest;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.SkipException;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 
 
 public class TestListeners extends ParentTest implements ITestListener {

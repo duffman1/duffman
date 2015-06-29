@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Performance;
 
-import org.testng.annotations.Test;
 import com.nbcuni.test.publisher.common.ParentTest;
+import org.testng.annotations.Test;
 
 public class PageLoads extends ParentTest{
 	

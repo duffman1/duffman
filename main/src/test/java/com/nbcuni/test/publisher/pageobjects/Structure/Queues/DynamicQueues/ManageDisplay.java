@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -18,8 +19,8 @@ import org.testng.Reporter;
 public class ManageDisplay {
 
     //PAGE OBJECT CONSTRUCTOR
-    public ManageDisplay(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
+    public ManageDisplay(WebDriver webWebWebDriver) {
+        PageFactory.initElements(webWebWebDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS

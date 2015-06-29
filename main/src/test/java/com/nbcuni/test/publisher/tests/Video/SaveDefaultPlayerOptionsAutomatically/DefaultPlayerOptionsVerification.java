@@ -1,8 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically;
 
-import java.util.List;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
@@ -11,6 +10,8 @@ import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class DefaultPlayerOptionsVerification extends ParentTest{
 	
@@ -47,7 +48,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
-    	Settings settings = new Settings(webDriver);
+    	Settings settings = new Settings(webWebWebDriver);
     	settings.ConfigureMPXIfNeeded();
     	
     	navigation.Configuration("Media: thePlatform mpx settings");
@@ -61,11 +62,11 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		navigation.Structure("File types");
         		
         		//Step 14
-        		FileTypes fileTypes = new FileTypes(webDriver);
+        		FileTypes fileTypes = new FileTypes(webWebWebDriver);
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		
         		//Step 15
-        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
+        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webWebWebDriver);
         		manageFileDisplay.CheckPubMPXVideoCbx();
         		manageFileDisplay.UnCheckPubMPXVideoDeprecatedCbx();
         		manageFileDisplay.ClickPubMPXVideoLnk();
@@ -79,13 +80,13 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		//Step 17 - N/A
         		
         		//Step 18
-        		SearchFor searchFor = new SearchFor(webDriver);
+        		SearchFor searchFor = new SearchFor(webWebWebDriver);
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
         		searchFor.ClickSearchTitleLnk("AutomationDefault");
         		
         		//Step 19
-        		WorkBench workBench = new WorkBench(webDriver);
+        		WorkBench workBench = new WorkBench(webWebWebDriver);
         		workBench.VerifyMPXPlayerPresent();
         		
         		//Test Case TC1812

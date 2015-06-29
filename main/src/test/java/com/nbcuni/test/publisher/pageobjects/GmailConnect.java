@@ -1,14 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import java.util.Properties;
-import javax.mail.Flags;
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.Store;
+import com.nbcuni.test.publisher.common.Config;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.Config;
+
+import javax.mail.*;
+import java.util.Properties;
 
 /*********************************************
  * publisher.nbcuni.com Gmail Connect Library. Copyright

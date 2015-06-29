@@ -1,10 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 
 /*********************************************
@@ -23,7 +23,7 @@ public class UserLogin extends Page {
     private EmberNav navigation;
     
     //PAGE OBJECT CONSTRUCTOR
-    public UserLogin(Driver webDriver) {
+    public UserLogin(WebDriver webDriver) {
         super(webDriver);
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");

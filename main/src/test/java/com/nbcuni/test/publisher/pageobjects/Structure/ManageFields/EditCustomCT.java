@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.ManageFields;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Page;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.Link;
@@ -11,7 +11,7 @@ import ru.yandex.qatools.htmlelements.element.Select;
  * Created by kiryl_zayets on 6/22/15.
  */
 public class EditCustomCT extends Page {
-    public EditCustomCT(Driver webDriver) {
+    public EditCustomCT(WebDriver webDriver) {
         super(webDriver);
     }
 

@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
-import java.util.Arrays;
-
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Configuration.AutoLogout;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.AutoLogout;
+import java.util.Arrays;
 
 public class AutoLogoutOfApp extends ParentTest {
 	
@@ -27,12 +26,12 @@ public class AutoLogoutOfApp extends ParentTest {
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("STEP 2");
-    	Modules modules = new Modules(webDriver);
+    	Modules modules = new Modules(webWebWebDriver);
     	modules.VerifyModuleEnabled("Automated Logout");
     	
     	Reporter.log("STEP 3");
     	navigation.Configuration("Auto Logout");
-    	AutoLogout autoLogout = new AutoLogout(webDriver);
+    	AutoLogout autoLogout = new AutoLogout(webWebWebDriver);
     	autoLogout.EnterTimeout("60");
     	autoLogout.EnterMaxTimeout("172800");
     	autoLogout.EnterTimeoutPadding("20");
@@ -85,7 +84,7 @@ public class AutoLogoutOfApp extends ParentTest {
 			UserLogin userLogin = applib.openApplication();
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 			navigation.Modules();
-			Modules modules = new Modules(webDriver);
+			Modules modules = new Modules(webWebWebDriver);
 	        modules.DisableModule("Automated Logout");
 		}
 		

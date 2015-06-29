@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Configuration;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Page;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.CheckBox;
@@ -13,7 +13,7 @@ import ru.yandex.qatools.htmlelements.element.TextInput;
  */
 public class Amazons3 extends Page {
 
-    public Amazons3(Driver webDriver) {
+    public Amazons3(WebDriver webDriver) {
         super(webDriver);
     }
 
@@ -26,35 +26,35 @@ public class Amazons3 extends Page {
     @FindBy(id = "edit-amazons3-bucket")
     private TextInput bucketName;
 
-    @FindBy(id="edit-submit")
+    @FindBy(id = "edit-submit")
     private Button save;
 
-    @FindBy(id="edit-amazons3-cache")
+    @FindBy(id = "edit-amazons3-cache")
     private CheckBox metadata;
 
-    @FindBy(css="div#console div.messages")
+    @FindBy(css = "div#console div.messages")
     private HtmlElement status;
 
-    public void setApiSecret(String secret){
+    public void setApiSecret(String secret) {
         apiSecret.clear();
         apiSecret.sendKeys(secret);
     }
 
-    public void setApiKey(String key){
+    public void setApiKey(String key) {
         apiKey.clear();
         apiKey.sendKeys(key);
     }
 
-    public void setApiBucket(String bucket){
+    public void setApiBucket(String bucket) {
         bucketName.clear();
         bucketName.sendKeys(bucket);
     }
 
-    public void activateMetadata(){
+    public void activateMetadata() {
         metadata.select();
     }
 
-    public void setRequiredFields(String key, String secret, String bucket){
+    public void setRequiredFields(String key, String secret, String bucket) {
         setApiKey(key);
         setApiSecret(secret);
         setApiBucket(bucket);
@@ -62,7 +62,7 @@ public class Amazons3 extends Page {
         save.click();
     }
 
-    public String getStatus(){
+    public String getStatus() {
         return status.getText();
 
     }

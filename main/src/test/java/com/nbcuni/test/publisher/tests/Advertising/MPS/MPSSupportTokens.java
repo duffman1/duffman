@@ -1,22 +1,19 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.ExecutePHPCode;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.ExecutePHPCode;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
-import com.nbcuni.test.publisher.pageobjects.Content.AdditionalInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.Content.URLPathSettings;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 
 public class MPSSupportTokens extends ParentTest {
 	
@@ -33,11 +30,11 @@ public class MPSSupportTokens extends ParentTest {
             
         	Reporter.log("SETUP");
         	navigation.Modules();
-        	Modules modules = new Modules(webDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	modules.DisableModule("Pixelman");
         	modules.EnableModule("MPS");
         	navigation.Configuration("MPS Configuration");
-        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
             mpsConfiguration.EnterPatternForCategoryField("");
             mpsConfiguration.ClickSaveConfigurationBtn();
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
@@ -49,28 +46,28 @@ public class MPSSupportTokens extends ParentTest {
         	
         	Reporter.log("STEP 4");
         	navigation.AddContent("Movie");
-        	BasicInformation basicInformation = new BasicInformation(webDriver);
+        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             basicInformation.ClickBasicInformationTab();
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
             basicInformation.EnterSynopsis();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             selectFile.SelectDefaultCoverImg();
-            AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
+            AdditionalInformation additionalInformation = new AdditionalInformation(webWebWebDriver);
             additionalInformation.ClickAdditionalInformationLnk();
             additionalInformation.SelectMovieType("Syndicated");
             additionalInformation.SelectRating("G");
             additionalInformation.SelectPrimaryGenre("Action");
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
-            String movieURL = webDriver.getCurrentUrl();
-            WorkBench workBench = new WorkBench(webDriver);
+            String movieURL = webWebWebDriver.getCurrentUrl();
+            WorkBench workBench = new WorkBench(webWebWebDriver);
             contentParent.VerifySourceInPage(Arrays.asList("\"cat\":\"content\""));
             
             Reporter.log("STEP 5");
             workBench.ClickWorkBenchTab("Edit Draft");
-            URLPathSettings urlPathSettings = new URLPathSettings(webDriver);
+            URLPathSettings urlPathSettings = new URLPathSettings(webWebWebDriver);
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.UnCheckGenerateAutomaticURLAliasCbx();
             String baseAlias = random.GetCharacterString(10);
@@ -108,7 +105,7 @@ public class MPSSupportTokens extends ParentTest {
             
             Reporter.log("STEP 12");
             applib.openSitePage("/devel/php");
-            ExecutePHPCode executePHPCode = new ExecutePHPCode(webDriver);
+            ExecutePHPCode executePHPCode = new ExecutePHPCode(webWebWebDriver);
             executePHPCode.EnterPHPCode("variable_set('mps_cat_pattern', '');echo _mps_build_cat();echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/name'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/thisisareallyreallyreallyreallyreallyreallylongurlXXXXXX/season/episode/cast/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show//episode/cast'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => 'brand/show/season//episode//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show/season//'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/show///'));echo PHP_EOL;echo _mps_build_cat(array('aliased-path' => '/brand/season//episode'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:2]|[mps:cat-pattern:3]');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));echo PHP_EOL;variable_set('mps_cat_pattern', '[mps:cat-pattern:0]|[mps:cat-pattern:2]|[current-date:custom:d]|[mps:cat-pattern:3]|');echo _mps_build_cat(array('aliased-path' => 'brand/show/season/episode/cast'));variable_set('mps_cat_pattern', '[mps:cat-pattern:?]');echo PHP_EOL;echo '*' . _mps_build_cat(array('aliased-path' => '/')) . '*';");
             executePHPCode.ClickExecuteBtn();
             Date date = new Date();

@@ -1,19 +1,18 @@
 package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueueTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
-
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -33,17 +32,17 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webWebWebDriver);
         modules.VerifyModuleEnabled("Dynamic Queue");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
         String tvShowName1 = createDefaultContent.TVShow("Published");
         
         Reporter.log("STEP 2");
         navigation.Structure("Dynamic Queue types");
-        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver);
+        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webWebWebDriver);
         dynamicQueueTypes.ClickAddDynamicQueueTypeLnk();
         String dynamicQueueTypeName = random.GetCharacterString(15);
-        AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
+        AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webWebWebDriver);
         addDynamicQueueType.EnterName(dynamicQueueTypeName);
         addDynamicQueueType.SelectEntityType();
         addDynamicQueueType.SelectCacheLifetime("1 min");
@@ -54,30 +53,30 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
         
         Reporter.log("STEP 4");
         navigation.Structure("Content types");
-        ContentTypes contentTypes = new ContentTypes(webDriver);
+        ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
         contentTypes.ClickManageFieldLnk("Movie");
         if (contentTypes.IsFieldPresent("Relationships").equals(false)) {
     		contentTypes.EnterAddExistingField("Relationships");
         	contentTypes.SelectExistingField("Pub TV Relationship: field_tv_shows (TV Shows)");
         	contentParent.ClickSaveBtn();
-        	com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships relationships = new com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships(webDriver);
+        	com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships relationships = new com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships(webWebWebDriver);
         	relationships.SelectTVRelationshipWidgetDepth("Show");
         	relationships.ClickSaveSettingsBtn();
         	contentParent.VerifyMessageStatus("Saved Relationships configuration.");
         	
     	}
     	navigation.AddContent("Movie");
-    	BasicInformation basicInformation = new BasicInformation(webDriver);
+    	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
     	String movieTitle = random.GetCharacterString(15);
     	basicInformation.EnterTitle(movieTitle);
         basicInformation.EnterSynopsis();
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver);
+        SelectFile selectFile = new SelectFile(webWebWebDriver);
         selectFile.SelectDefaultCoverImg();
-        com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webDriver);
+        com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webWebWebDriver);
         relationshipsContent.SelectShow(tvShowName1);
         contentParent.WaitForThrobberNotPresent();
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
@@ -87,12 +86,12 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
     	
     	Reporter.log("STEP 6");
     	navigation.Content("Dynamic Queues");
-    	DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+    	DynamicQueues dynamicQueues = new DynamicQueues(webWebWebDriver);
     	dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
     	
         Reporter.log("STEP 7");
         String dynamicQueueTitle = random.GetCharacterString(15);
-        AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
+        AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webWebWebDriver);
         addDynamicQueue.EnterTitle(dynamicQueueTitle);
         addDynamicQueue.CheckTargetBundle_Cbx("Movie");
         addDynamicQueue.SelectTVShow(tvShowName1);
@@ -102,7 +101,7 @@ public class RelatingTVShowsDynamicQueues extends ParentTest{
         Reporter.log("STEP 8");
         navigation.Content("Dynamic Queues");
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
-        String parentWindow = webDriver.getWindowHandle();
+        String parentWindow = webWebWebDriver.getWindowHandle();
         applib.openNewWindow();
         applib.switchToNewWindow(parentWindow);
         applib.openSitePage("/dynamic-queue/" + dynamicQueueNodeID);

@@ -1,8 +1,9 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
-import java.util.List;
 
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -10,8 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
+import java.util.List;
 
 /*********************************************
  * publisher.nbcuni.com Roles Library. Copyright
@@ -22,14 +22,14 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class Roles {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private WaitFor waitFor;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Roles(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        waitFor = new WaitFor(webDriver, 10);
+    public Roles(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
+        waitFor = new WaitFor(webWebWebDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -37,7 +37,7 @@ public class Roles {
     private WebElement Roles_Btn;
     
     private List<WebElement> RoleRows_Ctr() {
-    	return webDriver.findElements(By.xpath("//table[@id='user-roles']//a[@class='tabledrag-handle']/.."));
+    	return webWebWebDriver.findElements(By.xpath("//table[@id='user-roles']//a[@class='tabledrag-handle']/.."));
     }
     
     @FindBy(how = How.XPATH, using = "//td[text()='editor']/..//a[text()='edit permissions']")

@@ -1,11 +1,12 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.util.Arrays;
 
 public class MarkdownTextAreas extends ParentTest{
@@ -25,7 +26,7 @@ public class MarkdownTextAreas extends ParentTest{
         	navigation.AddContent("Post");
         	
         	Reporter.log("STEP 3 AND 4");
-        	BasicInformation basicInformation = new BasicInformation(webDriver);
+        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         	basicInformation.SelectTextFormat("Markdown");
         	
         	Reporter.log("STEP 5");

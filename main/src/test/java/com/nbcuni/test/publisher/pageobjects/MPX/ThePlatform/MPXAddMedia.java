@@ -3,9 +3,10 @@ package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
-
 import org.sikuli.basics.Settings;
-import org.sikuli.script.*;
+import org.sikuli.script.Pattern;
+import org.sikuli.script.Region;
+import org.sikuli.script.Screen;
 import org.testng.Reporter;
 
 /*********************************************

@@ -1,14 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Mapper;
 
-import java.util.Arrays;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Configuration.RestWSSchemaMapping;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Configuration.RestWSSchemaMapping;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class Phase1ContentTypeMapper extends ParentTest {
 	
@@ -29,7 +29,7 @@ public class Phase1ContentTypeMapper extends ParentTest {
             
             Reporter.log("STEP 2");
             navigation.Modules();
-            Modules modules = new Modules(webDriver);
+            Modules modules = new Modules(webWebWebDriver);
             for (String module : Arrays.asList("Pub Schema Example", "RestWS Schema", "RestWS Schema UI")) {
             	modules.EnterFilterName(module);
             	modules.EnableModule(module);
@@ -37,7 +37,7 @@ public class Phase1ContentTypeMapper extends ParentTest {
             
             Reporter.log("STEP 3");
             navigation.Configuration("RestWS Schema mapping");
-            RestWSSchemaMapping restWSSchemaMapping = new RestWSSchemaMapping(webDriver);
+            RestWSSchemaMapping restWSSchemaMapping = new RestWSSchemaMapping(webWebWebDriver);
             restWSSchemaMapping.SelectShowSeason("- Please select -");
             restWSSchemaMapping.SelectSeasonsEpisodes("- Please select -");
             restWSSchemaMapping.SelectEpisodesSeason("- Please select -");
@@ -64,7 +64,7 @@ public class Phase1ContentTypeMapper extends ParentTest {
     		UserLogin userLogin = applib.openApplication();
     		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     		navigation.Modules();
-    		Modules modules = new Modules(webDriver);
+    		Modules modules = new Modules(webWebWebDriver);
     		for (String module : Arrays.asList("Pub Schema Example", "RestWS Schema UI")) {
     			modules.EnterFilterName(module);
     			modules.DisableModule(module);

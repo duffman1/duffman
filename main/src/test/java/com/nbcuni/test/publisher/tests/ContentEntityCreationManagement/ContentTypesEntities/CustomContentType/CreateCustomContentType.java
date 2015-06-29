@@ -1,12 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType;
 
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
 
 public class CreateCustomContentType extends ParentTest{
 	
@@ -25,7 +24,7 @@ public class CreateCustomContentType extends ParentTest{
         	navigation.Structure("Content types");
             
             //Step 3
-            ContentTypes contentTypes = new ContentTypes(webDriver);
+            ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
             contentTypes.ClickAddContentLnk();
             String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
@@ -55,12 +54,12 @@ public class CreateCustomContentType extends ParentTest{
             contentTypes.VerifyFieldSelectBtnPresent(newFieldName);
             
             //Step 8
-            BasicInformation basicInformation = new BasicInformation(webDriver);
+            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             String contentTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(contentTitle);
             basicInformation.EnterSynopsis();
             contentParent.ClickSaveBtn();
-            webDriver.switchTo().defaultContent();
+            webWebWebDriver.switchTo().defaultContent();
             contentParent.VerifyMessageStatus(contentTypeName + " " + contentTitle + " has been created.");
             
     }

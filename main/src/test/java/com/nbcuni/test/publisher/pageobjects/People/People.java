@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.People;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
+
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com People Library. Copyright
@@ -20,19 +19,19 @@ import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 public class People {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private Config config;
 	private Integer timeout;
 	private WaitFor waitFor;
 	private Interact interact;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public People(Driver webDriver) {
-    	this.webDriver = webDriver;
+    public People(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
-    	waitFor = new WaitFor(webDriver, timeout);
-    	interact = new Interact(webDriver, timeout);
+    	waitFor = new WaitFor(webWebWebDriver, timeout);
+    	interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -73,11 +72,11 @@ public class People {
     public void SeachForUsername(String userName) throws Exception {
     	
     	Reporter.log("Click the 'next >' link until user '" + userName + "' is present.");
-    	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     	
     	for (int count = 0; count < 100; count++) {
     		try {
-    			webDriver.findElement(Username_Lnk(userName));
+    			webWebWebDriver.findElement(Username_Lnk(userName));
     			break;
     		}
     		catch (NoSuchElementException e) {
@@ -85,7 +84,7 @@ public class People {
     		}
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     }
     

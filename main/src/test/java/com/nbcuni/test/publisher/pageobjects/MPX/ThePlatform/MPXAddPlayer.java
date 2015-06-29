@@ -1,8 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +11,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sikuli.basics.Settings;
-import org.sikuli.script.*;
+import org.sikuli.script.Pattern;
+import org.sikuli.script.Region;
+import org.sikuli.script.Screen;
 import org.testng.Reporter;
 
 /*********************************************
@@ -23,18 +25,18 @@ import org.testng.Reporter;
 
 public class MPXAddPlayer {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private Config config;
 	private WebDriverWait wait;
     private Screen sikuli;
     private MPXAssets mpxAssets;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MPXAddPlayer(Driver webDriver) {
-    	this.webDriver = webDriver;
+    public MPXAddPlayer(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
     	config = new Config();
-    	PageFactory.initElements(webDriver, this);
-    	wait = new WebDriverWait(webDriver, 10);
+    	PageFactory.initElements(webWebWebDriver, this);
+    	wait = new WebDriverWait(webWebWebDriver, 10);
         sikuli = new Screen();
         Settings.ActionLogs = false;
         Settings.InfoLogs = false;
@@ -64,7 +66,7 @@ public class MPXAddPlayer {
     		
     	}
     	catch (WebDriverException e) {
-    		webDriver.executeScript("arguments[0].click();", Players_Lnk);
+    		 ((JavascriptExecutor)webWebWebDriver).executeScript("arguments[0].click();", Players_Lnk);
     		
     	}
     }
@@ -78,7 +80,7 @@ public class MPXAddPlayer {
     		
     	}
     	catch (WebDriverException e) {
-    		webDriver.executeScript("arguments[0].click();", AllPlayers_Lnk);
+    		 ((JavascriptExecutor)webWebWebDriver).executeScript("arguments[0].click();", AllPlayers_Lnk);
     		
     	}
     	mpxAssets.WaitForImgPresent(getImagePath() + "Players/AllPlayers_Lst.png");

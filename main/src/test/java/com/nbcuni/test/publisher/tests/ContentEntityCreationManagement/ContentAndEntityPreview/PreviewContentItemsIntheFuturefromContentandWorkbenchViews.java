@@ -1,25 +1,20 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentAndEntityPreview;
 
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.SitePreview.SitePreview;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
-
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.SitePreview.SitePreview;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
 
 public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends ParentTest {
 
@@ -56,31 +51,31 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         
         Reporter.log("SETUP");
         navigation.Modules();
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webWebWebDriver);
         modules.DisableModule("Pub SPS (Site Preview System)");
         
         Reporter.log("STEP 2");    
         navigation.AddContent("Post");
-    	BasicInformation basicInformation = new BasicInformation(webDriver);
+    	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
     	String postTitle = random.GetCharacterString(15);
     	basicInformation.EnterTitle(postTitle);    	
     	basicInformation.EnterSynopsis();
     	String shortDescriptionText = random.GetCharacterString(25);
     	basicInformation.EnterShortDescription(shortDescriptionText);
     	basicInformation.ClickCoverSelectBtn();
-    	SelectFile selectFile = new SelectFile(webDriver);
+    	SelectFile selectFile = new SelectFile(webWebWebDriver);
     	selectFile.SelectDefaultCoverImg();
-    	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+    	PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
     	publishingOptions.ClickPublishingOptionsLnk();
     	publishingOptions.SelectModerationState("Published");
-    	ContentParent contentParent = new ContentParent(webDriver);
+    	ContentParent contentParent = new ContentParent(webWebWebDriver);
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
     	Thread.sleep(2000);
-    	String postURL = webDriver.getCurrentUrl();
+    	String postURL = webWebWebDriver.getCurrentUrl();
     	
         Reporter.log("STEP 3");
-    	SitePreview sitePreview = new SitePreview(webDriver);
+    	SitePreview sitePreview = new SitePreview(webWebWebDriver);
         sitePreview.ClickInteractivePreviewBtn();    	
         
     	Reporter.log("STEP 4");			
@@ -108,7 +103,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         sitePreview.VerifyUpdatePreviewLnkVisible();
         
         //Step 8
-        WorkBench workBench = new WorkBench(webDriver);
+        WorkBench workBench = new WorkBench(webWebWebDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
         String updatedPostTitle = "Updated" + postTitle;
         String updatedShortDescription = "Updated" + shortDescriptionText;
@@ -119,7 +114,7 @@ public class PreviewContentItemsIntheFuturefromContentandWorkbenchViews extends 
         
         //Step 9
     	workBench.ClickWorkBenchTab("Schedule");
-    	ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
+    	ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
     	scheduleQueue.ClickAddScheduledRevisionLnk();
     	scheduleQueue.SelectRevision(updatedPostTitle);
     	scheduleQueue.SelectOperation("Moderate to Published");

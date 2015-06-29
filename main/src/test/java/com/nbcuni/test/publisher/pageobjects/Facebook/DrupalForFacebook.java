@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Facebook;
 
-import java.util.concurrent.TimeUnit;
+import com.nbcuni.test.publisher.common.Config;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -8,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
+
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Drupal For Facebook Library. Copyright
@@ -20,14 +21,14 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class DrupalForFacebook {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private Config config;
     
     //PAGE OBJECT CONSTRUCTOR
-    public DrupalForFacebook(Driver webDriver) {
-        this.webDriver = webDriver;
+    public DrupalForFacebook(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
         config = new Config();
-        PageFactory.initElements(webDriver, this);
+        PageFactory.initElements(webWebWebDriver, this);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -74,7 +75,7 @@ public class DrupalForFacebook {
     //PAGE OBJECT METHODS
     public boolean FacebookAppExists() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     	
     	boolean existingAppPresent = false;
     	try {
@@ -85,7 +86,7 @@ public class DrupalForFacebook {
     		existingAppPresent = false;
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	return existingAppPresent;
     }
@@ -153,7 +154,7 @@ public class DrupalForFacebook {
     public void EnterToken() throws Exception {
     	
     	Reporter.log("Copy the current token.");
-    	String token = new WebDriverWait(webDriver, 10).until(ExpectedConditions.
+    	String token = new WebDriverWait(webWebWebDriver, 10).until(ExpectedConditions.
     			visibilityOf(Token_Ctr)).getText();
     	
     	Reporter.log("Paste the current token into the 'Paste Access token' text area.");

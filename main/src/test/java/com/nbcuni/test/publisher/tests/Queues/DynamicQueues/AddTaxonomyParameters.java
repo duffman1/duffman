@@ -1,18 +1,17 @@
 package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.AdditionalInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueueTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
-
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -32,27 +31,27 @@ public class AddTaxonomyParameters extends ParentTest{
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webWebWebDriver);
         modules.VerifyModuleEnabled("Dynamic Queue");
         String movieWTax = "movieWTax" + random.GetCharacterString(15);
         String movieWOTax = "movieWOTax" + random.GetCharacterString(15);
         for (String title : Arrays.asList(movieWTax, movieWOTax)) {
         	navigation.AddContent("Movie");
-        	BasicInformation basicInformation = new BasicInformation(webDriver);
+        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             basicInformation.ClickBasicInformationTab();
             basicInformation.EnterTitle(title);
             basicInformation.EnterSynopsis();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             selectFile.SelectDefaultCoverImg();
             if (title.contains("WTax")) {
-            	AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
+            	AdditionalInformation additionalInformation = new AdditionalInformation(webWebWebDriver);
                 additionalInformation.ClickAdditionalInformationLnk();
                 additionalInformation.SelectMovieType("Syndicated");
                 additionalInformation.SelectRating("G");
                 additionalInformation.SelectPrimaryGenre("Action");
             }
-            PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+            PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
             publishingOptions.ClickPublishingOptionsLnk();
             publishingOptions.SelectModerationState("Published");
             contentParent.ClickSaveBtn();
@@ -60,12 +59,12 @@ public class AddTaxonomyParameters extends ParentTest{
         
         Reporter.log("STEP 2");
         navigation.Structure("Dynamic Queue types");
-        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver);
+        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webWebWebDriver);
         dynamicQueueTypes.ClickAddDynamicQueueTypeLnk();
         
         Reporter.log("STEP 3");
         String dynamicQueueTypeName = random.GetCharacterString(15);
-        AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
+        AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webWebWebDriver);
         addDynamicQueueType.EnterName(dynamicQueueTypeName);
         addDynamicQueueType.SelectEntityType();
         addDynamicQueueType.SelectCacheLifetime("1 min");
@@ -79,12 +78,12 @@ public class AddTaxonomyParameters extends ParentTest{
         
         Reporter.log("STEP 4");
         navigation.Content("Dynamic Queues");
-        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
+        DynamicQueues dynamicQueues = new DynamicQueues(webWebWebDriver);
         dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
         
         Reporter.log("STEP 5");
         String dynamicQueueTitle = random.GetCharacterString(15);
-        AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
+        AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webWebWebDriver);
         addDynamicQueue.EnterTitle(dynamicQueueTitle);
         
         Reporter.log("STEP 6");
@@ -110,7 +109,7 @@ public class AddTaxonomyParameters extends ParentTest{
         Reporter.log("STEP 13");
         navigation.Content("Dynamic Queues");
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
-        String parentWindow = webDriver.getWindowHandle();
+        String parentWindow = webWebWebDriver.getWindowHandle();
         applib.openNewWindow();
         applib.switchToNewWindow(parentWindow);
         applib.openSitePage("/dynamic-queue/" + dynamicQueueNodeID);

@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
-
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -33,17 +32,17 @@ public class PageURLReflectRevision extends ParentTest {
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         Reporter.log("STEP 2");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
         String postTitle = createDefaultContent.Post("Published");
-        String postURL = webDriver.getCurrentUrl();
+        String postURL = webWebWebDriver.getCurrentUrl();
         
         Reporter.log("STEP 3");
-        WorkBench workBench = new WorkBench(webDriver);
+        WorkBench workBench = new WorkBench(webWebWebDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
-        BasicInformation basicInformation = new BasicInformation(webDriver);
+        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         String postTitleRevision1 = "Revision1" + random.GetCharacterString(10);
         basicInformation.EnterTitle(postTitleRevision1);
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         publishingOptions.SelectModerationState("Draft");
@@ -86,7 +85,7 @@ public class PageURLReflectRevision extends ParentTest {
         
         Reporter.log("STEP 5");
         workBench.ClickWorkBenchTab("Schedule");
-        ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
+        ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
         scheduleQueue.ClickAddScheduledRevisionLnk();
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Unpublished");
@@ -109,7 +108,7 @@ public class PageURLReflectRevision extends ParentTest {
         contentParent.VerifyPageURL(postURL);
         
         Reporter.log("STEP 8");
-        Logout logout = new Logout(webDriver);
+        Logout logout = new Logout(webWebWebDriver);
         logout.ClickLogoutBtn();
         applib.openSitePage(postURL);
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));

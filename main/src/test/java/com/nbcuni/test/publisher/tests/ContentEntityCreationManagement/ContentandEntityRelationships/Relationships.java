@@ -1,14 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships;
 
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
 
 public class Relationships extends ParentTest{
 	 /*************************************************************************************
@@ -23,14 +23,14 @@ public class Relationships extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("SETUP - Create a TV Show");
-    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
     	String tvShowTitle1 = createDefaultContent.TVShow("Draft");
     	
     	Reporter.log("STEP 2");
     	navigation.Structure("Content types");
     	
     	Reporter.log("STEP 3");
-    	ContentTypes contentTypes = new ContentTypes(webDriver);
+    	ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
     	contentTypes.ClickManageFieldLnk("Movie");
     	if (contentTypes.IsFieldPresent("Relationships").equals(false)) {
     		contentTypes.EnterAddExistingField("Relationships");
@@ -38,7 +38,7 @@ public class Relationships extends ParentTest{
         	contentParent.ClickSaveBtn();
         	
         	Reporter.log("STEP 4");
-        	com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships relationships = new com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships(webDriver);
+        	com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships relationships = new com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.Relationships(webWebWebDriver);
         	relationships.SelectTVRelationshipWidgetDepth("Show");
         	relationships.ClickSaveSettingsBtn();
         	contentParent.VerifyMessageStatus("Saved Relationships configuration.");
@@ -51,16 +51,16 @@ public class Relationships extends ParentTest{
     	
     	Reporter.log("STEP 5");
     	navigation.AddContent("Movie");
-    	BasicInformation basicInformation = new BasicInformation(webDriver);
+    	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
     	String movieTitle = random.GetCharacterString(15);
     	basicInformation.EnterTitle(movieTitle);
         basicInformation.EnterSynopsis();
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver);
+        SelectFile selectFile = new SelectFile(webWebWebDriver);
         selectFile.SelectDefaultCoverImg();
         
         Reporter.log("STEP 6");
-        com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webDriver);
+        com.nbcuni.test.publisher.pageobjects.Content.Relationships relationshipsContent = new com.nbcuni.test.publisher.pageobjects.Content.Relationships(webWebWebDriver);
         relationshipsContent.SelectShow(tvShowTitle1);
         contentParent.WaitForThrobberNotPresent();
         contentParent.ClickSaveBtn();

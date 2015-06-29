@@ -1,15 +1,16 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords;
 
-import java.util.Arrays;
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.ForgotPassword;
 import com.nbcuni.test.publisher.pageobjects.GmailConnect;
 import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class PasswordReset extends ParentTest {
 	
@@ -23,16 +24,16 @@ public class PasswordReset extends ParentTest {
     	Reporter.log("SETUP - create new user");
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-    	AddUser addUser = new AddUser(webDriver);
+    	AddUser addUser = new AddUser(webWebWebDriver);
     	String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
-    	Logout logout = new Logout(webDriver);
+    	Logout logout = new Logout(webWebWebDriver);
     	logout.ClickLogoutBtn();
     	
     	Reporter.log("STEP 1");
     	applib.openApplication();
     	
     	Reporter.log("STEP 2");
-    	ForgotPassword forgotPassword = new ForgotPassword(webDriver);
+    	ForgotPassword forgotPassword = new ForgotPassword(webWebWebDriver);
     	forgotPassword.ClickRequestPasswordLnk();
     	
     	Reporter.log("STEP 3");

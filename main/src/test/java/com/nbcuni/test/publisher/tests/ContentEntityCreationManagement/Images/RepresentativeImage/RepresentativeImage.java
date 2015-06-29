@@ -1,10 +1,9 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
-
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -22,29 +21,29 @@ public class RepresentativeImage extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
         	String postTitle = createDefaultContent.Post("Published");
         	
         	Reporter.log("STEP 3");
         	navigation.Content();
-        	SearchFor searchFor = new SearchFor(webDriver);
+        	SearchFor searchFor = new SearchFor(webWebWebDriver);
         	searchFor.EnterTitle(postTitle);
         	searchFor.ClickApplyBtn();
         	searchFor.VerifySearchThumbnailImgPresent(postTitle, "HanSolo");
         	
         	Reporter.log("STEP 4");
         	navigation.Content("Files");
-        	Thumbnails thumbnails = new Thumbnails(webDriver);
+        	Thumbnails thumbnails = new Thumbnails(webWebWebDriver);
         	thumbnails.VerifyThumbnailImagePresent("HanSolo", "1");
             
             Reporter.log("STEP 5");
             navigation.AddContent("Post");
-        	BasicInformation basicInformation = new BasicInformation(webDriver);
+        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             String postTitle2 = random.GetCharacterString(15);
             basicInformation.EnterTitle(postTitle2);
             basicInformation.EnterSynopsis();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickPub7MPXVideoBtn();
     		selectFile.EnterTitle("AutomationWThumb");
@@ -56,7 +55,7 @@ public class RepresentativeImage extends ParentTest {
     		Thread.sleep(2000); //TODO - dynamic wait
     		selectFile.ClickSubmitBtn();
     		Thread.sleep(2000); //TODO - dynamic wait
-            webDriver.switchTo().defaultContent();
+            webWebWebDriver.switchTo().defaultContent();
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Post " + postTitle2 + " has been created.");
             

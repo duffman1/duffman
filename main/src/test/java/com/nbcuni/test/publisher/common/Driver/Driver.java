@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.common.Driver;
 
-import java.net.URL;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriverException;
@@ -8,6 +7,8 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.DriverCommand;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
 
 /*********************************************
  * publisher.nbcuni.com Driver Library. Copyright

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceMediaGalleriesTab;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Content.MediaGalleries;
@@ -9,6 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -30,9 +31,9 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
         
         //Step 2
     	navigation.Content("Media Galleries");
-    	MediaGalleries mediaGalleries = new MediaGalleries(webDriver);
+    	MediaGalleries mediaGalleries = new MediaGalleries(webWebWebDriver);
     	mediaGalleries.ClickAddMediaGalleryLnk();
-    	BasicInformation basicInformation = new BasicInformation(webDriver);
+    	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         String title = random.GetCharacterString(15);
         basicInformation.EnterTitle(title);
         contentParent.ClickSaveBtn();
@@ -42,7 +43,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
         navigation.Content("Media Galleries");
         
     	//Steps 4 and 5
-    	SearchFor searchFor = new SearchFor(webDriver);
+    	SearchFor searchFor = new SearchFor(webWebWebDriver);
     	searchFor.SelectStatus("Draft");
     	searchFor.EnterTitle(title);
     	searchFor.ClickApplyBtn();
@@ -97,7 +98,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	searchFor.ClickApplyBtn();
     	mediaGalleries.ClickEditExtendMenuBtn(title);
     	mediaGalleries.ClickDeleteMenuBtn(title);
-    	Delete delete = new Delete(webDriver);
+    	Delete delete = new Delete(webWebWebDriver);
     	delete.ClickDeleteBtn();
     	contentParent.VerifyMessageStatus("Media Gallery " + title + " has been deleted.");
     	

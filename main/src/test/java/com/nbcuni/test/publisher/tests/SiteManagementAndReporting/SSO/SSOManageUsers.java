@@ -1,18 +1,19 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
-import java.util.Arrays;
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SSOLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SimpleSAML;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
 import com.nbcuni.test.publisher.pageobjects.People.People;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class SSOManageUsers extends ParentTest {
 
@@ -25,10 +26,10 @@ public class SSOManageUsers extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive", "broken"})
 	 public void SSOManageUsers_TC3853() throws Exception {
 		 
-		UserLogin userLogin = new UserLogin(webDriver); 
-		Modules modules = new Modules(webDriver);
-		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-		Logout logout = new Logout(webDriver);
+		UserLogin userLogin = new UserLogin(webWebWebDriver);
+		Modules modules = new Modules(webWebWebDriver);
+		SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
+		Logout logout = new Logout(webWebWebDriver);
 		String parentWindow = null;
 		
 		Reporter.log("STEP 1");
@@ -51,7 +52,7 @@ public class SSOManageUsers extends ParentTest {
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/saml_login");
 		Thread.sleep(1000);
-		SSOLogin ssoLogin = new SSOLogin(webDriver);
+		SSOLogin ssoLogin = new SSOLogin(webWebWebDriver);
 		ssoLogin.EnterSSOID(config.getConfigValueString("SSOUsername"));
 		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
@@ -60,21 +61,21 @@ public class SSOManageUsers extends ParentTest {
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
 		Reporter.log("STEP 3");
-		WorkBench workBench = new WorkBench(webDriver);
+		WorkBench workBench = new WorkBench(webWebWebDriver);
 		workBench.ClickWorkBenchTab("Edit");
-		AddUser addUser = new AddUser(webDriver);
+		AddUser addUser = new AddUser(webWebWebDriver);
 		addUser.VerifyUsernameValueAndIsDisabled(config.getConfigValueString("SSOEmail"));
 		addUser.VerifyEmailAddressValueAndIsDisabled(config.getConfigValueString("SSOEmail"));
 		    
 		Reporter.log("STEP 4");
-		parentWindow = webDriver.getWindowHandle();
+		parentWindow = webWebWebDriver.getWindowHandle();
 		addUser.ClickChangeYourPasswordLnk();
 	    applib.switchToNewWindow(parentWindow);
 		ssoLogin.VerifySSOPasswordReset();
 		    
 		Reporter.log("STEP 5");
-		webDriver.close();
-		webDriver.switchTo().window(parentWindow);
+		webWebWebDriver.close();
+		webWebWebDriver.switchTo().window(parentWindow);
 		logout.ClickLogoutBtn();
 		applib.openSitePage("/user");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
@@ -84,7 +85,7 @@ public class SSOManageUsers extends ParentTest {
 	        
 	    Reporter.log("STEP 7");
 		navigation.People();
-		People people = new People(webDriver);
+		People people = new People(webWebWebDriver);
 		people.SeachForUsername(editorUserName);
 		people.ClickEditLnk(editorUserName);
 		addUser.VerifyUsernameValueAndIsDisabled(editorUserName);
@@ -108,9 +109,9 @@ public class SSOManageUsers extends ParentTest {
 		public void Cleanup() throws Exception {
 			if (testSuccessful == false) {
 				
-				UserLogin userLogin = new UserLogin(webDriver);
-				SimpleSAML simpleSAML = new SimpleSAML(webDriver);
-				Modules modules = new Modules(webDriver);
+				UserLogin userLogin = new UserLogin(webWebWebDriver);
+				SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
+				Modules modules = new Modules(webWebWebDriver);
 				
 				applib.openSitePage("/user");
 				userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));

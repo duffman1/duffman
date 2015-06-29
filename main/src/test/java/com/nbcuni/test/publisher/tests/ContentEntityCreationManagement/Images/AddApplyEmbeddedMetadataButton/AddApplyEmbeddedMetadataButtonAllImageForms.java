@@ -1,10 +1,12 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.CoverMedia;
+import com.nbcuni.test.publisher.pageobjects.Content.EditImage;
+import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
 import org.testng.annotations.Test;
 
 public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
@@ -23,7 +25,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             
         	//Step 2
         	navigation.Configuration("Simple EXIF/IPTC Mappings");
-            SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
+            SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webWebWebDriver, applib);
             simpleEXIFIPTCMappings.SelectAltText("Title");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
             simpleEXIFIPTCMappings.SelectCaption("Caption");
@@ -37,9 +39,9 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             
             //Step 3
             navigation.AddContent("Post");
-            CoverMedia coverMedia = new CoverMedia(webDriver);
+            CoverMedia coverMedia = new CoverMedia(webWebWebDriver);
             coverMedia.ClickSelectBtn();
-            SelectFile selectFile = new SelectFile(webDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             selectFile.SwitchToSelectFileFrm();
         	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "NUP_155306_0046.JPG");
         	selectFile.ClickUploadBtn();
@@ -52,7 +54,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
         	selectFile.VerifyFileImagePresent("NUP_155306_0046");
             
             //Step 4
-            EditImage editImage = new EditImage(webDriver);
+            EditImage editImage = new EditImage(webWebWebDriver);
             editImage.VerifyApplyEmbeddedMetadataBtnPresent();
             
             //Step 5
@@ -76,7 +78,7 @@ public class AddApplyEmbeddedMetadataButtonAllImageForms extends ParentTest{
             editImage.ClickSaveBtn("1");
             
             //Step 8
-            webDriver.switchTo().defaultContent();
+            webWebWebDriver.switchTo().defaultContent();
             coverMedia.ClickEditBtn();
             editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("1", "ModifiedTitle.JPG");

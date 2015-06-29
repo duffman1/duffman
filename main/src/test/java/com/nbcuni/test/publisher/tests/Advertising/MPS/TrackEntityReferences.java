@@ -1,16 +1,17 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
-import java.util.Arrays;
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
 import com.nbcuni.test.publisher.pageobjects.Content.AdditionalInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class TrackEntityReferences extends ParentTest {
 	
@@ -26,15 +27,15 @@ public class TrackEntityReferences extends ParentTest {
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Modules modules = new Modules(webDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	modules.VerifyModuleEnabled("MPS");
-        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
+        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
         	String tvShowTitle = createDefaultContent.TVShow("Published");
         	String tvSeasonTitle = createDefaultContent.TVSeason("Published", tvShowTitle);
         	String tvEpisodeTitle = createDefaultContent.TVEpisode("Published", tvShowTitle, tvSeasonTitle);
-        	WorkBench workBench = new WorkBench(webDriver);
+        	WorkBench workBench = new WorkBench(webWebWebDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
-        	AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
+        	AdditionalInformation additionalInformation = new AdditionalInformation(webWebWebDriver);
         	additionalInformation.ClickAdditionalInformationLnk();
         	additionalInformation.EnterTag("tag1, tag2");
         	contentParent.ClickSaveBtn();
@@ -42,7 +43,7 @@ public class TrackEntityReferences extends ParentTest {
         	
         	Reporter.log("STEP 2");
         	navigation.Configuration("MPS Configuration");
-        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
             mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");

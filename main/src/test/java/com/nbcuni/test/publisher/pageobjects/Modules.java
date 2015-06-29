@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -25,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Modules extends Page {
 
-    private Driver webDriver;
+
     private Config config;
     private ContentParent contentParent;
     private EmberNav navigation;
@@ -33,18 +32,18 @@ public class Modules extends Page {
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
-    
+    WebDriver webWebWebDriver;
     //PAGE OBJECT CONSTRUCTOR
-    public Modules(Driver webDriver) {
-        super(webDriver);
-        this.webDriver = webDriver;
+    public Modules(WebDriver webWebWebDriver) {
+        super(webWebWebDriver);
+        this.webWebWebDriver = webWebWebDriver;
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
-    	contentParent = new ContentParent(webDriver);
-    	navigation = new EmberNav(webDriver);
-    	waitFor = new WaitFor(webDriver, timeout);
-    	wait = new WebDriverWait(webDriver, timeout);
-    	interact = new Interact(webDriver, timeout);
+    	contentParent = new ContentParent(webWebWebDriver);
+    	navigation = new EmberNav(webWebWebDriver);
+    	waitFor = new WaitFor(webWebWebDriver, timeout);
+    	wait = new WebDriverWait(webWebWebDriver, timeout);
+    	interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -88,7 +87,7 @@ public class Modules extends Page {
     	final WebElement aquiaAgentModuleRow = waitFor.ElementPresent(AcquiaAgentModule_Row);
     	
     	wait.until(new ExpectedCondition<Boolean>() {
-    		public Boolean apply(WebDriver webDriver) {
+    		public Boolean apply(org.openqa.selenium.WebDriver webWebDriver) {
     			return (moduleNameRow.getAttribute("style").equals("") || moduleNameRow.getAttribute("style").equals("display: table-row;"))
     					&& aquiaAgentModuleRow.getAttribute("style").equals("display: none;");
    		 	}
@@ -139,9 +138,9 @@ public class Modules extends Page {
     		
         	boolean additionalModulesRequired = false;
         	
-        	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        	webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         	try {
-        		webDriver.findElement(Continue_Btn).isDisplayed();
+        		webWebWebDriver.findElement(Continue_Btn).isDisplayed();
         		additionalModulesRequired = true;
         	}
         	catch (Exception e) { }
@@ -153,7 +152,7 @@ public class Modules extends Page {
         		
         	}
         	
-        	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+        	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         	
         	this.VerifyConfigurationSaved();
         	
@@ -188,19 +187,19 @@ public class Modules extends Page {
     
     public Boolean IsModuleInstalled(String moduleName) throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
     	Boolean isModuleInstalled = null;
     	
     	try {
-    		webDriver.findElement(UninstallModuleName_Cbx(moduleName)).getLocation();
+    		webWebWebDriver.findElement(UninstallModuleName_Cbx(moduleName)).getLocation();
     		isModuleInstalled = true;
     	}
     	catch (NoSuchElementException e) {
     		isModuleInstalled = false;
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	return isModuleInstalled;
     	

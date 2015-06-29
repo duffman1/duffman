@@ -1,12 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.TVEModule;
 
-import org.openqa.selenium.By;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
 /*********************************************
  * publisher.nbcuni.com jQuery Update Library. Copyright
@@ -24,11 +23,11 @@ public class jQueryUpdate {
 	
 	
     //PAGE OBJECT CONSTRUCTOR
-    public jQueryUpdate(Driver webDriver) {
+    public jQueryUpdate(WebDriver webWebWebDriver) {
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
-    	waitFor = new WaitFor(webDriver, timeout);
-    	interact = new Interact(webDriver, timeout);
+    	waitFor = new WaitFor(webWebWebDriver, timeout);
+    	interact = new Interact(webWebWebDriver, timeout);
     }
     
     

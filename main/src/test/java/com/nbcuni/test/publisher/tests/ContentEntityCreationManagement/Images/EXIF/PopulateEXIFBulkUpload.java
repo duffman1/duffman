@@ -1,10 +1,11 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.*;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -24,7 +25,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             
             Reporter.log("SETUP");
             navigation.Configuration("Simple EXIF/IPTC Mappings");
-            SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, applib);
+            SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webWebWebDriver, applib);
             simpleEXIFIPTCMappings.SelectAltText("Title");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
             simpleEXIFIPTCMappings.SelectCaption("Caption");
@@ -38,15 +39,15 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             
             Reporter.log("STEP 2");
             navigation.AddContent("Media Gallery");
-            BasicInformation basicInformation = new BasicInformation(webDriver);
+            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             
             Reporter.log("STEP 3");
-            AddFile addFile = new AddFile(webDriver);
-            MediaItems mediaItems = new MediaItems(webDriver);
+            AddFile addFile = new AddFile(webWebWebDriver);
+            MediaItems mediaItems = new MediaItems(webWebWebDriver);
             for(int Count=0;Count<2;Count++) {
-            	webDriver.switchTo().defaultContent();
+            	webWebWebDriver.switchTo().defaultContent();
             	if (Count == 0) {
             		basicInformation.ClickMediaItemsSelectBtn();
             	}
@@ -54,10 +55,10 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             		contentParent.WaitForThrobberNotPresent();
             		mediaItems.ClickAddBtn();
             	}
-                SelectFile selectFile = new SelectFile(webDriver);
+                SelectFile selectFile = new SelectFile(webWebWebDriver);
                 selectFile.SwitchToSelectFileFrm();
                 addFile.ClickAddFilesLnk();
-                if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+                if (((RemoteWebDriver)webWebWebDriver).getCapabilities().getPlatform().toString() == "MAC") {
                 	addFile.ClickPicturesUploadBtn();
                 	addFile.ClickTestPictureExifDataBtn();
                 	addFile.ClickOpenBtn();
@@ -72,13 +73,13 @@ public class PopulateEXIFBulkUpload extends ParentTest{
                 addFile.WaitForSuccessfulUpload();
                 addFile.ClickNextBtn();
             }
-            webDriver.switchTo().defaultContent();
+            webWebWebDriver.switchTo().defaultContent();
             mediaItems.VerifyFileImagePresent("NUP_155306_0046", "1");
             mediaItems.VerifyFileImagePresent("NUP_155306_0046", "2");
             
             Reporter.log("STEP 4");
             mediaItems.ClickEditBtn("1");
-            EditImage editImage = new EditImage(webDriver);
+            EditImage editImage = new EditImage(webWebWebDriver);
             editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
             editImage.VerifyAltTextValue("1", "NUP_155306_0046.JPG");
@@ -153,7 +154,7 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             basicInformation.ClickCoverSelectBtn();
             
             Reporter.log("STEP 9");
-            SelectFile selectFile = new SelectFile(webDriver);
+            SelectFile selectFile = new SelectFile(webWebWebDriver);
             selectFile.SwitchToSelectFileFrm();
         	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "IPTCDefault.jpg");
         	selectFile.ClickUploadBtn();
@@ -173,10 +174,10 @@ public class PopulateEXIFBulkUpload extends ParentTest{
             editImage.VerifyCopyrightValue("1", "©1985 David Riecks, All Rights Reserved");
             editImage.VerifyKeywordsValue("1", "environment, ecology, ecosystem, environmentalism, scenery, nature, land, mountains, mount, Himalayans, sky, skies, cloud, clouds, concepts, concept, conceptual, summit, peak, weather, snow, snowing, snowfall, outdoors, outdoor, outside");
             selectFile.ClickSaveBtn();
-            webDriver.switchTo().defaultContent();
+            webWebWebDriver.switchTo().defaultContent();
             
             Reporter.log("STEP 11");
-            CoverItem coverItem = new CoverItem(webDriver);
+            CoverItem coverItem = new CoverItem(webWebWebDriver);
             coverItem.ClickEditBtn();
             editImage.WaitForEditImageFrameOpen();
             editImage.VerifyTitleTextValue("1", "drpin075402");

@@ -1,13 +1,12 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.EditorialActivity;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.EntityTracker;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Reports.EntityTrackerReports;
-
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -27,19 +26,19 @@ public class CollectEditorialActivity extends ParentTest {
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void CollectEditorialActivity_TC5071() throws Exception {
          
-    		webDriver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+    		webWebWebDriver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
         
         	Reporter.log("STEP 1");
         	UserLogin userLogin = applib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	Modules modules = new Modules(webDriver);
+        	Modules modules = new Modules(webWebWebDriver);
         	modules.VerifyModuleEnabled("Entity Tracker");
         	
         	Reporter.log("STEP 3");
         	navigation.Configuration("Entity tracker");
-        	EntityTracker entityTracker = new EntityTracker(webDriver);
+        	EntityTracker entityTracker = new EntityTracker(webWebWebDriver);
         	for (String role : Arrays.asList("administrator", "editor", "senior editor")) {
         		entityTracker.CheckRoleCbx(role);
         	}
@@ -58,7 +57,7 @@ public class CollectEditorialActivity extends ParentTest {
         	cal7DaysPast.add(Calendar.DATE, -7);
         	Date date7DaysPast = cal7DaysPast.getTime();
         	Date dateToday = calToday.getTime();
-        	EntityTrackerReports entityTrackerReports = new EntityTrackerReports(webDriver);
+        	EntityTrackerReports entityTrackerReports = new EntityTrackerReports(webWebWebDriver);
         	entityTrackerReports.EnterFromDate(pub7DateFormat.format(date7DaysPast));
         	entityTrackerReports.EnterToDate(pub7DateFormat.format(dateToday));
         	entityTrackerReports.ClickApplyBtn();
@@ -66,7 +65,7 @@ public class CollectEditorialActivity extends ParentTest {
         	Reporter.log("STEP 6 - N/A");
         	
         	Reporter.log("STEP 7");
-        	ErrorChecking errorChecking = new ErrorChecking(webDriver);
+        	ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
         	errorChecking.VerifyNoMessageErrorsPresent();
         	entityTrackerReports.ClickParentArrayElementLnk();
         	entityTrackerReports.ClickChildArrayElementLnk();

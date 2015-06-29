@@ -1,13 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects;
 
+
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
 
 /*********************************************
  * publisher.nbcuni.com Execute PHP Code Library. Copyright
@@ -21,9 +21,9 @@ public class ExecutePHPCode {
 	WaitFor waitFor;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public ExecutePHPCode(Driver webDriver) {
-    	PageFactory.initElements(webDriver, this);
-    	waitFor = new WaitFor(webDriver, 10);
+    public ExecutePHPCode(WebDriver webWebWebDriver) {
+    	PageFactory.initElements(webWebWebDriver, this);
+    	waitFor = new WaitFor(webWebWebDriver, 10);
     }
 
     //PAGE OBJECT IDENTIFIERS

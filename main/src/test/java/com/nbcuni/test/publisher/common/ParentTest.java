@@ -1,14 +1,14 @@
 package com.nbcuni.test.publisher.common;
 
-import com.nbcuni.test.publisher.common.Driver.*;
-import com.nbcuni.test.publisher.pageobjects.EmberNav;
+import com.nbcuni.test.publisher.common.Driver.DriverSetup;
+import com.nbcuni.test.publisher.common.Driver.StartGridHubNode;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Taxonomy.Taxonomy;
 import com.nbcuni.test.publisher.tests.Setup.A1_TestSetup;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.Interact;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
 	
-	protected Driver webDriver;
+	protected WebDriver webWebWebDriver;
 	protected DriverSetup driverSetup;
     protected AppLib applib;
     protected Random random;
@@ -40,12 +40,12 @@ public class ParentTest {
 
     	if (config.getConfigValueString("RunSetupScripts").equals("true")) {
     		driverSetup = new DriverSetup();
-        	webDriver = driverSetup.WebDriverSetup(true);
-        	applib = new AppLib(webDriver);
-        	webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
-            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+        	webWebWebDriver = driverSetup.WebDriverSetup(true);
+        	applib = new AppLib(webWebWebDriver);
+        	webWebWebDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+            webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         	A1_TestSetup testSetup = new A1_TestSetup();
-        	abortTestSuite = testSetup.TestSetup_Test(webDriver, applib);
+        	abortTestSuite = testSetup.TestSetup_Test(webWebWebDriver, applib);
     	}
     }
     
@@ -60,17 +60,17 @@ public class ParentTest {
         	}
         	
         	driverSetup = new DriverSetup();
-        	webDriver = driverSetup.WebDriverSetup(runLocally);
-            applib = new AppLib(webDriver);
+        	webWebWebDriver = driverSetup.WebDriverSetup(runLocally);
+            applib = new AppLib(webWebWebDriver);
             random = new Random();
-            taxonomy = new Taxonomy(webDriver);
-            navigation = new EmberNav(webDriver);
-            contentParent = new ContentParent(webDriver);
-            interact = new Interact(webDriver, config.getConfigValueInt("WaitForWaitTime"));
+            taxonomy = new Taxonomy(webWebWebDriver);
+            navigation = new EmberNav(webWebWebDriver);
+            contentParent = new ContentParent(webWebWebDriver);
+            interact = new Interact(webWebWebDriver, config.getConfigValueInt("WaitForWaitTime"));
             
-            webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
-            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-            webDriver.manage().window().maximize();
+            webWebWebDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+            webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+            webWebWebDriver.manage().window().maximize();
             
         } catch (Exception e) {
         	System.out.println("Failed to start WebDriver and initiate timeouts");
@@ -99,10 +99,10 @@ public class ParentTest {
         	try {
         		if (!result.isSuccess()) {
         			applib.openSitePage("/admin/config/development/performance");
-        			webDriver.switchTo().defaultContent();
+        			webWebWebDriver.switchTo().defaultContent();
         			Thread.sleep(1000);
-            		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-            		webDriver.findElement(By.id("edit-clear")).click();
+            		webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            		webWebWebDriver.findElement(By.id("edit-clear")).click();
             		Reporter.setCurrentTestResult(result); 
                     Reporter.log("Cache was cleared on test failure");
                     Reporter.setCurrentTestResult(null);
@@ -114,7 +114,7 @@ public class ParentTest {
     	}
     	
         try {
-        	webDriver.quit();
+        	webWebWebDriver.quit();
         } 
         catch (Exception e) {
         	System.out.println("Failed to stop WebDriver");

@@ -1,24 +1,19 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.Facebook;
 
-import java.net.URL;
-import java.util.Arrays;
-
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.Facebook.DrupalForFacebook;
+import com.nbcuni.test.publisher.pageobjects.Facebook.NodeTypes;
+import com.nbcuni.test.publisher.pageobjects.Facebook.Share;
+import com.nbcuni.test.publisher.pageobjects.Modules;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Modules;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.Delete;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
-import com.nbcuni.test.publisher.pageobjects.Facebook.DrupalForFacebook;
-import com.nbcuni.test.publisher.pageobjects.Facebook.NodeTypes;
-import com.nbcuni.test.publisher.pageobjects.Facebook.Share;
+import java.net.URL;
+import java.util.Arrays;
 
 public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends ParentTest{
 	
@@ -37,13 +32,13 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         
         //Step 3
         navigation.Modules();
-        Modules modules = new Modules(webDriver);
+        Modules modules = new Modules(webWebWebDriver);
         modules.EnableModule("Pub Social");
         
         //Step 3a
         navigation.Structure("Facebook Apps");
-        DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
-        Delete delete = new Delete(webDriver);
+        DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webWebWebDriver);
+        Delete delete = new Delete(webWebWebDriver);
         if (drupalForFacebook.FacebookAppExists()) {
         	drupalForFacebook.ClickEditLnk();
         	delete.ClickDeleteBtn();
@@ -83,28 +78,28 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         
         //Step 10
         navigation.Configuration("Facebook");
-        NodeTypes nodeTypes = new NodeTypes(webDriver);
+        NodeTypes nodeTypes = new NodeTypes(webWebWebDriver);
         nodeTypes.EnablePostNode();
         
         //Step 11
         navigation.AddContent("Post");
-        BasicInformation basicInformation = new BasicInformation(webDriver);
+        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webDriver);
+        WorkBench workBench = new WorkBench(webWebWebDriver);
         workBench.ClickWorkBenchTab("Revisions");
         
         //Step 12
-        Revisions revisions = new Revisions(webDriver);
+        Revisions revisions = new Revisions(webWebWebDriver);
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
-        Share share = new Share(webDriver);
+        Share share = new Share(webWebWebDriver);
         share.ClickFacebookLnk();
         share.ClickPostToFacebookWallCbx();
         String message = random.GetCharacterString(15);
@@ -112,7 +107,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         share.ClickShareBtn();
         
         //Step 14
-        webDriver.navigate().to(new URL("https://www.facebook.com/"));
+        webWebWebDriver.navigate().to(new URL("https://www.facebook.com/"));
         for (int I = 0 ; ; I++) {
         	if (I >= 20) {
         		Assert.fail("Facebook app post has not posted to facebook.");
@@ -121,7 +116,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         	try {
         		for (String text : Arrays.asList("Publisher Seven Test User", 
                 		postTitle, "Publisher 7 Test App")) {
-        			Assert.assertTrue(webDriver.findElement(By.xpath("//body")).getText().contains(text));
+        			Assert.assertTrue(webWebWebDriver.findElement(By.xpath("//body")).getText().contains(text));
         		}
         		break;
         	}

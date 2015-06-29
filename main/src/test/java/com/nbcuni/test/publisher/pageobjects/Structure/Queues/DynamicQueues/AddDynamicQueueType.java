@@ -1,11 +1,10 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
@@ -22,19 +21,19 @@ import java.util.concurrent.TimeUnit;
 
 public class AddDynamicQueueType {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private Config config;
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
     
     //PAGE OBJECT CONSTRUCTOR
-    public AddDynamicQueueType(Driver webDriver) {
-        this.webDriver = webDriver;
+    public AddDynamicQueueType(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        interact = new Interact(webWebWebDriver, timeout);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -73,7 +72,7 @@ public class AddDynamicQueueType {
     	
     	WebElement ele = waitFor.ElementVisible(EntityType_Ddl);
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	Reporter.log("Select 'Content' or 'Node' from the 'Entity type' drop down list.");
     	try {
     		new Select(ele).selectByVisibleText("Content");
@@ -81,7 +80,7 @@ public class AddDynamicQueueType {
     	catch (Exception e) {
     		new Select(ele).selectByVisibleText("Node");
     	}
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void SelectCacheLifetime(String lifetime) throws Exception {

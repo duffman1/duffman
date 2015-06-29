@@ -1,16 +1,14 @@
 package com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
-import org.testng.Assert;
 
 public class EnhanceMPXLibraryPublicID extends ParentTest{
 	
@@ -26,14 +24,14 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Setup
-    	Settings settings = new Settings(webDriver);
+    	Settings settings = new Settings(webWebWebDriver);
     	settings.ConfigureMPXIfNeeded();
     	navigation.Configuration("Media: thePlatform mpx settings");
         
         //Step 2
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         navigation.Content("Files", "mpxPlayers");
-        SearchFor searchFor = new SearchFor(webDriver);
+        SearchFor searchFor = new SearchFor(webWebWebDriver);
         searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
         //Step 3 - NA as I will use an existing known mpx player ID for DB TV account

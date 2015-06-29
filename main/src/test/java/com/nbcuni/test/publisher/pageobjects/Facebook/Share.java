@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Facebook;
 
-import java.util.concurrent.TimeUnit;
+import com.nbcuni.test.publisher.common.Config;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -9,8 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
+
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Share Library. Copyright
@@ -21,16 +22,16 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class Share {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private Config config;
     private WebDriverWait wait;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Share(Driver webDriver) {
-        this.webDriver = webDriver;
+    public Share(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
         config = new Config();
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
+        PageFactory.initElements(webWebWebDriver, this);
+        wait = new WebDriverWait(webWebWebDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -98,7 +99,7 @@ public class Share {
     	Reporter.log("Click the 'Share' button.");
     	Share_Btn.click();
     	
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 
             boolean elementPresent = true;
             for (int time = 0; ; time++){
@@ -113,7 +114,7 @@ public class Share {
                   Thread.sleep(1000);
                   }
 
-            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+            webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
 
     }
     

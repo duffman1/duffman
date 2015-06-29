@@ -1,19 +1,18 @@
 package com.nbcuni.test.publisher.pageobjects.Logo;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Reporter;
-
 import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Logos Library. Copyright
@@ -24,20 +23,20 @@ import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 
 public class Logos {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
 	private Config config;
 	private Interact interact;
 	private WaitFor waitFor;
 	private Delete delete;
 	
     //PAGE OBJECT CONSTRUCTOR
-    public Logos(Driver webDriver, AppLib applib) {
-    	this.webDriver = webDriver;
+    public Logos(WebDriver webWebWebDriver, AppLib applib) {
+    	this.webWebWebDriver = webWebWebDriver;
         config = new Config();
         Integer timeout = config.getConfigValueInt("WaitForWaitTime");
-        interact = new Interact(webDriver, timeout);
-        waitFor = new WaitFor(webDriver, timeout);
-        delete = new Delete(webDriver);
+        interact = new Interact(webWebWebDriver, timeout);
+        waitFor = new WaitFor(webWebWebDriver, timeout);
+        delete = new Delete(webWebWebDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -103,9 +102,9 @@ public class Logos {
     
     public void DeleteAllLogos() throws Exception {
     	
-    	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     	
-    	if (webDriver.findElements(AllLogo_Ttls).size() > 0) {
+    	if (webWebWebDriver.findElements(AllLogo_Ttls).size() > 0) {
     		
     		List<String> allLogoTtls = new ArrayList<String>();
     		for (WebElement logo : waitFor.ElementsVisible(AllLogo_Ttls)) {
@@ -119,7 +118,7 @@ public class Logos {
     		}
     	}
     	
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     

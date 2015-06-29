@@ -1,14 +1,14 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews;
-import java.util.Arrays;
 
-import org.testng.Reporter;
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.ExecutePHPCode;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class NoWhiteScreen extends ParentTest{
 	
@@ -24,7 +24,7 @@ public class NoWhiteScreen extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("STEP 2");
-    	Modules modules = new Modules(webDriver);
+    	Modules modules = new Modules(webWebWebDriver);
         modules.VerifyModuleEnabled("Devel");
         
     	Reporter.log("STEP 3");
@@ -32,7 +32,7 @@ public class NoWhiteScreen extends ParentTest{
     	applib.openSitePage("/devel/php");
         
         Reporter.log("STEP 4");
-        ExecutePHPCode executePHPCode = new ExecutePHPCode(webDriver);
+        ExecutePHPCode executePHPCode = new ExecutePHPCode(webWebWebDriver);
         executePHPCode.EnterPHPCode("white();");
         executePHPCode.ClickExecuteBtn();
         contentParent.VerifyPageContentPresent(Arrays.asList("Fatal error: Call to undefined function white()"));

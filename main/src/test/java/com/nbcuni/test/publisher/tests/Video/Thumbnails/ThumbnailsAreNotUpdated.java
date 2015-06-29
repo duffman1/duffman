@@ -1,9 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.Thumbnails;
 
-import java.util.List;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -16,9 +14,11 @@ import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXPublishMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXSelectAccount;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class ThumbnailsAreNotUpdated extends ParentTest{
 	
@@ -56,7 +56,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         
         //MPX Configuration required
     	navigation.Configuration("Media: thePlatform mpx settings");
-    	Settings settings = new Settings(webDriver);
+    	Settings settings = new Settings(webWebWebDriver);
     	
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
@@ -64,22 +64,22 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		
         		navigation.Structure("File types");
         		
-        		FileTypes fileTypes = new FileTypes(webDriver);
+        		FileTypes fileTypes = new FileTypes(webWebWebDriver);
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		
-        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
+        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webWebWebDriver);
         		manageFileDisplay.CheckPubMPXImageCbx();
         		manageFileDisplay.ClickPubMPXImageLnk();
         		manageFileDisplay.SelectMPXImageStyle("Thumbnail (100x100)");
         		manageFileDisplay.ClickSaveConfigurationBtn();
-        		ContentParent contentParent = new ContentParent(webDriver);
+        		ContentParent contentParent = new ContentParent(webWebWebDriver);
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
         		
         		//Step 3
-        		MPXLogin mpxLogin = new MPXLogin(webDriver);
+        		MPXLogin mpxLogin = new MPXLogin(webWebWebDriver);
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webWebWebDriver);
                 mpxSelectAccount.SelectAccount("DB TV");
             	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
             	mpxAddMedia.UploadDefaultVideo();
@@ -90,8 +90,8 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 mpxAddMedia.ClickFilesLnk();
                 mpxAddMedia.ClickUploadBtn();
             	mpxAddMedia.ClickChooseFilesBtn();
-            	AddFile addFile = new AddFile(webDriver);
-            	if (webDriver.getCapabilities().getPlatform().toString() == "MAC") {
+            	AddFile addFile = new AddFile(webWebWebDriver);
+            	if (((RemoteWebDriver)webWebWebDriver).getCapabilities().getPlatform().toString() == "MAC") {
             		addFile.ClickPicturesUploadBtn();
                 	addFile.ClickNBCLogoLnk();
             	}
@@ -111,14 +111,14 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 
                 //Step 13
                 applib.openApplication();
-                Cron cron = new Cron(webDriver);
+                Cron cron = new Cron(webWebWebDriver);
                 if (config.getConfigValueString("DrushIngestion").equals("false")) {
                 	cron.RunCron();
                 }
                 
         		//Step 14
                 navigation.Content("Files", "mpxMedia");
-        	    SearchFor searchFor = new SearchFor(webDriver);
+        	    SearchFor searchFor = new SearchFor(webWebWebDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {

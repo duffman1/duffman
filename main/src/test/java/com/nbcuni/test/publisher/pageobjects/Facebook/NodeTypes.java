@@ -1,12 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects.Facebook;
 
+
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Node Types Library. Copyright
@@ -20,9 +21,9 @@ public class NodeTypes {
     ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public NodeTypes(Driver webDriver) {
-        PageFactory.initElements(webDriver, this);
-        contentParent = new ContentParent(webDriver);
+    public NodeTypes(WebDriver webWebWebDriver) {
+        PageFactory.initElements(webWebWebDriver, this);
+        contentParent = new ContentParent(webWebWebDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

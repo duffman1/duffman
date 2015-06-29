@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery;
 
-import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.pageobjects.Page;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.CheckBox;
@@ -15,7 +15,7 @@ import java.io.File;
  */
 public class ManageFields extends Page {
 
-    public ManageFields(Driver webDriver) {
+    public ManageFields(WebDriver webDriver) {
         super(webDriver);
     }
 
@@ -94,7 +94,7 @@ public class ManageFields extends Page {
     }
 
     public ManageFields attachImageFrame(String path) {
-        webDriver.switchTo().frame(frame);
+        webWebDriver.switchTo().frame(frame);
         attachImage(path);
         return this;
     }

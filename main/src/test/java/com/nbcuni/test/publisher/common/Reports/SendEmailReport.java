@@ -1,26 +1,19 @@
 package com.nbcuni.test.publisher.common.Reports;
 
-import java.net.InetAddress;
-import java.util.List;
-import java.util.Properties;
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.ParentTest;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
-import javax.mail.BodyPart;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.ParentTest;
+import java.net.InetAddress;
+import java.util.List;
+import java.util.Properties;
 
 public class SendEmailReport extends ParentTest{
 

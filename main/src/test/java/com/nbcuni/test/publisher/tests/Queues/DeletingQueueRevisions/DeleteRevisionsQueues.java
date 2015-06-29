@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions;
 
-import java.util.Arrays;
-
-import org.testng.annotations.Test;
-
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.Queues;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.QueuesRevisionList;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class DeleteRevisionsQueues extends ParentTest {
 	
@@ -39,7 +38,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         navigation.Content("Queues");
         
         //Step 3
-        Queues queues = new Queues(webDriver);
+        Queues queues = new Queues(webWebWebDriver);
         queues.ClickAddPromoQueueLnk();
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
@@ -61,7 +60,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         
         //Step 6
         queues.ClickEditQueueMenuBtn(queueTitle);
-        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
+        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webWebWebDriver);
         queuesRevisionList.ClickRevisionsLnk();
         
         //Step 7
@@ -74,7 +73,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         queuesRevisionList.ClickDeleteQueueMenuBtn("2");
         
         //Step 9
-        Delete delete = new Delete(webDriver);
+        Delete delete = new Delete(webWebWebDriver);
         delete.ClickDeleteRevisionBtn();
         contentParent.VerifyMessageStatus("The revision has been successfully deleted.");
         

@@ -14,15 +14,14 @@ import com.rallydev.rest.response.QueryResponse;
 import com.rallydev.rest.util.Fetch;
 import com.rallydev.rest.util.QueryFilter;
 import com.rallydev.rest.util.Ref;
+import org.apache.commons.codec.binary.Base64;
 
-import java.io.RandomAccessFile;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
-import org.apache.commons.codec.binary.Base64;
 
 public class UploadReportRally {
 

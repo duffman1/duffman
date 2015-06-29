@@ -1,15 +1,14 @@
 package com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform;
 
+import com.nbcuni.test.publisher.common.Config;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.sikuli.script.Screen;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com MPX Select Account Library. Copyright
@@ -20,14 +19,14 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 
 public class MPXSelectAccount {
 
-	private Driver webDriver;
+	private WebDriver webWebWebDriver;
     private Config config;
     private MPXAssets mpxAssets;
     
     //PAGE OBJECT CONSTRUCTOR
-    public MPXSelectAccount(Driver webDriver) {
-    	this.webDriver = webDriver;
-    	PageFactory.initElements(webDriver, this);
+    public MPXSelectAccount(WebDriver webWebWebDriver) {
+    	this.webWebWebDriver = webWebWebDriver;
+    	PageFactory.initElements(webWebWebDriver, this);
         new Screen();
         config = new Config();
         mpxAssets = new MPXAssets();
@@ -44,7 +43,7 @@ public class MPXSelectAccount {
     private WebElement Account_Txb;
     
     private WebElement Account_Opt(String option) {
-    	return webDriver.findElement(By.xpath("//a[contains(text(), '" + option + "')]"));
+    	return webWebWebDriver.findElement(By.xpath("//a[contains(text(), '" + option + "')]"));
     }
     
     

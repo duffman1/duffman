@@ -1,13 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows;
 
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Logout;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
+import com.nbcuni.test.publisher.pageobjects.Logout;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
 
 public class PublishContenttoUnauthenticatedUsers extends ParentTest{
 	 /*************************************************************************************
@@ -30,16 +30,16 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
         
         //Step 2
     	navigation.AddContent("Media Gallery");
-        BasicInformation basicInformation = new BasicInformation(webDriver);
+        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
         String title = random.GetCharacterString(15);
         basicInformation.EnterTitle(title);
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webDriver);
+        SelectFile selectFile = new SelectFile(webWebWebDriver);
         selectFile.SelectDefaultCoverImg();
         basicInformation.VerifyCoverImagePresent("HanSolo");        
        
         //Step 3
-        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
         publishingOptions.ClickPublishingOptionsLnk();
     	publishingOptions.SelectModerationState("Published");
     	publishingOptions.EnterMessageForStateChange("Log message for state change as Published");
@@ -47,10 +47,10 @@ public class PublishContenttoUnauthenticatedUsers extends ParentTest{
         contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
       
         //Step 4
-        String ContentURL = webDriver.getCurrentUrl();
-        Logout logout = new Logout(webDriver);
+        String ContentURL = webWebWebDriver.getCurrentUrl();
+        Logout logout = new Logout(webWebWebDriver);
         logout.ClickLogoutBtn();
-        webDriver.navigate().to(ContentURL);
+        webWebWebDriver.navigate().to(ContentURL);
         contentParent.VerifyPostTitle(title);
     
     }

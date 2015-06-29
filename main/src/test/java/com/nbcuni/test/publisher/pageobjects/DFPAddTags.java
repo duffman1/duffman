@@ -1,13 +1,13 @@
 package com.nbcuni.test.publisher.pageobjects;
 
+import com.nbcuni.test.publisher.common.AppLib;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import com.nbcuni.test.publisher.common.AppLib;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com DFP Add Tags Library. Copyright
@@ -21,9 +21,9 @@ public class DFPAddTags {
     ContentParent contentParent;
     
     //PAGE OBJECT CONSTRUCTOR
-    public DFPAddTags(Driver webDriver, AppLib applib) {
-        PageFactory.initElements(webDriver, this);
-        contentParent = new ContentParent(webDriver);
+    public DFPAddTags(WebDriver webWebWebDriver, AppLib applib) {
+        PageFactory.initElements(webWebWebDriver, this);
+        contentParent = new ContentParent(webWebWebDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS

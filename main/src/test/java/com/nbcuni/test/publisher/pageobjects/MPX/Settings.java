@@ -1,12 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -31,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Settings {
 
-    private Driver webDriver;
+    private WebDriver webWebWebDriver;
     private WebDriverWait wait;
     private Cron cron;
     private MPXMedia mpxMedia;
@@ -39,14 +38,14 @@ public class Settings {
     private EmberNav navigation;
     
     //PAGE OBJECT CONSTRUCTOR
-    public Settings(Driver webDriver) {
-        this.webDriver = webDriver;
-        PageFactory.initElements(webDriver, this);
-        wait = new WebDriverWait(webDriver, 10);
-        mpxMedia = new MPXMedia(webDriver);
-        cron = new Cron(webDriver);
+    public Settings(WebDriver webWebWebDriver) {
+        this.webWebWebDriver = webWebWebDriver;
+        PageFactory.initElements(webWebWebDriver, this);
+        wait = new WebDriverWait(webWebWebDriver, 10);
+        mpxMedia = new MPXMedia(webWebWebDriver);
+        cron = new Cron(webWebWebDriver);
         config = new Config();
-        navigation = new EmberNav(webDriver);
+        navigation = new EmberNav(webWebWebDriver);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -99,14 +98,14 @@ public class Settings {
     private WebElement DisplayMPXDebugMessageLevel_Ddl;
     
     private List<WebElement> DeleteAccount_Btns() {
-     return webDriver.findElements(By.cssSelector("input[value*='Delete Account']"));
+     return webWebWebDriver.findElements(By.cssSelector("input[value*='Delete Account']"));
     }
     
     @FindBy(how = How.CSS, using = "input[value='Delete']")
     private WebElement Delete_Btn;
     
     private List<WebElement> AllUsername_Txbs() {
-     return webDriver.findElements(By.xpath("//input[contains(@id, 'edit-accounts-existing')][contains(@id, 'username')]"));
+     return webWebWebDriver.findElements(By.xpath("//input[contains(@id, 'edit-accounts-existing')][contains(@id, 'username')]"));
     }
     
     
@@ -165,7 +164,7 @@ public class Settings {
     public void VerifyImportAccountOptions(List<String> accountNames) throws Exception {
     
      //TODO - clean this up and make it a bit more efficient
-     webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+     webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     
      boolean ddl2Present = false;
      boolean ddl3Present = false;
@@ -228,12 +227,12 @@ public class Settings {
     
      }
     
-     	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+     	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public boolean IsMPXConfigured() throws Exception {
     
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     
     	Reporter.log("Check if the 'Connect to MPX' button is present. If not then MPX has not been previously enabled.");
     	boolean mpxAlreadyConfigured = true;
@@ -247,7 +246,7 @@ public class Settings {
     		mpxAlreadyConfigured = true;
     	}
     
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
     	return mpxAlreadyConfigured;
     }
@@ -312,7 +311,7 @@ public class Settings {
     
     public void VerifyImportAccountsDisabled() throws Exception {
     
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     
     	boolean ddl2Present = false;
     	boolean ddl3Present = false;
@@ -346,7 +345,7 @@ public class Settings {
     		Assert.assertTrue(ddl3.getFirstSelectedOption().isEnabled() == false);
     	}
     
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     }
     
     public void VerifyUsernameValues(String userName, int txbCount) throws Exception {
@@ -365,7 +364,7 @@ public class Settings {
     
     public List<String> GetImportAccountSelectedOptions() throws Exception {
     
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     
     	boolean ddl2Present = false;
     	boolean ddl3Present = false;
@@ -404,7 +403,7 @@ public class Settings {
         if (ddl3Present == true) { selectedOptions.add(ddl3.getFirstSelectedOption().getText()); }
         if (ddl4Present == true) { selectedOptions.add(ddl4.getFirstSelectedOption().getText()); }
     
-        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+        webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
         return selectedOptions;
     }
@@ -429,9 +428,9 @@ public class Settings {
     public List<WebElement> GetAllDeleteAccountButtons() throws Exception {
     
     	Reporter.log("Get each of the 'Delete Account' buttons");
-    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	List<WebElement> allElements = DeleteAccount_Btns();
-    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     
     	return allElements;
     }
@@ -493,12 +492,12 @@ public class Settings {
     public void DeleteAllOldMPXFileTypes() throws Exception { //TODO - add elements from script to page factory
     	
     	//delete any old mpx account file types (DE3921)
-        webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         try {
-        	webDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/structure/file-types");
+        	webWebWebDriver.navigate().to(config.getConfigValueString("AppURL") + "/admin/structure/file-types");
         	List<String> eachURL = new ArrayList<String>();
         	String allURLs = null;
-        	for (WebElement el : webDriver.findElements(By.xpath("//td[contains(text(), 'MPX Video for Account')][contains(text(), 'DB TV')]/..//a[text()='edit file type']"))) {
+        	for (WebElement el : webWebWebDriver.findElements(By.xpath("//td[contains(text(), 'MPX Video for Account')][contains(text(), 'DB TV')]/..//a[text()='edit file type']"))) {
         		allURLs = allURLs + el.getAttribute("href");
         		eachURL.add(el.getAttribute("href"));
         	}
@@ -516,14 +515,14 @@ public class Settings {
         	Integer maxScore = Collections.max(allIndexInts);
         	for (String url : eachURL) {
         		if (!url.contains("mpx_video_" + maxScore.toString())) {
-        			webDriver.navigate().to(url);
-        			webDriver.findElement(By.id("edit-delete")).click();
-        			webDriver.findElement(By.id("edit-submit")).click();
+        			webWebWebDriver.navigate().to(url);
+        			webWebWebDriver.findElement(By.id("edit-delete")).click();
+        			webWebWebDriver.findElement(By.id("edit-submit")).click();
         		}
         	}
         }
         catch (Exception e) {}
-        webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+        webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         
     }
   
