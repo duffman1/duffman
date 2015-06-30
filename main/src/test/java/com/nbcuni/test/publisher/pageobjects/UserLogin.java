@@ -27,7 +27,6 @@ public class UserLogin extends Page {
 
     //PAGE OBJECT CONSTRUCTOR
 
-    @Autowired
     public UserLogin(WebDriver webDriver) {
         super(webDriver);
         config = new Config();
@@ -46,8 +45,8 @@ public class UserLogin extends Page {
 
     private By FederatedLogIn_Lnk = By.xpath("//a[text()='Federated Log In']");
 
-    public UserLogin navigate() {
-        webWebDriver.get(siteMap.getBaseUrl());
+    public UserLogin navigate(String url) {
+        webWebDriver.get(url);
         return this;
     }
 

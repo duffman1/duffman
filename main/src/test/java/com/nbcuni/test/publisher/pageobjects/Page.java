@@ -23,7 +23,7 @@ public class Page {
     @Autowired
     protected SiteMap siteMap;
 
-    @Autowired
+//    @Autowired
     public Page(WebDriver webWebDriver) {
         this.webWebDriver = webWebDriver;
 

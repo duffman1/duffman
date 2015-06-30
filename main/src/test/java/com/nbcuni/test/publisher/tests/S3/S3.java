@@ -6,6 +6,7 @@ import com.nbcuni.test.publisher.common.Util.S3Actions;
 import com.nbcuni.test.publisher.common.Util.Str;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ConfigPreferences;
 import com.nbcuni.test.publisher.pageobjects.ContentList;
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery.ManageFields;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
@@ -56,6 +57,7 @@ public class S3 extends BaseTest {
     public void clearBucket() {
         key = Str.getImageNameFromPath(content.getImage());
         uploadedImagesBefore = (ArrayList<String>) s3Actions.findKeys(apiBucket, key);
+        System.out.println(webDriver);
     }
 
     @Test
@@ -67,11 +69,27 @@ public class S3 extends BaseTest {
                 navigate(siteMap.getConfigUrl(), ConfigPreferences.class).
                 goToAmazonSettings().
                 setRequiredFields(apiKey, apiSecret, apiBucket);
+
+        System.out.println(webDriver);
+
+    }
+    @Test
+    public void basicConfiguration() throws Exception {
+        userLogin.
+                navigate(siteMap.getModulesUrl(), Modules.class).
+                EnableModule("AmazonS3").
+                EnableModule("Devel").
+                navigate(siteMap.getConfigUrl(), ConfigPreferences.class).
+                goToAmazonSettings().
+                setRequiredFields(apiKey, apiSecret, apiBucket);
+        System.out.println(webDriver);
+
     }
 
     @Test(dependsOnMethods = "basicConfiguration_TC8099")
     public void imageConfiguration_TC8595() throws Exception {
-        menu.Structure("Content types");
+
+        new EmberNav(webDriver).Structure("Content types");
 
         ContentTypes contentTypes = new ContentTypes(webDriver).
                 addContentType().
@@ -101,6 +119,7 @@ public class S3 extends BaseTest {
         manageFields.next().next().save();
         contentTypes.isRendered();
         manageFields.save();
+        System.out.println(webDriver);
     }
 
     @Test(dependsOnMethods = "imageConfiguration_TC8595")

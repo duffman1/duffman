@@ -33,7 +33,7 @@ public class EmberNav extends Page {
     private Integer timeout;
 
     //PAGE OBJECT CONSTRUCTOR
-    @Autowired
+
     public EmberNav(WebDriver webDriver) {
         super(webDriver);
         this.webDriver = webDriver;
