@@ -3,6 +3,8 @@ package com.nbcuni.test.publisher.pageobjects.Configuration;
 import com.nbcuni.test.publisher.pageobjects.Page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.CheckBox;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
@@ -11,11 +13,13 @@ import ru.yandex.qatools.htmlelements.element.TextInput;
 /**
  * Created by kiryl_zayets on 6/17/15.
  */
-public class Amazons3 extends Page {
 
-    public Amazons3(WebDriver webDriver) {
-        super(webDriver);
-    }
+@Configuration
+@Scope("prototype")
+@com.nbcuni.test.publisher.common.Driver.component.annotations.Page
+public class Amazons3{
+
+    public Amazons3() {}
 
     @FindBy(id = "edit-amazons3-key")
     private TextInput apiKey;

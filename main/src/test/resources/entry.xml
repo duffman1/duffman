@@ -6,36 +6,33 @@
 
     <import resource="testdata/s3.xml"/>
 
-    <context:component-scan base-package="com.nbcuni"/>
     <context:annotation-config/>
+    <context:component-scan base-package="com.nbcuni"/>
 
+
+
+    <bean class="com.nbcuni.test.publisher.common.Driver.bpp.PagePostProcessor"/>
     <bean class="com.nbcuni.test.publisher.common.Driver.bpp.CapabilitiesPostProcessor"/>
-    <!--<bean class="com.nbcuni.test.publisher.pageobjects.UserLogin" lazy-init="true"/>-->
-    <!--<bean class="com.nbcuni.test.publisher.pageobjects.EmberNav" lazy-init="true"/>-->
 
-    <!--<bean id="testScope" class="com.nbcuni.test.publisher.common.Driver.bpp.TestScope"/>-->
 
-    <!--<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">-->
-        <!--<property name="scopes">-->
-            <!--<map>-->
-                <!--<entry key="test" value-ref="testScope"/>-->
-                    <!--&lt;!&ndash;<bean class="com.nbcuni.test.publisher.common.Driver.bpp.TestScope"/>&ndash;&gt;-->
-            <!--</map>-->
-        <!--</property>-->
+    <!--<bean class="com.nbcuni.test.publisher.pageobjects.UserLogin" lazy-init="true">-->
+        <!--<constructor-arg ref="webDriver"/>-->
     <!--</bean>-->
 
-<bean id="simpleThreadScope" class="org.springframework.context.support.SimpleThreadScope"/>
+    <!--<bean class="com.nbcuni.test.publisher.pageobjects.EmberNav" lazy-init="true"/>-->
 
-<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
-    <property name="scopes">
-        <map>
-            <entry key="thread" value-ref="simpleThreadScope">
-                <!--<bean id="simpleThreadScope" class="org.springframework.context.support.SimpleThreadScope"/>-->
-            </entry>
-        </map>
-    </property>
-</bean>
 
+    <bean id="simpleThreadScope" class="org.springframework.context.support.SimpleThreadScope"/>
+
+    <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+        <property name="scopes">
+            <map>
+                <entry key="thread" value-ref="simpleThreadScope">
+                    <!--<bean id="simpleThreadScope" class="org.springframework.context.support.SimpleThreadScope"/>-->
+                </entry>
+            </map>
+        </property>
+    </bean>
 
 
     <bean id="propertyLoader" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">

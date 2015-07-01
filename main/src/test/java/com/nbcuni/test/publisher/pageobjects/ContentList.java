@@ -1,18 +1,43 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 
+import com.nbcuni.test.publisher.common.Driver.component.annotations.*;
+import com.nbcuni.test.publisher.common.Driver.configuration.SeleniumContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Created by kiryl_zayets on 6/24/15.
  */
-public class ContentList extends Page {
-    public ContentList(WebDriver webWebWebDriver) {
-        super(webWebWebDriver);
+
+@Configuration
+@Scope("prototype")
+@com.nbcuni.test.publisher.common.Driver.component.annotations.Page
+public class ContentList {
+    WebDriver webDriver;
+
+    public ContentList() {
+
+    } public ContentList(WebDriver webDriver) {
+
+    }
+
+    @Autowired
+    SeleniumContext context;
+
+
+    @PostConstruct
+    public void init() {
+        webDriver = context.webDriver();
+
     }
 
     public void openCreatedContentPattern(String title) {
-        webWebDriver.findElement(By.cssSelector(String.format("a[href*='%s']:not([class]", title.replace('.', '-')))).click();
+        webDriver.findElement(By.cssSelector(String.format("a[href*='%s']:not([class]", title.replace('.', '-')))).click();
     }
 }

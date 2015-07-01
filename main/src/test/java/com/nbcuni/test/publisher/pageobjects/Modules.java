@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Driver.component.annotations.*;
+import com.nbcuni.test.publisher.common.Driver.configuration.SeleniumContext;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -10,8 +12,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.testng.Reporter;
 
+import javax.annotation.PostConstruct;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
@@ -22,7 +28,10 @@ import java.util.concurrent.TimeUnit;
  * @version 1.0 Date: December 15, 2013
  *********************************************/
 
-public class Modules extends Page {
+@Configuration
+@Scope("prototype")
+@com.nbcuni.test.publisher.common.Driver.component.annotations.Page
+public class Modules {
 
 
     private Config config;
@@ -34,8 +43,27 @@ public class Modules extends Page {
     private Interact interact;
     WebDriver webWebWebDriver;
     //PAGE OBJECT CONSTRUCTOR
+
+     @Autowired
+     SeleniumContext context;
+
+    public Modules() {};
+
+    @PostConstruct
+    public void init() {
+        webWebWebDriver = context.webDriver();
+        config = new Config();
+    	timeout = config.getConfigValueInt("WaitForWaitTime");
+    	contentParent = new ContentParent(webWebWebDriver);
+    	navigation = new EmberNav(webWebWebDriver);
+    	waitFor = new WaitFor(webWebWebDriver, timeout);
+    	wait = new WebDriverWait(webWebWebDriver, timeout);
+    	interact = new Interact(webWebWebDriver, timeout);
+    }
+
+
+
     public Modules(WebDriver webWebWebDriver) {
-        super(webWebWebDriver);
         this.webWebWebDriver = webWebWebDriver;
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");

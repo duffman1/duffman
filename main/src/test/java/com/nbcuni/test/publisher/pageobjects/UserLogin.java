@@ -1,12 +1,18 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Driver.component.annotations.*;
+import com.nbcuni.test.publisher.common.Driver.configuration.SeleniumContext;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.testng.Reporter;
+
+import javax.annotation.PostConstruct;
 
 /**
  * ******************************************
@@ -17,18 +23,38 @@ import org.testng.Reporter;
  *          *******************************************
  */
 
-public class UserLogin extends Page {
+@Configuration
+@Scope("prototype")
+@com.nbcuni.test.publisher.common.Driver.component.annotations.Page
+public class UserLogin {
 
     private Config config;
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
     private EmberNav navigation;
+    WebDriver webWebDriver;
 
     //PAGE OBJECT CONSTRUCTOR
 
+    @Autowired
+    SeleniumContext context;
+
+    public UserLogin() {};
+
+    @PostConstruct
+    public void init() {
+        webWebDriver = context.webDriver();
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webWebDriver, timeout);
+        interact = new Interact(webWebDriver, timeout);
+        navigation = new EmberNav(webWebDriver);
+    }
+
     public UserLogin(WebDriver webDriver) {
-        super(webDriver);
+//        super(webDriver);
+
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);

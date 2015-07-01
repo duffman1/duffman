@@ -1,19 +1,34 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.bo.Metadata;
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Driver.component.annotations.*;
+import com.nbcuni.test.publisher.common.Driver.configuration.SeleniumContext;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Created by kiryl_zayets on 6/25/15.
  */
-public class Upload extends Page {
+@Configuration
+@Scope("prototype")
+@com.nbcuni.test.publisher.common.Driver.component.annotations.Page
+public class Upload {
 
-    public Upload(WebDriver webDriver) {
-        super(webDriver);
-
+    public Upload() {
     }
+
+     @Autowired
+     SeleniumContext context;
+
 
     @FindBy(id = "mediaBrowser")
     private WebElement frame;

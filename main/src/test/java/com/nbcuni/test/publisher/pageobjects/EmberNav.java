@@ -1,6 +1,8 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Driver.component.annotations.*;
+import com.nbcuni.test.publisher.common.Driver.configuration.SeleniumContext;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
@@ -9,9 +11,13 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Repository;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import javax.annotation.PostConstruct;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -23,7 +29,10 @@ import java.util.concurrent.TimeUnit;
  *          *******************************************
  */
 
-public class EmberNav extends Page {
+@Configuration
+@Scope("prototype")
+@com.nbcuni.test.publisher.common.Driver.component.annotations.Page
+public class EmberNav {
 
     private WebDriver webDriver;
     private WaitFor waitFor;
@@ -34,8 +43,23 @@ public class EmberNav extends Page {
 
     //PAGE OBJECT CONSTRUCTOR
 
+     @Autowired
+     SeleniumContext context;
+
+    public EmberNav(){};
+
+
+    @PostConstruct
+    public void init() {
+        webDriver = context.webDriver();
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
+        errorChecking = new ErrorChecking(webDriver);
+    }
+
     public EmberNav(WebDriver webDriver) {
-        super(webDriver);
         this.webDriver = webDriver;
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");

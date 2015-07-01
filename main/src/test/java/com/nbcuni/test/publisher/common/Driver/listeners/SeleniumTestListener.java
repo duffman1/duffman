@@ -1,4 +1,4 @@
-package com.nbcuni.test.publisher.common.Driver.bpp;
+package com.nbcuni.test.publisher.common.Driver.listeners;
 
 import org.openqa.selenium.WebDriver;
 import org.springframework.context.support.SimpleThreadScope;
@@ -14,6 +14,7 @@ public class SeleniumTestListener extends AbstractTestExecutionListener {
     public void beforeTestClass(TestContext testContext) {
         SimpleThreadScope simpleThreadScope = (SimpleThreadScope) testContext.getApplicationContext().getBean("simpleThreadScope");
         simpleThreadScope.remove("webDriver");
+
     }
 
     @Override

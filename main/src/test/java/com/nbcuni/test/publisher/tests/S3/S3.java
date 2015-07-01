@@ -2,11 +2,12 @@ package com.nbcuni.test.publisher.tests.S3;
 
 import com.nbcuni.test.publisher.bo.Metadata;
 import com.nbcuni.test.publisher.bo.SimpleCustomContent;
+import com.nbcuni.test.publisher.common.AppLib;
 import com.nbcuni.test.publisher.common.Util.S3Actions;
 import com.nbcuni.test.publisher.common.Util.Str;
+import com.nbcuni.test.publisher.pageobjects.Configuration.Amazons3;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ConfigPreferences;
 import com.nbcuni.test.publisher.pageobjects.ContentList;
-import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery.ManageFields;
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
@@ -29,24 +30,27 @@ import java.util.ArrayList;
 @Test(groups = {"S3"})
 public class S3 extends BaseTest {
 
-    @Value("${api.key}")
-    private String apiKey;
+    @Value("${api.key}")  String apiKey;
+    @Value("${api.secret}")  String apiSecret;
+    @Value("${api.bucket}")  String apiBucket;
 
-    @Value("${api.secret}")
-    private String apiSecret;
+    @Autowired @Qualifier("ct_without_metadata") SimpleCustomContent content;
+    @Autowired @Qualifier("ct_metadata") SimpleCustomContent contentWithMetaData;
 
-    @Value("${api.bucket}")
-    private String apiBucket;
+    @Autowired String code;
+    @Autowired S3Actions s3Actions;
+    @Autowired Metadata metaTags;
+    @Autowired ContentTypes contentTypes;
+    @Autowired ManageFields manageFields;
+    @Autowired EditCustomCT editCustomCT;
+    @Autowired ContentList contentList;
+    @Autowired Modules modules;
+    @Autowired ConfigPreferences preferences;
+    @Autowired
+    Amazons3 amazons3;
 
-    @Autowired @Qualifier("ct_without_metadata") private SimpleCustomContent content;
-
-    @Autowired @Qualifier("ct_metadata") private SimpleCustomContent contentWithMetaData;
-
-    @Autowired private String code;
-
-    @Autowired private S3Actions s3Actions;
-
-    @Autowired private Metadata metaTags;
+    @Autowired
+    AppLib appLib;
 
     String key;
 
@@ -62,36 +66,31 @@ public class S3 extends BaseTest {
 
     @Test
     public void basicConfiguration_TC8099() throws Exception {
-        userLogin.
-                navigate(siteMap.getModulesUrl(), Modules.class).
-                EnableModule("AmazonS3").
-                EnableModule("Devel").
-                navigate(siteMap.getConfigUrl(), ConfigPreferences.class).
-                goToAmazonSettings().
-                setRequiredFields(apiKey, apiSecret, apiBucket);
+        appLib. navigate(siteMap.getModulesUrl(), Modules.class);
+                modules.EnableModule("AmazonS3").
+                EnableModule("Devel");
+        appLib.navigate(siteMap.getConfigUrl(), ConfigPreferences.class);
+                preferences.goToAmazonSettings();
 
-        System.out.println(webDriver);
-
+                amazons3.setRequiredFields(apiKey, apiSecret, apiBucket);
     }
+
     @Test
     public void basicConfiguration() throws Exception {
-        userLogin.
-                navigate(siteMap.getModulesUrl(), Modules.class).
-                EnableModule("AmazonS3").
-                EnableModule("Devel").
-                navigate(siteMap.getConfigUrl(), ConfigPreferences.class).
-                goToAmazonSettings().
-                setRequiredFields(apiKey, apiSecret, apiBucket);
-        System.out.println(webDriver);
-
+        appLib.navigate(siteMap.getModulesUrl(), Modules.class);
+                modules.EnableModule("AmazonS3").
+                EnableModule("Devel");
+        appLib.navigate(siteMap.getConfigUrl(), ConfigPreferences.class);
+                preferences.goToAmazonSettings();
+                amazons3.setRequiredFields(apiKey, apiSecret, apiBucket);
     }
 
     @Test(dependsOnMethods = "basicConfiguration_TC8099")
     public void imageConfiguration_TC8595() throws Exception {
 
-        new EmberNav(webDriver).Structure("Content types");
+        menu.Structure("Content types");
 
-        ContentTypes contentTypes = new ContentTypes(webDriver).
+        contentTypes.
                 addContentType().
                 EnterName(content.getContentName()).
                 ClickSaveAddFieldsBtn().
@@ -100,7 +99,7 @@ public class S3 extends BaseTest {
                 SelectWidget(content.getWidget()).
                 ClickSaveBtn();
 
-        ManageFields manageFields = new ManageFields(webDriver).
+        manageFields.
                 save().
                 checkS3boxes().
                 checkSchemas().
@@ -108,10 +107,10 @@ public class S3 extends BaseTest {
                 checkRequiredField().
                 checkAllowedFileTypes().
                 save();
-        new EditCustomCT(webDriver).selectImageForBundle(content.getField());
+       editCustomCT.selectImageForBundle(content.getField());
 
         webDriver.get(siteMap.getAddContent());
-        ContentList contentList  = manageFields.navigate(siteMap.getAddContent(), ContentList.class);
+        appLib.navigate(siteMap.getAddContent(), ContentList.class);
         contentList.openCreatedContentPattern(code);
         contentTypes.setTitle(content.getContentName());
         contentTypes.browseFile();
@@ -123,18 +122,18 @@ public class S3 extends BaseTest {
     }
 
     @Test(dependsOnMethods = "imageConfiguration_TC8595")
-    public void checkMetaDataMapping(){
-        ContentTypes contentTypes = new ContentTypes(webDriver);
-        ManageFields manageFields = new ManageFields(webDriver);
+    public void checkMetaDataMapping() {
+//        ContentTypes contentTypes = new ContentTypes(webDriver);
+//        ManageFields manageFields = new ManageFields(webDriver);
 
         webDriver.get(siteMap.getAddContent());
-        ContentList contentList  = manageFields.navigate(siteMap.getAddContent(), ContentList.class);
+        appLib.navigate(siteMap.getAddContent(), ContentList.class);
         contentList.openCreatedContentPattern(code);
         contentTypes.setTitle(contentWithMetaData.getContentName());
         contentTypes.browseFile();
         manageFields.attachImageFrame(contentWithMetaData.getImage());
         manageFields.next().next();
-        Assert.assertEquals(metaTags, new Upload(webDriver).getMetadata());
+        Assert.assertEquals(metaTags, new Upload().getMetadata());
     }
 
     @Test(dependsOnMethods = "imageConfiguration_TC8595")

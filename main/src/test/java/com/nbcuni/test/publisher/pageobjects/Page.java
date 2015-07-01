@@ -24,9 +24,7 @@ public class Page {
     protected SiteMap siteMap;
 
 //    @Autowired
-    public Page(WebDriver webWebDriver) {
-        this.webWebDriver = webWebDriver;
-
+    public Page() {
         PageFactory.initElements(new HtmlElementDecorator(webWebDriver), this);
     }
 
@@ -36,7 +34,7 @@ public class Page {
 
 
 
-    public <T extends Page> T navigate(String url, Class<T> clazz) {
+    public <T> T navigate(String url, Class<T> clazz) {
         T instance = null;
         webWebDriver.get(url);
         try {
