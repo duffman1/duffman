@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
@@ -13,7 +14,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class ScheduleToPublishContentByDateTime extends ParentTest {
+public class ScheduleToPublishContentByDateTime extends GlobalBaseTest {
 
 	/*************************************************************************************
 	* TEST CASE
@@ -34,15 +35,15 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
         public void ScheduleToPublishContentByDateTime_Test() throws Exception{
 
         //Step 1
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         //Step 2
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
 
         //Step 3
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.VerifyWorkBenchTabPresent("View");
         workBench.VerifyWorkBenchTabPresent("Edit Draft");
         workBench.VerifyWorkBenchTabPresent("Revisions");
@@ -50,20 +51,20 @@ public class ScheduleToPublishContentByDateTime extends ParentTest {
 
         //Step 4
         workBench.ClickWorkBenchTab("Revisions");
-        RevisionState revisionstate = new RevisionState(webWebWebDriver);
+        RevisionState revisionstate = new RevisionState(webDriver);
         revisionstate.VerifyRevisionCount(1);
 
         //Step 5
-        ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
+        ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
         navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.VerifyAddScheduleVersionLnkPresent();
         scheduleQueue.VerifyScheduleTableisEmpty();
         
         //Step 6
         workBench.ClickWorkBenchTab("Edit Draft");
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterSynopsis();
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.EnterMessageForStateChange("Test Revision 2");
         contentParent.ClickSaveBtn();

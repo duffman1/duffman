@@ -35,13 +35,13 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 @Scope("prototype")
 @Page
-public class ContentTypes {
+public class ContentTypes extends com.nbcuni.test.publisher.pageobjects.Page {
 
-    private WebDriver webDriver;
-    private Config config;
-    private Integer timeout;
-    private WaitFor waitFor;
-    private Interact interact;
+//    private WebDriver webDriver;
+//    private Config config;
+//    private Integer timeout;
+//    private WaitFor waitFor;
+//    private Interact interact;
 
     @Autowired
     SeleniumContext context;

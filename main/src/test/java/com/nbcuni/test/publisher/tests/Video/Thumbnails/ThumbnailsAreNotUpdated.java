@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.Thumbnails;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.AddFile;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class ThumbnailsAreNotUpdated extends ParentTest{
+public class ThumbnailsAreNotUpdated extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -51,12 +51,12 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
     public void ThumbnailsAreNotUpdated_Test() throws Exception {
 
     	//Step 1 and 2
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
     	navigation.Configuration("Media: thePlatform mpx settings");
-    	Settings settings = new Settings(webWebWebDriver);
+    	Settings settings = new Settings(webDriver);
     	
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
@@ -64,24 +64,24 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
         		
         		navigation.Structure("File types");
         		
-        		FileTypes fileTypes = new FileTypes(webWebWebDriver);
+        		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		
-        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webWebWebDriver);
+        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
         		manageFileDisplay.CheckPubMPXImageCbx();
         		manageFileDisplay.ClickPubMPXImageLnk();
         		manageFileDisplay.SelectMPXImageStyle("Thumbnail (100x100)");
         		manageFileDisplay.ClickSaveConfigurationBtn();
-        		ContentParent contentParent = new ContentParent(webWebWebDriver);
+        		ContentParent contentParent = new ContentParent(webDriver);
         		contentParent.VerifyMessageStatus("Your settings have been saved.");
         		
         		//Step 3
-        		MPXLogin mpxLogin = new MPXLogin(webWebWebDriver);
+        		MPXLogin mpxLogin = new MPXLogin(webDriver);
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webWebWebDriver);
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
                 mpxSelectAccount.SelectAccount("DB TV");
-            	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
+            	MPXAddMedia mpxAddMedia = new MPXAddMedia(appLib);
             	mpxAddMedia.UploadDefaultVideo();
                 String mediaTitle = "AutomationWThumb" + random.GetCharacterString(10);
                 mpxAddMedia.GiveFocusToMediaItem();
@@ -90,8 +90,8 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 mpxAddMedia.ClickFilesLnk();
                 mpxAddMedia.ClickUploadBtn();
             	mpxAddMedia.ClickChooseFilesBtn();
-            	AddFile addFile = new AddFile(webWebWebDriver);
-            	if (((RemoteWebDriver)webWebWebDriver).getCapabilities().getPlatform().toString() == "MAC") {
+            	AddFile addFile = new AddFile(webDriver);
+            	if (((RemoteWebDriver) webDriver).getCapabilities().getPlatform().toString() == "MAC") {
             		addFile.ClickPicturesUploadBtn();
                 	addFile.ClickNBCLogoLnk();
             	}
@@ -110,15 +110,15 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
                 //Step 4 through 12 - N/A as step 3 creates a media item that has an image associated with it.
                 
                 //Step 13
-                applib.openApplication();
-                Cron cron = new Cron(webWebWebDriver);
+                appLib.openApplication();
+                Cron cron = new Cron(webDriver);
                 if (config.getConfigValueString("DrushIngestion").equals("false")) {
                 	cron.RunCron();
                 }
                 
         		//Step 14
                 navigation.Content("Files", "mpxMedia");
-        	    SearchFor searchFor = new SearchFor(webWebWebDriver);
+        	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
@@ -126,7 +126,7 @@ public class ThumbnailsAreNotUpdated extends ParentTest{
             	    	int refreshCount = 0;
             	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                            	
-                    		   applib.refreshPage();
+                    		   appLib.refreshPage();
                     		   refreshCount++;
                     		   if (refreshCount == 10) {
                     			   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");

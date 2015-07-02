@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.MPXSnippets;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.TextFormat;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class VideoSnippetsInContent extends ParentTest{
+public class VideoSnippetsInContent extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC6534
@@ -22,26 +22,26 @@ public class VideoSnippetsInContent extends ParentTest{
     public void VideoSnippetsInContent_TC6534() throws Exception{
         
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
         	Reporter.log("SETUP");
-        	Settings settings = new Settings(webWebWebDriver);
+        	Settings settings = new Settings(webDriver);
         	settings.ConfigureMPXIfNeeded();
         	navigation.Content("Files", "mpxMedia");
-        	SearchFor searchFor = new SearchFor(webWebWebDriver);
+        	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle("AutomationDefault");
         	searchFor.ClickApplyBtn();
         	String mpxVideoURL = searchFor.GetFirstMPXMediaSearchResultURL();
         	
         	Reporter.log("STEP 2");
         	navigation.Modules();
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.EnableModule("Publisher WYSIWYG");
         	
         	Reporter.log("STEP 3");
         	navigation.Configuration("Text formats");
-        	TextFormat textFormat = new TextFormat(webWebWebDriver);
+        	TextFormat textFormat = new TextFormat(webDriver);
         	textFormat.ClickConfigureLnk("Publisher");
         	textFormat.ClickEnabledFilters(Arrays.asList("Limit allowed HTML tags", "Publisher youtube formatter", 
         			"Publisher mpx video formatter", "Convert line breaks into HTML", 
@@ -52,20 +52,20 @@ public class VideoSnippetsInContent extends ParentTest{
         	
         	Reporter.log("STEP 4");
         	navigation.AddContent("Movie");
-        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
         	String movieTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(movieTitle);
         	basicInformation.EnterSynopsis("test synopsis");
         	basicInformation.ClickEmbedMPXBtn();
         	
         	Reporter.log("STEP 5 AND 6");
-        	EmbedVideo embedVideo = new EmbedVideo(webWebWebDriver);
+        	EmbedVideo embedVideo = new EmbedVideo(webDriver);
         	embedVideo.EnterMPXVideoURL(mpxVideoURL);
         	embedVideo.EnterWidth("640");
         	embedVideo.EnterHeight("360");
         	embedVideo.ClickOkBtn();
         	basicInformation.ClickCoverSelectBtn();
-        	SelectFile selectFile = new SelectFile(webWebWebDriver);
+        	SelectFile selectFile = new SelectFile(webDriver);
         	selectFile.SelectDefaultCoverImg();
         	contentParent.ClickSaveBtn();
         	contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
@@ -74,7 +74,7 @@ public class VideoSnippetsInContent extends ParentTest{
         	embedVideo.VerifyVideoPresent("player.theplatform.com/p", "360", "640");
         	
         	Reporter.log("STEP 8");
-        	WorkBench workBench = new WorkBench(webWebWebDriver);
+        	WorkBench workBench = new WorkBench(webDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
         	basicInformation.ClickEmbedMPXBtn();
         	embedVideo.EnterMPXVideoURL(mpxVideoURL);
@@ -149,13 +149,13 @@ public class VideoSnippetsInContent extends ParentTest{
         	
         	Reporter.log("STEP 18");
         	workBench.ClickWorkBenchTab("Revisions");
-        	Revisions revisions = new Revisions(webWebWebDriver);
+        	Revisions revisions = new Revisions(webDriver);
         	revisions.SelectChangeState("Published");
         	revisions.ClickUpdateStateBtn();
         	contentParent.VerifyMessageStatus(movieTitle + " transitioned to the published state.");
-        	String currentURL = webWebWebDriver.getCurrentUrl();
-        	webWebWebDriver.manage().deleteAllCookies();
-        	applib.openSitePage(currentURL);
+        	String currentURL = webDriver.getCurrentUrl();
+        	webDriver.manage().deleteAllCookies();
+        	appLib.openSitePage(currentURL);
         	embedVideo.VerifyVideoPresent("player.theplatform.com/p", "200", "200");
         	embedVideo.VerifyVideoPresent("player.theplatform.com/p", "100", "100");
         	embedVideo.VerifyVideoPresent("//youtube.com/embed/yp9pTFcD2uk", "100", "100");

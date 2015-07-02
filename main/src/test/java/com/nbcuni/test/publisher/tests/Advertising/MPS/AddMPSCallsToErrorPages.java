@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class AddMPSCallsToErrorPages extends ParentTest {
+public class AddMPSCallsToErrorPages extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC4950
@@ -20,14 +20,14 @@ public class AddMPSCallsToErrorPages extends ParentTest {
     public void AddMPSCallsToErrorPages_TC4950() throws Exception {
         
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("MPS");
         	navigation.Configuration("MPS Configuration");
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
@@ -37,7 +37,7 @@ public class AddMPSCallsToErrorPages extends ParentTest {
             contentParent.VerifyMessageStatus("The configuration options have been saved.");
             
         	Reporter.log("STEP 2");
-        	applib.openSitePage("/junkurl");
+        	appLib.openSitePage("/junkurl");
         	
         	Reporter.log("STEP 3");
         	mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", 

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.ProvideUniqueURLImages;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Assert;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class UniqueURL extends ParentTest{
+public class UniqueURL extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1056
@@ -19,20 +19,20 @@ public class UniqueURL extends ParentTest{
     public void UniqueURL_TC1056() throws Exception{
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
         	navigation.AddContent("Media Gallery");
         	
         	//Step 3
-        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             basicInformation.ClickMediaItemsSelectBtn();
             
             //Step 4
-            SelectFile selectFile = new SelectFile(webWebWebDriver);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickViewLibraryBtn();
             selectFile.EnterFileName("HanSolo");
@@ -44,16 +44,16 @@ public class UniqueURL extends ParentTest{
             selectFile.ClickMediaThumbnailImage("1");
             selectFile.ClickMediaThumbnailImage("2");
             selectFile.ClickSubmitBtn();
-            webWebWebDriver.switchTo().defaultContent();
+            webDriver.switchTo().defaultContent();
             
             //Step 5
-            MediaItems mediaItems = new MediaItems(webWebWebDriver);
+            MediaItems mediaItems = new MediaItems(webDriver);
             mediaItems.VerifyFileImagePresent("HanSolo", "1");
             mediaItems.VerifyFileImagePresent("HanSolo", "2");
-            ContentParent contentParent = new ContentParent(webWebWebDriver);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
-        	WorkBench workBench = new WorkBench(webWebWebDriver);
+        	WorkBench workBench = new WorkBench(webDriver);
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
         	//workBench.VerifyFileImagePresent("HanSolo", "1");
         	String fileId1 = workBench.GetFileImageId("1");
@@ -72,7 +72,7 @@ public class UniqueURL extends ParentTest{
         	
         	//Step 7
         	contentParent.ClickCancelBtn();
-        	applib.openSitePage(uniqueUrl1);
+        	appLib.openSitePage(uniqueUrl1);
         	Thread.sleep(1000); 
         	workBench.VerifyFileImageLinkPresent("HanSolo", "1");
         	workBench.VerifyFileImageLinkPresent("HanSolo", "2");

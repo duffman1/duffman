@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
@@ -12,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
+public class EnhanceOperationsDropdownonScheduleTab extends GlobalBaseTest {
 	/*************************************************************************************
 	* TEST CASE
 	* Step 1 - Log into a new-installation Publisher test instance as Drupal User 1<br>
@@ -27,17 +28,17 @@ public class EnhanceOperationsDropdownonScheduleTab extends ParentTest {
         public void EnhanceOperationsDropdownonScheduleTab_Test() throws Exception{
 
     	//Step 1
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         //Step 2
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
 
         //Step 3
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Schedule");
-        ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
+        ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
         scheduleQueue.ClickAddScheduledRevisionLnk();
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Published");

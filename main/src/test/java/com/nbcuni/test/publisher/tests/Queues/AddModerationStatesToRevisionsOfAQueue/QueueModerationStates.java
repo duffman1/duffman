@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Queues.AddModerationStatesToRevisionsOfAQueue;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
@@ -14,7 +15,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class QueueModerationStates extends ParentTest{
+public class QueueModerationStates extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE 
@@ -36,18 +37,18 @@ public class QueueModerationStates extends ParentTest{
     public void QueueModerationStates_Test() throws Exception{
     	
     	//Step 1
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 1a
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
         navigation.Content("Queues");
         
         //Step 3
-        Queues queues = new Queues(webWebWebDriver);
+        Queues queues = new Queues(webDriver);
         queues.ClickAddPromoQueueLnk();
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
@@ -62,7 +63,7 @@ public class QueueModerationStates extends ParentTest{
         contentParent.VerifyPageContentPresent(Arrays.asList("QUEUE ITEMS"));
         
         //Step 5
-        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webWebWebDriver);
+        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
         queuesRevisionList.ClickRevisionsLnk();
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -80,7 +81,7 @@ public class QueueModerationStates extends ParentTest{
         queues.ClickEditQueueExtendMenuBtn(queueTitle);
         queues.ClickEditQueueMenuBtn(queueTitle);
         queuesRevisionList.ClickRevisionsLnk();
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.SelectModerationState("Publish");
         String messageForStateChange = random.GetCharacterString(15) + " " + random.GetCharacterString(10);
         publishingOptions.EnterMessageForStateChange(messageForStateChange);

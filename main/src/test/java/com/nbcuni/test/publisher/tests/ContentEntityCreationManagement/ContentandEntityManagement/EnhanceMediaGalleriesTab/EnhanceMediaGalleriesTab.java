@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceMediaGalleriesTab;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Content.MediaGalleries;
@@ -16,7 +16,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class EnhanceMediaGalleriesTab extends ParentTest{
+public class EnhanceMediaGalleriesTab extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1293
@@ -26,14 +26,14 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     public void EnhanceMediaGalleriesTab_TC1293() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
     	navigation.Content("Media Galleries");
-    	MediaGalleries mediaGalleries = new MediaGalleries(webWebWebDriver);
+    	MediaGalleries mediaGalleries = new MediaGalleries(webDriver);
     	mediaGalleries.ClickAddMediaGalleryLnk();
-    	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+    	BasicInformation basicInformation = new BasicInformation(webDriver);
         String title = random.GetCharacterString(15);
         basicInformation.EnterTitle(title);
         contentParent.ClickSaveBtn();
@@ -43,7 +43,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
         navigation.Content("Media Galleries");
         
     	//Steps 4 and 5
-    	SearchFor searchFor = new SearchFor(webWebWebDriver);
+    	SearchFor searchFor = new SearchFor(webDriver);
     	searchFor.SelectStatus("Draft");
     	searchFor.EnterTitle(title);
     	searchFor.ClickApplyBtn();
@@ -98,7 +98,7 @@ public class EnhanceMediaGalleriesTab extends ParentTest{
     	searchFor.ClickApplyBtn();
     	mediaGalleries.ClickEditExtendMenuBtn(title);
     	mediaGalleries.ClickDeleteMenuBtn(title);
-    	Delete delete = new Delete(webWebWebDriver);
+    	Delete delete = new Delete(webDriver);
     	delete.ClickDeleteBtn();
     	contentParent.VerifyMessageStatus("Media Gallery " + title + " has been deleted.");
     	

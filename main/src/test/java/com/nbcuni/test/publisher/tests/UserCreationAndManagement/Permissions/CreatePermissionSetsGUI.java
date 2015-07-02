@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.People.ApplyPermissionSet;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class CreatePermissionSetsGUI extends ParentTest {
+public class CreatePermissionSetsGUI extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1381
@@ -22,16 +22,16 @@ public class CreatePermissionSetsGUI extends ParentTest {
     public void CreatePermissionSetsGUI_TC1381() throws Exception {
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//Step 2
     	navigation.Structure("Permission Sets");
-    	PermissionSets permissionSets = new PermissionSets(webWebWebDriver);
+    	PermissionSets permissionSets = new PermissionSets(webDriver);
     	permissionSets.ClickAddLnk();
     	
     	//Step 3
-    	AddNewPermissionSet addNewPermissionSet = new AddNewPermissionSet(webWebWebDriver, applib);
+    	AddNewPermissionSet addNewPermissionSet = new AddNewPermissionSet(webDriver, appLib);
     	String setName = random.GetCharacterString(15);
     	addNewPermissionSet.EnterPermissionSetName(setName);
     	addNewPermissionSet.EnablePermissions(Arrays.asList("view own files", "edit any document files"));
@@ -40,7 +40,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	
     	//Step 4
     	navigation.People("Permissions", "Apply Permission Set");
-    	ApplyPermissionSet applyPermissionSet = new ApplyPermissionSet(webWebWebDriver);
+    	ApplyPermissionSet applyPermissionSet = new ApplyPermissionSet(webDriver);
     	applyPermissionSet.SelectRolePermissionSet("Role: Senior Editor", setName);
     	applyPermissionSet.ClickApplyPermissionSetsBtn();
     	contentParent.VerifyMessageWarning("Applying a permission set may cause you to no longer have access to change user permissions.");
@@ -51,7 +51,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	
     	//Step 5
     	navigation.ClickSecondaryTabNavLnk("Permissions");
-    	Permissions permissions = new Permissions(webWebWebDriver, applib);
+    	Permissions permissions = new Permissions(webDriver, appLib);
     	permissions.VerifyPermissionsSelected("senior editor", Arrays.asList("view own files", "edit any document files"));
     	
     	//Step 6
@@ -83,7 +83,7 @@ public class CreatePermissionSetsGUI extends ParentTest {
     	navigation.Structure("Permission Sets");
     	permissionSets.ClickPermissionSetExpandEditLnk(setName);
     	permissionSets.ClickPermissionSetDeleteLnk(setName);
-    	Delete delete = new Delete(webWebWebDriver);
+    	Delete delete = new Delete(webDriver);
     	delete.ClickDeleteBtn();
     	contentParent.VerifyMessageStatus("The item has been deleted.");
     	permissionSets.VerifyPermissionSetNotPresent(setName);

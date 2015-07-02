@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SSOLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SimpleSAML;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class SSOAuthenticationModes extends ParentTest {
+public class SSOAuthenticationModes extends GlobalBaseTest {
 
 	/*************************************************************************************
 	 * TEST CASE - TC6519
@@ -24,20 +24,20 @@ public class SSOAuthenticationModes extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
 	 public void SSOAuthenticationModes_TC6519() throws Exception {
 		 
-		UserLogin userLogin = applib.openApplication(); 
-		Modules modules = new Modules(webWebWebDriver);
-		SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
-		Logout logout = new Logout(webWebWebDriver);
-		WorkBench workBench = new WorkBench(webWebWebDriver);
-		AddUser addUser = new AddUser(webWebWebDriver);
-		SSOLogin ssoLogin = new SSOLogin(webWebWebDriver);
+		UserLogin userLogin = appLib.openApplication();
+		Modules modules = new Modules(webDriver);
+		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
+		Logout logout = new Logout(webDriver);
+		WorkBench workBench = new WorkBench(webDriver);
+		AddUser addUser = new AddUser(webDriver);
+		SSOLogin ssoLogin = new SSOLogin(webDriver);
 		
 		Reporter.log("STEP 1");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
 		Reporter.log("STEP 2");
 		navigation.People();
-    	People people = new People(webWebWebDriver);
+    	People people = new People(webDriver);
     	people.ClickAddUserLnk();
 		addUser.EnterUsername("206448849");
 		addUser.EnterEmailAddress("publisher_testuser1@testmail.com");
@@ -89,7 +89,7 @@ public class SSOAuthenticationModes extends ParentTest {
 		
 		Reporter.log("STEP 7");
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.VerifyFederatedLoginLnkPresent();
 		
 		Reporter.log("STEP 8");
@@ -106,7 +106,7 @@ public class SSOAuthenticationModes extends ParentTest {
 		ssoLogin.EnterSSOID("206448849");
 		ssoLogin.EnterPassword("pa55word");
 		ssoLogin.ClickSignInBtn();
-		applib.refreshPage();
+		appLib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList("206448849"));
 		
 		Reporter.log("STEP 9");
@@ -114,15 +114,15 @@ public class SSOAuthenticationModes extends ParentTest {
 		workBench.ClickWorkBenchTab("Edit");
 		
 		Reporter.log("STEP 10");
-		String parentWindow = webWebWebDriver.getWindowHandle();
+		String parentWindow = webDriver.getWindowHandle();
 		addUser.ClickChangeYourPasswordLnk();
-	    applib.switchToNewWindow(parentWindow);
+	    appLib.switchToNewWindow(parentWindow);
 		ssoLogin.VerifySSOPasswordReset();
 		
 		Reporter.log("STEP 11");
-		applib.switchToParentWindow(parentWindow);
+		appLib.switchToParentWindow(parentWindow);
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.EnterEmailAddress("publisher_testuser3@testmail.com");
 		userLogin.EnterPassword("pa55word");
 		userLogin.ClickLoginBtn();
@@ -141,7 +141,7 @@ public class SSOAuthenticationModes extends ParentTest {
 		modules.DisableModule("simpleSAMLphp authentication");
 		navigation.Home();
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.VerifyFederatedLoginLnkNotPresent();
 		userLogin.EnterEmailAddress("publisher_testuser1@testmail.com");
 		userLogin.EnterPassword("pa55word");

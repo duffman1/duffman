@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SSOLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SimpleSAML;
 import com.nbcuni.test.publisher.pageobjects.Logout;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class SSODefinedDomains extends ParentTest {
+public class SSODefinedDomains extends GlobalBaseTest {
 
 	Boolean testSuccessful = false;
 	
@@ -24,13 +24,13 @@ public class SSODefinedDomains extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive", "broken"})
 	 public void SSODefinedDomains_TC3474() throws Exception {
 		 
-		UserLogin userLogin = new UserLogin(webWebWebDriver);
-		Logout logout = new Logout(webWebWebDriver);
-		SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
-		Modules modules = new Modules(webWebWebDriver);
+		UserLogin userLogin = new UserLogin(webDriver);
+		Logout logout = new Logout(webDriver);
+		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
+		Modules modules = new Modules(webDriver);
 			
 		Reporter.log("STEP 1");
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	       
 		Reporter.log("STEP 2");
@@ -59,31 +59,31 @@ public class SSODefinedDomains extends ParentTest {
 		    
 		Reporter.log("STEP 8");
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/saml_login");
+		appLib.openSitePage("/saml_login");
 		Thread.sleep(1000);
 	        
 		Reporter.log("STEP 9");
-		SSOLogin ssoLogin = new SSOLogin(webWebWebDriver);
+		SSOLogin ssoLogin = new SSOLogin(webDriver);
 		ssoLogin.EnterSSOID(config.getConfigValueString("SSOUsername"));
 		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
 	       
 		Reporter.log("STEP 10 AND 11");
-		applib.refreshPage();
+		appLib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOUsername")));
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
 		Reporter.log("STEP 12");
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		navigation.People();
-		People people = new People(webWebWebDriver);
+		People people = new People(webDriver);
 		people.SeachForUsername(config.getConfigValueString("SSOEmail"));
 		people.ClickUsernameLnk(config.getConfigValueString("SSOEmail"));
 	        
 		Reporter.log("STEP 13");
-		applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+		appLib.openSitePage("/admin/config/people/simplesamlphp_auth");
 		simpleSAML.UnCheckActivateAuthCbx();
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
@@ -104,13 +104,13 @@ public class SSODefinedDomains extends ParentTest {
 	public void Cleanup() throws Exception {
 		if (testSuccessful == false) {
 			
-			UserLogin userLogin = new UserLogin(webWebWebDriver);
-			SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
-			Modules modules = new Modules(webWebWebDriver);
+			UserLogin userLogin = new UserLogin(webDriver);
+			SimpleSAML simpleSAML = new SimpleSAML(webDriver);
+			Modules modules = new Modules(webDriver);
 			
-			applib.openSitePage("/user");
+			appLib.openSitePage("/user");
 			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-			applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+			appLib.openSitePage("/admin/config/people/simplesamlphp_auth");
 			simpleSAML.UnCheckActivateAuthCbx();
 			simpleSAML.ClickSaveConfigurationBtn();
 			contentParent.VerifyMessageStatus("The configuration options have been saved.");

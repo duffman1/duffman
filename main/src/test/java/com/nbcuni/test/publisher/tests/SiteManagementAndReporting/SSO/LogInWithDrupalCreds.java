@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SSOLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SimpleSAML;
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class LogInWithDrupalCreds extends ParentTest {
+public class LogInWithDrupalCreds extends GlobalBaseTest {
 
 	/*************************************************************************************
 	 * TEST CASE - TC6012
@@ -25,14 +25,14 @@ public class LogInWithDrupalCreds extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
 	 public void LogInWithDrupalCreds_TC6012() throws Exception {
 		 
-		UserLogin userLogin = applib.openApplication(); 
-		Modules modules = new Modules(webWebWebDriver);
-		SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
-		Logout logout = new Logout(webWebWebDriver);
-		FlushCache flushCache = new FlushCache(webWebWebDriver);
-		WorkBench workBench = new WorkBench(webWebWebDriver);
-		AddUser addUser = new AddUser(webWebWebDriver);
-		SSOLogin ssoLogin = new SSOLogin(webWebWebDriver);
+		UserLogin userLogin = appLib.openApplication();
+		Modules modules = new Modules(webDriver);
+		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
+		Logout logout = new Logout(webDriver);
+		FlushCache flushCache = new FlushCache(webDriver);
+		WorkBench workBench = new WorkBench(webDriver);
+		AddUser addUser = new AddUser(webDriver);
+		SSOLogin ssoLogin = new SSOLogin(webDriver);
 		
 		Reporter.log("STEP 1");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
@@ -40,7 +40,7 @@ public class LogInWithDrupalCreds extends ParentTest {
 		Reporter.log("STEP 2");
 		String userName1 = addUser.AddDefaultUser(Arrays.asList("authenticated user"), false);
     	navigation.People();
-    	People people = new People(webWebWebDriver);
+    	People people = new People(webDriver);
     	people.ClickAddUserLnk();
 		addUser.EnterUsername("206448849");
 		addUser.EnterEmailAddress("publisher_testuser1@testmail.com");
@@ -77,7 +77,7 @@ public class LogInWithDrupalCreds extends ParentTest {
 		
 		Reporter.log("STEP 8");
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.EnterEmailAddress("publisher_testuser1@testmail.com");
 		userLogin.EnterPassword("pa55word");
 		userLogin.ClickLoginBtn();
@@ -85,7 +85,7 @@ public class LogInWithDrupalCreds extends ParentTest {
 		ssoLogin.EnterSSOID("206448849");
 		ssoLogin.EnterPassword("pa55word");
 		ssoLogin.ClickSignInBtn();
-		applib.refreshPage();
+		appLib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList("206448849"));
 		
 		Reporter.log("STEP 9");
@@ -100,7 +100,7 @@ public class LogInWithDrupalCreds extends ParentTest {
 		userLogin.ClickLoginBtn();
 		
 		Reporter.log("STEP 11");
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		workBench.ClickWorkBenchTab("Edit");
 		
 		Reporter.log("STEP 12");
@@ -109,7 +109,7 @@ public class LogInWithDrupalCreds extends ParentTest {
 		//TODO - a few additional steps as time allows
 		Reporter.log("STEP 15");
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.EnterEmailAddress("publisher_testuser1@testmail.com");
 		userLogin.EnterPassword("pa55word");
 		userLogin.ClickLoginBtn();
@@ -117,9 +117,9 @@ public class LogInWithDrupalCreds extends ParentTest {
 		ssoLogin.EnterSSOID("206448849");
 		ssoLogin.EnterPassword("pa55word");
 		ssoLogin.ClickSignInBtn();
-		applib.refreshPage();
+		appLib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList("206448849"));
-		applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+		appLib.openSitePage("/admin/config/people/simplesamlphp_auth");
 		simpleSAML.UnCheckActivateAuthCbx();
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");

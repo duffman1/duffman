@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
+public class CastCrewFieldCollectionsVerificationTVEpisode extends GlobalBaseTest {
 	 /*************************************************************************************
      * TEST CASE 
      * Step 1 - Log in to the test instance as Drupal User 1 (usually admin in Publisher sites)./<br>
@@ -37,16 +37,16 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
     	List<String> Persons = Arrays.asList("PersonName" + random.GetCharacterString(10),
     			"PersonName" + random.GetCharacterString(10),
     				"PersonName" + random.GetCharacterString(10));
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-        CharactersInformation charactersInformation = new CharactersInformation(webWebWebDriver);
-        SelectFile selectFile = new SelectFile(webWebWebDriver);
+        CharactersInformation charactersInformation = new CharactersInformation(webDriver);
+        SelectFile selectFile = new SelectFile(webDriver);
         for(int CCount=0;CCount<3;CCount++) {
         	navigation.AddContent("Character Profile");
 	        charactersInformation.EnterCharacterFirstName(Characters.get(CCount));
-	        CoverPhoto coverPhoto = new CoverPhoto(webWebWebDriver);
+	        CoverPhoto coverPhoto = new CoverPhoto(webDriver);
 	        coverPhoto.ClickSelectBtn();
 	        selectFile.SelectDefaultCoverImg();
 	        coverPhoto.VerifyFileImagePresent("HanSolo");
@@ -55,7 +55,7 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
         }
         
         //Step 3
-        PersonsInformation personsInformation = new PersonsInformation(webWebWebDriver);
+        PersonsInformation personsInformation = new PersonsInformation(webDriver);
         for(int PCount=0;PCount<3;PCount++) {
         	navigation.AddContent("Person");
 	        personsInformation.EnterFirstName(Persons.get(PCount));
@@ -71,13 +71,13 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
         
         //Step 5
         String episodeTitle = random.GetCharacterString(15);        
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterTitle(episodeTitle);
         basicInformation.EnterEpisodeNumber("1");
     	basicInformation.EnterSynopsis();       
         
         //Step 6
-        CastCrew castCrew = new CastCrew(webWebWebDriver);
+        CastCrew castCrew = new CastCrew(webDriver);
         castCrew.ClickCastCrewLnk();
         castCrew.EnterPersonName(Persons.get(0), "1");
         castCrew.SelectRole("Character", "1");
@@ -88,11 +88,11 @@ public class CastCrewFieldCollectionsVerificationTVEpisode extends ParentTest {
         Thread.sleep(1000); //TODO - figure out why this pause is necessary and add dynamic wait
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("TV Episode " + episodeTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
-        Revisions revisions = new Revisions(webWebWebDriver);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickEditMenuBtn(episodeTitle);
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();  
         publishingOptions.VerifyCreateNewRevisionCbxChecked();       
         castCrew.ClickCastCrewLnk();

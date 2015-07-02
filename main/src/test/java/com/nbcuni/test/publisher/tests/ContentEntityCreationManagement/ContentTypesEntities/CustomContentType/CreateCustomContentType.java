@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -7,7 +8,7 @@ import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
-public class CreateCustomContentType extends ParentTest{
+public class CreateCustomContentType extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE - TC1049
@@ -17,14 +18,14 @@ public class CreateCustomContentType extends ParentTest{
     public void CreateCustomContentType_TC1049() throws Exception{
         
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
         	navigation.Structure("Content types");
             
             //Step 3
-            ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
+            ContentTypes contentTypes = new ContentTypes(webDriver);
             contentTypes.ClickAddContentLnk();
             String contentTypeName = random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
@@ -54,12 +55,12 @@ public class CreateCustomContentType extends ParentTest{
             contentTypes.VerifyFieldSelectBtnPresent(newFieldName);
             
             //Step 8
-            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+            BasicInformation basicInformation = new BasicInformation(webDriver);
             String contentTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(contentTitle);
             basicInformation.EnterSynopsis();
             contentParent.ClickSaveBtn();
-            webWebWebDriver.switchTo().defaultContent();
+            webDriver.switchTo().defaultContent();
             contentParent.VerifyMessageStatus(contentTypeName + " " + contentTitle + " has been created.");
             
     }

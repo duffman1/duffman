@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -17,7 +18,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class EntityReferenceVerification extends ParentTest{
+public class EntityReferenceVerification extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE - TC1886
@@ -27,11 +28,11 @@ public class EntityReferenceVerification extends ParentTest{
     public void EntityReferenceVerification_TC1886() throws Exception{
     	
     	//Setup
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Setup
-    	Settings settings = new Settings(webWebWebDriver);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
     	navigation.Configuration("Media: thePlatform mpx settings");
@@ -42,7 +43,7 @@ public class EntityReferenceVerification extends ParentTest{
         		
         	//Step 1
         	navigation.Structure("Content types");
-        	ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
+        	ContentTypes contentTypes = new ContentTypes(webDriver);
         	contentTypes.ClickAddContentLnk();
             String contentTypeName = "MPX" + random.GetCharacterString(10);
             contentTypes.EnterName(contentTypeName);
@@ -56,7 +57,7 @@ public class EntityReferenceVerification extends ParentTest{
         	contentTypes.ClickSaveBtn();
         		
         	//Step 3
-        	FieldSettings fieldSettings = new FieldSettings(webWebWebDriver);
+        	FieldSettings fieldSettings = new FieldSettings(webDriver);
         	fieldSettings.SelectTargetType("File");
         	fieldSettings.SelectMode("Simple (with optional filter by bundle)");
         	fieldSettings.CheckTargetBundleCbx("MPX Video for Account \"DB TV\" (2312945284) ");
@@ -65,7 +66,7 @@ public class EntityReferenceVerification extends ParentTest{
         	contentParent.VerifyMessageStatus("Updated field " + mpxVideoEntityFieldTitle + " field settings.");
         		
         	//Step 4
-        		Edit edit = new Edit(webWebWebDriver, applib);
+        		Edit edit = new Edit(webDriver, appLib);
         		edit.ClickSaveSettingsBtn();
         		contentParent.VerifyMessageStatus("Saved " + mpxVideoEntityFieldTitle + " configuration.");
         		
@@ -121,7 +122,7 @@ public class EntityReferenceVerification extends ParentTest{
         		
         		//Step 10
         		navigation.Structure("Field collections");
-        		FieldCollections fieldCollections = new FieldCollections(webWebWebDriver, applib);
+        		FieldCollections fieldCollections = new FieldCollections(webDriver, appLib);
         		fieldCollections.ClickManageFieldsLnk(mpxVideoFieldCollectionsTitle.toLowerCase());
         		
         		//Step 11
@@ -316,7 +317,7 @@ public class EntityReferenceVerification extends ParentTest{
         		
         		//Step 35
         		navigation.AddContent(contentTypeName);
-        		ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
+        		ErrorChecking errorChecking = new ErrorChecking(webDriver);
         		errorChecking.VerifyNoMessageErrorsPresent();
         		
         		//Steps 36 and 37
@@ -326,12 +327,12 @@ public class EntityReferenceVerification extends ParentTest{
         						mpxPlayerFieldCollectionsTitle, mpxFCPlayerEntityFieldTitle, mpxFCPlayerFileFieldTitle, mpxFCPlayerImageFieldTitle));
         		
         		//Step 38
-        		BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        		BasicInformation basicInformation = new BasicInformation(webDriver);
         		String title = "NewMPXContent" + random.GetCharacterString(10);
         		basicInformation.EnterTitle(title);
         		basicInformation.SelectCustomField(mpxVideoEntityFieldTitle, "AutomationDefault");
         		basicInformation.ClickCustomBtn(mpxVideoFileFieldTitle);
-        		SelectFile selectFile = new SelectFile(webWebWebDriver);
+        		SelectFile selectFile = new SelectFile(webDriver);
         		selectFile.SwitchToSelectFileFrm();
         		selectFile.EnterTitle("AutomationDefault");
         		selectFile.ClickApplyBtn();

@@ -1,0 +1,18 @@
+<suite name="Publisher 7 Preparation" parallel="tests" thread-count="1">
+    <!--LISTENERS-->
+    <listeners>
+        <listener class-name="com.nbcuni.test.publisher.common.Reports.CustomReport"/>
+        <listener class-name="com.nbcuni.test.publisher.common.Listeners.TestListeners"/>
+        <listener class-name="com.nbcuni.test.publisher.common.Listeners.SuiteListeners"/>
+    </listeners>
+
+
+    <test verbose="1" name="Prepare environment">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+           <class name="com.nbcuni.test.publisher.tests.Setup.A1_TestSetup"/>
+        </classes>
+    </test>
+
+
+</suite>

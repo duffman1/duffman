@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
+public class EnhanceMPXPlayerContentAdminScreen extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE 
@@ -33,18 +34,18 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
     public void EnhanceMPXPlayerContentAdminScreen_Test() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 1a
-    	Settings settings = new Settings(webWebWebDriver);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	navigation.Configuration("Media: thePlatform mpx settings");
         
         //Step 2
         	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         	navigation.Content("Files", "mpxPlayers");
-        	SearchFor searchFor = new SearchFor(webWebWebDriver);
+        	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.VerifyMPXSearchHeaderColumnOrder();
         	
         	//Step 3 - NA, redundant as step 2
@@ -74,7 +75,7 @@ public class EnhanceMPXPlayerContentAdminScreen extends ParentTest{
         		//Step 6c
         		searchFor.SelectMPXPlayerAccount(configuredAccounts.get(0));
         		searchFor.ClickApplyBtn();
-        		webWebWebDriver.switchTo().defaultContent();
+        		webDriver.switchTo().defaultContent();
         		searchFor.VerifyMPXResultSetSource(configuredAccounts.get(0));
         		
         		//Step 7

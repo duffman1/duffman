@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
+public class EditorPermissionsContentAndContentRevisionsView extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1393
@@ -22,22 +22,22 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
     public void EditorPermissionsContentAndContentRevisionsView_TC1393() throws Exception {
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 and 3
-        AddUser addUser = new AddUser(webWebWebDriver);
+        AddUser addUser = new AddUser(webDriver);
         String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         
         //Step 4
         navigation.People("Permissions", "Roles");
         
         //Step 5
-        Roles roles = new Roles(webWebWebDriver);
+        Roles roles = new Roles(webDriver);
         roles.ClickEditorEditPermissionsLnk(); 
         
         //Step 6
-        Permissions permissions = new Permissions(webWebWebDriver, applib);
+        Permissions permissions = new Permissions(webDriver, appLib);
         permissions.EnablePermissions(null, Arrays.asList("create post content", 
         		"edit own post content", "delete own post content", "create files", "create character_profile content"));
         permissions.DisablePermissions(null, Arrays.asList("edit any post content", "delete any post content"));
@@ -45,21 +45,21 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         contentParent.VerifyMessageStatus("The changes have been saved.");
         
         //Step 7
-        Logout logout = new Logout(webWebWebDriver);
+        Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         
         //Step 8
         userLogin.Login(userName, "pa55word");
         
         //Step 9 and 10 (truncated)
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 11
         navigation.Content();
         
         //Step 12 and 13 (truncated)
-        Content content = new Content(webWebWebDriver);
+        Content content = new Content(webDriver);
         content.VerifyContentItemEditDelete(postTitle);
         
         //Step 14
@@ -87,7 +87,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         navigation.Content("Content Revisions");
         
         //Step 23
-        Revisions revisions = new Revisions(webWebWebDriver);
+        Revisions revisions = new Revisions(webDriver);
         revisions.VerifyContentItemEditDeleteNotPresent(postTitle2);
         
         //Step 24
@@ -97,10 +97,10 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         revisions.ClickEditMenuBtn(postTitle);
         
         //Step 27
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.EnterSynopsis();
         contentParent.ClickSaveBtn();
-        webWebWebDriver.switchTo().defaultContent();
+        webDriver.switchTo().defaultContent();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been updated.");
         
         //Step 28
@@ -109,7 +109,7 @@ public class EditorPermissionsContentAndContentRevisionsView extends ParentTest{
         //Step 29
         content.ClickEditExtendMenuBtn(postTitle);
         content.ClickDeleteMenuBtn(postTitle);
-        Delete delete = new Delete(webWebWebDriver);
+        Delete delete = new Delete(webDriver);
         delete.ClickDeleteBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been deleted.");
         

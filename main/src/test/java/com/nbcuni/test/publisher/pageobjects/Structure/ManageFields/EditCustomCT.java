@@ -16,7 +16,7 @@ import ru.yandex.qatools.htmlelements.element.Select;
 @Configuration
 @Scope("prototype")
 @Page
-public class EditCustomCT {
+public class EditCustomCT extends com.nbcuni.test.publisher.pageobjects.Page {
     public EditCustomCT() {
 
     }

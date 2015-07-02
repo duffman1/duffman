@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 
 import java.net.URL;
 
-public class TwitterAutoPublishing extends ParentTest{
+public class TwitterAutoPublishing extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -40,10 +40,10 @@ public class TwitterAutoPublishing extends ParentTest{
     public void TwitterAutoPublishing_Test() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         navigation.Modules();
-        Modules modules = new Modules(webWebWebDriver);
+        Modules modules = new Modules(webDriver);
         modules.EnableModule("Pub Social");
         
         //Step 2
@@ -53,7 +53,7 @@ public class TwitterAutoPublishing extends ParentTest{
         //Step 3
         navigation.Configuration("Twitter");
         navigation.ClickPrimaryTabNavLnk("Settings");
-        Twitter twitter = new Twitter(webWebWebDriver);
+        Twitter twitter = new Twitter(webDriver);
         twitter.EnterOAuthConsumerKey("5Ur95TtwzHY2A9hMKg");
         twitter.EnterOAuthConsumerSecret("GEHafCRDdJpRoaJ4Zk4tPYDObR3IkeEtnr5otrpIs");
         twitter.ClickSaveConfigurationBtn();
@@ -62,52 +62,52 @@ public class TwitterAutoPublishing extends ParentTest{
         //Step 3a
         navigation.Configuration("Twitter");
         navigation.ClickPrimaryTabNavLnk("Post");
-        NodeTypes nodeTypes = new NodeTypes(webWebWebDriver);
+        NodeTypes nodeTypes = new NodeTypes(webDriver);
         nodeTypes.EnablePostNode();
         
         //Step 4 - NA as we log in to twitter at a later step
         
         //Step 5
         navigation.Configuration("Twitter");
-        TwitterAccounts twitterAccounts = new TwitterAccounts(webWebWebDriver);
-        TwitterLogin twitterLogin = new TwitterLogin(webWebWebDriver, applib);
+        TwitterAccounts twitterAccounts = new TwitterAccounts(webDriver);
+        TwitterLogin twitterLogin = new TwitterLogin(webDriver, appLib);
         Boolean accountAlreadyExists = twitterAccounts.TwitterAccountExists();
         if (accountAlreadyExists == false) {
         	twitterAccounts.ClickGoToTwitterAddAuthenticatedAccountBtn();
         	twitterLogin.EnterAdminUsernameOrEmail("publisherseven");
         	twitterLogin.EnterAdminPassword("Publ!$her");
         	twitterLogin.ClickAuthorizeAppBtn();
-        	new WebDriverWait(webWebWebDriver, 10).until(ExpectedConditions.titleContains("Site-Install"));
+        	new WebDriverWait(webDriver, 10).until(ExpectedConditions.titleContains("Site-Install"));
         }
         else {
-        	webWebWebDriver.navigate().to("https://twitter.com/login");
+        	webDriver.navigate().to("https://twitter.com/login");
         	twitterLogin.EnterUsernameOrEmail("publisherseven");
         	twitterLogin.EnterPassword("Publ!$her");
         	twitterLogin.ClickSignInBtn();
-        	applib.openApplication();
+        	appLib.openApplication();
         }
         
         //Step 6
         navigation.AddContent("Post");
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
         
         //Step 7
-        Revisions revisions = new Revisions(webWebWebDriver);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
         
         //Step 8
-        Share share = new Share(webWebWebDriver);
+        Share share = new Share(webDriver);
         share.ClickTwitterLnk();
         share.ClickPostToTwitterCbx();
         
@@ -119,8 +119,8 @@ public class TwitterAutoPublishing extends ParentTest{
         share.ClickShareBtn();
         
         //Step 11
-        webWebWebDriver.navigate().to(new URL("https://twitter.com/"));
-        webWebWebDriver.switchTo().defaultContent();
+        webDriver.navigate().to(new URL("https://twitter.com/"));
+        webDriver.switchTo().defaultContent();
         twitterLogin.VerifyTwitterPostPresent(tweet);
         
     }

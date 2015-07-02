@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Movie;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class CreateMovie extends ParentTest{
+public class CreateMovie extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1043
@@ -19,19 +19,19 @@ public class CreateMovie extends ParentTest{
     public void CreateMovie_TC1043() throws Exception {
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
         	navigation.AddContent("Character Profile");
             
             //Step 3 
-            CharactersInformation charactersInformation = new CharactersInformation(webWebWebDriver);
+            CharactersInformation charactersInformation = new CharactersInformation(webDriver);
             String characterName = "Character" + random.GetCharacterString(15);
             charactersInformation.EnterCharacterFirstName(characterName);
-            CoverPhoto coverPhoto = new CoverPhoto(webWebWebDriver);
+            CoverPhoto coverPhoto = new CoverPhoto(webDriver);
             coverPhoto.ClickSelectBtn();
-            SelectFile selectFile = new SelectFile(webWebWebDriver);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Character Profile " + characterName + " has been created.");
@@ -40,7 +40,7 @@ public class CreateMovie extends ParentTest{
             navigation.AddContent("Movie");
             
             //Step 5
-            CastCrew castCrew = new CastCrew(webWebWebDriver);
+            CastCrew castCrew = new CastCrew(webDriver);
             castCrew.ClickCastCrewLnk();
             
             //Step 6
@@ -64,7 +64,7 @@ public class CreateMovie extends ParentTest{
             navigation.AddContent("Person");
             
             //Step 10
-            PersonsInformation personsInformation = new PersonsInformation(webWebWebDriver);
+            PersonsInformation personsInformation = new PersonsInformation(webDriver);
             String personFirstName = "Person" + random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             personsInformation.EnterBiography();
@@ -85,7 +85,7 @@ public class CreateMovie extends ParentTest{
             castCrew.EnterCharacterName(characterName, "1");
             
             //Step 14
-            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+            BasicInformation basicInformation = new BasicInformation(webDriver);
             basicInformation.ClickBasicInformationTab();
             String movieTitle = "Movie" + random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
@@ -96,7 +96,7 @@ public class CreateMovie extends ParentTest{
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             
             //Step 15
-            WorkBench workBench = new WorkBench(webWebWebDriver);
+            WorkBench workBench = new WorkBench(webDriver);
             workBench.ClickWorkBenchTab("Edit Draft");
             castCrew.ClickCastCrewLnk();
             castCrew.VerifyCharacterTxbDisplayed();
@@ -105,7 +105,7 @@ public class CreateMovie extends ParentTest{
             castCrew.VerifyCharacterNameValue(characterName, "1");
             
             //Step 16
-            PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+            PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             publishingOptions.ClickPublishingOptionsLnk();
             publishingOptions.ClickCreateNewRevisionCbx();
             publishingOptions.SelectModerationState("Published");

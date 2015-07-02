@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Queues.DeletingQueueRevisions;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class DeleteRevisionsQueues extends ParentTest {
+public class DeleteRevisionsQueues extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -31,14 +32,14 @@ public class DeleteRevisionsQueues extends ParentTest {
     public void DeleteRevisionsQueues_Test() throws Exception{
     	
         //Step 1
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
         navigation.Content("Queues");
         
         //Step 3
-        Queues queues = new Queues(webWebWebDriver);
+        Queues queues = new Queues(webDriver);
         queues.ClickAddPromoQueueLnk();
         String queueTitle = random.GetCharacterString(15);
         queues.EnterTitle(queueTitle);
@@ -60,7 +61,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         
         //Step 6
         queues.ClickEditQueueMenuBtn(queueTitle);
-        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webWebWebDriver);
+        QueuesRevisionList queuesRevisionList = new QueuesRevisionList(webDriver);
         queuesRevisionList.ClickRevisionsLnk();
         
         //Step 7
@@ -73,7 +74,7 @@ public class DeleteRevisionsQueues extends ParentTest {
         queuesRevisionList.ClickDeleteQueueMenuBtn("2");
         
         //Step 9
-        Delete delete = new Delete(webWebWebDriver);
+        Delete delete = new Delete(webDriver);
         delete.ClickDeleteRevisionBtn();
         contentParent.VerifyMessageStatus("The revision has been successfully deleted.");
         

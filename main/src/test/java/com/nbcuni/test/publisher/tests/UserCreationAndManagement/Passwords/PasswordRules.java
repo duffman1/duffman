@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class PasswordRules extends ParentTest {
+public class PasswordRules extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC2185
@@ -23,12 +24,12 @@ public class PasswordRules extends ParentTest {
     public void PasswordRules_TC2185() throws Exception {
     	
     	Reporter.log("SETUP - create new user and logout");
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-    	AddUser addUser = new AddUser(webWebWebDriver);
+    	AddUser addUser = new AddUser(webDriver);
     	String userPassword = "pa55word";
         String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
-        Logout logout = new Logout(webWebWebDriver);
+        Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         
         Reporter.log("STEP 1");
@@ -37,8 +38,8 @@ public class PasswordRules extends ParentTest {
         userLogin.ClickLoginBtn();
         
         Reporter.log("STEP 2");
-        applib.openSitePage("/user");
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        appLib.openSitePage("/user");
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit");
         
         Reporter.log("STEP 3");
@@ -85,7 +86,7 @@ public class PasswordRules extends ParentTest {
         addUser.EnterPassword("A");
         addUser.EnterConfirmPassword("A");
         contentParent.ClickSaveBtn();
-        ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
+        ErrorChecking errorChecking = new ErrorChecking(webDriver);
         errorChecking.VerifyErrorMessagePresent("Your password has not met the following requirement(s):");
         
         Reporter.log("STEP 11");
@@ -109,7 +110,7 @@ public class PasswordRules extends ParentTest {
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         navigation.Configuration("Password policies");
         navigation.ClickPrimaryTabNavLnk("List");
-        PasswordPolicies passwordPolicies = new PasswordPolicies(webWebWebDriver);
+        PasswordPolicies passwordPolicies = new PasswordPolicies(webDriver);
         passwordPolicies.ClickViewLnk();
         contentParent.VerifyPageContentPresent(Arrays.asList("Expiration", "365"));
     	

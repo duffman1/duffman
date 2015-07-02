@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.Player;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
@@ -11,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class SelectVideoPlayerPerVideoFile extends ParentTest{
+public class SelectVideoPlayerPerVideoFile extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE 
@@ -40,11 +41,11 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
     public void SelectVideoPlayerPerVideoFile_Test() throws Exception{
 
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 on requires prior MPX configuration
-    	Settings settings = new Settings(webWebWebDriver);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
     	navigation.Configuration("Media: thePlatform mpx settings");
@@ -56,16 +57,16 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		navigation.Content("Files", "mpxMedia");
         		
         		//Step 3
-        		SearchFor searchFor = new SearchFor(webWebWebDriver);
+        		SearchFor searchFor = new SearchFor(webDriver);
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
 
         		//Step 4
-        		Content content = new Content(webWebWebDriver);
+        		Content content = new Content(webDriver);
         		content.ClickEditMenuBtn("AutomationDefault");
         		
         		//Step 5 and 6
-        		EditMPXVideo editMPXVideo = new EditMPXVideo(webWebWebDriver);
+        		EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
         		editMPXVideo.VerifyPubMPXVideoPlayerPresent();
             
         		//Step 7

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.MyWorkbench;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.MyWorkbench.MyWork;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class EditContentMyWorkbench extends ParentTest{
+public class EditContentMyWorkbench extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1394
@@ -20,25 +20,25 @@ public class EditContentMyWorkbench extends ParentTest{
     public void EditContentMyWorkbench_TC1394() throws Exception{
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
-        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         	String postTitle = createDefaultContent.Post("Draft");
         	
         	//Step 3
         	navigation.WorkBench();
         	
         	//Step 4
-        	MyWork myWork = new MyWork(webWebWebDriver);
+        	MyWork myWork = new MyWork(webDriver);
         	myWork.VerifyContentItemData(Arrays.asList(postTitle, "Draft", "Post", "sec ago"));
         	
         	//Step 5
         	myWork.ClickEditLnk(postTitle);
         	
         	//Step 6
-        	PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         	publishingOptions.ClickPublishingOptionsLnk();
         	publishingOptions.SelectModerationState("Review");
         	contentParent.ClickSaveBtn();

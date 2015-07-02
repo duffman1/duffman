@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.tests.Setup;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
-public class Z1_TestCleanup extends ParentTest{
+public class Z1_TestCleanup extends GlobalBaseTest {
 	
     /*************************************************************************************
      * Test executes some common teardown logic after the full suite execution
@@ -16,11 +16,11 @@ public class Z1_TestCleanup extends ParentTest{
     public void TestCleanup_Test() throws Exception{
          
         	//login
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//if drush ingestion is enabled, run cron so that any scheduled tasks are ready for the concurrent suite (create logo, schedule publish content, etc)
-            Cron cron = new Cron(webWebWebDriver);
+            Cron cron = new Cron(webDriver);
             if (config.getConfigValueString("DrushIngestion").equals("true")) {
             	cron.RunCron();
             }

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.Facebook;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Facebook.DrupalForFacebook;
 import com.nbcuni.test.publisher.pageobjects.Facebook.NodeTypes;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import java.net.URL;
 import java.util.Arrays;
 
-public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends ParentTest{
+public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends GlobalBaseTest {
 	
 	/*************************************************************************************
      * TEST CASE - TC3976
@@ -27,18 +27,18 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
     	//Step 1 - NA as test logs into facebook as part of a later step
     	
     	//Step 2
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 3
         navigation.Modules();
-        Modules modules = new Modules(webWebWebDriver);
+        Modules modules = new Modules(webDriver);
         modules.EnableModule("Pub Social");
         
         //Step 3a
         navigation.Structure("Facebook Apps");
-        DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webWebWebDriver);
-        Delete delete = new Delete(webWebWebDriver);
+        DrupalForFacebook drupalForFacebook = new DrupalForFacebook(webDriver);
+        Delete delete = new Delete(webDriver);
         if (drupalForFacebook.FacebookAppExists()) {
         	drupalForFacebook.ClickEditLnk();
         	delete.ClickDeleteBtn();
@@ -78,28 +78,28 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         
         //Step 10
         navigation.Configuration("Facebook");
-        NodeTypes nodeTypes = new NodeTypes(webWebWebDriver);
+        NodeTypes nodeTypes = new NodeTypes(webDriver);
         nodeTypes.EnablePostNode();
         
         //Step 11
         navigation.AddContent("Post");
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.SelectModerationState("Published");
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Revisions");
         
         //Step 12
-        Revisions revisions = new Revisions(webWebWebDriver);
+        Revisions revisions = new Revisions(webDriver);
         revisions.ClickEditExtendMenuBtn(postTitle);
         revisions.ClickShareMenuBtn(postTitle);
-        Share share = new Share(webWebWebDriver);
+        Share share = new Share(webDriver);
         share.ClickFacebookLnk();
         share.ClickPostToFacebookWallCbx();
         String message = random.GetCharacterString(15);
@@ -107,7 +107,7 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         share.ClickShareBtn();
         
         //Step 14
-        webWebWebDriver.navigate().to(new URL("https://www.facebook.com/"));
+        webDriver.navigate().to(new URL("https://www.facebook.com/"));
         for (int I = 0 ; ; I++) {
         	if (I >= 20) {
         		Assert.fail("Facebook app post has not posted to facebook.");
@@ -116,13 +116,13 @@ public class ConfiguringPublisherAutopublishingToFacebookTimeandWall extends Par
         	try {
         		for (String text : Arrays.asList("Publisher Seven Test User", 
                 		postTitle, "Publisher 7 Test App")) {
-        			Assert.assertTrue(webWebWebDriver.findElement(By.xpath("//body")).getText().contains(text));
+        			Assert.assertTrue(webDriver.findElement(By.xpath("//body")).getText().contains(text));
         		}
         		break;
         	}
         	catch (AssertionError e) { 
         		Thread.sleep(1000);
-        		applib.refreshPage();
+        		appLib.refreshPage();
         	}
         }
         

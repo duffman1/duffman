@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class CreateTVEpisode extends ParentTest{
+public class CreateTVEpisode extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE - TC1045
@@ -19,7 +20,7 @@ public class CreateTVEpisode extends ParentTest{
     public void CreateTVEpisode_TC1045() throws Exception {
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
@@ -27,12 +28,12 @@ public class CreateTVEpisode extends ParentTest{
             
             	//Step 1A
             	navigation.AddContent("Person");
-            	PersonsInformation personsInformation = new PersonsInformation(webWebWebDriver);
+            	PersonsInformation personsInformation = new PersonsInformation(webDriver);
             	String personFirstName = random.GetCharacterString(15);
             	personsInformation.EnterFirstName(personFirstName);
             	personsInformation.EnterBiography();
             	personsInformation.ClickCoverPhotoSelectBtn();
-            	SelectFile selectFile = new SelectFile(webWebWebDriver);
+            	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SelectDefaultCoverImg();
             	contentParent.ClickSaveBtn();
             	contentParent.VerifyMessageStatus("Person " + personFirstName + " has been created.");
@@ -42,12 +43,12 @@ public class CreateTVEpisode extends ParentTest{
             	
             	//Step 3
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Episode", "Synopsis"));
-            	PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+            	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             	publishingOptions.ClickPublishingOptionsLnk();
             	contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
             
             	//Step 4
-            	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+            	BasicInformation basicInformation = new BasicInformation(webDriver);
             	basicInformation.ClickBasicInformationTab();
             	String tvEpisodeTitle = random.GetCharacterString(15);
             	basicInformation.EnterTitle(tvEpisodeTitle);
@@ -63,7 +64,7 @@ public class CreateTVEpisode extends ParentTest{
             	publishingOptions.SelectModerationState(state);
         	
             	//Step 7
-            	CastCrew castCrew = new CastCrew(webWebWebDriver);
+            	CastCrew castCrew = new CastCrew(webDriver);
             	castCrew.ClickCastCrewLnk();
         	
             	//Step 8
@@ -74,7 +75,7 @@ public class CreateTVEpisode extends ParentTest{
             	Thread.sleep(1000); //TODO - slight pause required here for this test - figure out a proper dynamic wait for this test.
             	contentParent.ClickSaveBtn();
             	contentParent.VerifyMessageStatus("TV Episode " + tvEpisodeTitle + " has been created.");
-            	WorkBench workBench = new WorkBench(webWebWebDriver);
+            	WorkBench workBench = new WorkBench(webDriver);
             	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
             	
             }

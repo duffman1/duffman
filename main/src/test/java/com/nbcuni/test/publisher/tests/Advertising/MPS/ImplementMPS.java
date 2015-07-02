@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
@@ -14,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class ImplementMPS extends ParentTest {
+public class ImplementMPS extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC2901
@@ -24,11 +25,11 @@ public class ImplementMPS extends ParentTest {
     public void ImplementMPS_TC2901() throws Exception {
         
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	navigation.Modules();
             modules.EnableModule("Pub Ads");
             modules.DisableModule("Pixelman");
@@ -36,7 +37,7 @@ public class ImplementMPS extends ParentTest {
             modules.DisableModule("DART");
             modules.DisableModule("Doubleclick for Publishers");
             navigation.Configuration("MPS Configuration");
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
@@ -52,7 +53,7 @@ public class ImplementMPS extends ParentTest {
             Reporter.log("STEP 4");
             navigation.Reports("Status report");
             contentParent.VerifyPageContentPresent(Arrays.asList("Ad Tag Style", "MPS"));
-            ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
+            ErrorChecking errorChecking = new ErrorChecking(webDriver);
             errorChecking.VerifyNoMessageErrorsPresent();
             
             Reporter.log("STEP 5");
@@ -64,38 +65,38 @@ public class ImplementMPS extends ParentTest {
             mpsConfiguration.VerifyNoMPSCallsMade();
             
             Reporter.log("STEP 7");
-            applib.openSitePage("/kfkjdjdkjdjldkjj");
-            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", 
-            		"\"path\":\"ERROR/404\"", "\"content_id\":\"ERROR\""));
-            applib.openApplication();
+            appLib.openSitePage("/kfkjdjdkjdjldkjj");
+            mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"",
+                    "\"path\":\"ERROR/404\"", "\"content_id\":\"ERROR\""));
+            appLib.openApplication();
             
             Reporter.log("STEP 8 - N/A - COVERED IN SETUP");
             
             Reporter.log("STEP 9");
             navigation.AddContent("Movie");
-            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+            BasicInformation basicInformation = new BasicInformation(webDriver);
             basicInformation.ClickBasicInformationTab();
             String movieTitle = random.GetCharacterString(15);
             basicInformation.EnterTitle(movieTitle);
             basicInformation.EnterSynopsis();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webWebWebDriver);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
-            AdditionalInformation additionalInformation = new AdditionalInformation(webWebWebDriver);
+            AdditionalInformation additionalInformation = new AdditionalInformation(webDriver);
             additionalInformation.ClickAdditionalInformationLnk();
             additionalInformation.SelectMovieType("Syndicated");
             additionalInformation.SelectRating("G");
             additionalInformation.SelectPrimaryGenre("Action");
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
-            WorkBench workBench = new WorkBench(webWebWebDriver);
+            WorkBench workBench = new WorkBench(webDriver);
             String movieNodeNumber = workBench.GetContentNodeNumber();
             
             Reporter.log("STEP 10 through STEP 19");
             mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"site\":\"pub7-development\"", "\"title\":\"" + movieTitle + "\"", "\"path\":\"\\/node\\/" + movieNodeNumber + "\"", "\"content_id\":\"node" + movieNodeNumber + "\"", "\"is_content\":1", "\"type\":\"movie\"", "\"cag\":{\"genre\":\"Action\",\"movie-rating\":\"G\",\"movie-types\":\"Syndicated\"}", "\"pubdate\":"));
             
             Reporter.log("STEP 20");
-            webWebWebDriver.navigate().to(webWebWebDriver.getCurrentUrl() + "?kumud=1");
+            webDriver.navigate().to(webDriver.getCurrentUrl() + "?kumud=1");
             //contentParent.VerifySourceInPage(Arrays.asList("a3VtdWQ9MQ==")); TODO debug
             
             Reporter.log("STEP 21");
@@ -112,17 +113,17 @@ public class ImplementMPS extends ParentTest {
             selectFile.VerifyMediaThumbnailImagePresent("HanSolo", "1");
             selectFile.ClickMediaThumbnailImage("1");
             selectFile.ClickSubmitBtn();
-            webWebWebDriver.switchTo().defaultContent();
-            MediaItems mediaItems = new MediaItems(webWebWebDriver);
+            webDriver.switchTo().defaultContent();
+            MediaItems mediaItems = new MediaItems(webDriver);
             mediaItems.VerifyFileImagePresent("HanSolo", "1");
-            ContentParent contentParent = new ContentParent(webWebWebDriver);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + mediaGalleryTitle + " has been created.");
         	String mediaGalleryNodeNumber = workBench.GetContentNodeNumber();
             String imageFileNumber = workBench.GetFileImageId("1");
             
             Reporter.log("STEP 22");
-            applib.openSitePage("/node/" + mediaGalleryNodeNumber + "/" + imageFileNumber);
+            appLib.openSitePage("/node/" + mediaGalleryNodeNumber + "/" + imageFileNumber);
             
             //TODO - a few extra steps as time allows
             
@@ -131,7 +132,7 @@ public class ImplementMPS extends ParentTest {
             
             Reporter.log("STEP 29");
             navigation.Structure("MPS Blocks");
-            MPSBlocks mpsBlocks = new MPSBlocks(webWebWebDriver);
+            MPSBlocks mpsBlocks = new MPSBlocks(webDriver);
             mpsBlocks.ClickAddLnk();
             String blockName = random.GetCharacterString(15);
             mpsBlocks.EnterBlockName(blockName);
@@ -140,7 +141,7 @@ public class ImplementMPS extends ParentTest {
             
             Reporter.log("STEP 30");
             navigation.Structure("Blocks");
-            Blocks blocks = new Blocks(webWebWebDriver);
+            Blocks blocks = new Blocks(webDriver);
             blocks.SelectRegion(blockName + " (MPS)", "Header");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");

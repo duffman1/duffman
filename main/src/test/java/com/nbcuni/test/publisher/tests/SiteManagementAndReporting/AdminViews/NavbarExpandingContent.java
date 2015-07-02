@@ -1,14 +1,14 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class NavbarExpandingContent extends ParentTest {
+public class NavbarExpandingContent extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC5935
@@ -18,7 +18,7 @@ public class NavbarExpandingContent extends ParentTest {
     public void NavbarExpandingContent_TC5935() throws Exception {
     	
     	Reporter.log("STEP 1");
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("STEP 2");

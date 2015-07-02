@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class MPSConfigurationPage extends ParentTest {
+public class MPSConfigurationPage extends GlobalBaseTest {
 	
 	Boolean testSuccessful = false;
 	
@@ -22,12 +23,12 @@ public class MPSConfigurationPage extends ParentTest {
     public void MPSConfigurationPage_TC3306() throws Exception {
         
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
         	navigation.Modules();
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.DisableModule("Pixelman");
         	modules.EnableModule("MPS");
         	
@@ -35,7 +36,7 @@ public class MPSConfigurationPage extends ParentTest {
             navigation.Configuration("MPS Configuration");
             
             Reporter.log("STEP 4");
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
+            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.CleanAllMPSOptions();
             mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
@@ -55,7 +56,7 @@ public class MPSConfigurationPage extends ParentTest {
             contentParent.VerifySourceInPage(Arrays.asList("mpsload.src='//'+mpsopts.host+'/fetch/ext/load-'+mpscall.site+'.js?nowrite=jq'; mpsload.id=\"mps-load\"", "mpsload.async=false; head.insertBefore(mpsload,head.firstChild)"));
             
             Reporter.log("STEP 6");
-            applib.openSitePage("/?x=y");
+            appLib.openSitePage("/?x=y");
             mpsConfiguration.VerifyMPSCallParameters(Arrays.asList("\"title\":\"Welcome to", "\"path\":\"\\/\"", "\"qs\":\"eD15\""));
             
             Reporter.log("STEP 7");
@@ -106,16 +107,16 @@ public class MPSConfigurationPage extends ParentTest {
             
     }
     
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"MPSConfigurationPage_TC3306"}, alwaysRun=true)
-	public void Cleanup() throws Exception {
-		if (testSuccessful == false) {
-			
-			UserLogin userLogin = applib.openApplication();
-			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-			navigation.Configuration("MPS Configuration");
-            MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
-            mpsConfiguration.CleanAllMPSOptions();
-            mpsConfiguration.ClickSaveConfigurationBtn();
-		}
-	}
+//    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"MPSConfigurationPage_TC3306"}, alwaysRun=true)
+//	public void Cleanup() throws Exception {
+//		if (testSuccessful == false) {
+//
+//			UserLogin userLogin = appLib.openApplication();
+//			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+//			navigation.Configuration("MPS Configuration");
+//            MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
+//            mpsConfiguration.CleanAllMPSOptions();
+//            mpsConfiguration.ClickSaveConfigurationBtn();
+//		}
+//	}
 }

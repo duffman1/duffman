@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -12,7 +13,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class CreatePost extends ParentTest{
+public class CreatePost extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE - TC1048
@@ -22,7 +23,7 @@ public class CreatePost extends ParentTest{
     public void CreatePost_TC1048() throws Exception {
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             List<String> allStates = Arrays.asList("Draft", "Review", "Published");
@@ -33,12 +34,12 @@ public class CreatePost extends ParentTest{
             	
             	//Step 2
             	contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
-            	PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+            	PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             	publishingOptions.ClickPublishingOptionsLnk();
             	contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
             
             	//Step 3
-            	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+            	BasicInformation basicInformation = new BasicInformation(webDriver);
             	basicInformation.ClickBasicInformationTab();
             	String postTitle = random.GetCharacterString(15);
             	basicInformation.EnterTitle(postTitle);
@@ -47,7 +48,7 @@ public class CreatePost extends ParentTest{
             	//Step 4
             	basicInformation.SelectTextFormat("WYSIWYG Mini");
             	basicInformation.ClickCoverSelectBtn();
-            	SelectFile selectFile = new SelectFile(webWebWebDriver);
+            	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SelectDefaultCoverImg();
             	
             	//Step 5
@@ -57,7 +58,7 @@ public class CreatePost extends ParentTest{
             	//Step 6
             	contentParent.ClickSaveBtn();
             	contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-            	WorkBench workBench = new WorkBench(webWebWebDriver);
+            	WorkBench workBench = new WorkBench(webDriver);
             	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
             	
             }

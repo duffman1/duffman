@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SURF;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.Surf;
@@ -9,7 +9,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class SURFModule extends ParentTest {
+public class SURFModule extends GlobalBaseTest {
 
 	Boolean testSuccessful = false;
 	
@@ -23,12 +23,12 @@ public class SURFModule extends ParentTest {
 		Reporter.log("STEP 1 - N/A");
 		
 		Reporter.log("STEP 2");
-		UserLogin userLogin = applib.openApplication();
+		UserLogin userLogin = appLib.openApplication();
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	       
 		Reporter.log("STEP 3 - 9");
 		navigation.Modules();
-		Modules modules = new Modules(webWebWebDriver);
+		Modules modules = new Modules(webDriver);
 		modules.EnableModule("Pub SURF Example");
 		modules.EnableModule("Surf");
 		
@@ -36,7 +36,7 @@ public class SURFModule extends ParentTest {
 		navigation.Structure("Blocks");
 		
 		Reporter.log("STEP 11");
-		Blocks blocks = new Blocks(webWebWebDriver);
+		Blocks blocks = new Blocks(webDriver);
 		blocks.SelectRegion("Surf Example Actions", "Sidebar first");
 		blocks.SelectRegion("Surf Example Content", "Sidebar first");
 		blocks.ClickSaveBlocksBtn();
@@ -48,7 +48,7 @@ public class SURFModule extends ParentTest {
 		
 		Reporter.log("STEP 14");
 		navigation.Home();
-		Surf surf = new Surf(webWebWebDriver);
+		Surf surf = new Surf(webDriver);
 		surf.ClickSignInBtn();
 		
 		Reporter.log("STEP 15");
@@ -56,7 +56,7 @@ public class SURFModule extends ParentTest {
 		surf.EnterEmailUsername("brandon.clark@nbcuni.com");
 		surf.EnterPassword("tufNewcyd4#");
 		surf.ClickSurfFrmSignInBtn();
-		webWebWebDriver.switchTo().defaultContent();
+		webDriver.switchTo().defaultContent();
 		surf.VerifyUsernamePresent("baclark77");
 		
 		Reporter.log("STEP 16 - N/A");
@@ -81,10 +81,10 @@ public class SURFModule extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full"}, dependsOnMethods = {"SURFModule_TC3564"}, alwaysRun=true)
 		public void Cleanup() throws Exception {
 		 	if (testSuccessful == false) {
-		 		UserLogin userLogin = applib.openApplication();
+		 		UserLogin userLogin = appLib.openApplication();
 				userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 				navigation.Modules();
-		    	Modules modules = new Modules(webWebWebDriver);
+		    	Modules modules = new Modules(webDriver);
 		    	modules.DisableModule("Pub SURF Example");
 		    	navigation.ClickPrimaryTabNavLnk("Uninstall");
 		    	if (modules.IsModuleInstalled("Pub SURF Example")) {

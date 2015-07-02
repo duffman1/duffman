@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.CanonicalURLSupport;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class CanonicalURL extends ParentTest{
+public class CanonicalURL extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1080
@@ -30,12 +30,12 @@ public class CanonicalURL extends ParentTest{
     public void CanonicalURL_TC1080() throws Exception {
 
     	Reporter.log("STEP 1");
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
         navigation.Configuration("Media: thePlatform mpx settings");
-    	Settings settings = new Settings(webWebWebDriver);
+    	Settings settings = new Settings(webDriver);
         List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
 
         Reporter.log("STEP 2");
@@ -43,11 +43,11 @@ public class CanonicalURL extends ParentTest{
         	navigation.Structure("File types");
         	
         	Reporter.log("STEP 3");
-        	FileTypes fileTypes = new FileTypes(webWebWebDriver);
+        	FileTypes fileTypes = new FileTypes(webDriver);
         	fileTypes.ClickManageFieldsLnk(configuredAccounts.get(0));
         		
         	Reporter.log("STEP 4");
-        	ManageFields manageFields = new ManageFields(webWebWebDriver);
+        	ManageFields manageFields = new ManageFields(webDriver);
         	if (manageFields.FieldLabelExists("MPX Media Related Link") == false) {
         			
         		manageFields.EnterAddNewField("MPX Media Related Link");
@@ -64,18 +64,18 @@ public class CanonicalURL extends ParentTest{
     			
         	Reporter.log("STEP 7");
         	fileTypes.ClickEditFileTypeLnk(configuredAccounts.get(0));
-        	MPXFileType mpxFileType = new MPXFileType(webWebWebDriver);
+        	MPXFileType mpxFileType = new MPXFileType(webDriver);
             mpxFileType.SelectURLAliasField("MPX Media Related Link");
         	mpxFileType.ClickSaveBtn();
         	contentParent.VerifyMessageStatus("has been updated.");
         		
         	Reporter.log("STEP 8 NOTE- step 8 creates a new video with a canonical url rather than using an existing video");
-        	MPXLogin mpxLogin = new MPXLogin(webWebWebDriver);
+        	MPXLogin mpxLogin = new MPXLogin(webDriver);
             mpxLogin.OpenMPXThePlatform();
             mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
-            MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webWebWebDriver);
+            MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
             mpxSelectAccount.SelectAccount("DB TV");
-            MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
+            MPXAddMedia mpxAddMedia = new MPXAddMedia(appLib);
             mpxAddMedia.UploadDefaultVideo();
             String mediaTitle = "Automation" + random.GetCharacterString(10);
             mpxAddMedia.GiveFocusToMediaItem();
@@ -87,15 +87,15 @@ public class CanonicalURL extends ParentTest{
             mpxPublishMedia.PublishDefaultVideo();
         		
             Reporter.log("STEP 9");
-            applib.openApplication();
-            Cron cron = new Cron(webWebWebDriver);
+            appLib.openApplication();
+            Cron cron = new Cron(webDriver);
             if (config.getConfigValueString("DrushIngestion").equals("false")) {
             	cron.RunCron();
             }
             
         	Reporter.log("STEP 10");
         	navigation.Content("Files", "mpxMedia");
-        	SearchFor searchFor = new SearchFor(webWebWebDriver);
+        	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle(mediaTitle);
         	searchFor.ClickApplyBtn();
         	if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
@@ -103,7 +103,7 @@ public class CanonicalURL extends ParentTest{
         	    	int refreshCount = 0;
         	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                        	
-                		   applib.refreshPage();
+                		   appLib.refreshPage();
                 		   refreshCount++;
                 		   if (refreshCount == 15) {
                 		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
@@ -122,7 +122,7 @@ public class CanonicalURL extends ParentTest{
         	Reporter.log("STEP 11");
         	contentParent.VerifyPageContentPresent(Arrays.asList("MPX Media Related Link:", canonicalURL));
         	Reporter.log("Verify URL equals '" + config.getConfigValueString("AppURL") + "/" + canonicalURL + "'.");
-        	Assert.assertTrue(webWebWebDriver.getCurrentUrl().equals(config.getConfigValueString("AppURL") + "/" + canonicalURL));
+        	Assert.assertTrue(webDriver.getCurrentUrl().equals(config.getConfigValueString("AppURL") + "/" + canonicalURL));
         		
         }
         else {

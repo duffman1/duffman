@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Advertising.Comscore;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class Pixelman extends ParentTest {
+public class Pixelman extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1155
@@ -19,12 +20,12 @@ public class Pixelman extends ParentTest {
     public void Pixelman_TC1155() throws Exception {
         
     	Reporter.log("STEP 1");
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("STEP 2 -3");
         navigation.Modules();
-    	Modules modules = new Modules(webWebWebDriver);
+    	Modules modules = new Modules(webDriver);
     	modules.EnableModule("Pixelman");
     	
         Reporter.log("STEP 4");

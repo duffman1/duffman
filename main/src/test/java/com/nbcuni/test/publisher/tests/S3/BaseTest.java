@@ -4,6 +4,7 @@ import com.amazonaws.services.dynamodbv2.document.Page;
 import com.nbcuni.test.publisher.SiteMap;
 import com.nbcuni.test.publisher.bo.User;
 import com.nbcuni.test.publisher.common.Driver.listeners.SeleniumTestListener;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ import org.testng.annotations.BeforeClass;
  */
 
 @TestExecutionListeners(SeleniumTestListener.class)
-@ContextConfiguration(locations = {"classpath:entry.xml"})
+@ContextConfiguration(locations = {"classpath:configs/global.xml"})
 public class BaseTest extends AbstractCustomContext {
 
     @Autowired WebDriver webDriver;
@@ -26,6 +27,8 @@ public class BaseTest extends AbstractCustomContext {
     @Autowired UserLogin userLogin;
     @Autowired EmberNav menu;
 
+
+    @Autowired ContentParent contentParent;
 
     @BeforeClass
     public void init() throws Exception {

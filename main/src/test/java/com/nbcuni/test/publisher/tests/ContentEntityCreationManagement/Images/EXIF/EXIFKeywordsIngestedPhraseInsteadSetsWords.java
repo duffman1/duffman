@@ -1,14 +1,14 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.EXIF;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.SimpleEXIFIPTCMappings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
-public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
+public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC17
@@ -19,12 +19,12 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
          
         	//Step 1
     		Boolean publicFileOptionPresent = true;
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 1a
         	navigation.Configuration("Simple EXIF/IPTC Mappings");
-            SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webWebWebDriver, applib);
+            SimpleEXIFIPTCMappings simpleEXIFIPTCMappings = new SimpleEXIFIPTCMappings(webDriver, appLib);
             simpleEXIFIPTCMappings.SelectAltText("Title");
             simpleEXIFIPTCMappings.SelectTitleText("Title");
             simpleEXIFIPTCMappings.SelectCaption("Caption");
@@ -38,11 +38,11 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             
             //Step 2
             navigation.Content("Files");
-            Content content = new Content(webWebWebDriver);
+            Content content = new Content(webDriver);
             content.ClickAddFileLnk();
-            AddFile addFile = new AddFile(webWebWebDriver);
+            AddFile addFile = new AddFile(webDriver);
             addFile.ClickAddFilesLnk();
-            if (((RemoteWebDriver)webWebWebDriver).getCapabilities().getPlatform().toString() == "MAC") {
+            if (((RemoteWebDriver) webDriver).getCapabilities().getPlatform().toString() == "MAC") {
             	addFile.ClickPicturesUploadBtn();
             	addFile.ClickTestPictureExifDataBtn();
             	addFile.ClickOpenBtn();
@@ -58,7 +58,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             addFile.ClickNextBtn();
             
             //Step 3
-            EditImage editImage = new EditImage(webWebWebDriver);
+            EditImage editImage = new EditImage(webDriver);
             editImage.VerifyTitleTextValue("1", "NUP_155306_0046.JPG");
             editImage.VerifyAltTextValue("1", "NUP_155306_0046.JPG");
             editImage.VerifySourceValue("1", "Episodic");
@@ -66,20 +66,20 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             editImage.VerifyCopyrightValue("1", "2013 NBCUniversal Media, LLC");
             editImage.VerifyKeywordsValue("1", "NUP_155306, Revolution, Episode 118, Season 1");
             editImage.ClickSaveBtn("1");
-            ContentParent contentParent = new ContentParent(webWebWebDriver);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyMessageStatus("Image");
             contentParent.VerifyMessageStatus("has been updated.");
             
             //Step 4
             navigation.AddContent("Media Gallery");
-            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+            BasicInformation basicInformation = new BasicInformation(webDriver);
             String title = random.GetCharacterString(15);
             basicInformation.EnterTitle(title);
             basicInformation.ClickMediaItemsSelectBtn();
-            SelectFile selectFile = new SelectFile(webWebWebDriver);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
             addFile.ClickAddFilesLnk();
-            if (((RemoteWebDriver)webWebWebDriver).getCapabilities().getPlatform().toString() == "MAC") {
+            if (((RemoteWebDriver) webDriver).getCapabilities().getPlatform().toString() == "MAC") {
             	addFile.ClickPicturesUploadBtn();
             	addFile.ClickTestPictureExifDataBtn();
             	addFile.ClickOpenBtn();
@@ -93,10 +93,10 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
             addFile.ClickStartUploadLnk();
             addFile.WaitForSuccessfulUpload();
             addFile.ClickNextBtn();
-            webWebWebDriver.switchTo().defaultContent();
+            webDriver.switchTo().defaultContent();
             
             //Step 5
-            MediaItems mediaItems = new MediaItems(webWebWebDriver);
+            MediaItems mediaItems = new MediaItems(webDriver);
             mediaItems.VerifyFileImagePresent("NUP_155306_0046", "1");
             mediaItems.ClickEditBtn("1");
             
@@ -132,7 +132,7 @@ public class EXIFKeywordsIngestedPhraseInsteadSetsWords extends ParentTest{
         	selectFile.VerifyFileImagePresent("NUP_155306_0046");
         	selectFile.ClickSaveBtn();
         	selectFile.WaitForSelectFileFrameClose();
-        	webWebWebDriver.switchTo().defaultContent();
+        	webDriver.switchTo().defaultContent();
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Media Gallery " + title + " has been created.");
             

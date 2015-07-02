@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.TextFormat;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Logout;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class ImageSnippetsInlineWithContent extends ParentTest{
+public class ImageSnippetsInlineWithContent extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC6666
@@ -22,18 +22,18 @@ public class ImageSnippetsInlineWithContent extends ParentTest{
     public void ImageSnippetsInlineWithContent_TC6666() throws Exception {
         
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
         	Reporter.log("STEP 2");
         	navigation.Modules();
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.EnableModule("Publisher WYSIWYG");
         	modules.EnableModule("Focal Point");
         	
         	Reporter.log("STEP 3");
         	navigation.Configuration("Text formats");
-        	TextFormat textFormat = new TextFormat(webWebWebDriver);
+        	TextFormat textFormat = new TextFormat(webDriver);
         	textFormat.ClickConfigureLnk("Publisher");
         	textFormat.ClickEnabledFilters(Arrays.asList("Limit allowed HTML tags", "Publisher youtube formatter", 
         			"Publisher mpx video formatter", "Convert line breaks into HTML", 
@@ -44,13 +44,13 @@ public class ImageSnippetsInlineWithContent extends ParentTest{
         	
         	Reporter.log("STEP 4");
         	navigation.AddContent("Movie");
-        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
         	String movieTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(movieTitle);
         	basicInformation.ClickEmbedImageBtn();;
         	
         	Reporter.log("STEP 5");
-        	SelectFile selectFile = new SelectFile(webWebWebDriver);
+        	SelectFile selectFile = new SelectFile(webDriver);
         	selectFile.SwitchToSelectFileFrm();
         	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "HanSolo1.jpg");
         	selectFile.ClickUploadBtn();
@@ -69,14 +69,14 @@ public class ImageSnippetsInlineWithContent extends ParentTest{
         	selectFile.WaitForSelectFileFrameClose();
         	
         	Reporter.log("STEP 8");
-        	EmbedVideo embedVideo = new EmbedVideo(webWebWebDriver);
+        	EmbedVideo embedVideo = new EmbedVideo(webDriver);
         	embedVideo.SwitchToSynopsisFrm();
         	embedVideo.VerifyEmbeddedImagePresent("1", "HanSolo", "200", "252");
-        	webWebWebDriver.switchTo().defaultContent();
+        	webDriver.switchTo().defaultContent();
         	
         	Reporter.log("STEP 9 and STEP 10");
         	embedVideo.DoubleClickImagePropertiesBtn("1");
-        	ImageProperties imageProperties = new ImageProperties(webWebWebDriver);
+        	ImageProperties imageProperties = new ImageProperties(webDriver);
         	imageProperties.EnterWidth("300");
         	imageProperties.EnterHeight("378");
         	imageProperties.ClickOKBtn();
@@ -85,7 +85,7 @@ public class ImageSnippetsInlineWithContent extends ParentTest{
         	Reporter.log("STEP 11");
         	embedVideo.SwitchToSynopsisFrm();
         	embedVideo.VerifyEmbeddedImagePresent("1", "HanSolo", "300", "378");
-        	webWebWebDriver.switchTo().defaultContent();
+        	webDriver.switchTo().defaultContent();
         	
         	Reporter.log("STEP 12 - 14");
         	basicInformation.ClickCoverSelectBtn();
@@ -99,7 +99,7 @@ public class ImageSnippetsInlineWithContent extends ParentTest{
         	embedVideo.VerifyEmbeddedImageAdjustedPresent("1", "HanSolo", "300", "378");
         	
         	Reporter.log("STEP 17");
-        	WorkBench workBench = new WorkBench(webWebWebDriver);
+        	WorkBench workBench = new WorkBench(webDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
         	basicInformation.ClickEmbedImageBtn();
         	selectFile.SwitchToSelectFileFrm();
@@ -138,15 +138,15 @@ public class ImageSnippetsInlineWithContent extends ParentTest{
             
             Reporter.log("STEP 22");
             workBench.ClickWorkBenchTab("Edit Draft");
-            PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+            PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             publishingOptions.ClickPublishingOptionsLnk();
             publishingOptions.SelectModerationState("Published");
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been updated.");
-            String movieURL = webWebWebDriver.getCurrentUrl();
-            Logout logout = new Logout(webWebWebDriver);
+            String movieURL = webDriver.getCurrentUrl();
+            Logout logout = new Logout(webDriver);
             logout.ClickLogoutBtn();
-            applib.openSitePage(movieURL);
+            appLib.openSitePage(movieURL);
             embedVideo.VerifyEmbeddedImagePresent("1", "HanSolo", "200", "252");
             embedVideo.VerifyEmbeddedImageAdjustedPresent("2", "HanSolo", "300", "378");
             embedVideo.VerifyVideoPresent("//youtube.com/embed/yp9pTFcD2uk", "360", "640");

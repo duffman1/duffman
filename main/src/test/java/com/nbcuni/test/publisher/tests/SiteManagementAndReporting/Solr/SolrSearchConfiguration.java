@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.Solr;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.Configuration.Solr;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class SolrSearchConfiguration extends ParentTest {
+public class SolrSearchConfiguration extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC6724
@@ -25,12 +25,12 @@ public class SolrSearchConfiguration extends ParentTest {
     public void SolrSearchConfiguration_TC6724() throws Exception {
     	
     	Reporter.log("STEP 1");
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("STEP 2");
     	navigation.Modules();
-    	Modules modules = new Modules(webWebWebDriver);
+    	Modules modules = new Modules(webDriver);
     	for (String module : Arrays.asList("Apache Solr framework", "Apache Solr search", 
     			"Acquia agent", "Acquia search", "Search")) {
     		modules.EnableModule(module);
@@ -38,7 +38,7 @@ public class SolrSearchConfiguration extends ParentTest {
     	
     	Reporter.log("STEP 3");
     	navigation.Configuration("Apache Solr search");
-    	Solr solr = new Solr(webWebWebDriver);
+    	Solr solr = new Solr(webDriver);
     	solr.ClickDeleteSolrSearchIndexBtn();
     	
     	Reporter.log("STEP 4");
@@ -47,20 +47,20 @@ public class SolrSearchConfiguration extends ParentTest {
     	solr.ClickIndexAllQueuedContentBtn();
     	solr.ClickIndexAllRemainingBtn();
     	contentParent.WaitForProgressBarNotPresent();
-    	ErrorChecking errorChecking = new ErrorChecking(webWebWebDriver);
+    	ErrorChecking errorChecking = new ErrorChecking(webDriver);
     	errorChecking.VerifyNoMessageErrorsPresent();
     	
     	Reporter.log("STEP 5");
     	navigation.Structure("Blocks");
     	
     	Reporter.log("STEP 6");
-    	Blocks blocks = new Blocks(webWebWebDriver);
+    	Blocks blocks = new Blocks(webDriver);
     	blocks.SelectRegion("Search form", "Header");
     	blocks.ClickSaveBlocksBtn();
     	contentParent.VerifyMessageStatus("The block settings have been updated.");
     	
     	Reporter.log("STEP 7");
-    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
     	String postTitle = createDefaultContent.Post("Published");
     	
     	Reporter.log("STEP 8");
@@ -77,13 +77,13 @@ public class SolrSearchConfiguration extends ParentTest {
         	}
         	
         	try {
-        		Assert.assertTrue(webWebWebDriver.findElement(By.xpath("//body")).getText()
+        		Assert.assertTrue(webDriver.findElement(By.xpath("//body")).getText()
         				.contains("0 items (100% has been sent to the server)"));
         		break;
         	}
         	catch (AssertionError e) { 
         		Thread.sleep(1000);
-        		applib.refreshPage();
+        		appLib.refreshPage();
         	}
         }
     	

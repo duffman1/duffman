@@ -24,7 +24,7 @@ import java.io.File;
 @Configuration
 @Scope("prototype")
 @Page
-public class ManageFields {
+public class ManageFields extends com.nbcuni.test.publisher.pageobjects.Page {
 
     private MediaBrowserPlugins mediaBrowserPlugins;
     private AllowedURISchemas allowedURISchemas;

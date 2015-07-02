@@ -1,10 +1,10 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import org.testng.annotations.Test;
 
-public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
+public class EditorPermissionCustomQueuesOperationsMenu extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1379
@@ -15,7 +15,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
     	
     	/* COMMENTING OUT THIS TEST - WAITING FOR INFO FROM SRUTHI
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//Step 2
@@ -23,7 +23,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
     	overlay.SwitchToActiveFrame();
     	
     	//Step 3
-    	AddQueueType addQueueType = new AddQueueType(webDriver, applib);
+    	AddQueueType addQueueType = new AddQueueType(webDriver, appLib);
     	String queueTypeName = random.GetCharacterString(15);
     	addQueueType.EnterName(queueTypeName);
     	addQueueType.SelectEntityType("Node");
@@ -68,7 +68,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
     	overlay.SwitchToActiveFrame();
     	
     	//Step 11
-    	Permissions permissions = new Permissions(webDriver, applib);
+    	Permissions permissions = new Permissions(webDriver, appLib);
     	permissions.DisablePermissions(null, Arrays.asList("administer queue types", 
     			"administer queue", "edit any promo_queue queue"));
     	
@@ -122,7 +122,7 @@ public class EditorPermissionCustomQueuesOperationsMenu extends ParentTest {
         //Cleanup
         taxonomy.NavigateSite("Structure>>Queues");
         overlay.SwitchToActiveFrame();
-        QueueTypes queueTypes = new QueueTypes(webDriver, applib);
+        QueueTypes queueTypes = new QueueTypes(webDriver, appLib);
         queueTypes.ClickDeleteQueueLnk(queueTypeName);
         overlay.SwitchToActiveFrame();
         delete.ClickDeleteBtn();

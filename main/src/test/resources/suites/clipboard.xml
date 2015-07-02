@@ -1,0 +1,332 @@
+<suite name="Publisher 7 Test Suite" parallel="tests" preserve-order="true" thread-count="4">
+    <!--LISTENERS-->
+    <listeners>
+        <listener class-name="com.nbcuni.test.publisher.common.Reports.CustomReport"/>
+        <listener class-name="com.nbcuni.test.publisher.common.Listeners.TestListeners"/>
+        <listener class-name="com.nbcuni.test.publisher.common.Listeners.SuiteListeners"/>
+    </listeners>
+
+    <!--TEST EXECUTION QUEUE-->
+    <!--<test verbose="1" name="All Web Tests">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.S3.S3"/>-->
+    <!--&lt;!&ndash;<class name="com.nbcuni.test.publisher.tests.S3.S4"/>&ndash;&gt;-->
+    <!--</classes>-->
+
+    <!--</test>-->
+
+    <!--<test verbose="1" name="All Web Tests2">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.S3.S4"/>-->
+    <!--</classes>-->
+
+    <!--</test>  -->
+
+    <parameter name="AppURL" value="http://qa4.publisher7.com"></parameter>
+    <parameter name="Browser" value="firefox"></parameter>
+    <parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
+    <parameter name="Admin1Password" value="pa55word"></parameter>
+    <parameter name="ReRunOnFailure" value="true"></parameter>
+    <parameter name="ReRunOnFailureCount" value="0"></parameter>
+    <parameter name="RunRemotely" value="true"></parameter>
+    <parameter name="SendReportAutoEmails" value="false"></parameter>
+    <parameter name="UploadReportToRally" value="true"></parameter>
+    <parameter name="UpdateIndividualRallyTCs" value="true"></parameter>
+    <parameter name="GithubUpdatePRResults" value="false"></parameter>
+    <parameter name="RunSetupScripts" value="true"></parameter>
+    <parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
+    <parameter name="ClearCacheOnFailure" value="true"></parameter>
+    <!--<parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"></parameter>-->
+
+    <!--REPORT CONFIG-->
+    <parameter name="PathToReports" value="/test-output/reports/"></parameter>
+    <parameter name="PathToScreenshots" value="/test-output/screenshots/"></parameter>
+    <parameter name="PathToHarReports" value="/test-output/"></parameter>
+
+    <!--MOBILE CONFIG-->
+    <parameter name="RunMobile" value="false"></parameter>
+    <parameter name="Device" value="Iphone Simulator"></parameter>
+
+    <!--GMAIL CONFIG-->
+    <parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"></parameter>
+    <parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"></parameter>
+
+    <!--SSO CONFIG-->
+    <parameter name="SSOUsername" value="206439339"></parameter>
+    <parameter name="SSOPassword" value="Pa55word"></parameter>
+    <parameter name="SSOEmail" value="FID.Publisher@nbcuni.com"></parameter>
+
+    <!--RALLY CONFIG-->
+    <parameter name="RallyUsername" value="brandon.clark@nbcuni.com"></parameter>
+    <parameter name="RallyPassword" value="tufNewcyd4#"></parameter>
+    <parameter name="RallyUrl" value="https://rally1.rallydev.com"></parameter>
+    <parameter name="RallyWorkspace" value="Digital Backbone Products"></parameter>
+    <parameter name="RallyProject" value="Publisher 7"></parameter>
+    <parameter name="RallyTCID" value="TC7084"></parameter>
+
+    <!--GITHUB CONFIG-->
+    <parameter name="GithubUsername" value=""></parameter>
+    <parameter name="GithubPassword" value=""></parameter>
+    <parameter name="GithubOwner" value="NBCUOTS"></parameter>
+    <parameter name="GithubRepo" value="Publisher7_citest"></parameter>
+
+    <!--MPX CONFIG-->
+    <parameter name="MPXUrl" value="http://mpx.theplatform.com/"></parameter>
+    <parameter name="MPXUsername" value="mpx/AdminPub7QA"></parameter>
+    <parameter name="MPXPassword" value="Pa55word"></parameter>
+    <parameter name="MPXVideoUploadPause" value="5000"></parameter>
+    <parameter name="MPXAssetBufferPause" value="0"></parameter>
+    <parameter name="DrushIngestion" value="false"></parameter>
+
+    <!--SIKULI CONFIG-->
+    <parameter name="PathToSikuliImages"
+               value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"></parameter>
+    <parameter name="SikuliImageWaitTime" value="60"></parameter>
+
+    <!--WEBDRIVER WAIT CONFIG-->
+    <parameter name="ImplicitWaitTime" value="10"></parameter>
+    <!-- Seconds -->
+    <parameter name="WaitForWaitTime" value="30"></parameter>
+    <!-- Seconds -->
+    <parameter name="PageLoadWaitTime" value="90"></parameter>
+    <!-- Seconds -->
+    <parameter name="PollingTime" value="500"></parameter>
+    <!-- Milliseconds -->
+    <parameter name="DriverRecyclePause" value="3000"></parameter>
+    <!-- Milliseconds > than node recycle -->
+
+    <!--MISC CONFIG-->
+    <parameter name="PathToMediaContent"
+               value="/src/test/java/com/nbcuni/test/publisher/content/MediaFiles/"></parameter>
+    <parameter name="ErrorCheckingEnabled" value="true"></parameter>
+    <parameter name="RemoteWebDriverHubPort" value="4444"></parameter>
+    <parameter name="LocalAppiumHubPort" value="4724"></parameter>
+
+    <!--IRC CONFIG-->
+    <parameter name="SendReportIRCChat" value="false"></parameter>
+    <parameter name="IRCServer" value="irc.freenode.net"></parameter>
+    <parameter name="IRCNickname" value="NBCUniAutomationBotOnIRC"></parameter>
+    <parameter name="IRCChannel" value="#nbcuots_pub7"></parameter>
+
+    <test verbose="1" name="Pixelman">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.Advertising.Comscore.Pixelman"/>
+        </classes>
+    </test>
+
+    <test verbose="1" name="StickyButtons">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions.StickyButtons"/>
+        </classes>
+    </test>
+
+    <!--<test verbose="1" name="VideoPerFile">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.Video.Player.SelectVideoPlayerPerVideoFile"/>-->
+    <!--</classes>-->
+    <!--</test>-->
+
+    <test verbose="1" name="Enchance mpx">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.Video.NonFunctionalEnhanceMPXPlayerContentAdminScreen.EnhanceMPXPlayerContentAdminScreen"/>
+        </classes>
+    </test>
+
+    <!--<test verbose="1" name="EntityReferenceVerification">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets.EntityReferenceVerification"/>-->
+    <!--</classes>-->
+    <!--</test>-->
+    <test verbose="1" name="CreatePost">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Post.CreatePost"/>
+        </classes>
+    </test>
+    <test verbose="1" name="CreateCharacterProfile">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CharacterProfile.CreateCharacterProfile"/>
+        </classes>
+    </test>
+    <test verbose="1" name="CreatePerson">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person.CreatePerson"/>
+        </classes>
+    </test>
+    <!--<test verbose="1" name="MPSConfigurationPage">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSConfigurationPage"/>-->
+    <!--</classes>-->
+    <!--</test>-->
+
+    <!--<test verbose="1" name="CreateTVEpisode">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVEpisode.CreateTVEpisode"/>-->
+    <!--</classes>-->
+    <!--</test>-->
+
+    <test verbose="1" name="PasswordRules">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords.PasswordRules"/>
+        </classes>
+    </test>
+    <test verbose="1" name="CreateTVSeason">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason.CreateTVSeason"/>
+        </classes>
+    </test>
+    <!--<test verbose="1" name="CreateCustomContentType">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.CustomContentType.CreateCustomContentType"/>-->
+    <!--</classes>-->
+    <!--</test>-->
+
+    <test verbose="1" name="PublishContenttoUnauthenticatedUsers">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityModerationStatesandWorkflows.PublishContenttoUnauthenticatedUsers"/>
+
+        </classes>
+    </test>
+
+    <test verbose="1" name="EnhanceOperationsDropdownonScheduleTab">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.EnhanceOperationsDropdownonScheduleTab"/>
+
+        </classes>
+    </test>
+
+    <test verbose="1" name="ScheduleToPublishContentByDateTime">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+              <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling.ScheduleToPublishContentByDateTime"/>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable"/>
+        </classes>
+    </test>
+
+    <test verbose="1" name="EnhanceContentLibraryTable">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EnhanceContentLibraryTable.EnhanceContentLibraryTable"/>
+        </classes>
+    </test>
+
+
+
+
+    <test verbose="1" name="PublishContenttoUnauthenticatedUsers">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+           <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.ImplementMPS"/>
+
+        </classes>
+    </test>
+
+    <test verbose="1" name="InstallZeeboxModule">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule.InstallZeeboxModule"/>
+
+        </classes>
+    </test>
+
+    <test verbose="1" name="CastCrewFieldCollectionsVerificationMovie">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+
+
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.CastCrewFieldCollectionsVerificationMovie"/>
+
+        </classes>
+    </test>
+
+    <test verbose="1" name="Relationships">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships.Relationships"/>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms"/>
+        </classes>
+    </test>
+
+    <test verbose="1" name="AddApplyEmbeddedMetadataButtonAllImageForms">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+			<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.AddApplyEmbeddedMetadataButton.AddApplyEmbeddedMetadataButtonAllImageForms"/>
+        </classes>
+    </test>
+
+
+
+
+    <test verbose="1" name="CreateConfigureDynamicQueue">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.CreateConfigureDynamicQueue"/>
+        </classes>
+    </test>
+
+    <test verbose="1" name="DynamicQueuePagination">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.DynamicQueuePagination"/>
+        </classes>
+
+    </test>
+    <!--<test verbose="1" name="All Web Tests3">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo.CreateLogo"/>-->
+    <!--</classes>-->
+
+    <!--</test>-->
+    <test verbose="1" name="RelatingTVShowsDynamicQueues">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.RelatingTVShowsDynamicQueues"/>
+        </classes>
+
+    </test>
+    <test verbose="1" name="AddTaxonomyParameters">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.Queues.DynamicQueues.AddTaxonomyParameters"/>
+        </classes>
+    </test>
+
+    <!--<test verbose="1" name="All Web Tests6">-->
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<classes>-->
+    <!--<class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock.CountdownClockEvents"/>-->
+    <!--</classes>-->
+    <!--</test>-->
+    <test verbose="1" name="MPSSupportTokens">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.Advertising.MPS.MPSSupportTokens"/>
+        </classes>
+    </test>
+
+    <test verbose="1" name="SnippetInlineContent">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds.SnippetInlineContent"/>
+        </classes>
+    </test>
+
+</suite>

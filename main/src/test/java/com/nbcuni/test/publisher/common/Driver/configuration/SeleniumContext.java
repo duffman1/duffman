@@ -54,8 +54,8 @@ public class SeleniumContext {
     public WebDriver webDriver() {
         CustomWebDriver webDriver = new CustomWebDriver(url, capabilities);
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         return webDriver;
     }
 

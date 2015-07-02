@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Core.Profiles;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -16,7 +16,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class FileFieldsTokenBasedPath extends ParentTest {
+public class FileFieldsTokenBasedPath extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC4355
@@ -26,12 +26,12 @@ public class FileFieldsTokenBasedPath extends ParentTest {
     public void FileFieldsTokenBasedPath_TC4355() throws Exception{
         
     	Reporter.log("STEP 1");
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("STEP 2");
         navigation.Structure("Content types");
-        ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
+        ContentTypes contentTypes = new ContentTypes(webDriver);
         contentTypes.ClickAddContentLnk();
         String contentTypeName = random.GetCharacterString(10);
         contentTypes.EnterName(contentTypeName);
@@ -47,7 +47,7 @@ public class FileFieldsTokenBasedPath extends ParentTest {
         contentParent.VerifyMessageStatus("Updated field " + newFileFieldName + " field settings.");
         
         Reporter.log("STEP 4");
-        Edit edit = new Edit(webWebWebDriver, applib);
+        Edit edit = new Edit(webDriver, appLib);
         edit.VerifyFileDirectoryValue("[current-date:custom:Y]/[current-date:custom:m]");
         
         Reporter.log("STEP 5");
@@ -73,17 +73,17 @@ public class FileFieldsTokenBasedPath extends ParentTest {
         
         Reporter.log("STEP 9");
         navigation.AddContent(contentTypeName);
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         String contentTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(contentTitle);
         basicInformation.EnterSynopsis();
-        SelectFile selectFile = new SelectFile(webWebWebDriver);
+        SelectFile selectFile = new SelectFile(webDriver);
         selectFile.EnterCustomFieldFilePath(newImageFieldName, config.getConfigValueFilePath("PathToMediaContent") + "HanSolo1.jpg");
 		selectFile.ClickCustomFieldUploadBtn(newImageFieldName);
     	selectFile.WaitForFileUploaded("HanSolo1.jpg");
     	contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus(contentTypeName + " " + contentTitle + " has been created.");
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         Date currentMonth = Calendar.getInstance().getTime();
     	SimpleDateFormat currentMonthFormat = new SimpleDateFormat("yyyy/MM");
     	currentMonthFormat.setTimeZone(TimeZone.getTimeZone("UTC"));

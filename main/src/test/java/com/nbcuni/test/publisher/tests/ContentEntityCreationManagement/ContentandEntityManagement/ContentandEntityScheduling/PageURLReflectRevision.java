@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
@@ -18,7 +18,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class PageURLReflectRevision extends ParentTest {
+public class PageURLReflectRevision extends GlobalBaseTest {
 
 	/*************************************************************************************
 	* TEST CASE - TC6585
@@ -28,21 +28,21 @@ public class PageURLReflectRevision extends ParentTest {
         public void PageURLReflectRevision_TC6585() throws Exception{
 
         Reporter.log("STEP 1");
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 
         Reporter.log("STEP 2");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Published");
-        String postURL = webWebWebDriver.getCurrentUrl();
+        String postURL = webDriver.getCurrentUrl();
         
         Reporter.log("STEP 3");
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitleRevision1 = "Revision1" + random.GetCharacterString(10);
         basicInformation.EnterTitle(postTitleRevision1);
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
         publishingOptions.SelectModerationState("Draft");
@@ -85,7 +85,7 @@ public class PageURLReflectRevision extends ParentTest {
         
         Reporter.log("STEP 5");
         workBench.ClickWorkBenchTab("Schedule");
-        ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
+        ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
         scheduleQueue.ClickAddScheduledRevisionLnk();
         scheduleQueue.SelectRevision(postTitle);
         scheduleQueue.SelectOperation("Moderate to Unpublished");
@@ -108,58 +108,58 @@ public class PageURLReflectRevision extends ParentTest {
         contentParent.VerifyPageURL(postURL);
         
         Reporter.log("STEP 8");
-        Logout logout = new Logout(webWebWebDriver);
+        Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         Reporter.log("STEP 9");
-        applib.openApplication();
+        appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         workBench.ClickWorkBenchTab("Schedule");
         scheduleQueue.ClickRunNowLnk(postTitleRevision1, "Moderate to Published");
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(postTitleRevision1, "Moderate to Published", pub7Date15MinuteFuture + " - ", "Completed"));
         
         Reporter.log("STEP 10");
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         contentParent.VerifyPageURL(config.getConfigValueString("AppURL") + "/content/" + postTitleRevision1.toLowerCase());
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitleRevision1));
         
         Reporter.log("STEP 11");
         logout.ClickLogoutBtn();
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         contentParent.VerifyPageURL(config.getConfigValueString("AppURL") + "/content/" + postTitleRevision1.toLowerCase());
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitleRevision1));
         
         Reporter.log("STEP 12");
-        applib.openApplication();
+        appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         workBench.ClickWorkBenchTab("Schedule");
         scheduleQueue.ClickRunNowLnk(postTitleRevision2, "Moderate to Published");
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(postTitleRevision2, "Moderate to Published", pub7Date15MinuteFuture + " - ", "Completed"));
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         contentParent.VerifyPageURL(config.getConfigValueString("AppURL") + "/content/" + postTitleRevision2.toLowerCase());
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitleRevision2));
         
         Reporter.log("STEP 13");
         logout.ClickLogoutBtn();
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         contentParent.VerifyPageURL(config.getConfigValueString("AppURL") + "/content/" + postTitleRevision2.toLowerCase());
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitleRevision2));
         
         Reporter.log("STEP 14");
-        applib.openApplication();
+        appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         workBench.ClickWorkBenchTab("Schedule");
         scheduleQueue.ClickRunNowLnk(postTitle, "Moderate to Unpublished");
         scheduleQueue.VerifyScheduledQueue(Arrays.asList(postTitle, "Moderate to Unpublished", pub7Date15MinuteFuture + " - ", "Completed"));
         
         Reporter.log("STEP 15");
         logout.ClickLogoutBtn();
-        applib.openSitePage(postURL);
+        appLib.openSitePage(postURL);
         contentParent.VerifyPageURL(postURL);
         contentParent.VerifyPageContentPresent(Arrays.asList("Access denied"));
         

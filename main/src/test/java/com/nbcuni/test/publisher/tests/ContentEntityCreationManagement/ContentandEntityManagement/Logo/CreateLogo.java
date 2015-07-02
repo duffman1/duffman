@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
@@ -13,7 +14,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CreateLogo extends ParentTest{
+public class CreateLogo extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE - TC1066
@@ -23,11 +24,11 @@ public class CreateLogo extends ParentTest{
     public void CreateLogo_TC1066() throws Exception {
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2 (previously scheduled in setup test)
-        	Logos logos = new Logos(webWebWebDriver, applib);
+        	Logos logos = new Logos(webDriver, appLib);
         	logos.VerifyHomePageLogoImgPresent("nbclogosmall");
         	
         	//Step 3
@@ -35,7 +36,7 @@ public class CreateLogo extends ParentTest{
         	logos.ClickAddLogoLnk();
         	
             //Step 4
-            AddLogo addLogo = new AddLogo(webWebWebDriver);
+            AddLogo addLogo = new AddLogo(webDriver);
             String logoTitle = random.GetCharacterString(15);
             addLogo.EnterTitle(logoTitle);
             addLogo.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "nbclogosmall.jpg");

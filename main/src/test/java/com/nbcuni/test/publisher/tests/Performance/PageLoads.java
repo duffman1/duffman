@@ -1,9 +1,9 @@
 package com.nbcuni.test.publisher.tests.Performance;
 
-import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import org.testng.annotations.Test;
 
-public class PageLoads extends ParentTest{
+public class PageLoads extends GlobalBaseTest {
 	
     @Test(groups = {"full", "performance" })
     public void PageLoads_Test() throws Exception{

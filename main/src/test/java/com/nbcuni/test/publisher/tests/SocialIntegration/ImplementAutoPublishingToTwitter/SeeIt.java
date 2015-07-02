@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.ImplementAutoPublishingToTwitter;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.MetaTags;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class SeeIt extends ParentTest{
+public class SeeIt extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1060
@@ -20,25 +20,25 @@ public class SeeIt extends ParentTest{
     public void SeeIt_TC1060() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     	
     	//Step 2
     	navigation.Modules();
-    	Modules modules = new Modules(webWebWebDriver);
+    	Modules modules = new Modules(webDriver);
     	modules.EnableModule("Metatag: Twitter Cards (See It)");
     	
     	//Step 3
     	navigation.AddContent("Post");
     	
         //Step 4
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         String postTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(postTitle);
         basicInformation.EnterSynopsis();
         
         //Step 5
-        MetaTags metaTags = new MetaTags(webWebWebDriver);
+        MetaTags metaTags = new MetaTags(webDriver);
         metaTags.ClickMetaTagsLnk();
         metaTags.ExpandTwitterCardMenu();
         metaTags.EnterSeeItShowIDEpisodeID("9222635058369246112");

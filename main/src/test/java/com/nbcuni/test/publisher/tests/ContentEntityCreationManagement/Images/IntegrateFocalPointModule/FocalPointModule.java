@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.IntegrateFocalPointModule;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.AddFocalPointCropEffect;
 import com.nbcuni.test.publisher.pageobjects.Configuration.FocalPoint;
 import com.nbcuni.test.publisher.pageobjects.Configuration.ImageStyles;
@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class FocalPointModule extends ParentTest{
+public class FocalPointModule extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1052
@@ -30,26 +30,26 @@ public class FocalPointModule extends ParentTest{
          
         //Step 1
     	Boolean publicFileOptionPresent = true;
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         //Step 2
-        Modules modules = new Modules(webWebWebDriver);
+        Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Focal Point");
         	
         //Step 3
         navigation.Configuration("Focal Point");
-        FocalPoint focalPoint = new FocalPoint(webWebWebDriver);
+        FocalPoint focalPoint = new FocalPoint(webDriver);
         focalPoint.ClickStandardImageFieldsCbx();
         focalPoint.ClickMediaModuleImageFieldsCbx();
         focalPoint.ClickSaveConfigurationBtn();
         contentParent.VerifyMessageStatus("The configuration options have been saved.");
         navigation.Configuration("Image styles");	
-        ImageStyles imageStyles = new ImageStyles(webWebWebDriver);
+        ImageStyles imageStyles = new ImageStyles(webDriver);
         if (imageStyles.FocalImageStylePresent("AutomationFocalStyle") == true) {
         	
         	imageStyles.ClickDeleteStyleLnk("AutomationFocalStyle");
-        	Delete delete = new Delete(webWebWebDriver);
+        	Delete delete = new Delete(webDriver);
         	delete.ClickDeleteBtn();
         	contentParent.VerifyMessageStatus("Style AutomationFocalStyle was deleted.");
         	
@@ -66,7 +66,7 @@ public class FocalPointModule extends ParentTest{
         imageStyles.ClickAddBtn();
             	
         //Step 6
-        AddFocalPointCropEffect addFocalPointCropEffect = new AddFocalPointCropEffect(webWebWebDriver);
+        AddFocalPointCropEffect addFocalPointCropEffect = new AddFocalPointCropEffect(webDriver);
         addFocalPointCropEffect.EnterWidth("200");
         addFocalPointCropEffect.EnterHeight("200");
         addFocalPointCropEffect.ClickAddEffectBtn();
@@ -79,9 +79,9 @@ public class FocalPointModule extends ParentTest{
             	
         //Step 8
         navigation.Structure("Content types");
-        ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
+        ContentTypes contentTypes = new ContentTypes(webDriver);
         contentTypes.ClickManageDisplayLnk("Movie");
-        ManageDisplay manageDisplay = new ManageDisplay(webWebWebDriver);
+        ManageDisplay manageDisplay = new ManageDisplay(webDriver);
         manageDisplay.SelectCoverMediaFormat("Rendered file");
         manageDisplay.VerifyDefaultViewModeSelected();
         manageDisplay.ClickSaveBtn();
@@ -89,9 +89,9 @@ public class FocalPointModule extends ParentTest{
             	
         //Step 9
         navigation.Structure("File types");
-        FileTypes fileTypes = new FileTypes(webWebWebDriver);
+        FileTypes fileTypes = new FileTypes(webDriver);
         fileTypes.ClickManageFileDisplayLnk("Image");
-        ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webWebWebDriver);
+        ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
         manageFileDisplay.CheckImageCbx();
         manageFileDisplay.SelectImageStyle("AutomationFocalStyle");
         manageFileDisplay.ClickSaveConfigurationBtn();
@@ -99,12 +99,12 @@ public class FocalPointModule extends ParentTest{
         	
         //Step 10
         navigation.AddContent("Movie");
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         String movieTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(movieTitle);
         basicInformation.EnterSynopsis();
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webWebWebDriver);
+        SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SwitchToSelectFileFrm();
         selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "HanSolo.jpg");
         selectFile.ClickUploadBtn();
@@ -119,13 +119,13 @@ public class FocalPointModule extends ParentTest{
         //Step 11
         selectFile.DoucleClickFocalPointIndicator();
         selectFile.ClickSaveBtn();
-        webWebWebDriver.switchTo().defaultContent();
+        webDriver.switchTo().defaultContent();
         selectFile.WaitForSelectFileFrameClose();
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
             	
         //Step 12
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.VerifyFileImageLinkPresent("HanSolo", "1");
           
         //Cleanup

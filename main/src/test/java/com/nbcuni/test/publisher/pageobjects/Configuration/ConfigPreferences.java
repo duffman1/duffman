@@ -17,7 +17,7 @@ import javax.annotation.PostConstruct;
 @Configuration
 @Scope("prototype")
 @Page
-public class ConfigPreferences {
+public class ConfigPreferences extends com.nbcuni.test.publisher.pageobjects.Page {
 
     public ConfigPreferences(WebDriver webDriver) {
 

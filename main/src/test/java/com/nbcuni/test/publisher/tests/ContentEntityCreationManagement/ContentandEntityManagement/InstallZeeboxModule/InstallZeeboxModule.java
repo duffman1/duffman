@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.InstallZeeboxModule;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class InstallZeeboxModule extends ParentTest{
+public class InstallZeeboxModule extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE 
@@ -26,19 +27,19 @@ public class InstallZeeboxModule extends ParentTest{
     public void InstallZeeboxModule_Test() throws Exception{
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2 and 3
-            Modules modules = new Modules(webWebWebDriver);
+            Modules modules = new Modules(webDriver);
             modules.VerifyModuleEnabled("zeebox Example");
             
             //Step 4
             Thread.sleep(2000);
-            applib.openSitePage("/zeebox-example");
+            appLib.openSitePage("/zeebox-example");
             
             //Step 5
-            ContentParent contentParent = new ContentParent(webWebWebDriver);
+            ContentParent contentParent = new ContentParent(webDriver);
             contentParent.VerifyPageContentPresent(Arrays.asList("Zeebox Follow Button example block",
             		"Zeebox Play-along example block",
             			"Zeebox Hot TV Rooms example block",
@@ -59,7 +60,7 @@ public class InstallZeeboxModule extends ParentTest{
             				"Zeebox TV Room Teaser example block has been deleted.",
             					"Zeebox TV Room example block has been deleted.",
             						"The selected modules have been uninstalled."));
-            applib.openSitePage("/zeebox-example");
+            appLib.openSitePage("/zeebox-example");
             contentParent.VerifyPageContentPresent(Arrays.asList("Page not found"));
             
     }

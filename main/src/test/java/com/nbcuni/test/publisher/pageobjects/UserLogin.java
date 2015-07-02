@@ -2,6 +2,7 @@ package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.component.annotations.*;
+import com.nbcuni.test.publisher.common.Driver.component.annotations.Page;
 import com.nbcuni.test.publisher.common.Driver.configuration.SeleniumContext;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
@@ -26,30 +27,32 @@ import javax.annotation.PostConstruct;
 @Configuration
 @Scope("prototype")
 @com.nbcuni.test.publisher.common.Driver.component.annotations.Page
-public class UserLogin {
+public class UserLogin extends com.nbcuni.test.publisher.pageobjects.Page {
 
-    private Config config;
-    private Integer timeout;
-    private WaitFor waitFor;
-    private Interact interact;
-    private EmberNav navigation;
-    WebDriver webWebDriver;
+//    private Config config;
+//    private Integer timeout;
+//    private WaitFor waitFor;
+//    private Interact interact;
+//    private EmberNav navigation;
+//    WebDriver webWebDriver;
 
     //PAGE OBJECT CONSTRUCTOR
 
     @Autowired
     SeleniumContext context;
 
+    @Autowired EmberNav navigation;
+
     public UserLogin() {};
 
     @PostConstruct
     public void init() {
-        webWebDriver = context.webDriver();
+        webDriver = context.webDriver();
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webWebDriver, timeout);
-        interact = new Interact(webWebDriver, timeout);
-        navigation = new EmberNav(webWebDriver);
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
+        navigation = new EmberNav(webDriver);
     }
 
     public UserLogin(WebDriver webDriver) {
@@ -72,7 +75,7 @@ public class UserLogin {
     private By FederatedLogIn_Lnk = By.xpath("//a[text()='Federated Log In']");
 
     public UserLogin navigate(String url) {
-        webWebDriver.get(url);
+        webDriver.get(url);
         return this;
     }
 

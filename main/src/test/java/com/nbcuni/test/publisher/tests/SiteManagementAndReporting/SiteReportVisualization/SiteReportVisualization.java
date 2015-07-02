@@ -1,10 +1,10 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SiteReportVisualization;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import org.testng.annotations.Test;
 
-public class SiteReportVisualization extends ParentTest{
+public class SiteReportVisualization extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -15,7 +15,7 @@ public class SiteReportVisualization extends ParentTest{
     	
     	/*COMMENTING TEST OUT - Sruthi is looking into specifics on this test
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     	
     	//Setup

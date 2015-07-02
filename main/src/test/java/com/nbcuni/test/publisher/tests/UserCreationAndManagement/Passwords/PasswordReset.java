@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Passwords;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.ForgotPassword;
 import com.nbcuni.test.publisher.pageobjects.GmailConnect;
 import com.nbcuni.test.publisher.pageobjects.Logout;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class PasswordReset extends ParentTest {
+public class PasswordReset extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC2186
@@ -22,18 +22,18 @@ public class PasswordReset extends ParentTest {
     public void PasswordReset_TC2186() throws Exception {
     	
     	Reporter.log("SETUP - create new user");
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-    	AddUser addUser = new AddUser(webWebWebDriver);
+    	AddUser addUser = new AddUser(webDriver);
     	String userName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
-    	Logout logout = new Logout(webWebWebDriver);
+    	Logout logout = new Logout(webDriver);
     	logout.ClickLogoutBtn();
     	
     	Reporter.log("STEP 1");
-    	applib.openApplication();
+    	appLib.openApplication();
     	
     	Reporter.log("STEP 2");
-    	ForgotPassword forgotPassword = new ForgotPassword(webWebWebDriver);
+    	ForgotPassword forgotPassword = new ForgotPassword(webDriver);
     	forgotPassword.ClickRequestPasswordLnk();
     	
     	Reporter.log("STEP 3");
@@ -50,7 +50,7 @@ public class PasswordReset extends ParentTest {
         Reporter.log("STEP 5 and 6 - not available for automation as of yet");
         
         Reporter.log("STEP 7");
-        applib.openApplication();
+        appLib.openApplication();
     	forgotPassword.ClickRequestPasswordLnk();
     	forgotPassword.EnterEmail("notvalid@nbcuni.com");
     	forgotPassword.ClickResetPasswordBtn();

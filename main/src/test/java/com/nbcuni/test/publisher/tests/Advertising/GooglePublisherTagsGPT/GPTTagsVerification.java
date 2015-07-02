@@ -1,14 +1,14 @@
 package com.nbcuni.test.publisher.tests.Advertising.GooglePublisherTagsGPT;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
 import com.nbcuni.test.publisher.pageobjects.DFPAddTags;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
-public class GPTTagsVerification extends ParentTest {
+public class GPTTagsVerification extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1157
@@ -18,16 +18,16 @@ public class GPTTagsVerification extends ParentTest {
     public void GPTTagsVerification_TC1157() throws Exception {
         
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Setup
             navigation.Modules();
-            Modules modules = new Modules(webWebWebDriver);
+            Modules modules = new Modules(webDriver);
             modules.DisableModule("DART");
             modules.EnableModule("Doubleclick for Publishers");
             navigation.Structure("DFP Ad Tags");
-            DFPAddTags dfpAddTags = new DFPAddTags(webWebWebDriver, applib);
+            DFPAddTags dfpAddTags = new DFPAddTags(webDriver, appLib);
             dfpAddTags.ClickGlobalDFPSettingsLnk();
             dfpAddTags.EnterNetworkId("nbcu");
             dfpAddTags.ClickSaveConfigurationBtn();
@@ -51,7 +51,7 @@ public class GPTTagsVerification extends ParentTest {
             navigation.Structure("Blocks");
             
             //Step 6
-            Blocks blocks = new Blocks(webWebWebDriver);
+            Blocks blocks = new Blocks(webDriver);
             blocks.SelectRegion("DFP tag: " + adSlotName, "Sidebar first");
             blocks.ClickSaveBlocksBtn();
             contentParent.VerifyMessageStatus("The block settings have been updated.");

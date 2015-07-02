@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.StickyEditActions;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -10,7 +11,7 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
-public class StickyButtons extends ParentTest {
+public class StickyButtons extends GlobalBaseTest {
 	
 	Boolean testSuccessful = false;
 	
@@ -31,24 +32,24 @@ public class StickyButtons extends ParentTest {
     public void StickyButtons_Test() throws Exception{
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 1a
-            Modules modules = new Modules(webWebWebDriver);
+            Modules modules = new Modules(webDriver);
             modules.VerifyModuleEnabled("Sticky Edit Actions");
             
             //Step 2 - NOTE - using post instead of character profile content type
             navigation.AddContent("Post");
-            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+            BasicInformation basicInformation = new BasicInformation(webDriver);
             String postTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(postTitle);
-        	ContentParent contentParent = new ContentParent(webWebWebDriver);
+        	ContentParent contentParent = new ContentParent(webDriver);
         	interact.Scroll("100");
         	basicInformation.EnterSynopsis();
         	
             //Step 3
-            StickyEditActions stickyEditActions = new StickyEditActions(webWebWebDriver);
+            StickyEditActions stickyEditActions = new StickyEditActions(webDriver);
             stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             interact.Scroll("100");
@@ -56,7 +57,7 @@ public class StickyButtons extends ParentTest {
             stickyEditActions.VerifyPreviewBtnPresent();
             
             //Step 4
-            MetaTags metaTags = new MetaTags(webWebWebDriver);
+            MetaTags metaTags = new MetaTags(webDriver);
             metaTags.ClickMetaTagsLnk();stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             interact.Scroll("100");
@@ -68,7 +69,7 @@ public class StickyButtons extends ParentTest {
             contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
         	
         	//Step 7
-            applib.openSitePage("/node/add/post");
+            appLib.openSitePage("/node/add/post");
         	stickyEditActions.VerifySaveBtnPresent();
             stickyEditActions.VerifyPreviewBtnPresent();
             interact.Scroll("100");
@@ -83,16 +84,16 @@ public class StickyButtons extends ParentTest {
         	
     }
     
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"StickyButtons_Test"}, alwaysRun=true)
-	public void Cleanup() throws Exception {
-		if (testSuccessful == false) {
-			
-			UserLogin userLogin = new UserLogin(webWebWebDriver);
-			Modules modules = new Modules(webWebWebDriver);
-			applib.openSitePage("/user");
-			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-			navigation.Modules();
-        	modules.DisableModule("Sticky Edit Actions");
-		}
-	}
+//    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"StickyButtons_Test"}, alwaysRun=true)
+//	public void Cleanup() throws Exception {
+//		if (testSuccessful == false) {
+//
+//			UserLogin userLogin = new UserLogin(webDriver);
+//			Modules modules = new Modules(webDriver);
+//			appLib.openSitePage("/user");
+//			userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
+//			navigation.Modules();
+//        	modules.DisableModule("Sticky Edit Actions");
+//		}
+//	}
 }

@@ -1,44 +1,77 @@
 package com.nbcuni.test.publisher.pageobjects;
 
 import com.nbcuni.test.publisher.SiteMap;
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Driver.configuration.SeleniumContext;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
-import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementDecorator;
 
+import javax.annotation.PostConstruct;
 import java.lang.reflect.InvocationTargetException;
 
 
 /**
  * Created by kiryl_zayets on 6/17/15.
  */
+
+
 public class Page {
-    protected org.openqa.selenium.WebDriver webWebDriver;
+
+    protected WebDriver webDriver;
+    protected ErrorChecking errorChecking;
+    protected Config config;
+    protected WaitFor waitFor;
+    protected Interact interact;
+    protected Integer timeout;
+    protected WebDriverWait wait;
+    protected Actions actions;
 
     @Autowired
     protected SiteMap siteMap;
 
-//    @Autowired
+    @Autowired
+    SeleniumContext context;
+
+
+    @PostConstruct
+    public void init() {
+        webDriver = context.webDriver();
+        config = new Config();
+        errorChecking = new ErrorChecking(webDriver);
+        config = new Config();
+        timeout = config.getConfigValueInt("WaitForWaitTime");
+        waitFor = new WaitFor(webDriver, timeout);
+        interact = new Interact(webDriver, timeout);
+        wait = new WebDriverWait(webDriver, timeout);
+        actions = new Actions(webDriver);
+    }
+
+
+    //    @Autowired
     public Page() {
-        PageFactory.initElements(new HtmlElementDecorator(webWebDriver), this);
+
+//        PageFactory.initElements(new HtmlElementDecorator(webWebDriver), this);
     }
 
     public org.openqa.selenium.WebDriver getWebDriver() {
-        return webWebDriver;
+        return webDriver;
     }
-
 
 
     public <T> T navigate(String url, Class<T> clazz) {
         T instance = null;
-        webWebDriver.get(url);
+        webDriver.get(url);
         try {
-            instance = clazz.getDeclaredConstructor(WebDriver.class).newInstance(webWebDriver);
+            instance = clazz.getDeclaredConstructor(WebDriver.class).newInstance(webDriver);
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {
@@ -54,22 +87,22 @@ public class Page {
     ;
 
     public void waitVisibilityOfElement(HtmlElement element) {
-        new WebDriverWait(webWebDriver, 8).until(ExpectedConditions.visibilityOf(element));
+        new WebDriverWait(webDriver, 8).until(ExpectedConditions.visibilityOf(element));
     }
 
     public <T extends WebElement> void waitVisibilityOfElement(int seconds, T element) {
-        new WebDriverWait(webWebDriver, seconds).until(ExpectedConditions.visibilityOf(element));
+        new WebDriverWait(webDriver, seconds).until(ExpectedConditions.visibilityOf(element));
     }
 
     public void waitForElementIsInvisible(int timeOutSec, By by) {
-        new WebDriverWait(webWebDriver, timeOutSec).until(ExpectedConditions
+        new WebDriverWait(webDriver, timeOutSec).until(ExpectedConditions
                 .invisibilityOfElementLocated(by));
     }
 
 
     public UserLogin navigateLoginPage() {
-        webWebDriver.get(siteMap.getBaseUrl());
-        return new UserLogin(webWebDriver);
+        webDriver.get(siteMap.getBaseUrl());
+        return new UserLogin(webDriver);
     }
 
 }

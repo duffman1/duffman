@@ -31,40 +31,44 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 @Scope("prototype")
 @com.nbcuni.test.publisher.common.Driver.component.annotations.Page
-public class Modules {
+public class Modules extends Page {
 
 
-    private Config config;
-    private ContentParent contentParent;
-    private EmberNav navigation;
-    private WebDriverWait wait;
-    private Integer timeout;
-    private WaitFor waitFor;
-    private Interact interact;
-    WebDriver webWebWebDriver;
-    //PAGE OBJECT CONSTRUCTOR
+//    private Config config;
+//    private ContentParent contentParent;
+//    private EmberNav navigation;
+//    private WebDriverWait wait;
+//    private Integer timeout;
+//    private WaitFor waitFor;
+//    private Interact interact;
+//    WebDriver webWebWebDriver;
+//    //PAGE OBJECT CONSTRUCTOR
+//
+//     @Autowired
+//     SeleniumContext context;
 
-     @Autowired
-     SeleniumContext context;
+
+    @Autowired EmberNav navigation;
+    @Autowired ContentParent contentParent;
 
     public Modules() {};
 
-    @PostConstruct
-    public void init() {
-        webWebWebDriver = context.webDriver();
-        config = new Config();
-    	timeout = config.getConfigValueInt("WaitForWaitTime");
-    	contentParent = new ContentParent(webWebWebDriver);
-    	navigation = new EmberNav(webWebWebDriver);
-    	waitFor = new WaitFor(webWebWebDriver, timeout);
-    	wait = new WebDriverWait(webWebWebDriver, timeout);
-    	interact = new Interact(webWebWebDriver, timeout);
-    }
+//    @PostConstruct
+//    public void init() {
+//        webWebWebDriver = context.webDriver();
+//        config = new Config();
+//    	timeout = config.getConfigValueInt("WaitForWaitTime");
+//    	contentParent = new ContentParent(webWebWebDriver);
+//    	navigation = new EmberNav(webWebWebDriver);
+//    	waitFor = new WaitFor(webWebWebDriver, timeout);
+//    	wait = new WebDriverWait(webWebWebDriver, timeout);
+//    	interact = new Interact(webWebWebDriver, timeout);
+//    }
 
 
 
     public Modules(WebDriver webWebWebDriver) {
-        this.webWebWebDriver = webWebWebDriver;
+        this.webDriver = webWebWebDriver;
     	config = new Config();
     	timeout = config.getConfigValueInt("WaitForWaitTime");
     	contentParent = new ContentParent(webWebWebDriver);
@@ -159,31 +163,31 @@ public class Modules {
     		Reporter.log("Check the '" + moduleName + "' check box.");
     		interact.ScrollToTop();
     		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
-    		
+
     		Reporter.log("Click the 'Save configuration' button.");
     		interact.ScrollToTop();
     		interact.Click(waitFor.ElementVisible(SaveConfiguration_Btn));
-    		
+
         	boolean additionalModulesRequired = false;
-        	
-        	webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+        	webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         	try {
-        		webWebWebDriver.findElement(Continue_Btn).isDisplayed();
+        		webDriver.findElement(Continue_Btn).isDisplayed();
         		additionalModulesRequired = true;
         	}
         	catch (Exception e) { }
-        	
+
         	if (additionalModulesRequired == true) {
-        		
+
         		Reporter.log("Click the 'Continue' button to enable additional modules.");
         		interact.Click(waitFor.ElementVisible(Continue_Btn));
-        		
+
         	}
-        	
-        	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-        	
+
+        	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+
         	this.VerifyConfigurationSaved();
-        	
+
     	}
     	else {
     		Reporter.log("Verify the '" + moduleName + "' check box is checked.");
@@ -215,19 +219,19 @@ public class Modules {
     
     public Boolean IsModuleInstalled(String moduleName) throws Exception {
     	
-    	webWebWebDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     	
     	Boolean isModuleInstalled = null;
     	
     	try {
-    		webWebWebDriver.findElement(UninstallModuleName_Cbx(moduleName)).getLocation();
+    		webDriver.findElement(UninstallModuleName_Cbx(moduleName)).getLocation();
     		isModuleInstalled = true;
     	}
     	catch (NoSuchElementException e) {
     		isModuleInstalled = false;
     	}
     	
-    	webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
     	
     	return isModuleInstalled;
     	

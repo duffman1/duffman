@@ -1,13 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.Images.RepresentativeImage;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class RepresentativeImage extends ParentTest {
+public class RepresentativeImage extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC3217
@@ -17,33 +17,33 @@ public class RepresentativeImage extends ParentTest {
     public void RepresentativeImage_TC3217() throws Exception{
          
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         	String postTitle = createDefaultContent.Post("Published");
         	
         	Reporter.log("STEP 3");
         	navigation.Content();
-        	SearchFor searchFor = new SearchFor(webWebWebDriver);
+        	SearchFor searchFor = new SearchFor(webDriver);
         	searchFor.EnterTitle(postTitle);
         	searchFor.ClickApplyBtn();
         	searchFor.VerifySearchThumbnailImgPresent(postTitle, "HanSolo");
         	
         	Reporter.log("STEP 4");
         	navigation.Content("Files");
-        	Thumbnails thumbnails = new Thumbnails(webWebWebDriver);
+        	Thumbnails thumbnails = new Thumbnails(webDriver);
         	thumbnails.VerifyThumbnailImagePresent("HanSolo", "1");
             
             Reporter.log("STEP 5");
             navigation.AddContent("Post");
-        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
             String postTitle2 = random.GetCharacterString(15);
             basicInformation.EnterTitle(postTitle2);
             basicInformation.EnterSynopsis();
             basicInformation.ClickCoverSelectBtn();
-            SelectFile selectFile = new SelectFile(webWebWebDriver);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SwitchToSelectFileFrm();
             selectFile.ClickPub7MPXVideoBtn();
     		selectFile.EnterTitle("AutomationWThumb");
@@ -55,7 +55,7 @@ public class RepresentativeImage extends ParentTest {
     		Thread.sleep(2000); //TODO - dynamic wait
     		selectFile.ClickSubmitBtn();
     		Thread.sleep(2000); //TODO - dynamic wait
-            webWebWebDriver.switchTo().defaultContent();
+            webDriver.switchTo().defaultContent();
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Post " + postTitle2 + " has been created.");
             

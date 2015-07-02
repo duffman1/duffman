@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.TextFormat;
@@ -12,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class SnippetInlineContent extends ParentTest{
+public class SnippetInlineContent extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE - TC5129
@@ -22,16 +23,16 @@ public class SnippetInlineContent extends ParentTest{
     public void SnippetInlineContent_TC5129() throws Exception {
          
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("Publisher WYSIWYG");
         	
         	Reporter.log("STEP 3");
         	navigation.Configuration("Text formats");
-        	TextFormat textFormat = new TextFormat(webWebWebDriver);
+        	TextFormat textFormat = new TextFormat(webDriver);
         	textFormat.ClickConfigureLnk("Publisher");
         	textFormat.ClickEnabledFilters(Arrays.asList("Limit allowed HTML tags", "Publisher youtube formatter", 
         			"Convert line breaks into HTML", "Correct faulty and chopped off HTML"));
@@ -41,12 +42,12 @@ public class SnippetInlineContent extends ParentTest{
         	
         	Reporter.log("STEP 4");
         	navigation.AddContent("Post");
-        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
         	String postTitle = random.GetCharacterString(15);
         	basicInformation.EnterTitle(postTitle);
         	basicInformation.EnterSynopsis("<strong>Embedding a youtube video</strong>");
         	basicInformation.ClickEmbedYoutubeBtn();
-        	EmbedVideo embedVideo = new EmbedVideo(webWebWebDriver);
+        	EmbedVideo embedVideo = new EmbedVideo(webDriver);
         	String height = "360";
         	String width = "640";
         	embedVideo.EnterYouTubeVideoURL("http://www.youtube.com/embed/yp9pTFcD2uk");

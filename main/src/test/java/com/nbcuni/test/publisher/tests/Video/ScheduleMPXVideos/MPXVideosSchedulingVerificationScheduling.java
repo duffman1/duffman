@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
@@ -21,7 +21,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
+public class MPXVideosSchedulingVerificationScheduling extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -68,11 +68,11 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     public void MPXVideosSchedulingVerificationScheduling_Test() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Note - test requires mpx configuration
-    	Settings settings = new Settings(webWebWebDriver);
+    	Settings settings = new Settings(webDriver);
     	navigation.Configuration("Media: thePlatform mpx settings");
     	
         	//Setup
@@ -80,9 +80,9 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	if (configuredAccounts.contains("DB TV")) {
         		
         		navigation.Structure("File types");
-        		FileTypes fileTypes = new FileTypes(webWebWebDriver);
+        		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickEditFileTypeLnk("MPX Video for Account \"DB TV\" (2312945284)");
-        		MPXFileType mpxFileType = new MPXFileType(webWebWebDriver);
+        		MPXFileType mpxFileType = new MPXFileType(webDriver);
         		boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
         		if (isMPXValueOverrideEnabled == false) {
             	
@@ -92,17 +92,17 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         		}
         		
         		//Step 2
-            	MPXLogin mpxLogin = new MPXLogin(webWebWebDriver);
+            	MPXLogin mpxLogin = new MPXLogin(webDriver);
             	mpxLogin.OpenMPXThePlatform();
             	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
             	
             	//Step 3
             	if (configuredAccounts.contains("DB TV")) {
-            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webWebWebDriver);
+            	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
             	mpxSelectAccount.SelectAccount("DB TV");
             	
             	//Step 4 (test creates new mpx asset)
-            	MPXAddMedia mpxAddMedia = new MPXAddMedia(applib);
+            	MPXAddMedia mpxAddMedia = new MPXAddMedia(appLib);
             	mpxAddMedia.UploadDefaultVideo();
             	String mediaTitle = "Automation" + random.GetCharacterString(10);
             	mpxAddMedia.GiveFocusToMediaItem();
@@ -127,8 +127,8 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	mpxPublishMedia.PublishDefaultVideo();
             	
             	//Step 7
-            	applib.openApplication();
-            	Cron cron = new Cron(webWebWebDriver);
+            	appLib.openApplication();
+            	Cron cron = new Cron(webDriver);
             	if (config.getConfigValueString("DrushIngestion").equals("false")) {
                 	cron.RunCron();
                 }
@@ -137,7 +137,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	navigation.Content("Files", "mpxMedia");
         	    
         	    //Step 9
-        	    SearchFor searchFor = new SearchFor(webWebWebDriver);
+        	    SearchFor searchFor = new SearchFor(webDriver);
         	    searchFor.EnterTitle(mediaTitle);
         	    searchFor.ClickApplyBtn();
         	    if (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
@@ -145,7 +145,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	    	int refreshCount = 0;
             	    	while (!searchFor.GetFirstMPXMediaSearchResult().equals(mediaTitle)) {
                            	
-                    		   applib.refreshPage();
+                    		   appLib.refreshPage();
                     		   refreshCount++;
                     		   if (refreshCount == 10) {
                     		   Assert.fail("Asset titled '" + mediaTitle + "' not ingested");
@@ -176,16 +176,16 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    		pub7WorkflowDate7DaysInPast));
         	    
         	    //Step 12
-        	    WorkBench workBench = new WorkBench(webWebWebDriver);
+        	    WorkBench workBench = new WorkBench(webDriver);
         	    workBench.ClickWorkBenchTab("Edit");
         	    
         	    //Step 13
-        	    EditMPXVideo editMPXVideo = new EditMPXVideo(webWebWebDriver);
+        	    EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
         	    editMPXVideo.VerifyMPXAvailableDate(pub7Date20DaysInPast);
         	    editMPXVideo.VerifyMPXExpirationDate(pub7Date7DaysInPast);
         	    
         	    //Step 14
-        	    ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
+        	    ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
         	    navigation.ClickPrimaryTabNavLnk("Schedule");
         	    scheduleQueue.VerifyScheduleTableisEmpty();
         	    
@@ -220,7 +220,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    mpxPublishMedia.ClickUpdateBtn();
         	    
         	    //Step 29
-        	    applib.openApplication();
+        	    appLib.openApplication();
         	    if (config.getConfigValueString("DrushIngestion").equals("false")) {
         	    	cron.RunCron();
         	    }

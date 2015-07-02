@@ -32,14 +32,8 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 @Scope("prototype")
 @com.nbcuni.test.publisher.common.Driver.component.annotations.Page
-public class EmberNav {
+public class EmberNav extends Page {
 
-    private WebDriver webDriver;
-    private WaitFor waitFor;
-    private ErrorChecking errorChecking;
-    private Config config;
-    private Interact interact;
-    private Integer timeout;
 
     //PAGE OBJECT CONSTRUCTOR
 
@@ -49,15 +43,15 @@ public class EmberNav {
     public EmberNav(){};
 
 
-    @PostConstruct
-    public void init() {
-        webDriver = context.webDriver();
-        config = new Config();
-        timeout = config.getConfigValueInt("WaitForWaitTime");
-        waitFor = new WaitFor(webDriver, timeout);
-        interact = new Interact(webDriver, timeout);
-        errorChecking = new ErrorChecking(webDriver);
-    }
+//    @PostConstruct
+//    public void init() {
+//        webDriver = context.webDriver();
+//        config = new Config();
+//        timeout = config.getConfigValueInt("WaitForWaitTime");
+//        waitFor = new WaitFor(webDriver, timeout);
+//        interact = new Interact(webDriver, timeout);
+//        errorChecking = new ErrorChecking(webDriver);
+//    }
 
     public EmberNav(WebDriver webDriver) {
         this.webDriver = webDriver;

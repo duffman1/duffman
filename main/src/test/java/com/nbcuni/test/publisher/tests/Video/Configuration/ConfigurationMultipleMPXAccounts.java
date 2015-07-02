@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.Configuration;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class ConfigurationMultipleMPXAccounts extends ParentTest{
+public class ConfigurationMultipleMPXAccounts extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1073
@@ -22,16 +22,16 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
     public void ConfigurationMultipleMPXAccounts_TC1073() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
     	navigation.Configuration("Media: thePlatform mpx settings");
         
         //Setup
-        Settings settings = new Settings(webWebWebDriver);
-        MPXMedia mpxMedia = new MPXMedia(webWebWebDriver);
-        Cron cron = new Cron(webWebWebDriver);
+        Settings settings = new Settings(webDriver);
+        MPXMedia mpxMedia = new MPXMedia(webDriver);
+        Cron cron = new Cron(webDriver);
         
         List<String> accountNames = Arrays.asList("DB TV", "NBC.com Stage", "NBC.com Stage - Content Testing", 
         		"NBCU TVE Dev - NBC", "NBCU TVE Dev - Style", "NBCU TVE Stage - Golf Channel", 
@@ -114,7 +114,7 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
             
             //Step 9
             navigation.Content("Files", "mpxMedia");
-            SearchFor searchFor = new SearchFor(webWebWebDriver);
+            SearchFor searchFor = new SearchFor(webDriver);
             searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("AutomationDefault"));

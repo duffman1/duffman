@@ -46,14 +46,10 @@ public class S3 extends BaseTest {
     @Autowired ContentList contentList;
     @Autowired Modules modules;
     @Autowired ConfigPreferences preferences;
-    @Autowired
-    Amazons3 amazons3;
-
-    @Autowired
-    AppLib appLib;
+    @Autowired Amazons3 amazons3;
+    @Autowired AppLib appLib;
 
     String key;
-
     ArrayList<String> uploadedImagesBefore;
     ArrayList<String> uploadedImagesAfter;
 
@@ -61,7 +57,6 @@ public class S3 extends BaseTest {
     public void clearBucket() {
         key = Str.getImageNameFromPath(content.getImage());
         uploadedImagesBefore = (ArrayList<String>) s3Actions.findKeys(apiBucket, key);
-        System.out.println(webDriver);
     }
 
     @Test
@@ -71,7 +66,6 @@ public class S3 extends BaseTest {
                 EnableModule("Devel");
         appLib.navigate(siteMap.getConfigUrl(), ConfigPreferences.class);
                 preferences.goToAmazonSettings();
-
                 amazons3.setRequiredFields(apiKey, apiSecret, apiBucket);
     }
 
@@ -118,14 +112,10 @@ public class S3 extends BaseTest {
         manageFields.next().next().save();
         contentTypes.isRendered();
         manageFields.save();
-        System.out.println(webDriver);
     }
 
     @Test(dependsOnMethods = "imageConfiguration_TC8595")
     public void checkMetaDataMapping() {
-//        ContentTypes contentTypes = new ContentTypes(webDriver);
-//        ManageFields manageFields = new ManageFields(webDriver);
-
         webDriver.get(siteMap.getAddContent());
         appLib.navigate(siteMap.getAddContent(), ContentList.class);
         contentList.openCreatedContentPattern(code);

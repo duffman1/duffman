@@ -1,13 +1,13 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Roles;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
 import com.nbcuni.test.publisher.pageobjects.People.Roles;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
-public class RolesPredefinedInPublisher7 extends ParentTest{
+public class RolesPredefinedInPublisher7 extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC2184
@@ -17,18 +17,18 @@ public class RolesPredefinedInPublisher7 extends ParentTest{
     public void RolesPredefinedInPublisher7_TC2184() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
     	navigation.People("Permissions");
         
         //Step 3
-        Permissions permissions = new Permissions(webWebWebDriver, applib);
+        Permissions permissions = new Permissions(webDriver, appLib);
         permissions.VerifyRoleColumns();
         
         //Step 4
-        Roles roles = new Roles(webWebWebDriver);
+        Roles roles = new Roles(webDriver);
         roles.ClickRolesBtn();
         
         //Step 5

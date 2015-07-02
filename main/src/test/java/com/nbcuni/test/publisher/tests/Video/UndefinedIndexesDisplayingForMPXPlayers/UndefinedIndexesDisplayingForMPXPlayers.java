@@ -1,10 +1,10 @@
 package com.nbcuni.test.publisher.tests.Video.UndefinedIndexesDisplayingForMPXPlayers;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import org.testng.annotations.Test;
 
-public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
+public class UndefinedIndexesDisplayingForMPXPlayers extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -31,17 +31,17 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
     	//Defect was removed from iteration 39 for work at a later date. commenting out test until resolved at the request of the business
     	/*
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	PageFactory.initElements(webDriver, userLogin);
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
     	MPXLogin mpxLogin = new MPXLogin(webDriver);
     	mpxLogin.OpenMPXThePlatform();
     	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
-    	MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
+    	MPXAssets mpxAssets = new MPXAssets(webDriver, appLib);
     	mpxAssets.WaitForAllAssetsToLoad();
     	
         //Step 2
-        MPXAddPlayer mpxAddPlayer = new MPXAddPlayer(webDriver, applib);
+        MPXAddPlayer mpxAddPlayer = new MPXAddPlayer(webDriver, appLib);
         mpxAddPlayer.ClickPlayersLnk();
         mpxAddPlayer.ClickAllPlayersLnk();
         mpxAssets.WaitForAllAssetsToLoad();
@@ -51,7 +51,7 @@ public class UndefinedIndexesDisplayingForMPXPlayers extends ParentTest{
         mpxAddPlayer.ClickSaveBtn();
         
         //Step 3
-        applib.openApplication();
+        appLib.openApplication();
     	
     	//Step 3 (continued)
     	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");

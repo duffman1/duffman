@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.URLAlias;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.URLAliases;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
@@ -11,7 +11,7 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class AutomaticAlias extends ParentTest {
+public class AutomaticAlias extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC3303
@@ -21,12 +21,12 @@ public class AutomaticAlias extends ParentTest {
     public void AutomaticAlias_TC3303() throws Exception {
          
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
         	navigation.Configuration("URL aliases", "Settings");
-        	URLAliases urlAliases = new URLAliases(webWebWebDriver);
+        	URLAliases urlAliases = new URLAliases(webDriver);
         	urlAliases.ClickUpdateActionRdb("Do nothing. Leave the old alias intact.");
         	urlAliases.ClickSaveConfigurationBtn();
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
@@ -34,23 +34,23 @@ public class AutomaticAlias extends ParentTest {
         	Reporter.log("STEP 2");
         	navigation.AddContent("Post");
         	String postTitle = random.GetCharacterString(15);
-            BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+            BasicInformation basicInformation = new BasicInformation(webDriver);
             basicInformation.EnterTitle(postTitle);
             basicInformation.EnterSynopsis();
-            URLPathSettings urlPathSettings = new URLPathSettings(webWebWebDriver);
+            URLPathSettings urlPathSettings = new URLPathSettings(webDriver);
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.VerifyGenerateAutomateURLAliasChecked();
-            PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+            PublishingOptions publishingOptions = new PublishingOptions(webDriver);
             publishingOptions.ClickPublishingOptionsLnk();
             publishingOptions.SelectModerationState("Published");
             
             Reporter.log("STEP 3");
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Post " + postTitle + " has been created.");
-            String postURL = webWebWebDriver.getCurrentUrl();
+            String postURL = webDriver.getCurrentUrl();
             
             Reporter.log("STEP 4");
-            WorkBench workBench = new WorkBench(webWebWebDriver);
+            WorkBench workBench = new WorkBench(webDriver);
             workBench.ClickWorkBenchTab("Edit Draft");
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.VerifyURLAlias(postTitle);
@@ -79,7 +79,7 @@ public class AutomaticAlias extends ParentTest {
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
         	
         	Reporter.log("STEP 8");
-        	applib.openSitePage(postURL);
+        	appLib.openSitePage(postURL);
         	workBench.ClickWorkBenchTab("Edit Draft");
             urlPathSettings.ClickURLPathSettingsLnk();
             urlPathSettings.VerifyGenerateAutomateURLAliasCheckedEnabled();

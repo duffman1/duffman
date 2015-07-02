@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Queues.SchedulingQueues;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
@@ -14,7 +15,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
-public class ScheduleRevisionsOfQueues extends ParentTest{
+public class ScheduleRevisionsOfQueues extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE 
@@ -34,16 +35,16 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
     public void ScheduleRevisionsOfQueues_Test() throws Exception{
     	
         //Step 1
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 1a
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 2
         navigation.Content("Queues");
-        Queues queues = new Queues(webWebWebDriver);
+        Queues queues = new Queues(webDriver);
         queues.ClickAddPromoQueueLnk();
         
         //Step 3
@@ -59,9 +60,9 @@ public class ScheduleRevisionsOfQueues extends ParentTest{
         queues.ClickEditQueueMenuBtn(queueTitle);
         
         //Step 5, 6, and 7 (truncated)
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.VerifyCreateNewRevisionCbxChecked();
-        ScheduleQueue scheduleQueue = new ScheduleQueue(webWebWebDriver);
+        ScheduleQueue scheduleQueue = new ScheduleQueue(webDriver);
         navigation.ClickPrimaryTabNavLnk("Schedule");
         scheduleQueue.ClickAddScheduledRevisionLnk();
         

@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.CountdownClock;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Blocks;
@@ -19,7 +20,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CountdownClockEvents extends ParentTest {
+public class CountdownClockEvents extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC4887
@@ -30,16 +31,16 @@ public class CountdownClockEvents extends ParentTest {
          
         	Reporter.log("STEP 1");
         	Boolean publicFileOptionPresent = true;
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("Event Countdown");
         	
         	Reporter.log("STEP 3");
         	navigation.Configuration("Event Countdown");
-        	EventCountdownConfig eventCountdownConfig = new EventCountdownConfig(webWebWebDriver);
+        	EventCountdownConfig eventCountdownConfig = new EventCountdownConfig(webDriver);
         	if (eventCountdownConfig.AreSampleNodesConfigured()) {
         		Reporter.log("Sample nodes have already been created.");
         	}
@@ -51,15 +52,15 @@ public class CountdownClockEvents extends ParentTest {
         	Reporter.log("STEP 4");
         	
         	Reporter.log("STEP 5 AND 6");
-        	EventCountdown eventCountdown = new EventCountdown(webWebWebDriver);
+        	EventCountdown eventCountdown = new EventCountdown(webDriver);
         	for (String eventTitle : Arrays.asList("Birthday Event")) {
         		
         		navigation.Content();
         		
-        		SearchFor searchFor = new SearchFor(webWebWebDriver);
+        		SearchFor searchFor = new SearchFor(webDriver);
             	searchFor.EnterTitle(eventTitle);
             	searchFor.ClickApplyBtn();
-            	Content content = new Content(webWebWebDriver);
+            	Content content = new Content(webDriver);
                 content.ClickEditMenuBtn(eventTitle);
             	
             	Calendar cal1MinuteFuture = Calendar.getInstance();
@@ -72,7 +73,7 @@ public class CountdownClockEvents extends ParentTest {
             	eventCountdown.EnterTimerDateTime(pub7DateFormat.format(date1MinuteFuture), pub7TimeFormat.format(date1MinuteFuture));
             	eventCountdown.EnterActiveCallToAction("http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168");
             	eventCountdown.ClickActiveImageSelectBtn();
-            	SelectFile selectFile = new SelectFile(webWebWebDriver);
+            	SelectFile selectFile = new SelectFile(webDriver);
             	selectFile.SwitchToSelectFileFrm();
             	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "HanSolo1.jpg");
             	selectFile.ClickUploadBtn();
@@ -85,7 +86,7 @@ public class CountdownClockEvents extends ParentTest {
             	selectFile.VerifyFileImagePresent("HanSolo");
             	Thread.sleep(1000);
             	selectFile.ClickSaveBtn();
-            	webWebWebDriver.switchTo().defaultContent();
+            	webDriver.switchTo().defaultContent();
             	eventCountdown.EnterActiveBackgroundColor("#FF0000");
             	eventCountdown.EnterExpiryCallToAction("http://www.nbc.com");
             	eventCountdown.ClickExpiryImageSelectBtn();
@@ -101,14 +102,14 @@ public class CountdownClockEvents extends ParentTest {
             	selectFile.VerifyFileImagePresent("nbclogosmall");
             	Thread.sleep(1000);
             	selectFile.ClickSaveBtn();
-            	webWebWebDriver.switchTo().defaultContent();
+            	webDriver.switchTo().defaultContent();
             	eventCountdown.EnterExpiryBackgroundColor("#00FFFF");
             	contentParent.ClickSaveBtn();
         	}
         	
         	Reporter.log("STEP 7");
         	navigation.Structure("Blocks");
-        	Blocks blocks = new Blocks(webWebWebDriver);
+        	Blocks blocks = new Blocks(webDriver);
         	blocks.SelectRegion("Birthday Block", "Content");
         	blocks.SelectRegion("Holiday Party Block", "Content");
         	blocks.ClickSaveBlocksBtn();
@@ -146,7 +147,7 @@ public class CountdownClockEvents extends ParentTest {
         	eventCountdown.EnterTimerDateTime(pub7DateFormat.format(date1MinuteFuture), pub7TimeFormat.format(date1MinuteFuture));
         	eventCountdown.EnterActiveCallToAction("http://www.amazon.com/s/ref=nb_sb_ss_c_0_8/190-0002947-5703141?url=search-alias%3Dtoys-and-games&field-keywords=birthday%20party%20supplies&sprefix=birthday%2Caps%2C168");
         	eventCountdown.ClickActiveImageSelectBtn();
-        	SelectFile selectFile = new SelectFile(webWebWebDriver);
+        	SelectFile selectFile = new SelectFile(webDriver);
         	selectFile.SwitchToSelectFileFrm();
         	selectFile.EnterFilePath(config.getConfigValueFilePath("PathToMediaContent") + "HanSolo1.jpg");
         	selectFile.ClickUploadBtn();
@@ -158,7 +159,7 @@ public class CountdownClockEvents extends ParentTest {
         	}
         	selectFile.VerifyFileImagePresent("HanSolo");
         	selectFile.ClickSaveBtn();
-        	webWebWebDriver.switchTo().defaultContent();
+        	webDriver.switchTo().defaultContent();
         	eventCountdown.EnterActiveBackgroundColor("#FF0000");
         	eventCountdown.EnterExpiryCallToAction("http://www.nbc.com");
         	eventCountdown.ClickExpiryImageSelectBtn();
@@ -173,7 +174,7 @@ public class CountdownClockEvents extends ParentTest {
         	}
         	selectFile.VerifyFileImagePresent("nbclogosmall");
         	selectFile.ClickSaveBtn();
-        	webWebWebDriver.switchTo().defaultContent();
+        	webDriver.switchTo().defaultContent();
         	eventCountdown.EnterExpiryBackgroundColor("#00FFFF");
         	contentParent.ClickSaveBtn();
         	contentParent.VerifyMessageStatus("Event Countdown " + eventCountdownTitle + " has been created.");
@@ -183,10 +184,10 @@ public class CountdownClockEvents extends ParentTest {
     
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"}, dependsOnMethods = {"CountdownClockEvents_TC4887"}, alwaysRun=true)
 	public void Cleanup() throws Exception {
-		UserLogin userLogin = applib.openApplication();
+		UserLogin userLogin = appLib.openApplication();
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		navigation.Modules();
-    	Modules modules = new Modules(webWebWebDriver);
+    	Modules modules = new Modules(webDriver);
     	modules.DisableModule("Event Countdown");
     	navigation.ClickPrimaryTabNavLnk("Uninstall");
     	if (modules.IsModuleInstalled("Event Countdown")) {

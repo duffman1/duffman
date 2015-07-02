@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.SoftLengthLimit;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CharactersInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.CoverPhoto;
 import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
@@ -11,7 +11,7 @@ import com.nbcuni.test.publisher.pageobjects.Structure.ManageFieldInput;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
-public class SoftCharacterLimit extends ParentTest{
+public class SoftCharacterLimit extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1053
@@ -21,17 +21,17 @@ public class SoftCharacterLimit extends ParentTest{
     public void SoftCharacterLimit_TC1053() throws Exception {
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         	
             //Step 2 through 4
         	navigation.Structure("Content types");
-        	ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
+        	ContentTypes contentTypes = new ContentTypes(webDriver);
         	contentTypes.ClickManageFieldLnk("Character Profile");
         	contentTypes.ClickEditLnk("Character: First Name");
         	
         	//Step 5
-        	ManageFieldInput manageFieldInput = new ManageFieldInput(webWebWebDriver);
+        	ManageFieldInput manageFieldInput = new ManageFieldInput(webDriver);
         	manageFieldInput.EnterSoftLengthLimit("150");
         	
         	//Step 6
@@ -45,12 +45,12 @@ public class SoftCharacterLimit extends ParentTest{
         	navigation.AddContent("Character Profile");
             
             //Step 9
-            CharactersInformation charactersInformation = new CharactersInformation(webWebWebDriver);
+            CharactersInformation charactersInformation = new CharactersInformation(webDriver);
             String characterNameUnder = random.GetCharacterString(4);
             String characterNameMeets = random.GetCharacterString(15);
             String characterNameExceeds = random.GetCharacterString(160);
             charactersInformation.EnterCharacterFirstName(characterNameUnder);
-            SoftLength softLength = new SoftLength(webWebWebDriver);
+            SoftLength softLength = new SoftLength(webDriver);
             softLength.VerifySoftLengthUnderLimit("4/150");
             charactersInformation.EnterCharacterFirstName(characterNameMeets);
             softLength.VerifySoftLengthMeetsLimit("15/150");
@@ -58,9 +58,9 @@ public class SoftCharacterLimit extends ParentTest{
             softLength.VerifySoftLengthExceedsLimit("160/150");
             
             //Step 10
-            CoverPhoto coverPhoto = new CoverPhoto(webWebWebDriver);
+            CoverPhoto coverPhoto = new CoverPhoto(webDriver);
             coverPhoto.ClickSelectBtn();
-            SelectFile selectFile = new SelectFile(webWebWebDriver);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             contentParent.ClickSaveBtn();
             contentParent.VerifyMessageStatus("Character Profile " + characterNameExceeds + " has been created.");

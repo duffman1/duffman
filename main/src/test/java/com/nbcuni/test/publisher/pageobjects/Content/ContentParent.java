@@ -1,15 +1,21 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Driver.configuration.SeleniumContext;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
+import com.nbcuni.test.publisher.pageobjects.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -22,13 +28,18 @@ import java.util.concurrent.TimeUnit;
  *          *******************************************
  */
 
-public class ContentParent {
+@Configuration
+@Scope("prototype")
+@com.nbcuni.test.publisher.common.Driver.component.annotations.Page
+public class ContentParent extends Page {
 
-    private WebDriver webDriver;
-    private ErrorChecking errorChecking;
-    private Config config;
-    private WaitFor waitFor;
-    private Interact interact;
+//    private WebDriver webDriver;
+//    private ErrorChecking errorChecking;
+//    private Config config;
+//    private WaitFor waitFor;
+//    private Interact interact;
+
+
     //PAGE OBJECT IDENTIFIERS
     private By Save_Btn = By.xpath("//input[@id='edit-submit']");
     private By Cancel_Btn = By.id("edit-cancel");
@@ -49,6 +60,8 @@ public class ContentParent {
         waitFor = new WaitFor(webDriver, timeout);
         interact = new Interact(webDriver, timeout);
     }
+
+    public ContentParent(){};
 
     private By RequiredField_Ast(String field) {
         return By.xpath("//*[contains(text(), '" + field + "')]/span[text()='*']");

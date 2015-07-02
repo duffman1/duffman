@@ -17,7 +17,7 @@ import ru.yandex.qatools.htmlelements.element.TextInput;
 @Configuration
 @Scope("prototype")
 @com.nbcuni.test.publisher.common.Driver.component.annotations.Page
-public class Amazons3{
+public class Amazons3 extends Page{
 
     public Amazons3() {}
 

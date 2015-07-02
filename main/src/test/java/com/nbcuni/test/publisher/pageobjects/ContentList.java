@@ -18,8 +18,8 @@ import javax.annotation.PostConstruct;
 @Configuration
 @Scope("prototype")
 @com.nbcuni.test.publisher.common.Driver.component.annotations.Page
-public class ContentList {
-    WebDriver webDriver;
+public class ContentList extends Page {
+
 
     public ContentList() {
 

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SocialIntegration.FunctionalImplementGigyaShareBar;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.GigyaSettings;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.GigyaShareBar;
@@ -11,7 +11,7 @@ import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
-public class FunctionalImplementGigyaShareBar extends ParentTest{
+public class FunctionalImplementGigyaShareBar extends GlobalBaseTest {
 	
 	/*************************************************************************************
      * TEST CASE - TC3978
@@ -21,24 +21,24 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
     public void FunctionalImplementGigyaShareBar_TC3978() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 (creates new post)
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step Setup
-        Modules modules = new Modules(webWebWebDriver);
+        Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Pub Gigya");
         
         //Step 3
         navigation.Configuration("Gigya settings");
         
         //Step 4
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Share");
-        GigyaSettings gigyaSettings = new GigyaSettings(webWebWebDriver);
+        GigyaSettings gigyaSettings = new GigyaSettings(webDriver);
         gigyaSettings.EnterProviders("Tumblr, email, googleplus-interactive ,foursquare, print, twitter-tweet, facebook-like");
         gigyaSettings.ClickGigyaAdvancedShareBarSettingsLnk();
         gigyaSettings.EnterAdvancedShowShareBarUISettings("wrap|true");
@@ -47,11 +47,11 @@ public class FunctionalImplementGigyaShareBar extends ParentTest{
         
         //Step 5
         navigation.Content();
-        SearchFor searchFor = new SearchFor(webWebWebDriver);
+        SearchFor searchFor = new SearchFor(webDriver);
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
         searchFor.ClickSearchTitleLnk(postTitle);
-        GigyaShareBar gigyaShareBar = new GigyaShareBar(webWebWebDriver);
+        GigyaShareBar gigyaShareBar = new GigyaShareBar(webDriver);
         gigyaShareBar.VerifyTumblrBtnPresent();
         gigyaShareBar.VerifyEmailBtnPresent();
         gigyaShareBar.VerifyGooglePlusBtnPresent();

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.MPSConfiguration;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class MPSURLPathSegment extends ParentTest {
+public class MPSURLPathSegment extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC6529
@@ -23,12 +23,12 @@ public class MPSURLPathSegment extends ParentTest {
     public void MPSURLPathSegment_TC6529() throws Exception {
         
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
         	navigation.Configuration("MPS Configuration");
-        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webWebWebDriver);
+        	MPSConfiguration mpsConfiguration = new MPSConfiguration(webDriver);
             mpsConfiguration.EnterMPSHost("stage-mps.nbcuni.com");
             mpsConfiguration.ClickIntegrationMethod("Document Write");
             mpsConfiguration.EnterSiteInstanceOverride("pub7-development");
@@ -39,7 +39,7 @@ public class MPSURLPathSegment extends ParentTest {
             
         	Reporter.log("STEP 2");
         	navigation.Modules();
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.EnableModule("MPS");
         	modules.EnableModule("Views UI");
         	
@@ -47,9 +47,9 @@ public class MPSURLPathSegment extends ParentTest {
         	
         	Reporter.log("STEP 4");
         	navigation.Structure("Views");
-        	Views views = new Views(webWebWebDriver);
+        	Views views = new Views(webDriver);
         	views.ClickAddNewViewLnk();
-        	AddNewView addNewView = new AddNewView(webWebWebDriver);
+        	AddNewView addNewView = new AddNewView(webDriver);
         	String viewName = random.GetCharacterString(15);
         	addNewView.EnterViewName(viewName);
         	addNewView.SelectOfType("Movie");
@@ -68,7 +68,7 @@ public class MPSURLPathSegment extends ParentTest {
         	navigation.Structure("Views");
         	views.ClickEditExtendMenuBtn(viewName);
         	views.ClickDeleteMenuBtn(viewName);
-        	Delete delete = new Delete(webWebWebDriver);
+        	Delete delete = new Delete(webDriver);
         	delete.ClickDeleteBtn();
         	contentParent.VerifyMessageStatus("The view has been deleted.");
             

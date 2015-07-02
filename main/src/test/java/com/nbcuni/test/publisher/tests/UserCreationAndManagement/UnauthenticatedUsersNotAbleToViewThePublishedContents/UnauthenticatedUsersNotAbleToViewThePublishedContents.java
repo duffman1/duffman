@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.UnauthenticatedUsersNotAbleToViewThePublishedContents;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends ParentTest {
+public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends GlobalBaseTest {
 
     /*************************************************************************************
      * TEST CASE 
@@ -42,45 +42,45 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
     public void UnauthenticatedUsersNotAbleToViewThePublishedContents_Test() throws Exception{
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2  
-    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+    	CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
     	String postTitle = createDefaultContent.Post("Published");
-    	WorkBench workBench = new WorkBench(webWebWebDriver);
+    	WorkBench workBench = new WorkBench(webDriver);
     	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Published"));
     	
     	//Step 3
-        String contentURL = webWebWebDriver.getCurrentUrl();
-        Logout logout = new Logout(webWebWebDriver);
+        String contentURL = webDriver.getCurrentUrl();
+        Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         
         //Step4	
-        applib.openSitePage(contentURL);
+        appLib.openSitePage(contentURL);
         
         //Step5
-        ContentParent contentParent = new ContentParent(webWebWebDriver);
+        ContentParent contentParent = new ContentParent(webDriver);
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
         
         //Step6
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step7	
-        applib.openSitePage(contentURL);
+        appLib.openSitePage(contentURL);
         
         //Step8
         workBench.ClickWorkBenchTab("Revisions");
-        Revisions revisions = new Revisions(webWebWebDriver);
+        Revisions revisions = new Revisions(webDriver);
         revisions.EnterLogMessageForStateChange("This Revision Comment");
         revisions.ClickUpdateStateBtn();
       
         //Step9
-        contentURL = webWebWebDriver.getCurrentUrl();
+        contentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step10
-        applib.openSitePage(contentURL);
+        appLib.openSitePage(contentURL);
         
         //Step11
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
@@ -90,15 +90,15 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
       
         //Step14
         navigation.Content();
-        SearchFor searchFor = new SearchFor(webWebWebDriver);
+        SearchFor searchFor = new SearchFor(webDriver);
         searchFor.ClickSearchTitleLnk(postTitle);
         
         //Step15
-        contentURL = webWebWebDriver.getCurrentUrl();
+        contentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step16
-        applib.openSitePage(contentURL);
+        appLib.openSitePage(contentURL);
         
         //Step17
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));
@@ -107,17 +107,17 @@ public class UnauthenticatedUsersNotAbleToViewThePublishedContents extends Paren
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
       
         //Step19
-        applib.openSitePage(contentURL);
+        appLib.openSitePage(contentURL);
         
         //Step20
         workBench.ClickWorkBenchTab("View");
         
         //Step21
-        contentURL = webWebWebDriver.getCurrentUrl();
+        contentURL = webDriver.getCurrentUrl();
         logout.ClickLogoutBtn();
       
         //Step22
-        applib.openSitePage(contentURL);
+        appLib.openSitePage(contentURL);
       
         //Step23
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle));

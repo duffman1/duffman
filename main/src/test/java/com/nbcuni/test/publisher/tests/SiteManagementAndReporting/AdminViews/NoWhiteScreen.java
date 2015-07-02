@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.AdminViews;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.ExecutePHPCode;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class NoWhiteScreen extends ParentTest{
+public class NoWhiteScreen extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC4147
@@ -20,19 +20,19 @@ public class NoWhiteScreen extends ParentTest{
     public void NoWhiteScreen_TC4147() throws Exception {
     	
     	Reporter.log("STEP 1");
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	Reporter.log("STEP 2");
-    	Modules modules = new Modules(webWebWebDriver);
+    	Modules modules = new Modules(webDriver);
         modules.VerifyModuleEnabled("Devel");
         
     	Reporter.log("STEP 3");
     	Thread.sleep(1000);
-    	applib.openSitePage("/devel/php");
+    	appLib.openSitePage("/devel/php");
         
         Reporter.log("STEP 4");
-        ExecutePHPCode executePHPCode = new ExecutePHPCode(webWebWebDriver);
+        ExecutePHPCode executePHPCode = new ExecutePHPCode(webDriver);
         executePHPCode.EnterPHPCode("white();");
         executePHPCode.ClickExecuteBtn();
         contentParent.VerifyPageContentPresent(Arrays.asList("Fatal error: Call to undefined function white()"));

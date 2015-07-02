@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentEntityModerationStatesWorkflows;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
 import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class MultiEditorPublishingWorkflow extends ParentTest{
+public class MultiEditorPublishingWorkflow extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE
@@ -42,9 +42,9 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
     public void MultiEditorPublishingWorkflow_Test() throws Exception {
         
     	//Setup - create editor user
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-    	AddUser addUser = new AddUser(webWebWebDriver);
+    	AddUser addUser = new AddUser(webDriver);
     	String userPassword = "pa55word";
         String editorUserName = addUser.AddDefaultUser(Arrays.asList("editor"), false);
         
@@ -53,7 +53,7 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         
         //Setup - ensure editor and senior editor have correct permissions
         navigation.People("Permissions");
-        Permissions permissions = new Permissions(webWebWebDriver, applib);
+        Permissions permissions = new Permissions(webDriver, appLib);
         List<String> userRoles = Arrays.asList("editor", "senior editor");
         for (String role : userRoles) {
         	permissions.EnablePermissions(role, Arrays.asList("create post content", 
@@ -64,22 +64,22 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         }
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
-        Logout logout = new Logout(webWebWebDriver);
+        Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
         
         //Step 1
         userLogin.Login(editorUserName, userPassword);
             
         //Step 2
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String postTitle = createDefaultContent.Post("Draft");
         
         //Step 3
-        WorkBench workBench = new WorkBench(webWebWebDriver);
+        WorkBench workBench = new WorkBench(webDriver);
         workBench.ClickWorkBenchTab("Edit Draft");
             
         //Step 4
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         publishingOptions.VerifyModerationStateValue("Draft");
         publishingOptions.VerifyAssignToValue(editorUserName);
@@ -89,9 +89,9 @@ public class MultiEditorPublishingWorkflow extends ParentTest{
         
         //Step 6
         navigation.WorkBench();
-        MyWork myWork = new MyWork(webWebWebDriver);
+        MyWork myWork = new MyWork(webDriver);
         myWork.ClickMyWorkBtn();
-        SearchFor searchFor = new SearchFor(webWebWebDriver);
+        SearchFor searchFor = new SearchFor(webDriver);
         searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
         Thread.sleep(1000); //TODO - dynamic wait

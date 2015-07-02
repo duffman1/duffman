@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SEOModules;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.XMLSiteMap;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class SEOOptimizationModule extends ParentTest {
+public class SEOOptimizationModule extends GlobalBaseTest {
 
 	/*************************************************************************************
 	 * TEST CASE - TC1219
@@ -24,40 +24,40 @@ public class SEOOptimizationModule extends ParentTest {
 	 public void SEOOptimizationModule_TC1219() throws Exception {
 
 		//Step 1
-		UserLogin userLogin = applib.openApplication();
+		UserLogin userLogin = appLib.openApplication();
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
        
 		//Step 2
 		navigation.Modules();
-		Modules module = new Modules(webWebWebDriver);
+		Modules module = new Modules(webDriver);
 		module.EnableModule("Pub SEO");
 		
 		//Step 3
 		navigation.Structure("Content types");
-		ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
+		ContentTypes contentTypes = new ContentTypes(webDriver);
 		contentTypes.ClickEditLnk("Post");
 		
 		//Step 4
-		ContentTypeStructure contentTypeStructure = new ContentTypeStructure(webWebWebDriver);
+		ContentTypeStructure contentTypeStructure = new ContentTypeStructure(webDriver);
 		contentTypeStructure.ClickXMLSiteMapLink();
 		contentTypeStructure.SelectInclusionOption("Included");
 		contentTypeStructure.ClickSaveContentType();
-		ContentParent contentParent = new ContentParent(webWebWebDriver);
+		ContentParent contentParent = new ContentParent(webDriver);
 		contentParent.VerifyMessageStatus("The content type Post has been updated.");
 		
 		//Step 5
-		CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+		CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
 		String DraftPostTitle = createDefaultContent.Post("Draft");
 		String PublishedPostTitle = createDefaultContent.Post("Published");
 		
 		//Step 6
-		Cron cron = new Cron(webWebWebDriver);
+		Cron cron = new Cron(webDriver);
 		cron.RunCron();
 		
 		//Step 7
 		navigation.Configuration("XML sitemap");
 		navigation.ClickPrimaryTabNavLnk("Rebuild links");
-		XMLSiteMap xmlSiteMap = new XMLSiteMap(webWebWebDriver);
+		XMLSiteMap xmlSiteMap = new XMLSiteMap(webDriver);
 		xmlSiteMap.ClickSaveAndRestoreCbx();
 		xmlSiteMap.ClickRebuildSitemapBtn();
 		contentParent.WaitForProgressBarNotPresent();

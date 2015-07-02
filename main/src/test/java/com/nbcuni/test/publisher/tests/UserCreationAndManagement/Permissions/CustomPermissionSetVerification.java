@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.UserCreationAndManagement.Permissions;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.Delete;
 import com.nbcuni.test.publisher.pageobjects.Structure.AddNewPermissionSet;
 import com.nbcuni.test.publisher.pageobjects.Structure.PermissionSets;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class CustomPermissionSetVerification extends ParentTest {
+public class CustomPermissionSetVerification extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1371
@@ -20,18 +20,18 @@ public class CustomPermissionSetVerification extends ParentTest {
     public void CustomPermissionSetVerification_TC1371() throws Exception {
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
     	//Step 2
     	navigation.Structure("Permission Sets");
     	
     	//Step 3
-    	PermissionSets permissionSets = new PermissionSets(webWebWebDriver);
+    	PermissionSets permissionSets = new PermissionSets(webDriver);
     	permissionSets.ClickAddLnk();
     	
     	//Step 4
-    	AddNewPermissionSet addNewPermissionSet = new AddNewPermissionSet(webWebWebDriver, applib);
+    	AddNewPermissionSet addNewPermissionSet = new AddNewPermissionSet(webDriver, appLib);
     	String setName = random.GetCharacterString(15);
     	addNewPermissionSet.EnterPermissionSetName(setName);
     	addNewPermissionSet.ClickSaveBtn();
@@ -85,7 +85,7 @@ public class CustomPermissionSetVerification extends ParentTest {
     	navigation.Structure("Permission Sets");
     	permissionSets.ClickPermissionSetExpandEditLnk(setName);
     	permissionSets.ClickPermissionSetDeleteLnk(setName);
-    	Delete delete = new Delete(webWebWebDriver);
+    	Delete delete = new Delete(webDriver);
     	delete.ClickDeleteBtn();
     	contentParent.VerifyMessageStatus("The item has been deleted.");
     	permissionSets.VerifyPermissionSetNotPresent(setName);

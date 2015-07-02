@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
 	
-	protected WebDriver webWebWebDriver;
+	protected WebDriver webDriver;
 	protected DriverSetup driverSetup;
     protected AppLib applib;
     protected Random random;
@@ -40,12 +40,12 @@ public class ParentTest {
 
     	if (config.getConfigValueString("RunSetupScripts").equals("true")) {
     		driverSetup = new DriverSetup();
-        	webWebWebDriver = driverSetup.WebDriverSetup(true);
-        	applib = new AppLib(webWebWebDriver);
-        	webWebWebDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
-            webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+        	webDriver = driverSetup.WebDriverSetup(true);
+        	applib = new AppLib(webDriver);
+        	webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
         	A1_TestSetup testSetup = new A1_TestSetup();
-        	abortTestSuite = testSetup.TestSetup_Test(webWebWebDriver, applib);
+//        	abortTestSuite = testSetup.TestSetup_Test(webDriver, applib);
     	}
     }
     
@@ -60,17 +60,17 @@ public class ParentTest {
         	}
         	
         	driverSetup = new DriverSetup();
-        	webWebWebDriver = driverSetup.WebDriverSetup(runLocally);
-            applib = new AppLib(webWebWebDriver);
+        	webDriver = driverSetup.WebDriverSetup(runLocally);
+            applib = new AppLib(webDriver);
             random = new Random();
-            taxonomy = new Taxonomy(webWebWebDriver);
-            navigation = new EmberNav(webWebWebDriver);
-            contentParent = new ContentParent(webWebWebDriver);
-            interact = new Interact(webWebWebDriver, config.getConfigValueInt("WaitForWaitTime"));
+            taxonomy = new Taxonomy(webDriver);
+            navigation = new EmberNav(webDriver);
+            contentParent = new ContentParent(webDriver);
+            interact = new Interact(webDriver, config.getConfigValueInt("WaitForWaitTime"));
             
-            webWebWebDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
-            webWebWebDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
-            webWebWebDriver.manage().window().maximize();
+            webDriver.manage().timeouts().pageLoadTimeout(config.getConfigValueInt("PageLoadWaitTime"), TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(config.getConfigValueInt("ImplicitWaitTime"), TimeUnit.SECONDS);
+            webDriver.manage().window().maximize();
             
         } catch (Exception e) {
         	System.out.println("Failed to start WebDriver and initiate timeouts");
@@ -99,10 +99,10 @@ public class ParentTest {
         	try {
         		if (!result.isSuccess()) {
         			applib.openSitePage("/admin/config/development/performance");
-        			webWebWebDriver.switchTo().defaultContent();
+        			webDriver.switchTo().defaultContent();
         			Thread.sleep(1000);
-            		webWebWebDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-            		webWebWebDriver.findElement(By.id("edit-clear")).click();
+            		webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            		webDriver.findElement(By.id("edit-clear")).click();
             		Reporter.setCurrentTestResult(result); 
                     Reporter.log("Cache was cleared on test failure");
                     Reporter.setCurrentTestResult(null);
@@ -114,7 +114,7 @@ public class ParentTest {
     	}
     	
         try {
-        	webWebWebDriver.quit();
+        	webDriver.quit();
         } 
         catch (Exception e) {
         	System.out.println("Failed to stop WebDriver");

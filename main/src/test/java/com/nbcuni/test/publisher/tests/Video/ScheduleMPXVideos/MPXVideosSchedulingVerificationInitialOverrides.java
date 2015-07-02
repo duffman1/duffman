@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.ScheduleMPXVideos;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
@@ -18,7 +18,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
+public class MPXVideosSchedulingVerificationInitialOverrides extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -65,11 +65,11 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
     public void MPXVideosSchedulingVerificationInitialOverrides_Test() throws Exception{
 
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2 on requires prior MPX configuration
-    	Settings settings = new Settings(webWebWebDriver);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
     	navigation.Configuration("Media: thePlatform mpx settings");
@@ -79,9 +79,9 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
         	if (configuredAccounts.contains("DB TV")) {
         		
         		navigation.Structure("File types");
-        		FileTypes fileTypes = new FileTypes(webWebWebDriver);
+        		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickEditFileTypeLnk("MPX Video for Account \"DB TV\" (2312945284)");
-        		MPXFileType mpxFileType = new MPXFileType(webWebWebDriver);
+        		MPXFileType mpxFileType = new MPXFileType(webDriver);
         		boolean isMPXValueOverrideEnabled = mpxFileType.EnableMPXValueOverrides();
         		if (isMPXValueOverrideEnabled == false) {
             	
@@ -96,22 +96,22 @@ public class MPXVideosSchedulingVerificationInitialOverrides extends ParentTest{
 
         	//Step 2 onward will use an existing mpx published video
             navigation.Content("Files", "mpxMedia");
-            SearchFor searchFor = new SearchFor(webWebWebDriver);
+            SearchFor searchFor = new SearchFor(webDriver);
             searchFor.EnterTitle("AutomationDefault");
             searchFor.ClickApplyBtn();
             searchFor.VerifySearchResultsPresent(Arrays.asList("AutomationDefault"));
             searchFor.ClickSearchTitleLnk("AutomationDefault");
             
             //Setup - resets overrides in the event of a previous failure
-            WorkBench workBench = new WorkBench(webWebWebDriver);
+            WorkBench workBench = new WorkBench(webDriver);
             workBench.ClickWorkBenchTab("Edit");
-            EditMPXVideo editMPXVideo = new EditMPXVideo(webWebWebDriver);
+            EditMPXVideo editMPXVideo = new EditMPXVideo(webDriver);
             editMPXVideo.UnCheckOverrideMPXAvailableDateCbx();
             editMPXVideo.UnCheckOverrideMPXExpirationDateCbx();
             contentParent.WaitForThrobberNotPresent();
             contentParent.ClickSaveBtn();
             
-            webWebWebDriver.switchTo().defaultContent();
+            webDriver.switchTo().defaultContent();
             List<String> defaultVideoValues = Arrays.asList("AutomationDefault", "MPX Released File Public IDs:",
                     "MPX Media Default Released File Public ID:", "MPX Media Categories:", "Series", "Show", "MPX Media Description:",
                     "Automation 1 example test", "MPX Media Author:", "Pub7 Content Provider", "MPX Media Air Date:",

@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.TVSeason;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
@@ -12,7 +13,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class CreateTVSeason extends ParentTest{
+public class CreateTVSeason extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE - TC1046
@@ -22,7 +23,7 @@ public class CreateTVSeason extends ParentTest{
     public void CreateTVSeason_TC1046() throws Exception{
     	
         //Step 1
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         List<String> allStates = Arrays.asList("Draft", "Review", "Published");
@@ -33,12 +34,12 @@ public class CreateTVSeason extends ParentTest{
         
         //Step 3
         contentParent.VerifyRequiredFields(Arrays.asList("Title", "Season", "Synopsis"));
-        PublishingOptions publishingOptions = new PublishingOptions(webWebWebDriver);
+        PublishingOptions publishingOptions = new PublishingOptions(webDriver);
         publishingOptions.ClickPublishingOptionsLnk();
         contentParent.VerifyRequiredFields(Arrays.asList("Moderation State"));
         
         //Step 4
-        BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        BasicInformation basicInformation = new BasicInformation(webDriver);
         basicInformation.ClickBasicInformationTab();
         String tvSeasonTitle = random.GetCharacterString(15);
         basicInformation.EnterTitle(tvSeasonTitle);
@@ -47,7 +48,7 @@ public class CreateTVSeason extends ParentTest{
         
         //Step 5
         basicInformation.ClickCoverSelectBtn();
-        SelectFile selectFile = new SelectFile(webWebWebDriver);
+        SelectFile selectFile = new SelectFile(webDriver);
         selectFile.SelectDefaultCoverImg();
     	
     	//Step 6
@@ -57,7 +58,7 @@ public class CreateTVSeason extends ParentTest{
     	//Step 7
     	contentParent.ClickSaveBtn();
     	contentParent.VerifyMessageStatus("TV Season " + tvSeasonTitle + " has been created.");
-    	WorkBench workBench = new WorkBench(webWebWebDriver);
+    	WorkBench workBench = new WorkBench(webDriver);
     	workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList(state));
     	
         }

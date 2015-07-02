@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentTypesEntities.Person;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.PersonsInformation;
@@ -7,7 +8,7 @@ import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
 
-public class CreatePerson extends ParentTest{
+public class CreatePerson extends GlobalBaseTest{
 
     /*************************************************************************************
      * TEST CASE - TC1044
@@ -17,21 +18,21 @@ public class CreatePerson extends ParentTest{
     public void CreatePerson_TC1044() throws Exception{
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
             //Step 2
         	navigation.AddContent("Person");
             
             //Step 3
-            PersonsInformation personsInformation = new PersonsInformation(webWebWebDriver);
+            PersonsInformation personsInformation = new PersonsInformation(webDriver);
             String personFirstName = random.GetCharacterString(15);
             personsInformation.EnterFirstName(personFirstName);
             personsInformation.EnterBiography();
             
             //Step 4
             personsInformation.ClickCoverPhotoSelectBtn();
-            SelectFile selectFile = new SelectFile(webWebWebDriver);
+            SelectFile selectFile = new SelectFile(webDriver);
             selectFile.SelectDefaultCoverImg();
             contentParent.ClickSaveBtn();
             

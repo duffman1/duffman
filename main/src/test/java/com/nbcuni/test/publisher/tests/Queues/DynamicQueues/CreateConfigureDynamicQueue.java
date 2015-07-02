@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.tests.Queues.DynamicQueues;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
@@ -8,14 +9,9 @@ import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.People.Permissions;
-import com.nbcuni.test.publisher.pageobjects.Structure.AddViewMode;
-import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
-import com.nbcuni.test.publisher.pageobjects.Structure.DisplaySuite;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueue;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.AddDynamicQueueType;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueueTypes;
-import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.DynamicQueues;
-import com.nbcuni.test.publisher.pageobjects.Structure.ViewModes;
+import com.nbcuni.test.publisher.pageobjects.Structure.*;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.*;
+import com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.ManageDisplay;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -23,7 +19,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
-public class CreateConfigureDynamicQueue extends ParentTest{
+public class CreateConfigureDynamicQueue extends GlobalBaseTest{
 	
 	String viewModeLabel = "";
 	Boolean testSuccessful = false;
@@ -38,14 +34,14 @@ public class CreateConfigureDynamicQueue extends ParentTest{
     @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "broken"})
     public void CreateConfigureDynamicQueue_TC4197() throws Exception{
     	
-    	webWebWebDriver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);
     	
         Reporter.log("STEP 1");
-        UserLogin userLogin = applib.openApplication();
+        UserLogin userLogin = appLib.openApplication();
         userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         Reporter.log("SETUP");
-        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webWebWebDriver);
+        CreateDefaultContent createDefaultContent = new CreateDefaultContent(webDriver);
         String charProfBiography = random.GetCharacterString(15);
         String characterProfileTitle = createDefaultContent.CharacterProfile("Published", null, null, charProfBiography);
         String postBody = random.GetCharacterString(15);
@@ -59,22 +55,22 @@ public class CreateConfigureDynamicQueue extends ParentTest{
       
         Reporter.log("STEP 2");
         navigation.Modules();
-        Modules modules = new Modules(webWebWebDriver);
+        Modules modules = new Modules(webDriver);
         for (String module : Arrays.asList("Dynamic Queue", "Dynamic Queue Workbench")) {
         	modules.EnableModule(module);
         }
         
         Reporter.log("STEP 3");
         navigation.Structure("Dynamic Queue types");
-        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webWebWebDriver);
+        DynamicQueueTypes dynamicQueueTypes = new DynamicQueueTypes(webDriver);
         dynamicQueueTypes.ClickAddDynamicQueueTypeLnk();
         
         Reporter.log("STEP 4");
-        AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webWebWebDriver);
+        AddDynamicQueueType addDynamicQueueType = new AddDynamicQueueType(webDriver);
         String dynamicQueueTypeNameNumber = "25";
         addDynamicQueueType.EnterName(dynamicQueueTypeNameNumber);
         addDynamicQueueType.ClickSaveBtn();
-        ErrorChecking errorchecking = new ErrorChecking(webWebWebDriver);
+        ErrorChecking errorchecking = new ErrorChecking(webDriver);
         errorchecking.VerifyErrorMessagePresent(nameNumber_ErrorMessage);
         
         Reporter.log("STEP 5");
@@ -89,10 +85,10 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 6&7");
         navigation.Content("Dynamic Queues");
-        DynamicQueues dynamicQueues = new DynamicQueues(webWebWebDriver);
+        DynamicQueues dynamicQueues = new DynamicQueues(webDriver);
         dynamicQueues.ClickAddDynamicQueueLnk(dynamicQueueTypeName);
         String dynamicQueueTitle = random.GetCharacterString(15);
-        AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webWebWebDriver);
+        AddDynamicQueue addDynamicQueue = new AddDynamicQueue(webDriver);
         addDynamicQueue.EnterTitle(dynamicQueueTitle);       
         addDynamicQueue.CheckTargetBundle_Cbx("Character Profile");
         addDynamicQueue.CheckTargetBundle_Cbx("Post");
@@ -108,10 +104,10 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 10 ");
         String dynamicQueueNodeID = dynamicQueues.GetDynamicQueueNodeNumber(dynamicQueueTitle);
-        String parentWindow = webWebWebDriver.getWindowHandle();
-        applib.openNewWindow();
-        applib.switchToNewWindow(parentWindow);
-        applib.openSitePage("/dynamic-queue/" + dynamicQueueNodeID);
+        String parentWindow = webDriver.getWindowHandle();
+        appLib.openNewWindow();
+        appLib.switchToNewWindow(parentWindow);
+        appLib.openSitePage("/dynamic-queue/" + dynamicQueueNodeID);
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
         
         Reporter.log("STEP 11"); //NA - takes an incredibly long time to load
@@ -121,7 +117,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         Reporter.log("STEP 13"); //TODO
         
         Reporter.log("STEP 14");
-        applib.switchToParentWindow(parentWindow);
+        appLib.switchToParentWindow(parentWindow);
         navigation.Structure("Dynamic Queue types");
         dynamicQueueTypes.ClickEditLnk(dynamicQueueTypeName);
         
@@ -137,31 +133,31 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         Reporter.log("STEP 17");
         navigation.Structure("Dynamic Queue types");
         dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
-        contentParent.VerifyPageContentPresent(Arrays.asList("Full content", "Teaser", "Revision comparison", 
-        		"Tokens"));
+        contentParent.VerifyPageContentPresent(Arrays.asList("Full content", "Teaser", "Revision comparison",
+                "Tokens"));
         
     	Reporter.log("STEP 18");
-    	com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.ManageDisplay manageDisplay = new com.nbcuni.test.publisher.pageobjects.Structure.Queues.DynamicQueues.ManageDisplay(webWebWebDriver);
+    	ManageDisplay manageDisplay = new ManageDisplay(webDriver);
         manageDisplay.SelectEntityListFormat("Full content");
         contentParent.WaitForThrobberNotPresent();
         manageDisplay.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        applib.switchToNewWindow(parentWindow);
-        applib.refreshPage();
+        appLib.switchToNewWindow(parentWindow);
+        appLib.refreshPage();
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostBody, postBody, charProfBiography));
         contentParent.VerifyPageContentPresent(Arrays.asList("Character: First Name", "Cover Media"));
         
         Reporter.log("STEP 19");
-        applib.switchToParentWindow(parentWindow);
+        appLib.switchToParentWindow(parentWindow);
         navigation.Structure("Dynamic Queue types");
         dynamicQueueTypes.ClickManageDisplayLnk(dynamicQueueTypeName);
         manageDisplay.SelectEntityListFormat("Teaser");
         contentParent.WaitForThrobberNotPresent();
         manageDisplay.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
-        applib.switchToNewWindow(parentWindow);
-        applib.refreshPage();
+        appLib.switchToNewWindow(parentWindow);
+        appLib.refreshPage();
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostBody, postBody, charProfBiography));
         contentParent.VerifyPageContentNotPresent(Arrays.asList("Character: First Name", "Cover Media"));
@@ -169,14 +165,14 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         Reporter.log("STEP 20"); //TODO
         
         Reporter.log("STEP 21");
-        applib.switchToParentWindow(parentWindow);
+        appLib.switchToParentWindow(parentWindow);
         navigation.Structure("Display suite");
-        DisplaySuite displaySuite = new DisplaySuite(webWebWebDriver);
+        DisplaySuite displaySuite = new DisplaySuite(webDriver);
         displaySuite.ClickViewModesLnk();
-        ViewModes viewModes = new ViewModes(webWebWebDriver);
+        ViewModes viewModes = new ViewModes(webDriver);
         viewModes.ClickAddViewModeLnk();
         viewModeLabel = random.GetCharacterString(15);
-        AddViewMode addViewMode = new AddViewMode(webWebWebDriver);
+        AddViewMode addViewMode = new AddViewMode(webDriver);
         addViewMode.EnterLabel(viewModeLabel);
         addViewMode.CheckEntityCbx("Node");
         addViewMode.ClickSaveBtn();
@@ -184,9 +180,9 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         
         Reporter.log("STEP 22,23,24");
         navigation.Structure("Content types");
-        ContentTypes contentTypes = new ContentTypes(webWebWebDriver);
+        ContentTypes contentTypes = new ContentTypes(webDriver);
         contentTypes.ClickManageDisplayLnk("Post");
-        com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay manageDisplays = new com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay(webWebWebDriver);
+        com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay manageDisplays = new com.nbcuni.test.publisher.pageobjects.Structure.ManageDisplay(webDriver);
         manageDisplays.ClickViewMode(viewModeLabel);
         manageDisplays.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Your settings have been saved.");
@@ -223,26 +219,26 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         contentParent.VerifyMessageStatus("Your settings have been saved.");
         
         Reporter.log("STEP 26");
-        applib.switchToNewWindow(parentWindow);
+        appLib.switchToNewWindow(parentWindow);
         Thread.sleep(60000); //cache expiration
-        applib.refreshPage();
+        appLib.refreshPage();
         contentParent.VerifyPageContentPresent(Arrays.asList(unpublishedPostTitle, postTitle, characterProfileTitle));
         contentParent.VerifyPageContentNotPresent(Arrays.asList(unpublishedPostBody, postBody, charProfBiography));
         
         Reporter.log("STEP 27"); 
-        applib.switchToParentWindow(parentWindow);
+        appLib.switchToParentWindow(parentWindow);
         navigation.People("Permissions");
-        Permissions permissions = new Permissions(webWebWebDriver, applib);
+        Permissions permissions = new Permissions(webDriver, appLib);
         permissions.EnablePermissions("anonymous user", Arrays.asList("access dynamic queues"));
         permissions.EnablePermissions("authenticated user", Arrays.asList("access dynamic queues"));
         permissions.ClickSaveConfigurationsBtn();
         contentParent.VerifyMessageStatus("The changes have been saved.");
-        Logout logout = new Logout(webWebWebDriver);
+        Logout logout = new Logout(webDriver);
         logout.ClickLogoutBtn();
        
         Reporter.log("STEP 28");
-        applib.switchToNewWindow(parentWindow);
-        applib.refreshPage();
+        appLib.switchToNewWindow(parentWindow);
+        appLib.refreshPage();
         contentParent.VerifyPageContentPresent(Arrays.asList(postTitle, characterProfileTitle));
         contentParent.VerifyPageContentNotPresent(Arrays.asList(unpublishedPostTitle, unpublishedPostBody));
         
@@ -251,7 +247,7 @@ public class CreateConfigureDynamicQueue extends ParentTest{
         navigation.Structure("Display suite");
 		displaySuite.ClickViewModesLnk();
         viewModes.ClickDeleteLnk(viewModeLabel);
-        Delete delete = new Delete(webWebWebDriver);
+        Delete delete = new Delete(webDriver);
         delete.ClickDeleteBtn();
         contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been deleted.");
         
@@ -263,14 +259,14 @@ public class CreateConfigureDynamicQueue extends ParentTest{
    public void Cleanup() throws Exception {
 		if (testSuccessful == false && viewModeLabel != "") {
 			
-			UserLogin userLogin = applib.openApplication();
+			UserLogin userLogin = appLib.openApplication();
 	        userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 	        navigation.Structure("Display suite");
-	        DisplaySuite displaySuite = new DisplaySuite(webWebWebDriver);
+	        DisplaySuite displaySuite = new DisplaySuite(webDriver);
 	        displaySuite.ClickViewModesLnk();
-	        ViewModes viewModes = new ViewModes(webWebWebDriver);
+	        ViewModes viewModes = new ViewModes(webDriver);
 	        viewModes.ClickDeleteLnk(viewModeLabel);
-	        Delete delete = new Delete(webWebWebDriver);
+	        Delete delete = new Delete(webDriver);
 	        delete.ClickDeleteBtn();
 	        contentParent.VerifyMessageStatus("The view mode " + viewModeLabel + " has been deleted.");
 		}

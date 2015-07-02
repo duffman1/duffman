@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.FlushCache;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SSOLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SimpleSAML;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class SSOUseProduction extends ParentTest {
+public class SSOUseProduction extends GlobalBaseTest {
 
 	/*************************************************************************************
 	 * TEST CASE - TC6316
@@ -24,20 +24,20 @@ public class SSOUseProduction extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive"})
 	 public void SSOUseProduction_TC6316() throws Exception {
 		 
-		UserLogin userLogin = applib.openApplication(); 
-		Modules modules = new Modules(webWebWebDriver);
-		SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
-		Logout logout = new Logout(webWebWebDriver);
-		FlushCache flushCache = new FlushCache(webWebWebDriver);
-		AddUser addUser = new AddUser(webWebWebDriver);
-		SSOLogin ssoLogin = new SSOLogin(webWebWebDriver);
+		UserLogin userLogin = appLib.openApplication();
+		Modules modules = new Modules(webDriver);
+		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
+		Logout logout = new Logout(webDriver);
+		FlushCache flushCache = new FlushCache(webDriver);
+		AddUser addUser = new AddUser(webDriver);
+		SSOLogin ssoLogin = new SSOLogin(webDriver);
 		
 		Reporter.log("STEP 1");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
 		Reporter.log("STEP 2");
 		navigation.People();
-    	People people = new People(webWebWebDriver);
+    	People people = new People(webDriver);
     	people.ClickAddUserLnk();
 		addUser.EnterUsername("206448849");
 		addUser.EnterEmailAddress("publisher_testuser1@testmail.com");
@@ -74,7 +74,7 @@ public class SSOUseProduction extends ParentTest {
 		
 		Reporter.log("STEP 8");
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.EnterEmailAddress("publisher_testuser1@testmail.com");
 		userLogin.EnterPassword("pa55word");
 		userLogin.ClickLoginBtn();
@@ -82,12 +82,12 @@ public class SSOUseProduction extends ParentTest {
 		ssoLogin.EnterSSOID("206448849");
 		ssoLogin.EnterPassword("pa55word");
 		ssoLogin.ClickSignInBtn();
-		applib.refreshPage();
+		appLib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList("206448849"));
 		
 		Reporter.log("STEP 9");
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.EnterEmailAddress("publisher_testuser1@testmail.com");
 		userLogin.EnterPassword("pa55word");
 		userLogin.ClickLoginBtn();
@@ -95,9 +95,9 @@ public class SSOUseProduction extends ParentTest {
 		ssoLogin.EnterSSOID("206448849");
 		ssoLogin.EnterPassword("pa55word");
 		ssoLogin.ClickSignInBtn();
-		applib.refreshPage();
+		appLib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList("206448849"));
-		applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+		appLib.openSitePage("/admin/config/people/simplesamlphp_auth");
 		simpleSAML.UnCheckActivateAuthCbx();
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");

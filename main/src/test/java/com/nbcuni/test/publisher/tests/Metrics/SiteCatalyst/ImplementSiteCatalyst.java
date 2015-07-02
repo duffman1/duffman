@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Metrics.SiteCatalyst;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SiteCatalyst;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class ImplementSiteCatalyst extends ParentTest {
+public class ImplementSiteCatalyst extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC1061
@@ -22,14 +22,14 @@ public class ImplementSiteCatalyst extends ParentTest {
     public void ImplementSiteCatalyst_TC1061() throws Exception {
          
         	//Step 1
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	//Step 2
         	navigation.Configuration("SiteCatalyst");
         	
         	//Step 3
-        	SiteCatalyst siteCatalyst = new SiteCatalyst(webWebWebDriver, applib);
+        	SiteCatalyst siteCatalyst = new SiteCatalyst(webDriver, appLib);
         	siteCatalyst.ClickCustomVariablesLnk();
         	
         	//Step 4
@@ -37,15 +37,15 @@ public class ImplementSiteCatalyst extends ParentTest {
         	siteCatalyst.ClickMediaGalleryCbx();
         	siteCatalyst.ClickPostCbx();
         	siteCatalyst.ClickSaveConfigurationBtn();
-        	ContentParent contentParent = new ContentParent(webWebWebDriver);
+        	ContentParent contentParent = new ContentParent(webDriver);
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
         	
         	//Step 5
         	navigation.AddContent("Media Gallery");
-        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
         	String mediaGalleryTitle = "MediaGallery" + random.GetCharacterString(10);
         	basicInformation.EnterTitle(mediaGalleryTitle);
-        	SiteCatalystVariables siteCatalystVariables = new SiteCatalystVariables(webWebWebDriver);
+        	SiteCatalystVariables siteCatalystVariables = new SiteCatalystVariables(webDriver);
         	siteCatalystVariables.ClickSiteCatalystVariablesTab();
         	
         	//Step 6 NOTE - clicking add another variable step not needed as there is always a blank option with a new piece of content
@@ -62,7 +62,7 @@ public class ImplementSiteCatalyst extends ParentTest {
         	contentParent.VerifySourceInPage(Arrays.asList(sPageNameVariable, newVariableName, newVariableValue));
         	
         	//Step 8
-        	WorkBench workBench = new WorkBench(webWebWebDriver);
+        	WorkBench workBench = new WorkBench(webDriver);
         	workBench.ClickWorkBenchTab("Edit Draft");
         	siteCatalystVariables.ClickSiteCatalystVariablesTab();
         	String updatedVariableValue = random.GetCharacterString(15);

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class DefaultPlayerOptionsVerification extends ParentTest{
+public class DefaultPlayerOptionsVerification extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -44,11 +44,11 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
     public void DefaultPlayerOptionsVerification_Test() throws Exception {
 
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //MPX Configuration required
-    	Settings settings = new Settings(webWebWebDriver);
+    	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
     	navigation.Configuration("Media: thePlatform mpx settings");
@@ -62,11 +62,11 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		navigation.Structure("File types");
         		
         		//Step 14
-        		FileTypes fileTypes = new FileTypes(webWebWebDriver);
+        		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
         		
         		//Step 15
-        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webWebWebDriver);
+        		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
         		manageFileDisplay.CheckPubMPXVideoCbx();
         		manageFileDisplay.UnCheckPubMPXVideoDeprecatedCbx();
         		manageFileDisplay.ClickPubMPXVideoLnk();
@@ -80,13 +80,13 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		//Step 17 - N/A
         		
         		//Step 18
-        		SearchFor searchFor = new SearchFor(webWebWebDriver);
+        		SearchFor searchFor = new SearchFor(webDriver);
         		searchFor.EnterTitle("AutomationDefault");
         		searchFor.ClickApplyBtn();
         		searchFor.ClickSearchTitleLnk("AutomationDefault");
         		
         		//Step 19
-        		WorkBench workBench = new WorkBench(webWebWebDriver);
+        		WorkBench workBench = new WorkBench(webDriver);
         		workBench.VerifyMPXPlayerPresent();
         		
         		//Test Case TC1812

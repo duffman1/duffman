@@ -1,11 +1,12 @@
 package com.nbcuni.test.publisher.tests.Queues.UnauthenticatedUsersCanViewQueuesRevisionList;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.AccessDenied;
 import org.testng.annotations.Test;
 
-public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
+public class UnauthenticatedUsersCanViewQueuesRevisionList extends GlobalBaseTest{
 	
     /*************************************************************************************
      * TEST CASE 
@@ -19,19 +20,19 @@ public class UnauthenticatedUsersCanViewQueuesRevisionList extends ParentTest{
     public void UnauthenticatedUsersCanViewQueuesRevisionList_Test() throws Exception{
     	
     	//Step 1
-        applib.openApplication();
+        appLib.openApplication();
         
         //Step 2
-        applib.openSitePage("/admin/content/queues/manage/all/revisions-state-flow-states");
-        AccessDenied accessDenied = new AccessDenied(webWebWebDriver);
+        appLib.openSitePage("/admin/content/queues/manage/all/revisions-state-flow-states");
+        AccessDenied accessDenied = new AccessDenied(webDriver);
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 3
-        applib.openSitePage("/admin/content/queues/");
+        appLib.openSitePage("/admin/content/queues/");
         accessDenied.VerifyAccessDeniedTxt();
         
         //Step 4
-        applib.openSitePage("/admin/content/queues/manage/all/revisions-state-flow-states");
+        appLib.openSitePage("/admin/content/queues/manage/all/revisions-state-flow-states");
         accessDenied.VerifyAccessDeniedTxt();
         
         

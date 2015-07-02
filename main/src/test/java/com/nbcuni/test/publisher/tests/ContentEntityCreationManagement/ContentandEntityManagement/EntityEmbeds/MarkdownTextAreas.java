@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.EntityEmbeds;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class MarkdownTextAreas extends ParentTest{
+public class MarkdownTextAreas extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC4802
@@ -19,14 +19,14 @@ public class MarkdownTextAreas extends ParentTest{
     public void MarkdownTextAreas_TC4802() throws Exception {
          
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("STEP 2");
         	navigation.AddContent("Post");
         	
         	Reporter.log("STEP 3 AND 4");
-        	BasicInformation basicInformation = new BasicInformation(webWebWebDriver);
+        	BasicInformation basicInformation = new BasicInformation(webDriver);
         	basicInformation.SelectTextFormat("Markdown");
         	
         	Reporter.log("STEP 5");

@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.SiteManagementAndReporting.SSO;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SSOLogin;
 import com.nbcuni.test.publisher.pageobjects.Configuration.SimpleSAML;
 import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class SSOManageUsers extends ParentTest {
+public class SSOManageUsers extends GlobalBaseTest {
 
 	Boolean testSuccessful = false;
 	
@@ -26,14 +26,14 @@ public class SSOManageUsers extends ParentTest {
 	 @Test(retryAnalyzer = RerunOnFailure.class, groups = {"sensitive", "broken"})
 	 public void SSOManageUsers_TC3853() throws Exception {
 		 
-		UserLogin userLogin = new UserLogin(webWebWebDriver);
-		Modules modules = new Modules(webWebWebDriver);
-		SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
-		Logout logout = new Logout(webWebWebDriver);
+		UserLogin userLogin = new UserLogin(webDriver);
+		Modules modules = new Modules(webDriver);
+		SimpleSAML simpleSAML = new SimpleSAML(webDriver);
+		Logout logout = new Logout(webDriver);
 		String parentWindow = null;
 		
 		Reporter.log("STEP 1");
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		       
 		Reporter.log("STEP 2");
@@ -50,34 +50,34 @@ public class SSOManageUsers extends ParentTest {
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/saml_login");
+		appLib.openSitePage("/saml_login");
 		Thread.sleep(1000);
-		SSOLogin ssoLogin = new SSOLogin(webWebWebDriver);
+		SSOLogin ssoLogin = new SSOLogin(webDriver);
 		ssoLogin.EnterSSOID(config.getConfigValueString("SSOUsername"));
 		ssoLogin.EnterPassword(config.getConfigValueString("SSOPassword"));
 		ssoLogin.ClickSignInBtn();
-		applib.refreshPage();
+		appLib.refreshPage();
 		contentParent.VerifyPageContentPresent(Arrays.asList(config.getConfigValueString("SSOEmail")));
 		contentParent.VerifyPageContentNotPresent(Arrays.asList("Modules"));
 			
 		Reporter.log("STEP 3");
-		WorkBench workBench = new WorkBench(webWebWebDriver);
+		WorkBench workBench = new WorkBench(webDriver);
 		workBench.ClickWorkBenchTab("Edit");
-		AddUser addUser = new AddUser(webWebWebDriver);
+		AddUser addUser = new AddUser(webDriver);
 		addUser.VerifyUsernameValueAndIsDisabled(config.getConfigValueString("SSOEmail"));
 		addUser.VerifyEmailAddressValueAndIsDisabled(config.getConfigValueString("SSOEmail"));
 		    
 		Reporter.log("STEP 4");
-		parentWindow = webWebWebDriver.getWindowHandle();
+		parentWindow = webDriver.getWindowHandle();
 		addUser.ClickChangeYourPasswordLnk();
-	    applib.switchToNewWindow(parentWindow);
+	    appLib.switchToNewWindow(parentWindow);
 		ssoLogin.VerifySSOPasswordReset();
 		    
 		Reporter.log("STEP 5");
-		webWebWebDriver.close();
-		webWebWebDriver.switchTo().window(parentWindow);
+		webDriver.close();
+		webDriver.switchTo().window(parentWindow);
 		logout.ClickLogoutBtn();
-		applib.openSitePage("/user");
+		appLib.openSitePage("/user");
 		userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
 		    
 		Reporter.log("STEP 6");
@@ -85,13 +85,13 @@ public class SSOManageUsers extends ParentTest {
 	        
 	    Reporter.log("STEP 7");
 		navigation.People();
-		People people = new People(webWebWebDriver);
+		People people = new People(webDriver);
 		people.SeachForUsername(editorUserName);
 		people.ClickEditLnk(editorUserName);
 		addUser.VerifyUsernameValueAndIsDisabled(editorUserName);
 		    
 		Reporter.log("STEPS 8-11");
-		applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+		appLib.openSitePage("/admin/config/people/simplesamlphp_auth");
 		simpleSAML.UnCheckActivateAuthCbx();
 		simpleSAML.ClickSaveConfigurationBtn();
 		contentParent.VerifyMessageStatus("The configuration options have been saved.");
@@ -109,13 +109,13 @@ public class SSOManageUsers extends ParentTest {
 		public void Cleanup() throws Exception {
 			if (testSuccessful == false) {
 				
-				UserLogin userLogin = new UserLogin(webWebWebDriver);
-				SimpleSAML simpleSAML = new SimpleSAML(webWebWebDriver);
-				Modules modules = new Modules(webWebWebDriver);
+				UserLogin userLogin = new UserLogin(webDriver);
+				SimpleSAML simpleSAML = new SimpleSAML(webDriver);
+				Modules modules = new Modules(webDriver);
 				
-				applib.openSitePage("/user");
+				appLib.openSitePage("/user");
 				userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-				applib.openSitePage("/admin/config/people/simplesamlphp_auth");
+				appLib.openSitePage("/admin/config/people/simplesamlphp_auth");
 				simpleSAML.UnCheckActivateAuthCbx();
 				simpleSAML.ClickSaveConfigurationBtn();
 				contentParent.VerifyMessageStatus("The configuration options have been saved.");

@@ -1,10 +1,10 @@
 package com.nbcuni.test.publisher.tests.Video.SyncFromMPXButtonToVideoFileEntitiesEditForm;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import org.testng.annotations.Test;
 
-public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
+public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE 
@@ -32,15 +32,15 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	/*TODO - Functionality removed from iteration 39 but will be added back in a future iteration. When complete, uncomment this test
     	
     	//Step 1
-    	UserLogin userLogin = applib.openApplication();
+    	UserLogin userLogin = appLib.openApplication();
     	userLogin.Login("admin@publisher.nbcuni.com", "pa55word");
         
     	//Step 1a
     	MPXLogin mpxLogin = new MPXLogin(webDriver);
     	mpxLogin.OpenMPXThePlatform();
     	mpxLogin.Login("mpx/AdminPub7QA", "Pa55word");
-    	MPXAssets mpxAssets = new MPXAssets(webDriver, applib);
-    	MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, applib);
+    	MPXAssets mpxAssets = new MPXAssets(webDriver, appLib);
+    	MPXAddMedia mpxAddMedia = new MPXAddMedia(webDriver, appLib);
     	mpxAddMedia.ClickUploadBtn();
     	mpxAddMedia.ClickChooseFilesBtn();
     	mpxAddMedia.ClickMoviesUploadBtn();
@@ -53,13 +53,13 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	mpxAddMedia.EnterTitle(mediaTitle);
     	mpxAddMedia.EnterCategories("Series, Show");
     	mpxAddMedia.ClickSaveBtn();
-    	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(webDriver, applib);
+    	MPXPublishMedia mpxPublishMedia = new MPXPublishMedia(webDriver, appLib);
     	mpxPublishMedia.ClickPublishBtn();
     	mpxPublishMedia.ClickPublishToAllCbx();
     	mpxPublishMedia.ClickPublishFromDialogBtn();
     	
     	//Step 2
-    	applib.openApplication();
+    	appLib.openApplication();
     	taxonomy.NavigateSite("Configuration>>Media>>Media: thePlatform mpx settings");
         overlay.SwitchToFrame("Media: thePlatform mpx settings dialog");
         Settings settings = new Settings(webDriver);
@@ -112,7 +112,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	    mpxPublishMedia.ClickPublishUpdateLnk();
     	    mpxPublishMedia.ClickPublishToAllCbx();
     	    mpxPublishMedia.ClickUpdateBtn();
-    	    applib.openApplication();
+    	    appLib.openApplication();
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
     	    searchFor.EnterTitle(mediaTitle);
@@ -149,7 +149,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	    mpxPublishMedia.ClickPublishUpdateLnk();
     	    mpxPublishMedia.ClickPublishToAllCbx();
     	    mpxPublishMedia.ClickUpdateBtn();
-    	    applib.openApplication();
+    	    appLib.openApplication();
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
     	    searchFor.EnterTitle(newMediaTitle);
@@ -188,7 +188,7 @@ public class SyncFromMPXButtonToVideoFileEntitiesEditForm extends ParentTest{
     	    mpxPublishMedia.ClickPublishUpdateLnk();
     	    mpxPublishMedia.ClickPublishToAllCbx();
     	    mpxPublishMedia.ClickUpdateBtn();
-    	    applib.openApplication();
+    	    appLib.openApplication();
     	    taxonomy.NavigateSite("Content>>Files>>mpxMedia");
     	    overlay.SwitchToActiveFrame();
     	    searchFor.EnterTitle(newMediaTitle);

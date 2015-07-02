@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Video.MPXReporting;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXStatusBeta;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.Modules;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class MPXReportingBeta extends ParentTest{
+public class MPXReportingBeta extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC3085
@@ -23,15 +23,15 @@ public class MPXReportingBeta extends ParentTest{
 
     	if (config.getConfigValueString("DrushIngestion").equals("false")) {
     		Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
-        	Settings settings = new Settings(webWebWebDriver);
+        	Settings settings = new Settings(webDriver);
         	settings.ConfigureMPXIfNeeded();
         	
         	Reporter.log("STEP 2");
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.VerifyModuleEnabled("Media: ThePlatform mpx Reports");
         	
         	Reporter.log("STEP 3");
@@ -45,7 +45,7 @@ public class MPXReportingBeta extends ParentTest{
         	
         	Reporter.log("STEP 5");
         	contentParent.VerifyPageContentPresent(Arrays.asList("Successfully signed into account \"DB TV\" (2312945284)."));
-        	MPXStatusBeta mpxStatusBeta = new MPXStatusBeta(webWebWebDriver);
+        	MPXStatusBeta mpxStatusBeta = new MPXStatusBeta(webDriver);
         	
         	Reporter.log("STEP 6");
         	Assert.assertTrue(mpxStatusBeta.GetTotalVideosIngestedCount() > 0);

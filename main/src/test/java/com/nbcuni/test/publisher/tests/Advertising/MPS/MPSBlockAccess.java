@@ -1,7 +1,7 @@
 package com.nbcuni.test.publisher.tests.Advertising.MPS;
 
+import com.nbcuni.test.publisher.common.GlobalBaseTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Logout;
 import com.nbcuni.test.publisher.pageobjects.Modules;
 import com.nbcuni.test.publisher.pageobjects.People.AddUser;
@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-public class MPSBlockAccess extends ParentTest {
+public class MPSBlockAccess extends GlobalBaseTest {
 	
     /*************************************************************************************
      * TEST CASE - TC3608
@@ -21,12 +21,12 @@ public class MPSBlockAccess extends ParentTest {
     public void MPSBlockAccess_TC3608() throws Exception {
         
         	Reporter.log("STEP 1");
-        	UserLogin userLogin = applib.openApplication();
+        	UserLogin userLogin = appLib.openApplication();
         	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
             
         	Reporter.log("SETUP");
         	navigation.Modules();
-        	Modules modules = new Modules(webWebWebDriver);
+        	Modules modules = new Modules(webDriver);
         	modules.DisableModule("Pixelman");
         	modules.EnableModule("MPS");
         	
@@ -34,11 +34,11 @@ public class MPSBlockAccess extends ParentTest {
         	navigation.Structure("MPS Blocks");
         	
         	Reporter.log("STEP 3");
-        	AddUser addUser = new AddUser(webWebWebDriver);
+        	AddUser addUser = new AddUser(webDriver);
             String userName = addUser.AddDefaultUser(Arrays.asList("administrator"), false);
             
             Reporter.log("STEP 4");
-            Logout logout = new Logout(webWebWebDriver);
+            Logout logout = new Logout(webDriver);
             logout.ClickLogoutBtn();
             userLogin.Login(userName, "pa55word");
             
