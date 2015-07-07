@@ -13,6 +13,7 @@ import com.nbcuni.test.publisher.pageobjects.Structure.ContentType.MediaGallery.
 import com.nbcuni.test.publisher.pageobjects.Structure.ContentTypes;
 import com.nbcuni.test.publisher.pageobjects.Structure.ManageFields.EditCustomCT;
 import com.nbcuni.test.publisher.pageobjects.Upload;
+import org.openqa.selenium.remote.server.handler.interactions.touch.Up;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -47,6 +48,8 @@ public class S3 extends BaseTest {
     @Autowired Modules modules;
     @Autowired ConfigPreferences preferences;
     @Autowired Amazons3 amazons3;
+    @Autowired Upload upload;
+
     @Autowired AppLib appLib;
 
     String key;
@@ -123,7 +126,7 @@ public class S3 extends BaseTest {
         contentTypes.browseFile();
         manageFields.attachImageFrame(contentWithMetaData.getImage());
         manageFields.next().next();
-        Assert.assertEquals(metaTags, new Upload().getMetadata());
+        Assert.assertEquals(metaTags, upload.getMetadata());
     }
 
     @Test(dependsOnMethods = "imageConfiguration_TC8595")

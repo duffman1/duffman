@@ -5,8 +5,10 @@ import com.nbcuni.test.publisher.common.Random;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
 
 /**
@@ -55,7 +57,7 @@ public class BasicInformation {
     }
 
     private WebElement Synopsis_Txa() throws Exception {
-        return waitFor.OneElementOrAnotherPresent(By.xpath("//body[contains(@class, 'editable')]"),
+        return waitFor.OneElementOrAnotherPresent(By.xpath("//body[contains(@class, 'cke_editable')]"),
                 By.xpath("//body[@id='tinymce']"));
     }
 
@@ -94,6 +96,9 @@ public class BasicInformation {
     public String EnterSynopsis() throws Exception {
 
         Reporter.log("Switch to the Synopsis frame.");
+//        webWebWebDriver.findElement(By.id("cke_9")).click();
+//        webWebWebDriver.findElement(By.id("cke_9")).click();
+
         webWebWebDriver.switchTo().frame(Synopsis_Frm());
 
         Reporter.log("Enter a randomized text string into the 'Body' text area.");
@@ -104,8 +109,10 @@ public class BasicInformation {
                 random.GetCharacterString(20);
 
         WebElement Body_Txa = Synopsis_Txa();
-        interact.Type(Body_Txa, body);
+        Actions actions = new Actions(webWebWebDriver);
+        actions.doubleClick(Body_Txa);
 
+        interact.Type(Body_Txa, body);
         webWebWebDriver.switchTo().defaultContent();
 
         return body;

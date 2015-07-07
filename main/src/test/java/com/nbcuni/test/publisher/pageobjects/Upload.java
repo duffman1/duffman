@@ -21,7 +21,7 @@ import javax.annotation.PostConstruct;
 @Configuration
 @Scope("prototype")
 @com.nbcuni.test.publisher.common.Driver.component.annotations.Page
-public class Upload {
+public class Upload extends Page {
 
     public Upload() {
     }
