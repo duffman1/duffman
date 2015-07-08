@@ -3,10 +3,8 @@ package com.nbcuni.test.publisher.pageobjects;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -131,7 +129,12 @@ public class Modules {
     		
     		Reporter.log("Check the '" + moduleName + "' check box.");
     		interact.ScrollToTop();
-    		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
+
+            WebElement module = webDriver.findElement(ModuleName_Cbx(moduleName));
+
+            ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView()",module);
+            ((JavascriptExecutor) webDriver).executeScript("arguments[0].click()",module);
+//    		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
     		
     		Reporter.log("Click the 'Save configuration' button.");
     		interact.ScrollToTop();
@@ -171,7 +174,12 @@ public class Modules {
     	if (waitFor.ElementPresent(ModuleName_Cbx(moduleName)).isSelected() == true) {
     		Reporter.log("Uncheck the '" + moduleName + "' module checkbox.");
     		interact.ScrollToTop();
-    		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
+            WebElement module = webDriver.findElement(ModuleName_Cbx(moduleName));
+
+            ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView()",module);
+            ((JavascriptExecutor) webDriver).executeScript("arguments[0].click()",module);
+
+//    		interact.Click(waitFor.ElementVisible(ModuleName_Cbx(moduleName)));
     		
     		Reporter.log("Click the 'Save configuration' button.");
     		interact.ScrollToTop();
