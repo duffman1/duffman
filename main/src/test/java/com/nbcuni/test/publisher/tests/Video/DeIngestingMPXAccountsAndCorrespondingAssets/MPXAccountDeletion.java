@@ -1,7 +1,6 @@
 package com.nbcuni.test.publisher.tests.Video.DeIngestingMPXAccountsAndCorrespondingAssets;
 
 import java.util.Arrays;
-import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
@@ -10,7 +9,6 @@ import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -37,20 +35,15 @@ public class MPXAccountDeletion extends ParentTest {
             Cron cron = new Cron(webDriver);
             
             //Step 4
-            navigation.Configuration("Media: thePlatform mpx settings");
-            List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	settings.ExpandAccountList();
-        	
-        	//Step 5 through 8
+            navigation.Configuration("Media: thePlatform mpx");
+            
+            //Step 5 through 8
         	ErrorChecking errorChecking = new ErrorChecking(webDriver);
-        	List<WebElement> AllDeleteAccountButtons = settings.GetAllDeleteAccountButtons();
-        	Assert.assertTrue(configuredAccounts.size() == AllDeleteAccountButtons.size());
-        	while (settings.GetAllDeleteAccountButtons().size() > 0) {
+        	while (settings.GetAllDeleteAccountLnks().size() > 0) {
         		
-        		settings.ExpandAccountList();
-        		settings.GetAllDeleteAccountButtons().get(0).click();
-        		contentParent.VerifyPageContentPresent(Arrays.asList("You are about to delete account", "and all of its assets. This action cannot be undone."));
-        		settings.ClickDeleteBtn();
+        		settings.GetAllDeleteAccountLnks().get(0).click();
+        		contentParent.VerifyPageContentPresent(Arrays.asList("Are you sure you want to delete the mpx account"));
+        		settings.ClickConfirmBtn();
         		contentParent.WaitForProgressBarNotPresent();
         		errorChecking.VerifyNoMessageErrorsPresent();
         		
@@ -64,14 +57,16 @@ public class MPXAccountDeletion extends ParentTest {
         	searchFor.VerifyNoSearchResultsPresent();
         	
         	//Step 10
-        	navigation.Configuration("Media: thePlatform mpx settings");
+        	navigation.Configuration("Media: thePlatform mpx");
+        	settings.ClickAddMPXAccountLnk();
         	settings.EnterUsername(config.getConfigValueString("MPXUsername"));
         	settings.EnterPassword(config.getConfigValueString("MPXPassword"));
-        	settings.ClickConnectToMPXBtn();
-        	contentParent.VerifyMessageStatus("Login successful");
-        	settings.SelectImportAccount1("DB TV");
-        	settings.ClickSetImportAccountBtn();
-        	contentParent.VerifyMessageStatus("Setting import account \"DB%20TV\" for account");
+        	settings.ClickContinueAndEditBtn();
+        	contentParent.VerifyMessageStatus("Created mpx account");
+        	settings.SelectImportAccount("DB TV");
+        	settings.ClickSaveBtn();
+        	contentParent.VerifyMessageStatus("has been saved.");
+        	navigation.ClickPrimaryTabNavLnk("Settings");
         	if (config.getConfigValueString("DrushIngestion").equals("true")) {
         		settings.UnCheckSyncMPXMediaOnCronBtn();
         	}
@@ -82,11 +77,13 @@ public class MPXAccountDeletion extends ParentTest {
         	contentParent.VerifyMessageStatus("The configuration options have been saved.");
         	
         	//Step 11
-        	navigation.Content("Files", "mpxMedia");
-        	mpxMedia.ExpandMPXMedia();
-            mpxMedia.SelectMPXPlayerForAccount1("AutomationPlayer1");
-            mpxMedia.ClickSyncMPXMediaNowLnk();
-            contentParent.VerifyMessageStatus("Processed video import/update manually for all accounts.");
+        	navigation.ClickPrimaryTabNavLnk("Accounts");
+        	settings.ClickPlayersNotImportedLnk();
+        	mpxMedia.ClickSyncMPXPlayersNowLnk();
+        	settings.ClickNotConfiguredLnk();
+            settings.SelectDefaultPlayer("AutomationPlayer1");
+            settings.ClickSaveBtn();
+            contentParent.VerifyMessageStatus("has been saved");
             cron.RunCron();
             navigation.Content("Files", "mpxMedia");
     	    searchFor.EnterTitle("Automation");

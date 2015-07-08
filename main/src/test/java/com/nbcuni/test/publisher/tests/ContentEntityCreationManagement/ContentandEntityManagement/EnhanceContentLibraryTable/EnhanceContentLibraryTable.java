@@ -35,7 +35,7 @@ public class EnhanceContentLibraryTable extends ParentTest{
     	//Step 1 and 2
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
         Settings settings = new Settings(webDriver);
         if (settings.IsMPXConfigured() == true) { 
         

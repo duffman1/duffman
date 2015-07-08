@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.SaveDefaultPlayerOptionsAutomatically;
 
-import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
@@ -9,7 +8,6 @@ import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.ManageFileDisplay;
 import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DefaultPlayerOptionsVerification extends ParentTest{
@@ -50,19 +48,14 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
         
-        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-
-        	//Step 2 through 12 not needed (executed in previous mpx tests)
-        	if (configuredAccounts.contains("DB TV")) {
-        		
-        		//Step 13
+        //Step 13
         		navigation.Structure("File types");
         		
         		//Step 14
         		FileTypes fileTypes = new FileTypes(webDriver);
-        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        		fileTypes.ClickManageFileDisplayLnk("DB TV");
         		
         		//Step 15
         		ManageFileDisplay manageFileDisplay = new ManageFileDisplay(webDriver);
@@ -92,7 +85,7 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		workBench.VerifyMPXPlayerSourcePresent("embed");
         		
         		navigation.Structure("File types");
-        		fileTypes.ClickManageFileDisplayLnk(configuredAccounts.get(0));
+        		fileTypes.ClickManageFileDisplayLnk("DB TV");
         		Thread.sleep(1000);
         		manageFileDisplay.CheckPubMPXVideoDeprecatedCbx();
         		manageFileDisplay.UnCheckPubMPXVideoCbx();
@@ -108,10 +101,5 @@ public class DefaultPlayerOptionsVerification extends ParentTest{
         		workBench.VerifyMPXPlayerPresent();
         		workBench.VerifyMPXPlayerSourceNotPresent("embed");
         		
-        		
-        	}
-        	else {
-        		Assert.fail("DB TV account must be configured.");
-        	}
     }
 }

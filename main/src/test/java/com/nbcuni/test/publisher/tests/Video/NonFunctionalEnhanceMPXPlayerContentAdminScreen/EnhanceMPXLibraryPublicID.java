@@ -8,8 +8,6 @@ import com.nbcuni.test.publisher.pageobjects.UserLogin;
 
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 import org.testng.Assert;
 
 public class EnhanceMPXLibraryPublicID extends ParentTest{
@@ -28,10 +26,9 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         //Setup
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
         
         //Step 2
-        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
         navigation.Content("Files", "mpxPlayers");
         SearchFor searchFor = new SearchFor(webDriver);
         searchFor.VerifyMPXSearchHeaderColumnOrder();
@@ -40,9 +37,7 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         String playerName = "AutomationPlayer1";
         String playerID = "VeXC0F2L9wg2";
         	
-        if (configuredAccounts.contains("DB TV")) {
-        	
-        	//Setup
+        //Setup
         	String initialFirstResult = searchFor.GetFirstMPXPlayerSearchResult();
         	int initialResultSize = searchFor.GetMPXSearchResultSize();
         		
@@ -66,10 +61,6 @@ public class EnhanceMPXLibraryPublicID extends ParentTest{
         	Assert.assertTrue(searchFor.GetFirstMPXPlayerSearchResult().equals(initialFirstResult));
         	Assert.assertTrue(searchFor.GetMPXSearchResultSize().equals(initialResultSize));
         		
-        	}
-        	else {
-        		Assert.fail("DBTV account not configured for this test");
-        	}
         	
     }
 }

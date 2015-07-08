@@ -1,6 +1,5 @@
 package com.nbcuni.test.publisher.tests.Video.Player;
 
-import java.util.List;
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
 import com.nbcuni.test.publisher.pageobjects.Content.Content;
@@ -46,12 +45,9 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
     	Settings settings = new Settings(webDriver);
     	settings.ConfigureMPXIfNeeded();
     	
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
         
-        List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	if (configuredAccounts.contains("DB TV") || configuredAccounts.contains("NBCU TVE Dev - NBC")) {
-        		
-        		//Step 2
+        //Step 2
         		navigation.Content("Files", "mpxMedia");
         		
         		//Step 3
@@ -84,7 +80,6 @@ public class SelectVideoPlayerPerVideoFile extends ParentTest{
         		content.ClickEditMenuBtn("AutomationDefault");
         		editMPXVideo.VerifyPubMPXVideoPlayerSelectedOption("VeXC0F2L9wg2");
         	
-        	}
-        
+        	
     }
 }

@@ -1,11 +1,11 @@
-<suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="4">
+<suite name="Publisher 7 Test Suite" parallel="classes" preserve-order="true" thread-count="3">
 
 	<!--RUNTIME CONFIG-->
-	<parameter name="AppURL" value="http://qa4.publisher7.com"></parameter>
+	<parameter name="AppURL" value="http://tmp.publisher7.com"></parameter>
 	<parameter name="Browser" value="chrome"></parameter>
 	<parameter name="Admin1Username" value="admin@publisher.nbcuni.com"></parameter>
 	<parameter name="Admin1Password" value="pa55word"></parameter>
-	<parameter name="ReRunOnFailure" value="false"></parameter>
+	<parameter name="ReRunOnFailure" value="true"></parameter>
 	<parameter name="ReRunOnFailureCount" value="2"></parameter>
 	<parameter name="RunRemotely" value="true"></parameter>
 	<parameter name="SendReportAutoEmails" value="true"></parameter>
@@ -14,8 +14,8 @@
   	<parameter name="GithubUpdatePRResults" value="false"></parameter>
   	<parameter name="RunSetupScripts" value="true"></parameter>
   	<parameter name="AbortSuiteOnSetupFailure" value="true"></parameter>
-  	<parameter name="ClearCacheOnFailure" value="true"></parameter>
-  	<parameter name="SendReportEmailAddress" value="kiryl_zayets@epam.com"></parameter>
+    <parameter name="ClearCacheOnFailure" value="true"></parameter>
+    <parameter name="SendReportEmailAddress" value="brandon.clark@nbcuni.com"></parameter>
   	
   	<!--REPORT CONFIG-->
   	<parameter name="PathToReports" value="/test-output/reports/"></parameter>
@@ -29,7 +29,7 @@
   	<!--GMAIL CONFIG-->
   	<parameter name="GmailUsername" value="Pub7NBCUAutoEmailUser1@gmail.com"></parameter>
   	<parameter name="GmailPassword" value="Pub7NBCUAutoEmailPassword1"></parameter>
-  	1
+  	
   	<!--SSO CONFIG-->
   	<parameter name="SSOUsername" value="206439339"></parameter>
   	<parameter name="SSOPassword" value="Pa55word"></parameter>
@@ -55,7 +55,7 @@
   	<parameter name="MPXPassword" value="Pa55word"></parameter>
   	<parameter name="MPXVideoUploadPause" value="5000"></parameter>
   	<parameter name="MPXAssetBufferPause" value="0"></parameter>
-  	<parameter name="DrushIngestion" value="false"></parameter>
+  	<parameter name="DrushIngestion" value="true"></parameter>
   	
   	<!--SIKULI CONFIG-->
   	<parameter name="PathToSikuliImages" value="/src/test/java/com/nbcuni/test/publisher/lib/sikuli/images/"></parameter>
@@ -103,6 +103,7 @@
 	 		<run>
 	 			<include name="full"/>
 	 			<exclude name="broken"/>
+	 			<exclude name="deprecated"/>
 	 			<exclude name="sensitive"/>
 	 		</run>
 		</groups>

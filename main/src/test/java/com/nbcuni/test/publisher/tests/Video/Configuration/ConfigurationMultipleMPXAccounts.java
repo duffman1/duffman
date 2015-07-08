@@ -2,14 +2,7 @@ package com.nbcuni.test.publisher.tests.Video.Configuration;
 
 import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-import com.nbcuni.test.publisher.pageobjects.MPX.MPXMedia;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
-import java.util.Arrays;
-import java.util.List;
 
 public class ConfigurationMultipleMPXAccounts extends ParentTest{
 	
@@ -17,15 +10,15 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
      * TEST CASE - TC1073
      * Steps - https://rally1.rallydev.com/#/14663927728d/detail/testcase/17442647774
      *************************************************************************************/
-    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx"})
-    public void ConfigurationMultipleMPXAccounts_TC1073() throws Exception{
-    	
+    @Test(retryAnalyzer = RerunOnFailure.class, groups = {"full", "mpx", "broken"})
+    public void ConfigurationMultipleMPXAccounts_TC1073() throws Exception {
+    	/*DEPRECATED AND REPLACED BY NEW MPX UPLOAD PROCESS
     	//Step 1
     	UserLogin userLogin = applib.openApplication();
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Step 2
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
         
         //Setup
         Settings settings = new Settings(webDriver);
@@ -119,7 +112,7 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
             searchFor.VerifySearchResultsPresent(Arrays.asList("AutomationDefault"));
 
             //Step 10
-            navigation.Configuration("Media: thePlatform mpx settings");
+            navigation.Configuration("Media: thePlatform mpx");
             settings.ExpandAddAccounts();
         	settings.EnterUsername(config.getConfigValueString("MPXUsername"));
         	settings.EnterPassword(config.getConfigValueString("MPXPassword"));
@@ -145,6 +138,6 @@ public class ConfigurationMultipleMPXAccounts extends ParentTest{
             searchFor.VerifySearchResultsPresent(Arrays.asList("The Golf Fix 2/4"));
         	
         }
-        
+        */
     }
 }

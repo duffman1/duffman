@@ -8,7 +8,6 @@ import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.FileTypes;
 import com.nbcuni.test.publisher.pageobjects.FileTypes.MPXFileType;
 import com.nbcuni.test.publisher.pageobjects.MPX.EditMPXVideo;
-import com.nbcuni.test.publisher.pageobjects.MPX.Settings;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAddMedia;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXAssets;
 import com.nbcuni.test.publisher.pageobjects.MPX.ThePlatform.MPXLogin;
@@ -25,7 +24,6 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
 	
@@ -78,14 +76,10 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
     	userLogin.Login(config.getConfigValueString("Admin1Username"), config.getConfigValueString("Admin1Password"));
         
         //Note - test requires mpx configuration
-    	Settings settings = new Settings(webDriver);
-    	navigation.Configuration("Media: thePlatform mpx settings");
+    	navigation.Configuration("Media: thePlatform mpx");
     	
         	//Setup
-        	List<String> configuredAccounts = settings.GetImportAccountSelectedOptions();
-        	if (configuredAccounts.contains("DB TV")) {
-        		
-        		navigation.Structure("File types");
+        	navigation.Structure("File types");
         		FileTypes fileTypes = new FileTypes(webDriver);
         		fileTypes.ClickEditFileTypeLnk("MPX Video for Account \"DB TV\" (2312945284)");
         		MPXFileType mpxFileType = new MPXFileType(webDriver);
@@ -93,7 +87,7 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         		if (isMPXValueOverrideEnabled == false) {
             	
         			mpxFileType.ClickSaveBtn();
-        			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + configuredAccounts.get(0));
+        			contentParent.VerifyMessageStatus("The file type MPX Video for Account \"" + "DB TV");
         			contentParent.VerifyMessageStatus("has been updated.");
         		}
         		
@@ -103,7 +97,6 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
             	mpxLogin.Login(config.getConfigValueString("MPXUsername"), config.getConfigValueString("MPXPassword"));
             	
             	//Step 3
-            	if (configuredAccounts.contains("DB TV")) {
             	MPXSelectAccount mpxSelectAccount = new MPXSelectAccount(webDriver);
             	mpxSelectAccount.SelectAccount("DB TV");
             	
@@ -271,11 +264,5 @@ public class MPXVideosSchedulingVerificationScheduling extends ParentTest{
         	    
         	}
         	
-        }
-        else {
-        	Assert.fail("DB TV account is not configured in MPX.");
-        }
-        	
-        }
-        
+
 }

@@ -36,7 +36,7 @@ public class MPXReportingBeta extends ParentTest{
         	modules.VerifyModuleEnabled("Media: ThePlatform mpx Reports");
         	
         	Reporter.log("STEP 3");
-        	navigation.Configuration("Media: thePlatform mpx settings");
+        	navigation.Configuration("Media: thePlatform mpx");
         	navigation.ClickPrimaryTabNavLnk("Media: thePlatform MPX Status (BETA)");
         	
         	Reporter.log("STEP 4");

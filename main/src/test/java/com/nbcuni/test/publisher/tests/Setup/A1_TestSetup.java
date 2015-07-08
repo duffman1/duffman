@@ -158,6 +158,14 @@ public class A1_TestSetup {
                 	contentParent.ClickSaveBtn();
                 }
                 
+                //configure mpx if needed
+        	    Settings settings = new Settings(webDriver);
+            	settings.ConfigureMPXIfNeeded();
+            	settings.ConfigureMPXIngestionType();
+            	
+                //delete any old mpx account file types (DE3921)
+            	settings.DeleteAllOldMPXFileTypes();
+            	
                 //schedule a post content item revision to be consumed by the SchedulingContentPublishUnpublished test later in the suite
                 navigation.AddContent("Post");
                 contentParent.VerifyRequiredFields(Arrays.asList("Title", "Body"));
@@ -233,14 +241,6 @@ public class A1_TestSetup {
         	    		pub7CreatedLogoDateTimeFormat.format(date5MinuteFuture).replace("24:", "00:"), pub7CreatedLogoDateTimeFormat.format(date120MinuteFuture).replace("24:", "00:")));
         	    logos.VerifyLogoImgPresent(logoTitle, "nbclogosmall");
         	    
-        	    //configure mpx if needed
-        	    Settings settings = new Settings(webDriver);
-            	settings.ConfigureMPXIfNeeded();
-            	settings.ConfigureMPXIngestionType();
-            	
-                //delete any old mpx account file types (DE3921)
-            	settings.DeleteAllOldMPXFileTypes();
-            	
             	//delete any created custom content types
                 List<String> allowedContentTypes = new ArrayList<String>();
                 allowedContentTypes.add("character-profile");
