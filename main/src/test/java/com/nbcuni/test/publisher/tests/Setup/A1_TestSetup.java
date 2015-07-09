@@ -255,9 +255,9 @@ public class A1_TestSetup {
                 	if (!allowedContentTypes.contains(contentType)) {
                 		
                 		applib.openSitePage("/admin/structure/types/manage/" + contentType + "/delete");
-                		WebElement delete = webDriver.findElement(By.id("edit-submit"));
-                        if (delete.isDisplayed()){
-                            delete.click();
+                		List<WebElement> delete = webDriver.findElements(By.id("edit-submit"));
+                        if (delete.size()>0){
+                            delete.get(0).click();
                         }
                 	}
                 }

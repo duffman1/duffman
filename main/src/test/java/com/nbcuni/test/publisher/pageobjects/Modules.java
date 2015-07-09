@@ -1,19 +1,17 @@
 package com.nbcuni.test.publisher.pageobjects;
 
-import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
-
+import com.nbcuni.test.publisher.common.Config;
+import com.nbcuni.test.publisher.common.Driver.Driver;
+import com.nbcuni.test.publisher.common.Util.Interact;
+import com.nbcuni.test.publisher.common.Util.WaitFor;
+import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.pageobjects.Content.ContentParent;
-import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.common.Util.Interact;
-import com.nbcuni.test.publisher.common.Util.WaitFor;
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 /*********************************************
  * publisher.nbcuni.com Modules Library. Copyright
@@ -189,7 +187,7 @@ public class Modules {
     		
     		moduleAlreadyDisabled = false;
     	}
-    	
+    	interact.waitPageToLoad();
     	return moduleAlreadyDisabled;
     	
     }
