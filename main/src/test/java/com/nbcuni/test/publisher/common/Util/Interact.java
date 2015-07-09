@@ -1,24 +1,15 @@
 package com.nbcuni.test.publisher.common.Util;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.testng.Assert;
-import org.testng.Reporter;
-
+import com.google.common.base.Function;
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.google.common.base.Function;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
+
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 @SuppressWarnings("unused")
 public class Interact {
@@ -69,6 +60,23 @@ public class Interact {
     			.withTimeout(timeout, TimeUnit.SECONDS)
     			.pollingEvery(config.getConfigValueInt("PollingTime"), TimeUnit.MILLISECONDS);
     			
+    }
+
+    public void waitPageToLoad() {
+
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(webDriver).withTimeout(1, TimeUnit.MINUTES).pollingEvery(500,
+                TimeUnit.MILLISECONDS);
+
+        wait.until(new Function<WebDriver, Boolean>() {
+            final JavascriptExecutor Js = (JavascriptExecutor) webDriver;
+            final String checkStateScript = "if (document.readyState) return document.readyState;";
+
+            @Override
+            public Boolean apply(WebDriver webDriver) {
+                String readyState = Js.executeScript(checkStateScript).toString();
+                return readyState.toLowerCase().equals("complete");
+            }
+        });
     }
 
     private FluentWait<WebElement> elementWait(final WebElement element) throws Exception {

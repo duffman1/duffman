@@ -2,9 +2,9 @@ package com.nbcuni.test.publisher.pageobjects.MPX;
 
 import com.nbcuni.test.publisher.common.Config;
 import com.nbcuni.test.publisher.common.Driver.Driver;
-import com.nbcuni.test.publisher.pageobjects.EmberNav;
+import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.pageobjects.Cron.Cron;
-
+import com.nbcuni.test.publisher.pageobjects.EmberNav;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -34,7 +34,7 @@ public class Settings {
     private MPXMedia mpxMedia;
     private Config config;
     private EmberNav navigation;
-    
+    private Interact interact;
     //PAGE OBJECT CONSTRUCTOR
     public Settings(Driver webDriver) {
         this.webDriver = webDriver;
@@ -43,6 +43,7 @@ public class Settings {
         cron = new Cron(webDriver);
         config = new Config();
         navigation = new EmberNav(webDriver);
+        interact = new Interact(webDriver, 10);
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -127,13 +128,15 @@ public class Settings {
     public void ClickPlayersNotImportedLnk() throws Exception {
         
     	Reporter.log("Click the 'Players not imported' link.");
+
     	PlayersNotImported_Lnk.click();
     }
     
     public void ClickNotConfiguredLnk() throws Exception {
         
     	Reporter.log("Click the 'Not configured' link.");
-    	NotConfigured_Lnk.click();
+        interact.Click(NotConfigured_Lnk);
+//    	NotConfigured_Lnk.click();
     }
 
     public void ClickAddMPXAccountLnk() throws Exception {
@@ -231,6 +234,7 @@ public class Settings {
     
     	Reporter.log("Click the 'Continue and edit' button.");
     	ContinueAndEdit_Btn.click();
+        interact.waitPageToLoad();
     }
     
     public void SelectImportAccount(String account) throws Exception {
