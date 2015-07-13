@@ -1,6 +1,7 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 
@@ -22,6 +23,7 @@ public class Logo {
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
     public Logo(final Driver webDriver) {
@@ -29,6 +31,7 @@ public class Logo {
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
         interact = new Interact(webDriver, timeout);
+        this.webDriver = webDriver;
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -60,7 +63,9 @@ public class Logo {
     public void ClickSelectBtn() throws Exception {
     	
     	Reporter.log("Click the Logo 'Select' button.");
-    	interact.Click(waitFor.ElementVisible(Select_Btn));
+        interact.waitPageToLoad();
+        webDriver.executeScript("arguments[0].click()", waitFor.ElementVisible(Select_Btn));
+//    	interact.Click(waitFor.ElementVisible(Select_Btn));
     	
     }
     

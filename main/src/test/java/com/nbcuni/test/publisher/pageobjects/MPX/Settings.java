@@ -128,8 +128,8 @@ public class Settings {
     public void ClickPlayersNotImportedLnk() throws Exception {
         
     	Reporter.log("Click the 'Players not imported' link.");
-
-    	PlayersNotImported_Lnk.click();
+		interact.Click(PlayersNotImported_Lnk);
+//    	PlayersNotImported_Lnk.click();
     }
     
     public void ClickNotConfiguredLnk() throws Exception {

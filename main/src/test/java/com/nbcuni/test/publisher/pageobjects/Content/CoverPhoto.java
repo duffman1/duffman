@@ -1,7 +1,11 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import com.nbcuni.test.publisher.common.Config;
@@ -22,6 +26,7 @@ public class CoverPhoto {
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
+    private Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR
     public CoverPhoto(final Driver webDriver) {
@@ -29,6 +34,7 @@ public class CoverPhoto {
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
         interact = new Interact(webDriver, timeout);
+        this.webDriver = webDriver;
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -37,8 +43,8 @@ public class CoverPhoto {
     private By Edit_Btn = By.xpath("//div[contains(@id, 'field-character-cover-photo')]//a[text()='Edit']");
     
     private By Select_Btn = By.xpath("//div[contains(@id, 'field-character-cover-photo')]//a[text()='Browse']");
-    
-    
+
+
     //PAGE OBJECT METHODS
     public void VerifyFileImagePresent(String imageSrc) throws Exception {
     	
@@ -58,10 +64,24 @@ public class CoverPhoto {
     }
     
     public void ClickSelectBtn() throws Exception {
-    	
-    	Reporter.log("Click the Cover Photo 'Select' button.");
-    	interact.Click(waitFor.ElementVisible(Select_Btn));
-    	
+
+        Reporter.log("Click the Cover Photo 'Select' button.");
+//    	interact.Click(waitFor.ElementPresent(By.cssSelector("#edit-field-character-cover-photo-und-0-browse-button")));
+//        waitFor.ElementVisible(Select_Btn).click();
+//        WebDriverWait wait = new WebDriverWait(webDriver, 10);
+//        wait.until(ExpectedConditions.elementToBeClickable(By.id("edit-field-character-cover-photo-und-0-browse-button")));
+//        interact.waitPageToLoad();
+//        webDriver.executeScript("var btn = document.querySelector('#edit-field-character-cover-photo-und-0-browse-button');btn.click()");
+        interact.waitPageToLoad();
+        webDriver.executeScript("arguments[0].click()", waitFor.ElementVisible(Select_Btn));
+//        interact.Click(waitFor.ElementPresent(Select_Btn));
+
+//                webDriver.executeScript("arguments[0].click();", webDriver.findElement(By.id("edit-field-character-cover-photo-und-0-browse-button")));
+//
+//        if (webDriver.findElements(By.xpath("//iframe[@id='mediaBrowser']")).size()==0){
+//            webDriver.executeScript("arguments[0].click();", webDriver.findElement(By.id("edit-field-character-cover-photo-und-0-browse-button")));
+//        }
+//
     }
     
     

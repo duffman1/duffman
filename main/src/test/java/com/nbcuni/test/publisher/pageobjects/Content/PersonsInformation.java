@@ -88,7 +88,9 @@ public class PersonsInformation {
     public void ClickCoverPhotoSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Cover Photo' Select button.");
-    	interact.Click(waitFor.ElementVisible(CoverPhotoSelect_Btn));
+        interact.waitPageToLoad();
+        webDriver.executeScript("arguments[0].click()", waitFor.ElementVisible(CoverPhotoSelect_Btn));
+//    	interact.Click(waitFor.ElementVisible(CoverPhotoSelect_Btn));
     	
     }
     

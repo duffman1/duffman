@@ -148,15 +148,23 @@ public class BasicInformation {
     public void ClickCoverSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Cover' select button.");
-    	interact.ScrollToTop();
-    	interact.Click(waitFor.ElementVisible(CoverSelect_Btn));
+        interact.waitPageToLoad();
+        interact.ScrollToTop();
+        webDriver.executeScript("arguments[0].click()", waitFor.ElementVisible(CoverSelect_Btn));
+
+
+
+//    	interact.Click(waitFor.ElementVisible(CoverSelect_Btn));
     	
     }
     
     public void ClickMediaItemsSelectBtn() throws Exception {
     	
     	Reporter.log("Click the 'Media Items Select' button.");
-    	interact.Click(waitFor.ElementVisible(MediaItemsSelect_Btn));
+        interact.waitPageToLoad();
+
+        webDriver.executeScript("arguments[0].click()", waitFor.ElementVisible(MediaItemsSelect_Btn));
+//    	interact.Click(waitFor.ElementVisible(MediaItemsSelect_Btn));
     	
     }
     

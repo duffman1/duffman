@@ -115,7 +115,7 @@ public class SelectFile {
     	webDriver.switchTo().defaultContent();
     	Thread.sleep(1000);
     	
-    	webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+    	webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     	for (int I = 0; I <= timeout; I++) {
     		
     		if (I == timeout) {
