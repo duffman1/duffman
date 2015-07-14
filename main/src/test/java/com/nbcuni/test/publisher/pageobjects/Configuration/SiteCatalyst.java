@@ -20,11 +20,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class SiteCatalyst {
 
     WebDriverWait wait;
+    Driver webDriver;
     
     //PAGE OBJECT CONSTRUCTOR    
     public SiteCatalyst(Driver webDriver, AppLib applib) {
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
+        this.webDriver = webDriver;
     }
     
     //PAGE OBJECT IDENTIFIERS    
@@ -47,8 +49,8 @@ public class SiteCatalyst {
     //PAGE OBJECT METHODS
     public void ClickCustomVariablesLnk() throws Exception { 
     	
-    	Reporter.log("Click the 'Custom Variables' link to expand the menu."); 
-    	CustomVariables_Lnk.click();
+    	Reporter.log("Click the 'Custom Variables' link to expand the menu.");
+        webDriver.executeScript("arguments[0].click()", CustomVariables_Lnk);
     }
     
     public void ClickOverridesLnk() throws Exception { 
