@@ -1,5 +1,6 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
+import com.nbcuni.test.publisher.common.Driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -8,8 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
-
-import com.nbcuni.test.publisher.common.Driver.Driver;
 
 /*********************************************
  * publisher.nbcuni.com Meta Tags Library. Copyright
@@ -21,11 +20,13 @@ import com.nbcuni.test.publisher.common.Driver.Driver;
 public class MetaTags {
 
 	WebDriverWait wait;
+    Driver webDriver;
 	
     //PAGE OBJECT CONSTRUCTOR
     public MetaTags(Driver webDriver) {
         PageFactory.initElements(webDriver, this);
         wait = new WebDriverWait(webDriver, 10);
+        this.webDriver = webDriver;
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -50,16 +51,17 @@ public class MetaTags {
     
     //PAGE OBJECT METHODS
     public void ClickMetaTagsLnk() throws Exception {
-    	
     	Reporter.log("Click the 'Meta tags' link.");
-    	MetaTags_Lnk.click();
+    	wait.until(ExpectedConditions.visibilityOf(MetaTags_Lnk)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(TwitterCard_Lnk));
+
     }
     
     public void ExpandTwitterCardMenu() throws Exception {
     	
     	if (SeeItShowIDEpisodeID_Txb.isDisplayed() == false) {
     		Reporter.log("Click the 'TWITTER CARD' link.");
-    		TwitterCard_Lnk.click();
+            webDriver.executeScript("arguments[0].click();", TwitterCard_Lnk);
     	}
     }
     

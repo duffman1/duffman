@@ -1,11 +1,12 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.Logo;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.pageobjects.Logo.AddLogo;
 import com.nbcuni.test.publisher.pageobjects.Logo.Logos;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -27,7 +28,7 @@ public class CreateLogo extends ParentTest{
             
         	//Step 2 (previously scheduled in setup test)
         	Logos logos = new Logos(webDriver, applib);
-        	logos.VerifyHomePageLogoImgPresent("nbclogosmall");
+//        	logos.VerifyHomePageLogoImgPresent("nbclogosmall");
         	
         	//Step 3
         	navigation.Content("Logos");
