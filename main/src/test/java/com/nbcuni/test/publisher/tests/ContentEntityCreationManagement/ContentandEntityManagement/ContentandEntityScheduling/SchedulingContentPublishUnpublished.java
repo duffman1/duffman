@@ -1,19 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityManagement.ContentandEntityScheduling;
 
-import com.nbcuni.test.publisher.common.ParentTest;
 import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.CreateDefaultContent;
-import com.nbcuni.test.publisher.pageobjects.Content.Delete;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Content.RevisionState;
-import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.Content.SearchFor;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
 import com.nbcuni.test.publisher.pageobjects.Structure.Queues.Queues.ScheduleQueue;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -51,6 +45,8 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         
         Reporter.log("STEP 6");
         Calendar cal1MinuteFuture = Calendar.getInstance();
+
+
         cal1MinuteFuture.add(Calendar.MINUTE, 1);
     	Date date1MinuteFuture = cal1MinuteFuture.getTime();
     	SimpleDateFormat pub7DateFormat = new SimpleDateFormat("MM/dd/yyyy");
@@ -75,12 +71,12 @@ public class SchedulingContentPublishUnpublished extends ParentTest {
         navigation.Content();
         SearchFor searchFor = new SearchFor(webDriver);
         SimpleDateFormat pub7DateFormatEst = new SimpleDateFormat("MM/dd/yyyy");
-        Date currentDate = new Date();
-        String previouslyScheduledTitle = "futurePost" + pub7DateFormatEst.format(currentDate);
-        searchFor.EnterTitle(previouslyScheduledTitle);
+//        Date currentDate = new Date();
+//        String previouslyScheduledTitle = "futurePost" + pub7DateFormatEst.format(currentDate);
+        searchFor.EnterTitle(postTitle);
         searchFor.ClickApplyBtn();
         searchFor.ClickSearchTitleLnk(searchFor.GetFirstSearchResult());
-        workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Published", "Public: Yes"));
+        workBench.VerifyWorkBenchBlockTextPresent(Arrays.asList("Revision state: Draft", "Public: No"));
         
         Reporter.log("STEP 10");
         String postTitle2 = createDefaultContent.Post("Draft");
