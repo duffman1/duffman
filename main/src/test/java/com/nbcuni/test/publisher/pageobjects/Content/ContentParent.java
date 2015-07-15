@@ -1,12 +1,12 @@
 package com.nbcuni.test.publisher.pageobjects.Content;
 
 import com.nbcuni.test.publisher.common.Config;
-import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import com.nbcuni.test.publisher.common.Driver.Driver;
 import com.nbcuni.test.publisher.common.Util.Interact;
 import com.nbcuni.test.publisher.common.Util.WaitFor;
-
+import com.nbcuni.test.publisher.pageobjects.ErrorChecking.ErrorChecking;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -41,7 +41,7 @@ public class ContentParent {
     }
     
     //PAGE OBJECT IDENTIFIERS
-    private By Save_Btn = By.xpath("//input[@id='edit-submit']");
+    private By Save_Btn = By.cssSelector("input#edit-submit");
     
     private By Cancel_Btn = By.id("edit-cancel");
     
@@ -67,7 +67,9 @@ public class ContentParent {
     	
     	Reporter.log("Click the 'Save' button.");
     	Thread.sleep(500);
-    	interact.Click(waitFor.ElementVisible(Save_Btn));
+//    	interact.Click(waitFor.ElementVisible(Save_Btn));
+        WebElement webElement = webDriver.findElement(Save_Btn);
+        webDriver.executeScript("arguments[0].click();", webElement);
     	Thread.sleep(1000);
     	
     }

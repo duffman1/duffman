@@ -25,13 +25,15 @@ public class CastCrew {
     private Integer timeout;
     private WaitFor waitFor;
     private Interact interact;
-    
+    private Driver webDriver;
+
     //PAGE OBJECT CONSTRUCTOR
     public CastCrew(Driver webDriver) {
         config = new Config();
         timeout = config.getConfigValueInt("WaitForWaitTime");
         waitFor = new WaitFor(webDriver, timeout);
         interact = new Interact(webDriver, timeout);
+        this.webDriver = webDriver;
     }
     
     //PAGE OBJECT IDENTIFIERS
@@ -62,8 +64,9 @@ public class CastCrew {
     	
     	Reporter.log("Click the 'Cast/Crew' link.");
     	interact.ScrollToTop();
-    	interact.Click(waitFor.ElementVisible(CastCrew_Lnk));
-    	
+//    	interact.Click(waitFor.ElementVisible(CastCrew_Lnk));
+        WebElement webElement = webDriver.findElement(CastCrew_Lnk);
+    	webDriver.executeScript("arguments[0].click()", webElement);
     }
     
     public void ClickAddAnotherItemBtn() throws Exception {
