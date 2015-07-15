@@ -1,20 +1,13 @@
 package com.nbcuni.test.publisher.tests.ContentEntityCreationManagement.ContentandEntityRelationships;
 
+import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
+import com.nbcuni.test.publisher.common.ParentTest;
+import com.nbcuni.test.publisher.pageobjects.Content.*;
+import com.nbcuni.test.publisher.pageobjects.UserLogin;
+import org.testng.annotations.Test;
+
 import java.util.Arrays;
 import java.util.List;
-import org.testng.annotations.Test;
-import com.nbcuni.test.publisher.common.ParentTest;
-import com.nbcuni.test.publisher.common.Listeners.RerunOnFailure;
-import com.nbcuni.test.publisher.pageobjects.UserLogin;
-import com.nbcuni.test.publisher.pageobjects.Content.BasicInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.CastCrew;
-import com.nbcuni.test.publisher.pageobjects.Content.CharactersInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.CoverPhoto;
-import com.nbcuni.test.publisher.pageobjects.Content.PersonsInformation;
-import com.nbcuni.test.publisher.pageobjects.Content.PublishingOptions;
-import com.nbcuni.test.publisher.pageobjects.Content.Revisions;
-import com.nbcuni.test.publisher.pageobjects.Content.SelectFile;
-import com.nbcuni.test.publisher.pageobjects.Content.WorkBench;
 
 public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
 	 /*************************************************************************************
@@ -95,7 +88,7 @@ public class CastCrewFieldCollectionsVerificationMovie extends ParentTest{
         castCrew.EnterCharacterName(Characters.get(0), "1");
         
         //Step 7
-        Thread.sleep(1000); //TODO - figure out why this pause is necessary and add dynamic wait
+        Thread.sleep(3000); //TODO - figure out why this pause is necessary and add dynamic wait
         contentParent.ClickSaveBtn();
         contentParent.VerifyMessageStatus("Movie " + movieTitle + " has been created.");
         WorkBench workBench = new WorkBench(webDriver);
